@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 विज्ञान - अध्याय 4: कार्बन एवं उसके यौगिक</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2E8B57 0%, #4CAF50 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 18px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4caf50;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #1a237e;
+            display: flex;
+            align-items: flex-start;
+        }
+        .question-number {
+            background: #4caf50;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .answer {
+            color: #37474f;
+            font-size: 0.95rem;
+            text-align: justify;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 3px solid #78909c;
+        }
+        .chemical-equation {
+            font-style: italic;
+            text-align: center;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #e8f5e9;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px dashed #4caf50;
+        }
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        /* Chemistry structures styling */
+        .chem-structure {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .structure-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2e7d32;
+            text-align: center;
+        }
+        .structure-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .molecule {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            line-height: 1.8;
+            text-align: center;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .bond {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        .electron-pair {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .question {
+                font-size: 0.95rem;
+            }
+            .answer {
+                font-size: 0.9rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+                padding: 12px;
+            }
+            .molecule {
+                font-size: 0.9rem;
+                overflow-x: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .question {
+                flex-direction: column;
+            }
+            .question-number {
+                margin-bottom: 8px;
+            }
+            .molecule {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>कार्बन एवं उसके यौगिक</h1>
+        
+        <!-- Question 1 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>एथेन का आण्विक सूत्र - C2H6 है। इसमें—<br>
+                (a) 6 सहसंयोजक आबंध हैं<br>
+                (b) 7 सहसंयोजक आबंध हैं<br>
+                (c) 8 सहसंयोजक आबंध हैं<br>
+                (d) 9 सहसंयोजक आबंध हैं</span>
+            </div>
+            <div class="answer">उत्तर: (b) 7 सहसंयोजक आबंध हैं<br>
+            एथेन (C₂H₆) में कार्बन-कार्बन के बीच एक सहसंयोजक आबंध और कार्बन-हाइड्रोजन के बीच छह सहसंयोजक आबंध होते हैं। इस प्रकार कुल 7 सहसंयोजक आबंध होते हैं।</div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>ब्यूटेनॉन चर्तु-कार्बन यौगिक है, जिसका प्रकार्यात्मक समूह—<br>
+                (a) कार्बोक्सिलिक अम्ल<br>
+                (b) एेल्डिहाइड<br>
+                (c) कीटोन<br>
+                (d) एल्कोहल</span>
+            </div>
+            <div class="answer">उत्तर: (c) कीटोन<br>
+            ब्यूटेनॉन (C₄H₈O) एक कीटोन है जिसमें कार्बोनिल समूह (C=O) दो एल्किल समूहों से जुड़ा होता है। इसका प्रकार्यात्मक समूह कीटोन (-CO-) है।</div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>खाना बनाते समय यदि बर्तन की तली बाहर से काली हो रही है तो इसका मतलब है कि—<br>
+                (a) भोजन पूरी तरह नहीं पका है<br>
+                (b) ईंधन पूरी तरह से नहीं जल रहा है<br>
+                (c) ईंधन आर्द्र है<br>
+                (d) ईंधन पूरी तरह से जल रहा है</span>
+            </div>
+            <div class="answer">उत्तर: (b) ईंधन पूरी तरह से नहीं जल रहा है<br>
+            जब ईंधन का अपूर्ण दहन होता है तो कार्बन के कण (कज्जल) निकलते हैं जो बर्तन की तली पर जमा हो जाते हैं और उसे काला कर देते हैं।</div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>CH3Cl में आबंध निर्माण का उपयोग कर सहसंयोजक आबंध की प्रकृति समझाइए।</span>
+            </div>
+            <div class="answer">उत्तर: CH₃Cl (मेथिल क्लोराइड) में कार्बन के चार संयोजकता इलेक्ट्रॉन हैं, हाइड्रोजन के एक और क्लोरीन के सात संयोजकता इलेक्ट्रॉन हैं। कार्बन, तीन हाइड्रोजन परमाणुओं और एक क्लोरीन परमाणु के साथ इलेक्ट्रॉनों की साझेदारी करके सहसंयोजक आबंध बनाता है। इस प्रकार, कार्बन अपना अष्टक पूरा कर लेता है, हाइड्रोजन अपना द्विक पूरा कर लेता है और क्लोरीन भी अपना अष्टक पूरा कर लेता है।</div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">5</span>
+                <span>इलेक्ट्रॉन बिंदु संरचना बनाइए—<br>
+                (a) एथेनॉइक अम्ल<br>
+                (b) H2S<br>
+                (c) प्रोपेनोन<br>
+                (d) F2</span>
+            </div>
+            <div class="answer">
+                उत्तर:
+                
+                <div class="chem-structure">
+                    <div class="structure-title">(a) एथेनॉइक अम्ल (CH₃COOH)</div>
+                    <div class="structure-container">
+                        <div class="molecule">
+      H   O
+      |   ||
+ H - C - C - O - H
+      |
+      H
+
+  ऑक्सीजन परमाणुओं पर इलेक्ट्रॉनों के दो-दो युग्म
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chem-structure">
+                    <div class="structure-title">(b) H₂S</div>
+                    <div class="structure-container">
+                        <div class="molecule">
+     H - S - H
+     :   :   :
+     :   :   :
+     :   :   :
+                        </div>
+                    </div>
+                    <div>सल्फर पर दो इलेक्ट्रॉन युग्म मौजूद हैं</div>
+                </div>
+                
+                <div class="chem-structure">
+                    <div class="structure-title">(c) प्रोपेनोन (CH₃COCH₃)</div>
+                    <div class="structure-container">
+                        <div class="molecule">
+ H   O   H
+ |   ||  |
+ H - C - C - C - H
+ |       |
+ H       H
+
+ कार्बोनिल ऑक्सीजन पर दो इलेक्ट्रॉन युग्म
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chem-structure">
+                    <div class="structure-title">(d) F₂</div>
+                    <div class="structure-container">
+                        <div class="molecule">
+ :F - F:
+ :     :
+ :     :
+                        </div>
+                    </div>
+                    <div>प्रत्येक फ्लोरीन पर तीन-तीन इलेक्ट्रॉन युग्म</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">6</span>
+                <span>समजातीय श्रेणी क्या है? उदाहरण के साथ समझाइए।</span>
+            </div>
+            <div class="answer">उत्तर: समजातीय श्रेणी कार्बनिक यौगिकों की एक श्रृंखला होती है जिसमें सदस्यों के आणविक सूत्र में -CH₂- के अंतर से एक-दूसरे से संबंधित होते हैं, उनमें एक ही प्रकार का प्रकार्यात्मक समूह होता है और समान रासायनिक गुणधर्म प्रदर्शित करते हैं।<br>
+            उदाहरण: एल्केन श्रेणी - मेथेन (CH₄), एथेन (C₂H₆), प्रोपेन (C₃H₈), ब्यूटेन (C₄H₁₀) आदि।</div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">7</span>
+                <span>भौतिक एवं रासायनिक गुणधर्मों के आधार पर एथनॉल एवं एथेनॉइक अम्ल में आप कैसे अंतर करेंगे?</span>
+            </div>
+            <div class="answer">उत्तर:<br>
+            भौतिक गुणधर्म: <br>
+            - एथनॉल: मीठी गंध, क्वथनांक 351 K<br>
+            - एथेनॉइक अम्ल: तीक्ष्ण गंध (सिरके जैसी), क्वथनांक 391 K<br><br>
+            रासायनिक गुणधर्म:<br>
+            - एथनॉल: सोडियम के साथ H₂ गैस मुक्त करता है, ऑक्सीकरण पर एथेनॉइक अम्ल देता है<br>
+            - एथेनॉइक अम्ल: क्षारों के साथ अभिक्रिया कर लवण बनाता है, सोडियम कार्बोनेट के साथ CO₂ गैस मुक्त करता है</div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">8</span>
+                <span>जब साबुन को जल में डाला जाता है तो मिसेल का निर्माण क्यों होता है? क्या एथनॉल जैसे दूसरे विलायकों में भी मिसेल का निर्माण होगा?</span>
+            </div>
+            <div class="answer">उत्तर: साबुन के अणु में दो भाग होते हैं - जलरागी (आयनिक सिरा) और जलविरागी (हाइड्रोकार्बन पूँछ)। जल में, ये अणु मिसेल बनाते हैं जिसमें जलविरागी भाग अंदर की ओर और जलरागी भाग बाहर की ओर होता है। एथनॉल जैसे विलायकों में मिसेल नहीं बनते क्योंकि एथनॉल ध्रुवीय विलायक है और साबुन के दोनों भाग इसमें घुल जाते हैं।</div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">9</span>
+                <span>कार्बन एवं उसके यौगिकों का उपयोग अधिकतर अनुप्रयोगों में ईंधन के रूप में क्यों किया जाता है?</span>
+            </div>
+            <div class="answer">उत्तर: कार्बन यौगिकों का दहन होने पर अधिक मात्रा में ऊष्मा ऊर्जा मुक्त होती है। इनका कैलोरी मान उच्च होता है और ये आसानी से उपलब्ध होते हैं। उदाहरण: पेट्रोल, डीजल, कोयला, प्राकृतिक गैस, एलपीजी आदि कार्बन यौगिकों से बने ईंधन हैं जो ऊर्जा के प्रमुख स्रोत हैं।</div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">10</span>
+                <span>कठोर जल को साबुन से उपचारित करने पर झाग के निर्माण को समझाइए।</span>
+            </div>
+            <div class="answer">उत्तर: कठोर जल में कैल्शियम और मैग्नीशियम लवण घुले होते हैं। जब साबुन मिलाया जाता है तो यह इन लवणों के साथ अभिक्रिया कर अघुलनशील पदार्थ (स्कम) बनाता है जिससे झाग नहीं बन पाता। पहले सभी कैल्शियम और मैग्नीशियम आयनों के साथ अभिक्रिया होती है, उसके बाद ही अतिरिक्त साबुन झाग बनाने लगता है। इसलिए कठोर जल में झाग बनाने के लिए अधिक साबुन की आवश्यकता होती है।</div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">11</span>
+                <span>यदि आप लिटमस पत्र (लाल एवं नीला) से साबुन की जाँच करें तो आपका प्रेक्षण क्या होगा?</span>
+            </div>
+            <div class="answer">उत्तर: साबुन क्षारीय प्रकृति का होता है क्योंकि यह दुर्बल अम्ल और प्रबल क्षार का लवण है। लिटमस परीक्षण में साबुन का विलयन:<br>
+            - नीले लिटमस पत्र का रंग नहीं बदलता (क्षार की उपस्थिति में)<br>
+            - लाल लिटमस पत्र को नीला कर देता है</div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">12</span>
+                <span>हाइड्रोजनीकरण क्या है? इसका औद्योगिक अनुप्रयोग क्या है?</span>
+            </div>
+            <div class="answer">उत्तर: हाइड्रोजनीकरण वह रासायनिक अभिक्रिया है जिसमें असंतृप्त हाइड्रोकार्बन (द्वि या त्रि-आबंध वाले) निकल या पैलेडियम उत्प्रेरक की उपस्थिति में हाइड्रोजन गैस के साथ संयोग कर संतृप्त हाइड्रोकार्बन बनाते हैं।<br>
+            औद्योगिक अनुप्रयोग: वनस्पति तेलों के हाइड्रोजनीकरण द्वारा वनस्पति घी (वनस्पति मक्खन) का निर्माण किया जाता है।</div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">13</span>
+                <span>दिए गए हाइड्रोकार्बन— C2H6, C3H8, C3H6, C2H2 एवं CH4 में किसमें संकलन अभिक्रिया होती है?</span>
+            </div>
+            <div class="answer">उत्तर: संकलन अभिक्रिया असंतृप्त हाइड्रोकार्बनों (एल्कीन और एल्काइन) में होती है। दिए गए हाइड्रोकार्बनों में:<br>
+            - C₃H₆ (प्रोपीन - एल्कीन) और C₂H₂ (एथाइन - एल्काइन) में संकलन अभिक्रिया होती है<br>
+            - C₂H₆ (एथेन), C₃H₈ (प्रोपेन) और CH₄ (मेथेन) संतृप्त हाइड्रोकार्बन हैं जिनमें संकलन अभिक्रिया नहीं होती</div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">14</span>
+                <span>संतृप्त एवं असंतृप्त कार्बन के बीच रासायनिक अंतर समझने के लिए एक परीक्षण बताइए।</span>
+            </div>
+            <div class="answer">उत्तर: ब्रोमीन जल परीक्षण: संतृप्त और असंतृप्त हाइड्रोकार्बन में अंतर जानने के लिए ब्रोमीन जल (नारंगी रंग का) का उपयोग किया जाता है।<br>
+            - असंतृप्त हाइड्रोकार्बन ब्रोमीन जल का रंग रंगहीन कर देते हैं क्योंकि वे ब्रोमीन के साथ संकलन अभिक्रिया करते हैं<br>
+            - संतृप्त हाइड्रोकार्बन ब्रोमीन जल के साथ अभिक्रिया नहीं करते, इसलिए उसका नारंगी रंग बना रहता है</div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="card">
+            <div class="question">
+                <span class="question-number">15</span>
+                <span>साबुन की सफ़ाई प्रक्रिया की क्रियाविधि समझाइए।</span>
+            </div>
+            <div class="answer">उत्तर: साबुन की सफाई प्रक्रिया निम्न चरणों में होती है:<br>
+            1. साबुन के अणु का जलरागी सिरा पानी में घुल जाता है जबकि जलविरागी सिरा तेल या ग्रीस में<br>
+            2. साबुन के अणु मिसेल बनाते हैं जिसमें जलविरागी सिरे अंदर की ओर और जलरागी सिरे बाहर की ओर होते हैं<br>
+            3. तेल या गंदगी के कण मिसेल के केंद्र में फंस जाते हैं<br>
+            4. मिसेल के बाहरी जलरागी भाग पानी के संपर्क में रहते हैं और ये आयन-आयन विकर्षण के कारण अवक्षेपित नहीं होते<br>
+            5. इस प्रकार गंदगी के कण पानी में तैरते रहते हैं और आसानी से धुल जाते हैं</div>
+        </div>
+
+        <div class="note">
+            नोट: यदि आपको किसी प्रश्न के उत्तर में संदेह है तो आप ChatBox में हमारे शिक्षकों से बात कर सकते हैं।
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

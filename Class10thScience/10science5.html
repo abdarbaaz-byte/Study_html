@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 विज्ञान - अध्याय 5: जैव प्रक्रम</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2E8B57 0%, #4CAF50 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 18px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4caf50;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #1a237e;
+            display: flex;
+            align-items: flex-start;
+        }
+        .question-number {
+            background: #4caf50;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .answer {
+            color: #37474f;
+            font-size: 0.95rem;
+            text-align: justify;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 3px solid #78909c;
+        }
+        .chemical-equation {
+            font-style: italic;
+            text-align: center;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #e8f5e9;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px dashed #4caf50;
+        }
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .question {
+                font-size: 0.95rem;
+            }
+            .answer {
+                font-size: 0.9rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+                padding: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .question {
+                flex-direction: column;
+            }
+            .question-number {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>जैव प्रक्रम</h1>
+        
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>मनुष्य में वृक्क एक तंत्र का भाग है, जो संबंधित है—<br>
+                (a) पोषण<br>
+                (b) श्वसन<br>
+                (c) उत्सर्जन<br>
+                (d) परिवहन</span>
+            </div>
+            <div class="answer">उत्तर: (c) उत्सर्जन<br>
+            वृक्क मनुष्य के उत्सर्जन तंत्र का प्रमुख अंग है जो रक्त से नाइट्रोजनी अपशिष्ट पदार्थों (यूरिया, यूरिक अम्ल आदि) को छानकर मूत्र के रूप में बाहर निकालता है।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>पादप में जाइलम उत्तरदायी है—<br>
+                (a) जल का वहन<br>
+                (b) भोजन का वहन<br>
+                (c) अमीनो अम्ल का वहन<br>
+                (d) अॉक्सीजन का वहन</span>
+            </div>
+            <div class="answer">उत्तर: (a) जल का वहन<br>
+            पादपों में जाइलम ऊतक जड़ों से पत्तियों तक जल और खनिज लवणों का वहन करता है। यह ऊपर की दिशा में वहन करता है जो मूलदाब और वाष्पोत्सर्जन खिंचाव द्वारा संचालित होता है।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>स्वपोषी पोषण के लिए आवश्यक है—<br>
+                (a) कार्बन डाइअॉक्साइड तथा जल<br>
+                (b) क्लोरोफिल<br>
+                (c) सूर्य का प्रकाश<br>
+                (d) उपरोक्त सभी</span>
+            </div>
+            <div class="answer">उत्तर: (d) उपरोक्त सभी<br>
+            स्वपोषी पोषण (प्रकाश संश्लेषण) के लिए कार्बन डाइऑक्साइड, जल, क्लोरोफिल और सूर्य के प्रकाश की आवश्यकता होती है। ये सभी कारक प्रकाश संश्लेषण की प्रक्रिया के लिए अनिवार्य हैं।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>पायरुवेट के विखंडन से यह कार्बन डाइअॉक्साइड, जल तथा ऊर्जा देता है और यह क्रिया होती है—<br>
+                (a) कोशिकाद्रव्य<br>
+                (b) माइटोकॉन्ड्रिया<br>
+                (c) हरित लवक<br>
+                (d) केंद्रक</span>
+            </div>
+            <div class="answer">उत्तर: (b) माइटोकॉन्ड्रिया<br>
+            पायरुवेट का पूर्ण विखंडन माइटोकॉन्ड्रिया में होता है जहाँ वायवीय श्वसन की क्रिया में यह कार्बन डाइऑक्साइड, जल और अधिक मात्रा में ऊर्जा (ATP) देता है।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">5</span>
+                <span>हमारे शरीर में वसा का पाचन कैसे होता है? यह प्रक्रम कहाँ होता है?</span>
+            </div>
+            <div class="answer">उत्तर: वसा का पाचन छोटी आंत में होता है। यकृत से स्रावित पित्तरस वसा का इमल्सीकरण करके उसे छोटी-छोटी गोलिकाओं में तोड़ देता है, जिससे अग्न्याशयिक लाइपेज एंजाइम की क्रियाशीलता बढ़ जाती है। लाइपेज एंजाइम वसा का पाचन करके वसा अम्ल और ग्लिसरॉल में परिवर्तित कर देता है।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">6</span>
+                <span>भोजन के पाचन में लार की क्या भूमिका है?</span>
+            </div>
+            <div class="answer">उत्तर: लार में उपस्थित लार एमिलेस एंजाइम मंड (स्टार्च) को माल्टोज शर्करा में परिवर्तित करता है। लार भोजन को नम करके उसे निगलने योग्य बनाती है और मुँह के pH को उदासीन बनाए रखती है। लार में उपस्थित लाइसोजाइम एंजाइम हानिकारक जीवाणुओं को नष्ट करता है।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">7</span>
+                <span>स्वपोषी पोषण के लिए आवश्यक परिस्थितियाँ कौन सी हैं और उसके उपोत्पाद क्या हैं?</span>
+            </div>
+            <div class="answer">उत्तर: स्वपोषी पोषण (प्रकाश संश्लेषण) के लिए आवश्यक परिस्थितियाँ:<br>
+            1. सूर्य का प्रकाश<br>
+            2. क्लोरोफिल<br>
+            3. कार्बन डाइऑक्साइड<br>
+            4. जल<br>
+            इस प्रक्रिया के उपोत्पाद हैं: ऑक्सीजन गैस और जल। प्रकाश संश्लेषण की अभिक्रिया इस प्रकार है:<br>
+            6CO<sub>2</sub> + 6H<sub>2</sub>O → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub></div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">8</span>
+                <span>वायवीय तथा अवायवीय श्वसन में क्या अंतर हैं? कुछ जीवों के नाम लिखिए जिनमें अवायवीय श्वसन होता है।</span>
+            </div>
+            <div class="answer">उत्तर: वायवीय और अवायवीय श्वसन में अंतर:<br>
+            <b>वायवीय श्वसन:</b> ऑक्सीजन की उपस्थिति में होता है, अधिक ऊर्जा मुक्त होती है (36 ATP), अंतिम उत्पाद CO<sub>2</sub> और H<sub>2</sub>O होते हैं, माइटोकॉन्ड्रिया में होता है।<br>
+            <b>अवायवीय श्वसन:</b> ऑक्सीजन की अनुपस्थिति में होता है, कम ऊर्जा मुक्त होती है (2 ATP), अंतिम उत्पाद इथेनॉल + CO<sub>2</sub> या लैक्टिक अम्ल होते हैं, कोशिकाद्रव्य में होता है।<br>
+            अवायवीय श्वसन करने वाले जीव: यीस्ट, कुछ जीवाणु, मनुष्य की पेशी कोशिकाएँ (अॉक्सीजन की कमी होने पर)।</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">9</span>
+                <span>गैसों के अधिकतम विनिमय के लिए कूपिकाएँ किस प्रकार अभिकल्पित हैं?</span>
+            </div>
+            <div class="answer">उत्तर: कूपिकाएँ गैसों के अधिकतम विनिमय के लिए निम्नलिखित विशेषताओं से युक्त हैं:<br>
+            1. इनकी संरचना गुब्बारेनुमा होती है जिससे सतह क्षेत्रफल अधिक होता है<br>
+            2. इनकी भित्ति पतली और लचीली होती है<br>
+            3. इनमें रुधिर वाहिकाओं का सघन जाल बिछा होता है<br>
+            4. भीतरी सतह नम होती है जो गैसों के विसरण में सहायक होती है<br>
+            5. ये वायु और रुधिर के बीच की दूरी को कम करती हैं</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">10</span>
+                <span>हमारे शरीर में हीमोग्लोबिन की कमी के क्या परिणाम हो सकते हैं?</span>
+            </div>
+            <div class="answer">उत्तर: हीमोग्लोबिन की कमी के परिणाम:<br>
+            1. ऑक्सीजन का परिवहन कम हो जाता है<br>
+            2. शरीर की कोशिकाओं को पर्याप्त ऑक्सीजन नहीं मिल पाती<br>
+            3. ऊर्जा उत्पादन कम हो जाता है<br>
+            4. एनीमिया (रक्ताल्पता) रोग हो जाता है<br>
+            5. थकान, कमजोरी, चक्कर आना और सांस फूलने जैसे लक्षण दिखाई देते हैं<br>
+            6. शारीरिक और मानसिक विकास प्रभावित होता है</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">11</span>
+                <span>मनुष्य में दोहरा परिसंचरण की व्याख्या कीजिए। यह क्यों आवश्यक है?</span>
+            </div>
+            <div class="answer">उत्तर: दोहरा परिसंचरण वह प्रक्रिया है जिसमें रक्त हृदय से दो बार गुजरता है - एक बार फेफड़ों में ऑक्सीजनीकरण के लिए और दूसरी बार शरीर के विभिन्न भागों में परिवहन के लिए। इसमें दो परिपथ होते हैं: फुफ्फुसीय परिसंचरण और सिस्टमिक परिसंचरण।<br>
+            यह आवश्यक है क्योंकि:<br>
+            1. ऑक्सीजनित और विऑक्सीजनित रक्त को मिलने से रोकता है<br>
+            2. ऊर्जा की अधिक आवश्यकता वाले जीवों को पर्याप्त ऑक्सीजन की आपूर्ति सुनिश्चित करता है<br>
+            3. शरीर के तापमान को नियंत्रित रखने में सहायक होता है<br>
+            4. उच्च दक्षता से रक्त का परिसंचरण करता है</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">12</span>
+                <span>जाइलम तथा फ्लोएम में पदार्थों के वहन में क्या अंतर है?</span>
+            </div>
+            <div class="answer">उत्तर: जाइलम और फ्लोएम में पदार्थों के वहन में अंतर:<br>
+            <b>जाइलम:</b><br>
+            - जड़ों से पत्तियों तक जल और खनिज लवणों का वहन करता है<br>
+            - वहन की दिशा ऊपर की ओर (एकदिशीय) होती है<br>
+            - वहन भौतिक बलों (मूलदाब और वाष्पोत्सर्जन) द्वारा होता है<br>
+            - इसमें मुख्यतः मृत कोशिकाएँ होती हैं<br>
+            <b>फ्लोएम:</b><br>
+            - पत्तियों से पौधे के अन्य भागों तक भोजन का वहन करता है<br>
+            - वहन की दिशा ऊपर और नीचे दोनों ओर (द्विदिशीय) होती है<br>
+            - वहन ऊर्जा की खपत (सक्रिय प्रक्रिया) द्वारा होता है<br>
+            - इसमें जीवित कोशिकाएँ होती हैं</div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">13</span>
+                <span>फुफ्फुस में कूपिकाओं की तथा वृक्क में वृक्काणु (नेफ्रान) की रचना तथा क्रियाविधि की तुलना कीजिए।</span>
+            </div>
+            <div class="answer">उत्तर: फुफ्फुस की कूपिकाओं और वृक्क के वृक्काणु की तुलना:<br>
+            <b>समानताएँ:</b><br>
+            1. दोनों में पतली भित्ति वाली रुधिर केशिकाओं का जाल होता है<br>
+            2. दोनों विसरण द्वारा पदार्थों का आदान-प्रदान करते हैं<br>
+            3. दोनों अंगों के कार्यात्मक इकाई हैं<br>
+            <b>अंतर:</b><br>
+            <b>कूपिकाएँ:</b><br>
+            - फेफड़ों में स्थित होती हैं<br>
+            - गैसों (O<sub>2</sub> और CO<sub>2</sub>) का विनिमय करती हैं<br>
+            - सरंचना गुब्बारेनुमा होती है<br>
+            - वायु और रुधिर के बीच अंतरापृष्ठ का कार्य करती हैं<br>
+            <b>वृक्काणु:</b><br>
+            - वृक्क में स्थित होते हैं<br>
+            - रक्त से अपशिष्ट पदार्थों को छानते हैं और मूत्र बनाते हैं<br>
+            - संरचना नलिकानुमा होती है<br>
+            - निस्यंदन, पुनरावशोषण और स्रावण की प्रक्रिया करते हैं</div>
+        </div>
+
+        <div class="note">
+            नोट: यदि आपको किसी प्रश्न के उत्तर में संदेह है तो आप ChatBox में हमारे शिक्षकों से बात कर सकते हैं।
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
