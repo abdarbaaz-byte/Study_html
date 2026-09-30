@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 14: प्रायिकता</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        th {
+            background-color: #e0e7ff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 14<br>प्रायिकता</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 14.1 ==================== -->
+        <section id="exercise-14-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 14.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित कथनों को पूरा कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) घटना E की प्रायिकता + घटना ‘E नहीं’ की प्रायिकता = <strong>1</strong> है।</p>
+                    <p class="mb-2">(ii) उस घटना की प्रायिकता जो घटित नहीं हो सकती <strong>0</strong> है। ऐसी घटना <strong>असंभव घटना</strong> कहलाती है।</p>
+                    <p class="mb-2">(iii) उस घटना की प्रायिकता जिसका घटित होना निश्चित है <strong>1</strong> है। ऐसी घटना <strong>निश्चित घटना</strong> कहलाती है।</p>
+                    <p class="mb-2">(iv) किसी प्रयोग की सभी प्रारंभिक घटनाओं की प्रायिकताओं का योग <strong>1</strong> है।</p>
+                    <p class="mb-2">(v) किसी घटना की प्रायिकता <strong>0</strong> से बड़ी या उसके बराबर होती है तथा <strong>1</strong> से छोटी या उसके बराबर होती है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> प्रायिकता सिद्धांत के आधार पर, किसी घटना की प्रायिकता 0 और 1 के बीच होती है। असंभव घटना की प्रायिकता 0 और निश्चित घटना की प्रायिकता 1 होती है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित प्रयोगों में से किन-किन प्रयोगों के परिणाम समप्रायिक हैं? स्पष्ट कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) एक ड्राइवर कार चलाने का प्रयत्न करता है। कार चलना प्रारंभ हो जाती है या कार चलना प्रारंभ नहीं होती है।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> यह समप्रायिक नहीं है, क्योंकि कार के चलने और न चलने की संभावनाएँ समान नहीं होतीं।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) एक खिलाड़ी बास्केटबॉल को बास्केट में डालने का प्रयत्न करती है। वह बास्केट में बॉल डाल पाती है या नहीं डाल पाती है।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> यह समप्रायिक नहीं है, क्योंकि खिलाड़ी के बॉल डालने और न डाल पाने की संभावनाएँ समान नहीं होतीं।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) एक सत्य-असत्य प्रश्न का अनुमान लगाया जाता है। उत्तर सही है या गलत होगा।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> यदि अनुमान पूर्णतः यादृच्छिक है, तो सही और गलत उत्तर की संभावनाएँ समान होती हैं। अतः यह समप्रायिक है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) एक बच्चे का जन्म होता है। वह एक लड़का है या एक लड़की है।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> यह समप्रायिक नहीं है, क्योंकि लड़का और लड़की होने की प्रायिकताएँ बिल्कुल समान नहीं होतीं।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> समप्रायिक परिणामों का अर्थ है कि सभी परिणामों के घटित होने की संभावना समान हो। केवल (iii) में यदि अनुमान यादृच्छिक हो तो परिणाम समप्रायिक हो सकते हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: फुटबॉल के खेल को प्रारंभ करते समय यह निर्णय लेने के लिए कि कौन-सी टीम पहले बॉल लेगी, इसके लिए सिक्का उछालना एक न्यायसंगत विधि क्यों माना जाता है?</h3>
+                <div class="step">
+                    <p class="mb-2">सिक्के के दो पहलू होते हैं – चित और पट।</p>
+                    <p class="mb-2">यदि सिक्का न्यायसंगत (fair) है, तो चित और पट आने की प्रायिकताएँ समान होती हैं, अर्थात् प्रत्येक की प्रायिकता <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> होती है।</p>
+                    <p class="mb-2">इसलिए किसी भी टीम को कोई लाभ नहीं मिलता। अतः यह निर्णय लेने की न्यायसंगत विधि है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्नलिखित में से कौन सी संख्या किसी घटना की प्रायिकता नहीं हो सकती?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> (B) −1.5 (C) 15% (D) 0.7</p>
+                    <p class="mb-2">किसी घटना की प्रायिकता सदैव 0 और 1 के बीच होती है (0 ≤ P ≤ 1)।</p>
+                    <p class="mb-2">−1.5 ऋणात्मक है, अतः यह प्रायिकता नहीं हो सकती।</p>
+                    <p><strong>उत्तर:</strong> (B) −1.5</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: यदि P(E) = 0.05 है, तो ‘E नहीं’ की प्रायिकता क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2">P(E) + P(not E) = 1</p>
+                    <p class="mb-2">0.05 + P(not E) = 1</p>
+                    <p class="mb-2">P(not E) = 1 − 0.05 = 0.95</p>
+                    <p><strong>उत्तर:</strong> 0.95</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक थैले में केवल नीबू की महक वाली मीठी गोलियाँ हैं। मालिनी बिना थैले में झाँके उसमें से एक गोली निकालती है। इसकी क्या प्रायिकता है कि वह निकाली गई गोली (i) संतरे की महक वाली है? (ii) नीबू की महक वाली है?</h3>
+                <div class="step">
+                    <p class="mb-2">थैले में केवल नीबू की महक वाली गोलियाँ हैं।</p>
+                    <p class="mb-2">(i) संतरे की महक वाली गोली निकलने की प्रायिकता = <div class="fraction"><span class="numerator">0</span><span class="denominator">कुल गोलियाँ</span></div> = 0</p>
+                    <p class="mb-2">(ii) नीबू की महक वाली गोली निकलने की प्रायिकता = <div class="fraction"><span class="numerator">कुल गोलियाँ</span><span class="denominator">कुल गोलियाँ</span></div> = 1</p>
+                    <p><strong>उत्तर:</strong> (i) 0 (ii) 1</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: यह दिया हुआ है कि 3 विद्यार्थियों के एक समूह में से 2 विद्यार्थियों के जन्मदिन एक ही दिन न होने की प्रायिकता 0.992 है। इसकी क्या प्रायिकता है कि इन 2 विद्यार्थियों का जन्मदिन एक ही दिन हो?</h3>
+                <div class="step">
+                    <p class="mb-2">P(जन्मदिन एक ही दिन न हो) = 0.992</p>
+                    <p class="mb-2">P(जन्मदिन एक ही दिन हो) = 1 − 0.992 = 0.008</p>
+                    <p><strong>उत्तर:</strong> 0.008</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक थैले में 3 लाल और 5 काली गेंदें हैं। इस थैले में से एक गेंद यादृच्छया निकाली जाती है। इसकी प्रायिकता क्या है कि गेंद (i) लाल हो? (ii) लाल नहीं हो?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल गेंदें = 3 + 5 = 8</p>
+                    <p class="mb-2">(i) P(लाल) = <div class="fraction"><span class="numerator">3</span><span class="denominator">8</span></div></p>
+                    <p class="mb-2">(ii) P(लाल नहीं) = 1 − <div class="fraction"><span class="numerator">3</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">8</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">3</span><span class="denominator">8</span></div> (ii) <div class="fraction"><span class="numerator">5</span><span class="denominator">8</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक डिब्बे में 5 लाल कंचे, 8 सफेद कंचे और 4 हरे कंचे हैं। इस डिब्बे में से एक कंचा यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि निकाला गया कंचा (i) लाल है? (ii) सफेद है? (iii) हरा नहीं है?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल कंचे = 5 + 8 + 4 = 17</p>
+                    <p class="mb-2">(i) P(लाल) = <div class="fraction"><span class="numerator">5</span><span class="denominator">17</span></div></p>
+                    <p class="mb-2">(ii) P(सफेद) = <div class="fraction"><span class="numerator">8</span><span class="denominator">17</span></div></p>
+                    <p class="mb-2">(iii) P(हरा नहीं) = 1 − P(हरा) = 1 − <div class="fraction"><span class="numerator">4</span><span class="denominator">17</span></div> = <div class="fraction"><span class="numerator">13</span><span class="denominator">17</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">5</span><span class="denominator">17</span></div> (ii) <div class="fraction"><span class="numerator">8</span><span class="denominator">17</span></div> (iii) <div class="fraction"><span class="numerator">13</span><span class="denominator">17</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक पिग्गी बैंक में, 50 पैसे के सौ सिक्के हैं, ₹1 के पचास सिक्के हैं, ₹2 के बीस सिक्के और ₹5 के दस सिक्के हैं। यदि पिग्गी बैंक को हिलाकर उल्टा करने पर कोई एक सिक्का गिरने के परिणाम समप्रायिक हैं, तो इसकी क्या प्रायिकता है कि वह गिरा हुआ सिक्का (i) 50 पैसे का होगा? (ii) ₹5 का नहीं होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल सिक्के = 100 + 50 + 20 + 10 = 180</p>
+                    <p class="mb-2">(i) P(50 पैसे का) = <div class="fraction"><span class="numerator">100</span><span class="denominator">180</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">9</span></div></p>
+                    <p class="mb-2">(ii) P(₹5 का नहीं) = 1 − P(₹5 का) = 1 − <div class="fraction"><span class="numerator">10</span><span class="denominator">180</span></div> = <div class="fraction"><span class="numerator">170</span><span class="denominator">180</span></div> = <div class="fraction"><span class="numerator">17</span><span class="denominator">18</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">5</span><span class="denominator">9</span></div> (ii) <div class="fraction"><span class="numerator">17</span><span class="denominator">18</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: गोपी अपने जल-जीव कुंड (aquarium) के लिए एक दुकान से मछली खरीदती है। दुकानदार एक टंकी, जिसमें 5 नर मछली और 8 मादा मछली हैं, में से एक मछली यादृच्छया उसे देने के लिए निकालती है। इसकी क्या प्रायिकता है कि निकाली गई मछली नर मछली है?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल मछलियाँ = 5 + 8 = 13</p>
+                    <p class="mb-2">P(नर मछली) = <div class="fraction"><span class="numerator">5</span><span class="denominator">13</span></div></p>
+                    <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">5</span><span class="denominator">13</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: संयोग (chance) के एक खेल में, एक तीर को घुमाया जाता है, जो विश्राम में आने के बाद संख्याओं 1, 2, 3, 4, 5, 6, 7 और 8 में से किसी एक संख्या को इंगित करता है। यदि ये सभी परिणाम समप्रायिक हों तो इसकी क्या प्रायिकता है कि यह तीर इंगित (i) 8 को करेगा? (ii) एक विषम संख्या को करेगा? (iii) 2 से बड़ी संख्या को करेगा? (iv) 9 से छोटी संख्या को करेगा?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल संख्याएँ = 8</p>
+                    <p class="mb-2">(i) P(8) = <div class="fraction"><span class="numerator">1</span><span class="denominator">8</span></div></p>
+                    <p class="mb-2">(ii) विषम संख्याएँ: 1, 3, 5, 7 → 4 संख्याएँ, P = <div class="fraction"><span class="numerator">4</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">(iii) 2 से बड़ी संख्याएँ: 3,4,5,6,7,8 → 6 संख्याएँ, P = <div class="fraction"><span class="numerator">6</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">(iv) 9 से छोटी संख्याएँ: सभी 8 संख्याएँ, P = <div class="fraction"><span class="numerator">8</span><span class="denominator">8</span></div> = 1</p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">1</span><span class="denominator">8</span></div> (ii) <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (iii) <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> (iv) 1</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: एक पासे को एक बार फेंका जाता है। निम्नलिखित को प्राप्त करने की प्रायिकता ज्ञात कीजिए: (i) एक अभाज्य संख्या (ii) 2 और 6 के बीच स्थित कोई संख्या (iii) एक विषम संख्या</h3>
+                <div class="step">
+                    <p class="mb-2">पासे के कुल परिणाम = 6</p>
+                    <p class="mb-2">(i) अभाज्य संख्याएँ: 2, 3, 5 → 3, P = <div class="fraction"><span class="numerator">3</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">(ii) 2 और 6 के बीच: 3, 4, 5 → 3, P = <div class="fraction"><span class="numerator">3</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">(iii) विषम संख्याएँ: 1, 3, 5 → 3, P = <div class="fraction"><span class="numerator">3</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (ii) <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (iii) <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: 52 पत्तों की अच्छी प्रकार से फेंटी गई एक गड्डी में से एक पत्ता निकाला जाता है। निम्नलिखित को प्राप्त करने की प्रायिकता ज्ञात कीजिए: (i) लाल रंग का बादशाह (ii) एक फेस कार्ड अर्थात् तस्वीर वाला पत्ता (iii) लाल रंग का तस्वीर वाला पत्ता (iv) पान का गुलाम (v) ईंट का पत्ता (vi) एक ईंट की बेगम</h3>
+                <div class="step">
+                    <p class="mb-2">कुल पत्ते = 52</p>
+                    <p class="mb-2">(i) लाल रंग के बादशाह: 2 (हुकुम और ईंट), P = <div class="fraction"><span class="numerator">2</span><span class="denominator">52</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">26</span></div></p>
+                    <p class="mb-2">(ii) फेस कार्ड: 12 (J, Q, K प्रत्येक रंग में 3), P = <div class="fraction"><span class="numerator">12</span><span class="denominator">52</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">13</span></div></p>
+                    <p class="mb-2">(iii) लाल रंग का तस्वीर वाला पत्ता: 6 (हुकुम और ईंट के J, Q, K), P = <div class="fraction"><span class="numerator">6</span><span class="denominator">52</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">26</span></div></p>
+                    <p class="mb-2">(iv) पान का गुलाम: 1, P = <div class="fraction"><span class="numerator">1</span><span class="denominator">52</span></div></p>
+                    <p class="mb-2">(v) ईंट का पत्ता: 13, P = <div class="fraction"><span class="numerator">13</span><span class="denominator">52</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">(vi) ईंट की बेगम: 1, P = <div class="fraction"><span class="numerator">1</span><span class="denominator">52</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">1</span><span class="denominator">26</span></div> (ii) <div class="fraction"><span class="numerator">3</span><span class="denominator">13</span></div> (iii) <div class="fraction"><span class="numerator">3</span><span class="denominator">26</span></div> (iv) <div class="fraction"><span class="numerator">1</span><span class="denominator">52</span></div> (v) <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> (vi) <div class="fraction"><span class="numerator">1</span><span class="denominator">52</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: ताश के पाँच पत्तों—ईंट का दहला, गुलाम, बेगम, बादशाह और इक्का—को पलट करके अच्छी प्रकार फेंटा जाता है। फिर इनमें से यादृच्छया एक पत्ता निकाला जाता है। (i) इसकी क्या प्रायिकता है कि यह पत्ता एक बेगम है? (ii) यदि बेगम निकल आती है, तो उसे अलग रख दिया जाता है और एक अन्य पत्ता निकाला जाता है। इसकी क्या प्रायिकता है कि दूसरा निकाला गया पत्ता (a) एक इक्का है? (b) एक बेगम है?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल पत्ते = 5</p>
+                    <p class="mb-2">(i) P(बेगम) = <div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div></p>
+                    <p class="mb-2">(ii) बेगम निकालने के बाद शेष पत्ते = 4</p>
+                    <p class="mb-2">(a) P(इक्का) = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">(b) P(बेगम) = <div class="fraction"><span class="numerator">0</span><span class="denominator">4</span></div> = 0</p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div> (ii)(a) <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> (b) 0</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: किसी कारण 12 खराब पेन 132 अच्छे पेनों में मिल गए हैं। केवल देखकर यह नहीं बताया जा सकता है कि कोई पेन खराब है या अच्छा है। इस मिश्रण में से, एक पेन यादृच्छया निकाला जाता है। निकाले गए पेन की अच्छा होने की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">कुल पेन = 12 + 132 = 144</p>
+                    <p class="mb-2">P(अच्छा पेन) = <div class="fraction"><span class="numerator">132</span><span class="denominator">144</span></div> = <div class="fraction"><span class="numerator">11</span><span class="denominator">12</span></div></p>
+                    <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">11</span><span class="denominator">12</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: (i) 20 बल्बों के एक समूह में 4 बल्ब खराब हैं। इस समूह में से एक बल्ब यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि यह बल्ब खराब होगा? (ii) मान लीजिए (i) में निकाला गया बल्ब खराब नहीं है और न ही इसे दुबारा बल्बों के साथ मिलाया जाता है। अब शेष बल्बों में से एक बल्ब यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि यह बल्ब खराब नहीं होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">(i) कुल बल्ब = 20, खराब = 4, P(खराब) = <div class="fraction"><span class="numerator">4</span><span class="denominator">20</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div></p>
+                    <p class="mb-2">(ii) एक अच्छा बल्ब निकालने के बाद शेष = 19 बल्ब, जिनमें 4 खराब और 15 अच्छे हैं।</p>
+                    <p class="mb-2">P(खराब नहीं) = <div class="fraction"><span class="numerator">15</span><span class="denominator">19</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div> (ii) <div class="fraction"><span class="numerator">15</span><span class="denominator">19</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: एक पेटी में 90 डिस्क (discs) हैं, जिन पर 1 से 90 तक संख्याएँ अंकित हैं। यदि इस पेटी में से एक डिस्क यादृच्छया निकाली जाती है तो इसकी प्रायिकता ज्ञात कीजिए कि इस डिस्क पर अंकित होगी: (i) दो अंकों की एक संख्या (ii) एक पूर्ण वर्ग संख्या (iii) 5 से विभाज्य एक संख्या।</h3>
+                <div class="step">
+                    <p class="mb-2">कुल डिस्क = 90</p>
+                    <p class="mb-2">(i) दो अंकों की संख्याएँ: 10 से 90 तक = 81, P = <div class="fraction"><span class="numerator">81</span><span class="denominator">90</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">10</span></div></p>
+                    <p class="mb-2">(ii) पूर्ण वर्ग: 1,4,9,16,25,36,49,64,81 = 9, P = <div class="fraction"><span class="numerator">9</span><span class="denominator">90</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">10</span></div></p>
+                    <p class="mb-2">(iii) 5 से विभाज्य: 5,10,15,...,90 = 18, P = <div class="fraction"><span class="numerator">18</span><span class="denominator">90</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">9</span><span class="denominator">10</span></div> (ii) <div class="fraction"><span class="numerator">1</span><span class="denominator">10</span></div> (iii) <div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: एक बच्चे के पास ऐसा पासा है जिसके फलकों पर निम्नलिखित अक्षर अंकित हैं: A, B, C, D, E, A. इस पासे को एक बार फेंका जाता है। इसकी क्या प्रायिकता है कि (i) A प्राप्त हो? (ii) D प्राप्त हो?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल फलक = 6</p>
+                    <p class="mb-2">(i) A दो बार है, P(A) = <div class="fraction"><span class="numerator">2</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2">(ii) D एक बार है, P(D) = <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> (ii) <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20*: मान लीजिए आप एक पासे को आकृति 14.6 में दर्शाए आयताकार क्षेत्र में यादृच्छया रूप से गिराते हैं। इसकी क्या प्रायिकता है कि वह पासा 1m व्यास वाले वृत्त के अंदर गिरेगा? (यह परीक्षा की दृष्टि से नहीं है।)</h3>
+                <div class="step">
+                    <p class="mb-2">आयताकार क्षेत्र: 3 m × 2 m = 6 m²</p>
+                    <p class="mb-2">वृत्त का व्यास = 1 m ⇒ त्रिज्या = 0.5 m</p>
+                    <p class="mb-2">वृत्त का क्षेत्रफल = π(0.5)² = 0.25π m²</p>
+                    <p class="mb-2">P(वृत्त के अंदर) = <div class="fraction"><span class="numerator">0.25π</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">π</span><span class="denominator">24</span></div> ≈ 0.131</p>
+                    <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">π</span><span class="denominator">24</span></div> ≈ 0.131</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 21 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 21: 144 बॉल पेनों के एक समूह में 20 बॉल पेन खराब हैं और शेष अच्छे हैं। आप वही पेन खरीदना चाहेंगे जो अच्छा हो, परंतु खराब पेन आप खरीदना नहीं चाहेंगे। दुकानदार इन पेनों में से, यादृच्छया एक पेन निकालकर आपको देता है। इसकी क्या प्रायिकता है कि (i) आप वह पेन खरीदेंगे? (ii) आप वह पेन नहीं खरीदेंगे?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल पेन = 144, खराब = 20, अच्छे = 124</p>
+                    <p class="mb-2">(i) P(खरीदेंगे) = <div class="fraction"><span class="numerator">124</span><span class="denominator">144</span></div> = <div class="fraction"><span class="numerator">31</span><span class="denominator">36</span></div></p>
+                    <p class="mb-2">(ii) P(नहीं खरीदेंगे) = <div class="fraction"><span class="numerator">20</span><span class="denominator">144</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">36</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">31</span><span class="denominator">36</span></div> (ii) <div class="fraction"><span class="numerator">5</span><span class="denominator">36</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 22 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 22: उदाहरण 13 को देखिए। (i) निम्नलिखित सारणी को पूरा कीजिए:</h3>
+                <table>
+                    <tr><th>घटना: दोनों पासों की संख्याओं का योग</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+                    <tr><td>प्रायिकता</td><td>1/36</td><td>2/36</td><td>3/36</td><td>4/36</td><td>5/36</td><td>6/36</td><td>5/36</td><td>4/36</td><td>3/36</td><td>2/36</td><td>1/36</td></tr>
+                </table>
+                <div class="step">
+                    <p class="mb-2">(ii) एक विद्यार्थी यह तर्क देता है कि 'यहाँ कुल 11 परिणाम 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 और 12 हैं। अतः, प्रत्येक की प्रायिकता 1/11 है।' क्या आप इस तर्क से सहमत हैं? सकारण उत्तर दीजिए।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> नहीं, यह तर्क सही नहीं है। ये 11 परिणाम समप्रायिक नहीं हैं क्योंकि प्रत्येक योग के अनुकूल परिणामों की संख्या भिन्न-भिन्न है। जैसे योग 7 के 6 तरीके हैं जबकि योग 2 के केवल 1 तरीका।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 23 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 23: एक खेल में एक रुपए के सिक्के को तीन बार उछाला जाता है और प्रत्येक बार का परिणाम लिख लिया जाता है। तीनों परिणाम समान होने पर, अर्थात् तीन चित या तीन पट प्राप्त होने पर, हनीफ खेल में जीत जाएगा, अन्यथा वह हार जाएगा। हनीफ के खेल में हार जाने की प्रायिकता परिकलित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">कुल परिणाम = 2³ = 8: HHH, HHT, HTH, THH, HTT, THT, TTH, TTT</p>
+                    <p class="mb-2">जीतने के अनुकूल: HHH, TTT = 2</p>
+                    <p class="mb-2">P(जीत) = <div class="fraction"><span class="numerator">2</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">P(हार) = 1 − <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div></p>
+                    <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 24 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 24: एक पासे को दो बार फेंका जाता है। इसकी क्या प्रायिकता है कि (i) 5 किसी भी बार में नहीं आएगा? (ii) 5 कम से कम एक बार आएगा?</h3>
+                <div class="step">
+                    <p class="mb-2">कुल परिणाम = 6 × 6 = 36</p>
+                    <p class="mb-2">(i) 5 किसी भी बार न आने के परिणाम = 5 × 5 = 25, P = <div class="fraction"><span class="numerator">25</span><span class="denominator">36</span></div></p>
+                    <p class="mb-2">(ii) 5 कम से कम एक बार आने की प्रायिकता = 1 − <div class="fraction"><span class="numerator">25</span><span class="denominator">36</span></div> = <div class="fraction"><span class="numerator">11</span><span class="denominator">36</span></div></p>
+                    <p><strong>उत्तर:</strong> (i) <div class="fraction"><span class="numerator">25</span><span class="denominator">36</span></div> (ii) <div class="fraction"><span class="numerator">11</span><span class="denominator">36</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 25 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 25: निम्नलिखित में से कौन से तर्क सत्य हैं और कौन से तर्क असत्य हैं? सकारण उत्तर दीजिए। (i) यदि दो सिक्कों को एक साथ उछाला जाता है, तो इसके तीन संभावित परिणाम—दो चित, दो पट या प्रत्येक एक बार हैं। अतः, इनमें से प्रत्येक परिणाम की प्रायिकता 1/3 है। (ii) यदि एक पासे को फेंका जाता है, तो इसके दो संभावित परिणाम—एक विषम संख्या या एक सम संख्या हैं। अतः एक विषम संख्या प्राप्त करने की प्रायिकता 1/2 है।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) <strong>असत्य।</strong> दो सिक्कों को उछालने पर चार समप्रायिक परिणाम होते हैं: HH, HT, TH, TT। इनमें "दो चित" (HH) की प्रायिकता 1/4, "दो पट" (TT) की 1/4 और "प्रत्येक एक बार" (HT या TH) की 2/4 = 1/2 है।</p>
+                    <p class="mb-2">(ii) <strong>सत्य।</strong> पासे पर विषम संख्याएँ 1, 3, 5 हैं और सम संख्याएँ 2, 4, 6 हैं। दोनों की प्रायिकता 3/6 = 1/2 है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

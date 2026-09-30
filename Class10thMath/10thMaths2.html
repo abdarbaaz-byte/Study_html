@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 2: बहुपद (हल)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Gradient Title Card -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 2: बहुपद</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित</p>
+        </div>
+
+        <!-- Exercise 2.1 Section -->
+        <section id="prashnavali-2-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.1</h2>
+            
+            <!-- Question 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: नीचे दी गई आकृति 2.10 में, y = p(x) का ग्राफ दिया गया है, जहाँ p(x) एक बहुपद है। प्रत्येक स्थिति में, p(x) के शून्यकों की संख्या ज्ञात कीजिए।</h3>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+                    
+                    <div class="step">
+                        <p class="mb-2">किसी बहुपद के शून्यक उन बिंदुओं के x-निर्देशांक होते हैं जहाँ उसका ग्राफ x-अक्ष को प्रतिच्छेद करता है।</p>
+                        
+                        <div class="mb-4">
+                            <p class="font-medium">(i) शून्यकों की संख्या: 1</p>
+                            <p>कारण: ग्राफ x-अक्ष को केवल एक बिंदु पर प्रतिच्छेद करता है।</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="font-medium">(ii) शून्यकों की संख्या: 2</p>
+                            <p>कारण: ग्राफ x-अक्ष को दो बिंदुओं पर प्रतिच्छेद करता है।</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="font-medium">(iii) शून्यकों की संख्या: 3</p>
+                            <p>कारण: ग्राफ x-अक्ष को तीन बिंदुओं पर प्रतिच्छेद करता है।</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="font-medium">(iv) शून्यकों की संख्या: 1</p>
+                            <p>कारण: ग्राफ x-अक्ष को केवल एक बिंदु पर प्रतिच्छेद करता है।</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="font-medium">(v) शून्यकों की संख्या: 1</p>
+                            <p>कारण: ग्राफ x-अक्ष को केवल एक बिंदु पर प्रतिच्छेद करता है।</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="font-medium">(vi) शून्यकों की संख्या: 4</p>
+                            <p>कारण: ग्राफ x-अक्ष को चार बिंदुओं पर प्रतिच्छेद करता है।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 2.2 Section -->
+        <section id="prashnavali-2-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.2</h2>
+            
+            <!-- Question 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्न द्विघात बहुपदों के शून्यक ज्ञात कीजिए और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए:</h3>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+                    
+                    <!-- Part (i) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(i) x² – 2x – 8</p>
+                        <p class="mb-2">बहुपद: x² – 2x – 8</p>
+                        <p class="mb-2">गुणनखंड करने पर:</p>
+                        <p class="mb-2">x² – 2x – 8 = x² – 4x + 2x – 8</p>
+                        <p class="mb-2">= x(x – 4) + 2(x – 4) = (x + 2)(x – 4)</p>
+                        <p class="mb-2">शून्यक: x + 2 = 0 या x – 4 = 0</p>
+                        <p class="mb-2">अतः शून्यक हैं: x = –2 और x = 4</p>
+                        
+                        <div class="explanation">
+                            <p><strong>शून्यकों और गुणांकों के बीच संबंध की जाँच:</strong></p>
+                            <p>द्विघात बहुपद ax² + bx + c के लिए:</p>
+                            <p>शून्यकों का योग = –b/a</p>
+                            <p>शून्यकों का गुणनफल = c/a</p>
+                            <p>यहाँ a = 1, b = –2, c = –8</p>
+                            <p>शून्यकों का योग = (–2) + 4 = 2 = –(–2)/1 = –b/a</p>
+                            <p>शून्यकों का गुणनफल = (–2) × 4 = –8 = (–8)/1 = c/a</p>
+                            <p>संबंध सत्यापित हो गया।</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Part (ii) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(ii) 4s² – 4s + 1</p>
+                        <p class="mb-2">बहुपद: 4s² – 4s + 1</p>
+                        <p class="mb-2">गुणनखंड करने पर:</p>
+                        <p class="mb-2">4s² – 4s + 1 = (2s – 1)²</p>
+                        <p class="mb-2">शून्यक: 2s – 1 = 0</p>
+                        <p class="mb-2">अतः शून्यक है: s = 1/2 (दो बार)</p>
+                        
+                        <div class="explanation">
+                            <p><strong>शून्यकों और गुणांकों के बीच संबंध की जाँच:</strong></p>
+                            <p>यहाँ a = 4, b = –4, c = 1</p>
+                            <p>शून्यकों का योग = 1/2 + 1/2 = 1 = –(–4)/4 = –b/a</p>
+                            <p>शून्यकों का गुणनफल = (1/2) × (1/2) = 1/4 = 1/4 = c/a</p>
+                            <p>संबंध सत्यापित हो गया।</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Part (iii) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(iii) 6x² – 3 – 7x</p>
+                        <p class="mb-2">बहुपद: 6x² – 7x – 3</p>
+                        <p class="mb-2">गुणनखंड करने पर:</p>
+                        <p class="mb-2">6x² – 7x – 3 = 6x² – 9x + 2x – 3</p>
+                        <p class="mb-2">= 3x(2x – 3) + 1(2x – 3) = (3x + 1)(2x – 3)</p>
+                        <p class="mb-2">शून्यक: 3x + 1 = 0 या 2x – 3 = 0</p>
+                        <p class="mb-2">अतः शून्यक हैं: x = –1/3 और x = 3/2</p>
+                        
+                        <div class="explanation">
+                            <p><strong>शून्यकों और गुणांकों के बीच संबंध की जाँच:</strong></p>
+                            <p>यहाँ a = 6, b = –7, c = –3</p>
+                            <p>शून्यकों का योग = (–1/3) + (3/2) = 7/6 = –(–7)/6 = –b/a</p>
+                            <p>शून्यकों का गुणनफल = (–1/3) × (3/2) = –1/2 = (–3)/6 = c/a</p>
+                            <p>संबंध सत्यापित हो गया।</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Part (iv) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(iv) 4u² + 8u</p>
+                        <p class="mb-2">बहुपद: 4u² + 8u</p>
+                        <p class="mb-2">गुणनखंड करने पर:</p>
+                        <p class="mb-2">4u² + 8u = 4u(u + 2)</p>
+                        <p class="mb-2">शून्यक: 4u = 0 या u + 2 = 0</p>
+                        <p class="mb-2">अतः शून्यक हैं: u = 0 और u = –2</p>
+                        
+                        <div class="explanation">
+                            <p><strong>शून्यकों और गुणांकों के बीच संबंध की जाँच:</strong></p>
+                            <p>यहाँ a = 4, b = 8, c = 0</p>
+                            <p>शून्यकों का योग = 0 + (–2) = –2 = –8/4 = –b/a</p>
+                            <p>शून्यकों का गुणनफल = 0 × (–2) = 0 = 0/4 = c/a</p>
+                            <p>संबंध सत्यापित हो गया।</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Part (v) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(v) t² – 15</p>
+                        <p class="mb-2">बहुपद: t² – 15</p>
+                        <p class="mb-2">गुणनखंड करने पर:</p>
+                        <p class="mb-2">t² – 15 = (t – √15)(t + √15)</p>
+                        <p class="mb-2">शून्यक: t – √15 = 0 या t + √15 = 0</p>
+                        <p class="mb-2">अतः शून्यक हैं: t = √15 और t = –√15</p>
+                        
+                        <div class="explanation">
+                            <p><strong>शून्यकों और गुणांकों के बीच संबंध की जाँच:</strong></p>
+                            <p>यहाँ a = 1, b = 0, c = –15</p>
+                            <p>शून्यकों का योग = √15 + (–√15) = 0 = –0/1 = –b/a</p>
+                            <p>शून्यकों का गुणनफल = √15 × (–√15) = –15 = (–15)/1 = c/a</p>
+                            <p>संबंध सत्यापित हो गया।</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Part (vi) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(vi) 3x² – x – 4</p>
+                        <p class="mb-2">बहुपद: 3x² – x – 4</p>
+                        <p class="mb-2">गुणनखंड करने पर:</p>
+                        <p class="mb-2">3x² – x – 4 = 3x² – 4x + 3x – 4</p>
+                        <p class="mb-2">= x(3x – 4) + 1(3x – 4) = (x + 1)(3x – 4)</p>
+                        <p class="mb-2">शून्यक: x + 1 = 0 या 3x – 4 = 0</p>
+                        <p class="mb-2">अतः शून्यक हैं: x = –1 और x = 4/3</p>
+                        
+                        <div class="explanation">
+                            <p><strong>शून्यकों और गुणांकों के बीच संबंध की जाँच:</strong></p>
+                            <p>यहाँ a = 3, b = –1, c = –4</p>
+                            <p>शून्यकों का योग = (–1) + (4/3) = 1/3 = –(–1)/3 = –b/a</p>
+                            <p>शून्यकों का गुणनफल = (–1) × (4/3) = –4/3 = (–4)/3 = c/a</p>
+                            <p>संबंध सत्यापित हो गया।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों का योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं:</h3>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+                    
+                    <div class="step mb-4">
+                        <p class="mb-2">यदि किसी द्विघात बहुपद के शून्यक α और β हों, तो वह बहुपद निम्न प्रकार लिखा जा सकता है:</p>
+                        <p class="mb-2 equation">x² – (α + β)x + αβ</p>
+                    </div>
+                    
+                    <!-- Part (i) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(i) 
+                            <span class="fraction">
+                                <span class="numerator">1</span>
+                                <span class="denominator">4</span>
+                            </span>, –1
+                        </p>
+                        <p class="mb-2">शून्यकों का योग = 1/4</p>
+                        <p class="mb-2">शून्यकों का गुणनफल = –1</p>
+                        <p class="mb-2">अभीष्ट बहुपद:</p>
+                        <p class="mb-2 equation">x² – (1/4)x + (–1)</p>
+                        <p class="mb-2 equation">x² – (1/4)x – 1</p>
+                        <p class="mb-2">हरों को हटाने के लिए 4 से गुणा करने पर:</p>
+                        <p class="mb-2 equation">4x² – x – 4</p>
+                        <p><strong>उत्तर:</strong> 4x² – x – 4</p>
+                    </div>
+                    
+                    <!-- Part (ii) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(ii) √2, 
+                            <span class="fraction">
+                                <span class="numerator">1</span>
+                                <span class="denominator">3</span>
+                            </span>
+                        </p>
+                        <p class="mb-2">शून्यकों का योग = √2</p>
+                        <p class="mb-2">शून्यकों का गुणनफल = 1/3</p>
+                        <p class="mb-2">अभीष्ट बहुपद:</p>
+                        <p class="mb-2 equation">x² – (√2)x + (1/3)</p>
+                        <p class="mb-2">हरों को हटाने के लिए 3 से गुणा करने पर:</p>
+                        <p class="mb-2 equation">3x² – 3√2x + 1</p>
+                        <p><strong>उत्तर:</strong> 3x² – 3√2x + 1</p>
+                    </div>
+                    
+                    <!-- Part (iii) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(iii) 0, √5</p>
+                        <p class="mb-2">शून्यकों का योग = 0</p>
+                        <p class="mb-2">शून्यकों का गुणनफल = √5</p>
+                        <p class="mb-2">अभीष्ट बहुपद:</p>
+                        <p class="mb-2 equation">x² – (0)x + (√5)</p>
+                        <p class="mb-2 equation">x² + √5</p>
+                        <p><strong>उत्तर:</strong> x² + √5</p>
+                    </div>
+                    
+                    <!-- Part (iv) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(iv) 1, 1</p>
+                        <p class="mb-2">शून्यकों का योग = 1</p>
+                        <p class="mb-2">शून्यकों का गुणनफल = 1</p>
+                        <p class="mb-2">अभीष्ट बहुपद:</p>
+                        <p class="mb-2 equation">x² – (1)x + (1)</p>
+                        <p class="mb-2 equation">x² – x + 1</p>
+                        <p><strong>उत्तर:</strong> x² – x + 1</p>
+                    </div>
+                    
+                    <!-- Part (v) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(v) – 
+                            <span class="fraction">
+                                <span class="numerator">1</span>
+                                <span class="denominator">4</span>
+                            </span>, 
+                            <span class="fraction">
+                                <span class="numerator">1</span>
+                                <span class="denominator">4</span>
+                            </span>
+                        </p>
+                        <p class="mb-2">शून्यकों का योग = –1/4 + 1/4 = 0</p>
+                        <p class="mb-2">शून्यकों का गुणनफल = (–1/4) × (1/4) = –1/16</p>
+                        <p class="mb-2">अभीष्ट बहुपद:</p>
+                        <p class="mb-2 equation">x² – (0)x + (–1/16)</p>
+                        <p class="mb-2 equation">x² – 1/16</p>
+                        <p class="mb-2">हरों को हटाने के लिए 16 से गुणा करने पर:</p>
+                        <p class="mb-2 equation">16x² – 1</p>
+                        <p><strong>उत्तर:</strong> 16x² – 1</p>
+                    </div>
+                    
+                    <!-- Part (vi) -->
+                    <div class="step mb-6">
+                        <p class="font-medium mb-2">(vi) 4, 1</p>
+                        <p class="mb-2">शून्यकों का योग = 4</p>
+                        <p class="mb-2">शून्यकों का गुणनफल = 1</p>
+                        <p class="mb-2">अभीष्ट बहुपद:</p>
+                        <p class="mb-2 equation">x² – (4)x + (1)</p>
+                        <p class="mb-2 equation">x² – 4x + 1</p>
+                        <p><strong>उत्तर:</strong> x² – 4x + 1</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Disable right-click and copy-paste
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

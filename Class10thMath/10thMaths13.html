@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 13: सांख्यिकी</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 13<br>सांख्यिकी</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 13.1 ==================== -->
+        <section id="exercise-13-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 13.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित बारंबारता बंटन का माध्य ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">वर्ग अंतराल</th>
+                                    <th class="p-2 border">0-10</th>
+                                    <th class="p-2 border">10-20</th>
+                                    <th class="p-2 border">20-30</th>
+                                    <th class="p-2 border">30-40</th>
+                                    <th class="p-2 border">40-50</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता (f)</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">12</td>
+                                    <td class="p-2 border">10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">प्रत्येक वर्ग का मध्य-बिंदु (x) ज्ञात करें:</p>
+                    <p class="mb-2">0-10: x = 5, f = 5, fx = 25</p>
+                    <p class="mb-2">10-20: x = 15, f = 8, fx = 120</p>
+                    <p class="mb-2">20-30: x = 25, f = 15, fx = 375</p>
+                    <p class="mb-2">30-40: x = 35, f = 12, fx = 420</p>
+                    <p class="mb-2">40-50: x = 45, f = 10, fx = 450</p>
+                    <p class="mb-2">Σf = 5 + 8 + 15 + 12 + 10 = 50</p>
+                    <p class="mb-2">Σfx = 25 + 120 + 375 + 420 + 450 = 1390</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">Σfx</span><span class="denominator">Σf</span></div> = <div class="fraction"><span class="numerator">1390</span><span class="denominator">50</span></div> = 27.8</p>
+                    <p><strong>उत्तर:</strong> माध्य = 27.8</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> प्रत्यक्ष विधि से प्रत्येक वर्ग का मध्य-बिंदु निकालकर fx ज्ञात किया और सूत्र में रखा।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: किसी फैक्ट्री के 50 श्रमिकों की दैनिक मजदूरी के निम्नलिखित बंटन पर विचार कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">दैनिक मजदूरी (₹)</th>
+                                    <th class="p-2 border">500-520</th>
+                                    <th class="p-2 border">520-540</th>
+                                    <th class="p-2 border">540-560</th>
+                                    <th class="p-2 border">560-580</th>
+                                    <th class="p-2 border">580-600</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">श्रमिकों की संख्या (f)</td>
+                                    <td class="p-2 border">12</td>
+                                    <td class="p-2 border">14</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 510, 530, 550, 570, 590</p>
+                    <p class="mb-2">fx: 12×510=6120, 14×530=7420, 8×550=4400, 6×570=3420, 10×590=5900</p>
+                    <p class="mb-2">Σf = 50</p>
+                    <p class="mb-2">Σfx = 6120 + 7420 + 4400 + 3420 + 5900 = 27260</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">27260</span><span class="denominator">50</span></div> = 545.2</p>
+                    <p><strong>उत्तर:</strong> माध्य दैनिक मजदूरी = ₹ 545.20</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्नलिखित बंटन एक मोहल्ले के बच्चों के दैनिक जेबखर्च दर्शाता है। माध्य जेबखर्च ₹ 18 है। लुप्त बारंबारता f ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">जेबखर्च (₹)</th>
+                                    <th class="p-2 border">11-13</th>
+                                    <th class="p-2 border">13-15</th>
+                                    <th class="p-2 border">15-17</th>
+                                    <th class="p-2 border">17-19</th>
+                                    <th class="p-2 border">19-21</th>
+                                    <th class="p-2 border">21-23</th>
+                                    <th class="p-2 border">23-25</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बच्चों की संख्या</td>
+                                    <td class="p-2 border">7</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">9</td>
+                                    <td class="p-2 border">13</td>
+                                    <td class="p-2 border">f</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 12, 14, 16, 18, 20, 22, 24</p>
+                    <p class="mb-2">Σf = 7+6+9+13+f+5+4 = 44 + f</p>
+                    <p class="mb-2">Σfx = 7×12 + 6×14 + 9×16 + 13×18 + f×20 + 5×22 + 4×24</p>
+                    <p class="mb-2">= 84 + 84 + 144 + 234 + 20f + 110 + 96 = 752 + 20f</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">752 + 20f</span><span class="denominator">44 + f</span></div> = 18</p>
+                    <p class="mb-2">752 + 20f = 18(44 + f) = 792 + 18f</p>
+                    <p class="mb-2">2f = 40 ⇒ f = 20</p>
+                    <p><strong>उत्तर:</strong> लुप्त बारंबारता f = 20</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: किसी अस्पताल में, एक डॉक्टर द्वारा 30 महिलाओं की जाँच की गई और उनके हृदय स्पंदन (beat) की प्रति मिनट संख्या नोट करके नीचे दर्शाए अनुसार सक्षिप्त रूप में लिखी गई। एक उपयुक्त विधि चुनते हुए, इन महिलाओं के हृदय स्पंदन की प्रति मिनट माध्य संख्या ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">हृदय स्पंदन</th>
+                                    <th class="p-2 border">65-68</th>
+                                    <th class="p-2 border">68-71</th>
+                                    <th class="p-2 border">71-74</th>
+                                    <th class="p-2 border">74-77</th>
+                                    <th class="p-2 border">77-80</th>
+                                    <th class="p-2 border">80-83</th>
+                                    <th class="p-2 border">83-86</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">महिलाओं की संख्या</td>
+                                    <td class="p-2 border">2</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">7</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 66.5, 69.5, 72.5, 75.5, 78.5, 81.5, 84.5</p>
+                    <p class="mb-2">fx: 2×66.5=133, 4×69.5=278, 3×72.5=217.5, 8×75.5=604, 7×78.5=549.5, 4×81.5=326, 2×84.5=169</p>
+                    <p class="mb-2">Σf = 30</p>
+                    <p class="mb-2">Σfx = 133 + 278 + 217.5 + 604 + 549.5 + 326 + 169 = 2277</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">2277</span><span class="denominator">30</span></div> = 75.9</p>
+                    <p><strong>उत्तर:</strong> माध्य हृदय स्पंदन = 75.9 प्रति मिनट</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: किसी फुटकर बाज़ार में, फल विक्रेता पेटियों में रखे आम बेच रहे थे। इन पेटियों में आमों की संख्याएँ भिन्न-भिन्न थीं। पेटियों की संख्या के अनुसार, आमों का बंटन निम्नलिखित था:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">आमों की संख्या</th>
+                                    <th class="p-2 border">50-52</th>
+                                    <th class="p-2 border">53-55</th>
+                                    <th class="p-2 border">56-58</th>
+                                    <th class="p-2 border">59-61</th>
+                                    <th class="p-2 border">62-64</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">पेटियों की संख्या</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">110</td>
+                                    <td class="p-2 border">135</td>
+                                    <td class="p-2 border">115</td>
+                                    <td class="p-2 border">25</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">वर्ग अंतराल असतत हैं, इसलिए सतत बनाएँ: 49.5-52.5, 52.5-55.5, 55.5-58.5, 58.5-61.5, 61.5-64.5</p>
+                    <p class="mb-2">मध्य-बिंदु (x): 51, 54, 57, 60, 63</p>
+                    <p class="mb-2">fx: 15×51=765, 110×54=5940, 135×57=7695, 115×60=6900, 25×63=1575</p>
+                    <p class="mb-2">Σf = 400</p>
+                    <p class="mb-2">Σfx = 765 + 5940 + 7695 + 6900 + 1575 = 22875</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">22875</span><span class="denominator">400</span></div> = 57.1875 ≈ 57.19</p>
+                    <p><strong>उत्तर:</strong> माध्य आमों की संख्या = 57.19</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: निम्नलिखित सारणी किसी मोहल्ले के 25 परिवारों में भोजन पर हुए दैनिक व्यय को दर्शाती है:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">दैनिक व्यय (₹)</th>
+                                    <th class="p-2 border">100-150</th>
+                                    <th class="p-2 border">150-200</th>
+                                    <th class="p-2 border">200-250</th>
+                                    <th class="p-2 border">250-300</th>
+                                    <th class="p-2 border">300-350</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">परिवारों की संख्या</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">12</td>
+                                    <td class="p-2 border">2</td>
+                                    <td class="p-2 border">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 125, 175, 225, 275, 325</p>
+                    <p class="mb-2">fx: 4×125=500, 5×175=875, 12×225=2700, 2×275=550, 2×325=650</p>
+                    <p class="mb-2">Σf = 25</p>
+                    <p class="mb-2">Σfx = 500 + 875 + 2700 + 550 + 650 = 5275</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">5275</span><span class="denominator">25</span></div> = 211</p>
+                    <p><strong>उत्तर:</strong> माध्य दैनिक व्यय = ₹ 211</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: निम्नलिखित बंटन के लिए, प्रत्येक वर्ग का मध्य-बिंदु ज्ञात कीजिए और माध्य ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">वर्ग अंतराल</th>
+                                    <th class="p-2 border">0-10</th>
+                                    <th class="p-2 border">10-20</th>
+                                    <th class="p-2 border">20-30</th>
+                                    <th class="p-2 border">30-40</th>
+                                    <th class="p-2 border">40-50</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">12</td>
+                                    <td class="p-2 border">10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 5, 15, 25, 35, 45</p>
+                    <p class="mb-2">fx: 5×5=25, 8×15=120, 15×25=375, 12×35=420, 10×45=450</p>
+                    <p class="mb-2">Σf = 50, Σfx = 1390</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">1390</span><span class="denominator">50</span></div> = 27.8</p>
+                    <p><strong>उत्तर:</strong> माध्य = 27.8</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: निम्नलिखित बंटन का माध्य ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">वर्ग अंतराल</th>
+                                    <th class="p-2 border">0-20</th>
+                                    <th class="p-2 border">20-40</th>
+                                    <th class="p-2 border">40-60</th>
+                                    <th class="p-2 border">60-80</th>
+                                    <th class="p-2 border">80-100</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">18</td>
+                                    <td class="p-2 border">21</td>
+                                    <td class="p-2 border">29</td>
+                                    <td class="p-2 border">17</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 10, 30, 50, 70, 90</p>
+                    <p class="mb-2">fx: 15×10=150, 18×30=540, 21×50=1050, 29×70=2030, 17×90=1530</p>
+                    <p class="mb-2">Σf = 100, Σfx = 150 + 540 + 1050 + 2030 + 1530 = 5300</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">5300</span><span class="denominator">100</span></div> = 53</p>
+                    <p><strong>उत्तर:</strong> माध्य = 53</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: निम्नलिखित बंटन का माध्य ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">वर्ग अंतराल</th>
+                                    <th class="p-2 border">0-7</th>
+                                    <th class="p-2 border">7-14</th>
+                                    <th class="p-2 border">14-21</th>
+                                    <th class="p-2 border">21-28</th>
+                                    <th class="p-2 border">28-35</th>
+                                    <th class="p-2 border">35-42</th>
+                                    <th class="p-2 border">42-49</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">16</td>
+                                    <td class="p-2 border">7</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">मध्य-बिंदु (x): 3.5, 10.5, 17.5, 24.5, 31.5, 38.5, 45.5</p>
+                    <p class="mb-2">fx: 4×3.5=14, 8×10.5=84, 15×17.5=262.5, 16×24.5=392, 7×31.5=220.5, 5×38.5=192.5, 2×45.5=91</p>
+                    <p class="mb-2">Σf = 57</p>
+                    <p class="mb-2">Σfx = 14 + 84 + 262.5 + 392 + 220.5 + 192.5 + 91 = 1256.5</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">1256.5</span><span class="denominator">57</span></div> ≈ 22.04</p>
+                    <p><strong>उत्तर:</strong> माध्य ≈ 22.04</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 13.2 ==================== -->
+        <section id="exercise-13-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 13.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित सारणी किसी अस्पताल में एक विशेष वर्ष में भर्ती हुए रोगियों की आयु को दर्शाती है:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">आयु (वर्षों में)</th>
+                                    <th class="p-2 border">5-15</th>
+                                    <th class="p-2 border">15-25</th>
+                                    <th class="p-2 border">25-35</th>
+                                    <th class="p-2 border">35-45</th>
+                                    <th class="p-2 border">45-55</th>
+                                    <th class="p-2 border">55-65</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">रोगियों की संख्या</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">11</td>
+                                    <td class="p-2 border">21</td>
+                                    <td class="p-2 border">23</td>
+                                    <td class="p-2 border">14</td>
+                                    <td class="p-2 border">5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>बहुलक:</strong> अधिकतम बारंबारता 23 है, जो वर्ग 35-45 में है।</p>
+                    <p class="mb-2">l = 35, h = 10, f₁ = 23, f₀ = 21, f₂ = 14</p>
+                    <p class="mb-2">बहुलक = l + <div class="fraction"><span class="numerator">f₁ − f₀</span><span class="denominator">2f₁ − f₀ − f₂</span></div> × h</p>
+                    <p class="mb-2">= 35 + <div class="fraction"><span class="numerator">23 − 21</span><span class="denominator">46 − 21 − 14</span></div> × 10 = 35 + <div class="fraction"><span class="numerator">2</span><span class="denominator">11</span></div> × 10 = 35 + 1.82 = 36.82</p>
+                    <p class="mb-2"><strong>माध्य:</strong> मध्य-बिंदु (x): 10, 20, 30, 40, 50, 60</p>
+                    <p class="mb-2">fx: 6×10=60, 11×20=220, 21×30=630, 23×40=920, 14×50=700, 5×60=300</p>
+                    <p class="mb-2">Σf = 80, Σfx = 2830</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">2830</span><span class="denominator">80</span></div> = 35.375</p>
+                    <p><strong>उत्तर:</strong> बहुलक = 36.82, माध्य = 35.375</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित आँकड़े, 225 बिजली उपकरणों के प्रेक्षित जीवन काल (घंटों में) की सूचना देते हैं:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">जीवनकाल (घंटों में)</th>
+                                    <th class="p-2 border">0-20</th>
+                                    <th class="p-2 border">20-40</th>
+                                    <th class="p-2 border">40-60</th>
+                                    <th class="p-2 border">60-80</th>
+                                    <th class="p-2 border">80-100</th>
+                                    <th class="p-2 border">100-120</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता</td>
+                                    <td class="p-2 border">10</td>
+                                    <td class="p-2 border">35</td>
+                                    <td class="p-2 border">52</td>
+                                    <td class="p-2 border">61</td>
+                                    <td class="p-2 border">38</td>
+                                    <td class="p-2 border">29</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">अधिकतम बारंबारता 61 है, जो वर्ग 60-80 में है।</p>
+                    <p class="mb-2">l = 60, h = 20, f₁ = 61, f₀ = 52, f₂ = 38</p>
+                    <p class="mb-2">बहुलक = 60 + <div class="fraction"><span class="numerator">61 − 52</span><span class="denominator">122 − 52 − 38</span></div> × 20</p>
+                    <p class="mb-2">= 60 + <div class="fraction"><span class="numerator">9</span><span class="denominator">32</span></div> × 20 = 60 + 5.625 = 65.625</p>
+                    <p><strong>उत्तर:</strong> बहुलक जीवनकाल = 65.625 घंटे</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्नलिखित आँकड़े किसी गाँव के 200 परिवारों के कुल मासिक घरेलू व्यय के बंटन को दर्शाते हैं। इन परिवारों का बहुलक मासिक व्यय ज्ञात कीजिए। साथ ही, माध्य मासिक व्यय भी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">व्यय (₹)</th>
+                                    <th class="p-2 border">1000-1500</th>
+                                    <th class="p-2 border">1500-2000</th>
+                                    <th class="p-2 border">2000-2500</th>
+                                    <th class="p-2 border">2500-3000</th>
+                                    <th class="p-2 border">3000-3500</th>
+                                    <th class="p-2 border">3500-4000</th>
+                                    <th class="p-2 border">4000-4500</th>
+                                    <th class="p-2 border">4500-5000</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">परिवारों की संख्या</td>
+                                    <td class="p-2 border">24</td>
+                                    <td class="p-2 border">40</td>
+                                    <td class="p-2 border">33</td>
+                                    <td class="p-2 border">28</td>
+                                    <td class="p-2 border">30</td>
+                                    <td class="p-2 border">22</td>
+                                    <td class="p-2 border">16</td>
+                                    <td class="p-2 border">7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>बहुलक:</strong> अधिकतम बारंबारता 40 है, जो वर्ग 1500-2000 में है।</p>
+                    <p class="mb-2">l = 1500, h = 500, f₁ = 40, f₀ = 24, f₂ = 33</p>
+                    <p class="mb-2">बहुलक = 1500 + <div class="fraction"><span class="numerator">40 − 24</span><span class="denominator">80 − 24 − 33</span></div> × 500</p>
+                    <p class="mb-2">= 1500 + <div class="fraction"><span class="numerator">16</span><span class="denominator">23</span></div> × 500 = 1500 + 347.83 = 1847.83</p>
+                    <p class="mb-2"><strong>माध्य:</strong> मध्य-बिंदु (x): 1250, 1750, 2250, 2750, 3250, 3750, 4250, 4750</p>
+                    <p class="mb-2">fx: 24×1250=30000, 40×1750=70000, 33×2250=74250, 28×2750=77000, 30×3250=97500, 22×3750=82500, 16×4250=68000, 7×4750=33250</p>
+                    <p class="mb-2">Σf = 200, Σfx = 532500</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">532500</span><span class="denominator">200</span></div> = 2662.5</p>
+                    <p><strong>उत्तर:</strong> बहुलक = ₹ 1847.83, माध्य = ₹ 2662.50</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्नलिखित बंटन भारत के उच्चतर माध्यमिक स्कूलों में, राज्यों के अनुसार, शिक्षक-विद्यार्थी अनुपात को दर्शाता है। इन आँकड़ों के बहुलक और माध्य ज्ञात कीजिए। दोनों मापकों की व्याख्या कीजिए।</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">प्रति शिक्षक विद्यार्थियों की संख्या</th>
+                                    <th class="p-2 border">15-20</th>
+                                    <th class="p-2 border">20-25</th>
+                                    <th class="p-2 border">25-30</th>
+                                    <th class="p-2 border">30-35</th>
+                                    <th class="p-2 border">35-40</th>
+                                    <th class="p-2 border">40-45</th>
+                                    <th class="p-2 border">45-50</th>
+                                    <th class="p-2 border">50-55</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">राज्य/संघीय क्षेत्रों की संख्या</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">9</td>
+                                    <td class="p-2 border">10</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">0</td>
+                                    <td class="p-2 border">0</td>
+                                    <td class="p-2 border">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>बहुलक:</strong> अधिकतम बारंबारता 10 है, जो वर्ग 30-35 में है।</p>
+                    <p class="mb-2">l = 30, h = 5, f₁ = 10, f₀ = 9, f₂ = 3</p>
+                    <p class="mb-2">बहुलक = 30 + <div class="fraction"><span class="numerator">10 − 9</span><span class="denominator">20 − 9 − 3</span></div> × 5</p>
+                    <p class="mb-2">= 30 + <div class="fraction"><span class="numerator">1</span><span class="denominator">8</span></div> × 5 = 30 + 0.625 = 30.625</p>
+                    <p class="mb-2"><strong>माध्य:</strong> मध्य-बिंदु (x): 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5</p>
+                    <p class="mb-2">fx: 3×17.5=52.5, 8×22.5=180, 9×27.5=247.5, 10×32.5=325, 3×37.5=112.5, 0, 0, 2×52.5=105</p>
+                    <p class="mb-2">Σf = 35, Σfx = 1022.5</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">1022.5</span><span class="denominator">35</span></div> = 29.21</p>
+                    <p><strong>उत्तर:</strong> बहुलक = 30.625, माध्य ≈ 29.21</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: दिया हुआ बंटन विश्व के कुछ श्रेष्ठतम बल्लेबाजों द्वारा एकदिवसीय अंतर्राष्ट्रीय क्रिकेट मैचों में बनाए गए रनों को दर्शाता है:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">बनाए गए रन</th>
+                                    <th class="p-2 border">3000-4000</th>
+                                    <th class="p-2 border">4000-5000</th>
+                                    <th class="p-2 border">5000-6000</th>
+                                    <th class="p-2 border">6000-7000</th>
+                                    <th class="p-2 border">7000-8000</th>
+                                    <th class="p-2 border">8000-9000</th>
+                                    <th class="p-2 border">9000-10000</th>
+                                    <th class="p-2 border">10000-11000</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बल्लेबाजों की संख्या</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">18</td>
+                                    <td class="p-2 border">9</td>
+                                    <td class="p-2 border">7</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">1</td>
+                                    <td class="p-2 border">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">अधिकतम बारंबारता 18 है, जो वर्ग 4000-5000 में है।</p>
+                    <p class="mb-2">l = 4000, h = 1000, f₁ = 18, f₀ = 4, f₂ = 9</p>
+                    <p class="mb-2">बहुलक = 4000 + <div class="fraction"><span class="numerator">18 − 4</span><span class="denominator">36 − 4 − 9</span></div> × 1000</p>
+                    <p class="mb-2">= 4000 + <div class="fraction"><span class="numerator">14</span><span class="denominator">23</span></div> × 1000 = 4000 + 608.7 = 4608.7</p>
+                    <p><strong>उत्तर:</strong> बहुलक = 4608.7 रन</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक विद्यार्थी ने एक सड़क के किसी स्थान से होकर जाती हुई कारों की संख्याएँ नोट की और उन्हें नीचे दी हुई सारणी के रूप में व्यक्त किया। सारणी में दिया प्रत्येक प्रेक्षण 3 मिनट के अंतराल में उस स्थान से होकर जाने वाली कारों की संख्याओं से संबंधित है। ऐसे 100 अंतरालों पर प्रेक्षण लिए गए। इन आँकड़ों का बहुलक ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">कारों की संख्या</th>
+                                    <th class="p-2 border">0-10</th>
+                                    <th class="p-2 border">10-20</th>
+                                    <th class="p-2 border">20-30</th>
+                                    <th class="p-2 border">30-40</th>
+                                    <th class="p-2 border">40-50</th>
+                                    <th class="p-2 border">50-60</th>
+                                    <th class="p-2 border">60-70</th>
+                                    <th class="p-2 border">70-80</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता</td>
+                                    <td class="p-2 border">7</td>
+                                    <td class="p-2 border">14</td>
+                                    <td class="p-2 border">13</td>
+                                    <td class="p-2 border">12</td>
+                                    <td class="p-2 border">20</td>
+                                    <td class="p-2 border">11</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">अधिकतम बारंबारता 20 है, जो वर्ग 40-50 में है।</p>
+                    <p class="mb-2">l = 40, h = 10, f₁ = 20, f₀ = 12, f₂ = 11</p>
+                    <p class="mb-2">बहुलक = 40 + <div class="fraction"><span class="numerator">20 − 12</span><span class="denominator">40 − 12 − 11</span></div> × 10</p>
+                    <p class="mb-2">= 40 + <div class="fraction"><span class="numerator">8</span><span class="denominator">17</span></div> × 10 = 40 + 4.7 = 44.7</p>
+                    <p><strong>उत्तर:</strong> बहुलक = 44.7 कारें</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 13.3 ==================== -->
+        <section id="exercise-13-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 13.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित बारंबारता बंटन किसी मोहल्ले के 68 उपभोक्ताओं की बिजली की मासिक खपत दर्शाता है। इन आँकड़ों के माध्यक, माध्य और बहुलक ज्ञात कीजिए। इनकी तुलना कीजिए।</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">मासिक खपत (इकाइयों में)</th>
+                                    <th class="p-2 border">65-85</th>
+                                    <th class="p-2 border">85-105</th>
+                                    <th class="p-2 border">105-125</th>
+                                    <th class="p-2 border">125-145</th>
+                                    <th class="p-2 border">145-165</th>
+                                    <th class="p-2 border">165-185</th>
+                                    <th class="p-2 border">185-205</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">उपभोक्ताओं की संख्या</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">13</td>
+                                    <td class="p-2 border">20</td>
+                                    <td class="p-2 border">14</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>माध्यक:</strong> n = 68, n/2 = 34</p>
+                    <p class="mb-2">संचयी बारंबारता: 4, 9, 22, 42, 56, 64, 68</p>
+                    <p class="mb-2">34वाँ पद वर्ग 125-145 में है (क्योंकि cf 42 ≥ 34)</p>
+                    <p class="mb-2">l = 125, f = 20, cf = 22, h = 20</p>
+                    <p class="mb-2">माध्यक = 125 + <div class="fraction"><span class="numerator">34 − 22</span><span class="denominator">20</span></div> × 20 = 125 + 12 = 137</p>
+                    <p class="mb-2"><strong>माध्य:</strong> मध्य-बिंदु (x): 75, 95, 115, 135, 155, 175, 195</p>
+                    <p class="mb-2">fx: 4×75=300, 5×95=475, 13×115=1495, 20×135=2700, 14×155=2170, 8×175=1400, 4×195=780</p>
+                    <p class="mb-2">Σf = 68, Σfx = 9320</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">9320</span><span class="denominator">68</span></div> = 137.06</p>
+                    <p class="mb-2"><strong>बहुलक:</strong> अधिकतम बारंबारता 20 है, वर्ग 125-145</p>
+                    <p class="mb-2">l = 125, h = 20, f₁ = 20, f₀ = 13, f₂ = 14</p>
+                    <p class="mb-2">बहुलक = 125 + <div class="fraction"><span class="numerator">20 − 13</span><span class="denominator">40 − 13 − 14</span></div> × 20 = 125 + <div class="fraction"><span class="numerator">7</span><span class="denominator">13</span></div> × 20 = 125 + 10.77 = 135.77</p>
+                    <p><strong>उत्तर:</strong> माध्यक = 137, माध्य = 137.06, बहुलक = 135.77</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: यदि नीचे दिए हुए बंटन का माध्यक 28.5 हो तो x और y के मान ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">वर्ग अंतराल</th>
+                                    <th class="p-2 border">0-10</th>
+                                    <th class="p-2 border">10-20</th>
+                                    <th class="p-2 border">20-30</th>
+                                    <th class="p-2 border">30-40</th>
+                                    <th class="p-2 border">40-50</th>
+                                    <th class="p-2 border">50-60</th>
+                                    <th class="p-2 border">योग</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">बारंबारता</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">x</td>
+                                    <td class="p-2 border">20</td>
+                                    <td class="p-2 border">15</td>
+                                    <td class="p-2 border">y</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">n = 60 ⇒ 5 + x + 20 + 15 + y + 5 = 60 ⇒ x + y = 15</p>
+                    <p class="mb-2">माध्यक = 28.5, जो वर्ग 20-30 में है।</p>
+                    <p class="mb-2">l = 20, f = 20, cf = 5 + x, h = 10</p>
+                    <p class="mb-2">28.5 = 20 + <div class="fraction"><span class="numerator">30 − (5 + x)</span><span class="denominator">20</span></div> × 10</p>
+                    <p class="mb-2">8.5 = <div class="fraction"><span class="numerator">25 − x</span><span class="denominator">2</span></div> ⇒ 17 = 25 − x ⇒ x = 8</p>
+                    <p class="mb-2">y = 15 − 8 = 7</p>
+                    <p><strong>उत्तर:</strong> x = 8, y = 7</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक जीवन बीमा एजेंट 100 पॉलिसी धारकों की आयु के बंटन के निम्नलिखित आँकड़े ज्ञात करता है। माध्यक आयु परिकलित कीजिए, यदि पॉलिसी केवल उन्हीं व्यक्तियों को दी जाती है, जिनकी आयु 18 वर्ष या उससे अधिक हो, परंतु 60 वर्ष से कम हो।</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">आयु (वर्षों में)</th>
+                                    <th class="p-2 border">20 से कम</th>
+                                    <th class="p-2 border">25 से कम</th>
+                                    <th class="p-2 border">30 से कम</th>
+                                    <th class="p-2 border">35 से कम</th>
+                                    <th class="p-2 border">40 से कम</th>
+                                    <th class="p-2 border">45 से कम</th>
+                                    <th class="p-2 border">50 से कम</th>
+                                    <th class="p-2 border">55 से कम</th>
+                                    <th class="p-2 border">60 से कम</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">पॉलिसी धारकों की संख्या</td>
+                                    <td class="p-2 border">2</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">24</td>
+                                    <td class="p-2 border">45</td>
+                                    <td class="p-2 border">78</td>
+                                    <td class="p-2 border">89</td>
+                                    <td class="p-2 border">92</td>
+                                    <td class="p-2 border">98</td>
+                                    <td class="p-2 border">100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">वर्ग अंतराल: 15-20, 20-25, 25-30, 30-35, 35-40, 40-45, 45-50, 50-55, 55-60</p>
+                    <p class="mb-2">बारंबारता: 2, 4, 18, 21, 33, 11, 3, 6, 2</p>
+                    <p class="mb-2">संचयी बारंबारता: 2, 6, 24, 45, 78, 89, 92, 98, 100</p>
+                    <p class="mb-2">n = 100, n/2 = 50</p>
+                    <p class="mb-2">50वाँ पद वर्ग 35-40 में है (cf 78 ≥ 50)</p>
+                    <p class="mb-2">l = 35, f = 33, cf = 45, h = 5</p>
+                    <p class="mb-2">माध्यक = 35 + <div class="fraction"><span class="numerator">50 − 45</span><span class="denominator">33</span></div> × 5 = 35 + <div class="fraction"><span class="numerator">25</span><span class="denominator">33</span></div> = 35.76</p>
+                    <p><strong>उत्तर:</strong> माध्यक आयु = 35.76 वर्ष</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक पौधे की 40 पत्तियों की लंबाइयाँ निकटतम मिलीमीटरों में मापी जाती है तथा प्राप्त आँकड़ों को निम्नलिखित सारणी के रूप में निरूपित किया जाता है:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">लंबाई (mm में)</th>
+                                    <th class="p-2 border">118-126</th>
+                                    <th class="p-2 border">127-135</th>
+                                    <th class="p-2 border">136-144</th>
+                                    <th class="p-2 border">145-153</th>
+                                    <th class="p-2 border">154-162</th>
+                                    <th class="p-2 border">163-171</th>
+                                    <th class="p-2 border">172-180</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">पत्तियों की संख्या</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">9</td>
+                                    <td class="p-2 border">12</td>
+                                    <td class="p-2 border">5</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">सतत वर्ग अंतराल: 117.5-126.5, 126.5-135.5, 135.5-144.5, 144.5-153.5, 153.5-162.5, 162.5-171.5, 171.5-180.5</p>
+                    <p class="mb-2">संचयी बारंबारता: 3, 8, 17, 29, 34, 38, 40</p>
+                    <p class="mb-2">n = 40, n/2 = 20</p>
+                    <p class="mb-2">20वाँ पद वर्ग 144.5-153.5 में है (cf 29 ≥ 20)</p>
+                    <p class="mb-2">l = 144.5, f = 12, cf = 17, h = 9</p>
+                    <p class="mb-2">माध्यक = 144.5 + <div class="fraction"><span class="numerator">20 − 17</span><span class="denominator">12</span></div> × 9 = 144.5 + <div class="fraction"><span class="numerator">27</span><span class="denominator">12</span></div> = 144.5 + 2.25 = 146.75</p>
+                    <p><strong>उत्तर:</strong> माध्यक लंबाई = 146.75 mm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: निम्नलिखित सारणी 400 नियॉन लैंपों के जीवन कालों (life time) को प्रदर्शित करती है:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">जीवन काल (घंटों में)</th>
+                                    <th class="p-2 border">1500-2000</th>
+                                    <th class="p-2 border">2000-2500</th>
+                                    <th class="p-2 border">2500-3000</th>
+                                    <th class="p-2 border">3000-3500</th>
+                                    <th class="p-2 border">3500-4000</th>
+                                    <th class="p-2 border">4000-4500</th>
+                                    <th class="p-2 border">4500-5000</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">लैंपों की संख्या</td>
+                                    <td class="p-2 border">14</td>
+                                    <td class="p-2 border">56</td>
+                                    <td class="p-2 border">60</td>
+                                    <td class="p-2 border">86</td>
+                                    <td class="p-2 border">74</td>
+                                    <td class="p-2 border">62</td>
+                                    <td class="p-2 border">48</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">संचयी बारंबारता: 14, 70, 130, 216, 290, 352, 400</p>
+                    <p class="mb-2">n = 400, n/2 = 200</p>
+                    <p class="mb-2">200वाँ पद वर्ग 3000-3500 में है (cf 216 ≥ 200)</p>
+                    <p class="mb-2">l = 3000, f = 86, cf = 130, h = 500</p>
+                    <p class="mb-2">माध्यक = 3000 + <div class="fraction"><span class="numerator">200 − 130</span><span class="denominator">86</span></div> × 500 = 3000 + <div class="fraction"><span class="numerator">70 × 500</span><span class="denominator">86</span></div> = 3000 + 406.98 = 3406.98</p>
+                    <p><strong>उत्तर:</strong> माध्यक जीवन काल = 3406.98 घंटे</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक स्थानीय टेलीफोन निर्देशिका से 100 कुलनाम (surnames) लिए गए और उनमें प्रयुक्त अंग्रेजी वर्णमाला के अक्षरों की संख्या का निम्नलिखित बारंबारता बंटन प्राप्त हुआ:</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">अक्षरों की संख्या</th>
+                                    <th class="p-2 border">1-4</th>
+                                    <th class="p-2 border">4-7</th>
+                                    <th class="p-2 border">7-10</th>
+                                    <th class="p-2 border">10-13</th>
+                                    <th class="p-2 border">13-16</th>
+                                    <th class="p-2 border">16-19</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">कुलनामों की संख्या</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">30</td>
+                                    <td class="p-2 border">40</td>
+                                    <td class="p-2 border">16</td>
+                                    <td class="p-2 border">4</td>
+                                    <td class="p-2 border">4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>माध्यक:</strong> n = 100, n/2 = 50</p>
+                    <p class="mb-2">संचयी बारंबारता: 6, 36, 76, 92, 96, 100</p>
+                    <p class="mb-2">50वाँ पद वर्ग 7-10 में है (cf 76 ≥ 50)</p>
+                    <p class="mb-2">l = 7, f = 40, cf = 36, h = 3</p>
+                    <p class="mb-2">माध्यक = 7 + <div class="fraction"><span class="numerator">50 − 36</span><span class="denominator">40</span></div> × 3 = 7 + <div class="fraction"><span class="numerator">14 × 3</span><span class="denominator">40</span></div> = 7 + 1.05 = 8.05</p>
+                    <p class="mb-2"><strong>माध्य:</strong> मध्य-बिंदु (x): 2.5, 5.5, 8.5, 11.5, 14.5, 17.5</p>
+                    <p class="mb-2">fx: 6×2.5=15, 30×5.5=165, 40×8.5=340, 16×11.5=184, 4×14.5=58, 4×17.5=70</p>
+                    <p class="mb-2">Σf = 100, Σfx = 832</p>
+                    <p class="mb-2">माध्य = <div class="fraction"><span class="numerator">832</span><span class="denominator">100</span></div> = 8.32</p>
+                    <p class="mb-2"><strong>बहुलक:</strong> अधिकतम बारंबारता 40 है, वर्ग 7-10</p>
+                    <p class="mb-2">l = 7, h = 3, f₁ = 40, f₀ = 30, f₂ = 16</p>
+                    <p class="mb-2">बहुलक = 7 + <div class="fraction"><span class="numerator">40 − 30</span><span class="denominator">80 − 30 − 16</span></div> × 3 = 7 + <div class="fraction"><span class="numerator">10</span><span class="denominator">34</span></div> × 3 = 7 + 0.88 = 7.88</p>
+                    <p><strong>उत्तर:</strong> माध्यक = 8.05, माध्य = 8.32, बहुलक = 7.88</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: नीचे दिया हुआ बंटन एक कक्षा के 30 विद्यार्थियों के भार दर्शा रहा है। विद्यार्थियों का माध्यक भार ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">भार (किलोग्राम में)</th>
+                                    <th class="p-2 border">40-45</th>
+                                    <th class="p-2 border">45-50</th>
+                                    <th class="p-2 border">50-55</th>
+                                    <th class="p-2 border">55-60</th>
+                                    <th class="p-2 border">60-65</th>
+                                    <th class="p-2 border">65-70</th>
+                                    <th class="p-2 border">70-75</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border">विद्यार्थियों की संख्या</td>
+                                    <td class="p-2 border">2</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">8</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">6</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="step">
+                    <p class="mb-2">n = 30, n/2 = 15</p>
+                    <p class="mb-2">संचयी बारंबारता: 2, 5, 13, 19, 25, 28, 30</p>
+                    <p class="mb-2">15वाँ पद वर्ग 55-60 में है (cf 19 ≥ 15)</p>
+                    <p class="mb-2">l = 55, f = 6, cf = 13, h = 5</p>
+                    <p class="mb-2">माध्यक = 55 + <div class="fraction"><span class="numerator">15 − 13</span><span class="denominator">6</span></div> × 5 = 55 + <div class="fraction"><span class="numerator">2 × 5</span><span class="denominator">6</span></div> = 55 + 1.67 = 56.67</p>
+                    <p><strong>उत्तर:</strong> माध्यक भार = 56.67 kg</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

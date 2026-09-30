@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 8: त्रिकोणमिति का परिचय</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 8<br>त्रिकोणमिति का परिचय</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 8.1 ==================== -->
+        <section id="exercise-8-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 8.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: ΔABC में, जिसका कोण B समकोण है, AB = 24 cm और BC = 7 cm है। निम्नलिखित का मान ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">ΔABC में, ∠B = 90° है।</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: AC² = AB² + BC²</p>
+                    <p class="mb-2">AC² = (24)² + (7)²</p>
+                    <p class="mb-2">AC² = 576 + 49 = 625</p>
+                    <p class="mb-2">AC = √625 = 25 cm</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) sin A, cos A</h4>
+                    <div class="step">
+                        <p class="mb-2">sin A = <div class="fraction"><span class="numerator">∠A की सम्मुख भुजा</span><span class="denominator">कर्ण</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">7</span><span class="denominator">25</span></div></p>
+                        <p class="mb-2">cos A = <div class="fraction"><span class="numerator">∠A की संलग्न भुजा</span><span class="denominator">कर्ण</span></div> = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">24</span><span class="denominator">25</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) sin C, cos C</h4>
+                    <div class="step">
+                        <p class="mb-2">sin C = <div class="fraction"><span class="numerator">∠C की सम्मुख भुजा</span><span class="denominator">कर्ण</span></div> = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">24</span><span class="denominator">25</span></div></p>
+                        <p class="mb-2">cos C = <div class="fraction"><span class="numerator">∠C की संलग्न भुजा</span><span class="denominator">कर्ण</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">7</span><span class="denominator">25</span></div></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आकृति 8.13 में, tan P − cot R का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">ΔPQR में, ∠Q = 90° है।</p>
+                    <p class="mb-2">PQ = 12 cm, PR = 13 cm</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: PR² = PQ² + QR²</p>
+                    <p class="mb-2">(13)² = (12)² + QR²</p>
+                    <p class="mb-2">169 = 144 + QR²</p>
+                    <p class="mb-2">QR² = 25 ⇒ QR = 5 cm</p>
+                    <p class="mb-2">tan P = <div class="fraction"><span class="numerator">QR</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div></p>
+                    <p class="mb-2">cot R = <div class="fraction"><span class="numerator">QR</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div></p>
+                    <p class="mb-2">tan P − cot R = <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div> − <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div> = 0</p>
+                    <p><strong>उत्तर:</strong> 0</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि sin A = <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div>, तो cos A और tan A का मान परिकलित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">sin A = <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div></p>
+                    <p class="mb-2">मान लीजिए BC = 3k और AC = 4k</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: AB² = AC² − BC²</p>
+                    <p class="mb-2">AB² = (4k)² − (3k)² = 16k² − 9k² = 7k²</p>
+                    <p class="mb-2">AB = √7 k</p>
+                    <p class="mb-2">cos A = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">√7 k</span><span class="denominator">4k</span></div> = <div class="fraction"><span class="numerator">√7</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">tan A = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">3k</span><span class="denominator">√7 k</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">√7</span></div></p>
+                    <p><strong>उत्तर:</strong> cos A = <div class="fraction"><span class="numerator">√7</span><span class="denominator">4</span></div>, tan A = <div class="fraction"><span class="numerator">3</span><span class="denominator">√7</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: यदि 15 cot A = 8 हो तो sin A और sec A का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">15 cot A = 8 ⇒ cot A = <div class="fraction"><span class="numerator">8</span><span class="denominator">15</span></div></p>
+                    <p class="mb-2">cot A = <div class="fraction"><span class="numerator">AB</span><span class="denominator">BC</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">15</span></div></p>
+                    <p class="mb-2">मान लीजिए AB = 8k और BC = 15k</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: AC² = AB² + BC²</p>
+                    <p class="mb-2">AC² = (8k)² + (15k)² = 64k² + 225k² = 289k²</p>
+                    <p class="mb-2">AC = 17k</p>
+                    <p class="mb-2">sin A = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">15k</span><span class="denominator">17k</span></div> = <div class="fraction"><span class="numerator">15</span><span class="denominator">17</span></div></p>
+                    <p class="mb-2">sec A = <div class="fraction"><span class="numerator">AC</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">17k</span><span class="denominator">8k</span></div> = <div class="fraction"><span class="numerator">17</span><span class="denominator">8</span></div></p>
+                    <p><strong>उत्तर:</strong> sin A = <div class="fraction"><span class="numerator">15</span><span class="denominator">17</span></div>, sec A = <div class="fraction"><span class="numerator">17</span><span class="denominator">8</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: यदि sec θ = <div class="fraction"><span class="numerator">13</span><span class="denominator">12</span></div> हो तो अन्य सभी त्रिकोणमितीय अनुपात परिकलित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">sec θ = <div class="fraction"><span class="numerator">13</span><span class="denominator">12</span></div> ⇒ cos θ = <div class="fraction"><span class="numerator">12</span><span class="denominator">13</span></div></p>
+                    <p class="mb-2">cos θ = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">12</span><span class="denominator">13</span></div></p>
+                    <p class="mb-2">मान लीजिए AB = 12k और AC = 13k</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: BC² = AC² − AB²</p>
+                    <p class="mb-2">BC² = (13k)² − (12k)² = 169k² − 144k² = 25k²</p>
+                    <p class="mb-2">BC = 5k</p>
+                    <p class="mb-2">sin θ = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">13</span></div></p>
+                    <p class="mb-2">tan θ = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div></p>
+                    <p class="mb-2">cosec θ = <div class="fraction"><span class="numerator">1</span><span class="denominator">sin θ</span></div> = <div class="fraction"><span class="numerator">13</span><span class="denominator">5</span></div></p>
+                    <p class="mb-2">cot θ = <div class="fraction"><span class="numerator">1</span><span class="denominator">tan θ</span></div> = <div class="fraction"><span class="numerator">12</span><span class="denominator">5</span></div></p>
+                    <p><strong>उत्तर:</strong> sin θ = <div class="fraction"><span class="numerator">5</span><span class="denominator">13</span></div>, cos θ = <div class="fraction"><span class="numerator">12</span><span class="denominator">13</span></div>, tan θ = <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div>, cosec θ = <div class="fraction"><span class="numerator">13</span><span class="denominator">5</span></div>, cot θ = <div class="fraction"><span class="numerator">12</span><span class="denominator">5</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: यदि ∠A और ∠B न्यून कोण हो, जहाँ cos A = cos B, तो दिखाइए कि ∠A = ∠B</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए ΔABC और ΔPQR समकोण त्रिभुज हैं जिनमें ∠C = 90° और ∠R = 90° हैं।</p>
+                    <p class="mb-2">cos A = <div class="fraction"><span class="numerator">AC</span><span class="denominator">AB</span></div> और cos B = <div class="fraction"><span class="numerator">PR</span><span class="denominator">PQ</span></div></p>
+                    <p class="mb-2">दिया है: cos A = cos B</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AC</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">PR</span><span class="denominator">PQ</span></div></p>
+                    <p class="mb-2">अतः ΔABC ~ ΔPQR (SAS समरूपता)</p>
+                    <p class="mb-2">इसलिए ∠A = ∠B</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> समरूप त्रिभुजों के संगत कोण बराबर होते हैं, अतः ∠A = ∠B।
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: यदि cot θ = <div class="fraction"><span class="numerator">7</span><span class="denominator">8</span></div>, तो (i) <div class="fraction"><span class="numerator">(1 + sin θ)(1 − sin θ)</span><span class="denominator">(1 + cos θ)(1 − cos θ)</span></div>, (ii) cot² θ का मान निकालिए।</h3>
+                <div class="step">
+                    <p class="mb-2">cot θ = <div class="fraction"><span class="numerator">7</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">AB</span><span class="denominator">BC</span></div></p>
+                    <p class="mb-2">मान लीजिए AB = 7k और BC = 8k</p>
+                    <p class="mb-2">AC² = AB² + BC² = (7k)² + (8k)² = 49k² + 64k² = 113k²</p>
+                    <p class="mb-2">AC = √113 k</p>
+                    <p class="mb-2">sin θ = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">√113</span></div>, cos θ = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div> = <div class="fraction"><span class="numerator">7</span><span class="denominator">√113</span></div></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(i) <div class="fraction"><span class="numerator">(1 + sin θ)(1 − sin θ)</span><span class="denominator">(1 + cos θ)(1 − cos θ)</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 − sin² θ</span><span class="denominator">1 − cos² θ</span></div> = <div class="fraction"><span class="numerator">cos² θ</span><span class="denominator">sin² θ</span></div> = cot² θ</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">7</span><span class="denominator">8</span></div>)² = <div class="fraction"><span class="numerator">49</span><span class="denominator">64</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">49</span><span class="denominator">64</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) cot² θ</h4>
+                    <div class="step">
+                        <p class="mb-2">cot² θ = (<div class="fraction"><span class="numerator">7</span><span class="denominator">8</span></div>)² = <div class="fraction"><span class="numerator">49</span><span class="denominator">64</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">49</span><span class="denominator">64</span></div></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: यदि 3 cot A = 4, तो जाँच कीजिए कि <div class="fraction"><span class="numerator">1 − tan² A</span><span class="denominator">1 + tan² A</span></div> = cos² A − sin² A है या नहीं।</h3>
+                <div class="step">
+                    <p class="mb-2">3 cot A = 4 ⇒ cot A = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> ⇒ tan A = <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">मान लीजिए BC = 3k और AB = 4k</p>
+                    <p class="mb-2">AC² = AB² + BC² = (4k)² + (3k)² = 16k² + 9k² = 25k²</p>
+                    <p class="mb-2">AC = 5k</p>
+                    <p class="mb-2">sin A = <div class="fraction"><span class="numerator">3</span><span class="denominator">5</span></div>, cos A = <div class="fraction"><span class="numerator">4</span><span class="denominator">5</span></div></p>
+                    <p class="mb-2">बायाँ पक्ष = <div class="fraction"><span class="numerator">1 − (3/4)²</span><span class="denominator">1 + (3/4)²</span></div> = <div class="fraction"><span class="numerator">1 − 9/16</span><span class="denominator">1 + 9/16</span></div> = <div class="fraction"><span class="numerator">7/16</span><span class="denominator">25/16</span></div> = <div class="fraction"><span class="numerator">7</span><span class="denominator">25</span></div></p>
+                    <p class="mb-2">दायाँ पक्ष = cos² A − sin² A = (4/5)² − (3/5)² = <div class="fraction"><span class="numerator">16</span><span class="denominator">25</span></div> − <div class="fraction"><span class="numerator">9</span><span class="denominator">25</span></div> = <div class="fraction"><span class="numerator">7</span><span class="denominator">25</span></div></p>
+                    <p class="mb-2">बायाँ पक्ष = दायाँ पक्ष</p>
+                    <p><strong>उत्तर:</strong> हाँ, यह सत्य है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: त्रिभुज ABC में, जिसका कोण B समकोण है, यदि tan A = <div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div>, तो निम्नलिखित के मान ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">tan A = <div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div> ⇒ A = 30°</p>
+                    <p class="mb-2">चूँकि ∠B = 90°, अतः ∠C = 180° − 90° − 30° = 60°</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(i) sin A cos C + cos A sin C</h4>
+                    <div class="step">
+                        <p class="mb-2">= sin 30° cos 60° + cos 30° sin 60°</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>)(<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>) + (<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)(<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> + <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">4</span><span class="denominator">4</span></div> = 1</p>
+                        <p><strong>उत्तर:</strong> 1</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) cos A cos C − sin A sin C</h4>
+                    <div class="step">
+                        <p class="mb-2">= cos 30° cos 60° − sin 30° sin 60°</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)(<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>) − (<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>)(<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> − <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> = 0</p>
+                        <p><strong>उत्तर:</strong> 0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: ΔPQR में, जिसका कोण Q समकोण है, PR + QR = 25 cm और PQ = 5 cm है। sin P, cos P और tan P के मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">PR + QR = 25 ⇒ QR = 25 − PR</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: PR² = PQ² + QR²</p>
+                    <p class="mb-2">PR² = (5)² + (25 − PR)²</p>
+                    <p class="mb-2">PR² = 25 + 625 − 50PR + PR²</p>
+                    <p class="mb-2">0 = 650 − 50PR</p>
+                    <p class="mb-2">50PR = 650 ⇒ PR = 13 cm</p>
+                    <p class="mb-2">QR = 25 − 13 = 12 cm</p>
+                    <p class="mb-2">sin P = <div class="fraction"><span class="numerator">QR</span><span class="denominator">PR</span></div> = <div class="fraction"><span class="numerator">12</span><span class="denominator">13</span></div></p>
+                    <p class="mb-2">cos P = <div class="fraction"><span class="numerator">PQ</span><span class="denominator">PR</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">13</span></div></p>
+                    <p class="mb-2">tan P = <div class="fraction"><span class="numerator">QR</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">12</span><span class="denominator">5</span></div></p>
+                    <p><strong>उत्तर:</strong> sin P = <div class="fraction"><span class="numerator">12</span><span class="denominator">13</span></div>, cos P = <div class="fraction"><span class="numerator">5</span><span class="denominator">13</span></div>, tan P = <div class="fraction"><span class="numerator">12</span><span class="denominator">5</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: बताइए कि निम्नलिखित कथन सत्य हैं या असत्य। कारण सहित अपने उत्तर की पुष्टि कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) tan A का मान सदैव 1 से कम होता है।</p>
+                    <p class="mb-2"><strong>असत्य।</strong> उदाहरण: tan 60° = √3 > 1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) कोण A के किसी मान के लिए sec A = <div class="fraction"><span class="numerator">12</span><span class="denominator">5</span></div></p>
+                    <p class="mb-2"><strong>सत्य।</strong> क्योंकि sec A ≥ 1 होता है और 12/5 = 2.4 > 1 है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) cos A, कोण A के cosecant के लिए प्रयुक्त एक संक्षिप्त रूप है।</p>
+                    <p class="mb-2"><strong>असत्य।</strong> cos A, cosine के लिए है, cosecant के लिए cosec A प्रयुक्त होता है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) cot A, cot और A का गुणनफल होता है।</p>
+                    <p class="mb-2"><strong>असत्य।</strong> cot A, कोण A का cotangent है, यह गुणनफल नहीं है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) किसी भी कोण θ के लिए sin θ = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2"><strong>असत्य।</strong> क्योंकि sin θ का मान सदैव 1 से कम या बराबर होता है, 4/3 > 1 है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 8.2 ==================== -->
+        <section id="exercise-8-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 8.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित के मान निकालिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) sin 60° cos 30° + sin 30° cos 60°</h4>
+                    <div class="step">
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)(<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>) + (<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>)(<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> + <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">4</span><span class="denominator">4</span></div> = 1</p>
+                        <p><strong>उत्तर:</strong> 1</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 2 tan² 45° + cos² 30° − sin² 60°</h4>
+                    <div class="step">
+                        <p class="mb-2">= 2(1)² + (<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)² − (<div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div>)²</p>
+                        <p class="mb-2">= 2 + <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> − <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> = 2</p>
+                        <p><strong>उत्तर:</strong> 2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) <div class="fraction"><span class="numerator">cos 45°</span><span class="denominator">sec 30° + cosec 30°</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1/√2</span><span class="denominator">2/√3 + 2</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1/√2</span><span class="denominator">(2 + 2√3)/√3</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">√3</span><span class="denominator">2√2(1 + √3)</span></div></p>
+                        <p class="mb-2">परिमेयकरण करने पर: = <div class="fraction"><span class="numerator">√3(√3 − 1)</span><span class="denominator">2√2(√3 + 1)(√3 − 1)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">3 − √3</span><span class="denominator">2√2(3 − 1)</span></div> = <div class="fraction"><span class="numerator">3 − √3</span><span class="denominator">4√2</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">√2(3 − √3)</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">3√2 − √6</span><span class="denominator">8</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">3√2 − √6</span><span class="denominator">8</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) <div class="fraction"><span class="numerator">sin 30° + tan 45° − cosec 60°</span><span class="denominator">sec 30° + cos 60° + cot 45°</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1/2 + 1 − 2/√3</span><span class="denominator">2/√3 + 1/2 + 1</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">3/2 − 2/√3</span><span class="denominator">3/2 + 2/√3</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(3√3 − 4)/2√3</span><span class="denominator">(3√3 + 4)/2√3</span></div> = <div class="fraction"><span class="numerator">3√3 − 4</span><span class="denominator">3√3 + 4</span></div></p>
+                        <p class="mb-2">परिमेयकरण करने पर: = <div class="fraction"><span class="numerator">(3√3 − 4)²</span><span class="denominator">(3√3)² − (4)²</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">27 − 24√3 + 16</span><span class="denominator">27 − 16</span></div> = <div class="fraction"><span class="numerator">43 − 24√3</span><span class="denominator">11</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">43 − 24√3</span><span class="denominator">11</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) <div class="fraction"><span class="numerator">5 cos² 60° + 4 sec² 30° − tan² 45°</span><span class="denominator">sin² 30° + cos² 30°</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">5(1/2)² + 4(2/√3)² − (1)²</span><span class="denominator">(1/2)² + (√3/2)²</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">5(1/4) + 4(4/3) − 1</span><span class="denominator">1/4 + 3/4</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">5/4 + 16/3 − 1</span><span class="denominator">1</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">15 + 64 − 12</span><span class="denominator">12</span></div> = <div class="fraction"><span class="numerator">67</span><span class="denominator">12</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">67</span><span class="denominator">12</span></div></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सही विकल्प चुनिए और अपने विकल्प की पुष्टि कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) <div class="fraction"><span class="numerator">2 tan 30°</span><span class="denominator">1 + tan² 30°</span></div> =</h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2(1/√3)</span><span class="denominator">1 + (1/√3)²</span></div> = <div class="fraction"><span class="numerator">2/√3</span><span class="denominator">1 + 1/3</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2/√3</span><span class="denominator">4/3</span></div> = <div class="fraction"><span class="numerator">2</span><span class="denominator">√3</span></div> × <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div> = sin 60°</p>
+                        <p><strong>उत्तर:</strong> (A) sin 60°</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) <div class="fraction"><span class="numerator">1 − tan² 45°</span><span class="denominator">1 + tan² 45°</span></div> =</h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 − (1)²</span><span class="denominator">1 + (1)²</span></div> = <div class="fraction"><span class="numerator">0</span><span class="denominator">2</span></div> = 0</p>
+                        <p><strong>उत्तर:</strong> (D) 0</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) sin 2A = 2 sin A तब सत्य होता है, जबकि A बराबर है:</h4>
+                    <div class="step">
+                        <p class="mb-2">A = 0° रखने पर: sin 0° = 0, 2 sin 0° = 0। अतः सत्य है।</p>
+                        <p><strong>उत्तर:</strong> (A) 0°</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) <div class="fraction"><span class="numerator">2 tan 30°</span><span class="denominator">1 − tan² 30°</span></div> =</h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2(1/√3)</span><span class="denominator">1 − (1/√3)²</span></div> = <div class="fraction"><span class="numerator">2/√3</span><span class="denominator">1 − 1/3</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2/√3</span><span class="denominator">2/3</span></div> = <div class="fraction"><span class="numerator">2</span><span class="denominator">√3</span></div> × <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div> = √3 = tan 60°</p>
+                        <p><strong>उत्तर:</strong> (C) tan 60°</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि tan (A + B) = √3 और tan (A − B) = <div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div>; 0° < A + B ≤ 90°; A > B, तो A और B का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">tan (A + B) = √3 ⇒ A + B = 60° ...(1)</p>
+                    <p class="mb-2">tan (A − B) = <div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div> ⇒ A − B = 30° ...(2)</p>
+                    <p class="mb-2">(1) + (2): 2A = 90° ⇒ A = 45°</p>
+                    <p class="mb-2">(1) − (2): 2B = 30° ⇒ B = 15°</p>
+                    <p><strong>उत्तर:</strong> A = 45°, B = 15°</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: बताइए कि निम्नलिखित में कौन-कौन सत्य हैं या असत्य हैं। कारण सहित अपने उत्तर की पुष्टि कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) sin (A + B) = sin A + sin B</p>
+                    <p class="mb-2"><strong>असत्य।</strong> उदाहरण: A = 30°, B = 60°</p>
+                    <p class="mb-2">sin (30° + 60°) = sin 90° = 1</p>
+                    <p class="mb-2">sin 30° + sin 60° = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> + <div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div> ≠ 1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) θ में वृद्धि होने के साथ sin θ के मान में भी वृद्धि होती है।</p>
+                    <p class="mb-2"><strong>सत्य।</strong> 0° ≤ θ ≤ 90° के लिए, sin 0° = 0, sin 30° = 1/2, sin 45° = 1/√2, sin 60° = √3/2, sin 90° = 1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) θ में वृद्धि होने के साथ cos θ के मान में भी वृद्धि होती है।</p>
+                    <p class="mb-2"><strong>असत्य।</strong> cos 0° = 1, cos 30° = √3/2, cos 45° = 1/√2, cos 60° = 1/2, cos 90° = 0</p>
+                    <p class="mb-2">θ बढ़ने पर cos θ का मान घटता है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) θ के सभी मानों पर sin θ = cos θ</p>
+                    <p class="mb-2"><strong>असत्य।</strong> यह केवल θ = 45° पर सत्य है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) A = 0° पर cot A परिभाषित नहीं है।</p>
+                    <p class="mb-2"><strong>सत्य।</strong> cot A = <div class="fraction"><span class="numerator">cos A</span><span class="denominator">sin A</span></div>, A = 0° पर cot 0° = <div class="fraction"><span class="numerator">1</span><span class="denominator">0</span></div>, जो अपरिभाषित है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 8.3 ==================== -->
+        <section id="exercise-8-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 8.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: त्रिकोणमितीय अनुपातों sin A, sec A और tan A को cot A के पदों में व्यक्त कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">cot A = <div class="fraction"><span class="numerator">cos A</span><span class="denominator">sin A</span></div></p>
+                    <p class="mb-2">हम जानते हैं: cosec² A = 1 + cot² A</p>
+                    <p class="mb-2">sin A = <div class="fraction"><span class="numerator">1</span><span class="denominator">cosec A</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">√(1 + cot² A)</span></div></p>
+                    <p class="mb-2">tan A = <div class="fraction"><span class="numerator">1</span><span class="denominator">cot A</span></div></p>
+                    <p class="mb-2">sec² A = 1 + tan² A = 1 + <div class="fraction"><span class="numerator">1</span><span class="denominator">cot² A</span></div> = <div class="fraction"><span class="numerator">cot² A + 1</span><span class="denominator">cot² A</span></div></p>
+                    <p class="mb-2">sec A = <div class="fraction"><span class="numerator">√(cot² A + 1)</span><span class="denominator">cot A</span></div></p>
+                    <p><strong>उत्तर:</strong> sin A = <div class="fraction"><span class="numerator">1</span><span class="denominator">√(1 + cot² A)</span></div>, sec A = <div class="fraction"><span class="numerator">√(cot² A + 1)</span><span class="denominator">cot A</span></div>, tan A = <div class="fraction"><span class="numerator">1</span><span class="denominator">cot A</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: ∠A के अन्य सभी त्रिकोणमितीय अनुपातों को sec A के पदों में लिखिए।</h3>
+                <div class="step">
+                    <p class="mb-2">cos A = <div class="fraction"><span class="numerator">1</span><span class="denominator">sec A</span></div></p>
+                    <p class="mb-2">sin² A = 1 − cos² A = 1 − <div class="fraction"><span class="numerator">1</span><span class="denominator">sec² A</span></div> = <div class="fraction"><span class="numerator">sec² A − 1</span><span class="denominator">sec² A</span></div></p>
+                    <p class="mb-2">sin A = <div class="fraction"><span class="numerator">√(sec² A − 1)</span><span class="denominator">sec A</span></div></p>
+                    <p class="mb-2">tan A = <div class="fraction"><span class="numerator">sin A</span><span class="denominator">cos A</span></div> = <div class="fraction"><span class="numerator">√(sec² A − 1) / sec A</span><span class="denominator">1 / sec A</span></div> = √(sec² A − 1)</p>
+                    <p class="mb-2">cosec A = <div class="fraction"><span class="numerator">1</span><span class="denominator">sin A</span></div> = <div class="fraction"><span class="numerator">sec A</span><span class="denominator">√(sec² A − 1)</span></div></p>
+                    <p class="mb-2">cot A = <div class="fraction"><span class="numerator">1</span><span class="denominator">tan A</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">√(sec² A − 1)</span></div></p>
+                    <p><strong>उत्तर:</strong> sin A = <div class="fraction"><span class="numerator">√(sec² A − 1)</span><span class="denominator">sec A</span></div>, tan A = √(sec² A − 1), cosec A = <div class="fraction"><span class="numerator">sec A</span><span class="denominator">√(sec² A − 1)</span></div>, cot A = <div class="fraction"><span class="numerator">1</span><span class="denominator">√(sec² A − 1)</span></div>, cos A = <div class="fraction"><span class="numerator">1</span><span class="denominator">sec A</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: सही विकल्प चुनिए और अपने विकल्प की पुष्टि कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 9 sec² A − 9 tan² A बराबर है:</h4>
+                    <div class="step">
+                        <p class="mb-2">= 9(sec² A − tan² A) = 9(1) = 9</p>
+                        <p><strong>उत्तर:</strong> (B) 9</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) (1 + tan θ + sec θ) (1 + cot θ − cosec θ) बराबर है:</h4>
+                    <div class="step">
+                        <p class="mb-2">= (1 + <div class="fraction"><span class="numerator">sin θ</span><span class="denominator">cos θ</span></div> + <div class="fraction"><span class="numerator">1</span><span class="denominator">cos θ</span></div>)(1 + <div class="fraction"><span class="numerator">cos θ</span><span class="denominator">sin θ</span></div> − <div class="fraction"><span class="numerator">1</span><span class="denominator">sin θ</span></div>)</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">cos θ + sin θ + 1</span><span class="denominator">cos θ</span></div>)(<div class="fraction"><span class="numerator">sin θ + cos θ − 1</span><span class="denominator">sin θ</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(sin θ + cos θ)² − 1</span><span class="denominator">sin θ cos θ</span></div> = <div class="fraction"><span class="numerator">sin² θ + cos² θ + 2 sin θ cos θ − 1</span><span class="denominator">sin θ cos θ</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 + 2 sin θ cos θ − 1</span><span class="denominator">sin θ cos θ</span></div> = <div class="fraction"><span class="numerator">2 sin θ cos θ</span><span class="denominator">sin θ cos θ</span></div> = 2</p>
+                        <p><strong>उत्तर:</strong> (C) 2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) (sec A + tan A) (1 − sin A) बराबर है:</h4>
+                    <div class="step">
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">1</span><span class="denominator">cos A</span></div> + <div class="fraction"><span class="numerator">sin A</span><span class="denominator">cos A</span></div>)(1 − sin A)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 + sin A</span><span class="denominator">cos A</span></div> × (1 − sin A)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 − sin² A</span><span class="denominator">cos A</span></div> = <div class="fraction"><span class="numerator">cos² A</span><span class="denominator">cos A</span></div> = cos A</p>
+                        <p><strong>उत्तर:</strong> (D) cos A</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) <div class="fraction"><span class="numerator">1 + tan² A</span><span class="denominator">1 + cot² A</span></div> बराबर है:</h4>
+                    <div class="step">
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sec² A</span><span class="denominator">cosec² A</span></div> = <div class="fraction"><span class="numerator">1/cos² A</span><span class="denominator">1/sin² A</span></div> = <div class="fraction"><span class="numerator">sin² A</span><span class="denominator">cos² A</span></div> = tan² A</p>
+                        <p><strong>उत्तर:</strong> (D) tan² A</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्नलिखित सर्वसमिकाएँ सिद्ध कीजिए, जहाँ वे कोण, जिनके लिए व्यंजक परिभाषित है, न्यून कोण है:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) (cosec θ − cot θ)² = <div class="fraction"><span class="numerator">1 − cos θ</span><span class="denominator">1 + cos θ</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = (<div class="fraction"><span class="numerator">1</span><span class="denominator">sin θ</span></div> − <div class="fraction"><span class="numerator">cos θ</span><span class="denominator">sin θ</span></div>)² = (<div class="fraction"><span class="numerator">1 − cos θ</span><span class="denominator">sin θ</span></div>)²</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(1 − cos θ)²</span><span class="denominator">sin² θ</span></div> = <div class="fraction"><span class="numerator">(1 − cos θ)²</span><span class="denominator">1 − cos² θ</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(1 − cos θ)(1 − cos θ)</span><span class="denominator">(1 − cos θ)(1 + cos θ)</span></div> = <div class="fraction"><span class="numerator">1 − cos θ</span><span class="denominator">1 + cos θ</span></div> = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) <div class="fraction"><span class="numerator">cos A</span><span class="denominator">1 + sin A</span></div> + <div class="fraction"><span class="numerator">1 + sin A</span><span class="denominator">cos A</span></div> = 2 sec A</h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = <div class="fraction"><span class="numerator">cos² A + (1 + sin A)²</span><span class="denominator">(1 + sin A) cos A</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">cos² A + 1 + 2 sin A + sin² A</span><span class="denominator">(1 + sin A) cos A</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 + 1 + 2 sin A</span><span class="denominator">(1 + sin A) cos A</span></div> = <div class="fraction"><span class="numerator">2 + 2 sin A</span><span class="denominator">(1 + sin A) cos A</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2(1 + sin A)</span><span class="denominator">(1 + sin A) cos A</span></div> = <div class="fraction"><span class="numerator">2</span><span class="denominator">cos A</span></div> = 2 sec A = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) <div class="fraction"><span class="numerator">tan θ</span><span class="denominator">1 − cot θ</span></div> + <div class="fraction"><span class="numerator">cot θ</span><span class="denominator">1 − tan θ</span></div> = 1 + sec θ cosec θ</h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = <div class="fraction"><span class="numerator">sin θ/cos θ</span><span class="denominator">1 − cos θ/sin θ</span></div> + <div class="fraction"><span class="numerator">cos θ/sin θ</span><span class="denominator">1 − sin θ/cos θ</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sin θ/cos θ</span><span class="denominator">(sin θ − cos θ)/sin θ</span></div> + <div class="fraction"><span class="numerator">cos θ/sin θ</span><span class="denominator">(cos θ − sin θ)/cos θ</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sin² θ</span><span class="denominator">cos θ(sin θ − cos θ)</span></div> + <div class="fraction"><span class="numerator">cos² θ</span><span class="denominator">sin θ(cos θ − sin θ)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sin³ θ − cos³ θ</span><span class="denominator">sin θ cos θ (sin θ − cos θ)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(sin θ − cos θ)(sin² θ + sin θ cos θ + cos² θ)</span><span class="denominator">sin θ cos θ (sin θ − cos θ)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 + sin θ cos θ</span><span class="denominator">sin θ cos θ</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">sin θ cos θ</span></div> + 1</p>
+                        <p class="mb-2">= sec θ cosec θ + 1 = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) <div class="fraction"><span class="numerator">1 + sec A</span><span class="denominator">sec A</span></div> = <div class="fraction"><span class="numerator">sin² A</span><span class="denominator">1 − cos A</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = <div class="fraction"><span class="numerator">1 + 1/cos A</span><span class="denominator">1/cos A</span></div> = (<div class="fraction"><span class="numerator">cos A + 1</span><span class="denominator">cos A</span></div>) × cos A = 1 + cos A</p>
+                        <p class="mb-2">दायाँ पक्ष = <div class="fraction"><span class="numerator">1 − cos² A</span><span class="denominator">1 − cos A</span></div> = <div class="fraction"><span class="numerator">(1 − cos A)(1 + cos A)</span><span class="denominator">1 − cos A</span></div> = 1 + cos A</p>
+                        <p class="mb-2">बायाँ पक्ष = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) सर्वसमिका cosec² A = 1 + cot² A को लागू करके <div class="fraction"><span class="numerator">cos A − sin A + 1</span><span class="denominator">cos A + sin A − 1</span></div> = cosec A + cot A</h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = <div class="fraction"><span class="numerator">cos A/sin A − sin A/sin A + 1/sin A</span><span class="denominator">cos A/sin A + sin A/sin A − 1/sin A</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">cot A − 1 + cosec A</span><span class="denominator">cot A + 1 − cosec A</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(cosec A + cot A) − 1</span><span class="denominator">(cot A − cosec A) + 1</span></div></p>
+                        <p class="mb-2">अंश और हर को (cosec A + cot A) से गुणा करने पर:</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(cosec A + cot A)² − (cosec A + cot A)</span><span class="denominator">(cot A − cosec A)(cosec A + cot A) + (cosec A + cot A)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(cosec A + cot A)(cosec A + cot A − 1)</span><span class="denominator">(cot² A − cosec² A) + (cosec A + cot A)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(cosec A + cot A)(cosec A + cot A − 1)</span><span class="denominator">−1 + cosec A + cot A</span></div></p>
+                        <p class="mb-2">= cosec A + cot A = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vi) √(<div class="fraction"><span class="numerator">1 + sin A</span><span class="denominator">1 − sin A</span></div>) = sec A + tan A</h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = √(<div class="fraction"><span class="numerator">(1 + sin A)(1 + sin A)</span><span class="denominator">(1 − sin A)(1 + sin A)</span></div>)</p>
+                        <p class="mb-2">= √(<div class="fraction"><span class="numerator">(1 + sin A)²</span><span class="denominator">1 − sin² A</span></div>) = √(<div class="fraction"><span class="numerator">(1 + sin A)²</span><span class="denominator">cos² A</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1 + sin A</span><span class="denominator">cos A</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">cos A</span></div> + <div class="fraction"><span class="numerator">sin A</span><span class="denominator">cos A</span></div> = sec A + tan A = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vii) <div class="fraction"><span class="numerator">sin θ − 2 sin³ θ</span><span class="denominator">2 cos³ θ − cos θ</span></div> = tan θ</h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = <div class="fraction"><span class="numerator">sin θ(1 − 2 sin² θ)</span><span class="denominator">cos θ(2 cos² θ − 1)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sin θ(1 − 2 sin² θ)</span><span class="denominator">cos θ(2(1 − sin² θ) − 1)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sin θ(1 − 2 sin² θ)</span><span class="denominator">cos θ(2 − 2 sin² θ − 1)</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">sin θ(1 − 2 sin² θ)</span><span class="denominator">cos θ(1 − 2 sin² θ)</span></div> = <div class="fraction"><span class="numerator">sin θ</span><span class="denominator">cos θ</span></div> = tan θ = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(viii) (sin A + cosec A)² + (cos A + sec A)² = 7 + tan² A + cot² A</h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = sin² A + cosec² A + 2 sin A cosec A + cos² A + sec² A + 2 cos A sec A</p>
+                        <p class="mb-2">= (sin² A + cos² A) + (1 + cot² A) + 2 + (1 + tan² A) + 2</p>
+                        <p class="mb-2">= 1 + 1 + cot² A + 2 + 1 + tan² A + 2</p>
+                        <p class="mb-2">= 7 + tan² A + cot² A = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ix) (cosec A − sin A)(sec A − cos A) = <div class="fraction"><span class="numerator">1</span><span class="denominator">tan A + cot A</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">बायाँ पक्ष = (<div class="fraction"><span class="numerator">1</span><span class="denominator">sin A</span></div> − sin A)(<div class="fraction"><span class="numerator">1</span><span class="denominator">cos A</span></div> − cos A)</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">1 − sin² A</span><span class="denominator">sin A</span></div>)(<div class="fraction"><span class="numerator">1 − cos² A</span><span class="denominator">cos A</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">cos² A</span><span class="denominator">sin A</span></div> × <div class="fraction"><span class="numerator">sin² A</span><span class="denominator">cos A</span></div> = sin A cos A</p>
+                        <p class="mb-2">दायाँ पक्ष = <div class="fraction"><span class="numerator">1</span><span class="denominator">sin A/cos A + cos A/sin A</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">(sin² A + cos² A)/(sin A cos A)</span></div> = sin A cos A</p>
+                        <p class="mb-2">बायाँ पक्ष = दायाँ पक्ष</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(x) (<div class="fraction"><span class="numerator">1 + tan² A</span><span class="denominator">1 + cot² A</span></div>) = (<div class="fraction"><span class="numerator">1 − tan A</span><span class="denominator">1 − cot A</span></div>)² = tan² A</h4>
+                    <div class="step">
+                        <p class="mb-2">पहला भाग: <div class="fraction"><span class="numerator">1 + tan² A</span><span class="denominator">1 + cot² A</span></div> = <div class="fraction"><span class="numerator">sec² A</span><span class="denominator">cosec² A</span></div> = <div class="fraction"><span class="numerator">1/cos² A</span><span class="denominator">1/sin² A</span></div> = <div class="fraction"><span class="numerator">sin² A</span><span class="denominator">cos² A</span></div> = tan² A</p>
+                        <p class="mb-2">दूसरा भाग: (<div class="fraction"><span class="numerator">1 − tan A</span><span class="denominator">1 − cot A</span></div>)² = (<div class="fraction"><span class="numerator">1 − tan A</span><span class="denominator">1 − 1/tan A</span></div>)²</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">1 − tan A</span><span class="denominator">(tan A − 1)/tan A</span></div>)² = (<div class="fraction"><span class="numerator">(1 − tan A) tan A</span><span class="denominator">−(1 − tan A)</span></div>)² = (−tan A)² = tan² A</p>
+                        <p class="mb-2">तीनों भाग बराबर हैं।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

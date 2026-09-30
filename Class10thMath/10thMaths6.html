@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 6: त्रिभुज</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 6<br>त्रिभुज</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 6.1 ==================== -->
+        <section id="exercise-6-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: कोष्ठकों में दिए शब्दों में से सही शब्दों का प्रयोग करते हुए, रिक्त स्थानों को भरिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) सभी वृत्त <strong>समरूप</strong> होते हैं। (सर्वांगसम, समरूप)</p>
+                    <p class="mb-2">(ii) सभी वर्ग <strong>समरूप</strong> होते हैं। (समरूप, सर्वांगसम)</p>
+                    <p class="mb-2">(iii) सभी <strong>समबाहु</strong> त्रिभुज समरूप होते हैं। (समद्विबाहु, समबाहु)</p>
+                    <p class="mb-2">(iv) भुजाओं की समान संख्या वाले दो बहुभुज समरूप होते हैं, यदि (i) उनके संगत कोण <strong>बराबर</strong> हों तथा (ii) उनकी संगत भुजाएँ <strong>समानुपाती</strong> हों। (बराबर, समानुपाती)</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> सभी वृत्तों का आकार समान होता है पर आमाप भिन्न हो सकता है, अतः वे समरूप हैं। इसी प्रकार सभी वर्ग और समबाहु त्रिभुज समरूप होते हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित युग्मों के दो भिन्न-भिन्न उदाहरण दीजिए:</h3>
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) समरूप आकृतियाँ</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>उदाहरण 1:</strong> दो भिन्न-भिन्न त्रिज्याओं वाले वृत्त।</p>
+                        <p class="mb-2"><strong>उदाहरण 2:</strong> एक ही फोटो के भिन्न-भिन्न आकार में छपे प्रिंट (जैसे पासपोर्ट साइज और पोस्टकार्ड साइज)।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) ऐसी आकृतियाँ जो समरूप नहीं हैं</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>उदाहरण 1:</strong> एक वर्ग और एक आयत (कोण बराबर हैं पर भुजाएँ समानुपाती नहीं हैं)।</p>
+                        <p class="mb-2"><strong>उदाहरण 2:</strong> एक वृत्त और एक त्रिभुज (आकार ही भिन्न है)।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: बताइए कि निम्नलिखित चतुर्भुज समरूप हैं या नहीं:</h3>
+                <div class="step">
+                    <p class="mb-2">दिया गया है: एक समचतुर्भुज PQRS जिसकी प्रत्येक भुजा 1.5 cm है तथा एक वर्ग ABCD जिसकी प्रत्येक भुजा 3 cm है।</p>
+                    <p class="mb-2"><strong>चरण 1:</strong> समचतुर्भुज PQRS की सभी भुजाएँ 1.5 cm हैं, परंतु इसके कोण 90° नहीं हैं (सामान्यतः)।</p>
+                    <p class="mb-2"><strong>चरण 2:</strong> वर्ग ABCD की सभी भुजाएँ 3 cm हैं और प्रत्येक कोण 90° है।</p>
+                    <p class="mb-2"><strong>चरण 3:</strong> संगत भुजाओं का अनुपात = <div class="fraction"><span class="numerator">1.5</span><span class="denominator">3</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (सभी भुजाओं के लिए समान)</p>
+                    <p class="mb-2"><strong>चरण 4:</strong> परंतु संगत कोण बराबर नहीं हैं (समचतुर्भुज के कोण 90° नहीं हैं)।</p>
+                    <p><strong>उत्तर:</strong> नहीं, ये चतुर्भुज समरूप नहीं हैं क्योंकि संगत कोण बराबर नहीं हैं।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> समरूपता के लिए दोनों शर्तें आवश्यक हैं - संगत कोण बराबर हों और संगत भुजाएँ समानुपाती हों। यहाँ भुजाएँ समानुपाती हैं पर कोण बराबर नहीं हैं, अतः समरूप नहीं हैं।
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 6.2 ==================== -->
+        <section id="exercise-6-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: आकृति 6.17 (i) और (ii) में, DE || BC है। (i) में EC और (ii) में AD ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) दिया है: AD = 1.5 cm, DB = 3 cm, AE = 1 cm, EC = ?</h4>
+                    <div class="step">
+                        <p class="mb-2">चूँकि DE || BC, आधारभूत समानुपातिकता प्रमेय (BPT) से:</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div></p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">1.5</span><span class="denominator">3</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">EC</span></div></p>
+                        <p class="mb-2">1.5 × EC = 3 × 1</p>
+                        <p class="mb-2">EC = <div class="fraction"><span class="numerator">3</span><span class="denominator">1.5</span></div> = 2 cm</p>
+                        <p><strong>उत्तर:</strong> EC = 2 cm</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) दिया है: AD = ?, DB = 7.2 cm, AE = 1.8 cm, EC = 5.4 cm</h4>
+                    <div class="step">
+                        <p class="mb-2">चूँकि DE || BC, BPT से:</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div></p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">AD</span><span class="denominator">7.2</span></div> = <div class="fraction"><span class="numerator">1.8</span><span class="denominator">5.4</span></div></p>
+                        <p class="mb-2">AD = <div class="fraction"><span class="numerator">1.8 × 7.2</span><span class="denominator">5.4</span></div> = <div class="fraction"><span class="numerator">12.96</span><span class="denominator">5.4</span></div> = 2.4 cm</p>
+                        <p><strong>उत्तर:</strong> AD = 2.4 cm</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: किसी ∆PQR की भुजाओं PQ और PR पर क्रमशः बिंदु E और F स्थित हैं। निम्नलिखित में से प्रत्येक स्थिति के लिए, बताइए कि क्या EF || QR है:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) PE = 3.9 cm, EQ = 3 cm, PF = 3.6 cm और FR = 2.4 cm</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">3.9</span><span class="denominator">3</span></div> = 1.3</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> = <div class="fraction"><span class="numerator">3.6</span><span class="denominator">2.4</span></div> = 1.5</p>
+                        <p class="mb-2">चूँकि <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> ≠ <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div>, अतः EF || QR नहीं है।</p>
+                        <p><strong>उत्तर:</strong> नहीं, EF || QR नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) PE = 4 cm, QE = 4.5 cm, PF = 8 cm और RF = 9 cm</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">4</span><span class="denominator">4.5</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">9</span></div></p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">9</span></div></p>
+                        <p class="mb-2">चूँकि <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div>, अतः EF || QR है।</p>
+                        <p><strong>उत्तर:</strong> हाँ, EF || QR है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) PQ = 1.28 cm, PR = 2.56 cm, PE = 0.18 cm और PF = 0.36 cm</h4>
+                    <div class="step">
+                        <p class="mb-2">EQ = PQ − PE = 1.28 − 0.18 = 1.10 cm</p>
+                        <p class="mb-2">FR = PR − PF = 2.56 − 0.36 = 2.20 cm</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">0.18</span><span class="denominator">1.10</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">55</span></div></p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> = <div class="fraction"><span class="numerator">0.36</span><span class="denominator">2.20</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">55</span></div></p>
+                        <p class="mb-2">चूँकि दोनों अनुपात बराबर हैं, अतः EF || QR है।</p>
+                        <p><strong>उत्तर:</strong> हाँ, EF || QR है।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: आकृति 6.18 में यदि LM || CB और LN || CD हो तो सिद्ध कीजिए कि <div class="fraction"><span class="numerator">AM</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">AN</span><span class="denominator">AD</span></div> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में LM || CB और ΔACD में LN || CD।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> <div class="fraction"><span class="numerator">AM</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">AN</span><span class="denominator">AD</span></div></p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABC में, LM || CB (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">AM</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">AL</span><span class="denominator">AC</span></div> ...(1)</p>
+                    <p class="mb-2">ΔACD में, LN || CD (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">AN</span><span class="denominator">AD</span></div> = <div class="fraction"><span class="numerator">AL</span><span class="denominator">AC</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, <div class="fraction"><span class="numerator">AM</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">AN</span><span class="denominator">AD</span></div></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों त्रिभुजों में अलग-अलग BPT लगाकर दोनों अनुपातों को AL/AC के बराबर दिखाया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: आकृति 6.19 में DE || AC और DF || AE है। सिद्ध कीजिए कि <div class="fraction"><span class="numerator">BF</span><span class="denominator">FE</span></div> = <div class="fraction"><span class="numerator">BE</span><span class="denominator">EC</span></div> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में DE || AC और DF || AE।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> <div class="fraction"><span class="numerator">BF</span><span class="denominator">FE</span></div> = <div class="fraction"><span class="numerator">BE</span><span class="denominator">EC</span></div></p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABC में, DE || AC (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">BD</span><span class="denominator">DA</span></div> = <div class="fraction"><span class="numerator">BE</span><span class="denominator">EC</span></div> ...(1)</p>
+                    <p class="mb-2">ΔABE में, DF || AE (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">BD</span><span class="denominator">DA</span></div> = <div class="fraction"><span class="numerator">BF</span><span class="denominator">FE</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, <div class="fraction"><span class="numerator">BF</span><span class="denominator">FE</span></div> = <div class="fraction"><span class="numerator">BE</span><span class="denominator">EC</span></div></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: आकृति 6.20 में DE || OQ और DF || OR है। दर्शाइए कि EF || QR है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔPOQ में DE || OQ और ΔPOR में DF || OR।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> EF || QR</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔPOQ में, DE || OQ (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">PD</span><span class="denominator">DO</span></div> ...(1)</p>
+                    <p class="mb-2">ΔPOR में, DF || OR (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">PD</span><span class="denominator">DO</span></div> = <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div></p>
+                    <p class="mb-2">अतः BPT के विलोम से, ΔPQR में EF || QR है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: आकृति 6.21 में क्रमशः OP, OQ और OR पर स्थित बिंदु A, B और C इस प्रकार हैं कि AB || PQ और AC || PR है। दर्शाइए कि BC || QR है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔOPQ में AB || PQ और ΔOPR में AC || PR।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> BC || QR</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔOPQ में, AB || PQ (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">OA</span><span class="denominator">AP</span></div> = <div class="fraction"><span class="numerator">OB</span><span class="denominator">BQ</span></div> ...(1)</p>
+                    <p class="mb-2">ΔOPR में, AC || PR (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">OA</span><span class="denominator">AP</span></div> = <div class="fraction"><span class="numerator">OC</span><span class="denominator">CR</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, <div class="fraction"><span class="numerator">OB</span><span class="denominator">BQ</span></div> = <div class="fraction"><span class="numerator">OC</span><span class="denominator">CR</span></div></p>
+                    <p class="mb-2">अतः BPT के विलोम से, ΔOQR में BC || QR है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: प्रमेय 6.1 का प्रयोग करते हुए सिद्ध कीजिए कि एक त्रिभुज की एक भुजा के मध्य-बिंदु से होकर दूसरी भुजा के समांतर खींची गई रेखा तीसरी भुजा को समद्विभाजित करती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में D, AB का मध्य-बिंदु है (AD = DB) और DE || BC।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> AE = EC</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABC में, DE || BC (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div></p>
+                    <p class="mb-2">चूँकि AD = DB (D मध्य-बिंदु है),</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = 1</p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div> = 1 ⇒ AE = EC</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: प्रमेय 6.2 का प्रयोग करते हुए सिद्ध कीजिए कि एक त्रिभुज की किन्हीं दो भुजाओं के मध्य-बिंदुओं को मिलाने वाली रेखा तीसरी भुजा के समांतर होती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में D, AB का मध्य-बिंदु है (AD = DB) और E, AC का मध्य-बिंदु है (AE = EC)।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> DE || BC</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">AD = DB और AE = EC (दिया है)</p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = 1 और <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div> = 1</p>
+                    <p class="mb-2">इसलिए <div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div></p>
+                    <p class="mb-2">अतः प्रमेय 6.2 (BPT का विलोम) से, DE || BC</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: ABCD एक समलंब है जिसमें AB || DC है तथा इसके विकर्ण परस्पर बिंदु O पर प्रतिच्छेद करते हैं। दर्शाइए कि <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> समलंब ABCD में AB || DC, विकर्ण AC और BD बिंदु O पर प्रतिच्छेद करते हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div></p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔAOB और ΔCOD में,</p>
+                    <p class="mb-2">∠AOB = ∠COD (शीर्षाभिमुख कोण)</p>
+                    <p class="mb-2">∠OAB = ∠OCD (AB || DC और AC तिर्यक रेखा, एकांतर कोण)</p>
+                    <p class="mb-2">∠OBA = ∠ODC (AB || DC और BD तिर्यक रेखा, एकांतर कोण)</p>
+                    <p class="mb-2">अतः AA समरूपता से, ΔAOB ~ ΔCOD</p>
+                    <p class="mb-2">इसलिए, <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> (समरूप त्रिभुजों की संगत भुजाएँ)</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक चतुर्भुज ABCD के विकर्ण परस्पर बिंदु O पर इस प्रकार प्रतिच्छेद करते हैं कि <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> है। दर्शाइए कि ABCD एक समलंब है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> चतुर्भुज ABCD में विकर्ण AC और BD बिंदु O पर प्रतिच्छेद करते हैं तथा <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div>।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ABCD एक समलंब है (AB || DC)</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔAOB और ΔCOD में,</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> (दिया है)</p>
+                    <p class="mb-2">∠AOB = ∠COD (शीर्षाभिमुख कोण)</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔAOB ~ ΔCOD</p>
+                    <p class="mb-2">इसलिए, ∠OAB = ∠OCD (समरूप त्रिभुजों के संगत कोण)</p>
+                    <p class="mb-2">परंतु ये एकांतर कोण हैं।</p>
+                    <p class="mb-2">अतः AB || DC</p>
+                    <p class="mb-2">इसलिए ABCD एक समलंब है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 6.3 ==================== -->
+        <section id="exercise-6-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: बताइए कि आकृति 6.34 में दिए त्रिभुजों के युग्मों में से कौन-कौन से युग्म समरूप हैं। उस समरूपता कसौटी का लिखिए जिसका प्रयोग आपने उत्तर देने में किया है तथा साथ ही समरूप त्रिभुजों को सांकेतिक रूप में व्यक्त कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> ΔABC में: ∠A = 60°, ∠B = 80°, ∠C = 40°</p>
+                    <p class="mb-2">ΔPQR में: ∠P = 80°, ∠Q = 60°, ∠R = 40°</p>
+                    <p class="mb-2">∠A = ∠Q = 60°, ∠B = ∠P = 80°, ∠C = ∠R = 40°</p>
+                    <p class="mb-2">अतः AA समरूपता से, ΔABC ~ ΔQRP</p>
+                    <p><strong>उत्तर:</strong> हाँ, ΔABC ~ ΔQRP (AA समरूपता)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> ΔABC में: AB = 2 cm, BC = 2.5 cm, CA = 3 cm</p>
+                    <p class="mb-2">ΔPQR में: PQ = 4 cm, QR = 5 cm, RP = 6 cm</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">2</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div> = <div class="fraction"><span class="numerator">2.5</span><span class="denominator">5</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, <div class="fraction"><span class="numerator">CA</span><span class="denominator">RP</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">अतः SSS समरूपता से, ΔABC ~ ΔPQR</p>
+                    <p><strong>उत्तर:</strong> हाँ, ΔABC ~ ΔPQR (SSS समरूपता)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> ΔLMP में: ∠L = 50°, ∠M = 60°, ∠P = 70°</p>
+                    <p class="mb-2">ΔDEF में: ∠D = 70°, ∠E = 60°, ∠F = 50°</p>
+                    <p class="mb-2">∠L = ∠F = 50°, ∠M = ∠E = 60°, ∠P = ∠D = 70°</p>
+                    <p class="mb-2">अतः AA समरूपता से, ΔLMP ~ ΔFED</p>
+                    <p><strong>उत्तर:</strong> हाँ, ΔLMP ~ ΔFED (AA समरूपता)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आकृति 6.35 में, ΔODC ~ ΔOBA, ∠BOC = 125° और ∠CDO = 70° है। ∠DOC, ∠DCO और ∠OAB ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">∠BOC = 125° (दिया है)</p>
+                    <p class="mb-2">∠DOC + ∠BOC = 180° (रैखिक युग्म)</p>
+                    <p class="mb-2">∠DOC = 180° − 125° = 55°</p>
+                    <p class="mb-2">ΔODC में, ∠ODC + ∠DOC + ∠DCO = 180°</p>
+                    <p class="mb-2">70° + 55° + ∠DCO = 180°</p>
+                    <p class="mb-2">∠DCO = 180° − 125° = 55°</p>
+                    <p class="mb-2">चूँकि ΔODC ~ ΔOBA, संगत कोण बराबर हैं।</p>
+                    <p class="mb-2">∠OAB = ∠OCD = 55°</p>
+                    <p><strong>उत्तर:</strong> ∠DOC = 55°, ∠DCO = 55°, ∠OAB = 55°</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: आकृति 6.36 में, यदि ΔABE ≅ ΔACD है, तो दर्शाइए कि ΔADE ~ ΔABC है।</h3>
+                <div class="step">
+                    <p class="mb-2">ΔABE ≅ ΔACD (दिया है)</p>
+                    <p class="mb-2">अतः AB = AC और AE = AD (सर्वांगसम त्रिभुजों की संगत भुजाएँ)</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AD</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">AC</span></div> ...(1)</p>
+                    <p class="mb-2">ΔADE और ΔABC में,</p>
+                    <p class="mb-2">∠DAE = ∠BAC (उभयनिष्ठ कोण)</p>
+                    <p class="mb-2">और <div class="fraction"><span class="numerator">AD</span><span class="denominator">AB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">AC</span></div> (समीकरण 1 से)</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔADE ~ ΔABC</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: आकृति 6.37 में, ΔPQR की भुजाओं PQ और PR पर क्रमशः बिंदु E और F स्थित हैं। निम्नलिखित में से प्रत्येक स्थिति के लिए, बताइए कि क्या EF || QR है:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) PE = 3.9 cm, EQ = 3 cm, PF = 3.6 cm और FR = 2.4 cm</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">3.9</span><span class="denominator">3</span></div> = 1.3</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> = <div class="fraction"><span class="numerator">3.6</span><span class="denominator">2.4</span></div> = 1.5</p>
+                        <p class="mb-2">चूँकि <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> ≠ <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div>, अतः EF || QR नहीं है।</p>
+                        <p><strong>उत्तर:</strong> नहीं, EF || QR नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) PE = 4 cm, QE = 4.5 cm, PF = 8 cm और RF = 9 cm</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">4</span><span class="denominator">4.5</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">9</span></div></p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">9</span></div></p>
+                        <p class="mb-2">चूँकि अनुपात बराबर हैं, अतः EF || QR है।</p>
+                        <p><strong>उत्तर:</strong> हाँ, EF || QR है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) PQ = 1.28 cm, PR = 2.56 cm, PE = 0.18 cm और PF = 0.36 cm</h4>
+                    <div class="step">
+                        <p class="mb-2">EQ = PQ − PE = 1.28 − 0.18 = 1.10 cm</p>
+                        <p class="mb-2">FR = PR − PF = 2.56 − 0.36 = 2.20 cm</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">0.18</span><span class="denominator">1.10</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">55</span></div></p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> = <div class="fraction"><span class="numerator">0.36</span><span class="denominator">2.20</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">55</span></div></p>
+                        <p class="mb-2">चूँकि अनुपात बराबर हैं, अतः EF || QR है।</p>
+                        <p><strong>उत्तर:</strong> हाँ, EF || QR है।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: आकृति 6.38 में, DE || OQ और DF || OR है। दर्शाइए कि EF || QR है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔPOQ में DE || OQ और ΔPOR में DF || OR।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> EF || QR</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔPOQ में, DE || OQ (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">PD</span><span class="denominator">DO</span></div> ...(1)</p>
+                    <p class="mb-2">ΔPOR में, DF || OR (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">PD</span><span class="denominator">DO</span></div> = <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, <div class="fraction"><span class="numerator">PE</span><span class="denominator">EQ</span></div> = <div class="fraction"><span class="numerator">PF</span><span class="denominator">FR</span></div></p>
+                    <p class="mb-2">अतः BPT के विलोम से, ΔPQR में EF || QR है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: आकृति 6.39 में, क्रमशः OP, OQ और OR पर स्थित बिंदु A, B और C इस प्रकार हैं कि AB || PQ और AC || PR है। दर्शाइए कि BC || QR है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔOPQ में AB || PQ और ΔOPR में AC || PR।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> BC || QR</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔOPQ में, AB || PQ (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">OA</span><span class="denominator">AP</span></div> = <div class="fraction"><span class="numerator">OB</span><span class="denominator">BQ</span></div> ...(1)</p>
+                    <p class="mb-2">ΔOPR में, AC || PR (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">OA</span><span class="denominator">AP</span></div> = <div class="fraction"><span class="numerator">OC</span><span class="denominator">CR</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, <div class="fraction"><span class="numerator">OB</span><span class="denominator">BQ</span></div> = <div class="fraction"><span class="numerator">OC</span><span class="denominator">CR</span></div></p>
+                    <p class="mb-2">अतः BPT के विलोम से, ΔOQR में BC || QR है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: प्रमेय 6.1 का प्रयोग करते हुए सिद्ध कीजिए कि एक त्रिभुज की एक भुजा के मध्य-बिंदु से होकर दूसरी भुजा के समांतर खींची गई रेखा तीसरी भुजा को समद्विभाजित करती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में D, AB का मध्य-बिंदु है (AD = DB) और DE || BC।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> AE = EC</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABC में, DE || BC (दिया है)</p>
+                    <p class="mb-2">अतः BPT से, <div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div></p>
+                    <p class="mb-2">चूँकि AD = DB (D मध्य-बिंदु है),</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = 1</p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div> = 1 ⇒ AE = EC</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: प्रमेय 6.2 का प्रयोग करते हुए सिद्ध कीजिए कि एक त्रिभुज की किन्हीं दो भुजाओं के मध्य-बिंदुओं को मिलाने वाली रेखा तीसरी भुजा के समांतर होती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में D, AB का मध्य-बिंदु है (AD = DB) और E, AC का मध्य-बिंदु है (AE = EC)।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> DE || BC</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">AD = DB और AE = EC (दिया है)</p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = 1 और <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div> = 1</p>
+                    <p class="mb-2">इसलिए <div class="fraction"><span class="numerator">AD</span><span class="denominator">DB</span></div> = <div class="fraction"><span class="numerator">AE</span><span class="denominator">EC</span></div></p>
+                    <p class="mb-2">अतः प्रमेय 6.2 (BPT का विलोम) से, DE || BC</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: ABCD एक समलंब है जिसमें AB || DC है तथा इसके विकर्ण परस्पर बिंदु O पर प्रतिच्छेद करते हैं। दर्शाइए कि <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> समलंब ABCD में AB || DC, विकर्ण AC और BD बिंदु O पर प्रतिच्छेद करते हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div></p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔAOB और ΔCOD में,</p>
+                    <p class="mb-2">∠AOB = ∠COD (शीर्षाभिमुख कोण)</p>
+                    <p class="mb-2">∠OAB = ∠OCD (AB || DC और AC तिर्यक रेखा, एकांतर कोण)</p>
+                    <p class="mb-2">∠OBA = ∠ODC (AB || DC और BD तिर्यक रेखा, एकांतर कोण)</p>
+                    <p class="mb-2">अतः AA समरूपता से, ΔAOB ~ ΔCOD</p>
+                    <p class="mb-2">इसलिए, <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक चतुर्भुज ABCD के विकर्ण परस्पर बिंदु O पर इस प्रकार प्रतिच्छेद करते हैं कि <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> है। दर्शाइए कि ABCD एक समलंब है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> चतुर्भुज ABCD में विकर्ण AC और BD बिंदु O पर प्रतिच्छेद करते हैं तथा <div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div>।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ABCD एक समलंब है (AB || DC)</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔAOB और ΔCOD में,</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AO</span><span class="denominator">CO</span></div> = <div class="fraction"><span class="numerator">BO</span><span class="denominator">DO</span></div> (दिया है)</p>
+                    <p class="mb-2">∠AOB = ∠COD (शीर्षाभिमुख कोण)</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔAOB ~ ΔCOD</p>
+                    <p class="mb-2">इसलिए, ∠OAB = ∠OCD (समरूप त्रिभुजों के संगत कोण)</p>
+                    <p class="mb-2">परंतु ये एकांतर कोण हैं।</p>
+                    <p class="mb-2">अतः AB || DC</p>
+                    <p class="mb-2">इसलिए ABCD एक समलंब है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: आकृति 6.40 में, AB = AC वाले, एक समद्विबाहु त्रिभुज ABC की बढ़ाई गई भुजा CB पर स्थित E एक बिंदु है। यदि AD ⊥ BC और EF ⊥ AC है तो सिद्ध कीजिए कि ΔABD ~ ΔECF है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में AB = AC, AD ⊥ BC और EF ⊥ AC।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ΔABD ~ ΔECF</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABD में, ∠ADB = 90° (AD ⊥ BC)</p>
+                    <p class="mb-2">ΔECF में, ∠EFC = 90° (EF ⊥ AC)</p>
+                    <p class="mb-2">अतः ∠ADB = ∠EFC = 90° ...(1)</p>
+                    <p class="mb-2">ΔABC में, AB = AC (दिया है)</p>
+                    <p class="mb-2">अतः ∠ABC = ∠ACB (समान भुजाओं के सम्मुख कोण)</p>
+                    <p class="mb-2">अर्थात् ∠ABD = ∠ECF ...(2)</p>
+                    <p class="mb-2">(1) और (2) से, AA समरूपता से, ΔABD ~ ΔECF</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: एक त्रिभुज ABC की भुजाएँ AB और BC तथा माध्यिका AD एक अन्य त्रिभुज PQR की क्रमशः भुजाओं PQ और QR तथा माध्यिका PM के समानुपाती हैं (देखिए आकृति 6.41)। दर्शाइए कि ΔABC ~ ΔPQR है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div> जहाँ AD और PM माध्यिकाएँ हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ΔABC ~ ΔPQR</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">चूँकि AD और PM माध्यिकाएँ हैं,</p>
+                    <p class="mb-2">BD = <div class="fraction"><span class="numerator">BC</span><span class="denominator">2</span></div> और QM = <div class="fraction"><span class="numerator">QR</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">BD</span><span class="denominator">QM</span></div> = <div class="fraction"><span class="numerator">BC/2</span><span class="denominator">QR/2</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div></p>
+                    <p class="mb-2">इसलिए <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BD</span><span class="denominator">QM</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div></p>
+                    <p class="mb-2">अतः SSS समरूपता से, ΔABD ~ ΔPQM</p>
+                    <p class="mb-2">इसलिए ∠ABD = ∠PQM ⇒ ∠ABC = ∠PQR</p>
+                    <p class="mb-2">अब ΔABC और ΔPQR में,</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div> और ∠ABC = ∠PQR</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔABC ~ ΔPQR</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: एक त्रिभुज ABC की भुजा BC पर एक बिंदु D इस प्रकार स्थित है कि ∠ADC = ∠BAC है। दर्शाइए कि CA² = CB.CD है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC में, भुजा BC पर बिंदु D इस प्रकार है कि ∠ADC = ∠BAC।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> CA² = CB × CD</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABC और ΔDAC में,</p>
+                    <p class="mb-2">∠BAC = ∠ADC (दिया है)</p>
+                    <p class="mb-2">∠ACB = ∠DCA (उभयनिष्ठ कोण)</p>
+                    <p class="mb-2">अतः AA समरूपता से, ΔABC ~ ΔDAC</p>
+                    <p class="mb-2">इसलिए, <div class="fraction"><span class="numerator">CA</span><span class="denominator">CD</span></div> = <div class="fraction"><span class="numerator">CB</span><span class="denominator">CA</span></div></p>
+                    <p class="mb-2">CA × CA = CB × CD</p>
+                    <p class="mb-2">CA² = CB × CD</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: एक त्रिभुज ABC की भुजाएँ AB और AC तथा माध्यिका AD एक अन्य त्रिभुज की भुजाओं PQ और PR तथा माध्यिका PM के क्रमशः समानुपाती हैं। दर्शाइए कि ΔABC ~ ΔPQR है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">AC</span><span class="denominator">PR</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div> जहाँ AD और PM माध्यिकाएँ हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ΔABC ~ ΔPQR</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">चूँकि AD और PM माध्यिकाएँ हैं,</p>
+                    <p class="mb-2">BD = <div class="fraction"><span class="numerator">BC</span><span class="denominator">2</span></div> और QM = <div class="fraction"><span class="numerator">QR</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">ΔABD और ΔPQM में,</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div> (दिया है)</p>
+                    <p class="mb-2">∠BAD = ∠QPM (समरूपता से)</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔABD ~ ΔPQM</p>
+                    <p class="mb-2">इसलिए ∠ABD = ∠PQM ⇒ ∠ABC = ∠PQR</p>
+                    <p class="mb-2">अब ΔABC और ΔPQR में,</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">AC</span><span class="denominator">PR</span></div> और ∠ABC = ∠PQR</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔABC ~ ΔPQR</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: लंबाई 6 m वाले एक ऊर्ध्वाधर स्तंभ की भूमि पर छाया की लंबाई 4 m है, जबकि उसी समय एक मीनार की छाया की लंबाई 28 m है। मीनार की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए स्तंभ की ऊँचाई AB = 6 m, छाया BC = 4 m</p>
+                    <p class="mb-2">मीनार की ऊँचाई PQ = h m, छाया QR = 28 m</p>
+                    <p class="mb-2">ΔABC और ΔPQR में,</p>
+                    <p class="mb-2">∠ABC = ∠PQR = 90° (ऊर्ध्वाधर वस्तुएँ)</p>
+                    <p class="mb-2">∠ACB = ∠PRQ (सूर्य की किरणों का कोण समान)</p>
+                    <p class="mb-2">अतः AA समरूपता से, ΔABC ~ ΔPQR</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">6</span><span class="denominator">h</span></div> = <div class="fraction"><span class="numerator">4</span><span class="denominator">28</span></div></p>
+                    <p class="mb-2">4h = 6 × 28 = 168</p>
+                    <p class="mb-2">h = <div class="fraction"><span class="numerator">168</span><span class="denominator">4</span></div> = 42 m</p>
+                    <p><strong>उत्तर:</strong> मीनार की ऊँचाई 42 m है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: AD और PM त्रिभुजों ABC और PQR की क्रमशः माध्यिकाएँ हैं, जबकि ΔABC ~ ΔPQR है। सिद्ध कीजिए कि <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> ΔABC ~ ΔPQR, AD और PM माध्यिकाएँ हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div></p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">ΔABC ~ ΔPQR (दिया है)</p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div> = <div class="fraction"><span class="numerator">CA</span><span class="denominator">RP</span></div> ...(1)</p>
+                    <p class="mb-2">∠B = ∠Q ...(2)</p>
+                    <p class="mb-2">चूँकि AD और PM माध्यिकाएँ हैं,</p>
+                    <p class="mb-2">BD = <div class="fraction"><span class="numerator">BC</span><span class="denominator">2</span></div> और QM = <div class="fraction"><span class="numerator">QR</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">BD</span><span class="denominator">QM</span></div> = <div class="fraction"><span class="numerator">BC</span><span class="denominator">QR</span></div> ...(3)</p>
+                    <p class="mb-2">(1) और (3) से, <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BD</span><span class="denominator">QM</span></div> ...(4)</p>
+                    <p class="mb-2">अब ΔABD और ΔPQM में,</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">BD</span><span class="denominator">QM</span></div> (समीकरण 4 से)</p>
+                    <p class="mb-2">∠ABD = ∠PQM (समीकरण 2 से)</p>
+                    <p class="mb-2">अतः SAS समरूपता से, ΔABD ~ ΔPQM</p>
+                    <p class="mb-2">इसलिए, <div class="fraction"><span class="numerator">AB</span><span class="denominator">PQ</span></div> = <div class="fraction"><span class="numerator">AD</span><span class="denominator">PM</span></div></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 12: पृष्ठीय क्षेत्रफल और आयतन</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 12<br>पृष्ठीय क्षेत्रफल और आयतन</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 12.1 ==================== -->
+        <section id="exercise-12-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 12.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: दो घनों, जिनमें से प्रत्येक का आयतन 64 cm³ है, के संलग्न फलकों को मिलाकर एक ठोस बनाया जाता है। इससे प्राप्त घनाभ का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">प्रत्येक घन का आयतन = 64 cm³</p>
+                    <p class="mb-2">घन की भुजा = ∛64 = 4 cm</p>
+                    <p class="mb-2">दो घनों को मिलाने पर बना घनाभ:</p>
+                    <p class="mb-2">लंबाई l = 4 + 4 = 8 cm, चौड़ाई b = 4 cm, ऊँचाई h = 4 cm</p>
+                    <p class="mb-2">घनाभ का पृष्ठीय क्षेत्रफल = 2(lb + bh + hl)</p>
+                    <p class="mb-2">= 2(8×4 + 4×4 + 4×8)</p>
+                    <p class="mb-2">= 2(32 + 16 + 32) = 2 × 80 = 160 cm²</p>
+                    <p><strong>उत्तर:</strong> 160 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> घन की भुजा 4 cm है। दो घन मिलाने पर 8×4×4 का घनाभ बनता है। पृष्ठीय क्षेत्रफल सूत्र से 160 cm² प्राप्त होता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: कोई बर्तन एक खोखले अर्धगोले के आकार का है जिसके ऊपर एक खोखला बेलन अध्यारोपित है। अर्धगोले का व्यास 14 cm है और इस बर्तन (पात्र) की कुल ऊँचाई 13 cm है। इस बर्तन का आंतरिक पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">अर्धगोले का व्यास = 14 cm ⇒ त्रिज्या r = 7 cm</p>
+                    <p class="mb-2">बर्तन की कुल ऊँचाई = 13 cm</p>
+                    <p class="mb-2">बेलन की ऊँचाई h = 13 − 7 = 6 cm</p>
+                    <p class="mb-2">आंतरिक पृष्ठीय क्षेत्रफल = अर्धगोले का CSA + बेलन का CSA</p>
+                    <p class="mb-2">= 2πr² + 2πrh = 2πr(r + h)</p>
+                    <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × (7 + 6)</p>
+                    <p class="mb-2">= 44 × 13 = 572 cm²</p>
+                    <p><strong>उत्तर:</strong> 572 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बर्तन का आंतरिक पृष्ठ = अर्धगोले का वक्र पृष्ठ + बेलन का वक्र पृष्ठ। बेलन की ऊँचाई = 13 − 7 = 6 cm।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक खिलौना त्रिज्या 3.5 cm वाले एक शंकु के आकार का है, जो उसी त्रिज्या वाले एक अर्धगोले पर अध्यारोपित है। इस खिलौने की संपूर्ण ऊँचाई 15.5 cm है। इस खिलौने का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">शंकु और अर्धगोले की त्रिज्या r = 3.5 cm</p>
+                    <p class="mb-2">कुल ऊँचाई = 15.5 cm</p>
+                    <p class="mb-2">शंकु की ऊँचाई h = 15.5 − 3.5 = 12 cm</p>
+                    <p class="mb-2">शंकु की तिर्यक ऊँचाई l = √(r² + h²) = √(3.5² + 12²)</p>
+                    <p class="mb-2">= √(12.25 + 144) = √156.25 = 12.5 cm</p>
+                    <p class="mb-2">संपूर्ण पृष्ठीय क्षेत्रफल = शंकु का CSA + अर्धगोले का CSA</p>
+                    <p class="mb-2">= πrl + 2πr² = πr(l + 2r)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 3.5 × (12.5 + 7)</p>
+                    <p class="mb-2">= 11 × 19.5 = 214.5 cm²</p>
+                    <p><strong>उत्तर:</strong> 214.5 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> शंकु की ऊँचाई = 15.5 − 3.5 = 12 cm। तिर्यक ऊँचाई निकालकर CSA का सूत्र लगाया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: भुजा 7 cm वाले एक घनाकार ब्लॉक के ऊपर एक अर्धगोला रखा हुआ है। अर्धगोले का अधिकतम व्यास क्या हो सकता है? इस प्रकार बने ठोस का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">घन की भुजा = 7 cm</p>
+                    <p class="mb-2">अर्धगोले का अधिकतम व्यास = घन के फलक की भुजा = 7 cm</p>
+                    <p class="mb-2">अर्धगोले की त्रिज्या r = 3.5 cm</p>
+                    <p class="mb-2">ठोस का पृष्ठीय क्षेत्रफल = घन का TSA − अर्धगोले के आधार का क्षेत्रफल + अर्धगोले का CSA</p>
+                    <p class="mb-2">= 6 × 7² − πr² + 2πr² = 294 + πr²</p>
+                    <p class="mb-2">= 294 + <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (3.5)²</p>
+                    <p class="mb-2">= 294 + <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 12.25</p>
+                    <p class="mb-2">= 294 + 38.5 = 332.5 cm²</p>
+                    <p><strong>उत्तर:</strong> अधिकतम व्यास = 7 cm, पृष्ठीय क्षेत्रफल = 332.5 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> अर्धगोले का व्यास घन के फलक से बड़ा नहीं हो सकता। घन के TSA में से आधार का क्षेत्रफल घटाकर अर्धगोले का CSA जोड़ा।
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक घनाकार ब्लॉक के एक फलक को अंदर की ओर से काट कर एक अर्धगोलाकार गड्ढा इस प्रकार बनाया गया है कि अर्धगोले का व्यास घन के एक किनारे के बराबर है। शेष बचे ठोस का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए घन की भुजा = a</p>
+                    <p class="mb-2">अर्धगोले का व्यास = a ⇒ त्रिज्या r = a/2</p>
+                    <p class="mb-2">शेष ठोस का पृष्ठीय क्षेत्रफल = घन का TSA − अर्धगोले के आधार का क्षेत्रफल + अर्धगोले का CSA</p>
+                    <p class="mb-2">= 6a² − πr² + 2πr² = 6a² + πr²</p>
+                    <p class="mb-2">= 6a² + π(a/2)² = 6a² + <div class="fraction"><span class="numerator">πa²</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">= a²(6 + <div class="fraction"><span class="numerator">π</span><span class="denominator">4</span></div>) = a²(6 + <div class="fraction"><span class="numerator">22</span><span class="denominator">28</span></div>) = a²(<div class="fraction"><span class="numerator">168 + 22</span><span class="denominator">28</span></div>)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">190a²</span><span class="denominator">28</span></div> = <div class="fraction"><span class="numerator">95a²</span><span class="denominator">14</span></div> cm²</p>
+                    <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">95a²</span><span class="denominator">14</span></div> cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> घन के पृष्ठ में से गड्ढे के आधार का क्षेत्रफल घटाकर अर्धगोले का वक्र पृष्ठ जोड़ा।
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: दवा का एक कैप्सूल (capsule) एक बेलन के आकार का है जिसके दोनों सिरों पर एक-एक अर्धगोला लगा हुआ है। पूरे कैप्सूल की लंबाई 14 mm है और उसका व्यास 5 mm है। इसका पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">व्यास = 5 mm ⇒ त्रिज्या r = 2.5 mm</p>
+                    <p class="mb-2">कुल लंबाई = 14 mm</p>
+                    <p class="mb-2">बेलन की लंबाई h = 14 − 2 × 2.5 = 14 − 5 = 9 mm</p>
+                    <p class="mb-2">पृष्ठीय क्षेत्रफल = बेलन का CSA + 2 × अर्धगोले का CSA</p>
+                    <p class="mb-2">= 2πrh + 2 × 2πr² = 2πr(h + 2r)</p>
+                    <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 2.5 × (9 + 5)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">110</span><span class="denominator">7</span></div> × 14 = 220 mm²</p>
+                    <p><strong>उत्तर:</strong> 220 mm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बेलन की लंबाई = कुल लंबाई − दोनों अर्धगोलों के व्यास = 14 − 5 = 9 mm।
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: कोई तंबू एक बेलन के आकार का है जिस पर एक शंकु अध्यारोपित है। यदि बेलनाकार भाग की ऊँचाई और व्यास क्रमशः 2.1 m और 4 m है तथा शंकु की तिर्यक ऊँचाई 2.8 m है तो इस तंबू को बनाने में प्रयुक्त कैनवस (canvas) का क्षेत्रफल ज्ञात कीजिए। साथ ही, ₹500 प्रति m² की दर से इसमें प्रयुक्त कैनवस की लागत ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">बेलन का व्यास = 4 m ⇒ त्रिज्या r = 2 m</p>
+                    <p class="mb-2">बेलन की ऊँचाई h = 2.1 m</p>
+                    <p class="mb-2">शंकु की तिर्यक ऊँचाई l = 2.8 m</p>
+                    <p class="mb-2">कैनवस का क्षेत्रफल = बेलन का CSA + शंकु का CSA</p>
+                    <p class="mb-2">= 2πrh + πrl = πr(2h + l)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 2 × (2 × 2.1 + 2.8)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">44</span><span class="denominator">7</span></div> × (4.2 + 2.8) = <div class="fraction"><span class="numerator">44</span><span class="denominator">7</span></div> × 7 = 44 m²</p>
+                    <p class="mb-2">लागत = 44 × 500 = ₹ 22,000</p>
+                    <p><strong>उत्तर:</strong> कैनवस का क्षेत्रफल = 44 m², लागत = ₹ 22,000</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> तंबू के आधार को कैनवस से नहीं ढका जाता, अतः केवल वक्र पृष्ठों का क्षेत्रफल जोड़ा।
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: ऊँचाई 2.4 cm और व्यास 1.4 cm वाले एक ठोस बेलन में से इसी ऊँचाई और इसी व्यास वाला एक शंक्वाकार खोल (cavity) काट लिया जाता है। शेष बचे ठोस का निकटतम वर्ग सेंटीमीटर तक पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">व्यास = 1.4 cm ⇒ त्रिज्या r = 0.7 cm</p>
+                    <p class="mb-2">ऊँचाई h = 2.4 cm</p>
+                    <p class="mb-2">शंकु की तिर्यक ऊँचाई l = √(r² + h²) = √(0.7² + 2.4²)</p>
+                    <p class="mb-2">= √(0.49 + 5.76) = √6.25 = 2.5 cm</p>
+                    <p class="mb-2">शेष ठोस का पृष्ठीय क्षेत्रफल = बेलन का CSA + बेलन के आधार का क्षेत्रफल + शंकु का CSA</p>
+                    <p class="mb-2">= 2πrh + πr² + πrl</p>
+                    <p class="mb-2">= πr(2h + r + l)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 0.7 × (2×2.4 + 0.7 + 2.5)</p>
+                    <p class="mb-2">= 2.2 × (4.8 + 3.2) = 2.2 × 8 = 17.6 cm²</p>
+                    <p><strong>उत्तर:</strong> 17.6 cm² ≈ 18 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बेलन का बाहरी वक्र पृष्ठ + नीचे का आधार + शंकु का आंतरिक वक्र पृष्ठ।
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: लकड़ी के एक ठोस बेलन के प्रत्येक सिरे पर एक अर्धगोला खोदकर निकालते हुए, एक वस्तु बनाई गई है। यदि बेलन की ऊँचाई 10 cm है और आधार की त्रिज्या 3.5 cm है तो इस वस्तु का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">बेलन की त्रिज्या r = 3.5 cm, ऊँचाई h = 10 cm</p>
+                    <p class="mb-2">दोनों सिरों पर अर्धगोले खोदे गए हैं, अतः शेष बेलन की ऊँचाई = 10 cm (अर्धगोले अंदर की ओर हैं)</p>
+                    <p class="mb-2">वस्तु का पृष्ठीय क्षेत्रफल = बेलन का CSA + 2 × अर्धगोले का CSA</p>
+                    <p class="mb-2">= 2πrh + 2 × 2πr² = 2πr(h + 2r)</p>
+                    <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 3.5 × (10 + 7)</p>
+                    <p class="mb-2">= 22 × 17 = 374 cm²</p>
+                    <p><strong>उत्तर:</strong> 374 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> अर्धगोले बेलन के अंदर खोदे गए हैं, अतः बेलन का बाहरी वक्र पृष्ठ और दोनों अर्धगोलों के आंतरिक वक्र पृष्ठ जोड़े।
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 12.2 ==================== -->
+        <section id="exercise-12-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 12.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक ठोस एक अर्धगोले पर खड़े एक शंकु के आकार का है जिनकी त्रिज्याएँ 1 cm हैं तथा शंकु की ऊँचाई उसकी त्रिज्या के बराबर है। इस ठोस का आयतन π के पदों में ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">अर्धगोले और शंकु की त्रिज्या r = 1 cm</p>
+                    <p class="mb-2">शंकु की ऊँचाई h = r = 1 cm</p>
+                    <p class="mb-2">ठोस का आयतन = शंकु का आयतन + अर्धगोले का आयतन</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>πr²h + <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>πr³</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>π(1)²(1) + <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>π(1)³</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">π</span><span class="denominator">3</span></div> + <div class="fraction"><span class="numerator">2π</span><span class="denominator">3</span></div> = π cm³</p>
+                    <p><strong>उत्तर:</strong> π cm³</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> शंकु और अर्धगोले का आयतन जोड़ा। r = h = 1 cm रखने पर π cm³ प्राप्त होता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक इंजीनियरिंग के विद्यार्थी रचेल से एक पतली एल्यूमीनियम की शीट का प्रयोग करते हुए एक मॉडल बनाने को कहा गया जो एक ऐसे बेलन के आकार का हो जिसके दोनों सिरों पर दो शंकु जुड़े हुए हों। इस मॉडल का व्यास 3 cm है और इसकी लंबाई 12 cm है। यदि प्रत्येक शंकु की ऊँचाई 2 cm हो तो रचेल द्वारा बनाए गए मॉडल में अंतर्विष्ट हवा का आयतन ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">व्यास = 3 cm ⇒ त्रिज्या r = 1.5 cm</p>
+                    <p class="mb-2">कुल लंबाई = 12 cm</p>
+                    <p class="mb-2">प्रत्येक शंकु की ऊँचाई = 2 cm</p>
+                    <p class="mb-2">बेलन की लंबाई = 12 − 2 − 2 = 8 cm</p>
+                    <p class="mb-2">मॉडल का आयतन = बेलन का आयतन + 2 × शंकु का आयतन</p>
+                    <p class="mb-2">= πr²h + 2 × <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>πr²h₁</p>
+                    <p class="mb-2">= π(1.5)²(8) + 2 × <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>π(1.5)²(2)</p>
+                    <p class="mb-2">= π(2.25)(8) + <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>π(2.25)(2)</p>
+                    <p class="mb-2">= 18π + 3π = 21π</p>
+                    <p class="mb-2">= 21 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> = 66 cm³</p>
+                    <p><strong>उत्तर:</strong> 66 cm³</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बेलन की लंबाई = 12 − 4 = 8 cm। बेलन और दो शंकुओं का आयतन जोड़ा।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक गुलाबजामुन में उसके आयतन की लगभग 30% चीनी की चाशनी होती है। 45 गुलाबजामुनों में लगभग कितनी चाशनी होगी, यदि प्रत्येक गुलाबजामुन एक बेलन के आकार का है, जिसके दोनों सिरे अर्धगोलाकार हैं तथा इसकी लंबाई 5 cm और व्यास 2.8 cm है।</h3>
+                <div class="step">
+                    <p class="mb-2">व्यास = 2.8 cm ⇒ त्रिज्या r = 1.4 cm</p>
+                    <p class="mb-2">कुल लंबाई = 5 cm</p>
+                    <p class="mb-2">बेलन की लंबाई h = 5 − 2 × 1.4 = 5 − 2.8 = 2.2 cm</p>
+                    <p class="mb-2">एक गुलाबजामुन का आयतन = बेलन + 2 × अर्धगोला</p>
+                    <p class="mb-2">= πr²h + 2 × <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>πr³ = πr²(h + <div class="fraction"><span class="numerator">4r</span><span class="denominator">3</span></div>)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (1.4)² × (2.2 + <div class="fraction"><span class="numerator">5.6</span><span class="denominator">3</span></div>)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 1.96 × (2.2 + 1.8667)</p>
+                    <p class="mb-2">= 6.16 × 4.0667 = 25.05 cm³</p>
+                    <p class="mb-2">45 गुलाबजामुनों का आयतन = 45 × 25.05 = 1127.25 cm³</p>
+                    <p class="mb-2">चाशनी का आयतन = 30% × 1127.25 = 338.175 cm³</p>
+                    <p><strong>उत्तर:</strong> लगभग 338 cm³</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> प्रत्येक गुलाबजामुन बेलन + 2 अर्धगोले से बना है। कुल आयतन का 30% चाशनी है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक कलमदान घनाभ के आकार की एक लकड़ी से बना है जिसमें कलम रखने के लिए चार शंक्वाकार गड्ढे बने हुए हैं। घनाभ की विमाएँ 15 cm × 10 cm × 3.5 cm हैं। प्रत्येक गड्ढे की त्रिज्या 0.5 cm हैं और गहराई 1.4 cm हैं। पूरे कलमदान में लकड़ी का आयतन ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">घनाभ का आयतन = l × b × h = 15 × 10 × 3.5 = 525 cm³</p>
+                    <p class="mb-2">प्रत्येक शंक्वाकार गड्ढे का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>πr²h</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (0.5)² × 1.4</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 0.25 × 1.4 = <div class="fraction"><span class="numerator">1.1</span><span class="denominator">3</span></div> cm³</p>
+                    <p class="mb-2">4 गड्ढों का आयतन = 4 × <div class="fraction"><span class="numerator">1.1</span><span class="denominator">3</span></div> = <div class="fraction"><span class="numerator">4.4</span><span class="denominator">3</span></div> cm³</p>
+                    <p class="mb-2">शेष लकड़ी का आयतन = 525 − <div class="fraction"><span class="numerator">4.4</span><span class="denominator">3</span></div> = 525 − 1.47 = 523.53 cm³</p>
+                    <p><strong>उत्तर:</strong> 523.53 cm³</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> घनाभ के आयतन में से चारों शंक्वाकार गड्ढों का आयतन घटाया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक बर्तन एक उल्टे शंकु के आकार का है। इसकी ऊँचाई 8 cm है और इसके ऊपरी सिरे (जो खुला हुआ है) की त्रिज्या 5 cm है। यह ऊपर तक पानी से भरा हुआ है। जब इस बर्तन में सीसे की कुछ गोलियाँ जिनमें प्रत्येक 0.5 cm त्रिज्या वाला एक गोला है, डाली जाती हैं, तो इसमें से भरे हुए पानी का एक चौथाई भाग बाहर निकल जाता है। बर्तन में डाली गई सीसे की गोलियों की संख्या ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">शंकु की त्रिज्या R = 5 cm, ऊँचाई H = 8 cm</p>
+                    <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>πR²H = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>π(5)²(8) = <div class="fraction"><span class="numerator">200π</span><span class="denominator">3</span></div> cm³</p>
+                    <p class="mb-2">बाहर निकले पानी का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">200π</span><span class="denominator">3</span></div> = <div class="fraction"><span class="numerator">50π</span><span class="denominator">3</span></div> cm³</p>
+                    <p class="mb-2">प्रत्येक सीसे की गोली की त्रिज्या r = 0.5 cm</p>
+                    <p class="mb-2">एक गोली का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div>πr³ = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div>π(0.5)³ = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div>π × 0.125 = <div class="fraction"><span class="numerator">π</span><span class="denominator">6</span></div> cm³</p>
+                    <p class="mb-2">गोलियों की संख्या = <div class="fraction"><span class="numerator">50π/3</span><span class="denominator">π/6</span></div> = <div class="fraction"><span class="numerator">50</span><span class="denominator">3</span></div> × 6 = 100</p>
+                    <p><strong>उत्तर:</strong> 100 गोलियाँ</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बाहर निकले पानी का आयतन = गोलियों का कुल आयतन। इससे संख्या निकाली।
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: ऊँचाई 220 cm और आधार व्यास 24 cm वाले एक बेलन, जिस पर ऊँचाई 60 cm और त्रिज्या 8 cm वाला एक अन्य बेलन आरोपित है, से लोहे का एक स्तंभ बना है। इस स्तंभ का द्रव्यमान ज्ञात कीजिए, जबकि दिया है 1 cm³ लोहे का द्रव्यमान लगभग 8 g होता है। (π = 3.14 लीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">बड़े बेलन की त्रिज्या R = 12 cm, ऊँचाई H = 220 cm</p>
+                    <p class="mb-2">बड़े बेलन का आयतन = πR²H = 3.14 × 144 × 220 = 99475.2 cm³</p>
+                    <p class="mb-2">छोटे बेलन की त्रिज्या r = 8 cm, ऊँचाई h = 60 cm</p>
+                    <p class="mb-2">छोटे बेलन का आयतन = πr²h = 3.14 × 64 × 60 = 12057.6 cm³</p>
+                    <p class="mb-2">स्तंभ का कुल आयतन = 99475.2 + 12057.6 = 111532.8 cm³</p>
+                    <p class="mb-2">द्रव्यमान = 111532.8 × 8 g = 892262.4 g = 892.26 kg</p>
+                    <p><strong>उत्तर:</strong> लगभग 892.26 kg</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों बेलनों का आयतन जोड़कर कुल आयतन निकाला, फिर घनत्व से द्रव्यमान।
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक ठोस में, ऊँचाई 120 cm और त्रिज्या 60 cm वाला एक शंकु सम्मिलित है, जो 60 cm त्रिज्या वाले एक अर्धगोले पर आरोपित है। इस ठोस को पानी से भरे हुए एक लंब वृत्तीय बेलन में इस प्रकार सीधा डाल दिया जाता है कि यह बेलन की तली को स्पर्श करे। यदि बेलन की त्रिज्या 60 cm है और ऊँचाई 180 cm है तो बेलन में शेष बचे पानी का आयतन ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">बेलन का आयतन = πr²h = π(60)²(180) = 648000π cm³</p>
+                    <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>π(60)²(120) = 144000π cm³</p>
+                    <p class="mb-2">अर्धगोले का आयतन = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>π(60)³ = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>π(216000) = 144000π cm³</p>
+                    <p class="mb-2">ठोस का कुल आयतन = 144000π + 144000π = 288000π cm³</p>
+                    <p class="mb-2">शेष पानी का आयतन = 648000π − 288000π = 360000π</p>
+                    <p class="mb-2">= 360000 × 3.14 = 1130400 cm³ = 1.1304 m³</p>
+                    <p><strong>उत्तर:</strong> 1.1304 m³</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बेलन के आयतन में से ठोस (शंकु + अर्धगोला) का आयतन घटाया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक गोलाकार काँच के बर्तन की एक बेलन के आकार की गर्दन है जिसकी लंबाई 8 cm है और व्यास 2 cm है जबकि गोलाकार भाग का व्यास 8.5 cm है। इसमें भरे जा सकने वाली पानी की मात्रा माप कर, एक बच्चे ने यह ज्ञात किया कि इस बर्तन का आयतन 345 cm³ है। जाँच कीजिए कि उस बच्चे का उत्तर सही है या नहीं, यह मानते हुए कि उपरोक्त मापन आंतरिक मापन है और π = 3.14।</h3>
+                <div class="step">
+                    <p class="mb-2">गर्दन (बेलन) की त्रिज्या r = 1 cm, लंबाई h = 8 cm</p>
+                    <p class="mb-2">गोलाकार भाग की त्रिज्या R = 4.25 cm</p>
+                    <p class="mb-2">बेलन का आयतन = πr²h = 3.14 × 1 × 8 = 25.12 cm³</p>
+                    <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div>πR³ = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 3.14 × (4.25)³</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 3.14 × 76.7656 = 321.39 cm³</p>
+                    <p class="mb-2">कुल आयतन = 25.12 + 321.39 = 346.51 cm³</p>
+                    <p class="mb-2">बच्चे का उत्तर 345 cm³ था, जो लगभग सही है।</p>
+                    <p><strong>उत्तर:</strong> हाँ, बच्चे का उत्तर लगभग सही है (346.51 cm³ ≈ 345 cm³)</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> बर्तन = बेलन + गोला। दोनों का आयतन जोड़कर 346.51 cm³ प्राप्त होता है, जो 345 cm³ के लगभग बराबर है।
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

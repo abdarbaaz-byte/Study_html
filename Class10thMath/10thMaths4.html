@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 4: द्विघात समीकरण (हल)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #cc2b5e 0%, #753a88 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #cc2b5e;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 0.75rem;
+            padding-left: 1rem;
+            border-left: 2px solid #f9a8d4;
+        }
+        .explanation {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Gradient Title Card -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 4: द्विघात समीकरण</h1>
+            <p class="mt-2 text-lg">प्रश्नावली 4.1, 4.2 और 4.3 का संपूर्ण हल</p>
+        </div>
+
+        <!-- Prashnavali 4.1 -->
+        <section id="prashnavali-4-1">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-purple-600 pb-2">प्रश्नावली 4.1</h2>
+            
+            <!-- Question 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: जाँच कीजिए कि क्या निम्न द्विघात समीकरण हैं:</h3>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p><b>(i) (x+1)² = 2(x-3)</b><br>x²+2x+1 = 2x-6 => x²+7 = 0। <b>हाँ, यह एक द्विघात समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(ii) x²-2x = (-2)(3-x)</b><br>x²-2x = -6+2x => x²-4x+6 = 0। <b>हाँ, यह एक द्विघात समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(iii) (x-2)(x+1) = (x-1)(x+3)</b><br>x²-x-2 = x²+2x-3 => -3x+1 = 0। <b>नहीं, यह एक रैखिक समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(iv) (x-3)(2x+1) = x(x+5)</b><br>2x²-5x-3 = x²+5x => x²-10x-3 = 0। <b>हाँ, यह एक द्विघात समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(v) (2x-1)(x-3) = (x+5)(x-1)</b><br>2x²-7x+3 = x²+4x-5 => x²-11x+8 = 0। <b>हाँ, यह एक द्विघात समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(vi) x²+3x+1 = (x-2)²</b><br>x²+3x+1 = x²-4x+4 => 7x-3 = 0। <b>नहीं, यह एक रैखिक समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(vii) (x+2)³ = 2x(x²-1)</b><br>x³+6x²+12x+8 = 2x³-2x => x³-6x²-14x-8 = 0। <b>नहीं, यह एक त्रिघात समीकरण है।</b></p></div>
+                    <div class="step"><p><b>(viii) x³-4x²-x+1 = (x-2)³</b><br>x³-4x²-x+1 = x³-6x²+12x-8 => 2x²-13x+9 = 0। <b>हाँ, यह एक द्विघात समीकरण है।</b></p></div>
+                </div>
+                <div class="explanation">
+                    <h4 class="font-semibold">स्पष्टीकरण:</h4>
+                    <p>एक समीकरण द्विघात समीकरण तब होता है जब उसे सरल करने पर वह <b>ax² + bx + c = 0</b> के मानक रूप में आ जाए, जहाँ a, b, c वास्तविक संख्याएँ हैं और 'a' शून्य के बराबर नहीं (a ≠ 0) है। मुख्य पहचान यह है कि चर (x) की उच्चतम घात 2 होनी चाहिए।</p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्न स्थितियों को द्विघात समीकरणों के रूप में निरूपित कीजिए:</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p><b>(i) एक आयताकार भूखंड का क्षेत्रफल 528 m² है। क्षेत्र की लंबाई (मीटरों में) चौड़ाई के दुगुने से एक अधिक है।</b><br>माना चौड़ाई = x मीटर। तब लंबाई = 2x+1 मीटर।<br>क्षेत्रफल = लंबाई × चौड़ाई => 528 = x(2x+1)।<br>समीकरण: <b>2x² + x - 528 = 0</b></p></div>
+                    <div class="step"><p><b>(ii) दो क्रमागत धनात्मक पूर्णांकों का गुणनफल 306 है।</b><br>माना पहला पूर्णांक = x। तब दूसरा पूर्णांक = x+1।<br>गुणनफल = x(x+1) = 306।<br>समीकरण: <b>x² + x - 306 = 0</b></p></div>
+                    <div class="step"><p><b>(iii) रोहन की माँ उससे 26 वर्ष बड़ी है। उनकी आयु का गुणनफल अब से तीन वर्ष पश्चात् 360 हो जाएगी।</b><br>माना रोहन की वर्तमान आयु = x वर्ष। माँ की आयु = x+26 वर्ष।<br>3 वर्ष बाद: रोहन की आयु = x+3, माँ की आयु = (x+26)+3 = x+29।<br>गुणनफल = (x+3)(x+29) = 360।<br>x²+32x+87 = 360।<br>समीकरण: <b>x² + 32x - 273 = 0</b></p></div>
+                    <div class="step"><p><b>(iv) एक रेलगाड़ी 480 km की दूरी समान चाल से तय करती है। यदि इसकी चाल 8 km/h कम होती, तो वह उसी दूरी को तय करने में 3 घंटे अधिक लेती।</b><br>माना रेलगाड़ी की चाल = x km/h। समय = दूरी/चाल।<br>मूल समय (t₁) = 480/x। नई चाल = x-8। नया समय (t₂) = 480/(x-8)।<br>शर्त: t₂ - t₁ = 3 => 480/(x-8) - 480/x = 3।<br>480(x - (x-8)) / (x(x-8)) = 3 => 480(8) = 3(x²-8x)।<br>3840 = 3x² - 24x => 3x² - 24x - 3840 = 0।<br>समीकरण: <b>x² - 8x - 1280 = 0</b></p></div>
+                 </div>
+                 <div class="explanation"><h4 class="font-semibold">स्पष्टीकरण:</h4><p>शाब्दिक समस्याओं को द्विघात समीकरण में बदलने के लिए, सबसे पहले अज्ञात राशि को चर 'x' मानें। फिर समस्या में दी गई शर्तों के अनुसार चर के बीच संबंध स्थापित करें और उसे एक समीकरण के रूप में लिखें। अंत में, समीकरण को मानक रूप (ax² + bx + c = 0) में सरल करें।</p></div>
+            </div>
+        </section>
+
+        <!-- Prashnavali 4.2 -->
+        <section id="prashnavali-4-2" class="mt-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-purple-600 pb-2">प्रश्नावली 4.2</h2>
+
+            <!-- Question 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: गुणनखंड विधि से निम्न द्विघात समीकरणों के मूल ज्ञात कीजिए:</h3>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p><b>(i) x² - 3x - 10 = 0</b><br>x² - 5x + 2x - 10 = 0<br>x(x-5) + 2(x-5) = 0 => (x-5)(x+2) = 0<br><b>मूल: x = 5, x = -2</b></p></div>
+                    <div class="step"><p><b>(ii) 2x² + x - 6 = 0</b><br>2x² + 4x - 3x - 6 = 0<br>2x(x+2) - 3(x+2) = 0 => (2x-3)(x+2) = 0<br><b>मूल: x = 3/2, x = -2</b></p></div>
+                    <div class="step"><p><b>(iii) √2x² + 7x + 5√2 = 0</b><br>√2x² + 5x + 2x + 5√2 = 0<br>x(√2x+5) + √2(√2x+5) = 0 => (x+√2)(√2x+5) = 0<br><b>मूल: x = -√2, x = -5/√2</b></p></div>
+                    <div class="step"><p><b>(iv) 2x² - x + 1/8 = 0</b><br>समीकरण को 8 से गुणा करने पर: 16x² - 8x + 1 = 0<br>16x² - 4x - 4x + 1 = 0<br>4x(4x-1) - 1(4x-1) = 0 => (4x-1)(4x-1) = 0<br><b>मूल: x = 1/4, x = 1/4 (बराबर मूल)</b></p></div>
+                    <div class="step"><p><b>(v) 100x² - 20x + 1 = 0</b><br>100x² - 10x - 10x + 1 = 0<br>10x(10x-1) - 1(10x-1) = 0 => (10x-1)(10x-1) = 0<br><b>मूल: x = 1/10, x = 1/10 (बराबर मूल)</b></p></div>
+                </div>
+                 <div class="explanation"><h4 class="font-semibold">स्पष्टीकरण:</h4><p><b>गुणनखंड विधि (मध्य पद को विभक्त करना):</b> इस विधि में हम दो ऐसी संख्याएँ खोजते हैं जिनका योग मध्य पद (b) के बराबर हो और जिनका गुणनफल पहले और तीसरे पद (a×c) के गुणनफल के बराबर हो। फिर मध्य पद को इन दो संख्याओं में तोड़कर गुणनखंड ज्ञात करते हैं और प्रत्येक गुणनखंड को शून्य के बराबर रखकर मूल ज्ञात करते हैं।</p></div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: उदाहरण 1 में दी गई समस्याओं को हल कीजिए।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p><b>(i) जॉन और जीवंती (कंचे वाली समस्या)</b><br>समीकरण था: x² - 45x + 324 = 0<br>x² - 36x - 9x + 324 = 0<br>x(x-36) - 9(x-36) = 0 => (x-9)(x-36) = 0<br>मूल: x = 9, x = 36।<br><b>अतः, यदि जॉन के पास 9 कंचे थे, तो जीवंती के पास 36 थे, या यदि जॉन के पास 36 थे, तो जीवंती के पास 9 थे।</b></p></div>
+                    <div class="step"><p><b>(ii) कुटीर उद्योग (खिलौने वाली समस्या)</b><br>समीकरण था: x² - 55x + 750 = 0<br>x² - 30x - 25x + 750 = 0<br>x(x-30) - 25(x-30) = 0 => (x-25)(x-30) = 0<br>मूल: x = 25, x = 30।<br><b>अतः, उस दिन निर्माण किए गए खिलौनों की संख्या या तो 25 थी या 30 थी।</b></p></div>
+                 </div>
+                 <div class="explanation"><h4 class="font-semibold">स्पष्टीकरण:</h4><p>उदाहरण 1 में बनाई गई द्विघात समीकरणों को यहाँ गुणनखंड विधि का उपयोग करके हल किया गया है ताकि उन समस्याओं का अंतिम उत्तर (कंचों और खिलौनों की संख्या) प्राप्त किया जा सके।</p></div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: ऐसी दो संख्याएँ ज्ञात कीजिए, जिनका योग 27 हो और गुणनफल 182 हो।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>माना पहली संख्या = x। तब दूसरी संख्या = 27 - x।</p></div>
+                    <div class="step"><p>गुणनफल = x(27-x) = 182<br>27x - x² = 182 => x² - 27x + 182 = 0</p></div>
+                    <div class="step"><p>गुणनखंड करने पर:<br>x² - 14x - 13x + 182 = 0<br>x(x-14) - 13(x-14) = 0 => (x-13)(x-14) = 0</p></div>
+                    <div class="step"><p>मूल: x = 13, x = 14।<br><b>अतः, वे दो संख्याएँ 13 और 14 हैं।</b></p></div>
+                 </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: दो क्रमागत धनात्मक पूर्णांक ज्ञात कीजिए जिनके वर्गों का योग 365 हो।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>माना पहला पूर्णांक = x। तब दूसरा पूर्णांक = x + 1।</p></div>
+                    <div class="step"><p>वर्गों का योग = x² + (x+1)² = 365<br>x² + x² + 2x + 1 = 365 => 2x² + 2x - 364 = 0</p></div>
+                    <div class="step"><p>2 से भाग देने पर: x² + x - 182 = 0</p></div>
+                    <div class="step"><p>गुणनखंड करने पर: x² + 14x - 13x - 182 = 0<br>x(x+14) - 13(x+14) = 0 => (x-13)(x+14) = 0</p></div>
+                    <div class="step"><p>मूल: x = 13, x = -14। चूँकि पूर्णांक धनात्मक हैं, हम x = 13 लेंगे।<br><b>अतः, वे दो क्रमागत पूर्णांक 13 और 14 हैं।</b></p></div>
+                 </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक समकोण त्रिभुज की ऊँचाई इसके आधार से 7 cm कम है। यदि कर्ण 13 cm का हो, तो अन्य दो भुजाएँ ज्ञात कीजिए।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>माना आधार = x cm। तब ऊँचाई = x - 7 cm।</p></div>
+                    <div class="step"><p>पाइथागोरस प्रमेय से: (आधार)² + (ऊँचाई)² = (कर्ण)²<br>x² + (x-7)² = 13²</p></div>
+                    <div class="step"><p>x² + x² - 14x + 49 = 169 => 2x² - 14x - 120 = 0</p></div>
+                    <div class="step"><p>2 से भाग देने पर: x² - 7x - 60 = 0</p></div>
+                    <div class="step"><p>गुणनखंड करने पर: x² - 12x + 5x - 60 = 0<br>x(x-12) + 5(x-12) = 0 => (x-12)(x+5) = 0</p></div>
+                    <div class="step"><p>मूल: x = 12, x = -5। भुजा ऋणात्मक नहीं हो सकती, इसलिए x = 12।<br><b>आधार = 12 cm, ऊँचाई = 12 - 7 = 5 cm।</b></p></div>
+                 </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक कुटीर उद्योग एक दिन में कुछ बर्तनों का निर्माण करता है... प्रत्येक नग की निर्माण लागत (₹ में) उस दिन के निर्माण किए बर्तनों की संख्या के दुगुने से 3 अधिक थी। यदि उस दिन की कुल निर्माण लागत ₹ 90 थी, तो निर्मित बर्तनों की संख्या और प्रत्येक नग की लागत ज्ञात कीजिए।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>माना निर्मित बर्तनों की संख्या = x।</p></div>
+                    <div class="step"><p>प्रत्येक नग की लागत = 2x + 3।</p></div>
+                    <div class="step"><p>कुल लागत = (बर्तनों की संख्या) × (प्रत्येक की लागत) = 90<br>x(2x+3) = 90 => 2x² + 3x - 90 = 0</p></div>
+                    <div class="step"><p>गुणनखंड करने पर: 2x² + 15x - 12x - 90 = 0<br>x(2x+15) - 6(2x+15) = 0 => (x-6)(2x+15) = 0</p></div>
+                    <div class="step"><p>मूल: x = 6, x = -15/2। बर्तनों की संख्या ऋणात्मक नहीं हो सकती, इसलिए x = 6।<br><b>निर्मित बर्तनों की संख्या = 6।</b><br><b>प्रत्येक नग की लागत = 2(6) + 3 = ₹ 15।</b></p></div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Prashnavali 4.3 -->
+        <section id="prashnavali-4-3" class="mt-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-purple-600 pb-2">प्रश्नावली 4.3</h2>
+
+             <!-- Question 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्न द्विघात समीकरणों के मूलों की प्रकृति ज्ञात कीजिए। यदि मूलों का अस्तित्व हो तो उन्हें ज्ञात कीजिए।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <p class="mb-2">हम विविक्तकर (Discriminant), D = b² - 4ac का उपयोग करेंगे।</p>
+                    <ul class="list-disc list-inside mb-4">
+                        <li>D > 0: दो भिन्न वास्तविक मूल</li>
+                        <li>D = 0: दो बराबर वास्तविक मूल</li>
+                        <li>D < 0: कोई वास्तविक मूल नहीं (अस्तित्व नहीं)</li>
+                    </ul>
+                    <div class="step"><p><b>(i) 2x² - 3x + 5 = 0</b><br>D = (-3)² - 4(2)(5) = 9 - 40 = -31।<br>चूंकि D < 0, <b>कोई वास्तविक मूल नहीं हैं।</b></p></div>
+                    <div class="step"><p><b>(ii) 3x² - 4√3x + 4 = 0</b><br>D = (-4√3)² - 4(3)(4) = 48 - 48 = 0।<br>चूंकि D = 0, दो बराबर वास्तविक मूल हैं।<br>मूल = -b/2a = -(-4√3) / (2*3) = 4√3 / 6 = <b>2√3 / 3</b>।<br><b>मूल: 2√3/3, 2√3/3</b></p></div>
+                    <div class="step"><p><b>(iii) 2x² - 6x + 3 = 0</b><br>D = (-6)² - 4(2)(3) = 36 - 24 = 12।<br>चूंकि D > 0, दो भिन्न वास्तविक मूल हैं।<br>द्विघाती सूत्र से: x = [-b ± √D] / 2a = [6 ± √12] / 4 = [6 ± 2√3] / 4<br><b>मूल: (3 + √3)/2, (3 - √3)/2</b></p></div>
+                 </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्न प्रत्येक द्विघात समीकरण में k का ऐसा मान ज्ञात कीजिए कि उसके दो बराबर मूल हों।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <p class="mb-2">दो बराबर मूलों के लिए, विविक्तकर (D) शून्य होना चाहिए: <b>b² - 4ac = 0</b>।</p>
+                    <div class="step"><p><b>(i) 2x² + kx + 3 = 0</b><br>D = k² - 4(2)(3) = k² - 24 = 0<br>k² = 24 => k = ±√24 = <b>±2√6</b></p></div>
+                    <div class="step"><p><b>(ii) kx(x-2) + 6 = 0</b><br>समीकरण: kx² - 2kx + 6 = 0।<br>D = (-2k)² - 4(k)(6) = 4k² - 24k = 0<br>4k(k - 6) = 0<br>k = 0 या k = 6। चूंकि k=0 होने पर यह द्विघात समीकरण नहीं रहेगा, अतः <b>k = 6</b>।</p></div>
+                 </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: क्या एक ऐसी आम की बगिया बनाना संभव है जिसकी लंबाई, चौड़ाई से दुगुनी हो और उसका क्षेत्रफल 800 m² हो? यदि है, तो उसकी लंबाई और चौड़ाई ज्ञात कीजिए।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>माना चौड़ाई = x मीटर। तब लंबाई = 2x मीटर।</p></div>
+                    <div class="step"><p>क्षेत्रफल = (2x)(x) = 2x² = 800 => x² = 400 => x = ±20।</p></div>
+                    <div class="step"><p>चूंकि चौड़ाई ऋणात्मक नहीं हो सकती, x = 20।</p></div>
+                    <div class="step"><p>x का वास्तविक मान संभव है, इसलिए <b>हाँ, ऐसी बगिया बनाना संभव है।</b><br><b>चौड़ाई = 20 मीटर, लंबाई = 2 × 20 = 40 मीटर।</b></p></div>
+                 </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: क्या निम्न स्थिति संभव है? यदि है तो उनकी वर्तमान आयु ज्ञात कीजिए। दो मित्रों की आयु का योग 20 वर्ष है। चार वर्ष पूर्व उनकी आयु का गुणनफल 48 था।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>माना एक मित्र की आयु = x वर्ष। दूसरे की आयु = 20 - x वर्ष।</p></div>
+                    <div class="step"><p>4 वर्ष पूर्व: पहले की आयु = x-4, दूसरे की आयु = (20-x)-4 = 16-x।</p></div>
+                    <div class="step"><p>गुणनफल = (x-4)(16-x) = 48<br>16x - x² - 64 + 4x = 48<br>-x² + 20x - 64 = 48 => x² - 20x + 112 = 0।</p></div>
+                    <div class="step"><p>संभावना जाँचने के लिए विविक्तकर (D) निकालें:<br>D = b² - 4ac = (-20)² - 4(1)(112) = 400 - 448 = -48।</p></div>
+                    <div class="step"><p>चूंकि D < 0, समीकरण के कोई वास्तविक मूल नहीं हैं।<br><b>अतः, दी गई स्थिति संभव नहीं है।</b></p></div>
+                 </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: क्या परिमाप 80 m तथा क्षेत्रफल 400 m² के एक पार्क को बनाना संभव है? यदि है, तो उसकी लंबाई और चौड़ाई ज्ञात कीजिए।</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-purple-700">हल:</h4>
+                    <div class="step"><p>परिमाप = 2(लंबाई + चौड़ाई) = 80 => लंबाई + चौड़ाई = 40।</p></div>
+                    <div class="step"><p>माना लंबाई = x मीटर। तब चौड़ाई = 40 - x मीटर।</p></div>
+                    <div class="step"><p>क्षेत्रफल = लंबाई × चौड़ाई = x(40-x) = 400<br>40x - x² = 400 => x² - 40x + 400 = 0।</p></div>
+                    <div class="step"><p>विविक्तकर (D) = (-40)² - 4(1)(400) = 1600 - 1600 = 0।</p></div>
+                    <div class="step"><p>चूंकि D = 0, वास्तविक और बराबर मूल संभव हैं।<br><b>अतः, ऐसा पार्क बनाना संभव है।</b><br>मूल = -b/2a = -(-40)/(2*1) = 20।<br><b>लंबाई = 20 मीटर, चौड़ाई = 40 - 20 = 20 मीटर।</b> (यह एक वर्गाकार पार्क होगा)।</p></div>
+                 </div>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+</html>
+

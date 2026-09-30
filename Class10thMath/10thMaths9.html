@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 9: त्रिकोणमिति के कुछ अनुप्रयोग</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 9<br>त्रिकोणमिति के कुछ अनुप्रयोग</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 9.1 ==================== -->
+        <section id="exercise-9-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 9.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: सर्कस का एक कलाकार एक 20 m लंबी डोर पर चढ़ रहा है जो अच्छी तरह से तनी हुई है और भूमि पर सीधे लगे खंभे के शिखर से बंधा हुआ है। यदि भूमि स्तर के साथ डोर द्वारा बनाया गया कोण 30° का हो तो खंभे की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए खंभे की ऊँचाई AB = h m है।</p>
+                    <p class="mb-2">डोर की लंबाई AC = 20 m और ∠ACB = 30° है।</p>
+                    <p class="mb-2">समकोण ΔABC में,</p>
+                    <p class="mb-2">sin 30° = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">h</span><span class="denominator">20</span></div></p>
+                    <p class="mb-2">h = 10 m</p>
+                    <p><strong>उत्तर:</strong> खंभे की ऊँचाई 10 m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> sin 30° = 1/2 का उपयोग करके, h/20 = 1/2, अतः h = 10 m।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आँधी आने से एक पेड़ टूट जाता है और टूटा हुआ भाग इस तरह मुड़ जाता है कि पेड़ का शिखर जमीन को छूने लगता है और इसके साथ 30° का कोण बनाता है। पेड़ के पाद-बिंदु की दूरी, जहाँ पेड़ का शिखर जमीन को छूता है, 8 m है। पेड़ की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए पेड़ का टूटा हुआ भाग AC = x m और खड़ा भाग AB = y m है।</p>
+                    <p class="mb-2">जमीन पर दूरी BC = 8 m और ∠ACB = 30° है।</p>
+                    <p class="mb-2">समकोण ΔABC में,</p>
+                    <p class="mb-2">cos 30° = <div class="fraction"><span class="numerator">BC</span><span class="denominator">AC</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">8</span><span class="denominator">x</span></div> ⇒ x = <div class="fraction"><span class="numerator">16</span><span class="denominator">√3</span></div> m</p>
+                    <p class="mb-2">tan 30° = <div class="fraction"><span class="numerator">AB</span><span class="denominator">BC</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div> = <div class="fraction"><span class="numerator">y</span><span class="denominator">8</span></div> ⇒ y = <div class="fraction"><span class="numerator">8</span><span class="denominator">√3</span></div> m</p>
+                    <p class="mb-2">पेड़ की कुल ऊँचाई = x + y = <div class="fraction"><span class="numerator">16</span><span class="denominator">√3</span></div> + <div class="fraction"><span class="numerator">8</span><span class="denominator">√3</span></div> = <div class="fraction"><span class="numerator">24</span><span class="denominator">√3</span></div> = 8√3 m</p>
+                    <p><strong>उत्तर:</strong> पेड़ की ऊँचाई 8√3 m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> cos 30° से टूटे भाग की लंबाई और tan 30° से खड़े भाग की लंबाई निकालकर जोड़ दी।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक ठेकेदार बच्चों को खेलने के लिए एक पार्क में दो फिसलनपट्टी लगाना चाहती है। 5 वर्ष से कम उम्र के बच्चों के लिए वह एक ऐसी फिसलनपट्टी लगाना चाहती है जिसका शिखर 1.5 m की ऊँचाई पर हो और भूमि के साथ 30° के कोण पर झुका हुआ हो, जबकि इससे अधिक उम्र के बच्चों के लिए वह 3m की ऊँचाई पर एक अधिक ढाल की फिसलनपट्टी लगाना चाहती है, जो भूमि के साथ 60° का कोण बनाती हो। प्रत्येक स्थिति में फिसलनपट्टी की लंबाई क्या होनी चाहिए?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>5 वर्ष से कम उम्र के लिए:</strong></p>
+                    <p class="mb-2">ऊँचाई h₁ = 1.5 m, कोण θ₁ = 30°</p>
+                    <p class="mb-2">लंबाई L₁ = <div class="fraction"><span class="numerator">h₁</span><span class="denominator">sin 30°</span></div> = <div class="fraction"><span class="numerator">1.5</span><span class="denominator">1/2</span></div> = 3 m</p>
+                    <p class="mb-2"><strong>अधिक उम्र के लिए:</strong></p>
+                    <p class="mb-2">ऊँचाई h₂ = 3 m, कोण θ₂ = 60°</p>
+                    <p class="mb-2">लंबाई L₂ = <div class="fraction"><span class="numerator">h₂</span><span class="denominator">sin 60°</span></div> = <div class="fraction"><span class="numerator">3</span><span class="denominator">√3/2</span></div> = <div class="fraction"><span class="numerator">6</span><span class="denominator">√3</span></div> = 2√3 m</p>
+                    <p><strong>उत्तर:</strong> 5 वर्ष से कम के लिए 3 m, अधिक के लिए 2√3 m।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों स्थितियों में sin का उपयोग करके लंबाई निकाली।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: भूमि के एक बिंदु से, जो मीनार के पाद-बिंदु से 30 m की दूरी पर है, मीनार के शिखर का उन्नयन कोण 30° है। मीनार की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए मीनार की ऊँचाई AB = h m है।</p>
+                    <p class="mb-2">दूरी BC = 30 m और ∠ACB = 30° है।</p>
+                    <p class="mb-2">tan 30° = <div class="fraction"><span class="numerator">AB</span><span class="denominator">BC</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div> = <div class="fraction"><span class="numerator">h</span><span class="denominator">30</span></div></p>
+                    <p class="mb-2">h = <div class="fraction"><span class="numerator">30</span><span class="denominator">√3</span></div> = 10√3 m</p>
+                    <p><strong>उत्तर:</strong> मीनार की ऊँचाई 10√3 m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> tan 30° = 1/√3 का उपयोग किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: भूमि से 60 m की ऊँचाई पर एक पतंग उड़ रही है। पतंग में लगी डोरी को अस्थायी रूप से भूमि के एक बिंदु से बांध दिया गया है। भूमि के साथ डोरी का झुकाव 60° है। यह मानकर कि डोरी में कोई ढील नहीं है, डोरी की लंबाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">पतंग की ऊँचाई AB = 60 m, कोण ∠ACB = 60°</p>
+                    <p class="mb-2">sin 60° = <div class="fraction"><span class="numerator">AB</span><span class="denominator">AC</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">60</span><span class="denominator">AC</span></div></p>
+                    <p class="mb-2">AC = <div class="fraction"><span class="numerator">120</span><span class="denominator">√3</span></div> = 40√3 m</p>
+                    <p><strong>उत्तर:</strong> डोरी की लंबाई 40√3 m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> sin 60° = √3/2 का उपयोग करके डोरी की लंबाई निकाली।
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: 1.5 m लंबा एक लड़का 30 m ऊँचे एक भवन से कुछ दूरी पर खड़ा है। जब वह ऊँचे भवन की ओर जाता है तब उसकी आँख से भवन के शिखर का उन्नयन कोण 30° से 60° हो जाता है। बताइए कि वह भवन की ओर कितनी दूरी तक चलकर गया है।</h3>
+                <div class="step">
+                    <p class="mb-2">लड़के की ऊँचाई = 1.5 m, भवन की ऊँचाई = 30 m</p>
+                    <p class="mb-2">आँख से भवन के शिखर तक ऊँचाई = 30 − 1.5 = 28.5 m</p>
+                    <p class="mb-2">मान लीजिए प्रारंभिक दूरी x m और अंतिम दूरी y m है।</p>
+                    <p class="mb-2">tan 30° = <div class="fraction"><span class="numerator">28.5</span><span class="denominator">x</span></div> ⇒ x = 28.5√3 m</p>
+                    <p class="mb-2">tan 60° = <div class="fraction"><span class="numerator">28.5</span><span class="denominator">y</span></div> ⇒ y = <div class="fraction"><span class="numerator">28.5</span><span class="denominator">√3</span></div> m</p>
+                    <p class="mb-2">चली गई दूरी = x − y = 28.5√3 − <div class="fraction"><span class="numerator">28.5</span><span class="denominator">√3</span></div> = 28.5(<div class="fraction"><span class="numerator">3 − 1</span><span class="denominator">√3</span></div>) = <div class="fraction"><span class="numerator">57</span><span class="denominator">√3</span></div> = 19√3 m</p>
+                    <p><strong>उत्तर:</strong> 19√3 m</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों कोणों के लिए tan का उपयोग करके दूरी निकाली और अंतर किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: भूमि के एक बिंदु से एक 20 m ऊँचे भवन के शिखर पर लगी एक संचार मीनार के तल और शिखर के उन्नयन कोण क्रमशः 45° और 60° है। मीनार की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">भवन की ऊँचाई = 20 m, तल का उन्नयन कोण = 45°, शिखर का = 60°</p>
+                    <p class="mb-2">मान लीजिए भूमि पर बिंदु से भवन की दूरी d है।</p>
+                    <p class="mb-2">tan 45° = <div class="fraction"><span class="numerator">20</span><span class="denominator">d</span></div> ⇒ d = 20 m</p>
+                    <p class="mb-2">मान लीजिए मीनार की ऊँचाई h है, तो कुल ऊँचाई = 20 + h</p>
+                    <p class="mb-2">tan 60° = <div class="fraction"><span class="numerator">20 + h</span><span class="denominator">20</span></div> ⇒ √3 = <div class="fraction"><span class="numerator">20 + h</span><span class="denominator">20</span></div></p>
+                    <p class="mb-2">20√3 = 20 + h ⇒ h = 20(√3 − 1) m</p>
+                    <p><strong>उत्तर:</strong> मीनार की ऊँचाई 20(√3 − 1) m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> पहले 45° से दूरी निकाली, फिर 60° से मीनार की ऊँचाई।
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक पेडस्टल के शिखर पर एक 1.6 m ऊँची मूर्ति लगी है। भूमि के एक बिंदु से मूर्ति के शिखर का उन्नयन कोण 60° है और उसी बिंदु से पेडस्टल के शिखर का उन्नयन कोण 45° है। पेडस्टल की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मूर्ति की ऊँचाई = 1.6 m, मान लीजिए पेडस्टल की ऊँचाई h m है।</p>
+                    <p class="mb-2">भूमि पर बिंदु से दूरी d है।</p>
+                    <p class="mb-2">tan 45° = <div class="fraction"><span class="numerator">h</span><span class="denominator">d</span></div> ⇒ d = h</p>
+                    <p class="mb-2">tan 60° = <div class="fraction"><span class="numerator">h + 1.6</span><span class="denominator">d</span></div> ⇒ √3 = <div class="fraction"><span class="numerator">h + 1.6</span><span class="denominator">h</span></div></p>
+                    <p class="mb-2">h√3 = h + 1.6 ⇒ h(√3 − 1) = 1.6</p>
+                    <p class="mb-2">h = <div class="fraction"><span class="numerator">1.6</span><span class="denominator">√3 − 1</span></div> = <div class="fraction"><span class="numerator">1.6(√3 + 1)</span><span class="denominator">3 − 1</span></div> = 0.8(√3 + 1) m</p>
+                    <p><strong>उत्तर:</strong> पेडस्टल की ऊँचाई 0.8(√3 + 1) m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों कोणों के लिए tan का उपयोग करके समीकरण बनाए और हल किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक मीनार के पाद-बिंदु से एक भवन के शिखर का उन्नयन कोण 30° है और भवन के पाद-बिंदु से मीनार के शिखर का उन्नयन कोण 60° है। यदि मीनार 50 m ऊँची हो, तो भवन की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मीनार की ऊँचाई = 50 m, मान लीजिए भवन की ऊँचाई h m है।</p>
+                    <p class="mb-2">दोनों के बीच की दूरी d है।</p>
+                    <p class="mb-2">मीनार के पाद से भवन के शिखर का कोण 30°:</p>
+                    <p class="mb-2">tan 30° = <div class="fraction"><span class="numerator">h</span><span class="denominator">d</span></div> ⇒ d = h√3 ...(1)</p>
+                    <p class="mb-2">भवन के पाद से मीनार के शिखर का कोण 60°:</p>
+                    <p class="mb-2">tan 60° = <div class="fraction"><span class="numerator">50</span><span class="denominator">d</span></div> ⇒ d = <div class="fraction"><span class="numerator">50</span><span class="denominator">√3</span></div> ...(2)</p>
+                    <p class="mb-2">(1) और (2) से: h√3 = <div class="fraction"><span class="numerator">50</span><span class="denominator">√3</span></div> ⇒ h = <div class="fraction"><span class="numerator">50</span><span class="denominator">3</span></div> m</p>
+                    <p><strong>उत्तर:</strong> भवन की ऊँचाई <div class="fraction"><span class="numerator">50</span><span class="denominator">3</span></div> m ≈ 16.67 m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों स्थितियों में tan का उपयोग करके दूरी को बराबर किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक 80 m चौड़ी सड़क के दोनों ओर आमने-सामने समान लंबाई वाले दो खंभे लगे हुए हैं। इन दोनों खंभों के बीच सड़क के एक बिंदु से खंभों के शिखर के उन्नयन कोण क्रमशः 60° और 30° है। खंभों की ऊँचाई और खंभों से बिंदु की दूरी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए दोनों खंभों की ऊँचाई h है।</p>
+                    <p class="mb-2">सड़क की चौड़ाई = 80 m। मान लीजिए बिंदु से एक खंभे की दूरी x है, तो दूसरे से (80 − x) m।</p>
+                    <p class="mb-2">पहले खंभे के लिए: tan 60° = <div class="fraction"><span class="numerator">h</span><span class="denominator">x</span></div> ⇒ x = <div class="fraction"><span class="numerator">h</span><span class="denominator">√3</span></div> ...(1)</p>
+                    <p class="mb-2">दूसरे खंभे के लिए: tan 30° = <div class="fraction"><span class="numerator">h</span><span class="denominator">80 − x</span></div> ⇒ 80 − x = h√3 ...(2)</p>
+                    <p class="mb-2">(1) को (2) में रखें: 80 − <div class="fraction"><span class="numerator">h</span><span class="denominator">√3</span></div> = h√3 ⇒ 80 = h(<div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div> + √3) = h(<div class="fraction"><span class="numerator">4</span><span class="denominator">√3</span></div>)</p>
+                    <p class="mb-2">h = <div class="fraction"><span class="numerator">80√3</span><span class="denominator">4</span></div> = 20√3 m</p>
+                    <p class="mb-2">x = <div class="fraction"><span class="numerator">20√3</span><span class="denominator">√3</span></div> = 20 m, तो दूसरी दूरी = 80 − 20 = 60 m</p>
+                    <p><strong>उत्तर:</strong> खंभों की ऊँचाई 20√3 m; दूरियाँ 20 m और 60 m।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों खंभों के लिए tan के समीकरण बनाए और हल किए।
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: एक नहर के एक तट पर एक टीवी टॉवर ऊर्ध्वाधरतः खड़ा है। टॉवर के ठीक सामने दूसरे तट के एक अन्य बिंदु से टॉवर के शिखर का उन्नयन कोण 60° है। इसी तट पर इस बिंदु से 20 m दूर और इस बिंदु को मीनार के पाद से मिलाने वाली रेखा पर स्थित एक अन्य बिंदु से टॉवर के शिखर का उन्नयन कोण 30° है। टॉवर की ऊँचाई और नहर की चौड़ाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए टॉवर की ऊँचाई h m और नहर की चौड़ाई x m है।</p>
+                    <p class="mb-2">पहले बिंदु से: tan 60° = <div class="fraction"><span class="numerator">h</span><span class="denominator">x</span></div> ⇒ h = x√3 ...(1)</p>
+                    <p class="mb-2">दूसरे बिंदु (20 m दूर) से: tan 30° = <div class="fraction"><span class="numerator">h</span><span class="denominator">x + 20</span></div> ⇒ <div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div> = <div class="fraction"><span class="numerator">h</span><span class="denominator">x + 20</span></div> ⇒ x + 20 = h√3 ...(2)</p>
+                    <p class="mb-2">(1) से h = x√3, (2) में रखें: x + 20 = (x√3)√3 = 3x</p>
+                    <p class="mb-2">2x = 20 ⇒ x = 10 m</p>
+                    <p class="mb-2">h = 10√3 m</p>
+                    <p><strong>उत्तर:</strong> टॉवर की ऊँचाई 10√3 m, नहर की चौड़ाई 10 m।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों कोणों के लिए tan के समीकरण बनाए और हल किए।
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: 7 m ऊँचे भवन के शिखर से एक केबल टॉवर के शिखर का उन्नयन कोण 60° है और इसके पाद का अवनमन कोण 45° है। टॉवर की ऊँचाई ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">भवन की ऊँचाई = 7 m, मान लीजिए टॉवर की ऊँचाई H m है।</p>
+                    <p class="mb-2">भवन और टॉवर के बीच की दूरी d है।</p>
+                    <p class="mb-2">अवनमन कोण 45°: tan 45° = <div class="fraction"><span class="numerator">7</span><span class="denominator">d</span></div> ⇒ d = 7 m</p>
+                    <p class="mb-2">उन्नयन कोण 60°: tan 60° = <div class="fraction"><span class="numerator">H − 7</span><span class="denominator">d</span></div> ⇒ √3 = <div class="fraction"><span class="numerator">H − 7</span><span class="denominator">7</span></div></p>
+                    <p class="mb-2">H − 7 = 7√3 ⇒ H = 7(√3 + 1) m</p>
+                    <p><strong>उत्तर:</strong> टॉवर की ऊँचाई 7(√3 + 1) m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> पहले अवनमन कोण से दूरी निकाली, फिर उन्नयन कोण से टॉवर की ऊँचाई।
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: समुद्र-तल से 75 m ऊँची लाइट हाउस के शिखर से देखने पर दो समुद्री जहाजों के अवनमन कोण 30° और 45° हैं। यदि लाइट हाउस के एक ही ओर एक जहाज दूसरे जहाज के ठीक पीछे हो तो दो जहाजों के बीच की दूरी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">लाइट हाउस की ऊँचाई = 75 m।</p>
+                    <p class="mb-2">मान लीजिए पहले जहाज की दूरी x (45° के लिए) और दूसरे की y (30° के लिए) है।</p>
+                    <p class="mb-2">tan 45° = <div class="fraction"><span class="numerator">75</span><span class="denominator">x</span></div> ⇒ x = 75 m</p>
+                    <p class="mb-2">tan 30° = <div class="fraction"><span class="numerator">75</span><span class="denominator">y</span></div> ⇒ y = 75√3 m</p>
+                    <p class="mb-2">दूरी = y − x = 75√3 − 75 = 75(√3 − 1) m</p>
+                    <p><strong>उत्तर:</strong> दो जहाजों के बीच की दूरी 75(√3 − 1) m है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों अवनमन कोणों के लिए tan का उपयोग करके दूरियाँ निकालीं और अंतर किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: 1.2 m लंबी एक लड़की भूमि से 88.2 m की ऊँचाई पर एक क्षैतिज रेखा में हवा में उड़ रहे गुब्बारे को देखती है। किसी भी क्षण लड़की की आँख से गुब्बारे का उन्नयन कोण 60° है। कुछ समय बाद उन्नयन कोण घटकर 30° हो जाता है। इस अंतराल के दौरान गुब्बारे द्वारा तय की गई दूरी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">लड़की की ऊँचाई = 1.2 m, गुब्बारे की ऊँचाई = 88.2 m</p>
+                    <p class="mb-2">आँख से गुब्बारे तक ऊँचाई = 88.2 − 1.2 = 87 m</p>
+                    <p class="mb-2">प्रारंभिक कोण 60°: tan 60° = <div class="fraction"><span class="numerator">87</span><span class="denominator">x</span></div> ⇒ x = <div class="fraction"><span class="numerator">87</span><span class="denominator">√3</span></div> = 29√3 m</p>
+                    <p class="mb-2">अंतिम कोण 30°: tan 30° = <div class="fraction"><span class="numerator">87</span><span class="denominator">y</span></div> ⇒ y = 87√3 m</p>
+                    <p class="mb-2">तय की गई दूरी = y − x = 87√3 − 29√3 = 58√3 m</p>
+                    <p><strong>उत्तर:</strong> 58√3 m</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों कोणों के लिए क्षैतिज दूरी निकाली और अंतर किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: एक सीधा राजमार्ग एक मीनार के पाद तक जाता है। मीनार के शिखर पर खड़ा एक आदमी एक कार को 30° के अवनमन कोण पर देखता है जो कि मीनार के पाद की ओर एक समान चाल से जाता है। छः सेकंड बाद कार का अवनमन कोण 60° हो गया। इस बिंदु से मीनार के पाद तक पहुँचने में कार द्वारा लिया गया समय ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए मीनार की ऊँचाई h है।</p>
+                    <p class="mb-2">प्रारंभ में कार की दूरी x (30° के लिए) और 6 सेकंड बाद दूरी y (60° के लिए) है।</p>
+                    <p class="mb-2">tan 30° = <div class="fraction"><span class="numerator">h</span><span class="denominator">x</span></div> ⇒ x = h√3</p>
+                    <p class="mb-2">tan 60° = <div class="fraction"><span class="numerator">h</span><span class="denominator">y</span></div> ⇒ y = <div class="fraction"><span class="numerator">h</span><span class="denominator">√3</span></div></p>
+                    <p class="mb-2">6 सेकंड में तय दूरी = x − y = h√3 − <div class="fraction"><span class="numerator">h</span><span class="denominator">√3</span></div> = <div class="fraction"><span class="numerator">2h</span><span class="denominator">√3</span></div></p>
+                    <p class="mb-2">कार की चाल = <div class="fraction"><span class="numerator">2h/√3</span><span class="denominator">6</span></div> = <div class="fraction"><span class="numerator">h</span><span class="denominator">3√3</span></div> प्रति सेकंड</p>
+                    <p class="mb-2">अब शेष दूरी y = <div class="fraction"><span class="numerator">h</span><span class="denominator">√3</span></div> को तय करने में लगा समय = <div class="fraction"><span class="numerator">h/√3</span><span class="denominator">h/(3√3)</span></div> = 3 सेकंड</p>
+                    <p><strong>उत्तर:</strong> 3 सेकंड</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> पहले 6 सेकंड में तय दूरी से चाल निकाली, फिर शेष दूरी को तय करने का समय निकाला।
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

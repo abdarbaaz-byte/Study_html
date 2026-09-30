@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 10: वृत्त</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 10<br>वृत्त</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 10.1 ==================== -->
+        <section id="exercise-10-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 10.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक वृत्त की कितनी स्पर्श रेखाएँ हो सकती हैं?</h3>
+                <div class="step">
+                    <p class="mb-2">वृत्त के किसी भी बिंदु पर एक और केवल एक स्पर्श रेखा खींची जा सकती है।</p>
+                    <p class="mb-2">चूँकि वृत्त पर अपरिमित (अनंत) बिंदु होते हैं, इसलिए वृत्त की अपरिमित स्पर्श रेखाएँ हो सकती हैं।</p>
+                    <p><strong>उत्तर:</strong> एक वृत्त की अपरिमित (अनंत) स्पर्श रेखाएँ हो सकती हैं।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> वृत्त के प्रत्येक बिंदु पर एक स्पर्श रेखा होती है। वृत्त पर अनंत बिंदु होते हैं, अतः अनंत स्पर्श रेखाएँ संभव हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: रिक्त स्थानों की पूर्ति कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) किसी वृत्त की स्पर्श रेखा उसे <strong>एक</strong> बिंदु पर प्रतिच्छेद करती है।</p>
+                    <p class="mb-2">(ii) वृत्त को दो बिंदुओं पर प्रतिच्छेद करने वाली रेखा को <strong>छेदक रेखा</strong> कहते हैं।</p>
+                    <p class="mb-2">(iii) एक वृत्त की <strong>दो</strong> समांतर स्पर्श रेखाएँ हो सकती हैं।</p>
+                    <p class="mb-2">(iv) वृत्त तथा उसकी स्पर्श रेखा के उभयनिष्ठ बिंदु को <strong>स्पर्श बिंदु</strong> कहते हैं।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> स्पर्श रेखा की परिभाषा के अनुसार वह वृत्त को केवल एक बिंदु पर मिलती है। छेदक रेखा दो बिंदुओं पर मिलती है। एक वृत्त की अधिकतम दो समांतर स्पर्श रेखाएँ हो सकती हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: 5 सेमी त्रिज्या वाले एक वृत्त के बिंदु P पर स्पर्श रेखा PQ केंद्र O से जाने वाली एक रेखा से बिंदु Q पर इस प्रकार मिलती है कि OQ = 12 सेमी। PQ की लंबाई है:</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: OP = 5 सेमी (त्रिज्या), OQ = 12 सेमी</p>
+                    <p class="mb-2">प्रमेय 10.1 के अनुसार, स्पर्श रेखा स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब होती है।</p>
+                    <p class="mb-2">अतः ∠OPQ = 90°</p>
+                    <p class="mb-2">समकोण ΔOPQ में, पाइथागोरस प्रमेय से:</p>
+                    <p class="mb-2">OQ² = OP² + PQ²</p>
+                    <p class="mb-2">(12)² = (5)² + PQ²</p>
+                    <p class="mb-2">144 = 25 + PQ²</p>
+                    <p class="mb-2">PQ² = 144 − 25 = 119</p>
+                    <p class="mb-2">PQ = √119 सेमी</p>
+                    <p><strong>उत्तर:</strong> (D) √119 सेमी</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> स्पर्श रेखा त्रिज्या पर लंब होती है, अतः समकोण त्रिभुज बनता है। पाइथागोरस प्रमेय से PQ = √119 सेमी।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक वृत्त खींचिए और एक दी गई रेखा के समांतर दो ऐसी रेखाएँ खींचिए कि उनमें से एक स्पर्श रेखा हो तथा दूसरी छेदक रेखा हो।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>रचना के चरण:</strong></p>
+                    <p class="mb-2"><strong>चरण 1:</strong> एक वृत्त खींचिए जिसका केंद्र O है।</p>
+                    <p class="mb-2"><strong>चरण 2:</strong> एक रेखा l खींचिए जो वृत्त को दो बिंदुओं A और B पर प्रतिच्छेद करती है (यह छेदक रेखा है)।</p>
+                    <p class="mb-2"><strong>चरण 3:</strong> रेखा l के समांतर एक अन्य रेखा m खींचिए जो वृत्त को केवल एक बिंदु P पर स्पर्श करती है (यह स्पर्श रेखा है)।</p>
+                    <p class="mb-2"><strong>चरण 4:</strong> इस प्रकार हमें एक स्पर्श रेखा और एक छेदक रेखा प्राप्त होती है जो परस्पर समांतर हैं।</p>
+                    <p><strong>उत्तर:</strong> उपरोक्त चरणों का पालन करके रचना पूर्ण कीजिए।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> एक ही दिशा में समांतर रेखाएँ खींचने पर एक वृत्त को दो बिंदुओं पर काटेगी (छेदक) और दूसरी एक बिंदु पर स्पर्श करेगी (स्पर्श रेखा)।
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 10.2 ==================== -->
+        <section id="exercise-10-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 10.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक बिंदु Q से एक वृत्त पर स्पर्श रेखा की लंबाई 24 cm तथा Q की केंद्र से दूरी 25 cm है। वृत्त की त्रिज्या है:</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: स्पर्श रेखा की लंबाई = 24 cm, केंद्र से दूरी OQ = 25 cm</p>
+                    <p class="mb-2">मान लीजिए त्रिज्या = r</p>
+                    <p class="mb-2">स्पर्श रेखा त्रिज्या पर लंब होती है, अतः समकोण त्रिभुज बनता है।</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: OQ² = r² + 24²</p>
+                    <p class="mb-2">(25)² = r² + (24)²</p>
+                    <p class="mb-2">625 = r² + 576</p>
+                    <p class="mb-2">r² = 625 − 576 = 49</p>
+                    <p class="mb-2">r = 7 cm</p>
+                    <p><strong>उत्तर:</strong> (A) 7 cm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आकृति 10.11 में, यदि TP, TQ केंद्र O वाले किसी वृत्त पर दो स्पर्श रेखाएँ इस प्रकार हैं कि ∠POQ = 110°, तो ∠PTQ बराबर है:</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: ∠POQ = 110°</p>
+                    <p class="mb-2">स्पर्श रेखा त्रिज्या पर लंब होती है, अतः ∠OPT = ∠OQT = 90°</p>
+                    <p class="mb-2">चतुर्भुज OPTQ में, कोणों का योग = 360°</p>
+                    <p class="mb-2">∠OPT + ∠OQT + ∠POQ + ∠PTQ = 360°</p>
+                    <p class="mb-2">90° + 90° + 110° + ∠PTQ = 360°</p>
+                    <p class="mb-2">290° + ∠PTQ = 360°</p>
+                    <p class="mb-2">∠PTQ = 360° − 290° = 70°</p>
+                    <p><strong>उत्तर:</strong> (B) 70°</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> चतुर्भुज के चारों कोणों का योग 360° होता है। दो कोण 90° हैं और ∠POQ = 110° दिया है, अतः ∠PTQ = 70°।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि एक बिंदु P से O केंद्र वाले किसी वृत्त पर PA, PB स्पर्श रेखाएँ परस्पर 80° के कोण पर झुकी हो, तो ∠POA बराबर है:</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: ∠APB = 80°</p>
+                    <p class="mb-2">प्रमेय 10.2 के अनुसार, बाह्य बिंदु से खींची गई स्पर्श रेखाएँ केंद्र पर समान कोण बनाती हैं।</p>
+                    <p class="mb-2">अतः OP, ∠APB का कोण समद्विभाजक है।</p>
+                    <p class="mb-2">∠APO = <div class="fraction"><span class="numerator">80°</span><span class="denominator">2</span></div> = 40°</p>
+                    <p class="mb-2">समकोण ΔOAP में, ∠OAP = 90°</p>
+                    <p class="mb-2">∠POA = 180° − 90° − 40° = 50°</p>
+                    <p><strong>उत्तर:</strong> (A) 50°</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> OP कोण APB का समद्विभाजक है। त्रिभुज OAP में ∠OAP = 90°, ∠APO = 40°, अतः ∠POA = 50°।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: सिद्ध कीजिए कि किसी वृत्त के किसी व्यास के सिरों पर खींची गई स्पर्श रेखाएँ समांतर होती हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> केंद्र O वाला एक वृत्त, जिसका व्यास AB है। A और B पर स्पर्श रेखाएँ l और m हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> l ∥ m</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">OA त्रिज्या है और l स्पर्श रेखा है।</p>
+                    <p class="mb-2">प्रमेय 10.1 से: OA ⊥ l, अर्थात् ∠OAl = 90°</p>
+                    <p class="mb-2">इसी प्रकार, OB ⊥ m, अर्थात् ∠OBm = 90°</p>
+                    <p class="mb-2">अब, ∠OAl = ∠OBm = 90°</p>
+                    <p class="mb-2">चूँकि AB एक सरल रेखा है, ∠OAl + ∠OBm = 90° + 90° = 180°</p>
+                    <p class="mb-2">ये एकांतर अंतःकोण हैं।</p>
+                    <p class="mb-2">अतः l ∥ m</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> दोनों स्पर्श रेखाएँ व्यास पर लंब हैं। एक ही रेखा पर लंब दो रेखाएँ परस्पर समांतर होती हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: सिद्ध कीजिए कि स्पर्श बिंदु से स्पर्श रेखा पर खींचा गया लंब वृत्त के केंद्र से होकर जाता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> केंद्र O वाला वृत्त, स्पर्श बिंदु P पर स्पर्श रेखा XY।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> OP ⊥ XY, अर्थात् O से P तक की रेखा स्पर्श रेखा पर लंब है।</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">प्रमेय 10.1 के अनुसार, स्पर्श बिंदु से जाने वाली त्रिज्या स्पर्श रेखा पर लंब होती है।</p>
+                    <p class="mb-2">अतः OP ⊥ XY</p>
+                    <p class="mb-2">चूँकि किसी बिंदु से एक रेखा पर केवल एक ही लंब खींचा जा सकता है, अतः स्पर्श बिंदु P से स्पर्श रेखा XY पर खींचा गया लंब OP ही है।</p>
+                    <p class="mb-2">चूँकि OP केंद्र O से जाता है, अतः लंब केंद्र से होकर जाता है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> त्रिज्या स्पर्श रेखा पर लंब होती है और वह केंद्र से गुजरती है। अतः स्पर्श बिंदु से स्पर्श रेखा पर खींचा गया लंब केंद्र से होकर जाता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक बिंदु A से, जो एक वृत्त के केंद्र से 5 cm दूरी पर है, वृत्त पर स्पर्श रेखा की लंबाई 4 cm है। वृत्त की त्रिज्या ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: केंद्र से दूरी OA = 5 cm, स्पर्श रेखा की लंबाई = 4 cm</p>
+                    <p class="mb-2">मान लीजिए त्रिज्या = r</p>
+                    <p class="mb-2">स्पर्श रेखा त्रिज्या पर लंब होती है।</p>
+                    <p class="mb-2">पाइथागोरस प्रमेय से: OA² = r² + 4²</p>
+                    <p class="mb-2">(5)² = r² + (4)²</p>
+                    <p class="mb-2">25 = r² + 16</p>
+                    <p class="mb-2">r² = 25 − 16 = 9</p>
+                    <p class="mb-2">r = 3 cm</p>
+                    <p><strong>उत्तर:</strong> वृत्त की त्रिज्या 3 cm है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: दो संकेंद्रीय वृत्तों की त्रिज्याएँ 5 cm तथा 3 cm हैं। बड़े वृत्त की उस जीवा की लंबाई ज्ञात कीजिए जो छोटे वृत्त को स्पर्श करती हो।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए बड़े वृत्त की त्रिज्या R = 5 cm और छोटे वृत्त की त्रिज्या r = 3 cm है।</p>
+                    <p class="mb-2">बड़े वृत्त की जीवा AB छोटे वृत्त को बिंदु P पर स्पर्श करती है।</p>
+                    <p class="mb-2">चूँकि जीवा छोटे वृत्त की स्पर्श रेखा है, अतः केंद्र O से जीवा की दूरी = छोटे वृत्त की त्रिज्या = 3 cm</p>
+                    <p class="mb-2">अर्थात् OP = 3 cm (जहाँ OP ⊥ AB)</p>
+                    <p class="mb-2">समकोण ΔOPA में: OA² = OP² + AP²</p>
+                    <p class="mb-2">(5)² = (3)² + AP²</p>
+                    <p class="mb-2">25 = 9 + AP²</p>
+                    <p class="mb-2">AP² = 16 ⇒ AP = 4 cm</p>
+                    <p class="mb-2">चूँकि OP जीवा पर लंब है, यह जीवा को समद्विभाजित करता है।</p>
+                    <p class="mb-2">अतः जीवा AB = 2 × AP = 2 × 4 = 8 cm</p>
+                    <p><strong>उत्तर:</strong> जीवा की लंबाई 8 cm है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> जीवा छोटे वृत्त की स्पर्श रेखा है, अतः केंद्र से जीवा की दूरी 3 cm है। पाइथागोरस प्रमेय से आधी जीवा 4 cm, अतः पूरी जीवा 8 cm।
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक वृत्त के परिगत एक चतुर्भुज ABCD खींचा गया है। सिद्ध कीजिए: AB + CD = AD + BC</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> चतुर्भुज ABCD एक वृत्त के परिगत है, जो भुजाओं AB, BC, CD, DA को क्रमशः P, Q, R, S पर स्पर्श करता है।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> AB + CD = AD + BC</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">प्रमेय 10.2 के अनुसार, बाह्य बिंदु से खींची गई स्पर्श रेखाएँ समान होती हैं।</p>
+                    <p class="mb-2">अतः AP = AS ...(1)</p>
+                    <p class="mb-2">BP = BQ ...(2)</p>
+                    <p class="mb-2">CR = CQ ...(3)</p>
+                    <p class="mb-2">DR = DS ...(4)</p>
+                    <p class="mb-2">(1) + (2) + (3) + (4) करने पर:</p>
+                    <p class="mb-2">AP + BP + CR + DR = AS + BQ + CQ + DS</p>
+                    <p class="mb-2">(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)</p>
+                    <p class="mb-2">AB + CD = AD + BC</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> एक ही बाह्य बिंदु से वृत्त पर खींची गई स्पर्श रेखाएँ बराबर होती हैं। चारों शीर्षों के लिए यह नियम लगाकर जोड़ने पर सिद्ध होता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: आकृति 10.13 में XY तथा X'Y', O केंद्र वाले किसी वृत्त पर दो समांतर स्पर्श रेखाएँ हैं और स्पर्श बिंदु C पर स्पर्श रेखा AB, XY को A तथा X'Y' को B पर प्रतिच्छेद करती है। सिद्ध कीजिए कि ∠AOB = 90° है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> XY और X'Y' वृत्त की समांतर स्पर्श रेखाएँ हैं। AB स्पर्श बिंदु C पर स्पर्श रेखा है जो XY को A पर और X'Y' को B पर मिलती है।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ∠AOB = 90°</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">AC और AP, बिंदु A से वृत्त पर स्पर्श रेखाएँ हैं।</p>
+                    <p class="mb-2">अतः ∠OAC = ∠OAP (केंद्र स्पर्श रेखाओं के बीच के कोण का समद्विभाजक होता है)</p>
+                    <p class="mb-2">अर्थात् ∠OAC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> ∠PAC</p>
+                    <p class="mb-2">इसी प्रकार, BC और BQ स्पर्श रेखाएँ हैं।</p>
+                    <p class="mb-2">अतः ∠OBC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> ∠QBC</p>
+                    <p class="mb-2">चूँकि XY ∥ X'Y', अतः ∠PAC + ∠QBC = 180° (एक ही ओर के अंतःकोण)</p>
+                    <p class="mb-2">अतः <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>∠PAC + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>∠QBC = 90°</p>
+                    <p class="mb-2">अर्थात् ∠OAC + ∠OBC = 90°</p>
+                    <p class="mb-2">ΔAOB में, ∠OAB + ∠OBA = 90°</p>
+                    <p class="mb-2">अतः ∠AOB = 180° − 90° = 90°</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> केंद्र स्पर्श रेखाओं के बीच के कोण का समद्विभाजक होता है। समांतर रेखाओं के एक ही ओर के अंतःकोणों का योग 180° होता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: सिद्ध कीजिए कि किसी बाह्य बिंदु से किसी वृत्त पर खींची गई स्पर्श रेखाओं के बीच का कोण स्पर्श बिंदुओं को मिलाने वाले रेखाखंड द्वारा केंद्र पर अंतरित कोण का संपूरक होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> बाह्य बिंदु P से वृत्त पर स्पर्श रेखाएँ PA और PB खींची गई हैं।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ∠APB + ∠AOB = 180°</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">प्रमेय 10.1 के अनुसार, OA ⊥ PA और OB ⊥ PB</p>
+                    <p class="mb-2">अतः ∠OAP = 90° और ∠OBP = 90°</p>
+                    <p class="mb-2">चतुर्भुज OAPB में, कोणों का योग = 360°</p>
+                    <p class="mb-2">∠OAP + ∠APB + ∠OBP + ∠AOB = 360°</p>
+                    <p class="mb-2">90° + ∠APB + 90° + ∠AOB = 360°</p>
+                    <p class="mb-2">∠APB + ∠AOB = 360° − 180° = 180°</p>
+                    <p class="mb-2">अर्थात् ∠APB और ∠AOB संपूरक हैं।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> चतुर्भुज OAPB के चारों कोणों का योग 360° होता है। दो कोण 90° के हैं, अतः शेष दो कोणों का योग 180° होगा।
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: सिद्ध कीजिए कि किसी वृत्त के परिगत समांतर चतुर्भुज समचतुर्भुज होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> समांतर चतुर्भुज ABCD एक वृत्त के परिगत है।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ABCD एक समचतुर्भुज है (AB = BC = CD = DA)</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">प्रश्न 8 के परिणाम से, परिगत चतुर्भुज के लिए:</p>
+                    <p class="mb-2">AB + CD = AD + BC ...(1)</p>
+                    <p class="mb-2">चूँकि ABCD एक समांतर चतुर्भुज है:</p>
+                    <p class="mb-2">AB = CD ...(2)</p>
+                    <p class="mb-2">AD = BC ...(3)</p>
+                    <p class="mb-2">(2) और (3) को (1) में रखने पर:</p>
+                    <p class="mb-2">AB + AB = AD + AD</p>
+                    <p class="mb-2">2AB = 2AD</p>
+                    <p class="mb-2">AB = AD</p>
+                    <p class="mb-2">अतः AB = BC = CD = DA</p>
+                    <p class="mb-2">इसलिए ABCD एक समचतुर्भुज है।</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> परिगत चतुर्भुज में सम्मुख भुजाओं का योग बराबर होता है। समांतर चतुर्भुज में सम्मुख भुजाएँ बराबर होती हैं, अतः सभी भुजाएँ बराबर हो जाती हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: 4 cm त्रिज्या वाले एक वृत्त के परिगत एक त्रिभुज ABC इस प्रकार खींचा गया है कि रेखाखंड BD और DC (जिनमें स्पर्श बिंदु D द्वारा BC विभाजित है) की लंबाइयाँ क्रमशः 8 cm और 6 cm हैं। भुजाएँ AB और AC ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: त्रिज्या r = 4 cm, BD = 8 cm, DC = 6 cm</p>
+                    <p class="mb-2">BC = BD + DC = 8 + 6 = 14 cm</p>
+                    <p class="mb-2">मान लीजिए AF = AE = x (स्पर्श रेखाओं की लंबाइयाँ)</p>
+                    <p class="mb-2">प्रमेय 10.2 से: BF = BD = 8 cm और CE = CD = 6 cm</p>
+                    <p class="mb-2">अतः AB = AF + BF = x + 8</p>
+                    <p class="mb-2">AC = AE + CE = x + 6</p>
+                    <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">AB + BC + AC</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">(x + 8) + 14 + (x + 6)</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">2x + 28</span><span class="denominator">2</span></div> = x + 14</p>
+                    <p class="mb-2">त्रिभुज का क्षेत्रफल = r × s = 4(x + 14)</p>
+                    <p class="mb-2">हीरोन के सूत्र से भी क्षेत्रफल = √[s(s−AB)(s−BC)(s−AC)]</p>
+                    <p class="mb-2">= √[(x+14)(x+14−x−8)(x+14−14)(x+14−x−6)]</p>
+                    <p class="mb-2">= √[(x+14)(6)(x)(8)] = √[48x(x+14)]</p>
+                    <p class="mb-2">अतः 16(x+14)² = 48x(x+14)</p>
+                    <p class="mb-2">16(x+14) = 48x</p>
+                    <p class="mb-2">x + 14 = 3x</p>
+                    <p class="mb-2">14 = 2x ⇒ x = 7</p>
+                    <p class="mb-2">AB = x + 8 = 15 cm</p>
+                    <p class="mb-2">AC = x + 6 = 13 cm</p>
+                    <p><strong>उत्तर:</strong> AB = 15 cm, AC = 13 cm</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> स्पर्श रेखाओं की लंबाइयाँ बराबर होती हैं। अर्ध-परिमाप और क्षेत्रफल के दो तरीकों को बराबर करके x = 7 प्राप्त होता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: सिद्ध कीजिए कि वृत्त के परिगत बनी चतुर्भुज की आमने-सामने की भुजाएँ केंद्र पर संपूरक कोण अंतरित करती हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>दिया है:</strong> चतुर्भुज ABCD एक वृत्त के परिगत है जिसका केंद्र O है।</p>
+                    <p class="mb-2"><strong>सिद्ध करना है:</strong> ∠AOB + ∠COD = 180° और ∠BOC + ∠DOA = 180°</p>
+                    <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                    <p class="mb-2">OA, OB, OC, OD क्रमशः ∠A, ∠B, ∠C, ∠D के समद्विभाजक हैं (क्योंकि केंद्र स्पर्श रेखाओं के बीच के कोण का समद्विभाजक होता है)।</p>
+                    <p class="mb-2">ΔAOB में: ∠AOB = 180° − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>∠A − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>∠B</p>
+                    <p class="mb-2">= 180° − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(∠A + ∠B)</p>
+                    <p class="mb-2">इसी प्रकार, ΔCOD में: ∠COD = 180° − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(∠C + ∠D)</p>
+                    <p class="mb-2">जोड़ने पर:</p>
+                    <p class="mb-2">∠AOB + ∠COD = 360° − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(∠A + ∠B + ∠C + ∠D)</p>
+                    <p class="mb-2">= 360° − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 360° = 360° − 180° = 180°</p>
+                    <p class="mb-2">इसी प्रकार, ∠BOC + ∠DOA = 180°</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> चतुर्भुज के कोणों का योग 360° होता है। केंद्र से जाने वाली रेखाएँ कोणों को समद्विभाजित करती हैं, जिससे आमने-सामने की भुजाओं द्वारा केंद्र पर बने कोण संपूरक हो जाते हैं।
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

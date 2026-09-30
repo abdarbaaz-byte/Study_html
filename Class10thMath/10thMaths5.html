@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 5: समांतर श्रेढियाँ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 5<br>समांतर श्रेढियाँ</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 5.1 ==================== -->
+        <section id="exercise-5-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित स्थितियों में से किन स्थितियों में संबद्ध संख्याओं की सूची A.P. है और क्यों?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ₹ 15 प्रथम किलोमीटर के लिए और ₹ 8 प्रत्येक अतिरिक्त किलोमीटर के लिए</h4>
+                    <div class="step">
+                        <p class="mb-2">पहले किलोमीटर का किराया = ₹ 15</p>
+                        <p class="mb-2">दूसरे किलोमीटर का किराया = 15 + 8 = ₹ 23</p>
+                        <p class="mb-2">तीसरे किलोमीटर का किराया = 23 + 8 = ₹ 31</p>
+                        <p class="mb-2">सूची: 15, 23, 31, ...</p>
+                        <p class="mb-2">सार्व अंतर d = 23 − 15 = 8, 31 − 23 = 8 (नियत)</p>
+                        <p><strong>उत्तर:</strong> हाँ, यह A.P. है क्योंकि सार्व अंतर नियत (8) है।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> प्रत्येक किलोमीटर के बाद ₹ 8 जुड़ते हैं, अतः अंतर नियत है। यह A.P. है।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) एक बेलन में उपस्थित हवा की मात्रा, जबकि वायु निकालने वाला पंप प्रत्येक बार बेलन की शेष हवा का <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> भाग बाहर निकाल देता है</h4>
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए प्रारंभ में हवा = V</p>
+                        <p class="mb-2">पहली बार निकालने के बाद = V − <div class="fraction"><span class="numerator">V</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">3V</span><span class="denominator">4</span></div></p>
+                        <p class="mb-2">दूसरी बार निकालने के बाद = <div class="fraction"><span class="numerator">3V</span><span class="denominator">4</span></div> − <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">3V</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">9V</span><span class="denominator">16</span></div></p>
+                        <p class="mb-2">सूची: V, <div class="fraction"><span class="numerator">3V</span><span class="denominator">4</span></div>, <div class="fraction"><span class="numerator">9V</span><span class="denominator">16</span></div>, ...</p>
+                        <p class="mb-2">अंतर: <div class="fraction"><span class="numerator">3V</span><span class="denominator">4</span></div> − V = −<div class="fraction"><span class="numerator">V</span><span class="denominator">4</span></div> तथा <div class="fraction"><span class="numerator">9V</span><span class="denominator">16</span></div> − <div class="fraction"><span class="numerator">3V</span><span class="denominator">4</span></div> = −<div class="fraction"><span class="numerator">3V</span><span class="denominator">16</span></div></p>
+                        <p><strong>उत्तर:</strong> नहीं, यह A.P. नहीं है क्योंकि अंतर नियत नहीं है।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> प्रत्येक बार शेष हवा का <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> निकलता है, इसलिए घटने की मात्रा बदलती रहती है। अतः यह A.P. नहीं है।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) एक कुँआ खोदने में प्रत्येक मीटर की खुदाई की लागत, जबकि पहले मीटर की लागत ₹ 150 है और बाद में प्रत्येक मीटर की लागत ₹ 50 बढ़ती जाती है</h4>
+                    <div class="step">
+                        <p class="mb-2">पहले मीटर की लागत = ₹ 150</p>
+                        <p class="mb-2">दूसरे मीटर की लागत = 150 + 50 = ₹ 200</p>
+                        <p class="mb-2">तीसरे मीटर की लागत = 200 + 50 = ₹ 250</p>
+                        <p class="mb-2">सूची: 150, 200, 250, ...</p>
+                        <p class="mb-2">सार्व अंतर d = 50 (नियत)</p>
+                        <p><strong>उत्तर:</strong> हाँ, यह A.P. है क्योंकि सार्व अंतर नियत (50) है।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> प्रत्येक मीटर के बाद लागत ₹ 50 बढ़ती है, अतः अंतर नियत है। यह A.P. है।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) ₹ 10000 की राशि 8% वार्षिक चक्रवृद्धि ब्याज पर जमा की जाती है, तो प्रत्येक वर्ष के बाद मिश्रधन</h4>
+                    <div class="step">
+                        <p class="mb-2">प्रारंभिक राशि = ₹ 10000</p>
+                        <p class="mb-2">1 वर्ष बाद = 10000 × (1 + <div class="fraction"><span class="numerator">8</span><span class="denominator">100</span></div>) = ₹ 10800</p>
+                        <p class="mb-2">2 वर्ष बाद = 10800 × 1.08 = ₹ 11664</p>
+                        <p class="mb-2">3 वर्ष बाद = 11664 × 1.08 = ₹ 12597.12</p>
+                        <p class="mb-2">सूची: 10000, 10800, 11664, 12597.12, ...</p>
+                        <p class="mb-2">अंतर: 800, 864, 933.12 (नियत नहीं)</p>
+                        <p><strong>उत्तर:</strong> नहीं, यह A.P. नहीं है क्योंकि अंतर नियत नहीं है।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> चक्रवृद्धि ब्याज में वृद्धि हर वर्ष बदलती है, इसलिए यह A.P. नहीं है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: दी हुई A.P. के प्रथम चार पद लिखिए, जबकि प्रथम पद a और सार्व अंतर d निम्नलिखित हैं:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) a = 10, d = 10</h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = 10</p>
+                        <p class="mb-2">a₂ = a₁ + d = 10 + 10 = 20</p>
+                        <p class="mb-2">a₃ = a₂ + d = 20 + 10 = 30</p>
+                        <p class="mb-2">a₄ = a₃ + d = 30 + 10 = 40</p>
+                        <p><strong>उत्तर:</strong> 10, 20, 30, 40</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) a = −2, d = 0</h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = −2</p>
+                        <p class="mb-2">a₂ = −2 + 0 = −2</p>
+                        <p class="mb-2">a₃ = −2 + 0 = −2</p>
+                        <p class="mb-2">a₄ = −2 + 0 = −2</p>
+                        <p><strong>उत्तर:</strong> −2, −2, −2, −2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) a = 4, d = −3</h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = 4</p>
+                        <p class="mb-2">a₂ = 4 + (−3) = 1</p>
+                        <p class="mb-2">a₃ = 1 + (−3) = −2</p>
+                        <p class="mb-2">a₄ = −2 + (−3) = −5</p>
+                        <p><strong>उत्तर:</strong> 4, 1, −2, −5</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) a = −1, d = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = −1</p>
+                        <p class="mb-2">a₂ = −1 + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">a₃ = −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = 0</p>
+                        <p class="mb-2">a₄ = 0 + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p><strong>उत्तर:</strong> −1, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, 0, <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) a = −1.25, d = −0.25</h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = −1.25</p>
+                        <p class="mb-2">a₂ = −1.25 + (−0.25) = −1.50</p>
+                        <p class="mb-2">a₃ = −1.50 + (−0.25) = −1.75</p>
+                        <p class="mb-2">a₄ = −1.75 + (−0.25) = −2.00</p>
+                        <p><strong>उत्तर:</strong> −1.25, −1.50, −1.75, −2.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्नलिखित में से प्रत्येक A.P. के लिए प्रथम पद तथा सार्व अंतर लिखिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 3, 1, −1, −3, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">प्रथम पद a = 3</p>
+                        <p class="mb-2">सार्व अंतर d = 1 − 3 = −2</p>
+                        <p><strong>उत्तर:</strong> a = 3, d = −2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) −5, −1, 3, 7, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">प्रथम पद a = −5</p>
+                        <p class="mb-2">सार्व अंतर d = −1 − (−5) = −1 + 5 = 4</p>
+                        <p><strong>उत्तर:</strong> a = −5, d = 4</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>, <div class="fraction"><span class="numerator">5</span><span class="denominator">3</span></div>, <div class="fraction"><span class="numerator">9</span><span class="denominator">3</span></div>, <div class="fraction"><span class="numerator">13</span><span class="denominator">3</span></div>, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">प्रथम पद a = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div></p>
+                        <p class="mb-2">सार्व अंतर d = <div class="fraction"><span class="numerator">5</span><span class="denominator">3</span></div> − <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div></p>
+                        <p><strong>उत्तर:</strong> a = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div>, d = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) 0.6, 1.7, 2.8, 3.9, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">प्रथम पद a = 0.6</p>
+                        <p class="mb-2">सार्व अंतर d = 1.7 − 0.6 = 1.1</p>
+                        <p><strong>उत्तर:</strong> a = 0.6, d = 1.1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्नलिखित में से कौन-कौन A.P. हैं? यदि कोई A.P. है, तो इसका सार्व अंतर ज्ञात कीजिए और इनके तीन और पद लिखिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 2, 4, 8, 16, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d₁ = 4 − 2 = 2, d₂ = 8 − 4 = 4, d₃ = 16 − 8 = 8</p>
+                        <p class="mb-2">अंतर नियत नहीं है।</p>
+                        <p><strong>उत्तर:</strong> A.P. नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 2, <div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div>, 3, <div class="fraction"><span class="numerator">7</span><span class="denominator">2</span></div>, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d₁ = <div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div> − 2 = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">d₂ = 3 − <div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">d₃ = <div class="fraction"><span class="numerator">7</span><span class="denominator">2</span></div> − 3 = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">अंतर नियत है। a = 2, d = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">अगले तीन पद: <div class="fraction"><span class="numerator">7</span><span class="denominator">2</span></div> + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = 4, 4 + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div>, <div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div> + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> = 5</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>; अगले पद: 4, <div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div>, 5</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) −1.2, −3.2, −5.2, −7.2, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d = −3.2 − (−1.2) = −3.2 + 1.2 = −2</p>
+                        <p class="mb-2">d = −5.2 − (−3.2) = −2 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: −7.2 + (−2) = −9.2, −11.2, −13.2</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = −2; अगले पद: −9.2, −11.2, −13.2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) −10, −6, −2, 2, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d = −6 − (−10) = 4, −2 − (−6) = 4, 2 − (−2) = 4 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: 2 + 4 = 6, 6 + 4 = 10, 10 + 4 = 14</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = 4; अगले पद: 6, 10, 14</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) 3, 3 + √2, 3 + 2√2, 3 + 3√2, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d = (3 + √2) − 3 = √2</p>
+                        <p class="mb-2">d = (3 + 2√2) − (3 + √2) = √2 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: 3 + 4√2, 3 + 5√2, 3 + 6√2</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = √2; अगले पद: 3 + 4√2, 3 + 5√2, 3 + 6√2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vi) 0.2, 0.22, 0.222, 0.2222, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d₁ = 0.22 − 0.2 = 0.02</p>
+                        <p class="mb-2">d₂ = 0.222 − 0.22 = 0.002</p>
+                        <p class="mb-2">अंतर नियत नहीं है।</p>
+                        <p><strong>उत्तर:</strong> A.P. नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vii) 0, −4, −8, −12, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d = −4 − 0 = −4, −8 − (−4) = −4, −12 − (−8) = −4 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: −16, −20, −24</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = −4; अगले पद: −16, −20, −24</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(viii) −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d = −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> − (−<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>) = 0 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = 0; अगले पद: −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ix) 1, 3, 9, 27, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d₁ = 3 − 1 = 2, d₂ = 9 − 3 = 6, d₃ = 27 − 9 = 18</p>
+                        <p class="mb-2">अंतर नियत नहीं है।</p>
+                        <p><strong>उत्तर:</strong> A.P. नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(x) a, 2a, 3a, 4a, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d = 2a − a = a, 3a − 2a = a, 4a − 3a = a (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: 5a, 6a, 7a</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = a; अगले पद: 5a, 6a, 7a</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(xi) a, a², a³, a⁴, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d₁ = a² − a = a(a − 1)</p>
+                        <p class="mb-2">d₂ = a³ − a² = a²(a − 1)</p>
+                        <p class="mb-2">अंतर नियत नहीं है (सामान्यतः)।</p>
+                        <p><strong>उत्तर:</strong> A.P. नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(xii) √2, √8, √18, √32, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">√2, 2√2, 3√2, 4√2, ...</p>
+                        <p class="mb-2">d = 2√2 − √2 = √2, 3√2 − 2√2 = √2 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: 5√2, 6√2, 7√2</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = √2; अगले पद: 5√2, 6√2, 7√2</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(xiii) √3, √6, √9, √12, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">d₁ = √6 − √3 = √3(√2 − 1)</p>
+                        <p class="mb-2">d₂ = √9 − √6 = 3 − √6</p>
+                        <p class="mb-2">अंतर नियत नहीं है।</p>
+                        <p><strong>उत्तर:</strong> A.P. नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(xiv) 1², 3², 5², 7², ...</h4>
+                    <div class="step">
+                        <p class="mb-2">1, 9, 25, 49, ...</p>
+                        <p class="mb-2">d₁ = 9 − 1 = 8, d₂ = 25 − 9 = 16, d₃ = 49 − 25 = 24</p>
+                        <p class="mb-2">अंतर नियत नहीं है।</p>
+                        <p><strong>उत्तर:</strong> A.P. नहीं है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(xv) 1², 5², 7², 73, ...</h4>
+                    <div class="step">
+                        <p class="mb-2">1, 25, 49, 73, ...</p>
+                        <p class="mb-2">d₁ = 25 − 1 = 24, d₂ = 49 − 25 = 24, d₃ = 73 − 49 = 24 (नियत)</p>
+                        <p class="mb-2">अगले तीन पद: 73 + 24 = 97, 121, 145</p>
+                        <p><strong>उत्तर:</strong> हाँ, A.P. है। d = 24; अगले पद: 97, 121, 145</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.2 ==================== -->
+        <section id="exercise-5-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित सारणी में, रिक्त स्थानों को भरिए, जहाँ A.P. का प्रथम पद a, सार्व अंतर d और nवाँ पद aₙ है:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> a = 7, d = 3, n = 8, aₙ = ?</p>
+                    <p class="mb-2">aₙ = a + (n − 1)d = 7 + (8 − 1) × 3 = 7 + 21 = 28</p>
+                    <p class="mb-2"><strong>(ii)</strong> a = −18, d = ?, n = 10, aₙ = 0</p>
+                    <p class="mb-2">0 = −18 + (10 − 1)d ⇒ 0 = −18 + 9d ⇒ 9d = 18 ⇒ d = 2</p>
+                    <p class="mb-2"><strong>(iii)</strong> a = ?, d = −3, n = 18, aₙ = −5</p>
+                    <p class="mb-2">−5 = a + (18 − 1)(−3) ⇒ −5 = a − 51 ⇒ a = 46</p>
+                    <p class="mb-2"><strong>(iv)</strong> a = −18.9, d = 2.5, n = ?, aₙ = 3.6</p>
+                    <p class="mb-2">3.6 = −18.9 + (n − 1) × 2.5 ⇒ 22.5 = (n − 1) × 2.5 ⇒ n − 1 = 9 ⇒ n = 10</p>
+                    <p class="mb-2"><strong>(v)</strong> a = 3.5, d = 0, n = 105, aₙ = ?</p>
+                    <p class="mb-2">aₙ = 3.5 + (105 − 1) × 0 = 3.5</p>
+                    <p><strong>उत्तर:</strong> (i) 28 (ii) 2 (iii) 46 (iv) 10 (v) 3.5</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित में सही उत्तर चुनिए और उसका औचित्य दीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) A.P.: 10, 7, 4, ... का 30वाँ पद है:</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 10, d = 7 − 10 = −3, n = 30</p>
+                        <p class="mb-2">a₃₀ = 10 + (30 − 1)(−3) = 10 − 87 = −77</p>
+                        <p><strong>उत्तर:</strong> (C) −77</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) A.P.: −3, −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, 2, ... का 11वाँ पद है:</h4>
+                    <div class="step">
+                        <p class="mb-2">a = −3, d = −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> − (−3) = −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> + 3 = <div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">a₁₁ = −3 + (11 − 1)(<div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div>) = −3 + 25 = 22</p>
+                        <p><strong>उत्तर:</strong> (B) 22</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्नलिखित समांतर श्रेढियों में, रिक्त खानों के पदों को ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 2, __, 26</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 2, a₃ = 26</p>
+                        <p class="mb-2">a₃ = a + 2d ⇒ 26 = 2 + 2d ⇒ 2d = 24 ⇒ d = 12</p>
+                        <p class="mb-2">रिक्त पद = a₂ = 2 + 12 = 14</p>
+                        <p><strong>उत्तर:</strong> 14</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) __, 13, __, 3</h4>
+                    <div class="step">
+                        <p class="mb-2">a₂ = 13, a₄ = 3</p>
+                        <p class="mb-2">a + d = 13 ...(1)</p>
+                        <p class="mb-2">a + 3d = 3 ...(2)</p>
+                        <p class="mb-2">(2) − (1): 2d = −10 ⇒ d = −5</p>
+                        <p class="mb-2">a = 13 − d = 13 + 5 = 18</p>
+                        <p class="mb-2">a₃ = a + 2d = 18 − 10 = 8</p>
+                        <p><strong>उत्तर:</strong> 18, 8</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 5, __, __, 9½</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 5, a₄ = 9½ = <div class="fraction"><span class="numerator">19</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">a₄ = a + 3d ⇒ <div class="fraction"><span class="numerator">19</span><span class="denominator">2</span></div> = 5 + 3d ⇒ 3d = <div class="fraction"><span class="numerator">19</span><span class="denominator">2</span></div> − <div class="fraction"><span class="numerator">10</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div> ⇒ d = <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">a₂ = 5 + <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">13</span><span class="denominator">2</span></div> = 6½</p>
+                        <p class="mb-2">a₃ = <div class="fraction"><span class="numerator">13</span><span class="denominator">2</span></div> + <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">16</span><span class="denominator">2</span></div> = 8</p>
+                        <p><strong>उत्तर:</strong> 6½, 8</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) −4, __, __, __, __, 6</h4>
+                    <div class="step">
+                        <p class="mb-2">a = −4, a₆ = 6</p>
+                        <p class="mb-2">a₆ = a + 5d ⇒ 6 = −4 + 5d ⇒ 5d = 10 ⇒ d = 2</p>
+                        <p class="mb-2">a₂ = −4 + 2 = −2</p>
+                        <p class="mb-2">a₃ = −2 + 2 = 0</p>
+                        <p class="mb-2">a₄ = 0 + 2 = 2</p>
+                        <p class="mb-2">a₅ = 2 + 2 = 4</p>
+                        <p><strong>उत्तर:</strong> −2, 0, 2, 4</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) __, 38, __, __, __, −22</h4>
+                    <div class="step">
+                        <p class="mb-2">a₂ = 38, a₆ = −22</p>
+                        <p class="mb-2">a + d = 38 ...(1)</p>
+                        <p class="mb-2">a + 5d = −22 ...(2)</p>
+                        <p class="mb-2">(2) − (1): 4d = −60 ⇒ d = −15</p>
+                        <p class="mb-2">a = 38 − d = 38 + 15 = 53</p>
+                        <p class="mb-2">a₃ = 53 + 2(−15) = 23</p>
+                        <p class="mb-2">a₄ = 53 + 3(−15) = 8</p>
+                        <p class="mb-2">a₅ = 53 + 4(−15) = −7</p>
+                        <p><strong>उत्तर:</strong> 53, 23, 8, −7</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: A.P.: 3, 8, 13, 18, ... का कौन-सा पद 78 है?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 3, d = 8 − 3 = 5</p>
+                    <p class="mb-2">aₙ = 78</p>
+                    <p class="mb-2">78 = 3 + (n − 1) × 5</p>
+                    <p class="mb-2">75 = 5(n − 1)</p>
+                    <p class="mb-2">n − 1 = 15 ⇒ n = 16</p>
+                    <p><strong>उत्तर:</strong> 16वाँ पद</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: निम्नलिखित समांतर श्रेढियों में से प्रत्येक श्रेढी में कितने पद हैं?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 7, 13, 19, ..., 205</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 7, d = 6, aₙ = 205</p>
+                        <p class="mb-2">205 = 7 + (n − 1) × 6</p>
+                        <p class="mb-2">198 = 6(n − 1)</p>
+                        <p class="mb-2">n − 1 = 33 ⇒ n = 34</p>
+                        <p><strong>उत्तर:</strong> 34 पद</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 18, 15½, 13, ..., −47</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 18, d = 15½ − 18 = −2.5, aₙ = −47</p>
+                        <p class="mb-2">−47 = 18 + (n − 1)(−2.5)</p>
+                        <p class="mb-2">−65 = −2.5(n − 1)</p>
+                        <p class="mb-2">n − 1 = 26 ⇒ n = 27</p>
+                        <p><strong>उत्तर:</strong> 27 पद</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: क्या A.P.: 11, 8, 5, 2, ... का कोई पद −150 है? क्यों?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 11, d = 8 − 11 = −3</p>
+                    <p class="mb-2">aₙ = 11 + (n − 1)(−3) = 14 − 3n</p>
+                    <p class="mb-2">−150 = 14 − 3n ⇒ 3n = 164 ⇒ n = <div class="fraction"><span class="numerator">164</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2">n पूर्णांक नहीं है।</p>
+                    <p><strong>उत्तर:</strong> नहीं, −150 इस A.P. का पद नहीं है क्योंकि n का मान पूर्णांक नहीं आता।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: उस A.P. का 31वाँ पद ज्ञात कीजिए, जिसका 11वाँ पद 38 है और 16वाँ पद 73 है।</h3>
+                <div class="step">
+                    <p class="mb-2">a₁₁ = a + 10d = 38 ...(1)</p>
+                    <p class="mb-2">a₁₆ = a + 15d = 73 ...(2)</p>
+                    <p class="mb-2">(2) − (1): 5d = 35 ⇒ d = 7</p>
+                    <p class="mb-2">a = 38 − 70 = −32</p>
+                    <p class="mb-2">a₃₁ = −32 + 30 × 7 = −32 + 210 = 178</p>
+                    <p><strong>उत्तर:</strong> 178</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक A.P. में 50 पद हैं, जिसका तीसरा पद 12 है और अंतिम पद 106 है। इसका 29वाँ पद ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a₃ = a + 2d = 12 ...(1)</p>
+                    <p class="mb-2">a₅₀ = a + 49d = 106 ...(2)</p>
+                    <p class="mb-2">(2) − (1): 47d = 94 ⇒ d = 2</p>
+                    <p class="mb-2">a = 12 − 4 = 8</p>
+                    <p class="mb-2">a₂₉ = 8 + 28 × 2 = 8 + 56 = 64</p>
+                    <p><strong>उत्तर:</strong> 64</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: यदि किसी A.P. के तीसरे और नौवें पद क्रमशः 4 और −8 हैं, तो इसका कौन-सा पद शून्य होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">a₃ = a + 2d = 4 ...(1)</p>
+                    <p class="mb-2">a₉ = a + 8d = −8 ...(2)</p>
+                    <p class="mb-2">(2) − (1): 6d = −12 ⇒ d = −2</p>
+                    <p class="mb-2">a = 4 − 2(−2) = 8</p>
+                    <p class="mb-2">aₙ = 8 + (n − 1)(−2) = 10 − 2n</p>
+                    <p class="mb-2">0 = 10 − 2n ⇒ n = 5</p>
+                    <p><strong>उत्तर:</strong> 5वाँ पद शून्य होगा।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: किसी A.P. का 17वाँ पद उसके 10वें पद से 7 अधिक है। इसका सार्व अंतर ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a₁₇ − a₁₀ = 7</p>
+                    <p class="mb-2">(a + 16d) − (a + 9d) = 7</p>
+                    <p class="mb-2">7d = 7 ⇒ d = 1</p>
+                    <p><strong>उत्तर:</strong> d = 1</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: A.P.: 3, 15, 27, 39, ... का कौन-सा पद उसके 54वें पद से 132 अधिक होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 3, d = 12</p>
+                    <p class="mb-2">a₅₄ = 3 + 53 × 12 = 3 + 636 = 639</p>
+                    <p class="mb-2">अभीष्ट पद = 639 + 132 = 771</p>
+                    <p class="mb-2">3 + (n − 1) × 12 = 771</p>
+                    <p class="mb-2">12(n − 1) = 768 ⇒ n − 1 = 64 ⇒ n = 65</p>
+                    <p><strong>उत्तर:</strong> 65वाँ पद</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: दो समांतर श्रेढियों का सार्व अंतर समान है। यदि इनके 100वें पदों का अंतर 100 है, तो इनके 1000वें पदों का अंतर क्या होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए A.P.₁: a₁, a₁ + d, ... और A.P.₂: a₂, a₂ + d, ...</p>
+                    <p class="mb-2">a₁₀₀(1) − a₁₀₀(2) = (a₁ + 99d) − (a₂ + 99d) = a₁ − a₂ = 100</p>
+                    <p class="mb-2">a₁₀₀₀(1) − a₁₀₀₀(2) = (a₁ + 999d) − (a₂ + 999d) = a₁ − a₂ = 100</p>
+                    <p><strong>उत्तर:</strong> 100</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: तीन अंकों वाली कितनी संख्याएँ 7 से विभाज्य हैं?</h3>
+                <div class="step">
+                    <p class="mb-2">तीन अंकों की 7 से विभाज्य संख्याएँ: 105, 112, 119, ..., 994</p>
+                    <p class="mb-2">a = 105, d = 7, aₙ = 994</p>
+                    <p class="mb-2">994 = 105 + (n − 1) × 7</p>
+                    <p class="mb-2">889 = 7(n − 1) ⇒ n − 1 = 127 ⇒ n = 128</p>
+                    <p><strong>उत्तर:</strong> 128 संख्याएँ</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: 10 और 250 के बीच में 4 के कितने गुणज हैं?</h3>
+                <div class="step">
+                    <p class="mb-2">10 और 250 के बीच 4 के गुणज: 12, 16, 20, ..., 248</p>
+                    <p class="mb-2">a = 12, d = 4, aₙ = 248</p>
+                    <p class="mb-2">248 = 12 + (n − 1) × 4</p>
+                    <p class="mb-2">236 = 4(n − 1) ⇒ n − 1 = 59 ⇒ n = 60</p>
+                    <p><strong>उत्तर:</strong> 60 गुणज</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: n के किस मान के लिए, दोनों समांतर श्रेढियों 63, 65, 67, ... और 3, 10, 17, ... के nवें पद बराबर होंगे?</h3>
+                <div class="step">
+                    <p class="mb-2">A.P.₁: a = 63, d = 2, aₙ = 63 + (n − 1)2 = 61 + 2n</p>
+                    <p class="mb-2">A.P.₂: a = 3, d = 7, aₙ = 3 + (n − 1)7 = 7n − 4</p>
+                    <p class="mb-2">61 + 2n = 7n − 4 ⇒ 65 = 5n ⇒ n = 13</p>
+                    <p><strong>उत्तर:</strong> n = 13</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: वह A.P. ज्ञात कीजिए जिसका तीसरा पद 16 है और 7वाँ पद 5वें पद से 12 अधिक है।</h3>
+                <div class="step">
+                    <p class="mb-2">a₃ = a + 2d = 16 ...(1)</p>
+                    <p class="mb-2">a₇ − a₅ = 12 ⇒ (a + 6d) − (a + 4d) = 12 ⇒ 2d = 12 ⇒ d = 6</p>
+                    <p class="mb-2">a + 12 = 16 ⇒ a = 4</p>
+                    <p class="mb-2">A.P.: 4, 10, 16, 22, ...</p>
+                    <p><strong>उत्तर:</strong> 4, 10, 16, 22, ...</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: A.P.: 3, 8, 13, ..., 253 में अंतिम पद से 20वाँ पद ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a = 3, d = 5, aₙ = 253</p>
+                    <p class="mb-2">253 = 3 + (n − 1) × 5</p>
+                    <p class="mb-2">250 = 5(n − 1) ⇒ n − 1 = 50 ⇒ n = 51</p>
+                    <p class="mb-2">अंतिम पद से 20वाँ पद = 51 − 20 + 1 = 32वाँ पद</p>
+                    <p class="mb-2">a₃₂ = 3 + 31 × 5 = 3 + 155 = 158</p>
+                    <p><strong>उत्तर:</strong> 158</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: किसी A.P. के चौथे और 8वें पदों का योग 24 है तथा 6ठे और 10वें पदों का योग 44 है। इस A.P. के प्रथम तीन पद ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a₄ + a₈ = 24 ⇒ (a + 3d) + (a + 7d) = 24 ⇒ 2a + 10d = 24 ⇒ a + 5d = 12 ...(1)</p>
+                    <p class="mb-2">a₆ + a₁₀ = 44 ⇒ (a + 5d) + (a + 9d) = 44 ⇒ 2a + 14d = 44 ⇒ a + 7d = 22 ...(2)</p>
+                    <p class="mb-2">(2) − (1): 2d = 10 ⇒ d = 5</p>
+                    <p class="mb-2">a + 25 = 12 ⇒ a = −13</p>
+                    <p class="mb-2">प्रथम तीन पद: −13, −8, −3</p>
+                    <p><strong>उत्तर:</strong> −13, −8, −3</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: सुब्बा राव ने 1995 में ₹ 5000 के मासिक वेतन पर कार्य आरंभ किया और प्रत्येक वर्ष ₹ 200 की वेतन वृद्धि प्राप्त की। किस वर्ष में उसका वेतन ₹ 7000 हो गया?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 5000, d = 200, aₙ = 7000</p>
+                    <p class="mb-2">7000 = 5000 + (n − 1) × 200</p>
+                    <p class="mb-2">2000 = 200(n − 1) ⇒ n − 1 = 10 ⇒ n = 11</p>
+                    <p class="mb-2">11वाँ वर्ष = 1995 + 10 = 2005</p>
+                    <p><strong>उत्तर:</strong> वर्ष 2005</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: रामकली ने किसी वर्ष के प्रथम सप्ताह में ₹ 50 की बचत की और फिर अपनी साप्ताहिक बचत ₹ 17.50 बढ़ाती गई। यदि nवें सप्ताह में उसकी साप्ताहिक बचत ₹ 207.50 हो जाती है, तो n ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a = 50, d = 17.50, aₙ = 207.50</p>
+                    <p class="mb-2">207.50 = 50 + (n − 1) × 17.50</p>
+                    <p class="mb-2">157.50 = 17.50(n − 1)</p>
+                    <p class="mb-2">n − 1 = 9 ⇒ n = 10</p>
+                    <p><strong>उत्तर:</strong> n = 10</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.3 ==================== -->
+        <section id="exercise-5-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित समांतर श्रेढियों का योग ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 2, 7, 12, ..., 10 पदों तक</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 2, d = 5, n = 10</p>
+                        <p class="mb-2">S₁₀ = <div class="fraction"><span class="numerator">10</span><span class="denominator">2</span></div> [2 × 2 + (10 − 1) × 5]</p>
+                        <p class="mb-2">= 5[4 + 45] = 5 × 49 = 245</p>
+                        <p><strong>उत्तर:</strong> 245</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) −37, −33, −29, ..., 12 पदों तक</h4>
+                    <div class="step">
+                        <p class="mb-2">a = −37, d = 4, n = 12</p>
+                        <p class="mb-2">S₁₂ = <div class="fraction"><span class="numerator">12</span><span class="denominator">2</span></div> [2(−37) + (12 − 1) × 4]</p>
+                        <p class="mb-2">= 6[−74 + 44] = 6 × (−30) = −180</p>
+                        <p><strong>उत्तर:</strong> −180</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 0.6, 1.7, 2.8, ..., 100 पदों तक</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 0.6, d = 1.1, n = 100</p>
+                        <p class="mb-2">S₁₀₀ = <div class="fraction"><span class="numerator">100</span><span class="denominator">2</span></div> [2 × 0.6 + (100 − 1) × 1.1]</p>
+                        <p class="mb-2">= 50[1.2 + 108.9] = 50 × 110.1 = 5505</p>
+                        <p><strong>उत्तर:</strong> 5505</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) <div class="fraction"><span class="numerator">1</span><span class="denominator">15</span></div>, <div class="fraction"><span class="numerator">1</span><span class="denominator">12</span></div>, <div class="fraction"><span class="numerator">1</span><span class="denominator">10</span></div>, ..., 11 पदों तक</h4>
+                    <div class="step">
+                        <p class="mb-2">a = <div class="fraction"><span class="numerator">1</span><span class="denominator">15</span></div>, d = <div class="fraction"><span class="numerator">1</span><span class="denominator">12</span></div> − <div class="fraction"><span class="numerator">1</span><span class="denominator">15</span></div> = <div class="fraction"><span class="numerator">5 − 4</span><span class="denominator">60</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">60</span></div>, n = 11</p>
+                        <p class="mb-2">S₁₁ = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> [2 × <div class="fraction"><span class="numerator">1</span><span class="denominator">15</span></div> + (11 − 1) × <div class="fraction"><span class="numerator">1</span><span class="denominator">60</span></div>]</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> [<div class="fraction"><span class="numerator">2</span><span class="denominator">15</span></div> + <div class="fraction"><span class="numerator">10</span><span class="denominator">60</span></div>] = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> [<div class="fraction"><span class="numerator">2</span><span class="denominator">15</span></div> + <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div>]</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> [<div class="fraction"><span class="numerator">4 + 5</span><span class="denominator">30</span></div>] = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> × <div class="fraction"><span class="numerator">9</span><span class="denominator">30</span></div> = <div class="fraction"><span class="numerator">99</span><span class="denominator">60</span></div> = <div class="fraction"><span class="numerator">33</span><span class="denominator">20</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">33</span><span class="denominator">20</span></div></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: नीचे दिए हुए योगफलों को ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 7 + 10½ + 14 + ... + 84</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 7, d = 3.5, aₙ = 84</p>
+                        <p class="mb-2">84 = 7 + (n − 1) × 3.5</p>
+                        <p class="mb-2">77 = 3.5(n − 1) ⇒ n − 1 = 22 ⇒ n = 23</p>
+                        <p class="mb-2">S₂₃ = <div class="fraction"><span class="numerator">23</span><span class="denominator">2</span></div> (7 + 84) = <div class="fraction"><span class="numerator">23</span><span class="denominator">2</span></div> × 91 = <div class="fraction"><span class="numerator">2093</span><span class="denominator">2</span></div> = 1046½</p>
+                        <p><strong>उत्तर:</strong> 1046½</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 34 + 32 + 30 + ... + 10</h4>
+                    <div class="step">
+                        <p class="mb-2">a = 34, d = −2, aₙ = 10</p>
+                        <p class="mb-2">10 = 34 + (n − 1)(−2)</p>
+                        <p class="mb-2">−24 = −2(n − 1) ⇒ n − 1 = 12 ⇒ n = 13</p>
+                        <p class="mb-2">S₁₃ = <div class="fraction"><span class="numerator">13</span><span class="denominator">2</span></div> (34 + 10) = <div class="fraction"><span class="numerator">13</span><span class="denominator">2</span></div> × 44 = 286</p>
+                        <p><strong>उत्तर:</strong> 286</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) −5 + (−8) + (−11) + ... + (−230)</h4>
+                    <div class="step">
+                        <p class="mb-2">a = −5, d = −3, aₙ = −230</p>
+                        <p class="mb-2">−230 = −5 + (n − 1)(−3)</p>
+                        <p class="mb-2">−225 = −3(n − 1) ⇒ n − 1 = 75 ⇒ n = 76</p>
+                        <p class="mb-2">S₇₆ = <div class="fraction"><span class="numerator">76</span><span class="denominator">2</span></div> (−5 − 230) = 38 × (−235) = −8930</p>
+                        <p><strong>उत्तर:</strong> −8930</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक A.P. में:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) a = 5, d = 3 और aₙ = 50 दिया है। n और Sₙ ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2">50 = 5 + (n − 1) × 3 ⇒ 45 = 3(n − 1) ⇒ n − 1 = 15 ⇒ n = 16</p>
+                        <p class="mb-2">S₁₆ = <div class="fraction"><span class="numerator">16</span><span class="denominator">2</span></div> (5 + 50) = 8 × 55 = 440</p>
+                        <p><strong>उत्तर:</strong> n = 16, S₁₆ = 440</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) a = 7 और a₁₃ = 35 दिया है। d और S₁₃ ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2">35 = 7 + 12d ⇒ 28 = 12d ⇒ d = <div class="fraction"><span class="numerator">7</span><span class="denominator">3</span></div></p>
+                        <p class="mb-2">S₁₃ = <div class="fraction"><span class="numerator">13</span><span class="denominator">2</span></div> (7 + 35) = <div class="fraction"><span class="numerator">13</span><span class="denominator">2</span></div> × 42 = 273</p>
+                        <p><strong>उत्तर:</strong> d = <div class="fraction"><span class="numerator">7</span><span class="denominator">3</span></div>, S₁₃ = 273</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) a₁₂ = 37 और d = 3 दिया है। a और S₁₂ ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2">a + 11 × 3 = 37 ⇒ a + 33 = 37 ⇒ a = 4</p>
+                        <p class="mb-2">S₁₂ = <div class="fraction"><span class="numerator">12</span><span class="denominator">2</span></div> (4 + 37) = 6 × 41 = 246</p>
+                        <p><strong>उत्तर:</strong> a = 4, S₁₂ = 246</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) a₃ = 15 और S₁₀ = 125 दिया है। d और a₁₀ ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2">a + 2d = 15 ...(1)</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">10</span><span class="denominator">2</span></div> [2a + 9d] = 125 ⇒ 5(2a + 9d) = 125 ⇒ 2a + 9d = 25 ...(2)</p>
+                        <p class="mb-2">(1) से: a = 15 − 2d, (2) में रखने पर: 2(15 − 2d) + 9d = 25</p>
+                        <p class="mb-2">30 − 4d + 9d = 25 ⇒ 5d = −5 ⇒ d = −1</p>
+                        <p class="mb-2">a = 15 + 2 = 17</p>
+                        <p class="mb-2">a₁₀ = 17 + 9(−1) = 8</p>
+                        <p><strong>उत्तर:</strong> d = −1, a₁₀ = 8</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) d = 5 और S₉ = 75 दिया है। a और a₉ ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div> [2a + 8 × 5] = 75 ⇒ <div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div> [2a + 40] = 75</p>
+                        <p class="mb-2">9(a + 20) = 75 ⇒ a + 20 = <div class="fraction"><span class="numerator">75</span><span class="denominator">9</span></div> = <div class="fraction"><span class="numerator">25</span><span class="denominator">3</span></div></p>
+                        <p class="mb-2">a = <div class="fraction"><span class="numerator">25</span><span class="denominator">3</span></div> − 20 = <div class="fraction"><span class="numerator">25 − 60</span><span class="denominator">3</span></div> = −<div class="fraction"><span class="numerator">35</span><span class="denominator">3</span></div></p>
+                        <p class="mb-2">a₉ = −<div class="fraction"><span class="numerator">35</span><span class="denominator">3</span></div> + 8 × 5 = −<div class="fraction"><span class="numerator">35</span><span class="denominator">3</span></div> + 40 = <div class="fraction"><span class="numerator">85</span><span class="denominator">3</span></div></p>
+                        <p><strong>उत्तर:</strong> a = −<div class="fraction"><span class="numerator">35</span><span class="denominator">3</span></div>, a₉ = <div class="fraction"><span class="numerator">85</span><span class="denominator">3</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vi) a = 2, d = 8 और Sₙ = 90 दिया है। n और aₙ ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> [4 + (n − 1)8] = 90 ⇒ n[4 + 8n − 8] = 180</p>
+                        <p class="mb-2">n(8n − 4) = 180 ⇒ 8n² − 4n − 180 = 0</p>
+                        <p class="mb-2">2n² − n − 45 = 0 ⇒ (2n + 9)(n − 5) = 0</p>
+                        <p class="mb-2">n = 5 (धनात्मक)</p>
+                        <p class="mb-2">aₙ = 2 + 4 × 8 = 34</p>
+                        <p><strong>उत्तर:</strong> n = 5, aₙ = 34</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vii) a = 8, aₙ = 62 और Sₙ = 210 दिया है। n और d ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2">210 = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> (8 + 62) = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> × 70 = 35n ⇒ n = 6</p>
+                        <p class="mb-2">62 = 8 + 5d ⇒ 5d = 54 ⇒ d = <div class="fraction"><span class="numerator">54</span><span class="denominator">5</span></div></p>
+                        <p><strong>उत्तर:</strong> n = 6, d = <div class="fraction"><span class="numerator">54</span><span class="denominator">5</span></div></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(viii) aₙ = 4, d = 2 और Sₙ = −14 दिया है। n और a ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2">4 = a + (n − 1)2 ⇒ a = 4 − 2n + 2 = 6 − 2n</p>
+                        <p class="mb-2">Sₙ = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> (a + 4) = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> (6 − 2n + 4) = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> (10 − 2n) = n(5 − n)</p>
+                        <p class="mb-2">n(5 − n) = −14 ⇒ n² − 5n − 14 = 0</p>
+                        <p class="mb-2">(n − 7)(n + 2) = 0 ⇒ n = 7</p>
+                        <p class="mb-2">a = 6 − 14 = −8</p>
+                        <p><strong>उत्तर:</strong> n = 7, a = −8</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ix) a = 3, n = 8 और S = 192 दिया है। d ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">8</span><span class="denominator">2</span></div> [2 × 3 + 7d] = 192 ⇒ 4[6 + 7d] = 192</p>
+                        <p class="mb-2">6 + 7d = 48 ⇒ 7d = 42 ⇒ d = 6</p>
+                        <p><strong>उत्तर:</strong> d = 6</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(x) l = 28, S = 144 और कुल 9 पद हैं। a ज्ञात कीजिए।</h4>
+                    <div class="step">
+                        <p class="mb-2"><div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div> (a + 28) = 144 ⇒ a + 28 = 32 ⇒ a = 4</p>
+                        <p><strong>उत्तर:</strong> a = 4</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: 636 योग प्राप्त करने के लिए, A.P.: 9, 17, 25, ... के कितने पद लेने चाहिए?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 9, d = 8, Sₙ = 636</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> [18 + (n − 1)8] = 636</p>
+                    <p class="mb-2">n[18 + 8n − 8] = 1272</p>
+                    <p class="mb-2">n(8n + 10) = 1272</p>
+                    <p class="mb-2">4n² + 5n − 636 = 0</p>
+                    <p class="mb-2">n = <div class="fraction"><span class="numerator">−5 ± √(25 + 10176)</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">−5 ± 101</span><span class="denominator">8</span></div></p>
+                    <p class="mb-2">n = <div class="fraction"><span class="numerator">96</span><span class="denominator">8</span></div> = 12 (धनात्मक)</p>
+                    <p><strong>उत्तर:</strong> 12 पद</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: किसी A.P. का प्रथम पद 5, अंतिम पद 45 और योग 400 है। पदों की संख्या और सार्व अंतर ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a = 5, l = 45, Sₙ = 400</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> (5 + 45) = 400 ⇒ <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> × 50 = 400 ⇒ n = 16</p>
+                    <p class="mb-2">aₙ = 5 + 15d = 45 ⇒ 15d = 40 ⇒ d = <div class="fraction"><span class="numerator">8</span><span class="denominator">3</span></div></p>
+                    <p><strong>उत्तर:</strong> n = 16, d = <div class="fraction"><span class="numerator">8</span><span class="denominator">3</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: किसी A.P. के प्रथम और अंतिम पद क्रमशः 17 और 350 हैं। यदि सार्व अंतर 9 है, तो इसमें कितने पद हैं और इनका योग क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 17, l = 350, d = 9</p>
+                    <p class="mb-2">350 = 17 + (n − 1)9 ⇒ 333 = 9(n − 1) ⇒ n − 1 = 37 ⇒ n = 38</p>
+                    <p class="mb-2">S₃₈ = <div class="fraction"><span class="numerator">38</span><span class="denominator">2</span></div> (17 + 350) = 19 × 367 = 6973</p>
+                    <p><strong>उत्तर:</strong> n = 38, S₃₈ = 6973</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: उस A.P. के प्रथम 22 पदों का योग ज्ञात कीजिए, जिसमें d = 7 है और 22वाँ पद 149 है।</h3>
+                <div class="step">
+                    <p class="mb-2">a₂₂ = a + 21 × 7 = 149 ⇒ a + 147 = 149 ⇒ a = 2</p>
+                    <p class="mb-2">S₂₂ = <div class="fraction"><span class="numerator">22</span><span class="denominator">2</span></div> (2 + 149) = 11 × 151 = 1661</p>
+                    <p><strong>उत्तर:</strong> 1661</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: उस A.P. के प्रथम 51 पदों का योग ज्ञात कीजिए, जिसके दूसरे और तीसरे पद क्रमशः 14 और 18 हैं।</h3>
+                <div class="step">
+                    <p class="mb-2">a₂ = 14, a₃ = 18 ⇒ d = 4</p>
+                    <p class="mb-2">a = a₂ − d = 14 − 4 = 10</p>
+                    <p class="mb-2">S₅₁ = <div class="fraction"><span class="numerator">51</span><span class="denominator">2</span></div> [2 × 10 + 50 × 4] = <div class="fraction"><span class="numerator">51</span><span class="denominator">2</span></div> [20 + 200] = <div class="fraction"><span class="numerator">51</span><span class="denominator">2</span></div> × 220 = 51 × 110 = 5610</p>
+                    <p><strong>उत्तर:</strong> 5610</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: यदि किसी A.P. के प्रथम 7 पदों का योग 49 है और प्रथम 17 पदों का योग 289 है, तो इसके प्रथम n पदों का योग ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">S₇ = 49 ⇒ <div class="fraction"><span class="numerator">7</span><span class="denominator">2</span></div> [2a + 6d] = 49 ⇒ 7(a + 3d) = 49 ⇒ a + 3d = 7 ...(1)</p>
+                    <p class="mb-2">S₁₇ = 289 ⇒ <div class="fraction"><span class="numerator">17</span><span class="denominator">2</span></div> [2a + 16d] = 289 ⇒ 17(a + 8d) = 289 ⇒ a + 8d = 17 ...(2)</p>
+                    <p class="mb-2">(2) − (1): 5d = 10 ⇒ d = 2</p>
+                    <p class="mb-2">a + 6 = 7 ⇒ a = 1</p>
+                    <p class="mb-2">Sₙ = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> [2 × 1 + (n − 1)2] = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> [2 + 2n − 2] = <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> × 2n = n²</p>
+                    <p><strong>उत्तर:</strong> Sₙ = n²</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: दर्शाइए कि a₁, a₂, ..., aₙ, ... से एक A.P. बनती है, यदि aₙ नीचे दिए अनुसार परिभाषित है:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) aₙ = 3 + 4n</h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = 3 + 4 = 7, a₂ = 3 + 8 = 11, a₃ = 3 + 12 = 15</p>
+                        <p class="mb-2">d = 11 − 7 = 4, 15 − 11 = 4 (नियत)</p>
+                        <p class="mb-2">S₁₅ = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> [2 × 7 + 14 × 4] = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> [14 + 56] = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> × 70 = 525</p>
+                        <p><strong>उत्तर:</strong> A.P. है, S₁₅ = 525</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) aₙ = 9 − 5n</h4>
+                    <div class="step">
+                        <p class="mb-2">a₁ = 4, a₂ = −1, a₃ = −6</p>
+                        <p class="mb-2">d = −1 − 4 = −5, −6 − (−1) = −5 (नियत)</p>
+                        <p class="mb-2">S₁₅ = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> [2 × 4 + 14 × (−5)] = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> [8 − 70] = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> × (−62) = −465</p>
+                        <p><strong>उत्तर:</strong> A.P. है, S₁₅ = −465</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: यदि किसी A.P. के प्रथम n पदों का योग 4n − n² है, तो इसका प्रथम पद (S₁) क्या है? प्रथम दो पदों का योग क्या है? दूसरा पद क्या है? इसी प्रकार, तीसरे, 10वें और nवें पद ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">Sₙ = 4n − n²</p>
+                    <p class="mb-2">S₁ = 4 − 1 = 3 ⇒ a₁ = 3</p>
+                    <p class="mb-2">S₂ = 8 − 4 = 4 ⇒ a₂ = S₂ − S₁ = 4 − 3 = 1</p>
+                    <p class="mb-2">S₃ = 12 − 9 = 3 ⇒ a₃ = S₃ − S₂ = 3 − 4 = −1</p>
+                    <p class="mb-2">S₉ = 36 − 81 = −45, S₁₀ = 40 − 100 = −60</p>
+                    <p class="mb-2">a₁₀ = S₁₀ − S₉ = −60 − (−45) = −15</p>
+                    <p class="mb-2">aₙ = Sₙ − Sₙ₋₁ = (4n − n²) − [4(n−1) − (n−1)²]</p>
+                    <p class="mb-2">= 4n − n² − 4n + 4 + n² − 2n + 1 = 5 − 2n</p>
+                    <p><strong>उत्तर:</strong> a₁ = 3, S₂ = 4, a₂ = 1, a₃ = −1, a₁₀ = −15, aₙ = 5 − 2n</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: ऐसे प्रथम 40 धन पूर्णांकों का योग ज्ञात कीजिए जो 6 से विभाज्य हैं।</h3>
+                <div class="step">
+                    <p class="mb-2">6 से विभाज्य संख्याएँ: 6, 12, 18, ..., 240</p>
+                    <p class="mb-2">a = 6, d = 6, n = 40</p>
+                    <p class="mb-2">S₄₀ = <div class="fraction"><span class="numerator">40</span><span class="denominator">2</span></div> [12 + 39 × 6] = 20[12 + 234] = 20 × 246 = 4920</p>
+                    <p><strong>उत्तर:</strong> 4920</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: 8 के प्रथम 15 गुणजों का योग ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">8 के गुणज: 8, 16, 24, ..., 120</p>
+                    <p class="mb-2">a = 8, d = 8, n = 15</p>
+                    <p class="mb-2">S₁₅ = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> [16 + 14 × 8] = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> [16 + 112] = <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> × 128 = 960</p>
+                    <p><strong>उत्तर:</strong> 960</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: 0 और 50 के बीच की विषम संख्याओं का योग ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">विषम संख्याएँ: 1, 3, 5, ..., 49</p>
+                    <p class="mb-2">a = 1, d = 2, aₙ = 49</p>
+                    <p class="mb-2">49 = 1 + (n − 1)2 ⇒ n = 25</p>
+                    <p class="mb-2">S₂₅ = <div class="fraction"><span class="numerator">25</span><span class="denominator">2</span></div> (1 + 49) = <div class="fraction"><span class="numerator">25</span><span class="denominator">2</span></div> × 50 = 625</p>
+                    <p><strong>उत्तर:</strong> 625</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: निर्माण कार्य से संबंधित किसी ठेके में, एक निश्चित तिथि के बाद कार्य को विलंब से पूरा करने के लिए, जुर्माना लगाने का प्रावधान इस प्रकार है: पहले दिन के लिए ₹ 200, दूसरे दिन के लिए ₹ 250, तीसरे दिन के लिए ₹ 300 इत्यादि, अर्थात् प्रत्येक उत्तरोत्तर दिन का जुर्माना अपने से ठीक पहले दिन के जुर्माने से ₹ 50 अधिक है। एक ठेकेदार को जुर्माने के रूप में कितनी राशि अदा करनी पड़ेगी, यदि वह इस कार्य में 30 दिन का विलंब कर देता है?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 200, d = 50, n = 30</p>
+                    <p class="mb-2">S₃₀ = <div class="fraction"><span class="numerator">30</span><span class="denominator">2</span></div> [2 × 200 + 29 × 50]</p>
+                    <p class="mb-2">= 15[400 + 1450] = 15 × 1850 = 27750</p>
+                    <p><strong>उत्तर:</strong> ₹ 27750</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: किसी स्कूल के विद्यार्थियों को उनके समग्र शैक्षिक प्रदर्शन के लिए 7 नकद पुरस्कार देने के लिए ₹ 700 की राशि रखी गई है। यदि प्रत्येक पुरस्कार अपने से ठीक पहले पुरस्कार से ₹ 20 कम है, तो प्रत्येक पुरस्कार का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए प्रथम पुरस्कार = x</p>
+                    <p class="mb-2">पुरस्कार: x, x − 20, x − 40, ..., 7 पद</p>
+                    <p class="mb-2">S₇ = 700 ⇒ <div class="fraction"><span class="numerator">7</span><span class="denominator">2</span></div> [2x + 6(−20)] = 700</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">7</span><span class="denominator">2</span></div> [2x − 120] = 700 ⇒ 7(x − 60) = 700 ⇒ x − 60 = 100 ⇒ x = 160</p>
+                    <p class="mb-2">पुरस्कार: 160, 140, 120, 100, 80, 60, 40</p>
+                    <p><strong>उत्तर:</strong> ₹ 160, ₹ 140, ₹ 120, ₹ 100, ₹ 80, ₹ 60, ₹ 40</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: एक स्कूल के विद्यार्थियों ने वायु प्रदूषण कम करने के लिए स्कूल के अंदर और बाहर पेड़ लगाने के बारे में सोचा। यह निर्णय लिया गया कि प्रत्येक कक्षा का प्रत्येक अनुभाग अपनी कक्षा की संख्या के बराबर पेड़ लगाएगा। उदाहरणार्थ, कक्षा I का एक अनुभाग 1 पेड़ लगाएगा, कक्षा II का एक अनुभाग 2 पेड़ लगाएगा, कक्षा III का एक अनुभाग 3 पेड़ लगाएगा, और इसी प्रकार आगे भी। प्रत्येक कक्षा के तीन अनुभाग हैं। इस स्कूल के विद्यार्थियों द्वारा लगाए गए कुल पेड़ों की संख्या कितनी होगी?</h3>
+                <div class="step">
+                    <p class="mb-2">प्रत्येक कक्षा के 3 अनुभाग हैं।</p>
+                    <p class="mb-2">कक्षा I: 3 × 1 = 3 पेड़</p>
+                    <p class="mb-2">कक्षा II: 3 × 2 = 6 पेड़</p>
+                    <p class="mb-2">...</p>
+                    <p class="mb-2">कक्षा XII: 3 × 12 = 36 पेड़</p>
+                    <p class="mb-2">कुल = 3(1 + 2 + 3 + ... + 12)</p>
+                    <p class="mb-2">= 3 × <div class="fraction"><span class="numerator">12 × 13</span><span class="denominator">2</span></div> = 3 × 78 = 234</p>
+                    <p><strong>उत्तर:</strong> 234 पेड़</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: एक सीढ़ी के क्रमागत डंडे परस्पर 25 cm की दूरी पर हैं। डंडों की लंबाइयाँ एक समान रूप से घटती जाती हैं तथा सबसे निचले डंडे की लंबाई 45 cm है और सबसे ऊपर वाले डंडे की लंबाई 25 cm है। यदि ऊपरी और निचले डंडे के बीच की दूरी 2½ m है, तो डंडों को बनाने के लिए लकड़ी की कितनी लंबाई की आवश्यकता होगी?</h3>
+                <div class="step">
+                    <p class="mb-2">दूरी = 2.5 m = 250 cm</p>
+                    <p class="mb-2">डंडों के बीच अंतराल = 25 cm</p>
+                    <p class="mb-2">डंडों की संख्या = <div class="fraction"><span class="numerator">250</span><span class="denominator">25</span></div> + 1 = 10 + 1 = 11</p>
+                    <p class="mb-2">डंडों की लंबाई: 45, 43, 41, ..., 25 (A.P.)</p>
+                    <p class="mb-2">a = 45, l = 25, n = 11</p>
+                    <p class="mb-2">S₁₁ = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> (45 + 25) = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> × 70 = 385 cm</p>
+                    <p><strong>उत्तर:</strong> 385 cm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: 200 लट्ठों को ढेरी के रूप में व्यवस्थित किया जाता है जैसा कि आकृति में दिखाया गया है। सबसे निचली पंक्ति में 20 लट्ठे, उसके ऊपर वाली पंक्ति में 19 लट्ठे, उसके ऊपर वाली पंक्ति में 18 लट्ठे इत्यादि। यदि ऐसा ही चलता रहे तो 200 लट्ठों को ढेरी के रूप में व्यवस्थित करने में कितनी पंक्तियाँ होंगी और सबसे ऊपरी पंक्ति में कितने लट्ठे होंगे?</h3>
+                <div class="step">
+                    <p class="mb-2">A.P.: 20, 19, 18, ...</p>
+                    <p class="mb-2">Sₙ = 200 ⇒ <div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> [2 × 20 + (n − 1)(−1)] = 200</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">n</span><span class="denominator">2</span></div> [40 − n + 1] = 200 ⇒ n(41 − n) = 400</p>
+                    <p class="mb-2">n² − 41n + 400 = 0 ⇒ (n − 16)(n − 25) = 0</p>
+                    <p class="mb-2">n = 16 (क्योंकि n = 25 पर सबसे ऊपरी पंक्ति में लट्ठे ऋणात्मक होंगे)</p>
+                    <p class="mb-2">सबसे ऊपरी पंक्ति में लट्ठे = 20 + 15(−1) = 5</p>
+                    <p><strong>उत्तर:</strong> 16 पंक्तियाँ, सबसे ऊपरी पंक्ति में 5 लट्ठे</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: एक आलू दौड़ में, एक बाल्टी को प्रारंभिक बिंदु पर रखा जाता है, जो पहले आलू से 5 m की दूरी पर है, और अन्य आलू एक सीधी रेखा में 3 m की दूरी पर रखे जाते हैं। रेखा में दस आलू हैं। एक प्रतियोगी बाल्टी से चलना प्रारंभ करती है, निकटतम आलू को उठाती है, उसे लेकर वापस आकर दौड़कर बाल्टी में डालती है, दूसरा आलू उठाने के लिए वापस दौड़ती है, उसे उठाकर वापस बाल्टी में डालती है, और वह ऐसा तब तक करती रहती है, जब तक सभी आलू बाल्टी में न आ जाएँ। इसमें प्रतियोगी को कुल कितनी दूरी दौड़नी पड़ेगी?</h3>
+                <div class="step">
+                    <p class="mb-2">पहले आलू तक और वापस = 2 × 5 = 10 m</p>
+                    <p class="mb-2">दूसरे आलू तक और वापस = 2 × (5 + 3) = 16 m</p>
+                    <p class="mb-2">तीसरे आलू तक और वापस = 2 × (5 + 6) = 22 m</p>
+                    <p class="mb-2">... दसवें आलू तक और वापस = 2 × (5 + 27) = 64 m</p>
+                    <p class="mb-2">कुल दूरी = 10 + 16 + 22 + ... + 64</p>
+                    <p class="mb-2">यह A.P. है: a = 10, d = 6, n = 10</p>
+                    <p class="mb-2">S₁₀ = <div class="fraction"><span class="numerator">10</span><span class="denominator">2</span></div> [2 × 10 + 9 × 6] = 5[20 + 54] = 5 × 74 = 370 m</p>
+                    <p><strong>उत्तर:</strong> 370 m</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.4 (ऐच्छिक) ==================== -->
+        <section id="exercise-5-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.4 (ऐच्छिक)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: A.P.: 121, 117, 113, ..., का कौन-सा पद सबसे पहला ऋणात्मक पद होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">a = 121, d = −4</p>
+                    <p class="mb-2">aₙ = 121 + (n − 1)(−4) = 125 − 4n</p>
+                    <p class="mb-2">aₙ < 0 ⇒ 125 − 4n < 0 ⇒ 4n > 125 ⇒ n > 31.25</p>
+                    <p class="mb-2">n = 32</p>
+                    <p><strong>उत्तर:</strong> 32वाँ पद</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: किसी A.P. के तीसरे और सातवें पदों का योग 6 है और उनका गुणनफल 8 है। इस A.P. के प्रथम 16 पदों का योग ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">a₃ + a₇ = 6 ⇒ (a + 2d) + (a + 6d) = 6 ⇒ 2a + 8d = 6 ⇒ a + 4d = 3 ...(1)</p>
+                    <p class="mb-2">a₃ × a₇ = 8 ⇒ (a + 2d)(a + 6d) = 8</p>
+                    <p class="mb-2">a = 3 − 4d रखने पर: (3 − 4d + 2d)(3 − 4d + 6d) = 8</p>
+                    <p class="mb-2">(3 − 2d)(3 + 2d) = 8 ⇒ 9 − 4d² = 8 ⇒ 4d² = 1 ⇒ d = ±<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2"><strong>स्थिति 1:</strong> d = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, a = 3 − 2 = 1</p>
+                    <p class="mb-2">S₁₆ = <div class="fraction"><span class="numerator">16</span><span class="denominator">2</span></div> [2 × 1 + 15 × (<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>)] = 8[2 + 7.5] = 8 × 9.5 = 76</p>
+                    <p class="mb-2"><strong>स्थिति 2:</strong> d = −<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>, a = 3 + 2 = 5</p>
+                    <p class="mb-2">S₁₆ = <div class="fraction"><span class="numerator">16</span><span class="denominator">2</span></div> [2 × 5 + 15 × (−<div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>)] = 8[10 − 7.5] = 8 × 2.5 = 20</p>
+                    <p><strong>उत्तर:</strong> 76 या 20</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक सीढ़ी के क्रमागत डंडे परस्पर 25 cm की दूरी पर हैं। डंडों की लंबाइयाँ एक समान रूप से घटती जाती हैं तथा सबसे निचले डंडे की लंबाई 45 cm है और सबसे ऊपर वाले डंडे की लंबाई 25 cm है। यदि ऊपरी और निचले डंडे के बीच की दूरी 2½ m है, तो डंडों को बनाने के लिए लकड़ी की कितनी लंबाई की आवश्यकता होगी?</h3>
+                <div class="step">
+                    <p class="mb-2">दूरी = 2.5 m = 250 cm</p>
+                    <p class="mb-2">डंडों की संख्या = <div class="fraction"><span class="numerator">250</span><span class="denominator">25</span></div> + 1 = 10 + 1 = 11</p>
+                    <p class="mb-2">डंडों की लंबाई: 45, 43, 41, ..., 25 (A.P.)</p>
+                    <p class="mb-2">a = 45, l = 25, n = 11</p>
+                    <p class="mb-2">S₁₁ = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> (45 + 25) = <div class="fraction"><span class="numerator">11</span><span class="denominator">2</span></div> × 70 = 385 cm</p>
+                    <p><strong>उत्तर:</strong> 385 cm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक पंक्ति के मकानों को क्रमागत रूप से संख्या 1 से 49 तक अंकित किया गया है। दर्शाइए कि x का एक ऐसा मान है कि x से अंकित मकान से पहले के मकानों की संख्याओं का योग उसके बाद वाले मकानों की संख्याओं के योग के बराबर है। x का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">S₄₉ = 1 + 2 + ... + 49 = <div class="fraction"><span class="numerator">49 × 50</span><span class="denominator">2</span></div> = 1225</p>
+                    <p class="mb-2">Sₓ₋₁ = 1 + 2 + ... + (x − 1) = <div class="fraction"><span class="numerator">(x − 1)x</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">Sₓ = 1 + 2 + ... + x = <div class="fraction"><span class="numerator">x(x + 1)</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">Sₓ₋₁ = S₄₉ − Sₓ</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">(x − 1)x</span><span class="denominator">2</span></div> = 1225 − <div class="fraction"><span class="numerator">x(x + 1)</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">x² − x</span><span class="denominator">2</span></div> + <div class="fraction"><span class="numerator">x² + x</span><span class="denominator">2</span></div> = 1225</p>
+                    <p class="mb-2"><div class="fraction"><span class="numerator">2x²</span><span class="denominator">2</span></div> = 1225 ⇒ x² = 1225 ⇒ x = 35</p>
+                    <p><strong>उत्तर:</strong> x = 35</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक फुटबॉल के मैदान में एक छोटा चबूतरा है जिसमें 15 सीढ़ियाँ बनी हुई हैं। इन सीढ़ियों में से प्रत्येक की लंबाई 50 m है और वह ठोस कंक्रीट की बनी है। प्रत्येक सीढ़ी में <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> m की चढ़ाई है और <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> m का फैलाव है। इस चबूतरे को बनाने में लगी कंक्रीट का कुल आयतन परिकलित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">पहली सीढ़ी का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 50 = <div class="fraction"><span class="numerator">25</span><span class="denominator">4</span></div> m³</p>
+                    <p class="mb-2">दूसरी सीढ़ी का आयतन = <div class="fraction"><span class="numerator">2</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 50 = <div class="fraction"><span class="numerator">50</span><span class="denominator">4</span></div> m³</p>
+                    <p class="mb-2">तीसरी सीढ़ी का आयतन = <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 50 = <div class="fraction"><span class="numerator">75</span><span class="denominator">4</span></div> m³</p>
+                    <p class="mb-2">...</p>
+                    <p class="mb-2">15वीं सीढ़ी का आयतन = <div class="fraction"><span class="numerator">15</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 50 = <div class="fraction"><span class="numerator">375</span><span class="denominator">4</span></div> m³</p>
+                    <p class="mb-2">कुल आयतन = <div class="fraction"><span class="numerator">25</span><span class="denominator">4</span></div> (1 + 2 + 3 + ... + 15)</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">25</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">15 × 16</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">25</span><span class="denominator">4</span></div> × 120 = 750 m³</p>
+                    <p><strong>उत्तर:</strong> 750 m³</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

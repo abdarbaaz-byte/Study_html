@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित - अध्याय 11: वृत्तों से संबंधित क्षेत्रफल</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 11<br>वृत्तों से संबंधित क्षेत्रफल</h1>
+            <p class="mt-2 text-lg">कक्षा 10 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 11.1 ==================== -->
+        <section id="exercise-11-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: 6 cm त्रिज्या वाले एक वृत्त के एक त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए, जिसका कोण 60° है। (π = 22/7 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: त्रिज्या r = 6 cm, कोण θ = 60°</p>
+                    <p class="mb-2">त्रिज्यखंड का क्षेत्रफल = <div class="fraction"><span class="numerator">θ</span><span class="denominator">360°</span></div> × πr²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">60°</span><span class="denominator">360°</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (6)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 36</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22 × 6</span><span class="denominator">7</span></div> = <div class="fraction"><span class="numerator">132</span><span class="denominator">7</span></div> = 18.86 cm² (लगभग)</p>
+                    <p><strong>उत्तर:</strong> त्रिज्यखंड का क्षेत्रफल = <div class="fraction"><span class="numerator">132</span><span class="denominator">7</span></div> cm² ≈ 18.86 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> त्रिज्यखंड के क्षेत्रफल के सूत्र में मान रखकर सरल किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक वृत्त के चतुर्थांश (quadrant) का क्षेत्रफल ज्ञात कीजिए, जिसकी परिधि 22 cm है।</h3>
+                <div class="step">
+                    <p class="mb-2">चतुर्थांश की परिधि = 2r + <div class="fraction"><span class="numerator">πr</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">22 = 2r + <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × r</p>
+                    <p class="mb-2">22 = 2r + <div class="fraction"><span class="numerator">11r</span><span class="denominator">7</span></div></p>
+                    <p class="mb-2">22 = <div class="fraction"><span class="numerator">14r + 11r</span><span class="denominator">7</span></div> = <div class="fraction"><span class="numerator">25r</span><span class="denominator">7</span></div></p>
+                    <p class="mb-2">25r = 22 × 7 = 154</p>
+                    <p class="mb-2">r = <div class="fraction"><span class="numerator">154</span><span class="denominator">25</span></div> = 6.16 cm</p>
+                    <p class="mb-2">चतुर्थांश का क्षेत्रफल = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × πr²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (6.16)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 37.9456</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22 × 37.9456</span><span class="denominator">28</span></div> = <div class="fraction"><span class="numerator">834.80</span><span class="denominator">28</span></div> = 29.81 cm² (लगभग)</p>
+                    <p><strong>उत्तर:</strong> चतुर्थांश का क्षेत्रफल ≈ 29.81 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> चतुर्थांश की परिधि = 2r + πr/2 से त्रिज्या निकाली, फिर क्षेत्रफल का सूत्र लगाया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक घड़ी की मिनट की सुई जिसकी लंबाई 14 cm है। इस सुई द्वारा 5 मिनट में रचित क्षेत्रफल ज्ञात कीजिए। (π = 22/7 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">मिनट की सुई 60 मिनट में 360° घूमती है।</p>
+                    <p class="mb-2">अतः 5 मिनट में घूमा गया कोण = <div class="fraction"><span class="numerator">360°</span><span class="denominator">60</span></div> × 5 = 30°</p>
+                    <p class="mb-2">सुई की लंबाई = त्रिज्या r = 14 cm</p>
+                    <p class="mb-2">रचित क्षेत्रफल = <div class="fraction"><span class="numerator">θ</span><span class="denominator">360°</span></div> × πr²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">30°</span><span class="denominator">360°</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (14)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">12</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 196</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22 × 196</span><span class="denominator">84</span></div> = <div class="fraction"><span class="numerator">4312</span><span class="denominator">84</span></div> = 51.33 cm² (लगभग)</p>
+                    <p><strong>उत्तर:</strong> रचित क्षेत्रफल ≈ 51.33 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> 5 मिनट में सुई 30° घूमती है। त्रिज्यखंड के क्षेत्रफल से उत्तर निकाला।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: 10 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर एक समकोण अंतरित करती है। निम्नलिखित के क्षेत्रफल ज्ञात कीजिए: (i) संगत लघु वृत्तखंड (ii) संगत दीर्घ त्रिज्यखंड (π = 3.14 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: r = 10 cm, θ = 90°</p>
+                    <p class="mb-2"><strong>(i) लघु वृत्तखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">लघु त्रिज्यखंड का क्षेत्रफल = <div class="fraction"><span class="numerator">90°</span><span class="denominator">360°</span></div> × πr²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × 3.14 × 100 = 78.5 cm²</p>
+                    <p class="mb-2">संगत त्रिभुज का क्षेत्रफल = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 10 × 10 = 50 cm² (समकोण त्रिभुज)</p>
+                    <p class="mb-2">लघु वृत्तखंड का क्षेत्रफल = 78.5 − 50 = 28.5 cm²</p>
+                    <p class="mb-2"><strong>(ii) दीर्घ त्रिज्यखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">दीर्घ त्रिज्यखंड का कोण = 360° − 90° = 270°</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">270°</span><span class="denominator">360°</span></div> × 3.14 × 100</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> × 314 = 235.5 cm²</p>
+                    <p><strong>उत्तर:</strong> (i) 28.5 cm² (ii) 235.5 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> लघु वृत्तखंड = त्रिज्यखंड − त्रिभुज। दीर्घ त्रिज्यखंड = 270° वाले त्रिज्यखंड का क्षेत्रफल।
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: त्रिज्या 21 cm वाले वृत्त का एक चाप केंद्र पर 60° का कोण अंतरित करता है। ज्ञात कीजिए: (i) चाप की लंबाई (ii) चाप द्वारा बनाए गए त्रिज्यखंड का क्षेत्रफल (iii) संगत जीवा द्वारा बनाए गए वृत्तखंड का क्षेत्रफल (π = 22/7 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: r = 21 cm, θ = 60°</p>
+                    <p class="mb-2"><strong>(i) चाप की लंबाई:</strong></p>
+                    <p class="mb-2">चाप की लंबाई = <div class="fraction"><span class="numerator">θ</span><span class="denominator">360°</span></div> × 2πr</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">60°</span><span class="denominator">360°</span></div> × 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 21</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div> × 132 = 22 cm</p>
+                    <p class="mb-2"><strong>(ii) त्रिज्यखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">60°</span><span class="denominator">360°</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (21)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 441 = <div class="fraction"><span class="numerator">22 × 441</span><span class="denominator">42</span></div> = 231 cm²</p>
+                    <p class="mb-2"><strong>(iii) वृत्तखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">त्रिभुज OAB समबाहु त्रिभुज है (दो भुजाएँ 21 cm और कोण 60°)।</p>
+                    <p class="mb-2">त्रिभुज का क्षेत्रफल = <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> × (21)² = <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> × 441 = <div class="fraction"><span class="numerator">441√3</span><span class="denominator">4</span></div> cm²</p>
+                    <p class="mb-2">वृत्तखंड का क्षेत्रफल = 231 − <div class="fraction"><span class="numerator">441√3</span><span class="denominator">4</span></div></p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">21</span><span class="denominator">4</span></div> (44 − 21√3) cm²</p>
+                    <p><strong>उत्तर:</strong> (i) 22 cm (ii) 231 cm² (iii) <div class="fraction"><span class="numerator">21</span><span class="denominator">4</span></div> (44 − 21√3) cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> चाप की लंबाई, त्रिज्यखंड का क्षेत्रफल और वृत्तखंड का क्षेत्रफल अलग-अलग सूत्रों से निकाला।
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: 15 cm त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर 60° का कोण अंतरित करती है। संगत लघु और दीर्घ वृत्तखंडों के क्षेत्रफल ज्ञात कीजिए। (π = 3.14 और √3 = 1.73 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: r = 15 cm, θ = 60°</p>
+                    <p class="mb-2"><strong>लघु त्रिज्यखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">60°</span><span class="denominator">360°</span></div> × 3.14 × (15)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div> × 3.14 × 225 = <div class="fraction"><span class="numerator">706.5</span><span class="denominator">6</span></div> = 117.75 cm²</p>
+                    <p class="mb-2"><strong>त्रिभुज OAB का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">ΔOAB समबाहु त्रिभुज है (OA = OB = 15 cm, ∠AOB = 60°)।</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> × (15)² = <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> × 225</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1.73</span><span class="denominator">4</span></div> × 225 = 97.31 cm²</p>
+                    <p class="mb-2"><strong>लघु वृत्तखंड का क्षेत्रफल = 117.75 − 97.31 = 20.44 cm²</strong></p>
+                    <p class="mb-2"><strong>दीर्घ वृत्तखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">= πr² − लघु वृत्तखंड</p>
+                    <p class="mb-2">= 3.14 × 225 − 20.44 = 706.5 − 20.44 = 686.06 cm²</p>
+                    <p><strong>उत्तर:</strong> लघु वृत्तखंड = 20.44 cm², दीर्घ वृत्तखंड = 686.06 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> पहले त्रिज्यखंड और त्रिभुज का क्षेत्रफल निकाला, फिर अंतर से लघु वृत्तखंड और पूर्ण वृत्त में से घटाकर दीर्घ वृत्तखंड।
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: 12 cm त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर 120° का कोण अंतरित करती है। संगत वृत्तखंड का क्षेत्रफल ज्ञात कीजिए। (π = 3.14 और √3 = 1.73 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">दिया है: r = 12 cm, θ = 120°</p>
+                    <p class="mb-2">त्रिज्यखंड का क्षेत्रफल = <div class="fraction"><span class="numerator">120°</span><span class="denominator">360°</span></div> × 3.14 × (12)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 3.14 × 144 = <div class="fraction"><span class="numerator">452.16</span><span class="denominator">3</span></div> = 150.72 cm²</p>
+                    <p class="mb-2">त्रिभुज OAB का क्षेत्रफल = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × r² × sin 120°</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 144 × <div class="fraction"><span class="numerator">√3</span><span class="denominator">2</span></div> = 36√3</p>
+                    <p class="mb-2">= 36 × 1.73 = 62.28 cm²</p>
+                    <p class="mb-2">वृत्तखंड का क्षेत्रफल = 150.72 − 62.28 = 88.44 cm²</p>
+                    <p><strong>उत्तर:</strong> वृत्तखंड का क्षेत्रफल = 88.44 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> त्रिज्यखंड का क्षेत्रफल और त्रिभुज का क्षेत्रफल निकालकर अंतर किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: 15 m भुजा वाले एक वर्गाकार घास के मैदान के एक कोने पर लगे खूँटे से एक घोड़े को 5 m लंबी रस्सी से बाँध दिया गया है। ज्ञात कीजिए: (i) मैदान के उस भाग का क्षेत्रफल जहाँ घोड़ा घास चर सकता है। (ii) चरे जा सकने वाले क्षेत्रफल में वृद्धि, यदि घोड़े को 5 m लंबी रस्सी के स्थान पर 10 m लंबी रस्सी से बाँध दिया जाए। (π = 3.14 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) 5 m रस्सी के लिए:</strong></p>
+                    <p class="mb-2">घोड़ा एक चतुर्थांश (90°) क्षेत्र में घास चर सकता है।</p>
+                    <p class="mb-2">क्षेत्रफल = <div class="fraction"><span class="numerator">90°</span><span class="denominator">360°</span></div> × 3.14 × (5)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × 3.14 × 25 = <div class="fraction"><span class="numerator">78.5</span><span class="denominator">4</span></div> = 19.625 m²</p>
+                    <p class="mb-2"><strong>(ii) 10 m रस्सी के लिए:</strong></p>
+                    <p class="mb-2">क्षेत्रफल = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × 3.14 × (10)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × 3.14 × 100 = 78.5 m²</p>
+                    <p class="mb-2">क्षेत्रफल में वृद्धि = 78.5 − 19.625 = 58.875 m²</p>
+                    <p><strong>उत्तर:</strong> (i) 19.625 m² (ii) 58.875 m²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> मैदान वर्गाकार है, अतः घोड़ा केवल 90° के चतुर्थांश में घास चर सकता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक वृत्ताकार ब्रूच (brooch) को चाँदी के तार से बनाया जाना है जिसका व्यास 35 mm है। तार को वृत्त के 5 व्यासों को बनाने में भी प्रयुक्त किया गया है जो उसे 10 बराबर त्रिज्यखंडों में विभाजित करता है जैसा कि आकृति 11.9 में दर्शाया गया है। ज्ञात कीजिए: (i) कुल वांछित चाँदी के तार की लंबाई (ii) ब्रूच के प्रत्येक त्रिज्यखंड का क्षेत्रफल</h3>
+                <div class="step">
+                    <p class="mb-2">व्यास = 35 mm, अतः त्रिज्या r = <div class="fraction"><span class="numerator">35</span><span class="denominator">2</span></div> = 17.5 mm</p>
+                    <p class="mb-2"><strong>(i) चाँदी के तार की कुल लंबाई:</strong></p>
+                    <p class="mb-2">वृत्त की परिधि = 2πr = 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 17.5 = 110 mm</p>
+                    <p class="mb-2">5 व्यासों की कुल लंबाई = 5 × 35 = 175 mm</p>
+                    <p class="mb-2">कुल तार की लंबाई = 110 + 175 = 285 mm</p>
+                    <p class="mb-2"><strong>(ii) प्रत्येक त्रिज्यखंड का क्षेत्रफल:</strong></p>
+                    <p class="mb-2">प्रत्येक त्रिज्यखंड का कोण = <div class="fraction"><span class="numerator">360°</span><span class="denominator">10</span></div> = 36°</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">36°</span><span class="denominator">360°</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (17.5)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">10</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 306.25</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22 × 306.25</span><span class="denominator">70</span></div> = <div class="fraction"><span class="numerator">6737.5</span><span class="denominator">70</span></div> = 96.25 mm²</p>
+                    <p><strong>उत्तर:</strong> (i) 285 mm (ii) 96.25 mm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> कुल तार = परिधि + 5 व्यास। प्रत्येक त्रिज्यखंड का कोण 36° है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक छतरी में आठ ताने हैं, जो बराबर दूरी पर लगे हुए हैं (देखिए आकृति 11.10)। छतरी को 45 cm त्रिज्या वाला एक सपाट वृत्त मानते हुए, इसको दो क्रमागत तानों के बीच का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">छतरी में 8 ताने हैं, अतः 8 बराबर त्रिज्यखंड बनते हैं।</p>
+                    <p class="mb-2">प्रत्येक त्रिज्यखंड का कोण = <div class="fraction"><span class="numerator">360°</span><span class="denominator">8</span></div> = 45°</p>
+                    <p class="mb-2">त्रिज्या r = 45 cm</p>
+                    <p class="mb-2">दो क्रमागत तानों के बीच का क्षेत्रफल = <div class="fraction"><span class="numerator">45°</span><span class="denominator">360°</span></div> × πr²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">8</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (45)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">8</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 2025</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22 × 2025</span><span class="denominator">56</span></div> = <div class="fraction"><span class="numerator">44550</span><span class="denominator">56</span></div> = 795.54 cm² (लगभग)</p>
+                    <p><strong>उत्तर:</strong> क्षेत्रफल ≈ 795.54 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> 8 तानों से 8 बराबर त्रिज्यखंड बनते हैं, प्रत्येक 45° का।
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: किसी कार के दो वाइपर (Wipers) हैं, परस्पर कभी आच्छादित नहीं होते हैं। प्रत्येक वाइपर की पत्ती की लंबाई 25 cm है और 115° के कोण तक घूम कर सफाई कर सकता है। पत्तियों की प्रत्येक बुहार के साथ जितना क्षेत्रफल साफ हो जाता है, वह ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">प्रत्येक वाइपर की लंबाई = त्रिज्या r = 25 cm</p>
+                    <p class="mb-2">प्रत्येक वाइपर द्वारा घूमा गया कोण = 115°</p>
+                    <p class="mb-2">एक वाइपर द्वारा साफ किया गया क्षेत्रफल = <div class="fraction"><span class="numerator">115°</span><span class="denominator">360°</span></div> × πr²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">115</span><span class="denominator">360</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (25)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">115</span><span class="denominator">360</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 625</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">115 × 22 × 625</span><span class="denominator">2520</span></div> = <div class="fraction"><span class="numerator">1581250</span><span class="denominator">2520</span></div> = 627.48 cm²</p>
+                    <p class="mb-2">दोनों वाइपर द्वारा साफ किया गया कुल क्षेत्रफल = 2 × 627.48 = 1254.96 cm²</p>
+                    <p><strong>उत्तर:</strong> कुल क्षेत्रफल ≈ 1254.96 cm²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> प्रत्येक वाइपर एक त्रिज्यखंड में सफाई करता है, दोनों का क्षेत्रफल जोड़ दिया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: जहाजों को समुद्र में जलस्तर के नीचे स्थित चट्टानों की चेतावनी देने के लिए, एक लाइट हाउस (light house) 80° कोण वाले एक त्रिज्यखंड में 16.5 km की दूरी तक लाल रंग का प्रकाश फैलाता है। समुद्र के उस भाग का क्षेत्रफल ज्ञात कीजिए जिसमें जहाजों को चेतावनी दी जा सके। (π = 3.14 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">त्रिज्या r = 16.5 km, कोण θ = 80°</p>
+                    <p class="mb-2">क्षेत्रफल = <div class="fraction"><span class="numerator">80°</span><span class="denominator">360°</span></div> × 3.14 × (16.5)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">9</span></div> × 3.14 × 272.25</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">2 × 3.14 × 272.25</span><span class="denominator">9</span></div> = <div class="fraction"><span class="numerator">1709.73</span><span class="denominator">9</span></div> = 189.97 km²</p>
+                    <p><strong>उत्तर:</strong> क्षेत्रफल ≈ 189.97 km²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> लाइट हाउस 80° के त्रिज्यखंड में प्रकाश फैलाता है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: एक गोल मेजपोश पर छः समान डिजाइन बने हुए हैं जैसा कि आकृति 11.11 में दर्शाया गया है। यदि मेजपोश की त्रिज्या 28 cm है, तो ₹ 0.35 प्रति वर्ग सेंटीमीटर की दर से इन डिजाइनों को बनाने की लागत ज्ञात कीजिए। (√3 = 1.7 का प्रयोग कीजिए)</h3>
+                <div class="step">
+                    <p class="mb-2">मेजपोश की त्रिज्या r = 28 cm</p>
+                    <p class="mb-2">वृत्त का क्षेत्रफल = πr² = <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (28)²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 784 = 22 × 112 = 2464 cm²</p>
+                    <p class="mb-2">षट्भुज (hexagon) की भुजा = त्रिज्या = 28 cm</p>
+                    <p class="mb-2">षट्भुज का क्षेत्रफल = 6 × <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> × (28)²</p>
+                    <p class="mb-2">= 6 × <div class="fraction"><span class="numerator">1.7</span><span class="denominator">4</span></div> × 784</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">6 × 1.7 × 784</span><span class="denominator">4</span></div> = <div class="fraction"><span class="numerator">7996.8</span><span class="denominator">4</span></div> = 1999.2 cm²</p>
+                    <p class="mb-2">6 डिजाइनों का क्षेत्रफल = 2464 − 1999.2 = 464.8 cm²</p>
+                    <p class="mb-2">लागत = 464.8 × 0.35 = ₹ 162.68</p>
+                    <p><strong>उत्तर:</strong> लागत ≈ ₹ 162.68</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> 6 डिजाइन = वृत्त का क्षेत्रफल − षट्भुज का क्षेत्रफल। फिर दर से गुणा किया।
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: निम्नलिखित में सही उत्तर चुनिए: त्रिज्या R वाले वृत्त के उस त्रिज्यखंड का क्षेत्रफल जिसका कोण p° है, निम्नलिखित है:</h3>
+                <div class="step">
+                    <p class="mb-2">त्रिज्यखंड का क्षेत्रफल = <div class="fraction"><span class="numerator">θ</span><span class="denominator">360°</span></div> × πR²</p>
+                    <p class="mb-2">यहाँ θ = p°</p>
+                    <p class="mb-2">क्षेत्रफल = <div class="fraction"><span class="numerator">p</span><span class="denominator">360</span></div> × πR²</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">p</span><span class="denominator">720</span></div> × 2πR²</p>
+                    <p><strong>उत्तर:</strong> (C) <div class="fraction"><span class="numerator">p</span><span class="denominator">720</span></div> × 2πR²</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> त्रिज्यखंड के क्षेत्रफल के सूत्र में θ = p° रखकर विकल्पों से मिलाया।
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
