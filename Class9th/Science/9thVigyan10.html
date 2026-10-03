@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 विज्ञान - अध्याय 10: गुरुत्वाकर्षण</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2E8B57 0%, #4CAF50 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        h2 {
+            text-align: center;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+            color: #1a237e;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 18px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4caf50;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #1a237e;
+            display: flex;
+            align-items: flex-start;
+        }
+        .question-number {
+            background: #4caf50;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .answer {
+            color: #37474f;
+            font-size: 0.95rem;
+            text-align: justify;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 3px solid #78909c;
+        }
+        .answer b {
+            color: #1a237e;
+        }
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .question {
+                font-size: 0.95rem;
+            }
+            .answer {
+                font-size: 0.9rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+                padding: 12px;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .question {
+                flex-direction: column;
+            }
+            .question-number {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>गुरुत्वाकर्षण<br>अध्याय 10 | StudyScript</h1>
+
+        <h2>प्रश्न (10.1 गुरुत्वाकर्षण)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>गुरुत्वाकर्षण का सार्वत्रिक नियम बताइए।</span>
+            </div>
+            <div class="answer">
+                विश्व का प्रत्येक पिंड प्रत्येक अन्य पिंड को एक बल से आकर्षित करता है, जो दोनों पिंडों के द्रव्यमानों के गुणनफल के समानुपाती तथा उनके बीच की दूरी के वर्ग के व्युत्क्रमानुपाती होता है। यह बल दोनों पिंडों को मिलाने वाली रेखा की दिशा में लगता है।<br><br>
+                <b>सूत्र:</b> F = G × (M × m) / d²
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>पृथ्वी तथा उसकी सतह पर रखी किसी वस्तु के बीच लगने वाले गुरुत्वाकर्षण बल का परिमाण ज्ञात करने का सूत्र लिखिए।</span>
+            </div>
+            <div class="answer">
+                F = G × (M × m) / R²<br><br>
+                जहाँ, M = पृथ्वी का द्रव्यमान, m = वस्तु का द्रव्यमान, R = पृथ्वी की त्रिज्या, G = सार्वत्रिक गुरुत्वीय स्थिरांक।
+            </div>
+        </div>
+
+        <h2>प्रश्न (10.2 मुक्त पतन)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>मुक्त पतन से आप क्या समझते हैं?</span>
+            </div>
+            <div class="answer">
+                जब कोई वस्तु पृथ्वी की ओर केवल गुरुत्वीय बल के कारण गिरती है, तो उसकी इस गति को <b>मुक्त पतन</b> कहते हैं। मुक्त पतन में वस्तु का प्रारंभिक वेग शून्य होता है तथा वह गुरुत्वीय त्वरण (g) से त्वरित होती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>गुरुत्वीय त्वरण से आप क्या समझते हैं?</span>
+            </div>
+            <div class="answer">
+                पृथ्वी के गुरुत्वीय बल के कारण किसी वस्तु में उत्पन्न त्वरण को <b>गुरुत्वीय त्वरण</b> कहते हैं। इसे 'g' से निर्दिष्ट करते हैं।<br><br>
+                पृथ्वी की सतह पर इसका मान लगभग <b>9.8 m s⁻²</b> होता है।<br><br>
+                g = GM/R²
+            </div>
+        </div>
+
+        <h2>प्रश्न (10.4 भार)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>किसी वस्तु के द्रव्यमान तथा भार में क्या अंतर है?</span>
+            </div>
+            <div class="answer">
+                <b>द्रव्यमान:</b> वस्तु में उपस्थित पदार्थ की मात्रा। यह अदिश राशि है, सभी स्थानों पर स्थिर रहता है। मात्रक—किलोग्राम (kg)।<br><br>
+                <b>भार:</b> वह बल जिससे पृथ्वी वस्तु को अपनी ओर आकर्षित करती है। यह सदिश राशि है, स्थान के साथ बदलता है। मात्रक—न्यूटन (N)।<br><br>
+                W = mg
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>किसी वस्तु का चंद्रमा पर भार पृथ्वी पर इसके भार का 1/6 गुणा क्यों होता है?</span>
+            </div>
+            <div class="answer">
+                चंद्रमा का द्रव्यमान पृथ्वी के द्रव्यमान का लगभग 1/81 है तथा चंद्रमा की त्रिज्या पृथ्वी की त्रिज्या की लगभग 1/4 है।<br><br>
+                g = GM/R² के अनुसार, चंद्रमा पर g का मान पृथ्वी के g का लगभग 1/6 होता है।<br><br>
+                चूँकि भार W = mg, अतः चंद्रमा पर वस्तु का भार पृथ्वी पर उसके भार का <b>1/6 गुणा</b> होता है।
+            </div>
+        </div>
+
+        <h2>प्रश्न (10.5 दाब तथा उत्प्लावकता)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>एक पतली तथा मजबूत डोरी से बने पट्टे की सहायता से स्कूल बैग को उठाना कठिन होता है, क्यों?</span>
+            </div>
+            <div class="answer">
+                पतली डोरी से बने पट्टे का संपर्क क्षेत्रफल कम होता है। दाब = बल/क्षेत्रफल के अनुसार, कम क्षेत्रफल पर अधिक दाब पड़ता है, जिससे कंधे पर दर्द होता है। अतः बैग उठाना कठिन होता है। चौड़े पट्टे से दाब कम होता है और बैग उठाना आसान होता है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>उत्प्लावकता से आप क्या समझते हैं?</span>
+            </div>
+            <div class="answer">
+                जब किसी वस्तु को किसी तरल में डुबोया जाता है, तो तरल वस्तु पर ऊपर की ओर एक बल लगाता है। इस बल को <b>उत्प्लावन बल</b> या <b>उत्प्लावकता</b> कहते हैं। यह बल वस्तु द्वारा हटाए गए तरल के भार के बराबर होता है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>पानी की सतह पर रखने पर कोई वस्तु क्यों तैरती या डूबती है?</span>
+            </div>
+            <div class="answer">
+                यदि वस्तु का घनत्व पानी के घनत्व से <b>कम</b> होता है, तो उत्प्लावन बल वस्तु के भार से अधिक होता है और वस्तु <b>तैरती</b> है।<br><br>
+                यदि वस्तु का घनत्व पानी के घनत्व से <b>अधिक</b> होता है, तो उत्प्लावन बल वस्तु के भार से कम होता है और वस्तु <b>डूब</b> जाती है।
+            </div>
+        </div>
+
+        <h2>प्रश्न (10.6 आर्किमिडीज का सिद्धांत)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>एक तुला (weighing machine) पर आप अपना द्रव्यमान 42 kg नोट करते हैं। क्या आपका द्रव्यमान 42 kg से अधिक है या कम?</span>
+            </div>
+            <div class="answer">
+                तुला वास्तव में भार मापती है और उसे द्रव्यमान में बदल देती है (g के मान से भाग देकर)। यदि तुला 42 kg दर्शाती है, तो आपका वास्तविक द्रव्यमान भी लगभग <b>42 kg</b> ही है। कोई विशेष अंतर नहीं होता।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>आपके पास एक रुई का बोरा तथा एक लोहे की छड़ है। तुला पर मापने पर दोनों 100 kg द्रव्यमान दर्शाते हैं। वास्तविकता में एक-दूसरे से भारी है। क्या आप बता सकते हैं कि कौन-सा भारी है और क्यों?</span>
+            </div>
+            <div class="answer">
+                तुला द्रव्यमान दर्शाती है, भार नहीं। दोनों का द्रव्यमान समान (100 kg) है। अतः दोनों का भार भी समान होगा क्योंकि g समान है।<br><br>
+                लेकिन यदि 'भारी' से तात्पर्य घनत्व से है, तो लोहे की छड़ का घनत्व अधिक होता है, अतः वह अधिक 'भारी' महसूस हो सकती है।
+            </div>
+        </div>
+
+        <h2>अभ्यास</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>यदि दो वस्तुओं के बीच की दूरी को आधा कर दिया जाए तो उनके बीच गुरुत्वाकर्षण बल किस प्रकार बदलेगा?</span>
+            </div>
+            <div class="answer">
+                F ∝ 1/d²<br>
+                दूरी आधी करने पर बल <b>चार गुना</b> हो जाएगा।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>सभी वस्तुओं पर लगने वाला गुरुत्वीय बल उनके द्रव्यमान के समानुपाती होता है। फिर एक भारी वस्तु हलकी वस्तु के मुकाबले तेजी से क्यों नहीं गिरती?</span>
+            </div>
+            <div class="answer">
+                गुरुत्वीय त्वरण g = F/m = GM/R², जो द्रव्यमान पर निर्भर नहीं करता। अतः सभी वस्तुएँ समान त्वरण से गिरती हैं (वायु प्रतिरोध की उपेक्षा करने पर)।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>पृथ्वी तथा उसकी सतह पर रखी किसी 1 kg की वस्तु के बीच गुरुत्वीय बल का परिमाण क्या होगा? (पृथ्वी का द्रव्यमान 6 × 10²⁴ kg है तथा पृथ्वी की त्रिज्या 6.4 × 10⁶ m है।)</span>
+            </div>
+            <div class="answer">
+                F = G M m / R²<br>
+                = (6.67 × 10⁻¹¹ × 6 × 10²⁴ × 1) / (6.4 × 10⁶)²<br>
+                = (40.02 × 10¹³) / (40.96 × 10¹²)<br>
+                ≈ <b>9.8 N</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>पृथ्वी तथा चंद्रमा एक-दूसरे को गुरुत्वीय बल से आकर्षित करते हैं। क्या पृथ्वी जिस बल से चंद्रमा को आकर्षित करती है वह बल, उस बल से जिससे चंद्रमा पृथ्वी को आकर्षित करता है बड़ा है या छोटा है या बराबर है? बताइए क्यों?</span>
+            </div>
+            <div class="answer">
+                <b>बराबर</b>, क्योंकि गुरुत्वाकर्षण का सार्वत्रिक नियम क्रिया-प्रतिक्रिया युग्म देता है। न्यूटन के तृतीय नियम के अनुसार, दोनों बल परिमाण में समान और दिशा में विपरीत होते हैं।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">5</span>
+                <span>यदि चंद्रमा पृथ्वी को आकर्षित करता है, तो पृथ्वी चंद्रमा की ओर गति क्यों नहीं करती?</span>
+            </div>
+            <div class="answer">
+                चूँकि पृथ्वी का द्रव्यमान चंद्रमा से बहुत अधिक है, समान बल के लिए पृथ्वी का त्वरण (a = F/M) बहुत कम होता है, अतः गति नगण्य होती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">6</span>
+                <span>दो वस्तुओं के बीच लगने वाले गुरुत्वाकर्षण बल का क्या होगा, यदि<br>
+                (i) एक वस्तु का द्रव्यमान दोगुना कर दिया जाए?<br>
+                (ii) वस्तुओं के बीच की दूरी दोगुनी अथवा तीन गुनी कर दी जाए?<br>
+                (iii) दोनों वस्तुओं के द्रव्यमान दोगुने कर दिए जाएँ?</span>
+            </div>
+            <div class="answer">
+                <b>(i)</b> बल दोगुना हो जाएगा।<br>
+                <b>(ii)</b> दूरी दोगुनी करने पर बल 1/4 हो जाएगा; तीन गुनी करने पर 1/9 हो जाएगा।<br>
+                <b>(iii)</b> बल चार गुना हो जाएगा।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">7</span>
+                <span>गुरुत्वाकर्षण के सार्वत्रिक नियम के क्या महत्व हैं?</span>
+            </div>
+            <div class="answer">
+                यह नियम अनेक परिघटनाओं की व्याख्या करता है:<br>
+                (i) हमें पृथ्वी से बाँधे रखने वाला बल।<br>
+                (ii) पृथ्वी के चारों ओर चंद्रमा की गति।<br>
+                (iii) सूर्य के चारों ओर ग्रहों की गति।<br>
+                (iv) चंद्रमा तथा सूर्य के कारण ज्वार-भाटा।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">8</span>
+                <span>मुक्त पतन का त्वरण क्या है?</span>
+            </div>
+            <div class="answer">
+                मुक्त पतन में वस्तु में उत्पन्न त्वरण, जो गुरुत्वीय बल के कारण होता है, <b>गुरुत्वीय त्वरण (g)</b> कहलाता है। पृथ्वी की सतह पर इसका मान लगभग <b>9.8 m s⁻²</b> है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">9</span>
+                <span>पृथ्वी तथा किसी वस्तु के बीच गुरुत्वीय बल को हम क्या कहेंगे?</span>
+            </div>
+            <div class="answer">
+                उस वस्तु का <b>भार</b>।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">10</span>
+                <span>एक व्यक्ति A अपने एक मित्र के निर्देश पर ध्रुवों पर कुछ ग्राम सोना खरीदता है। वह इस सोने को विषुवत वृत्त पर अपने मित्र को देता है। क्या उसका मित्र खरीदे हुए सोने के भार से संतुष्ट होगा? यदि नहीं, तो क्यों? (संकेत: ध्रुवों पर g का मान विषुवत वृत्त की अपेक्षा अधिक है।)</span>
+            </div>
+            <div class="answer">
+                <b>नहीं</b>, क्योंकि ध्रुवों पर g का मान अधिक होता है, अतः वहाँ सोने का भार अधिक होगा। विषुवत वृत्त पर g कम होने से भार कम हो जाएगा। मित्र को कम भार मिलेगा, अतः वह संतुष्ट नहीं होगा।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">11</span>
+                <span>एक कागज की शीट, उसी प्रकार की शीट को मरोड़ कर बनाई गई गेंद से धीमी क्यों गिरती है?</span>
+            </div>
+            <div class="answer">
+                कागज की शीट का पृष्ठीय क्षेत्रफल अधिक होने के कारण वायु प्रतिरोध अधिक होता है, जबकि मरोड़ी गई गेंद का क्षेत्रफल कम होने से वायु प्रतिरोध कम होता है। अतः शीट धीमी गिरती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">12</span>
+                <span>चंद्रमा की सतह पर गुरुत्वीय बल, पृथ्वी की सतह पर गुरुत्वीय बल की अपेक्षा 1/6 गुणा है। एक 10 kg की वस्तु का चंद्रमा पर तथा पृथ्वी पर न्यूटन में भार क्या होगा?</span>
+            </div>
+            <div class="answer">
+                पृथ्वी पर भार = m g = 10 × 9.8 = <b>98 N</b><br>
+                चंद्रमा पर भार = 98 / 6 ≈ <b>16.33 N</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">13</span>
+                <span>एक गेंद ऊर्ध्वाधर दिशा में ऊपर की ओर 49 m/s के वेग से फेंकी जाती है। परिकलन कीजिए<br>
+                (i) अधिकतम ऊँचाई जहाँ तक कि गेंद पहुँचती है।<br>
+                (ii) पृथ्वी की सतह पर वापस लौटने में लिया गया कुल समय।</span>
+            </div>
+            <div class="answer">
+                u = 49 m/s, v = 0, a = -9.8 m/s²<br><br>
+                <b>(i)</b> v² = u² + 2as<br>
+                0 = 49² - 2 × 9.8 × s<br>
+                s = 49² / (2 × 9.8) = 2401 / 19.6 = <b>122.5 m</b><br><br>
+                <b>(ii)</b> चढ़ने का समय t = u/g = 49/9.8 = 5 s<br>
+                कुल समय = 2t = <b>10 s</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">14</span>
+                <span>19.6 m ऊँची एक मीनार की चोटी से एक पत्थर छोड़ा जाता है। पृथ्वी पर पहुँचने से पहले इसका अंतिम वेग ज्ञात कीजिए।</span>
+            </div>
+            <div class="answer">
+                u = 0, s = 19.6 m, a = 9.8 m/s²<br>
+                v² = u² + 2as<br>
+                v² = 0 + 2 × 9.8 × 19.6 = 384.16<br>
+                v = √384.16 = <b>19.6 m/s</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">15</span>
+                <span>कोई पत्थर ऊर्ध्वाधर दिशा में ऊपर की ओर 40 m/s के प्रारंभिक वेग से फेंका गया है। g = 10 m/s² लेते हुए ग्राफ की सहायता से पत्थर द्वारा पहुँची अधिकतम ऊँचाई ज्ञात कीजिए। नेट विस्थापन तथा पत्थर द्वारा चली गई कुल दूरी कितनी होगी?</span>
+            </div>
+            <div class="answer">
+                u = 40 m/s, v = 0, a = -10 m/s²<br><br>
+                अधिकतम ऊँचाई h = u² / (2g) = 40² / (2 × 10) = 1600 / 20 = <b>80 m</b><br><br>
+                नेट विस्थापन = <b>0</b> (क्योंकि पत्थर वापस उसी स्थान पर आ जाता है)<br>
+                कुल दूरी = 80 + 80 = <b>160 m</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">16</span>
+                <span>पृथ्वी तथा सूर्य के बीच गुरुत्वाकर्षण बल का परिकलन कीजिए। दिया है, पृथ्वी का द्रव्यमान = 6 × 10²⁴ kg तथा सूर्य का द्रव्यमान = 2 × 10³⁰ kg। दोनों के बीच औसत दूरी 1.5 × 10¹¹ m है।</span>
+            </div>
+            <div class="answer">
+                F = G M m / d²<br>
+                = (6.67 × 10⁻¹¹ × 6 × 10²⁴ × 2 × 10³⁰) / (1.5 × 10¹¹)²<br>
+                = (80.04 × 10⁴³) / (2.25 × 10²²)<br>
+                = <b>3.56 × 10²² N</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">17</span>
+                <span>कोई पत्थर 100 m ऊँची किसी मीनार की चोटी से गिराया गया और उसी समय कोई दूसरा पत्थर 25 m/s के वेग से ऊर्ध्वाधर दिशा में ऊपर की ओर फेंका गया। परिकलन कीजिए कि दोनों पत्थर कब और कहाँ मिलेंगे।</span>
+            </div>
+            <div class="answer">
+                मान लें वे t समय बाद मिलते हैं।<br><br>
+                पहला पत्थर (नीचे गिरता हुआ): s₁ = ½ g t²<br>
+                दूसरा पत्थर (ऊपर फेंका गया): s₂ = 25t - ½ g t²<br><br>
+                मिलने पर: s₁ + s₂ = 100<br>
+                ½ g t² + 25t - ½ g t² = 100<br>
+                25t = 100<br>
+                t = <b>4 s</b><br><br>
+                स्थान: पहला पत्थर ½ × 9.8 × 16 = <b>78.4 m</b> नीचे<br>
+                दूसरा पत्थर 25 × 4 - ½ × 9.8 × 16 = 100 - 78.4 = <b>21.6 m</b> ऊपर<br><br>
+                अतः वे मीनार से 78.4 m नीचे (या 21.6 m ऊपर) मिलेंगे।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">18</span>
+                <span>ऊर्ध्वाधर दिशा में ऊपर की ओर फेंकी गई एक गेंद 6 s पश्चात् फेंकने वाले के पास लौट आती है। ज्ञात कीजिए<br>
+                (a) यह किस वेग से ऊपर फेंकी गई;<br>
+                (b) गेंद द्वारा पहुँची गई अधिकतम ऊँचाई; तथा<br>
+                (c) 4 s पश्चात् गेंद की स्थिति।</span>
+            </div>
+            <div class="answer">
+                कुल समय = 6 s, अतः चढ़ने का समय = 3 s<br><br>
+                <b>(a)</b> u = g t = 9.8 × 3 = <b>29.4 m/s</b><br><br>
+                <b>(b)</b> h = u² / (2g) = (29.4)² / (2 × 9.8) = 864.36 / 19.6 = <b>44.1 m</b><br><br>
+                <b>(c)</b> 4 s पर: s = ut - ½ g t² = 29.4 × 4 - ½ × 9.8 × 16<br>
+                = 117.6 - 78.4 = <b>39.2 m</b> ऊपर
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">19</span>
+                <span>किसी द्रव में डुबोई गई वस्तु पर उत्प्लावन बल किस दिशा में कार्य करता है?</span>
+            </div>
+            <div class="answer">
+                <b>ऊपर की दिशा में।</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">20</span>
+                <span>पानी के भीतर किसी प्लास्टिक के गुटके को छोड़ने पर यह पानी की सतह पर क्यों आ जाता है?</span>
+            </div>
+            <div class="answer">
+                क्योंकि प्लास्टिक का घनत्व पानी के घनत्व से कम होता है, अतः उत्प्लावन बल उसके भार से अधिक होता है और वह ऊपर आ जाता है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">21</span>
+                <span>50 g के किसी पदार्थ का आयतन 20 cm³ है। यदि पानी का घनत्व 1 g cm⁻³ हो, तो पदार्थ तैरेगा या डूबेगा?</span>
+            </div>
+            <div class="answer">
+                पदार्थ का घनत्व = द्रव्यमान / आयतन = 50 / 20 = <b>2.5 g cm⁻³</b><br><br>
+                यह पानी के घनत्व (1 g cm⁻³) से अधिक है, अतः पदार्थ <b>डूबेगा</b>।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">22</span>
+                <span>500 g के एक मोहरबंद पैकेट का आयतन 350 cm³ है। पैकेट 1 g cm⁻³ घनत्व वाले पानी में तैरेगा या डूबेगा? इस पैकेट द्वारा विस्थापित पानी का द्रव्यमान कितना होगा?</span>
+            </div>
+            <div class="answer">
+                पैकेट का घनत्व = 500 / 350 ≈ <b>1.43 g cm⁻³</b><br><br>
+                यह पानी के घनत्व (1 g cm⁻³) से अधिक है, अतः पैकेट <b>डूबेगा</b>।<br><br>
+                विस्थापित पानी का आयतन = 350 cm³ (पूरा डूबने पर)<br>
+                विस्थापित पानी का द्रव्यमान = 350 × 1 = <b>350 g</b>
+            </div>
+        </div>
+
+        <div class="note">
+            नोट: यदि आपको किसी प्रश्न के उत्तर में संदेह है तो आप ChatBox में हमारे शिक्षकों से बात कर सकते हैं।
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

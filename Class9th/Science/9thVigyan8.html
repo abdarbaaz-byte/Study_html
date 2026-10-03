@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 विज्ञान - अध्याय 8: गति</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2E8B57 0%, #4CAF50 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        h2 {
+            text-align: center;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+            color: #1a237e;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 18px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4caf50;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #1a237e;
+            display: flex;
+            align-items: flex-start;
+        }
+        .question-number {
+            background: #4caf50;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .answer {
+            color: #37474f;
+            font-size: 0.95rem;
+            text-align: justify;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 3px solid #78909c;
+        }
+        .answer b {
+            color: #1a237e;
+        }
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .question {
+                font-size: 0.95rem;
+            }
+            .answer {
+                font-size: 0.9rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+                padding: 12px;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .question {
+                flex-direction: column;
+            }
+            .question-number {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>गति<br>अध्याय 8 | StudyScript</h1>
+
+        <h2>प्रश्न (8.1 गति का वर्णन)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>एक वस्तु के द्वारा कुछ दूरी तय की गई। क्या इसका विस्थापन शून्य हो सकता है? अगर हाँ, तो अपने उत्तर को उदाहरण के द्वारा समझाएँ।</span>
+            </div>
+            <div class="answer">
+                <b>हाँ</b>, विस्थापन शून्य हो सकता है, भले ही वस्तु ने कुछ दूरी तय की हो।<br><br>
+                <b>उदाहरण:</b> यदि कोई व्यक्ति एक वृत्ताकार पथ पर चलकर पुनः अपनी प्रारंभिक स्थिति पर लौट आता है, तो उसका विस्थापन शून्य होगा, क्योंकि प्रारंभिक और अंतिम स्थिति एक ही है। परंतु उसके द्वारा तय की गई दूरी वृत्त की परिधि के बराबर होगी।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>एक किसान 10 m की भुजा वाले एक वर्गाकार खेत की सीमा पर 40 s में चक्कर लगाता है। 2 minute 20 s के बाद किसान के विस्थापन का परिमाण क्या होगा?</span>
+            </div>
+            <div class="answer">
+                वर्गाकार खेत की भुजा = 10 m<br>
+                परिमाप = 4 × 10 = 40 m<br>
+                किसान 40 s में एक चक्कर पूरा करता है।<br><br>
+                2 min 20 s = 120 s + 20 s = 140 s<br>
+                140 s में चक्करों की संख्या = 140 ÷ 40 = 3.5 चक्कर<br><br>
+                3 चक्कर पूरे करने पर किसान प्रारंभिक बिंदु पर वापस आ जाता है। फिर आधा चक्कर (0.5) लगाता है, जिससे वह वर्ग के विकर्ण के विपरीत कोने पर पहुँचता है।<br><br>
+                विकर्ण = भुजा × √2 = 10√2 ≈ 14.14 m<br>
+                अतः विस्थापन का परिमाण = <b>14.14 m</b> (लगभग)
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>विस्थापन के लिए निम्न में कौन सही है?<br>(a) यह शून्य नहीं हो सकता है।<br>(b) इसका परिमाण वस्तु के द्वारा तय की गई दूरी से अधिक है।</span>
+            </div>
+            <div class="answer">
+                दोनों कथन <b>गलत</b> हैं।<br><br>
+                (a) विस्थापन शून्य हो सकता है (जब वस्तु प्रारंभिक स्थान पर वापस आ जाए)।<br>
+                (b) विस्थापन का परिमाण सदैव तय की गई दूरी से <b>कम या बराबर</b> होता है, अधिक नहीं।
+            </div>
+        </div>
+
+        <h2>प्रश्न (8.2 गति की दर का मापन)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>चाल एवं वेग में अंतर बताइए।</span>
+            </div>
+            <div class="answer">
+                <b>चाल (Speed):</b> किसी वस्तु द्वारा इकाई समय में तय की गई दूरी को चाल कहते हैं। यह एक अदिश राशि है, अर्थात् इसमें केवल परिमाण होता है, दिशा नहीं।<br><br>
+                <b>वेग (Velocity):</b> किसी वस्तु द्वारा इकाई समय में एक निश्चित दिशा में तय किया गया विस्थापन वेग कहलाता है। यह एक सदिश राशि है, अर्थात् इसमें परिमाण और दिशा दोनों होते हैं।<br><br>
+                <b>अंतर:</b> चाल केवल परिमाण बताती है, जबकि वेग परिमाण के साथ-साथ दिशा भी बताता है। चाल सदैव धनात्मक होती है, जबकि वेग धनात्मक, ऋणात्मक या शून्य हो सकता है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>किस अवस्था में किसी वस्तु के औसत वेग का परिमाण उसकी औसत चाल के बराबर होगा?</span>
+            </div>
+            <div class="answer">
+                जब वस्तु <b>एक सीधी रेखा में एक ही दिशा में</b> गति करती है, तब उसके औसत वेग का परिमाण उसकी औसत चाल के बराबर होता है।<br><br>
+                क्योंकि इस स्थिति में तय की गई दूरी विस्थापन के परिमाण के बराबर होती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>एक गाडी का ओडोमीटर क्या मापता है?</span>
+            </div>
+            <div class="answer">
+                एक गाड़ी का <b>ओडोमीटर</b> गाड़ी द्वारा तय की गई <b>कुल दूरी</b> को मापता है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>जब वस्तु एकसमान गति में होती है तब इसका मार्ग कैसा दिखाई पड़ता है?</span>
+            </div>
+            <div class="answer">
+                जब वस्तु एकसमान गति में होती है, तो उसका <b>दूरी-समय ग्राफ एक सरल रेखा</b> होता है। यह दर्शाता है कि समान समयांतराल में समान दूरी तय होती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">5</span>
+                <span>एक प्रयोग के दौरान, अंतरिक्षयान से एक सिग्नल को पृथ्वी पर पहुँचने में 5 मिनट का समय लगता है। पृथ्वी पर स्थित स्टेशन से उस अंतरिक्षयान की दूरी क्या है? (सिग्नल की चाल = प्रकाश की चाल = 3 × 10<sup>8</sup> m s<sup>-1</sup>)</span>
+            </div>
+            <div class="answer">
+                दिया है: समय t = 5 min = 5 × 60 = 300 s<br>
+                सिग्नल की चाल v = 3 × 10<sup>8</sup> m s<sup>-1</sup><br><br>
+                दूरी = चाल × समय<br>
+                s = 3 × 10<sup>8</sup> × 300<br>
+                s = 9 × 10<sup>10</sup> m<br><br>
+                अतः अंतरिक्षयान की दूरी = <b>9 × 10<sup>10</sup> m</b>
+            </div>
+        </div>
+
+        <h2>प्रश्न (8.3 वेग में परिवर्तन की दर)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>आप किसी वस्तु के बारे में कब कहेंगे कि<br>(i) वह एकसमान त्वरण से गति में है?<br>(ii) वह असमान त्वरण से गति में है?</span>
+            </div>
+            <div class="answer">
+                <b>(i) एकसमान त्वरण:</b> जब वस्तु के वेग में समान समयांतराल में समान परिवर्तन होता है, तो वस्तु एकसमान त्वरण से गति कर रही होती है।<br><br>
+                <b>(ii) असमान त्वरण:</b> जब वस्तु के वेग में समान समयांतराल में असमान परिवर्तन होता है, तो वस्तु असमान त्वरण से गति कर रही होती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>एक बस की गति 5 s में 80 km h<sup>-1</sup> से घटकर 60 km h<sup>-1</sup> हो जाती है। बस का त्वरण ज्ञात कीजिए।</span>
+            </div>
+            <div class="answer">
+                प्रारंभिक वेग u = 80 km h<sup>-1</sup> = 80 × (5/18) = 22.22 m s<sup>-1</sup><br>
+                अंतिम वेग v = 60 km h<sup>-1</sup> = 60 × (5/18) = 16.67 m s<sup>-1</sup><br>
+                समय t = 5 s<br><br>
+                त्वरण a = (v - u) / t<br>
+                a = (16.67 - 22.22) / 5<br>
+                a = -5.55 / 5<br>
+                a = -1.11 m s<sup>-2</sup><br><br>
+                अतः बस का त्वरण = <b>-1.11 m s<sup>-2</sup></b> (ऋणात्मक चिह्न मंदन को दर्शाता है)
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>एक रेलगाड़ी स्टेशन से चलना प्रारंभ करती है और एकसमान त्वरण के साथ चलते हुए 10 मिनट में 40 km h<sup>-1</sup> की चाल प्राप्त करती है। इसका त्वरण ज्ञात कीजिए।</span>
+            </div>
+            <div class="answer">
+                प्रारंभिक वेग u = 0<br>
+                अंतिम वेग v = 40 km h<sup>-1</sup> = 40 × (5/18) = 11.11 m s<sup>-1</sup><br>
+                समय t = 10 min = 10 × 60 = 600 s<br><br>
+                त्वरण a = (v - u) / t<br>
+                a = (11.11 - 0) / 600<br>
+                a = 0.0185 m s<sup>-2</sup><br><br>
+                अतः रेलगाड़ी का त्वरण = <b>0.0185 m s<sup>-2</sup></b>
+            </div>
+        </div>
+
+        <h2>प्रश्न (8.4 गति का ग्राफीय प्रदर्शन)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>किसी वस्तु के एकसमान व असमान गति के लिए समय-दूरी ग्राफ की प्रकृति क्या होती है?</span>
+            </div>
+            <div class="answer">
+                <b>एकसमान गति:</b> समय-दूरी ग्राफ एक <b>सरल रेखा</b> होती है।<br>
+                <b>असमान गति:</b> समय-दूरी ग्राफ एक <b>वक्र रेखा</b> होती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>किसी वस्तु की गति के विषय में आप क्या कह सकते हैं, जिसका दूरी-समय ग्राफ समय अक्ष के समानांतर एक सरल रेखा है?</span>
+            </div>
+            <div class="answer">
+                यदि दूरी-समय ग्राफ समय अक्ष के समानांतर एक सरल रेखा है, तो इसका अर्थ है कि समय के साथ दूरी में कोई परिवर्तन नहीं हो रहा है।<br><br>
+                अतः वस्तु <b>विरामावस्था में</b> है (स्थिर है)।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>किसी वस्तु की गति के विषय में आप क्या कह सकते हैं, जिसका चाल-समय ग्राफ समय अक्ष के समानांतर एक सरल रेखा है?</span>
+            </div>
+            <div class="answer">
+                यदि चाल-समय ग्राफ समय अक्ष के समानांतर एक सरल रेखा है, तो इसका अर्थ है कि समय के साथ चाल में कोई परिवर्तन नहीं हो रहा है।<br><br>
+                अतः वस्तु <b>एकसमान चाल</b> से गति कर रही है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>वेग-समय ग्राफ के नीचे के क्षेत्र से मापी गई राशि क्या होती है?</span>
+            </div>
+            <div class="answer">
+                वेग-समय ग्राफ के नीचे के क्षेत्रफल से <b>विस्थापन</b> (या तय की गई दूरी) मापी जाती है।
+            </div>
+        </div>
+
+        <h2>प्रश्न (8.5 ग्राफीय विधि से गति के समीकरण)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>कोई बस विरामावस्था से चलना प्रारंभ करती है तथा 2 मिनट तक 0.1 m s<sup>-2</sup> के एकसमान त्वरण से चलती है। परिकलन कीजिए, (a) प्राप्त की गई चाल तथा (b) तय की गई दूरी।</span>
+            </div>
+            <div class="answer">
+                दिया है: u = 0, a = 0.1 m s<sup>-2</sup>, t = 2 min = 120 s<br><br>
+                (a) v = u + at<br>
+                v = 0 + 0.1 × 120<br>
+                v = 12 m s<sup>-1</sup><br><br>
+                (b) s = ut + ½ at²<br>
+                s = 0 + ½ × 0.1 × (120)²<br>
+                s = ½ × 0.1 × 14400<br>
+                s = 720 m<br><br>
+                अतः प्राप्त चाल = <b>12 m s<sup>-1</sup></b> तथा तय की गई दूरी = <b>720 m</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>कोई रेलगाड़ी 90 km h<sup>-1</sup> की चाल से चल रही है। ब्रेक लगाए जाने पर वह -0.5 m s<sup>-2</sup> का एकसमान त्वरण उत्पन्न करती है। रेलगाड़ी विरामावस्था में आने के पहले कितनी दूरी तय करेगी?</span>
+            </div>
+            <div class="answer">
+                u = 90 km h<sup>-1</sup> = 90 × (5/18) = 25 m s<sup>-1</sup><br>
+                v = 0 (विरामावस्था)<br>
+                a = -0.5 m s<sup>-2</sup><br><br>
+                v² = u² + 2as<br>
+                0 = (25)² + 2 × (-0.5) × s<br>
+                0 = 625 - s<br>
+                s = 625 m<br><br>
+                अतः रेलगाड़ी विरामावस्था में आने से पहले <b>625 m</b> दूरी तय करेगी।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>एक ट्रॉली एक आनत तल पर 2 m s<sup>-2</sup> के त्वरण से नीचे जा रही है। गति प्रारंभ करने के 3 s के पश्चात् उसका वेग क्या होगा?</span>
+            </div>
+            <div class="answer">
+                u = 0, a = 2 m s<sup>-2</sup>, t = 3 s<br><br>
+                v = u + at<br>
+                v = 0 + 2 × 3<br>
+                v = 6 m s<sup>-1</sup><br><br>
+                अतः ट्रॉली का वेग = <b>6 m s<sup>-1</sup></b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>एक रेसिंग कार का एकसमान त्वरण 4 m s<sup>-2</sup> है। गति प्रारंभ करने के 10 s पश्चात् वह कितनी दूरी तय करेगी?</span>
+            </div>
+            <div class="answer">
+                u = 0, a = 4 m s<sup>-2</sup>, t = 10 s<br><br>
+                s = ut + ½ at²<br>
+                s = 0 + ½ × 4 × (10)²<br>
+                s = 2 × 100<br>
+                s = 200 m<br><br>
+                अतः कार 10 s में <b>200 m</b> दूरी तय करेगी।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">5</span>
+                <span>किसी पत्थर को ऊर्ध्वाधर ऊपर की ओर 5 m s<sup>-1</sup> के वेग से फेंका जाता है। यदि गति के दौरान पत्थर का नीचे की ओर दिशा त्वरण 10 m s<sup>-2</sup> है, तो पत्थर के द्वारा कितनी ऊँचाई प्राप्त की गई तथा उसे वहाँ पहुँचने में कितना समय लगा?</span>
+            </div>
+            <div class="answer">
+                u = 5 m s<sup>-1</sup> (ऊपर की ओर)<br>
+                v = 0 (उच्चतम बिंदु पर)<br>
+                a = -10 m s<sup>-2</sup> (नीचे की ओर, गति के विपरीत)<br><br>
+                (i) v² = u² + 2as<br>
+                0 = (5)² + 2 × (-10) × s<br>
+                0 = 25 - 20s<br>
+                20s = 25<br>
+                s = 1.25 m<br><br>
+                (ii) v = u + at<br>
+                0 = 5 - 10t<br>
+                10t = 5<br>
+                t = 0.5 s<br><br>
+                अतः पत्थर <b>1.25 m</b> ऊँचाई प्राप्त करेगा और वहाँ पहुँचने में <b>0.5 s</b> का समय लगेगा।
+            </div>
+        </div>
+
+        <h2>प्रश्न (8.6 एकसमान वृत्तीय गति)</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>एक एथलीट वृत्तीय रास्ते, जिसका व्यास 200 m है, का एक चक्कर 40 s में लगाता है। 2 min 20 s के बाद वह कितनी दूरी तय करेगा और उसका विस्थापन क्या होगा?</span>
+            </div>
+            <div class="answer">
+                व्यास = 200 m, त्रिज्या r = 100 m<br>
+                परिधि = 2πr = 2 × 3.14 × 100 = 628 m<br>
+                एक चक्कर का समय = 40 s<br><br>
+                2 min 20 s = 140 s<br>
+                चक्करों की संख्या = 140 ÷ 40 = 3.5<br><br>
+                तय की गई दूरी = 3.5 × 628 = <b>2198 m</b><br><br>
+                3.5 चक्कर में वह प्रारंभिक बिंदु से आधे चक्कर की दूरी पर होगा, अर्थात् व्यास के विपरीत सिरे पर।<br>
+                अतः विस्थापन = व्यास = <b>200 m</b>
+            </div>
+        </div>
+
+        <h2>अभ्यास</h2>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">1</span>
+                <span>एक एथलीट वृत्तीय रास्ते, जिसका व्यास 200 m है, का एक चक्कर 40 s में लगाता है। 2 min 20 s के बाद वह कितनी दूरी तय करेगा और उसका विस्थापन क्या होगा?</span>
+            </div>
+            <div class="answer">
+                (यह प्रश्न 8.6 के प्रश्न 1 के समान है।)<br><br>
+                व्यास = 200 m, त्रिज्या = 100 m<br>
+                परिधि = 2πr = 628 m<br>
+                2 min 20 s = 140 s में चक्कर = 140/40 = 3.5<br>
+                दूरी = 3.5 × 628 = <b>2198 m</b><br>
+                विस्थापन = व्यास = <b>200 m</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">2</span>
+                <span>300 m सीधे रास्ते पर जोसेफ जॉगिंग करता हुआ 2 min 50 s में एक सिरे A से दूसरे सिरे B पर पहुँचता है और घूमकर 1 min में 100 m पीछे बिंदु C पर पहुँचता है। जोसेफ की औसत चाल और औसत वेग क्या होंगे?<br>(a) सिरे A से सिरे B तक तथा<br>(b) सिरे A से सिरे C तक।</span>
+            </div>
+            <div class="answer">
+                <b>(a) A से B तक:</b><br>
+                दूरी = 300 m, समय = 2 min 50 s = 170 s<br>
+                औसत चाल = 300/170 = <b>1.76 m s<sup>-1</sup></b><br>
+                विस्थापन = 300 m<br>
+                औसत वेग = 300/170 = <b>1.76 m s<sup>-1</sup></b> (दिशा A से B)<br><br>
+                <b>(b) A से C तक:</b><br>
+                कुल दूरी = 300 + 100 = 400 m<br>
+                कुल समय = 170 + 60 = 230 s<br>
+                औसत चाल = 400/230 = <b>1.74 m s<sup>-1</sup></b><br>
+                विस्थापन = 300 - 100 = 200 m<br>
+                औसत वेग = 200/230 = <b>0.87 m s<sup>-1</sup></b> (दिशा A से B)
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">3</span>
+                <span>अब्दुल गाडी से स्कूल जाने के क्रम में औसत चाल को 20 km h<sup>-1</sup> पाता है। उसी रास्ते से लौटने के समय वहाँ भीड कम है और औसत चाल 40 km h<sup>-1</sup> है। अब्दुल की इस पूरी यात्रा में उसकी औसत चाल क्या है?</span>
+            </div>
+            <div class="answer">
+                मान लें कि दूरी = d km<br>
+                जाने में समय t₁ = d/20 h<br>
+                आने में समय t₂ = d/40 h<br><br>
+                कुल दूरी = 2d<br>
+                कुल समय = d/20 + d/40 = 3d/40 h<br><br>
+                औसत चाल = कुल दूरी / कुल समय = 2d / (3d/40) = 80d/3d = <b>26.67 km h<sup>-1</sup></b>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">4</span>
+                <span>कोई मोटरबोट झील में विरामावस्था से सरल रेखीय पथ पर 3.0 m s<sup>-2</sup> की नियत त्वरण से 8.0 s तक चलती है। इस समय अंतराल में मोटरबोट कितनी दूरी तय करती है?</span>
+            </div>
+            <div class="answer">
+                u = 0, a = 3 m s<sup>-2</sup>, t = 8 s<br><br>
+                s = ut + ½ at²<br>
+                s = 0 + ½ × 3 × (8)²<br>
+                s = ½ × 3 × 64<br>
+                s = 96 m<br><br>
+                अतः मोटरबोट <b>96 m</b> दूरी तय करती है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">5</span>
+                <span>किसी गाड़ी का चालक 52 km h<sup>-1</sup> की गति से चल रही कार में ब्रेक लगाता है तथा कार विपरीत दिशा में एकसमान दर से त्वरित होती है। कार 5 s में रुक जाती है। दूसरा चालक 30 km h<sup>-1</sup> की गति से चलती हुई दूसरी कार पर धीमे-धीमे ब्रेक लगाता है तथा 10 s में रुक जाता है। एक ही ग्राफ पेपर पर दोनों कारों के लिए चाल-समय ग्राफ आलेखित करें। ब्रेक लगाने के पश्चात् दोनों में से कौन-सी कार अधिक दूरी तक जाएगी?</span>
+            </div>
+            <div class="answer">
+                <b>पहली कार:</b><br>
+                u = 52 km h<sup>-1</sup> = 14.44 m s<sup>-1</sup><br>
+                v = 0, t = 5 s<br>
+                a = (0 - 14.44)/5 = -2.89 m s<sup>-2</sup><br>
+                दूरी s₁ = ut + ½ at² = 14.44×5 + ½×(-2.89)×25 = 72.2 - 36.1 = 36.1 m<br><br>
+                <b>दूसरी कार:</b><br>
+                u = 30 km h<sup>-1</sup> = 8.33 m s<sup>-1</sup><br>
+                v = 0, t = 10 s<br>
+                a = (0 - 8.33)/10 = -0.833 m s<sup>-2</sup><br>
+                दूरी s₂ = 8.33×10 + ½×(-0.833)×100 = 83.3 - 41.65 = 41.65 m<br><br>
+                अतः <b>दूसरी कार अधिक दूरी तय करेगी (41.65 m > 36.1 m)</b>।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">6</span>
+                <span>चित्र 8.11 में तीन वस्तुओं A, B और C के दूरी-समय ग्राफ प्रदर्शित हैं। ग्राफ का अध्ययन करके निम्न प्रश्नों के उत्तर दीजिए:<br>(a) तीनों में से कौन सबसे तीव्र गति से गतिमान है?<br>(b) क्या ये तीनों किसी भी समय सडक के एक ही बिंदु पर होंगे?<br>(c) जिस समय B, A से गुजरती है उस समय तक C कितनी दूरी तय कर लेती है?<br>(d) जिस समय B, C से गुजरती है उस समय तक यह कितनी दूरी तय कर लेती है?</span>
+            </div>
+            <div class="answer">
+                (ग्राफ चित्र 8.11 में दिया गया है, जिसे देखकर उत्तर दिए जा सकते हैं।)<br><br>
+                <b>(a)</b> वस्तु <b>B</b> सबसे तीव्र गति से गतिमान है, क्योंकि उसकी ढाल सबसे अधिक है।<br>
+                <b>(b)</b> <b>नहीं</b>, तीनों किसी भी समय एक ही बिंदु पर नहीं होंगे, क्योंकि उनके ग्राफ भिन्न-भिन्न बिंदुओं से प्रारंभ होते हैं।<br>
+                <b>(c)</b> B, A से लगभग 1.2 h पर गुजरती है। उस समय C ने लगभग <b>9 km</b> दूरी तय की है।<br>
+                <b>(d)</b> B, C से लगभग 1.5 h पर गुजरती है। उस समय B ने लगभग <b>12 km</b> दूरी तय की है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">7</span>
+                <span>20 m की ऊँचाई से एक गेंद को गिराया जाता है। यदि उसका वेग 10 m s<sup>-2</sup> के एकसमान त्वरण की दर से बढ़ता है तो यह किस वेग से धरातल से टकराएगी? कितने समय पश्चात् वह धरातल से टकराएगी?</span>
+            </div>
+            <div class="answer">
+                u = 0, s = 20 m, a = 10 m s<sup>-2</sup><br><br>
+                (i) v² = u² + 2as<br>
+                v² = 0 + 2 × 10 × 20 = 400<br>
+                v = 20 m s<sup>-1</sup><br><br>
+                (ii) v = u + at<br>
+                20 = 0 + 10t<br>
+                t = 2 s<br><br>
+                अतः गेंद <b>20 m s<sup>-1</sup></b> के वेग से टकराएगी और <b>2 s</b> बाद।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">8</span>
+                <span>किसी कार का चाल-समय ग्राफ चित्र 8.12 में दर्शाया गया है।<br>(a) पहले 4 s में कार कितनी दूरी तय करती है? इस अवधि में कार द्वारा तय की गई दूरी को ग्राफ में छायांकित क्षेत्र द्वारा दर्शाइए।<br>(b) ग्राफ का कौन-सा भाग कार की एकसमान गति को दर्शाता है?</span>
+            </div>
+            <div class="answer">
+                (ग्राफ चित्र 8.12 में दिया गया है।)<br><br>
+                <b>(a)</b> पहले 4 s में कार का वेग 0 से 6 m s<sup>-1</sup> तक बढ़ता है।<br>
+                औसत वेग = (0 + 6)/2 = 3 m s<sup>-1</sup><br>
+                दूरी = औसत वेग × समय = 3 × 4 = <b>12 m</b><br>
+                (ग्राफ में 0 से 4 s तक का क्षेत्र छायांकित करें।)<br><br>
+                <b>(b)</b> ग्राफ का <b>4 s के बाद का भाग</b> (लगभग 4 s से 10 s तक) एकसमान गति को दर्शाता है, क्योंकि वहाँ चाल स्थिर है (6 m s<sup>-1</sup>)।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">9</span>
+                <span>निम्नलिखित में से कौन-सी अवस्थाएँ संभव हैं तथा प्रत्येक के लिए एक उदाहरण दें:<br>(a) कोई वस्तु जिसका त्वरण नियत हो परन्तु वेग शून्य हो।<br>(b) कोई वस्तु किसी निश्चित दिशा में गति कर रही हो तथा त्वरण उसके लंबवत् हो।</span>
+            </div>
+            <div class="answer">
+                <b>(a) संभव है।</b> जब किसी वस्तु को ऊपर की ओर फेंका जाता है, तो उच्चतम बिंदु पर उसका वेग शून्य होता है, परंतु त्वरण (g = 9.8 m s<sup>-2</sup>) नीचे की ओर नियत रहता है।<br><br>
+                <b>(b) संभव है।</b> जब कोई वस्तु वृत्तीय पथ पर एकसमान चाल से गति करती है, तो उसका त्वरण केंद्र की ओर (अभिकेंद्रीय त्वरण) होता है, जो वेग की दिशा के लंबवत् होता है।
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="question">
+                <span class="question-number">10</span>
+                <span>एक कृत्रिम उपग्रह 42250 km त्रिज्या की वृत्ताकार कक्षा में घूम रहा है। यदि वह 24 घंटे में पृथ्वी की परिक्रमा करता है तो उसकी चाल का परिकलन कीजिए।</span>
+            </div>
+            <div class="answer">
+                त्रिज्या r = 42250 km = 42250 × 1000 m = 4.225 × 10<sup>7</sup> m<br>
+                समय t = 24 h = 24 × 3600 = 86400 s<br><br>
+                परिधि = 2πr = 2 × 3.14 × 4.225 × 10<sup>7</sup> = 2.654 × 10<sup>8</sup> m<br><br>
+                चाल = परिधि / समय = 2.654 × 10<sup>8</sup> / 86400<br>
+                चाल = <b>3072 m s<sup>-1</sup></b> (लगभग)<br><br>
+                अतः उपग्रह की चाल लगभग <b>3.07 km s<sup>-1</sup></b> है।
+            </div>
+        </div>
+
+        <div class="note">
+            नोट: यदि आपको किसी प्रश्न के उत्तर में संदेह है तो आप ChatBox में हमारे शिक्षकों से बात कर सकते हैं।
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
