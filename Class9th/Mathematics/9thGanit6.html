@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 6: रेखाएँ और कोण</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .angle-symbol {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        .figure-box {
+            background-color: #f9fafb;
+            border: 2px dashed #a5b4fc;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem 0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 6<br>रेखाएँ और कोण</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 6.1 ==================== -->
+        <section id="exercise-6-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: आकृति 6.13 में, रेखाएँ AB और CD बिंदु O पर प्रतिच्छेद करती हैं। यदि <span class="angle-symbol">∠</span>AOC + <span class="angle-symbol">∠</span>BOE = 70° और <span class="angle-symbol">∠</span>BOD = 40° है, तो <span class="angle-symbol">∠</span>BOE और प्रतिवर्ती <span class="angle-symbol">∠</span>COE ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> <span class="angle-symbol">∠</span>AOC + <span class="angle-symbol">∠</span>BOE = 70° और <span class="angle-symbol">∠</span>BOD = 40°</p>
+                        <p class="mb-2">आकृति से, <span class="angle-symbol">∠</span>AOC = <span class="angle-symbol">∠</span>BOD (शीर्षाभिमुख कोण)</p>
+                        <p class="mb-2">अतः, <span class="angle-symbol">∠</span>AOC = 40°</p>
+                        <p class="mb-2">अब, <span class="angle-symbol">∠</span>AOC + <span class="angle-symbol">∠</span>BOE = 70°</p>
+                        <p class="mb-2">40° + <span class="angle-symbol">∠</span>BOE = 70°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>BOE = 70° − 40° = 30°</p>
+                        <p class="mb-2">अब, <span class="angle-symbol">∠</span>AOC + <span class="angle-symbol">∠</span>COE + <span class="angle-symbol">∠</span>BOE = 180° (एक सरल रेखा पर कोण)</p>
+                        <p class="mb-2">40° + <span class="angle-symbol">∠</span>COE + 30° = 180°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>COE = 180° − 70° = 110°</p>
+                        <p class="mb-2">प्रतिवर्ती <span class="angle-symbol">∠</span>COE = 360° − 110° = 250°</p>
+                        <p><strong>उत्तर:</strong> <span class="angle-symbol">∠</span>BOE = 30°, प्रतिवर्ती <span class="angle-symbol">∠</span>COE = 250°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है <span class="angle-symbol">∠</span>AOC + <span class="angle-symbol">∠</span>BOE = 70° और <span class="angle-symbol">∠</span>BOD = 40°। शीर्षाभिमुख कोणों के कारण <span class="angle-symbol">∠</span>AOC = <span class="angle-symbol">∠</span>BOD = 40°। इससे <span class="angle-symbol">∠</span>BOE = 30° मिलता है। सरल रेखा पर कोणों का योग 180° होता है, इसलिए <span class="angle-symbol">∠</span>COE = 110° और प्रतिवर्ती कोण 360° − 110° = 250° होगा।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आकृति 6.14 में, रेखाएँ XY और MN बिंदु O पर प्रतिच्छेद करती हैं। यदि <span class="angle-symbol">∠</span>POY = 90° और a : b = 2 : 3 है, तो c ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> <span class="angle-symbol">∠</span>POY = 90° और a : b = 2 : 3</p>
+                        <p class="mb-2">मान लीजिए a = 2x और b = 3x</p>
+                        <p class="mb-2">आकृति से, <span class="angle-symbol">∠</span>POY + <span class="angle-symbol">∠</span>POX = 180° (रैखिक युग्म)</p>
+                        <p class="mb-2">90° + a + b = 180°</p>
+                        <p class="mb-2">90° + 2x + 3x = 180°</p>
+                        <p class="mb-2">5x = 90°</p>
+                        <p class="mb-2">x = 18°</p>
+                        <p class="mb-2">अतः, a = 2 × 18° = 36°, b = 3 × 18° = 54°</p>
+                        <p class="mb-2">अब, <span class="angle-symbol">∠</span>XON = <span class="angle-symbol">∠</span>YOM = c (शीर्षाभिमुख कोण)</p>
+                        <p class="mb-2">साथ ही, <span class="angle-symbol">∠</span>XON + <span class="angle-symbol">∠</span>NOM = 180° (रैखिक युग्म)</p>
+                        <p class="mb-2">c + b = 180°</p>
+                        <p class="mb-2">c + 54° = 180°</p>
+                        <p class="mb-2">c = 180° − 54° = 126°</p>
+                        <p><strong>उत्तर:</strong> c = 126°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है <span class="angle-symbol">∠</span>POY = 90° और a : b = 2 : 3। रैखिक युग्म के कारण 90° + a + b = 180°। a = 2x, b = 3x रखने पर x = 18° मिलता है। शीर्षाभिमुख कोणों और रैखिक युग्म के कारण c + b = 180°, इसलिए c = 126°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: आकृति 6.15 में, <span class="angle-symbol">∠</span>PQR = <span class="angle-symbol">∠</span>PRQ है, तो सिद्ध कीजिए कि <span class="angle-symbol">∠</span>PQS = <span class="angle-symbol">∠</span>PRT है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> <span class="angle-symbol">∠</span>PQR = <span class="angle-symbol">∠</span>PRQ</p>
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> <span class="angle-symbol">∠</span>PQS = <span class="angle-symbol">∠</span>PRT</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>PQS + <span class="angle-symbol">∠</span>PQR = 180° (रैखिक युग्म) ...(1)</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>PRT + <span class="angle-symbol">∠</span>PRQ = 180° (रैखिक युग्म) ...(2)</p>
+                        <p class="mb-2">(1) और (2) से:</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>PQS + <span class="angle-symbol">∠</span>PQR = <span class="angle-symbol">∠</span>PRT + <span class="angle-symbol">∠</span>PRQ</p>
+                        <p class="mb-2">परन्तु <span class="angle-symbol">∠</span>PQR = <span class="angle-symbol">∠</span>PRQ (दिया है)</p>
+                        <p class="mb-2">अतः, <span class="angle-symbol">∠</span>PQS = <span class="angle-symbol">∠</span>PRT</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है <span class="angle-symbol">∠</span>PQR = <span class="angle-symbol">∠</span>PRQ। रैखिक युग्म के कारण <span class="angle-symbol">∠</span>PQS + <span class="angle-symbol">∠</span>PQR = 180° और <span class="angle-symbol">∠</span>PRT + <span class="angle-symbol">∠</span>PRQ = 180°। दोनों समीकरणों को बराबर रखने पर, और <span class="angle-symbol">∠</span>PQR = <span class="angle-symbol">∠</span>PRQ प्रतिस्थापित करने पर, <span class="angle-symbol">∠</span>PQS = <span class="angle-symbol">∠</span>PRT मिलता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: आकृति 6.16 में, यदि x + y = w + z है, तो सिद्ध कीजिए कि AOB एक सरल रेखा है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> x + y = w + z</p>
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> AOB एक सरल रेखा है</p>
+                        <p class="mb-2">हम जानते हैं कि एक बिंदु के चारों ओर सभी कोणों का योग 360° होता है।</p>
+                        <p class="mb-2">अतः, x + y + w + z = 360°</p>
+                        <p class="mb-2">परन्तु x + y = w + z (दिया है)</p>
+                        <p class="mb-2">अतः, x + y + x + y = 360°</p>
+                        <p class="mb-2">2(x + y) = 360°</p>
+                        <p class="mb-2">x + y = 180°</p>
+                        <p class="mb-2">इसका अर्थ है कि <span class="angle-symbol">∠</span>AOC और <span class="angle-symbol">∠</span>BOC एक रैखिक युग्म बनाते हैं।</p>
+                        <p class="mb-2">इसलिए, AOB एक सरल रेखा है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है x + y = w + z। बिंदु O पर सभी कोणों का योग 360° होता है, इसलिए x + y + w + z = 360°। x + y = w + z प्रतिस्थापित करने पर 2(x + y) = 360°, यानी x + y = 180°। इसका मतलब <span class="angle-symbol">∠</span>AOC और <span class="angle-symbol">∠</span>BOC रैखिक युग्म बनाते हैं, इसलिए AOB एक सरल रेखा है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: आकृति 6.17 में, POQ एक रेखा है। किरण OR रेखा PQ पर लंब है। OS किरण OP और OR के बीच में स्थित एक अन्य किरण है। सिद्ध कीजिए कि <span class="angle-symbol">∠</span>ROS = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (<span class="angle-symbol">∠</span>QOS − <span class="angle-symbol">∠</span>POS) है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> POQ एक सरल रेखा है, OR ⊥ PQ</p>
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> <span class="angle-symbol">∠</span>ROS = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (<span class="angle-symbol">∠</span>QOS − <span class="angle-symbol">∠</span>POS)</p>
+                        <p class="mb-2">चूँकि OR ⊥ PQ, इसलिए <span class="angle-symbol">∠</span>POR = 90° और <span class="angle-symbol">∠</span>ROQ = 90°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>QOS = <span class="angle-symbol">∠</span>QOR + <span class="angle-symbol">∠</span>ROS ...(1)</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>POS = <span class="angle-symbol">∠</span>POR − <span class="angle-symbol">∠</span>ROS ...(2)</p>
+                        <p class="mb-2">(1) में से (2) घटाने पर:</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>QOS − <span class="angle-symbol">∠</span>POS = (<span class="angle-symbol">∠</span>QOR + <span class="angle-symbol">∠</span>ROS) − (<span class="angle-symbol">∠</span>POR − <span class="angle-symbol">∠</span>ROS)</p>
+                        <p class="mb-2">= <span class="angle-symbol">∠</span>QOR + <span class="angle-symbol">∠</span>ROS − <span class="angle-symbol">∠</span>POR + <span class="angle-symbol">∠</span>ROS</p>
+                        <p class="mb-2">= 90° + <span class="angle-symbol">∠</span>ROS − 90° + <span class="angle-symbol">∠</span>ROS</p>
+                        <p class="mb-2">= 2<span class="angle-symbol">∠</span>ROS</p>
+                        <p class="mb-2">अतः, <span class="angle-symbol">∠</span>ROS = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> (<span class="angle-symbol">∠</span>QOS − <span class="angle-symbol">∠</span>POS)</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है POQ एक सरल रेखा है और OR ⊥ PQ। इसका मतलब <span class="angle-symbol">∠</span>POR = 90° और <span class="angle-symbol">∠</span>ROQ = 90°। <span class="angle-symbol">∠</span>QOS = <span class="angle-symbol">∠</span>QOR + <span class="angle-symbol">∠</span>ROS और <span class="angle-symbol">∠</span>POS = <span class="angle-symbol">∠</span>POR − <span class="angle-symbol">∠</span>ROS। दोनों समीकरणों को घटाने पर <span class="angle-symbol">∠</span>QOS − <span class="angle-symbol">∠</span>POS = 2<span class="angle-symbol">∠</span>ROS मिलता है, इसलिए <span class="angle-symbol">∠</span>ROS = 1/2 (<span class="angle-symbol">∠</span>QOS − <span class="angle-symbol">∠</span>POS)।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: दिया गया है <span class="angle-symbol">∠</span>XYZ = 64° है और XY को बिंदु P तक बढ़ाया गया है। दी हुई सूचना से एक आकृति खींचिए। यदि किरण YQ, <span class="angle-symbol">∠</span>ZYP को समद्विभाजित करती है, तो <span class="angle-symbol">∠</span>XYQ और प्रतिवर्ती <span class="angle-symbol">∠</span>QYP ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> <span class="angle-symbol">∠</span>XYZ = 64°, XY को P तक बढ़ाया गया, YQ, <span class="angle-symbol">∠</span>ZYP को समद्विभाजित करता है</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>XYZ + <span class="angle-symbol">∠</span>ZYP = 180° (रैखिक युग्म)</p>
+                        <p class="mb-2">64° + <span class="angle-symbol">∠</span>ZYP = 180°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>ZYP = 180° − 64° = 116°</p>
+                        <p class="mb-2">चूँकि YQ, <span class="angle-symbol">∠</span>ZYP को समद्विभाजित करता है, इसलिए <span class="angle-symbol">∠</span>ZYQ = <span class="angle-symbol">∠</span>QYP = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 116° = 58°</p>
+                        <p class="mb-2">अब, <span class="angle-symbol">∠</span>XYQ = <span class="angle-symbol">∠</span>XYZ + <span class="angle-symbol">∠</span>ZYQ = 64° + 58° = 122°</p>
+                        <p class="mb-2">प्रतिवर्ती <span class="angle-symbol">∠</span>QYP = 360° − <span class="angle-symbol">∠</span>QYP = 360° − 58° = 302°</p>
+                        <p><strong>उत्तर:</strong> <span class="angle-symbol">∠</span>XYQ = 122°, प्रतिवर्ती <span class="angle-symbol">∠</span>QYP = 302°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है <span class="angle-symbol">∠</span>XYZ = 64° और XY को P तक बढ़ाया गया है। रैखिक युग्म के कारण <span class="angle-symbol">∠</span>XYZ + <span class="angle-symbol">∠</span>ZYP = 180°, इसलिए <span class="angle-symbol">∠</span>ZYP = 116°। YQ, <span class="angle-symbol">∠</span>ZYP को समद्विभाजित करता है, इसलिए <span class="angle-symbol">∠</span>ZYQ = <span class="angle-symbol">∠</span>QYP = 58°। <span class="angle-symbol">∠</span>XYQ = <span class="angle-symbol">∠</span>XYZ + <span class="angle-symbol">∠</span>ZYQ = 122°। प्रतिवर्ती <span class="angle-symbol">∠</span>QYP = 360° − 58° = 302°।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 6.2 ==================== -->
+        <section id="exercise-6-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: आकृति 6.23 में, यदि AB ∥ CD, CD ∥ EF और y : z = 3 : 7 है, तो x ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB ∥ CD, CD ∥ EF, y : z = 3 : 7</p>
+                        <p class="mb-2">चूँकि CD ∥ EF, इसलिए x + y = 180° (तिर्यक रेखा के एक ही ओर के अंतः कोण)</p>
+                        <p class="mb-2">चूँकि AB ∥ CD, इसलिए x = z (संगत कोण)</p>
+                        <p class="mb-2">मान लीजिए y = 3k और z = 7k</p>
+                        <p class="mb-2">तब x = z = 7k</p>
+                        <p class="mb-2">अब, x + y = 180°</p>
+                        <p class="mb-2">7k + 3k = 180°</p>
+                        <p class="mb-2">10k = 180°</p>
+                        <p class="mb-2">k = 18°</p>
+                        <p class="mb-2">अतः, x = 7k = 7 × 18° = 126°</p>
+                        <p><strong>उत्तर:</strong> x = 126°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है AB ∥ CD, CD ∥ EF और y : z = 3 : 7। CD ∥ EF होने के कारण x + y = 180° (तिर्यक रेखा के एक ही ओर के अंतः कोण)। AB ∥ CD होने के कारण x = z (संगत कोण)। y = 3k, z = 7k मानकर x = 7k मिलता है। समीकरण 7k + 3k = 180° हल करने पर k = 18°, इसलिए x = 126°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आकृति 6.24 में, यदि AB ∥ CD, EF ⊥ CD और <span class="angle-symbol">∠</span>GED = 126° है, तो <span class="angle-symbol">∠</span>AGE, <span class="angle-symbol">∠</span>GEF और <span class="angle-symbol">∠</span>FGE ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB ∥ CD, EF ⊥ CD, <span class="angle-symbol">∠</span>GED = 126°</p>
+                        <p class="mb-2">चूँकि AB ∥ CD, इसलिए <span class="angle-symbol">∠</span>AGE = <span class="angle-symbol">∠</span>GED = 126° (एकांतर अंतः कोण)</p>
+                        <p class="mb-2">EF ⊥ CD, इसलिए <span class="angle-symbol">∠</span>FED = 90°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>GED = <span class="angle-symbol">∠</span>GEF + <span class="angle-symbol">∠</span>FED</p>
+                        <p class="mb-2">126° = <span class="angle-symbol">∠</span>GEF + 90°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>GEF = 126° − 90° = 36°</p>
+                        <p class="mb-2">त्रिभुज GEF में, <span class="angle-symbol">∠</span>GEF + <span class="angle-symbol">∠</span>EGF + <span class="angle-symbol">∠</span>FGE = 180°</p>
+                        <p class="mb-2">परन्तु <span class="angle-symbol">∠</span>EGF = 90° (चूँकि EF ⊥ CD और AB ∥ CD, इसलिए EF ⊥ AB)</p>
+                        <p class="mb-2">36° + 90° + <span class="angle-symbol">∠</span>FGE = 180°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>FGE = 180° − 126° = 54°</p>
+                        <p><strong>उत्तर:</strong> <span class="angle-symbol">∠</span>AGE = 126°, <span class="angle-symbol">∠</span>GEF = 36°, <span class="angle-symbol">∠</span>FGE = 54°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है AB ∥ CD, EF ⊥ CD और <span class="angle-symbol">∠</span>GED = 126°। एकांतर अंतः कोणों के कारण <span class="angle-symbol">∠</span>AGE = <span class="angle-symbol">∠</span>GED = 126°। EF ⊥ CD होने के कारण <span class="angle-symbol">∠</span>FED = 90°, इसलिए <span class="angle-symbol">∠</span>GEF = 126° − 90° = 36°। त्रिभुज GEF में कोण योग गुण का उपयोग करने पर <span class="angle-symbol">∠</span>FGE = 54° मिलता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: आकृति 6.25 में, यदि PQ ∥ ST, <span class="angle-symbol">∠</span>PQR = 110° और <span class="angle-symbol">∠</span>RST = 130° है, तो <span class="angle-symbol">∠</span>QRS ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> PQ ∥ ST, <span class="angle-symbol">∠</span>PQR = 110°, <span class="angle-symbol">∠</span>RST = 130°</p>
+                        <p class="mb-2">बिंदु R से होकर ST के समांतर एक रेखा RU खींचिए।</p>
+                        <p class="mb-2">चूँकि RU ∥ ST और PQ ∥ ST, इसलिए RU ∥ PQ</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>PQR + <span class="angle-symbol">∠</span>QRU = 180° (तिर्यक रेखा के एक ही ओर के अंतः कोण)</p>
+                        <p class="mb-2">110° + <span class="angle-symbol">∠</span>QRU = 180°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>QRU = 70°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>RST + <span class="angle-symbol">∠</span>SRU = 180° (तिर्यक रेखा के एक ही ओर के अंतः कोण)</p>
+                        <p class="mb-2">130° + <span class="angle-symbol">∠</span>SRU = 180°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>SRU = 50°</p>
+                        <p class="mb-2"><span class="angle-symbol">∠</span>QRS = <span class="angle-symbol">∠</span>QRU + <span class="angle-symbol">∠</span>SRU = 70° + 50° = 120°</p>
+                        <p><strong>उत्तर:</strong> <span class="angle-symbol">∠</span>QRS = 120°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है PQ ∥ ST, <span class="angle-symbol">∠</span>PQR = 110° और <span class="angle-symbol">∠</span>RST = 130°। बिंदु R से ST के समांतर एक रेखा RU खींचते हैं। RU ∥ ST और PQ ∥ ST होने के कारण RU ∥ PQ। तिर्यक रेखा के एक ही ओर के अंतः कोणों के कारण <span class="angle-symbol">∠</span>QRU = 70° और <span class="angle-symbol">∠</span>SRU = 50°। इसलिए <span class="angle-symbol">∠</span>QRS = 70° + 50° = 120°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: आकृति 6.26 में, यदि AB ∥ CD, <span class="angle-symbol">∠</span>APQ = 50° और <span class="angle-symbol">∠</span>PRD = 127° है, तो x और y ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB ∥ CD, <span class="angle-symbol">∠</span>APQ = 50°, <span class="angle-symbol">∠</span>PRD = 127°</p>
+                        <p class="mb-2">चूँकि AB ∥ CD, इसलिए <span class="angle-symbol">∠</span>APQ = <span class="angle-symbol">∠</span>PQR = 50° (एकांतर अंतः कोण)</p>
+                        <p class="mb-2">अतः, x = 50°</p>
+                        <p class="mb-2">साथ ही, <span class="angle-symbol">∠</span>PRD = <span class="angle-symbol">∠</span>APR = 127° (एकांतर अंतः कोण)</p>
+                        <p class="mb-2">अब, <span class="angle-symbol">∠</span>APR = <span class="angle-symbol">∠</span>APQ + <span class="angle-symbol">∠</span>QPR</p>
+                        <p class="mb-2">127° = 50° + y</p>
+                        <p class="mb-2">y = 127° − 50° = 77°</p>
+                        <p><strong>उत्तर:</strong> x = 50°, y = 77°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है AB ∥ CD, <span class="angle-symbol">∠</span>APQ = 50° और <span class="angle-symbol">∠</span>PRD = 127°। एकांतर अंतः कोणों के कारण <span class="angle-symbol">∠</span>APQ = <span class="angle-symbol">∠</span>PQR = 50°, इसलिए x = 50°। एकांतर अंतः कोणों के कारण <span class="angle-symbol">∠</span>PRD = <span class="angle-symbol">∠</span>APR = 127°। <span class="angle-symbol">∠</span>APR = <span class="angle-symbol">∠</span>APQ + <span class="angle-symbol">∠</span>QPR, इसलिए 127° = 50° + y, y = 77°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: आकृति 6.27 में, PQ और RS दो दर्पण हैं जो एक-दूसरे के समांतर रखे गए हैं। एक आपतित किरण AB, दर्पण PQ को बिंदु B पर टकराती है, परावर्तित किरण BC के पथ पर चलती है और दर्पण RS को बिंदु C पर टकराती है तथा पुनः CD के पथ पर परावर्तित हो जाती है। सिद्ध कीजिए कि AB ∥ CD है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> AB ∥ CD</p>
+                        <p class="mb-2">बिंदुओं B और C पर अभिलंब खींचिए।</p>
+                        <p class="mb-2">परावर्तन के नियमों के अनुसार:</p>
+                        <p class="mb-2">आपतन कोण = परावर्तन कोण</p>
+                        <p class="mb-2">अतः, बिंदु B पर: <span class="angle-symbol">∠</span>ABN = <span class="angle-symbol">∠</span>NBC</p>
+                        <p class="mb-2">बिंदु C पर: <span class="angle-symbol">∠</span>BCM = <span class="angle-symbol">∠</span>MCD</p>
+                        <p class="mb-2">चूँकि PQ ∥ RS, इसलिए अभिलंब BN और CM समांतर हैं।</p>
+                        <p class="mb-2">अतः, <span class="angle-symbol">∠</span>NBC = <span class="angle-symbol">∠</span>BCM (एकांतर अंतः कोण)</p>
+                        <p class="mb-2">इसलिए, <span class="angle-symbol">∠</span>ABN = <span class="angle-symbol">∠</span>MCD</p>
+                        <p class="mb-2">परन्तु ये रेखाओं AB और CD के लिए तिर्यक रेखा BC के साथ एकांतर अंतः कोण हैं।</p>
+                        <p class="mb-2">अतः, AB ∥ CD</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> PQ और RS दो समांतर दर्पण हैं। परावर्तन के नियमों के अनुसार आपतन कोण = परावर्तन कोण। बिंदु B पर <span class="angle-symbol">∠</span>ABN = <span class="angle-symbol">∠</span>NBC और बिंदु C पर <span class="angle-symbol">∠</span>BCM = <span class="angle-symbol">∠</span>MCD। PQ ∥ RS होने के कारण अभिलंब BN और CM समांतर हैं, इसलिए <span class="angle-symbol">∠</span>NBC = <span class="angle-symbol">∠</span>BCM (एकांतर अंतः कोण)। इससे <span class="angle-symbol">∠</span>ABN = <span class="angle-symbol">∠</span>MCD मिलता है, जो AB और CD के लिए एकांतर अंतः कोण हैं, इसलिए AB ∥ CD।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 6 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> यदि दो रेखाएँ एक-दूसरे को काटती हैं, तो शीर्षाभिमुख कोण बराबर होते हैं।</p>
+                <p class="mb-2"><strong>2.</strong> यदि एक किरण एक रेखा पर खड़ी हो, तो बने दो आसन्न कोणों का योग 180° होता है, जिन्हें रैखिक युग्म कहते हैं।</p>
+                <p class="mb-2"><strong>3.</strong> यदि दो समांतर रेखाओं को एक तिर्यक रेखा काटती है, तो:</p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1">संगत कोणों का प्रत्येक युग्म बराबर होता है।</li>
+                    <li class="mb-1">एकांतर अंतः कोणों का प्रत्येक युग्म बराबर होता है।</li>
+                    <li class="mb-1">तिर्यक रेखा के एक ही ओर के अंतः कोणों का प्रत्येक युग्म संपूरक होता है।</li>
+                </ul>
+                <p class="mb-2"><strong>4.</strong> वे रेखाएँ जो एक ही रेखा के समांतर हों, परस्पर समांतर होती हैं।</p>
+                <p class="mb-2"><strong>5.</strong> त्रिभुज के तीनों कोणों का योग 180° होता है (कोण योग गुण)।</p>
+                <p class="mb-2"><strong>6.</strong> यदि एक तिर्यक रेखा दो रेखाओं को इस प्रकार काटती है कि संगत कोण बराबर हों, तो रेखाएँ समांतर होती हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

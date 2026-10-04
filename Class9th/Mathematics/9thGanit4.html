@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 4: दो चरों वाले रैखिक समीकरण</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        table.sol-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table.sol-table th, table.sol-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.5rem 1rem;
+            text-align: center;
+        }
+        table.sol-table th {
+            background-color: #eef2ff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 4<br>दो चरों वाले रैखिक समीकरण</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 4.1 ==================== -->
+        <section id="exercise-4-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 4.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक नोटबुक की कीमत एक कलम की कीमत से दो गुनी है। इस कथन को निरूपित करने के लिए दो चरों वाला एक रैखिक समीकरण लिखिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए, नोटबुक की कीमत = x रु</p>
+                    <p class="mb-2">और कलम की कीमत = y रु</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">दिया गया है: नोटबुक की कीमत = 2 × कलम की कीमत</p>
+                    <p class="mb-2">∴ x = 2y</p>
+                    <p class="mb-2">इसे ax + by + c = 0 के रूप में लिखने पर:</p>
+                    <p class="mb-2"><strong>x − 2y + 0 = 0</strong></p>
+                    <p class="mb-2">अतः a = 1, b = −2, c = 0</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>उत्तर:</strong> अभीष्ट रैखिक समीकरण है: <strong>x − 2y = 0</strong>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित रैखिक समीकरणों को ax + by + c = 0 के रूप में व्यक्त कीजिए और प्रत्येक स्थिति में a, b और c के मान बताइए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 2x + 3y = 9.35</h4>
+                    <div class="step">
+                        <p class="mb-2">2x + 3y − 9.35 = 0</p>
+                        <p class="mb-2"><strong>a = 2, b = 3, c = −9.35</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) x − <div class="fraction"><span class="numerator">y</span><span class="denominator">5</span></div> − 10 = 0</h4>
+                    <div class="step">
+                        <p class="mb-2">यह पहले से ही ax + by + c = 0 के रूप में है।</p>
+                        <p class="mb-2"><strong>a = 1, b = −<div class="fraction"><span class="numerator">1</span><span class="denominator">5</span></div>, c = −10</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) −2x + 3y = 6</h4>
+                    <div class="step">
+                        <p class="mb-2">−2x + 3y − 6 = 0</p>
+                        <p class="mb-2"><strong>a = −2, b = 3, c = −6</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) x = 3y</h4>
+                    <div class="step">
+                        <p class="mb-2">x − 3y + 0 = 0</p>
+                        <p class="mb-2"><strong>a = 1, b = −3, c = 0</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) 2x = −5y</h4>
+                    <div class="step">
+                        <p class="mb-2">2x + 5y + 0 = 0</p>
+                        <p class="mb-2"><strong>a = 2, b = 5, c = 0</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vi) 3x + 2 = 0</h4>
+                    <div class="step">
+                        <p class="mb-2">3x + 0·y + 2 = 0</p>
+                        <p class="mb-2"><strong>a = 3, b = 0, c = 2</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vii) y − 2 = 0</h4>
+                    <div class="step">
+                        <p class="mb-2">0·x + 1·y − 2 = 0</p>
+                        <p class="mb-2"><strong>a = 0, b = 1, c = −2</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(viii) 5 = 2x</h4>
+                    <div class="step">
+                        <p class="mb-2">2x − 5 = 0 ⇒ 2x + 0·y − 5 = 0</p>
+                        <p class="mb-2"><strong>a = 2, b = 0, c = −5</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 4.2 ==================== -->
+        <section id="exercise-4-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 4.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित विकल्पों में कौन-सा विकल्प सत्य है, और क्यों? y = 3x + 5 का</h3>
+                <div class="step">
+                    <p class="mb-2">(i) एक अद्वितीय हल है</p>
+                    <p class="mb-2">(ii) केवल दो हल हैं</p>
+                    <p class="mb-2">(iii) अपरिमित रूप से अनेक हल हैं</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>उत्तर: (iii) अपरिमित रूप से अनेक हल हैं।</strong></p>
+                    <p class="mb-2"><strong>कारण:</strong> दो चरों वाले रैखिक समीकरण में x के प्रत्येक मान के लिए y का एक संगत मान प्राप्त होता है। चूँकि x के अपरिमित मान संभव हैं, इसलिए समीकरण के भी अपरिमित रूप से अनेक हल होंगे।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>उदाहरण:</strong> y = 3x + 5 में x = 0 रखें ⇒ y = 5 ⇒ हल (0, 5); x = 1 रखें ⇒ y = 8 ⇒ हल (1, 8); x = −1 रखें ⇒ y = 2 ⇒ हल (−1, 2); इसी प्रकार और भी अनेक हल प्राप्त किए जा सकते हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित समीकरणों में से प्रत्येक समीकरण के चार हल लिखिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 2x + y = 7</h4>
+                    <div class="step">
+                        <p class="mb-2">y = 7 − 2x</p>
+                        <p class="mb-2">x = 0 रखने पर: y = 7 − 0 = 7 ⇒ <strong>(0, 7)</strong></p>
+                        <p class="mb-2">x = 1 रखने पर: y = 7 − 2 = 5 ⇒ <strong>(1, 5)</strong></p>
+                        <p class="mb-2">x = 2 रखने पर: y = 7 − 4 = 3 ⇒ <strong>(2, 3)</strong></p>
+                        <p class="mb-2">x = 3 रखने पर: y = 7 − 6 = 1 ⇒ <strong>(3, 1)</strong></p>
+                        <p class="mb-2"><strong>चार हल: (0, 7), (1, 5), (2, 3), (3, 1)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) πx + y = 9</h4>
+                    <div class="step">
+                        <p class="mb-2">y = 9 − πx</p>
+                        <p class="mb-2">x = 0 रखने पर: y = 9 ⇒ <strong>(0, 9)</strong></p>
+                        <p class="mb-2">x = 1 रखने पर: y = 9 − π ⇒ <strong>(1, 9 − π)</strong></p>
+                        <p class="mb-2">x = 2 रखने पर: y = 9 − 2π ⇒ <strong>(2, 9 − 2π)</strong></p>
+                        <p class="mb-2">x = −1 रखने पर: y = 9 + π ⇒ <strong>(−1, 9 + π)</strong></p>
+                        <p class="mb-2"><strong>चार हल: (0, 9), (1, 9 − π), (2, 9 − 2π), (−1, 9 + π)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) x = 4y</h4>
+                    <div class="step">
+                        <p class="mb-2">x = 4y ⇒ y = x/4</p>
+                        <p class="mb-2">x = 0 रखने पर: y = 0 ⇒ <strong>(0, 0)</strong></p>
+                        <p class="mb-2">x = 4 रखने पर: y = 1 ⇒ <strong>(4, 1)</strong></p>
+                        <p class="mb-2">x = 8 रखने पर: y = 2 ⇒ <strong>(8, 2)</strong></p>
+                        <p class="mb-2">x = −4 रखने पर: y = −1 ⇒ <strong>(−4, −1)</strong></p>
+                        <p class="mb-2"><strong>चार हल: (0, 0), (4, 1), (8, 2), (−4, −1)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: बताइए कि निम्नलिखित हलों में कौन-कौन समीकरण x − 2y = 4 के हल हैं और कौन-कौन हल नहीं हैं:</h3>
+                <div class="step">
+                    <p class="mb-2">दिया गया समीकरण: x − 2y = 4</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) (0, 2)</strong></p>
+                    <p class="mb-2">x = 0, y = 2 रखने पर: 0 − 2(2) = 0 − 4 = −4 ≠ 4</p>
+                    <p class="mb-2"><strong>✗ हल नहीं है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) (2, 0)</strong></p>
+                    <p class="mb-2">x = 2, y = 0 रखने पर: 2 − 2(0) = 2 − 0 = 2 ≠ 4</p>
+                    <p class="mb-2"><strong>✗ हल नहीं है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) (4, 0)</strong></p>
+                    <p class="mb-2">x = 4, y = 0 रखने पर: 4 − 2(0) = 4 − 0 = 4 = 4 ✓</p>
+                    <p class="mb-2"><strong>✓ हल है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iv) (√2, 4√2)</strong></p>
+                    <p class="mb-2">x = √2, y = 4√2 रखने पर: √2 − 2(4√2) = √2 − 8√2 = −7√2 ≠ 4</p>
+                    <p class="mb-2"><strong>✗ हल नहीं है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(v) (1, 1)</strong></p>
+                    <p class="mb-2">x = 1, y = 1 रखने पर: 1 − 2(1) = 1 − 2 = −1 ≠ 4</p>
+                    <p class="mb-2"><strong>✗ हल नहीं है।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>निष्कर्ष:</strong> केवल बिंदु (4, 0) समीकरण x − 2y = 4 का हल है। शेष सभी बिंदु हल नहीं हैं।
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: k का मान ज्ञात कीजिए जबकि x = 2, y = 1 समीकरण 2x + 3y = k का एक हल हो।</h3>
+                <div class="step">
+                    <p class="mb-2">दिया गया समीकरण: 2x + 3y = k</p>
+                    <p class="mb-2">x = 2 और y = 1 प्रतिस्थापित करने पर:</p>
+                    <p class="mb-2">2(2) + 3(1) = k</p>
+                    <p class="mb-2">⇒ 4 + 3 = k</p>
+                    <p class="mb-2">⇒ k = 7</p>
+                    <p><strong>उत्तर: k = 7</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 4.3 ==================== -->
+        <section id="exercise-4-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 4.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: दो चरों वाले निम्नलिखित रैखिक समीकरणों में से प्रत्येक का आलेख खींचिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) x + y = 4</h4>
+                    <div class="step">
+                        <p class="mb-2">y = 4 − x</p>
+                        <p class="mb-2">हल तालिका:</p>
+                        <table class="sol-table">
+                            <tr><th>x</th><td>0</td><td>2</td><td>4</td></tr>
+                            <tr><th>y</th><td>4</td><td>2</td><td>0</td></tr>
+                        </table>
+                        <p class="mb-2">बिंदु: (0, 4), (2, 2), (4, 0)</p>
+                        <p class="mb-2">आलेख: इन बिंदुओं को मिलाने पर एक सरल रेखा प्राप्त होती है, जो x-अक्ष को (4, 0) पर और y-अक्ष को (0, 4) पर काटती है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) x − y = 2</h4>
+                    <div class="step">
+                        <p class="mb-2">y = x − 2</p>
+                        <p class="mb-2">हल तालिका:</p>
+                        <table class="sol-table">
+                            <tr><th>x</th><td>0</td><td>2</td><td>4</td></tr>
+                            <tr><th>y</th><td>−2</td><td>0</td><td>2</td></tr>
+                        </table>
+                        <p class="mb-2">बिंदु: (0, −2), (2, 0), (4, 2)</p>
+                        <p class="mb-2">आलेख: इन बिंदुओं को मिलाने पर एक सरल रेखा प्राप्त होती है, जो x-अक्ष को (2, 0) पर और y-अक्ष को (0, −2) पर काटती है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) y = 3x</h4>
+                    <div class="step">
+                        <p class="mb-2">हल तालिका:</p>
+                        <table class="sol-table">
+                            <tr><th>x</th><td>0</td><td>1</td><td>−1</td></tr>
+                            <tr><th>y</th><td>0</td><td>3</td><td>−3</td></tr>
+                        </table>
+                        <p class="mb-2">बिंदु: (0, 0), (1, 3), (−1, −3)</p>
+                        <p class="mb-2">आलेख: यह रेखा मूलबिंदु (0, 0) से होकर जाती है और प्रथम तथा तृतीय चतुर्थांश में फैली है।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) 3 = 2x + y</h4>
+                    <div class="step">
+                        <p class="mb-2">y = 3 − 2x</p>
+                        <p class="mb-2">हल तालिका:</p>
+                        <table class="sol-table">
+                            <tr><th>x</th><td>0</td><td>1</td><td>2</td></tr>
+                            <tr><th>y</th><td>3</td><td>1</td><td>−1</td></tr>
+                        </table>
+                        <p class="mb-2">बिंदु: (0, 3), (1, 1), (2, −1)</p>
+                        <p class="mb-2">आलेख: इन बिंदुओं को मिलाने पर एक सरल रेखा प्राप्त होती है, जो y-अक्ष को (0, 3) पर काटती है।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: बिंदु (2, 14) से होकर जाने वाली दो रेखाओं के समीकरण लिखिए। इस प्रकार की और कितनी रेखाएँ हो सकती हैं, और क्यों?</h3>
+                <div class="step">
+                    <p class="mb-2">बिंदु (2, 14) से होकर जाने वाली दो रेखाओं के समीकरण:</p>
+                    <p class="mb-2"><strong>रेखा 1:</strong> y = 7x (क्योंकि x = 2 पर y = 14)</p>
+                    <p class="mb-2"><strong>रेखा 2:</strong> y = x + 12 (क्योंकि x = 2 पर y = 2 + 12 = 14)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>कितनी और रेखाएँ हो सकती हैं?</strong></p>
+                    <p class="mb-2"><strong>अपरिमित रूप से अनेक।</strong></p>
+                    <p class="mb-2"><strong>कारण:</strong> एक बिंदु से होकर अपरिमित रूप से अनेक रेखाएँ खींची जा सकती हैं। यदि हम बिंदु (2, 14) को समीकरण y = mx + c में रखें, तो 14 = 2m + c। m के प्रत्येक भिन्न मान के लिए c का एक भिन्न मान प्राप्त होता है। चूँकि m के अपरिमित मान संभव हैं, इसलिए अपरिमित रेखाएँ संभव हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि बिंदु (3, 4) समीकरण 3y = ax + 7 के आलेख पर स्थित है, तो a का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">दिया गया समीकरण: 3y = ax + 7</p>
+                    <p class="mb-2">बिंदु (3, 4) समीकरण पर स्थित है, अतः x = 3, y = 4 इसे संतुष्ट करेंगे।</p>
+                    <p class="mb-2">3(4) = a(3) + 7</p>
+                    <p class="mb-2">⇒ 12 = 3a + 7</p>
+                    <p class="mb-2">⇒ 12 − 7 = 3a</p>
+                    <p class="mb-2">⇒ 5 = 3a</p>
+                    <p class="mb-2">⇒ a = <div class="fraction"><span class="numerator">5</span><span class="denominator">3</span></div></p>
+                    <p><strong>उत्तर: a = <div class="fraction"><span class="numerator">5</span><span class="denominator">3</span></div></strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक नगर में टैक्सी का किराया निम्नलिखित है: पहले किलोमीटर का किराया 8 रु है और उसके बाद की दूरी के लिए प्रति किलोमीटर का किराया 5 रु है। यदि तय की गई दूरी x किलोमीटर हो, और कुल किराया y रु हो, तो इसका एक रैखिक समीकरण लिखिए और उसका आलेख खींचिए।</h3>
+                <div class="step">
+                    <p class="mb-2">पहले 1 किमी का किराया = 8 रु</p>
+                    <p class="mb-2">शेष दूरी = (x − 1) किमी</p>
+                    <p class="mb-2">शेष दूरी का किराया = 5(x − 1) रु</p>
+                    <p class="mb-2">कुल किराया y = 8 + 5(x − 1)</p>
+                    <p class="mb-2">⇒ y = 8 + 5x − 5</p>
+                    <p class="mb-2">⇒ <strong>y = 5x + 3</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>आलेख हेतु हल तालिका:</strong></p>
+                    <table class="sol-table">
+                        <tr><th>x (किमी)</th><td>0</td><td>1</td><td>2</td></tr>
+                        <tr><th>y (रु)</th><td>3</td><td>8</td><td>13</td></tr>
+                    </table>
+                    <p class="mb-2">बिंदु: (0, 3), (1, 8), (2, 13)</p>
+                    <p class="mb-2">आलेख: इन बिंदुओं को मिलाने पर एक सरल रेखा प्राप्त होती है। ध्यान दें कि x = 0 पर y = 3, जो कि न्यूनतम किराया है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>ध्यान दें:</strong> x = 0 का अर्थ है कि कोई दूरी तय नहीं की गई, तब भी किराया 3 रु है (यह आधार किराया है)।
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: निम्नलिखित आलेखों में से प्रत्येक आलेख के लिए दिए गए विकल्पों से सही समीकरण का चयन कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">आकृति 4.6 के लिए</h4>
+                    <div class="step">
+                        <p class="mb-2">विकल्प: (i) y = x (ii) x + y = 0 (iii) y = 2x (iv) 2 + 3y = 7x</p>
+                        <p class="mb-2">आलेख पर बिंदु: (−1, 1), (0, 0), (1, −1)</p>
+                        <p class="mb-2">जाँच: x + y = 0 में (−1, 1) रखें: −1 + 1 = 0 ✓</p>
+                        <p class="mb-2">(1, −1) रखें: 1 + (−1) = 0 ✓</p>
+                        <p class="mb-2"><strong>सही उत्तर: (ii) x + y = 0</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">आकृति 4.7 के लिए</h4>
+                    <div class="step">
+                        <p class="mb-2">विकल्प: (i) y = x + 2 (ii) y = x − 2 (iii) y = −x + 2 (iv) x + 2y = 6</p>
+                        <p class="mb-2">आलेख पर बिंदु: (−1, 3), (0, 2), (2, 0)</p>
+                        <p class="mb-2">जाँच: y = −x + 2 में (−1, 3) रखें: 3 = −(−1) + 2 = 3 ✓</p>
+                        <p class="mb-2">(0, 2) रखें: 2 = −0 + 2 = 2 ✓</p>
+                        <p class="mb-2">(2, 0) रखें: 0 = −2 + 2 = 0 ✓</p>
+                        <p class="mb-2"><strong>सही उत्तर: (iii) y = −x + 2</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक अचर बल लगाने पर एक पिंड द्वारा किया गया कार्य पिंड द्वारा तय की गई दूरी के अनुक्रमानुपाती होता है। इस कथन को दो चरों वाले एक समीकरण के रूप में व्यक्त कीजिए और अचर बल 5 मात्रक लेकर इसका आलेख खींचिए। यदि पिंड द्वारा तय की गई दूरी (i) 2 मात्रक (ii) 0 मात्रक हो, तो आलेख से किया हुआ कार्य ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए किया गया कार्य = y मात्रक</p>
+                    <p class="mb-2">तय की गई दूरी = x मात्रक</p>
+                    <p class="mb-2">अचर बल = 5 मात्रक</p>
+                    <p class="mb-2">चूँकि कार्य, दूरी के अनुक्रमानुपाती है: y ∝ x</p>
+                    <p class="mb-2">⇒ <strong>y = 5x</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>आलेख हेतु हल तालिका:</strong></p>
+                    <table class="sol-table">
+                        <tr><th>x (दूरी)</th><td>0</td><td>1</td><td>2</td></tr>
+                        <tr><th>y (कार्य)</th><td>0</td><td>5</td><td>10</td></tr>
+                    </table>
+                    <p class="mb-2">बिंदु: (0, 0), (1, 5), (2, 10)</p>
+                    <p class="mb-2">आलेख: यह रेखा मूलबिंदु से होकर जाती है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) दूरी = 2 मात्रक</strong></p>
+                    <p class="mb-2">आलेख से: y = 10 मात्रक</p>
+                    <p class="mb-2"><strong>कार्य = 10 मात्रक</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) दूरी = 0 मात्रक</strong></p>
+                    <p class="mb-2">आलेख से: y = 0 मात्रक</p>
+                    <p class="mb-2"><strong>कार्य = 0 मात्रक</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक विद्यालय की कक्षा IX की छात्राएँ यामिनी और फातिमा ने मिलकर भूकंप पीड़ित व्यक्तियों की सहायता के लिए प्रधानमंत्री राहत कोष में 100 रु अंशदान दिया। एक रैखिक समीकरण लिखिए जो इन आंकड़ों को संतुष्ट करती हो। (आप उनका अंशदान x रु और y रु मान सकते हैं)। इस समीकरण का आलेख खींचिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए यामिनी का अंशदान = x रु</p>
+                    <p class="mb-2">फातिमा का अंशदान = y रु</p>
+                    <p class="mb-2">कुल अंशदान = 100 रु</p>
+                    <p class="mb-2">∴ <strong>x + y = 100</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>आलेख हेतु हल तालिका:</strong></p>
+                    <table class="sol-table">
+                        <tr><th>x (रु)</th><td>0</td><td>50</td><td>100</td></tr>
+                        <tr><th>y (रु)</th><td>100</td><td>50</td><td>0</td></tr>
+                    </table>
+                    <p class="mb-2">बिंदु: (0, 100), (50, 50), (100, 0)</p>
+                    <p class="mb-2">आलेख: इन बिंदुओं को मिलाने पर एक सरल रेखा प्राप्त होती है, जो x-अक्ष को (100, 0) पर और y-अक्ष को (0, 100) पर काटती है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>ध्यान दें:</strong> चूँकि अंशदान ऋणात्मक नहीं हो सकता, इसलिए आलेख का केवल वह भाग मान्य है जहाँ x ≥ 0 और y ≥ 0 है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: अमरीका और कनाडा जैसे देशों में तापमान फारेनहाइट में मापा जाता है, जबकि भारत जैसे देशों में तापमान सेल्सियस में मापा जाता है। यहाँ फारेनहाइट को सेल्सियस में रूपांतरित करने वाला एक रैखिक समीकरण दिया गया है: F = (<div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>)C + 32</h3>
+
+                <div class="step">
+                    <p class="mb-2"><strong>(i) सेल्सियस को x-अक्ष और फारेनहाइट को y-अक्ष मानकर ऊपर दिए गए रैखिक समीकरण का आलेख खींचिए।</strong></p>
+                    <p class="mb-2">y = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>x + 32</p>
+                    <p class="mb-2">हल तालिका:</p>
+                    <table class="sol-table">
+                        <tr><th>x (°C)</th><td>0</td><td>−20</td><td>40</td></tr>
+                        <tr><th>y (°F)</th><td>32</td><td>−4</td><td>104</td></tr>
+                    </table>
+                    <p class="mb-2">बिंदु: (0, 32), (−20, −4), (40, 104)</p>
+                    <p class="mb-2">आलेख: इन बिंदुओं को मिलाने पर एक सरल रेखा प्राप्त होती है।</p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) यदि तापमान 30°C है, तो फारेनहाइट में तापमान क्या होगा?</strong></p>
+                    <p class="mb-2">F = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>(30) + 32 = 54 + 32 = 86</p>
+                    <p class="mb-2"><strong>उत्तर: 86°F</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) यदि तापमान 95°F है, तो सेल्सियस में तापमान क्या होगा?</strong></p>
+                    <p class="mb-2">95 = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>C + 32</p>
+                    <p class="mb-2">⇒ 95 − 32 = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>C</p>
+                    <p class="mb-2">⇒ 63 = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>C</p>
+                    <p class="mb-2">⇒ C = <div class="fraction"><span class="numerator">63 × 5</span><span class="denominator">9</span></div> = 35</p>
+                    <p class="mb-2"><strong>उत्तर: 35°C</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2"><strong>(iv) यदि तापमान 0°C है, तो फारेनहाइट में तापमान क्या होगा? और यदि तापमान 0°F है, तो सेल्सियस में तापमान क्या होगा?</strong></p>
+                    <p class="mb-2">0°C के लिए: F = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>(0) + 32 = 32°F</p>
+                    <p class="mb-2">0°F के लिए: 0 = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>C + 32</p>
+                    <p class="mb-2">⇒ −32 = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>C</p>
+                    <p class="mb-2">⇒ C = <div class="fraction"><span class="numerator">−160</span><span class="denominator">9</span></div> ≈ −17.8°C</p>
+                    <p class="mb-2"><strong>उत्तर: 0°C = 32°F; 0°F = −17.8°C</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2"><strong>(v) क्या ऐसा भी कोई तापमान है जो फारेनहाइट और सेल्सियस दोनों के लिए संख्यात्मकतः समान है? यदि हाँ, तो उसे ज्ञात कीजिए।</strong></p>
+                    <p class="mb-2">मान लीजिए F = C = x</p>
+                    <p class="mb-2">x = <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>x + 32</p>
+                    <p class="mb-2">⇒ x − <div class="fraction"><span class="numerator">9</span><span class="denominator">5</span></div>x = 32</p>
+                    <p class="mb-2">⇒ <div class="fraction"><span class="numerator">5x − 9x</span><span class="denominator">5</span></div> = 32</p>
+                    <p class="mb-2">⇒ <div class="fraction"><span class="numerator">−4x</span><span class="denominator">5</span></div> = 32</p>
+                    <p class="mb-2">⇒ x = −40</p>
+                    <p class="mb-2"><strong>उत्तर: हाँ, −40° पर दोनों तापमान समान होते हैं। (F = C = −40°)</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 4.4 ==================== -->
+        <section id="exercise-4-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 4.4</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: (i) एक चर वाले (ii) दो चर वाले समीकरण के रूप में y = 3 का ज्यामितीय निरूपण कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) एक चर वाले समीकरण के रूप में</h4>
+                    <div class="step">
+                        <p class="mb-2">y = 3 एक चर वाला रैखिक समीकरण है।</p>
+                        <p class="mb-2">संख्या रेखा पर यह बिंदु 3 को निरूपित करता है।</p>
+                        <p class="mb-2">संख्या रेखा पर मूलबिंदु से 3 इकाई की दूरी पर एक बिंदु अंकित कीजिए।</p>
+                        <p class="mb-2"><strong>निरूपण: संख्या रेखा पर केवल एक बिंदु (y = 3)</strong></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) दो चर वाले समीकरण के रूप में</h4>
+                    <div class="step">
+                        <p class="mb-2">y = 3 को 0·x + 1·y = 3 के रूप में लिखा जा सकता है।</p>
+                        <p class="mb-2">इसके अपरिमित रूप से अनेक हल हैं, जो (x, 3) के रूप के हैं, जहाँ x कोई भी वास्तविक संख्या है।</p>
+                        <p class="mb-2">उदाहरण: (0, 3), (1, 3), (2, 3), (−1, 3) आदि।</p>
+                        <p class="mb-2"><strong>आलेख:</strong> यह एक क्षैतिज रेखा है जो x-अक्ष के समांतर है और y-अक्ष को (0, 3) पर काटती है। यह रेखा मूलबिंदु से 3 इकाई ऊपर है।</p>
+                        <p class="mb-2"><strong>निरूपण: कार्तीय तल पर x-अक्ष के समांतर एक सरल रेखा, जो y = 3 पर स्थित है।</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: (i) एक चर वाले (ii) दो चर वाले समीकरण के रूप में 2x + 9 = 0 का ज्यामितीय निरूपण कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) एक चर वाले समीकरण के रूप में</h4>
+                    <div class="step">
+                        <p class="mb-2">2x + 9 = 0 ⇒ 2x = −9 ⇒ x = −<div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div> = −4.5</p>
+                        <p class="mb-2">संख्या रेखा पर यह बिंदु −4.5 को निरूपित करता है।</p>
+                        <p class="mb-2">मूलबिंदु से बाईं ओर 4.5 इकाई की दूरी पर एक बिंदु अंकित कीजिए।</p>
+                        <p class="mb-2"><strong>निरूपण: संख्या रेखा पर बिंदु (−4.5)</strong></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) दो चर वाले समीकरण के रूप में</h4>
+                    <div class="step">
+                        <p class="mb-2">2x + 9 = 0 को 2x + 0·y + 9 = 0 के रूप में लिखा जा सकता है।</p>
+                        <p class="mb-2">इसके अपरिमित रूप से अनेक हल हैं, जो (−4.5, y) के रूप के हैं, जहाँ y कोई भी वास्तविक संख्या है।</p>
+                        <p class="mb-2">उदाहरण: (−4.5, 0), (−4.5, 1), (−4.5, 2), (−4.5, −1) आदि।</p>
+                        <p class="mb-2"><strong>आलेख:</strong> यह एक ऊर्ध्वाधर रेखा है जो y-अक्ष के समांतर है और x-अक्ष को (−4.5, 0) पर काटती है। यह रेखा मूलबिंदु से 4.5 इकाई बाईं ओर है।</p>
+                        <p class="mb-2"><strong>निरूपण: कार्तीय तल पर y-अक्ष के समांतर एक सरल रेखा, जो x = −4.5 पर स्थित है।</strong></p>
+                    </div>
+                </div>
+
+                <div class="hinglish-explanation">
+                    <strong>महत्वपूर्ण निष्कर्ष:</strong>
+                    <p class="mb-1">• y = a का आलेख x-अक्ष के समांतर एक क्षैतिज रेखा होती है।</p>
+                    <p class="mb-1">• x = a का आलेख y-अक्ष के समांतर एक ऊर्ध्वाधर रेखा होती है।</p>
+                    <p class="mb-1">• x = 0, y-अक्ष का समीकरण है और y = 0, x-अक्ष का समीकरण है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 4 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> <strong>ax + by + c = 0</strong> के रूप के समीकरण को, जहाँ a, b, c वास्तविक संख्याएँ हैं और a, b दोनों शून्य नहीं हैं, <strong>दो चरों वाला रैखिक समीकरण</strong> कहा जाता है।</p>
+                <p class="mb-2"><strong>2.</strong> दो चरों वाले रैखिक समीकरण के <strong>अपरिमित रूप से अनेक हल</strong> होते हैं।</p>
+                <p class="mb-2"><strong>3.</strong> दो चरों वाले प्रत्येक रैखिक समीकरण का आलेख एक <strong>सरल रेखा</strong> होता है।</p>
+                <p class="mb-2"><strong>4.</strong> <strong>x = 0</strong>, y-अक्ष का समीकरण है और <strong>y = 0</strong>, x-अक्ष का समीकरण है।</p>
+                <p class="mb-2"><strong>5.</strong> <strong>x = a</strong> का आलेख y-अक्ष के समांतर एक सरल रेखा होता है।</p>
+                <p class="mb-2"><strong>6.</strong> <strong>y = a</strong> का आलेख x-अक्ष के समांतर एक सरल रेखा होता है।</p>
+                <p class="mb-2"><strong>7.</strong> <strong>y = mx</strong> के प्रकार का समीकरण मूलबिंदु से होकर जाने वाली एक रेखा को निरूपित करता है।</p>
+                <p class="mb-2"><strong>8.</strong> आलेख पर स्थित प्रत्येक बिंदु समीकरण का एक हल होता है और प्रत्येक हल आलेख पर एक बिंदु होता है।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

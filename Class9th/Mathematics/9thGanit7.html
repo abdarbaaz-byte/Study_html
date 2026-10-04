@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 7: त्रिभुज</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .triangle-notation {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 7<br>त्रिभुज</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 7.1 ==================== -->
+        <section id="exercise-7-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 7.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: चतुर्भुज ACBD में, AC = AD है और AB, ∠A को समद्विभाजित करता है (देखिए आकृति 7.16)। दर्शाइए कि ΔABC ≅ ΔABD है। BC और BD के बारे में आप क्या कह सकते हैं?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AC = AD और AB, ∠A को समद्विभाजित करता है।</p>
+                        <p class="mb-2">ΔABC और ΔABD में:</p>
+                        <p class="mb-2">AC = AD (दिया है)</p>
+                        <p class="mb-2">∠CAB = ∠DAB (AB, ∠A को समद्विभाजित करता है)</p>
+                        <p class="mb-2">AB = AB (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔABD (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">चूँकि त्रिभुज सर्वांगसम हैं, इसलिए BC = BD (CPCT)</p>
+                        <p><strong>उत्तर:</strong> BC = BD</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AC = AD और AB, ∠A को समद्विभाजित करता है। दोनों त्रिभुजों ABC और ABD में, AC = AD, ∠CAB = ∠DAB, और AB उभयनिष्ठ भुजा है। इसलिए SAS सर्वांगसमता नियम से ΔABC ≅ ΔABD। तो संगत भुजाएँ BC और BD बराबर हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: ABCD एक चतुर्भुज है, जिसमें AD = BC और ∠DAB = ∠CBA है (देखिए आकृति 7.17)। सिद्ध कीजिए कि (i) ΔABD ≅ ΔBAC (ii) BD = AC (iii) ∠ABD = ∠BAC</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AD = BC और ∠DAB = ∠CBA</p>
+                        <p class="mb-2"><strong>(i)</strong> ΔABD और ΔBAC में:</p>
+                        <p class="mb-2">AD = BC (दिया है)</p>
+                        <p class="mb-2">∠DAB = ∠CBA (दिया है)</p>
+                        <p class="mb-2">AB = BA (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔABD ≅ ΔBAC (SAS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔABD ≅ ΔBAC, इसलिए BD = AC (CPCT)</p>
+
+                        <p class="mb-2 mt-4"><strong>(iii)</strong> चूँकि ΔABD ≅ ΔBAC, इसलिए ∠ABD = ∠BAC (CPCT)</p>
+
+                        <p><strong>उत्तर:</strong> तीनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AD = BC और ∠DAB = ∠CBA। दोनों त्रिभुजों ABD और BAC में, AD = BC, ∠DAB = ∠CBA, और AB उभयनिष्ठ भुजा है। इसलिए SAS नियम से ΔABD ≅ ΔBAC। CPCT से BD = AC और ∠ABD = ∠BAC।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: AD और BC एक रेखाखंड AB पर बराबर लंब हैं (देखिए आकृति 7.18)। दर्शाइए कि CD, रेखाखंड AB को समद्विभाजित करता है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AD ⊥ AB, BC ⊥ AB, और AD = BC</p>
+                        <p class="mb-2">ΔAOD और ΔBOC में:</p>
+                        <p class="mb-2">∠DAO = ∠CBO = 90° (दोनों AB पर लंब)</p>
+                        <p class="mb-2">AD = BC (दिया है)</p>
+                        <p class="mb-2">∠AOD = ∠BOC (शीर्षाभिमुख कोण)</p>
+                        <p class="mb-2">अतः, ΔAOD ≅ ΔBOC (AAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">चूँकि त्रिभुज सर्वांगसम हैं, इसलिए AO = OB (CPCT)</p>
+                        <p class="mb-2">इसलिए, CD, AB को बिंदु O पर समद्विभाजित करता है।</p>
+                        <p><strong>उत्तर:</strong> CD, रेखाखंड AB को समद्विभाजित करता है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AD और BC दोनों AB पर लंब हैं और AD = BC। त्रिभुजों AOD और BOC में, ∠DAO = ∠CBO = 90°, AD = BC, और ∠AOD = ∠BOC (शीर्षाभिमुख कोण)। इसलिए AAS नियम से ΔAOD ≅ ΔBOC। CPCT से AO = OB, मतलब CD, AB को समद्विभाजित करता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: l और m दो समांतर रेखाएँ हैं जिन्हें समांतर रेखाओं p और q का एक अन्य युग्म प्रतिच्छेद करता है (देखिए आकृति 7.19)। दर्शाइए कि ΔABC ≅ ΔCDA है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> l ∥ m और p ∥ q</p>
+                        <p class="mb-2">ΔABC और ΔCDA में:</p>
+                        <p class="mb-2">∠BAC = ∠DCA (एकांतर अंतः कोण, p ∥ q)</p>
+                        <p class="mb-2">∠BCA = ∠DAC (एकांतर अंतः कोण, l ∥ m)</p>
+                        <p class="mb-2">AC = CA (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔCDA (ASA सर्वांगसमता नियम से)</p>
+                        <p><strong>उत्तर:</strong> ΔABC ≅ ΔCDA</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि l ∥ m और p ∥ q। त्रिभुजों ABC और CDA में, ∠BAC = ∠DCA (एकांतर अंतः कोण, p ∥ q), ∠BCA = ∠DAC (एकांतर अंतः कोण, l ∥ m), और AC उभयनिष्ठ भुजा है। इसलिए ASA नियम से ΔABC ≅ ΔCDA।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: रेखा l, कोण ∠A का समद्विभाजक है और B, l पर स्थित कोई बिंदु है। BP और BQ, ∠A की भुजाओं पर B से डाले गए लंब हैं (देखिए आकृति 7.20)। दर्शाइए कि: (i) ΔAPB ≅ ΔAQB (ii) BP = BQ या B, ∠A की भुजाओं से समदूरस्थ है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> l, ∠A का समद्विभाजक है, BP ⊥ AP, BQ ⊥ AQ</p>
+                        <p class="mb-2"><strong>(i)</strong> ΔAPB और ΔAQB में:</p>
+                        <p class="mb-2">∠PAB = ∠QAB (l, ∠A को समद्विभाजित करता है)</p>
+                        <p class="mb-2">∠APB = ∠AQB = 90° (दोनों लंब हैं)</p>
+                        <p class="mb-2">AB = AB (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔAPB ≅ ΔAQB (AAS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔAPB ≅ ΔAQB, इसलिए BP = BQ (CPCT)</p>
+                        <p class="mb-2">इसलिए, B, ∠A की भुजाओं से समदूरस्थ है।</p>
+
+                        <p><strong>उत्तर:</strong> दोनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि l, ∠A का समद्विभाजक है, और BP और BQ लंब हैं। त्रिभुजों APB और AQB में, ∠PAB = ∠QAB (l, ∠A को समद्विभाजित करता है), ∠APB = ∠AQB = 90°, और AB उभयनिष्ठ भुजा है। इसलिए AAS नियम से ΔAPB ≅ ΔAQB। CPCT से BP = BQ, मतलब B, ∠A की भुजाओं से समदूरस्थ है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: आकृति 7.21 में, AC = AE, AB = AD और ∠BAD = ∠EAC है। दर्शाइए कि BC = DE है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AC = AE, AB = AD, ∠BAD = ∠EAC</p>
+                        <p class="mb-2">∠BAD = ∠EAC से, हम लिख सकते हैं:</p>
+                        <p class="mb-2">∠BAD + ∠DAC = ∠EAC + ∠DAC</p>
+                        <p class="mb-2">अतः, ∠BAC = ∠DAE</p>
+                        <p class="mb-2">ΔABC और ΔADE में:</p>
+                        <p class="mb-2">AB = AD (दिया है)</p>
+                        <p class="mb-2">AC = AE (दिया है)</p>
+                        <p class="mb-2">∠BAC = ∠DAE (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔADE (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">चूँकि त्रिभुज सर्वांगसम हैं, इसलिए BC = DE (CPCT)</p>
+                        <p><strong>उत्तर:</strong> BC = DE</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AC = AE, AB = AD, और ∠BAD = ∠EAC। ∠BAD = ∠EAC से हम लिख सकते हैं ∠BAD + ∠DAC = ∠EAC + ∠DAC, यानी ∠BAC = ∠DAE। त्रिभुजों ABC और ADE में, AB = AD, AC = AE, और ∠BAC = ∠DAE। इसलिए SAS नियम से ΔABC ≅ ΔADE। CPCT से BC = DE।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: AB एक रेखाखंड है और P इसका मध्य-बिंदु है। D और E, रेखाखंड AB के एक ही ओर स्थित दो बिंदु हैं, जिनके लिए ∠BAD = ∠ABE और ∠EPA = ∠DPB है (देखिए आकृति 7.22)। दर्शाइए कि (i) ΔDAP ≅ ΔEBP (ii) AD = BE</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> P, AB का मध्य-बिंदु है, ∠BAD = ∠ABE, ∠EPA = ∠DPB</p>
+                        <p class="mb-2">∠EPA = ∠DPB से, हम लिख सकते हैं:</p>
+                        <p class="mb-2">∠EPA + ∠DPE = ∠DPB + ∠DPE</p>
+                        <p class="mb-2">अतः, ∠APD = ∠BPE</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> ΔDAP और ΔEBP में:</p>
+                        <p class="mb-2">AP = BP (P, AB का मध्य-बिंदु है)</p>
+                        <p class="mb-2">∠DAP = ∠EBP (दिया है: ∠BAD = ∠ABE)</p>
+                        <p class="mb-2">∠APD = ∠BPE (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">अतः, ΔDAP ≅ ΔEBP (ASA सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔDAP ≅ ΔEBP, इसलिए AD = BE (CPCT)</p>
+
+                        <p><strong>उत्तर:</strong> दोनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि P, AB का मध्य-बिंदु है, ∠BAD = ∠ABE, और ∠EPA = ∠DPB। ∠EPA = ∠DPB से हम लिख सकते हैं ∠EPA + ∠DPE = ∠DPB + ∠DPE, यानी ∠APD = ∠BPE। त्रिभुजों DAP और EBP में, AP = BP, ∠DAP = ∠EBP, और ∠APD = ∠BPE। इसलिए ASA नियम से ΔDAP ≅ ΔEBP। CPCT से AD = BE।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: समकोण त्रिभुज ABC में, जिसमें ∠C समकोण है, M कर्ण AB का मध्य-बिंदु है। C को M से मिलाया गया है और D तक इस प्रकार बढ़ाया गया है कि DM = CM है। बिंदु D को बिंदु B से मिलाया गया है (देखिए आकृति 7.23)। दर्शाइए कि: (i) ΔAMC ≅ ΔBMD (ii) ∠DBC एक समकोण है। (iii) ΔDBC ≅ ΔACB (iv) CM = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> ∠C = 90°, M, AB का मध्य-बिंदु है, DM = CM</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> ΔAMC और ΔBMD में:</p>
+                        <p class="mb-2">AM = BM (M, AB का मध्य-बिंदु है)</p>
+                        <p class="mb-2">∠AMC = ∠BMD (शीर्षाभिमुख कोण)</p>
+                        <p class="mb-2">CM = DM (दिया है)</p>
+                        <p class="mb-2">अतः, ΔAMC ≅ ΔBMD (SAS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔAMC ≅ ΔBMD, इसलिए ∠ACM = ∠BDM (CPCT)</p>
+                        <p class="mb-2">परन्तु ये रेखाओं AC और BD के लिए तिर्यक रेखा CD के साथ एकांतर अंतः कोण हैं।</p>
+                        <p class="mb-2">अतः, AC ∥ BD</p>
+                        <p class="mb-2">अब, AC ⊥ BC (दिया है: ∠C = 90°)</p>
+                        <p class="mb-2">चूँकि AC ∥ BD और AC ⊥ BC, इसलिए BD ⊥ BC</p>
+                        <p class="mb-2">अतः, ∠DBC = 90°</p>
+
+                        <p class="mb-2 mt-4"><strong>(iii)</strong> ΔDBC और ΔACB में:</p>
+                        <p class="mb-2">BC = CB (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">∠DBC = ∠ACB = 90°</p>
+                        <p class="mb-2">DB = AC (चूँकि ΔAMC ≅ ΔBMD, इसलिए AC = BD, CPCT से)</p>
+                        <p class="mb-2">अतः, ΔDBC ≅ ΔACB (SAS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(iv)</strong> चूँकि ΔDBC ≅ ΔACB, इसलिए DC = AB (CPCT)</p>
+                        <p class="mb-2">परन्तु DC = 2CM (चूँकि DM = CM)</p>
+                        <p class="mb-2">अतः, 2CM = AB, या CM = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+
+                        <p><strong>उत्तर:</strong> चारों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि ∠C = 90°, M, AB का मध्य-बिंदु है, और DM = CM। (i) त्रिभुजों AMC और BMD में, AM = BM, ∠AMC = ∠BMD (शीर्षाभिमुख), और CM = DM। इसलिए SAS नियम से ΔAMC ≅ ΔBMD। (ii) CPCT से ∠ACM = ∠BDM, जो एकांतर अंतः कोण हैं, इसलिए AC ∥ BD। AC ⊥ BC, तो BD ⊥ BC, यानी ∠DBC = 90°। (iii) त्रिभुजों DBC और ACB में, BC उभयनिष्ठ, ∠DBC = ∠ACB = 90°, और DB = AC (CPCT)। इसलिए SAS नियम से ΔDBC ≅ ΔACB। (iv) CPCT से DC = AB, पर DC = 2CM, इसलिए CM = 1/2 AB।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 7.2 ==================== -->
+        <section id="exercise-7-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 7.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक समद्विबाहु त्रिभुज ABC में, जिसमें AB = AC है, ∠B और ∠C के समद्विभाजक परस्पर बिंदु O पर प्रतिच्छेद करते हैं। A को O से मिलाइए। दर्शाइए कि: (i) OB = OC (ii) AO, ∠A को समद्विभाजित करता है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB = AC, OB और OC क्रमशः ∠B और ∠C के समद्विभाजक हैं।</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> चूँकि AB = AC, इसलिए ∠B = ∠C (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">अतः, <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>∠B = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>∠C, यानी ∠OBC = ∠OCB</p>
+                        <p class="mb-2">इसलिए, OB = OC (बराबर कोणों के सम्मुख भुजाएँ)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> ΔAOB और ΔAOC में:</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">OB = OC (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">AO = AO (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔAOB ≅ ΔAOC (SSS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠BAO = ∠CAO (CPCT)</p>
+                        <p class="mb-2">अतः, AO, ∠A को समद्विभाजित करता है।</p>
+
+                        <p><strong>उत्तर:</strong> दोनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AB = AC, और OB और OC, ∠B और ∠C के समद्विभाजक हैं। (i) AB = AC से ∠B = ∠C, इसलिए 1/2 ∠B = 1/2 ∠C, यानी ∠OBC = ∠OCB। तो OB = OC। (ii) त्रिभुजों AOB और AOC में, AB = AC, OB = OC, और AO उभयनिष्ठ। इसलिए SSS नियम से ΔAOB ≅ ΔAOC। CPCT से ∠BAO = ∠CAO, मतलब AO, ∠A को समद्विभाजित करता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: ΔABC में, AD, BC का लंब समद्विभाजक है (देखिए आकृति 7.30)। दर्शाइए कि ΔABC एक समद्विबाहु त्रिभुज है, जिसमें AB = AC है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AD, BC का लंब समद्विभाजक है, इसलिए BD = DC और ∠ADB = ∠ADC = 90°</p>
+                        <p class="mb-2">ΔADB और ΔADC में:</p>
+                        <p class="mb-2">BD = DC (AD, BC को समद्विभाजित करता है)</p>
+                        <p class="mb-2">∠ADB = ∠ADC = 90° (AD ⊥ BC)</p>
+                        <p class="mb-2">AD = AD (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔADB ≅ ΔADC (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, AB = AC (CPCT)</p>
+                        <p class="mb-2">अतः, ΔABC समद्विबाहु है, जिसमें AB = AC है।</p>
+                        <p><strong>उत्तर:</strong> ΔABC समद्विबाहु है, जिसमें AB = AC है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AD, BC का लंब समद्विभाजक है, मतलब BD = DC और ∠ADB = ∠ADC = 90°। त्रिभुजों ADB और ADC में, BD = DC, ∠ADB = ∠ADC = 90°, और AD उभयनिष्ठ। इसलिए SAS नियम से ΔADB ≅ ΔADC। CPCT से AB = AC, मतलब ΔABC समद्विबाहु है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: ABC एक समद्विबाहु त्रिभुज है, जिसमें बराबर भुजाओं AC और AB पर क्रमशः शीर्षलंब BE और CF खींचे गए हैं (देखिए आकृति 7.31)। दर्शाइए कि ये शीर्षलंब बराबर हैं।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB = AC, BE ⊥ AC, CF ⊥ AB</p>
+                        <p class="mb-2">ΔABE और ΔACF में:</p>
+                        <p class="mb-2">∠A = ∠A (उभयनिष्ठ कोण)</p>
+                        <p class="mb-2">∠AEB = ∠AFC = 90° (BE और CF शीर्षलंब हैं)</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">अतः, ΔABE ≅ ΔACF (AAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, BE = CF (CPCT)</p>
+                        <p><strong>उत्तर:</strong> BE = CF</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AB = AC, BE ⊥ AC, CF ⊥ AB। त्रिभुजों ABE और ACF में, ∠A उभयनिष्ठ, ∠AEB = ∠AFC = 90°, और AB = AC। इसलिए AAS नियम से ΔABE ≅ ΔACF। CPCT से BE = CF।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: ABC एक त्रिभुज है, जिसमें AC और AB पर क्रमशः शीर्षलंब BE और CF बराबर हैं (देखिए आकृति 7.32)। दर्शाइए कि (i) ΔABE ≅ ΔACF (ii) AB = AC, अर्थात् ABC एक समद्विबाहु त्रिभुज है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> BE = CF, BE ⊥ AC, CF ⊥ AB</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> ΔABE और ΔACF में:</p>
+                        <p class="mb-2">∠A = ∠A (उभयनिष्ठ कोण)</p>
+                        <p class="mb-2">∠AEB = ∠AFC = 90° (BE और CF शीर्षलंब हैं)</p>
+                        <p class="mb-2">BE = CF (दिया है)</p>
+                        <p class="mb-2">अतः, ΔABE ≅ ΔACF (AAS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔABE ≅ ΔACF, इसलिए AB = AC (CPCT)</p>
+                        <p class="mb-2">अतः, ΔABC समद्विबाहु है, जिसमें AB = AC है।</p>
+
+                        <p><strong>उत्तर:</strong> दोनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि BE = CF, BE ⊥ AC, CF ⊥ AB। (i) त्रिभुजों ABE और ACF में, ∠A उभयनिष्ठ, ∠AEB = ∠AFC = 90°, और BE = CF। इसलिए AAS नियम से ΔABE ≅ ΔACF। (ii) CPCT से AB = AC, मतलब ΔABC समद्विबाहु है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: ABC और DBC एक ही आधार BC पर स्थित दो समद्विबाहु त्रिभुज हैं (देखिए आकृति 7.33)। दर्शाइए कि ∠ABD = ∠ACD है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> ΔABC और ΔDBC एक ही आधार BC पर समद्विबाहु त्रिभुज हैं।</p>
+                        <p class="mb-2">इसलिए, AB = AC और DB = DC</p>
+                        <p class="mb-2">ΔABD और ΔACD में:</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">BD = CD (दिया है)</p>
+                        <p class="mb-2">AD = AD (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔABD ≅ ΔACD (SSS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠ABD = ∠ACD (CPCT)</p>
+                        <p><strong>उत्तर:</strong> ∠ABD = ∠ACD</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि ΔABC और ΔDBC एक ही आधार BC पर समद्विबाहु त्रिभुज हैं। इसलिए AB = AC और DB = DC। त्रिभुजों ABD और ACD में, AB = AC, BD = CD, और AD उभयनिष्ठ। इसलिए SSS नियम से ΔABD ≅ ΔACD। CPCT से ∠ABD = ∠ACD।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: ΔABC एक समद्विबाहु त्रिभुज है, जिसमें AB = AC है। भुजा BA को D तक इस प्रकार बढ़ाया गया है कि AD = AB है (देखिए आकृति 7.34)। दर्शाइए कि ∠BCD एक समकोण है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB = AC, AD = AB</p>
+                        <p class="mb-2">अतः, AB = AC = AD</p>
+                        <p class="mb-2">ΔABC में: AB = AC, इसलिए ∠ABC = ∠ACB (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">मान लीजिए ∠ABC = ∠ACB = x</p>
+                        <p class="mb-2">ΔADC में: AD = AC, इसलिए ∠ADC = ∠ACD (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">मान लीजिए ∠ADC = ∠ACD = y</p>
+                        <p class="mb-2">ΔBCD में, कोणों का योग = 180°</p>
+                        <p class="mb-2">इसलिए, ∠BCD + ∠BDC + ∠CBD = 180°</p>
+                        <p class="mb-2">∠BCD = ∠BCA + ∠ACD = x + y</p>
+                        <p class="mb-2">∠BDC = y</p>
+                        <p class="mb-2">∠CBD = x</p>
+                        <p class="mb-2">अतः, (x + y) + y + x = 180°</p>
+                        <p class="mb-2">2x + 2y = 180°</p>
+                        <p class="mb-2">x + y = 90°</p>
+                        <p class="mb-2">इसलिए, ∠BCD = x + y = 90°</p>
+                        <p><strong>उत्तर:</strong> ∠BCD एक समकोण है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AB = AC और AD = AB, इसलिए AB = AC = AD। ΔABC में AB = AC, इसलिए ∠ABC = ∠ACB = x। ΔADC में AD = AC, इसलिए ∠ADC = ∠ACD = y। ΔBCD के कोणों का योग 180° है: ∠BCD + ∠BDC + ∠CBD = (x+y) + y + x = 2x+2y = 180°, इसलिए x+y = 90°। तो ∠BCD = x+y = 90°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: ABC एक समकोण त्रिभुज है, जिसमें ∠A = 90° और AB = AC है। ∠B और ∠C ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> ∠A = 90°, AB = AC</p>
+                        <p class="mb-2">चूँकि AB = AC, इसलिए ∠B = ∠C (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">ΔABC में कोणों का योग = 180°</p>
+                        <p class="mb-2">इसलिए, ∠A + ∠B + ∠C = 180°</p>
+                        <p class="mb-2">90° + ∠B + ∠B = 180° (चूँकि ∠B = ∠C)</p>
+                        <p class="mb-2">2∠B = 90°</p>
+                        <p class="mb-2">∠B = 45°</p>
+                        <p class="mb-2">इसलिए, ∠C = 45°</p>
+                        <p><strong>उत्तर:</strong> ∠B = 45°, ∠C = 45°</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि ∠A = 90° और AB = AC। AB = AC से ∠B = ∠C। त्रिभुज के कोणों का योग 180° है: 90° + ∠B + ∠C = 180°। पर ∠B = ∠C, इसलिए 90° + 2∠B = 180°, यानी 2∠B = 90°, ∠B = 45°। तो ∠C = 45°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: दर्शाइए कि एक समबाहु त्रिभुज के प्रत्येक कोण 60° का होता है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ΔABC एक समबाहु त्रिभुज है, जिसमें AB = BC = CA है।</p>
+                        <p class="mb-2">चूँकि AB = BC, इसलिए ∠C = ∠A (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">चूँकि BC = CA, इसलिए ∠A = ∠B (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">अतः, ∠A = ∠B = ∠C</p>
+                        <p class="mb-2">ΔABC में कोणों का योग = 180°</p>
+                        <p class="mb-2">इसलिए, ∠A + ∠B + ∠C = 180°</p>
+                        <p class="mb-2">3∠A = 180° (चूँकि सभी कोण बराबर हैं)</p>
+                        <p class="mb-2">∠A = 60°</p>
+                        <p class="mb-2">इसलिए, ∠A = ∠B = ∠C = 60°</p>
+                        <p><strong>उत्तर:</strong> सभी कोण 60° के हैं।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> समबाहु त्रिभुज में सभी भुजाएँ बराबर होती हैं: AB = BC = CA। AB = BC से ∠C = ∠A। BC = CA से ∠A = ∠B। तो सभी कोण बराबर हैं: ∠A = ∠B = ∠C। त्रिभुज के कोणों का योग 180° है, इसलिए 3∠A = 180°, ∠A = 60°। तो सभी कोण 60° के हैं।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 7.3 ==================== -->
+        <section id="exercise-7-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 7.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: ΔABC और ΔDBC एक ही आधार BC पर बने दो समद्विबाहु त्रिभुज हैं तथा शीर्ष A और D, आधार BC के एक ही ओर स्थित हैं (देखिए आकृति 7.39)। यदि AD को बढ़ाकर BC को बिंदु P पर प्रतिच्छेद करती है, तो दर्शाइए कि: (i) ΔABD ≅ ΔACD (ii) ΔABP ≅ ΔACP (iii) AP, ∠A को तथा ∠D को भी समद्विभाजित करता है। (iv) AP, BC का लंब समद्विभाजक है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> ΔABC और ΔDBC एक ही आधार BC पर समद्विबाहु त्रिभुज हैं।</p>
+                        <p class="mb-2">इसलिए, AB = AC और DB = DC</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> ΔABD और ΔACD में:</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">BD = CD (दिया है)</p>
+                        <p class="mb-2">AD = AD (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔABD ≅ ΔACD (SSS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> ΔABP और ΔACP में:</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">∠BAP = ∠CAP (चूँकि ΔABD ≅ ΔACD, इसलिए ∠BAD = ∠CAD)</p>
+                        <p class="mb-2">AP = AP (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔABP ≅ ΔACP (SAS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(iii)</strong> (i) से, ∠BAD = ∠CAD, इसलिए AP, ∠A को समद्विभाजित करता है।</p>
+                        <p class="mb-2">(i) से, ∠BDA = ∠CDA, इसलिए AP, ∠D को समद्विभाजित करता है।</p>
+
+                        <p class="mb-2 mt-4"><strong>(iv)</strong> (ii) से, BP = CP (CPCT)</p>
+                        <p class="mb-2">और ∠APB = ∠APC (CPCT)</p>
+                        <p class="mb-2">परन्तु ∠APB + ∠APC = 180° (रैखिक युग्म)</p>
+                        <p class="mb-2">इसलिए, 2∠APB = 180°, ∠APB = 90°</p>
+                        <p class="mb-2">अतः, AP ⊥ BC और BP = CP, इसलिए AP, BC का लंब समद्विभाजक है।</p>
+
+                        <p><strong>उत्तर:</strong> चारों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि ΔABC और ΔDBC एक ही आधार BC पर समद्विबाहु त्रिभुज हैं। (i) त्रिभुजों ABD और ACD में, AB = AC, BD = CD, और AD उभयनिष्ठ। इसलिए SSS नियम से ΔABD ≅ ΔACD। (ii) त्रिभुजों ABP और ACP में, AB = AC, ∠BAP = ∠CAP (भाग i से), और AP उभयनिष्ठ। इसलिए SAS नियम से ΔABP ≅ ΔACP। (iii) भाग i से ∠BAD = ∠CAD, इसलिए AP, ∠A को समद्विभाजित करता है। भाग i से ∠BDA = ∠CDA, इसलिए AP, ∠D को समद्विभाजित करता है। (iv) भाग ii से BP = CP और ∠APB = ∠APC। रैखिक युग्म से ∠APB + ∠APC = 180°, इसलिए ∠APB = 90°। तो AP ⊥ BC और BP = CP, मतलब AP, BC का लंब समद्विभाजक है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: AD एक समद्विबाहु त्रिभुज ABC का एक शीर्षलंब है, जिसमें AB = AC है। दर्शाइए कि (i) AD, BC को समद्विभाजित करता है (ii) AD, ∠A को समद्विभाजित करता है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB = AC, AD शीर्षलंब है, इसलिए AD ⊥ BC</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> ΔADB और ΔADC में:</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">∠ADB = ∠ADC = 90° (AD शीर्षलंब है)</p>
+                        <p class="mb-2">AD = AD (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">अतः, ΔADB ≅ ΔADC (RHS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, BD = CD (CPCT)</p>
+                        <p class="mb-2">अतः, AD, BC को समद्विभाजित करता है।</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔADB ≅ ΔADC, इसलिए ∠BAD = ∠CAD (CPCT)</p>
+                        <p class="mb-2">अतः, AD, ∠A को समद्विभाजित करता है।</p>
+
+                        <p><strong>उत्तर:</strong> दोनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AB = AC और AD शीर्षलंब है, मतलब AD ⊥ BC। (i) त्रिभुजों ADB और ADC में, AB = AC, ∠ADB = ∠ADC = 90°, और AD उभयनिष्ठ। इसलिए RHS नियम से ΔADB ≅ ΔADC। CPCT से BD = CD, मतलब AD, BC को समद्विभाजित करता है। (ii) CPCT से ∠BAD = ∠CAD, मतलब AD, ∠A को समद्विभाजित करता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक त्रिभुज ABC की दो भुजाएँ AB और BC तथा माध्यिका AM क्रमशः एक अन्य त्रिभुज PQR की भुजाओं PQ और QR तथा माध्यिका PN के बराबर हैं (देखिए आकृति 7.40)। दर्शाइए कि: (i) ΔABM ≅ ΔPQN (ii) ΔABC ≅ ΔPQR</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB = PQ, BC = QR, AM = PN, और AM तथा PN माध्यिकाएँ हैं।</p>
+                        <p class="mb-2">इसलिए, BM = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>BC और QN = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>QR</p>
+                        <p class="mb-2">चूँकि BC = QR, इसलिए BM = QN</p>
+
+                        <p class="mb-2 mt-4"><strong>(i)</strong> ΔABM और ΔPQN में:</p>
+                        <p class="mb-2">AB = PQ (दिया है)</p>
+                        <p class="mb-2">BM = QN (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">AM = PN (दिया है)</p>
+                        <p class="mb-2">अतः, ΔABM ≅ ΔPQN (SSS सर्वांगसमता नियम से)</p>
+
+                        <p class="mb-2 mt-4"><strong>(ii)</strong> चूँकि ΔABM ≅ ΔPQN, इसलिए ∠ABM = ∠PQN (CPCT)</p>
+                        <p class="mb-2">अतः, ∠ABC = ∠PQR</p>
+                        <p class="mb-2">ΔABC और ΔPQR में:</p>
+                        <p class="mb-2">AB = PQ (दिया है)</p>
+                        <p class="mb-2">BC = QR (दिया है)</p>
+                        <p class="mb-2">∠ABC = ∠PQR (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔPQR (SAS सर्वांगसमता नियम से)</p>
+
+                        <p><strong>उत्तर:</strong> दोनों भाग सिद्ध हुए</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AB = PQ, BC = QR, AM = PN, और AM तथा PN माध्यिकाएँ हैं। इसलिए BM = 1/2 BC = 1/2 QR = QN। (i) त्रिभुजों ABM और PQN में, AB = PQ, BM = QN, और AM = PN। इसलिए SSS नियम से ΔABM ≅ ΔPQN। (ii) CPCT से ∠ABM = ∠PQN, यानी ∠ABC = ∠PQR। त्रिभुजों ABC और PQR में, AB = PQ, BC = QR, और ∠ABC = ∠PQR। इसलिए SAS नियम से ΔABC ≅ ΔPQR।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: BE और CF एक त्रिभुज ABC के दो बराबर शीर्षलंब हैं। RHS सर्वांगसमता नियम का प्रयोग करके सिद्ध कीजिए कि त्रिभुज ABC एक समद्विबाहु त्रिभुज है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> BE = CF, BE ⊥ AC, CF ⊥ AB</p>
+                        <p class="mb-2">ΔBEC और ΔCFB में:</p>
+                        <p class="mb-2">∠BEC = ∠CFB = 90° (BE और CF शीर्षलंब हैं)</p>
+                        <p class="mb-2">BC = CB (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">BE = CF (दिया है)</p>
+                        <p class="mb-2">अतः, ΔBEC ≅ ΔCFB (RHS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠BCE = ∠CBF (CPCT)</p>
+                        <p class="mb-2">यानी, ∠ACB = ∠ABC</p>
+                        <p class="mb-2">इसलिए, AB = AC (बराबर कोणों के सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">अतः, ΔABC समद्विबाहु है।</p>
+                        <p><strong>उत्तर:</strong> ΔABC समद्विबाहु है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि BE = CF, BE ⊥ AC, CF ⊥ AB। त्रिभुजों BEC और CFB में, ∠BEC = ∠CFB = 90°, BC उभयनिष्ठ, और BE = CF। इसलिए RHS नियम से ΔBEC ≅ ΔCFB। CPCT से ∠BCE = ∠CBF, यानी ∠ACB = ∠ABC। तो AB = AC (बराबर कोणों के सम्मुख भुजाएँ), मतलब ΔABC समद्विबाहु है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: ABC एक समद्विबाहु त्रिभुज है, जिसमें AB = AC है। AP ⊥ BC खींचकर दर्शाइए कि ∠B = ∠C है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AB = AC, AP ⊥ BC</p>
+                        <p class="mb-2">ΔAPB और ΔAPC में:</p>
+                        <p class="mb-2">AB = AC (दिया है)</p>
+                        <p class="mb-2">AP = AP (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">∠APB = ∠APC = 90° (AP ⊥ BC)</p>
+                        <p class="mb-2">अतः, ΔAPB ≅ ΔAPC (RHS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠ABP = ∠ACP (CPCT)</p>
+                        <p class="mb-2">यानी, ∠B = ∠C</p>
+                        <p><strong>उत्तर:</strong> ∠B = ∠C</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AB = AC और AP ⊥ BC। त्रिभुजों APB और APC में, AB = AC, AP उभयनिष्ठ, और ∠APB = ∠APC = 90°। इसलिए RHS नियम से ΔAPB ≅ ΔAPC। CPCT से ∠ABP = ∠ACP, यानी ∠B = ∠C।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 7 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> दो त्रिभुज सर्वांगसम होते हैं यदि उनकी सभी भुजाएँ और सभी कोण बराबर हों।</p>
+                <p class="mb-2"><strong>2.</strong> सर्वांगसमता के नियम:</p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1"><strong>SAS:</strong> दो भुजाएँ और उनके बीच का कोण।</li>
+                    <li class="mb-1"><strong>ASA:</strong> दो कोण और उनके बीच की भुजा।</li>
+                    <li class="mb-1"><strong>AAS:</strong> दो कोण और एक संगत भुजा।</li>
+                    <li class="mb-1"><strong>SSS:</strong> तीनों भुजाएँ।</li>
+                    <li class="mb-1"><strong>RHS:</strong> समकोण, कर्ण और एक भुजा।</li>
+                </ul>
+                <p class="mb-2"><strong>3.</strong> CPCT (Corresponding Parts of Congruent Triangles) का अर्थ है कि सर्वांगसम त्रिभुजों के संगत भाग बराबर होते हैं।</p>
+                <p class="mb-2"><strong>4.</strong> समद्विबाहु त्रिभुज में बराबर भुजाओं के सम्मुख कोण बराबर होते हैं और विलोमतः।</p>
+                <p class="mb-2"><strong>5.</strong> समबाहु त्रिभुज के सभी कोण 60° के होते हैं।</p>
+                <p class="mb-2"><strong>6.</strong> त्रिभुज की किन्हीं दो भुजाओं का योग तीसरी भुजा से बड़ा होता है।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

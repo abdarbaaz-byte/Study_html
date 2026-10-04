@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 5: यूक्लिड की ज्यामिति का परिचय</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .true-false {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .true {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        .false {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        .figure-box {
+            background-color: #f9fafb;
+            border: 2px dashed #a5b4fc;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem 0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 5<br>यूक्लिड की ज्यामिति का परिचय</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 5.1 ==================== -->
+        <section id="exercise-5-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित कथनों में से कौन-से सत्य हैं और कौन-से असत्य हैं? अपने उत्तरों के लिए कारण दीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) एक बिंदु से होकर केवल एक ही रेखा खींची जा सकती है।</h4>
+                    <div class="step">
+                        <p class="mb-2">यह कथन <span class="true-false false">असत्य</span> है।</p>
+                        <p class="mb-2">यूक्लिड के अभिगृहीतों के अनुसार, एक बिंदु से होकर अपरिमित रूप से अनेक रेखाएँ खींची जा सकती हैं।</p>
+                        <p class="mb-2">एक अकेला बिंदु किसी अद्वितीय रेखा को निर्धारित नहीं करता है।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यह कथन गलत है। एक बिंदु से अपरिमित रूप से अनेक रेखाएँ खींची जा सकती हैं। एक बिंदु से गुजरने वाली रेखाओं की कोई सीमा नहीं होती।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) दो भिन्न बिंदुओं से होकर जाने वाली अपरिमित रूप से अनेक रेखाएँ होती हैं।</h4>
+                    <div class="step">
+                        <p class="mb-2">यह कथन <span class="true-false false">असत्य</span> है।</p>
+                        <p class="mb-2">यूक्लिड की अभिधारणा 1 और अभिगृहीत 5.1 के अनुसार, दो भिन्न बिंदुओं से होकर केवल एक ही अद्वितीय रेखा खींची जा सकती है।</p>
+                        <p class="mb-2">यदि दो भिन्न बिंदुओं से एक से अधिक रेखाएँ गुजरतीं, तो यह एक सरल रेखा की मूल परिभाषा का उल्लंघन होता।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यह कथन भी गलत है। यूक्लिड की अभिधारणा 1 के अनुसार, दो भिन्न बिंदुओं से केवल एक ही अद्वितीय रेखा गुजर सकती है।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) एक सांत रेखा दोनों ओर अपरिमित रूप से बढ़ाई जा सकती है।</h4>
+                    <div class="step">
+                        <p class="mb-2">यह कथन <span class="true-false true">सत्य</span> है।</p>
+                        <p class="mb-2">यूक्लिड की अभिधारणा 2 के अनुसार, एक सांत रेखा (रेखाखंड) को दोनों ओर अपरिमित रूप से बढ़ाकर एक रेखा बनाई जा सकती है।</p>
+                        <p class="mb-2">यह यूक्लिडीय ज्यामिति में सरल रेखाओं का एक मूलभूत गुण है।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यह कथन सही है। यूक्लिड की अभिधारणा 2 के अनुसार, एक सांत रेखा (रेखाखंड) को दोनों तरफ अपरिमित रूप से बढ़ाया जा सकता है।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) यदि दो वृत्त बराबर हैं, तो उनकी त्रिज्याएँ बराबर होती हैं।</h4>
+                    <div class="step">
+                        <p class="mb-2">यह कथन <span class="true-false true">सत्य</span> है।</p>
+                        <p class="mb-2">यूक्लिड की अभिधारणा 3 के अनुसार, किसी भी केंद्र और किसी भी त्रिज्या से एक वृत्त खींचा जा सकता है।</p>
+                        <p class="mb-2">यदि दो वृत्त बराबर (सर्वांगसम) हैं, तो उनका आकार समान होना चाहिए, जिसका अर्थ है कि उनकी त्रिज्याएँ समान होनी चाहिए।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यह कथन सही है। यदि दो वृत्त बराबर (सर्वांगसम) हैं, तो उनकी त्रिज्याएँ भी बराबर होनी चाहिए।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) आकृति 5.9 में, यदि AB = PQ और PQ = XY है, तो AB = XY होगा।</h4>
+                    <div class="step">
+                        <p class="mb-2">यह कथन <span class="true-false true">सत्य</span> है।</p>
+                        <p class="mb-2">यूक्लिड के पहले अभिगृहीत के अनुसार: "जो वस्तुएँ एक ही वस्तु के बराबर होती हैं, वे एक-दूसरे के भी बराबर होती हैं।"</p>
+                        <p class="mb-2">चूँकि AB = PQ और PQ = XY है, इसलिए AB = XY होगा।</p>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यह कथन सही है। यूक्लिड के पहले अभिगृहीत के अनुसार: "जो चीजें एक ही चीज के बराबर हैं, वे आपस में भी बराबर होती हैं।" यहाँ AB = PQ और PQ = XY, इसलिए AB = XY।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित पदों में से प्रत्येक की परिभाषा दीजिए। क्या इनके लिए कुछ ऐसे पद हैं जिन्हें पहले परिभाषित करने की आवश्यकता है? वे क्या हैं और आप इन्हें किस प्रकार परिभाषित करेंगे?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) समांतर रेखाएँ</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>परिभाषा:</strong> समांतर रेखाएँ वे रेखाएँ होती हैं जो एक ही तल में होती हैं और कभी नहीं मिलतीं; वे सदैव समान दूरी पर रहती हैं।</p>
+                        <p class="mb-2"><strong>पहले परिभाषित किए जाने वाले पद:</strong> "रेखा", "तल", "दूरी", और "प्रतिच्छेद" को परिभाषित करना आवश्यक है।</p>
+                        <p class="mb-2"><strong>इनकी परिभाषाएँ:</strong></p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-1"><strong>रेखा:</strong> एक रेखा एक सीधी एक-विमीय आकृति है जिसकी कोई मोटाई नहीं होती और जो दोनों दिशाओं में अपरिमित रूप से फैली होती है।</li>
+                            <li class="mb-1"><strong>तल:</strong> एक तल एक सपाट, द्वि-विमीय सतह है जो अपरिमित रूप से फैली होती है।</li>
+                            <li class="mb-1"><strong>दूरी:</strong> दो बिंदुओं के बीच का सबसे छोटा पथ।</li>
+                            <li class="mb-1"><strong>प्रतिच्छेद:</strong> जब दो रेखाएँ एक बिंदु पर एक-दूसरे को काटती हैं।</li>
+                        </ul>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> समांतर रेखाएँ वे रेखाएँ हैं जो एक ही तल में होती हैं और कभी नहीं मिलतीं, सदैव समान दूरी पर रहती हैं। इस परिभाषा के लिए पहले "रेखा", "तल", "दूरी", और "प्रतिच्छेद" को परिभाषित करना पड़ेगा।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) लंब रेखाएँ</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>परिभाषा:</strong> लंब रेखाएँ वे रेखाएँ होती हैं जो समकोण (90 डिग्री) पर प्रतिच्छेद करती हैं।</p>
+                        <p class="mb-2"><strong>पहले परिभाषित किए जाने वाले पद:</strong> "रेखा", "प्रतिच्छेद", और "समकोण" को परिभाषित करना आवश्यक है।</p>
+                        <p class="mb-2"><strong>इनकी परिभाषाएँ:</strong></p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-1"><strong>रेखा:</strong> ऊपर परिभाषित।</li>
+                            <li class="mb-1"><strong>प्रतिच्छेद:</strong> ऊपर परिभाषित।</li>
+                            <li class="mb-1"><strong>समकोण:</strong> वह कोण जिसका माप ठीक 90 डिग्री होता है।</li>
+                        </ul>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> लंब रेखाएँ वे रेखाएँ हैं जो समकोण (90 डिग्री) पर प्रतिच्छेद करती हैं। इस परिभाषा के लिए पहले "रेखा", "प्रतिच्छेद", और "समकोण" को परिभाषित करना पड़ेगा।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) रेखाखंड</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>परिभाषा:</strong> रेखाखंड एक रेखा का वह भाग है जो दो भिन्न अंत बिंदुओं से घिरा होता है और जिसमें उन अंत बिंदुओं के बीच की सभी बिंदुएँ सम्मिलित होती हैं।</p>
+                        <p class="mb-2"><strong>पहले परिभाषित किए जाने वाले पद:</strong> "रेखा", "बिंदु", और "बीच में" को परिभाषित करना आवश्यक है।</p>
+                        <p class="mb-2"><strong>इनकी परिभाषाएँ:</strong></p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-1"><strong>रेखा:</strong> ऊपर परिभाषित।</li>
+                            <li class="mb-1"><strong>बिंदु:</strong> एक बिंदु अंतरिक्ष में एक स्थान है जिसकी कोई विमा (लंबाई, चौड़ाई, ऊँचाई) नहीं होती।</li>
+                            <li class="mb-1"><strong>बीच में:</strong> बिंदु C, बिंदुओं A और B के बीच में है यदि तीनों बिंदु संरेख हों और AC + CB = AB हो।</li>
+                        </ul>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> रेखाखंड एक रेखा का वह भाग है जो दो भिन्न अंत बिंदुओं के बीच होता है। इस परिभाषा के लिए पहले "रेखा", "बिंदु", और "बीच में" को परिभाषित करना पड़ेगा।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) वृत्त की त्रिज्या</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>परिभाषा:</strong> वृत्त की त्रिज्या वृत्त के केंद्र से उसकी परिधि पर किसी भी बिंदु तक जाने वाली सरल रेखा होती है।</p>
+                        <p class="mb-2"><strong>पहले परिभाषित किए जाने वाले पद:</strong> "वृत्त", "केंद्र", "सरल रेखा", और "परिधि" को परिभाषित करना आवश्यक है।</p>
+                        <p class="mb-2"><strong>इनकी परिभाषाएँ:</strong></p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-1"><strong>वृत्त:</strong> एक वृत्त एक तल में उन सभी बिंदुओं का समुच्चय है जो एक निश्चित बिंदु (केंद्र) से समान दूरी पर होते हैं।</li>
+                            <li class="mb-1"><strong>केंद्र:</strong> वह निश्चित बिंदु जिससे वृत्त के सभी बिंदु समान दूरी पर होते हैं।</li>
+                            <li class="mb-1"><strong>सरल रेखा:</strong> ऊपर रेखा में परिभाषित।</li>
+                            <li class="mb-1"><strong>परिधि:</strong> वृत्त की सीमा रेखा।</li>
+                        </ul>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> त्रिज्या वृत्त के केंद्र से परिधि तक की सरल रेखा होती है। इस परिभाषा के लिए पहले "वृत्त", "केंद्र", "सरल रेखा", और "परिधि" को परिभाषित करना पड़ेगा।
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) वर्ग</h4>
+                    <div class="step">
+                        <p class="mb-2"><strong>परिभाषा:</strong> वर्ग एक चतुर्भुज होता है जिसकी चारों भुजाएँ लंबाई में समान होती हैं और चारों कोण 90 डिग्री के होते हैं।</p>
+                        <p class="mb-2"><strong>पहले परिभाषित किए जाने वाले पद:</strong> "चतुर्भुज", "भुजा", "लंबाई", "कोण", और "90 डिग्री" को परिभाषित करना आवश्यक है।</p>
+                        <p class="mb-2"><strong>इनकी परिभाषाएँ:</strong></p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-1"><strong>चतुर्भुज:</strong> चार भुजाओं और चार कोणों वाला बहुभुज।</li>
+                            <li class="mb-1"><strong>भुजा:</strong> वह रेखाखंड जो बहुभुज का भाग बनाता है।</li>
+                            <li class="mb-1"><strong>लंबाई:</strong> किसी वस्तु का एक सिरे से दूसरे सिरे तक का मापन।</li>
+                            <li class="mb-1"><strong>कोण:</strong> दो किरणों द्वारा बनाई गई आकृति जिनका एक उभयनिष्ठ अंत बिंदु हो।</li>
+                            <li class="mb-1"><strong>90 डिग्री:</strong> समकोण का माप।</li>
+                        </ul>
+                    </div>
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> वर्ग एक चतुर्भुज होता है जिसकी चारों भुजाएँ समान और चारों कोण 90 डिग्री के होते हैं। इस परिभाषा के लिए पहले "चतुर्भुज", "भुजा", "लंबाई", "कोण", और "90 डिग्री" को परिभाषित करना पड़ेगा।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: नीचे दी गई दो अभिधारणाओं पर विचार कीजिए:</h3>
+                <p class="mb-2">(i) दिए हुए दो भिन्न बिंदुओं A और B के लिए, एक तीसरा बिंदु C ऐसा है जो A और B के बीच स्थित है।</p>
+                <p class="mb-4">(ii) ऐसे कम से कम तीन बिंदु हैं जो एक ही रेखा पर नहीं हैं।</p>
+                <p class="mb-4">क्या इन अभिधारणाओं में कोई अपरिभाषित पद हैं? क्या ये अभिधारणाएँ संगत हैं? क्या ये यूक्लिड की अभिधारणाओं से अनुसरण करती हैं? स्पष्ट कीजिए।</p>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>अपरिभाषित पद:</strong> हाँ, इन अभिधारणाओं में अपरिभाषित पद हैं:</p>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li class="mb-1"><strong>बिंदु:</strong> यूक्लिडीय ज्यामिति में यह पद अपरिभाषित है।</li>
+                            <li class="mb-1"><strong>रेखा:</strong> यह पद भी यूक्लिडीय ज्यामिति में अपरिभाषित है।</li>
+                            <li class="mb-1"><strong>बीच में:</strong> यूक्लिड के तत्वों में यह पद औपचारिक रूप से परिभाषित नहीं है।</li>
+                        </ul>
+
+                        <p class="mb-2"><strong>संगतता:</strong> हाँ, ये अभिधारणाएँ एक-दूसरे के साथ संगत हैं। ये किसी भी विरोधाभास की ओर नहीं ले जातीं।</p>
+
+                        <p class="mb-2"><strong>यूक्लिड की अभिधारणाओं से अनुसरण:</strong> ये अभिधारणाएँ सीधे यूक्लिड की पाँच अभिधारणाओं से नहीं निकलतीं। ये अंतरिक्ष की प्रकृति के बारे में अतिरिक्त मान्यताएँ हैं।</p>
+
+                        <p class="mb-2">यूक्लिड की अभिधारणाएँ स्पष्ट रूप से यह नहीं बतातीं कि किन्हीं दो बिंदुओं के बीच एक तीसरा बिंदु मौजूद होता है, या तीन असंरेख बिंदु मौजूद होते हैं।</p>
+
+                        <p class="mb-2">ये अभिधारणाएँ यह स्थापित करने में मदद करती हैं कि अंतरिक्ष सतत (continuous) है (विविक्त नहीं) और हम कम से कम दो विमाओं में कार्य कर रहे हैं।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> इन अभिधारणाओं में अपरिभाषित पद हैं जैसे "बिंदु", "रेखा", और "बीच में"। ये अभिधारणाएँ संगत हैं, अर्थात् ये आपस में विरोधाभास नहीं करतीं। ये यूक्लिड की अभिधारणाओं से सीधे अनुसरण नहीं करतीं, बल्कि अंतरिक्ष की प्रकृति के बारे में अतिरिक्त मान्यताएँ हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: यदि A, B और C एक रेखा पर स्थित बिंदु हैं और C, A और B के बीच इस प्रकार है कि AC = BC है, तो सिद्ध कीजिए कि AC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB है। आकृति खींचकर स्पष्ट कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> बिंदु C, A और B के बीच इस प्रकार स्थित है कि AC = BC है।</p>
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> AC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+
+                        <p class="mb-2"><strong>उपपत्ति:</strong></p>
+                        <p class="mb-2">चूँकि C, A और B के बीच स्थित है, इसलिए:</p>
+                        <p class="mb-2 equation">AB = AC + BC</p>
+
+                        <p class="mb-2">दिया गया है कि AC = BC, इसलिए हम BC के स्थान पर AC प्रतिस्थापित कर सकते हैं:</p>
+                        <p class="mb-2 equation">AB = AC + AC = 2AC</p>
+
+                        <p class="mb-2">अतः:</p>
+                        <p class="mb-2 equation">AC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+
+                        <p class="mb-2">यह सिद्ध करता है कि AC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB।</p>
+
+                        <p class="mb-2"><strong>आकृति:</strong></p>
+                        <div class="figure-box">
+                            A ————— C ————— B
+                            <p class="mt-2 text-sm">जहाँ AC = BC, अतः C, AB का मध्य-बिंदु है।</p>
+                        </div>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि बिंदु C, A और B के बीच में है और AC = BC। हम जानते हैं कि AB = AC + BC। AC = BC दिया गया है, तो AB = AC + AC = 2AC। इसलिए AC = 1/2 AB। आकृति में A ————— C ————— B दिखाया गया है, जहाँ C, AB का मध्य-बिंदु है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: प्रश्न 4 में, बिंदु C रेखाखंड AB का मध्य-बिंदु कहलाता है। सिद्ध कीजिए कि प्रत्येक रेखाखंड का एक और केवल एक ही मध्य-बिंदु होता है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> प्रत्येक रेखाखंड का एक और केवल एक ही मध्य-बिंदु होता है।</p>
+
+                        <p class="mb-2">हम इसे विरोधाभास (contradiction) से सिद्ध करेंगे।</p>
+
+                        <p class="mb-2">मान लीजिए कि रेखाखंड AB के दो भिन्न मध्य-बिंदु हैं, मान लीजिए C और D।</p>
+
+                        <p class="mb-2">यदि C, AB का मध्य-बिंदु है, तो:</p>
+                        <p class="mb-2 equation">AC = CB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+
+                        <p class="mb-2">यदि D भी AB का मध्य-बिंदु है, तो:</p>
+                        <p class="mb-2 equation">AD = DB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+
+                        <p class="mb-2">अब, व्यापकता की हानि के बिना, मान लीजिए कि D, A और C के बीच में स्थित है।</p>
+
+                        <p class="mb-2">तब:</p>
+                        <p class="mb-2 equation">AC = AD + DC</p>
+
+                        <p class="mb-2">परन्तु AC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB और AD = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+
+                        <p class="mb-2">इसलिए:</p>
+                        <p class="mb-2 equation"><div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB + DC</p>
+
+                        <p class="mb-2">इससे प्राप्त होता है:</p>
+                        <p class="mb-2 equation">DC = 0</p>
+
+                        <p class="mb-2">परन्तु यदि DC = 0, तो बिंदु C और D संपाती हो जाते हैं, जो हमारी इस मान्यता का विरोध करता है कि C और D भिन्न बिंदु हैं।</p>
+
+                        <p class="mb-2">अतः, हमारी यह मान्यता कि AB के दो भिन्न मध्य-बिंदु हैं, असत्य है।</p>
+
+                        <p class="mb-2"><strong>इसलिए, प्रत्येक रेखाखंड का एक और केवल एक ही मध्य-बिंदु होता है।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> हमें सिद्ध करना है कि प्रत्येक रेखाखंड का एक ही मध्य-बिंदु होता है। मान लेते हैं कि AB के दो भिन्न मध्य-बिंदु हैं C और D। यदि C मध्य-बिंदु है तो AC = CB = 1/2 AB। यदि D भी मध्य-बिंदु है तो AD = DB = 1/2 AB। मान लेते हैं कि D, A और C के बीच में है। तो AC = AD + DC। पर AC = 1/2 AB और AD = 1/2 AB, इसलिए 1/2 AB = 1/2 AB + DC, जो बताता है कि DC = 0। इसका मतलब C और D एक ही बिंदु हैं, जो हमारी मान्यता के विरुद्ध है। इसलिए प्रत्येक रेखाखंड का केवल एक ही मध्य-बिंदु होता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: आकृति 5.10 में, यदि AC = BD है, तो सिद्ध कीजिए कि AB = CD है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> AC = BD</p>
+                        <p class="mb-2"><strong>सिद्ध करना है:</strong> AB = CD</p>
+
+                        <p class="mb-2"><strong>आकृति का निरूपण:</strong></p>
+                        <div class="figure-box">
+                            A ——— B ——— C ——— D
+                            <p class="mt-2 text-sm">जहाँ बिंदु A, B, C, D इसी क्रम में संरेख हैं।</p>
+                        </div>
+
+                        <p class="mb-2">आकृति से हम देख सकते हैं कि:</p>
+                        <p class="mb-2 equation">AC = AB + BC</p>
+                        <p class="mb-2 equation">BD = BC + CD</p>
+
+                        <p class="mb-2">दिया गया है कि AC = BD, इसलिए:</p>
+                        <p class="mb-2 equation">AB + BC = BC + CD</p>
+
+                        <p class="mb-2">दोनों पक्षों से BC घटाने पर:</p>
+                        <p class="mb-2 equation">AB = CD</p>
+
+                        <p class="mb-2"><strong>अतः सिद्ध हुआ कि AB = CD।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दिया गया है कि AC = BD। आकृति में A, B, C, D संरेख हैं। हम जानते हैं कि AC = AB + BC और BD = BC + CD। AC = BD दिया गया है, इसलिए AB + BC = BC + CD। दोनों पक्षों से BC घटाने पर मिलता है AB = CD।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: यूक्लिड की अभिधारणाओं की सूची में, अभिधारणा 5 को 'सार्वत्रिक सत्य' क्यों माना जाता है? (ध्यान दीजिए कि यह प्रश्न पाँचवीं अभिधारणा के बारे में नहीं है।)</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">यूक्लिड की अभिधारणा 5 कहती है: "पूर्ण, भाग से बड़ा होता है।"</p>
+
+                        <p class="mb-2">यह अभिधारणा 'सार्वत्रिक सत्य' मानी जाती है क्योंकि:</p>
+
+                        <ul class="list-disc ml-6">
+                            <li class="mb-2">यह स्वयंसिद्ध है और इसके लिए किसी उपपत्ति की आवश्यकता नहीं होती।</li>
+                            <li class="mb-2">यह सभी राशियों और मापों पर लागू होती है, केवल ज्यामितीय आकृतियों तक सीमित नहीं है।</li>
+                            <li class="mb-2">यह हमारे दैनिक अनुभव और अंतर्ज्ञान के अनुरूप है।</li>
+                            <li class="mb-2">यह अनेक अन्य गणितीय संकल्पनाओं और उपपत्तियों का आधार बनती है।</li>
+                            <li class="mb-2">यह किसी विशिष्ट ज्यामितीय पद्धति या मापन इकाई पर निर्भर नहीं करती।</li>
+                        </ul>
+
+                        <p class="mb-2">उदाहरण के लिए:</p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-2">यदि हमारे पास एक राशि A है और उसमें एक भाग B सम्मिलित है, तो A निश्चित रूप से B से बड़ा होगा।</li>
+                            <li class="mb-2">यदि B, A का एक भाग है, तो हम A = B + C लिख सकते हैं, जहाँ C > 0 है, जो स्पष्ट रूप से दर्शाता है कि A > B।</li>
+                        </ul>
+
+                        <p class="mb-2">यह अभिधारणा इतनी मूलभूत है कि ऐसी किसी भी संगत गणितीय पद्धति की कल्पना करना कठिन है जहाँ यह सत्य न हो।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यूक्लिड की अभिधारणा 5 कहती है: "पूर्ण, भाग से बड़ा होता है।" यह एक 'सार्वत्रिक सत्य' है क्योंकि यह स्वयंसिद्ध है, इसके लिए किसी उपपत्ति की आवश्यकता नहीं। यह हर प्रकार की राशियों पर लागू होती है, केवल ज्यामिति तक सीमित नहीं। यह हमारे दैनिक अनुभव और अंतर्ज्ञान के साथ मेल खाती है।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.2 ==================== -->
+        <section id="exercise-5-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: आप यूक्लिड की पाँचवीं अभिधारणा को किस प्रकार लिखेंगे ताकि वह एक सार्वत्रिक सत्य हो?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">यूक्लिड की पाँचवीं अभिधारणा को निम्नलिखित प्रकार से लिखा जा सकता है ताकि वह एक सार्वत्रिक सत्य बन जाए:</p>
+
+                        <p class="mb-2"><strong>"यदि एक सरल रेखा दो अन्य सरल रेखाओं को इस प्रकार काटती है कि तिर्यक रेखा के एक ही ओर बने अंतः कोणों का योग दो समकोणों (180°) से कम हो, तो वे दोनों रेखाएँ उस ओर प्रतिच्छेद करेंगी जिस ओर यह योग दो समकोणों से कम होता है।"</strong></p>
+
+                        <p class="mb-2">इसे और सरल रूप में इस प्रकार लिखा जा सकता है:</p>
+
+                        <p class="mb-2"><strong>"दो भिन्न प्रतिच्छेदी रेखाएँ एक ही बिंदु से होकर नहीं जा सकतीं।"</strong></p>
+
+                        <p class="mb-2">या</p>
+
+                        <p class="mb-2"><strong>"किसी भी रेखा के बाहर स्थित एक बिंदु से होकर, उस रेखा के समांतर केवल एक ही रेखा खींची जा सकती है।"</strong></p>
+
+                        <p class="mb-2">यह कथन सार्वत्रिक सत्य है क्योंकि:</p>
+                        <ul class="list-disc ml-6">
+                            <li class="mb-1">यह यूक्लिडीय ज्यामिति में सदैव सत्य होता है।</li>
+                            <li class="mb-1">यह समांतर रेखाओं की अवधारणा को स्पष्ट करता है।</li>
+                            <li class="mb-1">यह किसी भी तल में लागू होता है, चाहे उसका आकार कोई भी हो।</li>
+                            <li class="mb-1">यह गणित की अनेक शाखाओं में आधारभूत माना जाता है।</li>
+                        </ul>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> यूक्लिड की पाँचवीं अभिधारणा को हम इस प्रकार लिख सकते हैं: "किसी भी रेखा के बाहर स्थित एक बिंदु से होकर, उस रेखा के समांतर केवल एक ही रेखा खींची जा सकती है।" यह कथन सार्वत्रिक सत्य है क्योंकि यह यूक्लिडीय ज्यामिति में सदैव सत्य होता है और समांतर रेखाओं की अवधारणा को स्पष्ट करता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: क्या यूक्लिड की पाँचवीं अभिधारणा अन्य अभिधारणाओं और अभिगृहीतों का परिणाम है? स्पष्ट कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>नहीं</strong>, यूक्लिड की पाँचवीं अभिधारणा अन्य अभिधारणाओं और अभिगृहीतों का परिणाम नहीं है।</p>
+
+                        <p class="mb-2"><strong>कारण:</strong></p>
+
+                        <ul class="list-disc ml-6">
+                            <li class="mb-2">यूक्लिड की पहली चार अभिधारणाएँ और सभी अभिगृहीत बहुत सरल और स्वयंसिद्ध हैं।</li>
+                            <li class="mb-2">परन्तु पाँचवीं अभिधारणा अधिक जटिल है और इसे तुरंत स्वयंसिद्ध नहीं माना जा सकता।</li>
+                            <li class="mb-2">यूक्लिड ने स्वयं भी इस अभिधारणा का प्रयोग बहुत अनिच्छा से किया था।</li>
+                            <li class="mb-2">अनेक गणितज्ञों ने इसे पहली चार अभिधारणाओं और अभिगृहीतों से सिद्ध करने का प्रयास किया, परन्तु सभी असफल रहे।</li>
+                            <li class="mb-2">लगभग 2000 वर्षों तक यह प्रयास चलता रहा, परन्तु कोई भी इसे सिद्ध नहीं कर सका।</li>
+                            <li class="mb-2">अंततः यह स्वीकार किया गया कि पाँचवीं अभिधारणा एक स्वतंत्र अभिधारणा है और इसे अन्य अभिधारणाओं से नहीं निकाला जा सकता।</li>
+                        </ul>
+
+                        <p class="mb-2"><strong>महत्वपूर्ण तथ्य:</strong></p>
+
+                        <ul class="list-disc ml-6">
+                            <li class="mb-2">यदि हम पाँचवीं अभिधारणा को हटा दें और उसके स्थान पर कोई भिन्न अभिधारणा रखें, तो हमें अयूक्लिडीय ज्यामिति (Non-Euclidean Geometry) प्राप्त होती है।</li>
+                            <li class="mb-2">उदाहरण के लिए, यदि हम मान लें कि किसी रेखा के बाहर स्थित बिंदु से होकर उस रेखा के समांतर एक से अधिक रेखाएँ खींची जा सकती हैं, तो यह अतिपरवलयिक ज्यामिति (Hyperbolic Geometry) कहलाती है।</li>
+                            <li class="mb-2">यदि हम मान लें कि कोई भी समांतर रेखाएँ नहीं होतीं, तो यह दीर्घवृत्तीय ज्यामिति (Elliptic Geometry) कहलाती है।</li>
+                            <li class="mb-2">ये ज्यामितियाँ आइंस्टीन के सापेक्षता के सिद्धांत में बहुत उपयोगी सिद्ध हुई हैं।</li>
+                        </ul>
+
+                        <p class="mb-2"><strong>निष्कर्ष:</strong> यूक्लिड की पाँचवीं अभिधारणा अन्य अभिधारणाओं और अभिगृहीतों से स्वतंत्र है और यह यूक्लिडीय ज्यामिति की एक स्वतंत्र अभिधारणा है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> नहीं, यूक्लिड की पाँचवीं अभिधारणा अन्य अभिधारणाओं और अभिगृहीतों का परिणाम नहीं है। पहली चार अभिधारणाएँ बहुत सरल और स्वयंसिद्ध हैं, परन्तु पाँचवीं अभिधारणा अधिक जटिल है। अनेक गणितज्ञों ने इसे सिद्ध करने का प्रयास किया, परन्तु कोई सफल नहीं हुआ। अंततः यह स्वीकार किया गया कि यह एक स्वतंत्र अभिधारणा है। यदि हम इसे बदल दें, तो हमें अयूक्लिडीय ज्यामिति प्राप्त होती है, जो आइंस्टीन के सापेक्षता के सिद्धांत में उपयोगी है।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 5 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> यूक्लिड ने ज्यामिति को व्यवस्थित रूप से प्रस्तुत करने का प्रयास किया और अपने ग्रंथ "तत्व" (Elements) में अभिगृहीतों और अभिधारणाओं का प्रयोग किया।</p>
+                <p class="mb-2"><strong>2.</strong> <strong>अभिगृहीत (Axioms):</strong> वे सामान्य कथन जो सभी गणितीय विषयों पर लागू होते हैं, जैसे "पूर्ण, भाग से बड़ा होता है।"</p>
+                <p class="mb-2"><strong>3.</strong> <strong>अभिधारणाएँ (Postulates):</strong> वे कथन जो विशेष रूप से ज्यामिति पर लागू होते हैं।</p>
+                <p class="mb-2"><strong>4.</strong> यूक्लिड की पाँच अभिधारणाएँ:</p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1">एक बिंदु से दूसरे बिंदु तक एक सरल रेखा खींची जा सकती है।</li>
+                    <li class="mb-1">एक सांत रेखा को दोनों ओर अपरिमित रूप से बढ़ाया जा सकता है।</li>
+                    <li class="mb-1">किसी भी केंद्र और किसी भी त्रिज्या से एक वृत्त खींचा जा सकता है।</li>
+                    <li class="mb-1">सभी समकोण एक-दूसरे के बराबर होते हैं।</li>
+                    <li class="mb-1">यदि एक सरल रेखा दो सरल रेखाओं को काटती है और तिर्यक रेखा के एक ही ओर बने अंतः कोणों का योग 180° से कम हो, तो वे दोनों रेखाएँ उसी ओर प्रतिच्छेद करेंगी।</li>
+                </ul>
+                <p class="mb-2"><strong>5.</strong> यूक्लिड की पाँचवीं अभिधारणा को "समांतर अभिधारणा" (Parallel Postulate) भी कहा जाता है।</p>
+                <p class="mb-2"><strong>6.</strong> यदि हम पाँचवीं अभिधारणा को बदल दें, तो हमें अयूक्लिडीय ज्यामिति प्राप्त होती है, जो आधुनिक भौतिकी में महत्वपूर्ण है।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

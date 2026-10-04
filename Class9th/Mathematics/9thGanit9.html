@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 9: वृत्त</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .theorem {
+            background-color: #fef3c7;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #f59e0b;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 9<br>वृत्त</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 9.1 ==================== -->
+        <section id="exercise-9-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 9.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: याद कीजिए कि दो वृत्त सर्वांगसम होते हैं यदि उनकी त्रिज्याएँ समान हों। सिद्ध कीजिए कि सर्वांगसम वृत्तों की बराबर जीवाएँ उनके केन्द्रों पर बराबर कोण अंतरित करती हैं।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए O और O' केंद्रों वाले दो सर्वांगसम वृत्त हैं, और इनमें क्रमशः AB और CD बराबर जीवाएँ हैं।</p>
+                        <p class="mb-2">चूँकि वृत्त सर्वांगसम हैं, इसलिए उनकी त्रिज्याएँ बराबर हैं: OA = O'C और OB = O'D</p>
+                        <p class="mb-2">दिया गया है कि AB = CD (बराबर जीवाएँ)</p>
+                        <p class="mb-2">त्रिभुज AOB और C'O'D' में:</p>
+                        <p class="mb-2">OA = O'C (सर्वांगसम वृत्तों की त्रिज्याएँ)</p>
+                        <p class="mb-2">OB = O'D (सर्वांगसम वृत्तों की त्रिज्याएँ)</p>
+                        <p class="mb-2">AB = CD (दिया है)</p>
+                        <p class="mb-2">अतः, ΔAOB ≅ ΔC'O'D' (SSS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠AOB = ∠C'O'D' (CPCT)</p>
+                        <p class="mb-2">अतः सिद्ध हुआ कि सर्वांगसम वृत्तों की बराबर जीवाएँ उनके केन्द्रों पर बराबर कोण अंतरित करती हैं।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त की बराबर जीवाएँ केन्द्र पर बराबर कोण अंतरित करती हैं (प्रमेय 9.1)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो सर्वांगसम वृत्त लेते हैं जिनकी त्रिज्याएँ समान हैं। उनमें बराबर जीवाएँ AB और CD लेते हैं। त्रिभुज AOB और C'O'D' सर्वांगसम होते हैं (SSS नियम से)। इसलिए ∠AOB = ∠C'O'D'। यानी सर्वांगसम वृत्तों की बराबर जीवाएँ केन्द्रों पर बराबर कोण अंतरित करती हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सिद्ध कीजिए कि यदि सर्वांगसम वृत्तों की जीवाएँ उनके केन्द्रों पर बराबर कोण अंतरित करें, तो जीवाएँ बराबर होती हैं।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए O और O' केंद्रों वाले दो सर्वांगसम वृत्त हैं, और इनमें क्रमशः AB और CD जीवाएँ हैं।</p>
+                        <p class="mb-2">दिया गया है कि ∠AOB = ∠C'O'D' (केन्द्रों पर बराबर कोण)</p>
+                        <p class="mb-2">चूँकि वृत्त सर्वांगसम हैं, इसलिए उनकी त्रिज्याएँ बराबर हैं: OA = O'C और OB = O'D</p>
+                        <p class="mb-2">त्रिभुज AOB और C'O'D' में:</p>
+                        <p class="mb-2">OA = O'C (सर्वांगसम वृत्तों की त्रिज्याएँ)</p>
+                        <p class="mb-2">OB = O'D (सर्वांगसम वृत्तों की त्रिज्याएँ)</p>
+                        <p class="mb-2">∠AOB = ∠C'O'D' (दिया है)</p>
+                        <p class="mb-2">अतः, ΔAOB ≅ ΔC'O'D' (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, AB = CD (CPCT)</p>
+                        <p class="mb-2">अतः सिद्ध हुआ।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> यदि वृत्त की जीवाओं द्वारा केन्द्र पर बने कोण बराबर हों, तो जीवाएँ बराबर होती हैं (प्रमेय 9.2)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो सर्वांगसम वृत्त लेते हैं। मान लेते हैं कि जीवाएँ AB और CD केन्द्रों पर बराबर कोण अंतरित करती हैं। त्रिभुज AOB और C'O'D' सर्वांगसम होते हैं (SAS नियम से)। इसलिए AB = CD। यानी यदि सर्वांगसम वृत्तों की जीवाएँ केन्द्रों पर बराबर कोण अंतरित करें, तो जीवाएँ बराबर होती हैं।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 9.2 ==================== -->
+        <section id="exercise-9-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 9.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: 5 cm और 3 cm त्रिज्याओं वाले दो वृत्त दो बिंदुओं पर प्रतिच्छेद करते हैं और उनके केन्द्रों के बीच की दूरी 4 cm है। उभयनिष्ठ जीवा की लंबाई ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए O और O' क्रमशः 5 cm और 3 cm त्रिज्याओं वाले वृत्तों के केन्द्र हैं।</p>
+                        <p class="mb-2">मान लीजिए AB उभयनिष्ठ जीवा है और M, AB का मध्य-बिंदु है।</p>
+                        <p class="mb-2">दिया है: OO' = 4 cm, OA = 5 cm, O'A = 3 cm</p>
+                        <p class="mb-2">OM ⊥ AB और O'M ⊥ AB (केन्द्र से जीवा पर लंब जीवा को समद्विभाजित करता है)</p>
+                        <p class="mb-2">मान लीजिए OM = x, तो O'M = 4 − x</p>
+                        <p class="mb-2">समकोण त्रिभुज OMA में: AM² = OA² − OM² = 25 − x²</p>
+                        <p class="mb-2">समकोण त्रिभुज O'MA में: AM² = O'A² − O'M² = 9 − (4 − x)²</p>
+                        <p class="mb-2">AM² के दोनों व्यंजकों को बराबर रखने पर:</p>
+                        <p class="mb-2">25 − x² = 9 − (16 − 8x + x²)</p>
+                        <p class="mb-2">25 − x² = 9 − 16 + 8x − x²</p>
+                        <p class="mb-2">25 = −7 + 8x</p>
+                        <p class="mb-2">8x = 32</p>
+                        <p class="mb-2">x = 4</p>
+                        <p class="mb-2">तब AM² = 25 − 16 = 9, इसलिए AM = 3 cm</p>
+                        <p class="mb-2">अतः, AB = 2 × AM = 2 × 3 = 6 cm</p>
+                        <p><strong>उत्तर:</strong> उभयनिष्ठ जीवा की लंबाई 6 cm है।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के केन्द्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है (प्रमेय 9.3)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो वृत्त हैं जिनकी त्रिज्याएँ 5 cm और 3 cm हैं। उनके केन्द्रों के बीच की दूरी 4 cm है। उभयनिष्ठ जीवा AB है। मध्य-बिंदु M पर लंब खींचते हैं। पाइथागोरस प्रमेय का उपयोग करके AM निकालते हैं जो 3 cm आता है। तो पूरी जीवा AB = 2 × 3 = 6 cm।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: यदि एक वृत्त की दो बराबर जीवाएँ वृत्त के भीतर प्रतिच्छेद करें, तो सिद्ध कीजिए कि एक जीवा के खंड दूसरी जीवा के संगत खंडों के बराबर होते हैं।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए O केंद्र वाले वृत्त की AB और CD दो बराबर जीवाएँ हैं, जो बिंदु E पर प्रतिच्छेद करती हैं।</p>
+                        <p class="mb-2">O से AB और CD पर क्रमशः OM और ON लंब खींचिए।</p>
+                        <p class="mb-2">चूँकि AB = CD, और बराबर जीवाएँ केन्द्र से समदूरस्थ होती हैं, इसलिए OM = ON</p>
+                        <p class="mb-2">समकोण त्रिभुज OME और ONE में:</p>
+                        <p class="mb-2">OM = ON (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">OE = OE (उभयनिष्ठ)</p>
+                        <p class="mb-2">∠OME = ∠ONE = 90°</p>
+                        <p class="mb-2">अतः, ΔOME ≅ ΔONE (RHS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ME = NE (CPCT)</p>
+                        <p class="mb-2">अब, चूँकि OM और ON केन्द्र से जीवाओं पर लंब हैं, वे जीवाओं को समद्विभाजित करते हैं:</p>
+                        <p class="mb-2">AM = MB और CN = ND</p>
+                        <p class="mb-2">इसलिए, AE = AM − ME और CE = CN − NE</p>
+                        <p class="mb-2">चूँकि AM = CN (बराबर जीवाओं के आधे) और ME = NE, इसलिए AE = CE</p>
+                        <p class="mb-2">इसी प्रकार, BE = MB − ME और DE = ND − NE</p>
+                        <p class="mb-2">चूँकि MB = ND और ME = NE, इसलिए BE = DE</p>
+                        <p class="mb-2">अतः सिद्ध हुआ कि एक जीवा के खंड दूसरी जीवा के संगत खंडों के बराबर होते हैं।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त की बराबर जीवाएँ केन्द्र से समदूरस्थ होती हैं (प्रमेय 9.5)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो बराबर जीवाएँ AB और CD वृत्त में बिंदु E पर प्रतिच्छेद करती हैं। केन्द्र से लंब खींचते हैं। बराबर जीवाएँ केन्द्र से बराबर दूरी पर होती हैं, इसलिए OM = ON। त्रिभुज OME और ONE सर्वांगसम होते हैं (RHS नियम से)। इसलिए ME = NE। जीवाएँ समद्विभाजित होती हैं, इसलिए AE = CE और BE = DE। यानी खंड बराबर होते हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि एक वृत्त की दो बराबर जीवाएँ वृत्त के भीतर प्रतिच्छेद करें, तो सिद्ध कीजिए कि प्रतिच्छेद बिंदु को केंद्र से मिलाने वाली रेखा जीवाओं के साथ बराबर कोण बनाती है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए O केंद्र वाले वृत्त की AB और CD दो बराबर जीवाएँ हैं, जो बिंदु E पर प्रतिच्छेद करती हैं।</p>
+                        <p class="mb-2">OE को मिलाइए।</p>
+                        <p class="mb-2">O से AB और CD पर क्रमशः OM और ON लंब खींचिए।</p>
+                        <p class="mb-2">चूँकि AB = CD, और बराबर जीवाएँ केन्द्र से समदूरस्थ होती हैं, इसलिए OM = ON</p>
+                        <p class="mb-2">समकोण त्रिभुज OME और ONE में:</p>
+                        <p class="mb-2">OM = ON (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">OE = OE (उभयनिष्ठ)</p>
+                        <p class="mb-2">∠OME = ∠ONE = 90°</p>
+                        <p class="mb-2">अतः, ΔOME ≅ ΔONE (RHS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠OEM = ∠OEN (CPCT)</p>
+                        <p class="mb-2">परन्तु ∠OEM, OE और AB के बीच का कोण है, और ∠OEN, OE और CD के बीच का कोण है।</p>
+                        <p class="mb-2">अतः सिद्ध हुआ कि प्रतिच्छेद बिंदु को केंद्र से मिलाने वाली रेखा जीवाओं के साथ बराबर कोण बनाती है।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त की बराबर जीवाएँ केन्द्र से समदूरस्थ होती हैं (प्रमेय 9.5)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो बराबर जीवाएँ AB और CD वृत्त में बिंदु E पर प्रतिच्छेद करती हैं। केंद्र O से E को मिलाते हैं। केन्द्र से लंब खींचते हैं। बराबर जीवाएँ केन्द्र से बराबर दूरी पर होती हैं, इसलिए OM = ON। त्रिभुज OME और ONE सर्वांगसम होते हैं (RHS नियम से)। इसलिए ∠OEM = ∠OEN। यानी रेखा OE जीवाओं के साथ बराबर कोण बनाती है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: यदि एक रेखा दो संकेंद्री वृत्तों (एक ही केंद्र वाले वृत्तों) को, जिनका केंद्र O है, A, B, C और D पर प्रतिच्छेद करती है, तो सिद्ध कीजिए कि AB = CD है (देखिए आकृति 9.12)।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए O केंद्र वाले दो संकेंद्री वृत्त हैं।</p>
+                        <p class="mb-2">एक रेखा इन वृत्तों को A, B, C, D पर प्रतिच्छेद करती है, जहाँ A और D बाहरी वृत्त पर हैं, और B और C आंतरिक वृत्त पर हैं।</p>
+                        <p class="mb-2">O से रेखा पर लंब OM खींचिए।</p>
+                        <p class="mb-2">चूँकि OM रेखा पर लंब है, यह दोनों जीवाओं AD और BC को समद्विभाजित करता है।</p>
+                        <p class="mb-2">इसलिए, AM = MD और BM = MC</p>
+                        <p class="mb-2">अब, AB = AM − BM और CD = MD − MC</p>
+                        <p class="mb-2">परन्तु चूँकि AM = MD और BM = MC, इसलिए AB = CD</p>
+                        <p class="mb-2">अतः सिद्ध हुआ कि AB = CD।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के केन्द्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है (प्रमेय 9.3)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो संकेंद्री वृत्त हैं जिनका केंद्र O है। एक रेखा इन्हें A, B, C, D पर प्रतिच्छेद करती है। केन्द्र से रेखा पर लंब खींचते हैं। यह लंब जीवाओं AD और BC को समद्विभाजित करता है। इसलिए AM = MD और BM = MC। तो AB = AM − BM = MD − MC = CD। यानी AB = CD।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: तीन लड़कियाँ रेशमा, सलमा और मंडीप एक पार्क में 5 m त्रिज्या के एक वृत्त पर खड़ी होकर एक खेल खेल रही हैं। रेशमा, सलमा को एक गेंद फेंकती है, सलमा मंडीप को और मंडीप रेशमा को। यदि रेशमा और सलमा के बीच की दूरी तथा सलमा और मंडीप के बीच की दूरी प्रत्येक 6 m है, तो रेशमा और मंडीप के बीच की दूरी क्या है?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए R, S, M क्रमशः रेशमा, सलमा और मंडीप की स्थितियाँ हैं, जो O केंद्र और 5 m त्रिज्या वाले वृत्त पर हैं।</p>
+                        <p class="mb-2">दिया है: RS = SM = 6 m</p>
+                        <p class="mb-2">OS को मिलाइए और जीवा RS पर O से लंब खींचिए।</p>
+                        <p class="mb-2">मान लीजिए लंब RS को N पर मिलता है।</p>
+                        <p class="mb-2">तब RN = NS = 3 m (केन्द्र से लंब जीवा को समद्विभाजित करता है)</p>
+                        <p class="mb-2">समकोण त्रिभुज ONS में: ON² = OS² − NS² = 25 − 9 = 16, इसलिए ON = 4 m</p>
+                        <p class="mb-2">इसी प्रकार, जीवा SM के लिए भी केन्द्र से समान लंब दूरी प्राप्त होती है।</p>
+                        <p class="mb-2">चूँकि RS = SM और दोनों एक ही वृत्त की जीवाएँ हैं, O से लंब दोनों जीवाओं को समद्विभाजित करेगा।</p>
+                        <p class="mb-2">इसलिए, R, S, M एक समद्विबाहु त्रिभुज बनाते हैं जिसमें RS = SM = 6 m है।</p>
+                        <p class="mb-2">कोण RSM, जीवा RM द्वारा केंद्र पर बनाए गए कोण का दुगना है।</p>
+                        <p class="mb-2">जीवा की लंबाई के सूत्र का उपयोग करके:</p>
+                        <p class="mb-2">जीवा RS के लिए: 6 = 2 × 5 × sin(∠ROS/2) ⇒ sin(∠ROS/2) = 6/10 = 0.6</p>
+                        <p class="mb-2">इसी प्रकार जीवा SM के लिए भी।</p>
+                        <p class="mb-2">RS और SM के बीच का कोण = 2 × ∠ROS/2 = ∠ROS</p>
+                        <p class="mb-2">त्रिभुज RSM में, कोसाइन नियम का उपयोग करने पर:</p>
+                        <p class="mb-2">RM² = RS² + SM² − 2 × RS × SM × cos(∠RSM)</p>
+                        <p class="mb-2">परन्तु ∠RSM = 180° − ∠ROM (चक्रीय चतुर्भुज गुण)</p>
+                        <p class="mb-2">वैकल्पिक रूप से, हम R और M के बीच केंद्रीय कोण ज्ञात कर सकते हैं:</p>
+                        <p class="mb-2">चूँकि R, S, M वृत्त पर समान दूरी पर हैं (RS = SM), चाप RM, चाप RS का दुगना है।</p>
+                        <p class="mb-2">जीवा की लंबाई RM = 2 × R × sin(∠ROM/2)</p>
+                        <p class="mb-2">हमें ∠ROM ज्ञात करना है।</p>
+                        <p class="mb-2">जीवा RS से: 6 = 2 × 5 × sin(∠ROS/2) ⇒ sin(∠ROS/2) = 0.6 ⇒ ∠ROS/2 ≈ 36.87° ⇒ ∠ROS ≈ 73.74°</p>
+                        <p class="mb-2">इसी प्रकार, ∠SOM ≈ 73.74°</p>
+                        <p class="mb-2">इसलिए, ∠ROM = ∠ROS + ∠SOM ≈ 73.74° + 73.74° = 147.48°</p>
+                        <p class="mb-2">तब RM = 2 × 5 × sin(147.48°/2) = 10 × sin(73.74°) ≈ 10 × 0.9563 = 9.563 m</p>
+                        <p><strong>उत्तर:</strong> रेशमा और मंडीप के बीच की दूरी लगभग 9.56 m है।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के केन्द्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है (प्रमेय 9.3)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> तीन लड़कियाँ 5 m त्रिज्या के वृत्त पर खड़ी हैं। रेशमा से सलमा की दूरी 6 m है, सलमा से मंडीप की भी 6 m है। केन्द्र से जीवाओं पर लंब खींचते हैं। पाइथागोरस प्रमेय का उपयोग करके लंब दूरी निकालते हैं। फिर जीवा की लंबाई के सूत्र का उपयोग करके रेशमा और मंडीप के बीच की दूरी निकालते हैं जो लगभग 9.56 m आती है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक 20 m त्रिज्या का वृत्ताकार पार्क एक कॉलोनी में स्थित है। तीन लड़के अंकुर, सैयद और डेविड इसकी सीमा पर समान दूरी पर बैठे हैं और प्रत्येक के हाथ में एक खिलौना टेलीफोन है, जिससे वे एक-दूसरे से बात करते हैं। प्रत्येक टेलीफोन की डोरी की लंबाई ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">तीन लड़के 20 m त्रिज्या के वृत्त की सीमा पर समान दूरी पर बैठे हैं।</p>
+                        <p class="mb-2">इसका अर्थ है कि वे वृत्त में अंतर्निहित एक समबाहु त्रिभुज बनाते हैं।</p>
+                        <p class="mb-2">वृत्त में अंतर्निहित समबाहु त्रिभुज के लिए, भुजा (a) और त्रिज्या (R) के बीच संबंध है:</p>
+                        <p class="mb-2">a = √3 × R</p>
+                        <p class="mb-2">दिया है R = 20 m</p>
+                        <p class="mb-2">इसलिए, a = √3 × 20 = 20√3 m</p>
+                        <p class="mb-2">प्रत्येक टेलीफोन की डोरी की लंबाई इस समबाहु त्रिभुज की भुजा की लंबाई है।</p>
+                        <p><strong>उत्तर:</strong> प्रत्येक टेलीफोन की डोरी की लंबाई 20√3 m ≈ 34.64 m है।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त संकल्पना:</strong> वृत्त में अंतर्निहित समबाहु त्रिभुज के लिए, भुजा = √3 × त्रिज्या।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> तीन लड़के वृत्त की सीमा पर समान दूरी पर बैठे हैं, इसका मतलब वे समबाहु त्रिभुज बनाते हैं। समबाहु त्रिभुज के लिए भुजा = √3 × त्रिज्या। त्रिज्या 20 m है, तो भुजा = 20√3 m ≈ 34.64 m। यानी हर फोन की डोरी की लंबाई 34.64 m है।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 9.3 ==================== -->
+        <section id="exercise-9-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 9.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: आकृति 9.23 में, O केंद्र वाले एक वृत्त पर A, B और C तीन बिंदु इस प्रकार हैं कि ∠BOC = 30° और ∠AOB = 60° हैं। यदि D, चाप ABC के अतिरिक्त वृत्त पर कोई अन्य बिंदु है, तो ∠ADC ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: ∠BOC = 30°, ∠AOB = 60°</p>
+                        <p class="mb-2">बिंदु O के चारों ओर कुल कोण 360° होता है।</p>
+                        <p class="mb-2">इसलिए, ∠AOC = 360° − (∠AOB + ∠BOC) = 360° − (60° + 30°) = 270°</p>
+                        <p class="mb-2">अब, ∠ADC, चाप ABC द्वारा वृत्त के शेष भाग पर स्थित बिंदु D पर अंतरित कोण है।</p>
+                        <p class="mb-2">चाप ABC, केंद्र पर ∠AOC = 270° (प्रतिवर्ती कोण) अंतरित करता है।</p>
+                        <p class="mb-2">प्रमेय 9.7 के अनुसार, एक चाप द्वारा केंद्र पर अंतरित कोण, उसी चाप द्वारा वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगना होता है।</p>
+                        <p class="mb-2">इसलिए, ∠ADC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × ∠AOC = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 270° = 135°</p>
+                        <p><strong>उत्तर:</strong> ∠ADC = 135°</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> एक चाप द्वारा केंद्र पर अंतरित कोण, उसी चाप द्वारा वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगना होता है (प्रमेय 9.7)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ∠BOC = 30° और ∠AOB = 60° दिए हैं। केंद्र O पर कुल कोण 360° होता है, इसलिए ∠AOC = 360° − (60° + 30°) = 270°। चाप ABC, केंद्र पर 270° का कोण बनाता है। प्रमेय 9.7 के अनुसार, चाप ABC किसी भी बिंदु पर <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 270° = 135° का कोण बनाएगा। यानी ∠ADC = 135°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक वृत्त की एक जीवा वृत्त की त्रिज्या के बराबर है। लघु चाप पर एक बिंदु पर और दीर्घ चाप पर एक बिंदु पर इस जीवा द्वारा अंतरित कोण ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए जीवा AB है और त्रिज्या r है।</p>
+                        <p class="mb-2">दिया है: AB = r</p>
+                        <p class="mb-2">त्रिभुज OAB में (जहाँ O केंद्र है):</p>
+                        <p class="mb-2">OA = OB = r (त्रिज्याएँ)</p>
+                        <p class="mb-2">AB = r (दिया है)</p>
+                        <p class="mb-2">इसलिए, त्रिभुज OAB समबाहु है।</p>
+                        <p class="mb-2">अतः, ∠AOB = 60°</p>
+                        <p class="mb-2">अब, जीवा AB द्वारा लघु चाप पर किसी बिंदु पर अंतरित कोण:</p>
+                        <p class="mb-2">मान लीजिए C लघु चाप AB पर एक बिंदु है।</p>
+                        <p class="mb-2">तब ∠ACB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × ∠AOB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 60° = 30°</p>
+                        <p class="mb-2">अब, जीवा AB द्वारा दीर्घ चाप पर किसी बिंदु पर अंतरित कोण:</p>
+                        <p class="mb-2">मान लीजिए D दीर्घ चाप AB पर एक बिंदु है।</p>
+                        <p class="mb-2">प्रतिवर्ती कोण AOB = 360° − 60° = 300°</p>
+                        <p class="mb-2">तब ∠ADB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × प्रतिवर्ती ∠AOB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 300° = 150°</p>
+                        <p><strong>उत्तर:</strong> लघु चाप पर कोण = 30°, दीर्घ चाप पर कोण = 150°</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> एक चाप द्वारा केंद्र पर अंतरित कोण, उसी चाप द्वारा वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगना होता है (प्रमेय 9.7)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> जीवा त्रिज्या के बराबर है, इसलिए त्रिभुज OAB समबाहु है और ∠AOB = 60°। लघु चाप पर कोई बिंदु C लेते हैं, तो ∠ACB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 60° = 30°। दीर्घ चाप पर कोई बिंदु D लेते हैं, तो ∠ADB = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × (360° − 60°) = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × 300° = 150°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: आकृति 9.24 में, ∠PQR = 100° है, जहाँ P, Q और R एक वृत्त पर स्थित बिंदु हैं जिसका केंद्र O है। ∠OPR ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: ∠PQR = 100°</p>
+                        <p class="mb-2">∠PQR, वृत्त पर बिंदु Q पर चाप PR द्वारा अंतरित कोण है।</p>
+                        <p class="mb-2">प्रमेय 9.7 के अनुसार, केंद्र पर कोण, परिधि पर कोण का दुगना होता है।</p>
+                        <p class="mb-2">इसलिए, ∠POR = 2 × ∠PQR = 2 × 100° = 200° (प्रतिवर्ती कोण)</p>
+                        <p class="mb-2">केंद्र O पर अन्य कोण, यानी लघु कोण POR = 360° − 200° = 160°</p>
+                        <p class="mb-2">अब, त्रिभुज OPR में:</p>
+                        <p class="mb-2">OP = OR (त्रिज्याएँ)</p>
+                        <p class="mb-2">इसलिए, त्रिभुज OPR समद्विबाहु है।</p>
+                        <p class="mb-2">अतः, ∠OPR = ∠ORP</p>
+                        <p class="mb-2">त्रिभुज OPR में कोणों का योग = 180°</p>
+                        <p class="mb-2">इसलिए, ∠OPR + ∠ORP + ∠POR = 180°</p>
+                        <p class="mb-2">2∠OPR + 160° = 180°</p>
+                        <p class="mb-2">2∠OPR = 20°</p>
+                        <p class="mb-2">∠OPR = 10°</p>
+                        <p><strong>उत्तर:</strong> ∠OPR = 10°</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> एक चाप द्वारा केंद्र पर अंतरित कोण, उसी चाप द्वारा वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगना होता है (प्रमेय 9.7)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ∠PQR = 100° दिया है। चाप PR, केंद्र पर 2 × 100° = 200° का कोण बनाता है (प्रतिवर्ती कोण)। लघु कोण POR = 360° − 200° = 160°। त्रिभुज OPR समद्विबाहु है क्योंकि OP = OR। इसलिए ∠OPR = ∠ORP। त्रिभुज के कोणों का योग 180° है, इसलिए 2∠OPR + 160° = 180° ⇒ 2∠OPR = 20° ⇒ ∠OPR = 10°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: आकृति 9.25 में, ∠ABC = 69°, ∠ACB = 31° है, तो ∠BDC ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: ∠ABC = 69°, ∠ACB = 31°</p>
+                        <p class="mb-2">त्रिभुज ABC में:</p>
+                        <p class="mb-2">कोणों का योग = 180°</p>
+                        <p class="mb-2">इसलिए, ∠BAC = 180° − (69° + 31°) = 180° − 100° = 80°</p>
+                        <p class="mb-2">अब, बिंदु A, B, C, D वृत्त पर हैं (चक्रीय चतुर्भुज)</p>
+                        <p class="mb-2">चक्रीय चतुर्भुज में, एक ही वृत्तखंड में बने कोण बराबर होते हैं।</p>
+                        <p class="mb-2">इसलिए, ∠BDC = ∠BAC (एक ही वृत्तखंड के कोण)</p>
+                        <p class="mb-2">अतः, ∠BDC = 80°</p>
+                        <p><strong>उत्तर:</strong> ∠BDC = 80°</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के एक ही वृत्तखंड के कोण बराबर होते हैं (प्रमेय 9.8)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ∠ABC = 69° और ∠ACB = 31° दिए हैं। त्रिभुज ABC के कोणों का योग 180° है, इसलिए ∠BAC = 180° − (69° + 31°) = 80°। बिंदु A, B, C, D वृत्त पर हैं (चक्रीय चतुर्भुज)। एक ही वृत्तखंड के कोण बराबर होते हैं, इसलिए ∠BDC = ∠BAC = 80°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: आकृति 9.26 में, A, B, C और D एक वृत्त पर चार बिंदु हैं। AC और BD एक बिंदु E पर इस प्रकार प्रतिच्छेद करते हैं कि ∠BEC = 130° और ∠ECD = 20° है। ∠BAC ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: ∠BEC = 130°, ∠ECD = 20°</p>
+                        <p class="mb-2">त्रिभुज CED में:</p>
+                        <p class="mb-2">∠CED = 180° − ∠BEC (रैखिक युग्म) = 180° − 130° = 50°</p>
+                        <p class="mb-2">त्रिभुज CED में कोणों का योग = 180°</p>
+                        <p class="mb-2">इसलिए, ∠CDE = 180° − (∠CED + ∠ECD) = 180° − (50° + 20°) = 110°</p>
+                        <p class="mb-2">अब, ∠CDB = ∠CDE = 110°</p>
+                        <p class="mb-2">चक्रीय चतुर्भुज ABCD में:</p>
+                        <p class="mb-2">∠BAC = ∠BDC (एक ही वृत्तखंड के कोण)</p>
+                        <p class="mb-2">परन्तु ∠BDC = ∠CDB = 110°</p>
+                        <p class="mb-2">इसलिए, ∠BAC = 110°</p>
+                        <p><strong>उत्तर:</strong> ∠BAC = 110°</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के एक ही वृत्तखंड के कोण बराबर होते हैं (प्रमेय 9.8)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ∠BEC = 130° और ∠ECD = 20° दिए हैं। रैखिक युग्म से ∠CED = 180° − 130° = 50°। त्रिभुज CED के कोणों का योग 180° है, इसलिए ∠CDE = 180° − (50° + 20°) = 110°। चक्रीय चतुर्भुज में एक ही वृत्तखंड के कोण बराबर होते हैं, इसलिए ∠BAC = ∠BDC = 110°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: ABCD एक चक्रीय चतुर्भुज है जिसके विकर्ण एक बिंदु E पर प्रतिच्छेद करते हैं। यदि ∠DBC = 70° और ∠BAC = 30° है, तो ∠BCD ज्ञात कीजिए। पुनः, यदि AB = BC हो, तो ∠ECD ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: ∠DBC = 70°, ∠BAC = 30°</p>
+                        <p class="mb-2">चक्रीय चतुर्भुज ABCD में:</p>
+                        <p class="mb-2">∠BDC = ∠BAC = 30° (एक ही वृत्तखंड के कोण)</p>
+                        <p class="mb-2">त्रिभुज BCD में:</p>
+                        <p class="mb-2">∠BCD = 180° − (∠DBC + ∠BDC) = 180° − (70° + 30°) = 80°</p>
+                        <p class="mb-2">अब, यदि AB = BC:</p>
+                        <p class="mb-2">त्रिभुज ABC में, AB = BC, इसलिए यह समद्विबाहु है।</p>
+                        <p class="mb-2">इसलिए, ∠BCA = ∠BAC = 30°</p>
+                        <p class="mb-2">अब, ∠BCD = ∠BCA + ∠ACD</p>
+                        <p class="mb-2">80° = 30° + ∠ACD</p>
+                        <p class="mb-2">अतः, ∠ACD = 50°</p>
+                        <p class="mb-2">परन्तु ∠ACD = ∠ECD (एक ही कोण)</p>
+                        <p class="mb-2">इसलिए, ∠ECD = 50°</p>
+                        <p><strong>उत्तर:</strong> ∠BCD = 80°, ∠ECD = 50°</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के एक ही वृत्तखंड के कोण बराबर होते हैं (प्रमेय 9.8)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ∠DBC = 70° और ∠BAC = 30° दिए हैं। एक ही वृत्तखंड के कोण बराबर हैं, इसलिए ∠BDC = ∠BAC = 30°। त्रिभुज BCD में ∠BCD = 180° − (70° + 30°) = 80°। यदि AB = BC, तो त्रिभुज ABC समद्विबाहु है, इसलिए ∠BCA = ∠BAC = 30°। ∠BCD = ∠BCA + ∠ACD, so 80° = 30° + ∠ACD ⇒ ∠ACD = 50°। यानी ∠ECD = 50°।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: यदि एक चक्रीय चतुर्भुज के विकर्ण उसके शीर्षों से जाने वाले वृत्त के व्यास हों, तो सिद्ध कीजिए कि वह एक आयत है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ABCD एक चक्रीय चतुर्भुज है जिसके विकर्ण AC और BD वृत्त के व्यास हैं।</p>
+                        <p class="mb-2">चूँकि AC व्यास है, इसलिए ∠ABC = 90° (अर्धवृत्त में कोण)</p>
+                        <p class="mb-2">इसी प्रकार, चूँकि AC व्यास है, ∠ADC = 90° (अर्धवृत्त में कोण)</p>
+                        <p class="mb-2">चूँकि BD व्यास है, ∠BAD = 90° (अर्धवृत्त में कोण)</p>
+                        <p class="mb-2">इसी प्रकार, चूँकि BD व्यास है, ∠BCD = 90° (अर्धवृत्त में कोण)</p>
+                        <p class="mb-2">अतः, चतुर्भुज ABCD के सभी कोण 90° के हैं।</p>
+                        <p class="mb-2">इसलिए, ABCD एक आयत है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> अर्धवृत्त में बना कोण समकोण होता है।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> चक्रीय चतुर्भुज ABCD की विकर्ण AC और BD वृत्त के व्यास हैं। AC व्यास है, इसलिए ∠ABC = 90° और ∠ADC = 90° (अर्धवृत्त के कोण समकोण होते हैं)। BD व्यास है, इसलिए ∠BAD = 90° और ∠BCD = 90°। सभी कोण 90° हैं, इसलिए ABCD आयत है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: यदि एक समलंब की असमांतर भुजाएँ बराबर हों, तो सिद्ध कीजिए कि वह चक्रीय है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ABCD एक समलंब है जिसमें AB || CD और AD = BC है।</p>
+                        <p class="mb-2">A और B से CD पर लंब खींचिए, जो CD को क्रमशः E और F पर मिलते हैं।</p>
+                        <p class="mb-2">चूँकि AB || CD, इसलिए AE = BF (समांतर रेखाओं के बीच की दूरी)</p>
+                        <p class="mb-2">समकोण त्रिभुज AED और BFC में:</p>
+                        <p class="mb-2">AD = BC (दिया है)</p>
+                        <p class="mb-2">AE = BF (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">अतः, ΔAED ≅ ΔBFC (RHS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠ADE = ∠BCF (CPCT)</p>
+                        <p class="mb-2">अब, ∠ADC = ∠ADE और ∠BCD = ∠BCF</p>
+                        <p class="mb-2">इसलिए, ∠ADC = ∠BCD</p>
+                        <p class="mb-2">समलंब ABCD में, AB || CD</p>
+                        <p class="mb-2">इसलिए, ∠BAD + ∠ADC = 180° (सह-अंतः कोण)</p>
+                        <p class="mb-2">परन्तु ∠ADC = ∠BCD</p>
+                        <p class="mb-2">इसलिए, ∠BAD + ∠BCD = 180°</p>
+                        <p class="mb-2">अतः, सम्मुख कोणों का योग 180° है।</p>
+                        <p class="mb-2">इसलिए, प्रमेय 9.11 के अनुसार, ABCD चक्रीय है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> यदि किसी चतुर्भुज के सम्मुख कोणों का एक युग्म 180° का हो, तो चतुर्भुज चक्रीय होता है (प्रमेय 9.11)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> समलंब ABCD में AB || CD और AD = BC। A और B से CD पर लंब खींचते हैं। त्रिभुज AED और BFC सर्वांगसम होते हैं (RHS नियम से)। इसलिए ∠ADC = ∠BCD। AB || CD है, इसलिए ∠BAD + ∠ADC = 180° (सह-अंतः कोण)। पर ∠ADC = ∠BCD, so ∠BAD + ∠BCD = 180°। सम्मुख कोणों का योग 180° है, इसलिए चतुर्भुज चक्रीय है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: दो वृत्त दो बिंदुओं B और C पर प्रतिच्छेद करते हैं। B से होकर दो रेखाखंड ABD और PBQ वृत्तों को क्रमशः A, D और P, Q पर प्रतिच्छेद करते हुए खींचे गए हैं (देखिए आकृति 9.27)। सिद्ध कीजिए कि ∠ACP = ∠QCD है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">पहले वृत्त में, ABCD एक चक्रीय चतुर्भुज है।</p>
+                        <p class="mb-2">इसलिए, ∠ACP = ∠ABP (एक ही वृत्तखंड के कोण) ...(1)</p>
+                        <p class="mb-2">दूसरे वृत्त में, PBCQ एक चक्रीय चतुर्भुज है।</p>
+                        <p class="mb-2">इसलिए, ∠QCD = ∠QBD (एक ही वृत्तखंड के कोण) ...(2)</p>
+                        <p class="mb-2">परन्तु ∠ABP और ∠QBD बिंदु B पर शीर्षाभिमुख कोण हैं।</p>
+                        <p class="mb-2">इसलिए, ∠ABP = ∠QBD ...(3)</p>
+                        <p class="mb-2">(1), (2) और (3) से:</p>
+                        <p class="mb-2">∠ACP = ∠ABP = ∠QBD = ∠QCD</p>
+                        <p class="mb-2">अतः, ∠ACP = ∠QCD</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> वृत्त के एक ही वृत्तखंड के कोण बराबर होते हैं (प्रमेय 9.8)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो वृत्त B और C पर प्रतिच्छेद करते हैं। पहले वृत्त में ABCD चक्रीय चतुर्भुज है, इसलिए ∠ACP = ∠ABP (एक ही वृत्तखंड)। दूसरे वृत्त में PBCQ चक्रीय चतुर्भुज है, इसलिए ∠QCD = ∠QBD (एक ही वृत्तखंड)। बिंदु B पर ∠ABP और ∠QBD शीर्षाभिमुख कोण हैं, इसलिए बराबर हैं। तो ∠ACP = ∠ABP = ∠QBD = ∠QCD। यानी ∠ACP = ∠QCD।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: यदि एक त्रिभुज की दो भुजाओं को व्यास मानकर वृत्त खींचे जाएँ, तो सिद्ध कीजिए कि इन वृत्तों का प्रतिच्छेद बिंदु तीसरी भुजा पर स्थित है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ABC एक त्रिभुज है।</p>
+                        <p class="mb-2">AB और AC को व्यास मानकर वृत्त खींचिए।</p>
+                        <p class="mb-2">मान लीजिए ये वृत्त बिंदु A और एक अन्य बिंदु D पर प्रतिच्छेद करते हैं।</p>
+                        <p class="mb-2">चूँकि AB पहले वृत्त का व्यास है, ∠ADB = 90° (अर्धवृत्त में कोण)</p>
+                        <p class="mb-2">चूँकि AC दूसरे वृत्त का व्यास है, ∠ADC = 90° (अर्धवृत्त में कोण)</p>
+                        <p class="mb-2">अब, ∠ADB + ∠ADC = 90° + 90° = 180°</p>
+                        <p class="mb-2">इसलिए, बिंदु B, D, C संरेख हैं (AD के एक ही ओर के कोणों का योग 180° है)</p>
+                        <p class="mb-2">अतः, D, BC पर स्थित है।</p>
+                        <p class="mb-2">इसलिए, वृत्तों का प्रतिच्छेद बिंदु तीसरी भुजा BC पर स्थित है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> अर्धवृत्त में बना कोण समकोण होता है।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> त्रिभुज ABC की भुजाओं AB और AC को व्यास मानकर वृत्त खींचते हैं। ये वृत्त A और एक अन्य बिंदु D पर प्रतिच्छेद करते हैं। AB व्यास है, इसलिए ∠ADB = 90°। AC व्यास है, इसलिए ∠ADC = 90°। ∠ADB + ∠ADC = 180°, इसका मतलब बिंदु B, D, C एक सरल रेखा पर हैं। यानी D तीसरी भुजा BC पर है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: ABC और ADC एक ही कर्ण AC वाले दो समकोण त्रिभुज हैं। सिद्ध कीजिए कि ∠CAD = ∠CBD है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: ABC और ADC एक ही कर्ण AC वाले समकोण त्रिभुज हैं।</p>
+                        <p class="mb-2">इसलिए, ∠ABC = 90° और ∠ADC = 90°</p>
+                        <p class="mb-2">चूँकि ∠ABC + ∠ADC = 90° + 90° = 180°</p>
+                        <p class="mb-2">इसलिए, ABCD एक चक्रीय चतुर्भुज है (सम्मुख कोणों का योग 180°)।</p>
+                        <p class="mb-2">चक्रीय चतुर्भुज ABCD में:</p>
+                        <p class="mb-2">∠CAD = ∠CBD (एक ही वृत्तखंड CD के कोण)</p>
+                        <p class="mb-2">अतः सिद्ध हुआ।</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> यदि किसी चतुर्भुज के सम्मुख कोणों का एक युग्म 180° का हो, तो चतुर्भुज चक्रीय होता है (प्रमेय 9.11)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABC और ADC समकोण त्रिभुज हैं जिनका एक ही कर्ण AC है। ∠ABC = 90° और ∠ADC = 90°, इनका योग 180° है। इसलिए ABCD चक्रीय चतुर्भुज है। चक्रीय चतुर्भुज में एक ही वृत्तखंड के कोण बराबर होते हैं, इसलिए ∠CAD = ∠CBD।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: सिद्ध कीजिए कि एक चक्रीय समांतर चतुर्भुज एक आयत होता है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ABCD एक चक्रीय समांतर चतुर्भुज है।</p>
+                        <p class="mb-2">चूँकि ABCD एक समांतर चतुर्भुज है, सम्मुख कोण बराबर होते हैं।</p>
+                        <p class="mb-2">इसलिए, ∠A = ∠C और ∠B = ∠D</p>
+                        <p class="mb-2">चूँकि ABCD चक्रीय है, सम्मुख कोणों का योग 180° होता है।</p>
+                        <p class="mb-2">इसलिए, ∠A + ∠C = 180°</p>
+                        <p class="mb-2">परन्तु ∠A = ∠C, इसलिए 2∠A = 180° ⇒ ∠A = 90°</p>
+                        <p class="mb-2">इसी प्रकार, ∠B = 90°</p>
+                        <p class="mb-2">अतः, समांतर चतुर्भुज ABCD के सभी कोण 90° के हैं।</p>
+                        <p class="mb-2">इसलिए, ABCD एक आयत है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त प्रमेय:</strong> चक्रीय चतुर्भुज के सम्मुख कोणों का प्रत्येक युग्म 180° का होता है (प्रमेय 9.10)।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABCD एक चक्रीय समांतर चतुर्भुज है। समांतर चतुर्भुज में सम्मुख कोण बराबर होते हैं, so ∠A = ∠C और ∠B = ∠D। चक्रीय चतुर्भुज में सम्मुख कोणों का योग 180° होता है, so ∠A + ∠C = 180°। पर ∠A = ∠C, इसलिए 2∠A = 180° ⇒ ∠A = 90°। इसी प्रकार ∠B = 90°। सभी कोण 90° हैं, इसलिए ABCD आयत है।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 9 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> वृत्त की बराबर जीवाएँ केन्द्र पर बराबर कोण अंतरित करती हैं और विलोमतः।</p>
+                <p class="mb-2"><strong>2.</strong> वृत्त के केन्द्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है।</p>
+                <p class="mb-2"><strong>3.</strong> एक ही वृत्त की बराबर जीवाएँ केन्द्र से समदूरस्थ होती हैं और विलोमतः।</p>
+                <p class="mb-2"><strong>4.</strong> एक चाप द्वारा केंद्र पर अंतरित कोण, उसी चाप द्वारा वृत्त के शेष भाग के किसी बिंदु पर अंतरित कोण का दुगना होता है।</p>
+                <p class="mb-2"><strong>5.</strong> वृत्त के एक ही वृत्तखंड के कोण बराबर होते हैं।</p>
+                <p class="mb-2"><strong>6.</strong> चक्रीय चतुर्भुज के सम्मुख कोणों का प्रत्येक युग्म 180° का होता है और विलोमतः।</p>
+                <p class="mb-2"><strong>7.</strong> अर्धवृत्त में बना कोण समकोण होता है।</p>
+                <p class="mb-2"><strong>8.</strong> एक चक्रीय समांतर चतुर्भुज एक आयत होता है।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

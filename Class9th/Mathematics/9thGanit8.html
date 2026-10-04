@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 8: चतुर्भुज</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .theorem {
+            background-color: #f0f9ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 8<br>चतुर्भुज</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 8.1 ==================== -->
+        <section id="exercise-8-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 8.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: यदि एक समांतर चतुर्भुज के विकर्ण बराबर हों, तो दर्शाइए कि वह एक आयत है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ABCD एक समांतर चतुर्भुज है जिसके विकर्ण AC और BD बराबर हैं।</p>
+                        <p class="mb-2">ΔABC और ΔDCB में:</p>
+                        <p class="mb-2">AB = DC (समांतर चतुर्भुज की सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">BC = BC (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">AC = DB (दिया है)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔDCB (SSS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠ABC = ∠DCB (CPCT)</p>
+                        <p class="mb-2">परन्तु ∠ABC + ∠DCB = 180° (समांतर चतुर्भुज के आसन्न कोण)</p>
+                        <p class="mb-2">अतः, 2∠ABC = 180° ⇒ ∠ABC = 90°</p>
+                        <p class="mb-2">इसी प्रकार, हम दिखा सकते हैं कि सभी कोण 90° के हैं।</p>
+                        <p class="mb-2">इसलिए, ABCD एक आयत है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> मान लेते हैं ABCD एक समांतर चतुर्भुज है जिसमें विकर्ण AC और BD बराबर हैं। ΔABC और ΔDCB में, AB = DC, BC उभयनिष्ठ है, और AC = DB। इसलिए ΔABC ≅ ΔDCB। इससे ∠ABC = ∠DCB। पर ∠ABC + ∠DCB = 180°, तो 2∠ABC = 180° ⇒ ∠ABC = 90°। इसी प्रकार सभी कोण 90° दिखाए जा सकते हैं। इसलिए ABCD एक आयत है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: दर्शाइए कि एक वर्ग के विकर्ण बराबर होते हैं और एक-दूसरे को समकोण पर समद्विभाजित करते हैं।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए ABCD एक वर्ग है जिसके विकर्ण AC और BD बिंदु O पर प्रतिच्छेद करते हैं।</p>
+                        <p class="mb-2">ΔABC और ΔDCB में:</p>
+                        <p class="mb-2">AB = DC (वर्ग की भुजाएँ)</p>
+                        <p class="mb-2">BC = BC (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">∠ABC = ∠DCB = 90° (वर्ग के कोण)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔDCB (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, AC = BD (CPCT)</p>
+                        <p class="mb-2">अतः, विकर्ण बराबर हैं।</p>
+                        <p class="mb-2">अब, ΔAOB और ΔCOD में:</p>
+                        <p class="mb-2">∠OAB = ∠OCD (एकांतर कोण)</p>
+                        <p class="mb-2">∠OBA = ∠ODC (एकांतर कोण)</p>
+                        <p class="mb-2">AB = CD (वर्ग की भुजाएँ)</p>
+                        <p class="mb-2">अतः, ΔAOB ≅ ΔCOD (AAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, AO = OC और BO = OD (CPCT)</p>
+                        <p class="mb-2">अतः, विकर्ण एक-दूसरे को समद्विभाजित करते हैं।</p>
+                        <p class="mb-2">ΔAOB और ΔCOB में:</p>
+                        <p class="mb-2">AO = OC (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">OB = OB (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">AB = CB (वर्ग की भुजाएँ)</p>
+                        <p class="mb-2">अतः, ΔAOB ≅ ΔCOB (SSS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, ∠AOB = ∠COB (CPCT)</p>
+                        <p class="mb-2">परन्तु ∠AOB + ∠COB = 180° (रैखिक युग्म)</p>
+                        <p class="mb-2">अतः, 2∠AOB = 180° ⇒ ∠AOB = 90°</p>
+                        <p class="mb-2">इसलिए, विकर्ण एक-दूसरे को समकोण पर समद्विभाजित करते हैं।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABCD एक वर्ग है जिसके विकर्ण AC और BD, O पर प्रतिच्छेद करते हैं। ΔABC और ΔDCB सर्वांगसम हैं, इसलिए AC = BD। ΔAOB और ΔCOD सर्वांगसम हैं, इसलिए AO = OC और BO = OD। ΔAOB और ΔCOB सर्वांगसम हैं, इसलिए ∠AOB = ∠COB। पर ∠AOB + ∠COB = 180°, तो 2∠AOB = 180° ⇒ ∠AOB = 90°। इसलिए विकर्ण बराबर हैं, एक-दूसरे को समद्विभाजित करते हैं, और समकोण पर समद्विभाजित करते हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: समांतर चतुर्भुज ABCD का विकर्ण AC, ∠A को समद्विभाजित करता है (देखिए आकृति 8.11)। दर्शाइए कि</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) यह ∠C को भी समद्विभाजित करता है</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> ABCD एक समांतर चतुर्भुज है और AC, ∠A को समद्विभाजित करता है।</p>
+                        <p class="mb-2">अतः, ∠DAC = ∠BAC ...(1)</p>
+                        <p class="mb-2">अब, AB || DC और AC एक तिर्यक रेखा है।</p>
+                        <p class="mb-2">इसलिए, ∠BAC = ∠DCA ...(2) (एकांतर कोण)</p>
+                        <p class="mb-2">साथ ही, AD || BC और AC एक तिर्यक रेखा है।</p>
+                        <p class="mb-2">इसलिए, ∠DAC = ∠BCA ...(3) (एकांतर कोण)</p>
+                        <p class="mb-2">(1), (2), और (3) से:</p>
+                        <p class="mb-2">∠DCA = ∠BCA</p>
+                        <p class="mb-2">अतः, AC, ∠C को समद्विभाजित करता है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABCD एक समांतर चतुर्भुज है जिसमें AC, ∠A को समद्विभाजित करता है। AB || DC और AC तिर्यक रेखा है, इसलिए ∠BAC = ∠DCA। AD || BC और AC तिर्यक रेखा है, इसलिए ∠DAC = ∠BCA। पर ∠DAC = ∠BAC, इसलिए ∠DCA = ∠BCA। यानी AC, ∠C को भी समद्विभाजित करता है।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) ABCD एक समचतुर्भुज है</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊपर से, हमें प्राप्त है ∠DAC = ∠DCA</p>
+                        <p class="mb-2">ΔADC में, ∠DAC = ∠DCA</p>
+                        <p class="mb-2">इसलिए, AD = DC (बराबर कोणों के सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">परन्तु समांतर चतुर्भुज ABCD में, AB = DC और AD = BC</p>
+                        <p class="mb-2">अतः, AB = BC = CD = DA</p>
+                        <p class="mb-2">इसलिए, ABCD एक समचतुर्भुज है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔADC में ∠DAC = ∠DCA, इसलिए AD = DC। पर समांतर चतुर्भुज में AB = DC और AD = BC, इसलिए AB = BC = CD = DA। यानी सभी भुजाएँ बराबर हैं, इसलिए ABCD एक समचतुर्भुज है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: ABCD एक आयत है जिसमें विकर्ण AC, ∠A और ∠C दोनों को समद्विभाजित करता है। दर्शाइए कि:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ABCD एक वर्ग है</h4>
+
+                    <div class="step">
+                        <p class="mb-2"><strong>दिया है:</strong> ABCD एक आयत है और AC, ∠A और ∠C को समद्विभाजित करता है।</p>
+                        <p class="mb-2">चूँकि AC, ∠A को समद्विभाजित करता है, इसलिए ∠DAC = ∠BAC</p>
+                        <p class="mb-2">परन्तु ∠DAC + ∠BAC = ∠A = 90° (आयत का कोण)</p>
+                        <p class="mb-2">अतः, 2∠DAC = 90° ⇒ ∠DAC = 45°</p>
+                        <p class="mb-2">इसी प्रकार, चूँकि AC, ∠C को समद्विभाजित करता है, ∠DCA = ∠BCA = 45°</p>
+                        <p class="mb-2">ΔADC में, ∠DAC = 45° और ∠DCA = 45°</p>
+                        <p class="mb-2">अतः, ∠ADC = 180° − (45° + 45°) = 90°</p>
+                        <p class="mb-2">इसी प्रकार, सभी कोण 90° के हैं।</p>
+                        <p class="mb-2">अब, ΔADC और ΔABC में:</p>
+                        <p class="mb-2">AD = BC (आयत की सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">AC = AC (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">∠DAC = ∠BCA = 45°</p>
+                        <p class="mb-2">अतः, ΔADC ≅ ΔABC (ASA सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, AB = AD (CPCT)</p>
+                        <p class="mb-2">अतः, आसन्न भुजाएँ बराबर हैं।</p>
+                        <p class="mb-2">इसलिए, ABCD एक वर्ग है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABCD एक आयत है जिसमें AC, ∠A और ∠C दोनों को समद्विभाजित करता है। ∠A = 90°, इसलिए ∠DAC = 45°। इसी प्रकार ∠DCA = 45°। ΔADC में ∠ADC = 90°। ΔADC और ΔABC सर्वांगसम हैं, इसलिए AB = AD। यानी आसन्न भुजाएँ बराबर हैं। इसलिए ABCD एक वर्ग है।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) विकर्ण BD, ∠B और ∠D दोनों को समद्विभाजित करता है</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि ABCD एक वर्ग है (ऊपर सिद्ध किया), और वर्ग में विकर्ण कोणों को समद्विभाजित करते हैं।</p>
+                        <p class="mb-2">इसलिए, BD, ∠B और ∠D को समद्विभाजित करता है।</p>
+                        <p class="mb-2">वैकल्पिक रूप से, हम इसे उसी प्रकार सिद्ध कर सकते हैं जैसे हमने AC के लिए किया था।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABCD वर्ग है, और वर्ग में विकर्ण कोणों को समद्विभाजित करते हैं। इसलिए BD, ∠B और ∠D को समद्विभाजित करेगा।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: समांतर चतुर्भुज ABCD में, विकर्ण BD पर दो बिंदु P और Q इस प्रकार स्थित हैं कि DP = BQ है (देखिए आकृति 8.12)। दर्शाइए कि:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ΔAPD ≅ ΔCQB</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔAPD और ΔCQB में:</p>
+                        <p class="mb-2">AD = BC (समांतर चतुर्भुज की सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">∠ADP = ∠CBQ (एकांतर कोण, क्योंकि AD || BC)</p>
+                        <p class="mb-2">DP = BQ (दिया है)</p>
+                        <p class="mb-2">अतः, ΔAPD ≅ ΔCQB (SAS सर्वांगसमता नियम से)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔAPD और ΔCQB में, AD = BC, ∠ADP = ∠CBQ (एकांतर कोण), और DP = BQ। इसलिए ΔAPD ≅ ΔCQB।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) AP = CQ</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि ΔAPD ≅ ΔCQB (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">इसलिए, AP = CQ (CPCT)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔAPD ≅ ΔCQB, इसलिए AP = CQ।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) ΔAQB ≅ ΔCPD</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔAQB और ΔCPD में:</p>
+                        <p class="mb-2">AB = CD (समांतर चतुर्भुज की सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">∠ABQ = ∠CDP (एकांतर कोण, क्योंकि AB || CD)</p>
+                        <p class="mb-2">BQ = DP (दिया है)</p>
+                        <p class="mb-2">अतः, ΔAQB ≅ ΔCPD (SAS सर्वांगसमता नियम से)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔAQB और ΔCPD में, AB = CD, ∠ABQ = ∠CDP (एकांतर कोण), और BQ = DP। इसलिए ΔAQB ≅ ΔCPD।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) AQ = CP</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि ΔAQB ≅ ΔCPD (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">इसलिए, AQ = CP (CPCT)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔAQB ≅ ΔCPD, इसलिए AQ = CP।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) APCQ एक समांतर चतुर्भुज है</h4>
+
+                    <div class="step">
+                        <p class="mb-2">हमें प्राप्त है AP = CQ (भाग ii से) और AQ = CP (भाग iv से)</p>
+                        <p class="mb-2">चतुर्भुज APCQ में, सम्मुख भुजाएँ बराबर हैं।</p>
+                        <p class="mb-2">इसलिए, APCQ एक समांतर चतुर्भुज है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> APCQ में AP = CQ और AQ = CP, यानी सम्मुख भुजाएँ बराबर हैं। इसलिए APCQ एक समांतर चतुर्भुज है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: ABCD एक समांतर चतुर्भुज है और AP और CQ शीर्षों A और C से विकर्ण BD पर लंब हैं (देखिए आकृति 8.13)। दर्शाइए कि</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ΔAPB ≅ ΔCQD</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔAPB और ΔCQD में:</p>
+                        <p class="mb-2">AB = CD (समांतर चतुर्भुज की सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">∠ABP = ∠CDQ (एकांतर कोण, क्योंकि AB || CD)</p>
+                        <p class="mb-2">∠APB = ∠CQD = 90° (दिया है, AP और CQ लंब हैं)</p>
+                        <p class="mb-2">अतः, ΔAPB ≅ ΔCQD (AAS सर्वांगसमता नियम से)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔAPB और ΔCQD में, AB = CD, ∠ABP = ∠CDQ (एकांतर कोण), और ∠APB = ∠CQD = 90°। इसलिए ΔAPB ≅ ΔCQD।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) AP = CQ</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि ΔAPB ≅ ΔCQD (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">इसलिए, AP = CQ (CPCT)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔAPB ≅ ΔCQD, इसलिए AP = CQ।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: ABCD एक समलंब है, जिसमें AB || CD और AD = BC है (देखिए आकृति 8.14)। दर्शाइए कि</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ∠A = ∠B</h4>
+
+                    <div class="step">
+                        <p class="mb-2">AB को बढ़ाइए और C से होकर DA के समांतर एक रेखा खींचिए जो AB को बढ़ाने पर E पर प्रतिच्छेद करती है।</p>
+                        <p class="mb-2">अतः, AD || EC (रचना के अनुसार)</p>
+                        <p class="mb-2">अब, AECD एक समांतर चतुर्भुज है (सम्मुख भुजाएँ समांतर हैं)</p>
+                        <p class="mb-2">इसलिए, AD = EC (समांतर चतुर्भुज की सम्मुख भुजाएँ)</p>
+                        <p class="mb-2">परन्तु AD = BC (दिया है)</p>
+                        <p class="mb-2">अतः, BC = EC</p>
+                        <p class="mb-2">ΔBCE में, BC = EC</p>
+                        <p class="mb-2">इसलिए, ∠CBE = ∠CEB (बराबर भुजाओं के सम्मुख कोण)</p>
+                        <p class="mb-2">परन्तु ∠CEB = ∠A (संगत कोण, क्योंकि AD || EC)</p>
+                        <p class="mb-2">और ∠CBE = ∠B</p>
+                        <p class="mb-2">इसलिए, ∠A = ∠B</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> AB को बढ़ाते हैं और C से DA के समांतर एक रेखा खींचते हैं जो AB को E पर प्रतिच्छेद करती है। AECD एक समांतर चतुर्भुज है, इसलिए AD = EC। पर AD = BC, इसलिए BC = EC। ΔBCE में BC = EC, इसलिए ∠CBE = ∠CEB। पर ∠CEB = ∠A (संगत कोण) और ∠CBE = ∠B। इसलिए ∠A = ∠B।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) ∠C = ∠D</h4>
+
+                    <div class="step">
+                        <p class="mb-2">AB || CD (दिया है)</p>
+                        <p class="mb-2">अतः, ∠A + ∠D = 180° और ∠B + ∠C = 180° (सह-अंतः कोण)</p>
+                        <p class="mb-2">परन्तु ∠A = ∠B (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">अतः, ∠A + ∠D = ∠B + ∠C</p>
+                        <p class="mb-2">इसलिए, ∠D = ∠C</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> AB || CD, इसलिए ∠A + ∠D = 180° और ∠B + ∠C = 180°। पर ∠A = ∠B, इसलिए ∠A + ∠D = ∠B + ∠C ⇒ ∠D = ∠C।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) ΔABC ≅ ΔBAD</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔABC और ΔBAD में:</p>
+                        <p class="mb-2">AB = BA (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">BC = AD (दिया है)</p>
+                        <p class="mb-2">∠ABC = ∠BAD (भाग i में सिद्ध किया)</p>
+                        <p class="mb-2">अतः, ΔABC ≅ ΔBAD (SAS सर्वांगसमता नियम से)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔABC और ΔBAD में, AB उभयनिष्ठ है, BC = AD, और ∠ABC = ∠BAD। इसलिए ΔABC ≅ ΔBAD।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) विकर्ण AC = विकर्ण BD</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि ΔABC ≅ ΔBAD (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">इसलिए, AC = BD (CPCT)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔABC ≅ ΔBAD, इसलिए AC = BD।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 8.2 ==================== -->
+        <section id="exercise-8-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 8.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: ABCD एक चतुर्भुज है जिसमें P, Q, R और S क्रमशः भुजाओं AB, BC, CD और DA के मध्य-बिंदु हैं (देखिए आकृति 8.20)। AC एक विकर्ण है। दर्शाइए कि:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) SR || AC और SR = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔADC में, S और R क्रमशः AD और CD के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">मध्य-बिंदु प्रमेय के अनुसार, SR || AC और SR = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔADC में S और R मध्य-बिंदु हैं AD और CD के। मध्य-बिंदु प्रमेय के अनुसार, SR || AC और SR = 1/2 AC।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) PQ = SR</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔABC में, P और Q क्रमशः AB और BC के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">मध्य-बिंदु प्रमेय के अनुसार, PQ || AC और PQ = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC</p>
+                        <p class="mb-2">(i) से, SR = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC</p>
+                        <p class="mb-2">इसलिए, PQ = SR</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔABC में P और Q मध्य-बिंदु हैं AB और BC के। मध्य-बिंदु प्रमेय के अनुसार, PQ || AC और PQ = 1/2 AC। पर SR भी 1/2 AC है। इसलिए PQ = SR।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) PQRS एक समांतर चतुर्भुज है</h4>
+
+                    <div class="step">
+                        <p class="mb-2">हमें प्राप्त है PQ || AC और SR || AC</p>
+                        <p class="mb-2">अतः, PQ || SR</p>
+                        <p class="mb-2">साथ ही, PQ = SR (ऊपर सिद्ध किया)</p>
+                        <p class="mb-2">इसलिए, PQRS एक समांतर चतुर्भुज है (सम्मुख भुजाओं का एक युग्म समांतर और बराबर है)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> PQ || AC और SR || AC, इसलिए PQ || SR। और PQ = SR। इसलिए PQRS एक समांतर चतुर्भुज है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: ABCD एक समचतुर्भुज है और P, Q, R और S क्रमशः भुजाओं AB, BC, CD और DA के मध्य-बिंदु हैं। दर्शाइए कि चतुर्भुज PQRS एक आयत है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">AC और BD को मिलाइए।</p>
+                        <p class="mb-2">ΔABC में, P और Q, AB और BC के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">अतः, PQ || AC और PQ = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC ...(1)</p>
+                        <p class="mb-2">ΔADC में, S और R, AD और CD के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">अतः, SR || AC और SR = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC ...(2)</p>
+                        <p class="mb-2">(1) और (2) से, PQ || SR और PQ = SR</p>
+                        <p class="mb-2">अतः, PQRS एक समांतर चतुर्भुज है।</p>
+                        <p class="mb-2">अब, ΔABD में, P और S, AB और AD के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">अतः, PS || BD</p>
+                        <p class="mb-2">परन्तु PQ || AC (1 से)</p>
+                        <p class="mb-2">चूँकि AC ⊥ BD (समचतुर्भुज के विकर्ण लंब होते हैं)</p>
+                        <p class="mb-2">अतः, PS ⊥ PQ (यदि दो रेखाएँ दो लंब रेखाओं के समांतर हों, तो वे लंब होती हैं)</p>
+                        <p class="mb-2">इसलिए, ∠P = 90°</p>
+                        <p class="mb-2">अतः, PQRS एक आयत है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> AC और BD मिलाते हैं। ΔABC में PQ || AC और PQ = 1/2 AC। ΔADC में SR || AC और SR = 1/2 AC। इसलिए PQ || SR और PQ = SR, तो PQRS समांतर चतुर्भुज है। ΔABD में PS || BD। पर PQ || AC और AC ⊥ BD (समचतुर्भुज के विकर्ण लंब होते हैं), इसलिए PS ⊥ PQ। यानी ∠P = 90°। इसलिए PQRS एक आयत है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: ABCD एक आयत है और P, Q, R और S क्रमशः भुजाओं AB, BC, CD और DA के मध्य-बिंदु हैं। दर्शाइए कि चतुर्भुज PQRS एक समचतुर्भुज है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">AC और BD को मिलाइए।</p>
+                        <p class="mb-2">ΔABC में, P और Q, AB और BC के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">अतः, PQ || AC और PQ = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC ...(1)</p>
+                        <p class="mb-2">ΔADC में, S और R, AD और CD के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">अतः, SR || AC और SR = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AC ...(2)</p>
+                        <p class="mb-2">(1) और (2) से, PQ || SR और PQ = SR</p>
+                        <p class="mb-2">इसी प्रकार, PS || QR और PS = QR</p>
+                        <p class="mb-2">अतः, PQRS एक समांतर चतुर्भुज है।</p>
+                        <p class="mb-2">अब, ΔPAS और ΔPBQ में:</p>
+                        <p class="mb-2">AP = BP (P, AB का मध्य-बिंदु है)</p>
+                        <p class="mb-2">AS = BQ (S और Q, AD और BC के मध्य-बिंदु हैं, और आयत में AD = BC)</p>
+                        <p class="mb-2">∠A = ∠B = 90° (आयत के कोण)</p>
+                        <p class="mb-2">अतः, ΔPAS ≅ ΔPBQ (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, PS = PQ (CPCT)</p>
+                        <p class="mb-2">अतः, समांतर चतुर्भुज PQRS की आसन्न भुजाएँ बराबर हैं।</p>
+                        <p class="mb-2">इसलिए, PQRS एक समचतुर्भुज है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> AC और BD मिलाते हैं। ΔABC में PQ || AC और PQ = 1/2 AC। ΔADC में SR || AC और SR = 1/2 AC। इसलिए PQ || SR और PQ = SR, तो PQRS समांतर चतुर्भुज है। ΔPAS और ΔPBQ सर्वांगसम हैं, इसलिए PS = PQ। यानी आसन्न भुजाएँ बराबर हैं। इसलिए PQRS एक समचतुर्भुज है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: ABCD एक समलंब है, जिसमें AB || DC है, BD एक विकर्ण है और E, AD का मध्य-बिंदु है। E से होकर AB के समांतर एक रेखा खींची गई है जो BC को F पर प्रतिच्छेद करती है (देखिए आकृति 8.21)। दर्शाइए कि F, BC का मध्य-बिंदु है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए EF, BD को G पर प्रतिच्छेद करती है।</p>
+                        <p class="mb-2">ΔABD में, E, AD का मध्य-बिंदु है और EG || AB (चूँकि EF || AB)</p>
+                        <p class="mb-2">मध्य-बिंदु प्रमेय के विलोम से, G, BD का मध्य-बिंदु है।</p>
+                        <p class="mb-2">अब, ΔBCD में, G, BD का मध्य-बिंदु है और GF || DC (चूँकि AB || DC और EF || AB, इसलिए EF || DC)</p>
+                        <p class="mb-2">मध्य-बिंदु प्रमेय के विलोम से, F, BC का मध्य-बिंदु है।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> EF, BD को G पर प्रतिच्छेद करती है। ΔABD में E मध्य-बिंदु है AD का और EG || AB, इसलिए G मध्य-बिंदु है BD का। ΔBCD में G मध्य-बिंदु है BD का और GF || DC, इसलिए F मध्य-बिंदु है BC का।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक समांतर चतुर्भुज ABCD में, E और F क्रमशः भुजाओं AB और CD के मध्य-बिंदु हैं (देखिए आकृति 8.22)। दर्शाइए कि रेखाखंड AF और EC विकर्ण BD को समत्रिभाजित करते हैं।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ABCD एक समांतर चतुर्भुज है, इसलिए AB = CD और AB || CD।</p>
+                        <p class="mb-2">E और F क्रमशः AB और CD के मध्य-बिंदु हैं।</p>
+                        <p class="mb-2">अतः, AE = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB और CF = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> CD</p>
+                        <p class="mb-2">परन्तु AB = CD, इसलिए AE = CF</p>
+                        <p class="mb-2">साथ ही, AE || CF (चूँकि AB || CD)</p>
+                        <p class="mb-2">अतः, AECF एक समांतर चतुर्भुज है।</p>
+                        <p class="mb-2">इसलिए, AF || EC</p>
+                        <p class="mb-2">मान लीजिए AF और EC, BD को क्रमशः P और Q पर प्रतिच्छेद करते हैं।</p>
+                        <p class="mb-2">ΔABP में, E, AB का मध्य-बिंदु है और EQ || AP (चूँकि AF || EC)</p>
+                        <p class="mb-2">अतः, Q, BP का मध्य-बिंदु है (मध्य-बिंदु प्रमेय के विलोम से)</p>
+                        <p class="mb-2">इसलिए, BQ = QP ...(1)</p>
+                        <p class="mb-2">ΔDQC में, F, DC का मध्य-बिंदु है और FP || CQ (चूँकि AF || EC)</p>
+                        <p class="mb-2">अतः, P, DQ का मध्य-बिंदु है (मध्य-बिंदु प्रमेय के विलोम से)</p>
+                        <p class="mb-2">इसलिए, DP = PQ ...(2)</p>
+                        <p class="mb-2">(1) और (2) से, BQ = QP = PD</p>
+                        <p class="mb-2">अतः, AF और EC विकर्ण BD को समत्रिभाजित करते हैं।</p>
+                        <p><strong>अतः सिद्ध हुआ।</strong></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ABCD समांतर चतुर्भुज है, इसलिए AB = CD और AB || CD। E और F मध्य-बिंदु हैं AB और CD के, इसलिए AE = CF। और AE || CF, इसलिए AECF समांतर चतुर्भुज है। इसलिए AF || EC। ΔABP में E मध्य-बिंदु है AB का और EQ || AP, इसलिए Q मध्य-बिंदु है BP का। यानी BQ = QP। ΔDQC में F मध्य-बिंदु है DC का और FP || CQ, इसलिए P मध्य-बिंदु है DQ का। यानी DP = PQ। इसलिए BQ = QP = PD। यानी AF और EC विकर्ण BD को समत्रिभाजित करते हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: ABC एक त्रिभुज है जो C पर समकोण है। कर्ण AB के मध्य-बिंदु M से होकर BC के समांतर एक रेखा AC को D पर प्रतिच्छेद करती है। दर्शाइए कि</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) D, AC का मध्य-बिंदु है</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ΔABC में, M, AB का मध्य-बिंदु है और MD || BC</p>
+                        <p class="mb-2">मध्य-बिंदु प्रमेय के विलोम से, D, AC का मध्य-बिंदु है।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> ΔABC में M मध्य-बिंदु है AB का और MD || BC, इसलिए मध्य-बिंदु प्रमेय के विलोम से D मध्य-बिंदु है AC का।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) MD ⊥ AC</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि MD || BC और AC ⊥ BC (दिया है, ∠C = 90°)</p>
+                        <p class="mb-2">अतः, MD ⊥ AC</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> MD || BC और AC ⊥ BC (∠C = 90°), इसलिए MD ⊥ AC।
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) CM = MA = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</h4>
+
+                    <div class="step">
+                        <p class="mb-2">MC को मिलाइए।</p>
+                        <p class="mb-2">ΔAMD और ΔCMD में:</p>
+                        <p class="mb-2">AD = CD (D, AC का मध्य-बिंदु है)</p>
+                        <p class="mb-2">MD = MD (उभयनिष्ठ भुजा)</p>
+                        <p class="mb-2">∠ADM = ∠CDM = 90° (MD ⊥ AC)</p>
+                        <p class="mb-2">अतः, ΔAMD ≅ ΔCMD (SAS सर्वांगसमता नियम से)</p>
+                        <p class="mb-2">इसलिए, AM = CM (CPCT)</p>
+                        <p class="mb-2">परन्तु AM = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB (M, AB का मध्य-बिंदु है)</p>
+                        <p class="mb-2">अतः, CM = MA = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> AB</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> MC मिलाते हैं। ΔAMD और ΔCMD सर्वांगसम हैं, इसलिए AM = CM। पर AM = 1/2 AB (M मध्य-बिंदु है AB का)। इसलिए CM = MA = 1/2 AB।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 8 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> एक समांतर चतुर्भुज के विकर्ण बराबर हों, तो वह आयत होता है।</p>
+                <p class="mb-2"><strong>2.</strong> वर्ग के विकर्ण बराबर होते हैं और एक-दूसरे को समकोण पर समद्विभाजित करते हैं।</p>
+                <p class="mb-2"><strong>3.</strong> समांतर चतुर्भुज का विकर्ण यदि एक कोण को समद्विभाजित करता है, तो वह समचतुर्भुज होता है।</p>
+                <p class="mb-2"><strong>4.</strong> आयत का विकर्ण यदि एक कोण को समद्विभाजित करता है, तो वह वर्ग होता है।</p>
+                <p class="mb-2"><strong>5.</strong> <strong>मध्य-बिंदु प्रमेय:</strong> त्रिभुज की दो भुजाओं के मध्य-बिंदुओं को मिलाने वाला रेखाखंड तीसरी भुजा के समांतर होता है और उसका आधा होता है।</p>
+                <p class="mb-2"><strong>6.</strong> <strong>मध्य-बिंदु प्रमेय का विलोम:</strong> त्रिभुज की एक भुजा के मध्य-बिंदु से होकर दूसरी भुजा के समांतर खींची गई रेखा तीसरी भुजा को समद्विभाजित करती है।</p>
+                <p class="mb-2"><strong>7.</strong> समचतुर्भुज के विकर्ण लंब होते हैं।</p>
+                <p class="mb-2"><strong>8.</strong> समलंब में यदि समांतर भुजाओं के अतिरिक्त अन्य भुजाएँ बराबर हों, तो उसके आधार कोण बराबर होते हैं और विकर्ण भी बराबर होते हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

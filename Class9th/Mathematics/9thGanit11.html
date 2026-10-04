@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 11: पृष्ठीय क्षेत्रफल और आयतन</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .theorem {
+            background-color: #fef3c7;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #f59e0b;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 11<br>पृष्ठीय क्षेत्रफल और आयतन</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 11.1 ==================== -->
+        <section id="exercise-11-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक शंकु का वक्र पृष्ठीय क्षेत्रफल ज्ञात कीजिए, जिसका आधार व्यास 10.5 cm और तिर्यक ऊँचाई 10 cm है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आधार व्यास = 10.5 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">10.5</span><span class="denominator">2</span></div> = 5.25 cm</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 10 cm</p>
+                        <p class="mb-2">शंकु का वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.25 × 10 cm²</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 52.5 cm² = 165 cm²</p>
+                        <p><strong>उत्तर:</strong> 165 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु का आधार व्यास 10.5 cm है, तो त्रिज्या 5.25 cm होगी। तिर्यक ऊँचाई 10 cm है। वक्र पृष्ठीय क्षेत्रफल = πrl = (22/7) × 5.25 × 10 = 165 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक शंकु का कुल पृष्ठीय क्षेत्रफल ज्ञात कीजिए, जिसकी तिर्यक ऊँचाई 21 m और आधार व्यास 24 m है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आधार व्यास = 24 m</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">24</span><span class="denominator">2</span></div> = 12 m</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 21 m</p>
+                        <p class="mb-2">शंकु का कुल पृष्ठीय क्षेत्रफल = πr(l + r)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 12 × (21 + 12) m²</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 12 × 33 m² = <div class="fraction"><span class="numerator">8712</span><span class="denominator">7</span></div> m² = 1244.57 m²</p>
+                        <p><strong>उत्तर:</strong> 1244.57 m²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु का आधार व्यास 24 m है, तो त्रिज्या 12 m होगी। तिर्यक ऊँचाई 21 m है। कुल पृष्ठीय क्षेत्रफल = πr(l + r) = (22/7) × 12 × 33 = 1244.57 m²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक शंकु का वक्र पृष्ठीय क्षेत्रफल 308 cm² है और इसकी तिर्यक ऊँचाई 14 cm है। ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) आधार की त्रिज्या</h4>
+
+                    <div class="step">
+                        <p class="mb-2">वक्र पृष्ठीय क्षेत्रफल = 308 cm²</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 14 cm</p>
+                        <p class="mb-2">शंकु का वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">308 = <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × r × 14</p>
+                        <p class="mb-2">308 = 44r</p>
+                        <p class="mb-2">r = <div class="fraction"><span class="numerator">308</span><span class="denominator">44</span></div> = 7 cm</p>
+                        <p><strong>उत्तर:</strong> 7 cm</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) शंकु का कुल पृष्ठीय क्षेत्रफल</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 7 cm</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 14 cm</p>
+                        <p class="mb-2">कुल पृष्ठीय क्षेत्रफल = πr(l + r)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × (14 + 7) cm²</p>
+                        <p class="mb-2">= 22 × 21 = 462 cm²</p>
+                        <p><strong>उत्तर:</strong> 462 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> वक्र पृष्ठीय क्षेत्रफल 308 cm² और तिर्यक ऊँचाई 14 cm दी है। πrl = 308 से त्रिज्या निकालते हैं: (22/7) × r × 14 = 308, तो r = 7 cm। कुल पृष्ठीय क्षेत्रफल = πr(l + r) = (22/7) × 7 × 21 = 462 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक शंक्वाकार तंबू 10 m ऊँचा है और उसके आधार की त्रिज्या 24 m है। ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) तंबू की तिर्यक ऊँचाई</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊँचाई (h) = 10 m</p>
+                        <p class="mb-2">त्रिज्या (r) = 24 m</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: l² = h² + r²</p>
+                        <p class="mb-2">l² = 10² + 24² = 100 + 576 = 676</p>
+                        <p class="mb-2">l = √676 = 26 m</p>
+                        <p><strong>उत्तर:</strong> 26 m</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) तंबू बनाने में लगने वाले कैनवास का मूल्य, यदि 1 m² कैनवास का मूल्य ₹70 है।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 26 m</p>
+                        <p class="mb-2">त्रिज्या (r) = 24 m</p>
+                        <p class="mb-2">तंबू का वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 24 × 26 m²</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">13728</span><span class="denominator">7</span></div> m² = 1961.14 m²</p>
+                        <p class="mb-2">कैनवास का मूल्य = 1961.14 × 70 = ₹137279.80</p>
+                        <p><strong>उत्तर:</strong> ₹137279.80</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु की ऊँचाई 10 m और त्रिज्या 24 m है। तिर्यक ऊँचाई l² = h² + r² = 100 + 576 = 676, इसलिए l = 26 m। कैनवास का क्षेत्रफल = πrl = (22/7) × 24 × 26 = 1961.14 m²। मूल्य = 1961.14 × 70 = ₹137279.80।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: 3 m चौड़े तिरपाल की कितनी लंबाई चाहिए जो 8 m ऊँचे और 6 m आधार त्रिज्या वाले एक शंक्वाकार तंबू को बनाने के लिए पर्याप्त हो? मान लीजिए कि सिलाई का मार्जिन और बर्बादी के लिए 20 cm अतिरिक्त लंबाई आवश्यक है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊँचाई (h) = 8 m</p>
+                        <p class="mb-2">त्रिज्या (r) = 6 m</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: l² = h² + r²</p>
+                        <p class="mb-2">l² = 8² + 6² = 64 + 36 = 100</p>
+                        <p class="mb-2">l = √100 = 10 m</p>
+                        <p class="mb-2">तंबू का वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= 3.14 × 6 × 10 = 188.4 m²</p>
+                        <p class="mb-2">तिरपाल की चौड़ाई = 3 m</p>
+                        <p class="mb-2">आवश्यक लंबाई = <div class="fraction"><span class="numerator">188.4</span><span class="denominator">3</span></div> = 62.8 m</p>
+                        <p class="mb-2">सिलाई के लिए अतिरिक्त लंबाई = 20 cm = 0.2 m</p>
+                        <p class="mb-2">कुल आवश्यक लंबाई = 62.8 + 0.2 = 63 m</p>
+                        <p><strong>उत्तर:</strong> 63 m</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु की ऊँचाई 8 m और त्रिज्या 6 m है। तिर्यक ऊँचाई l² = 64 + 36 = 100, इसलिए l = 10 m। वक्र पृष्ठीय क्षेत्रफल = πrl = 3.14 × 6 × 10 = 188.4 m²। तिरपाल की चौड़ाई 3 m है, तो लंबाई = 188.4/3 = 62.8 m। अतिरिक्त 0.2 m जोड़ेंगे सिलाई के लिए, कुल 63 m।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक शंक्वाकार मकबरे की तिर्यक ऊँचाई और आधार व्यास क्रमशः 25 m और 14 m हैं। ₹210 प्रति 100 m² की दर से इसके वक्र पृष्ठ पर सफेदी कराने का व्यय ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 25 m</p>
+                        <p class="mb-2">आधार व्यास = 14 m</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">14</span><span class="denominator">2</span></div> = 7 m</p>
+                        <p class="mb-2">वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × 25 = 550 m²</p>
+                        <p class="mb-2">प्रति 100 m² सफेदी का व्यय = ₹210</p>
+                        <p class="mb-2">550 m² के लिए व्यय = <div class="fraction"><span class="numerator">550</span><span class="denominator">100</span></div> × 210 = 5.5 × 210 = ₹1155</p>
+                        <p><strong>उत्तर:</strong> ₹1155</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> तिर्यक ऊँचाई 25 m और आधार व्यास 14 m है, तो त्रिज्या 7 m। वक्र पृष्ठीय क्षेत्रफल = πrl = (22/7) × 7 × 25 = 550 m²। सफेदी का व्यय ₹210 प्रति 100 m², तो कुल व्यय = (550/100) × 210 = ₹1155।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक जोकर की टोपी एक लंब वृत्तीय शंकु के आकार की है, जिसकी आधार त्रिज्या 7 cm और ऊँचाई 24 cm है। इस प्रकार की 10 टोपियाँ बनाने के लिए आवश्यक शीट का क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 7 cm</p>
+                        <p class="mb-2">ऊँचाई (h) = 24 cm</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: l² = h² + r²</p>
+                        <p class="mb-2">l² = 24² + 7² = 576 + 49 = 625</p>
+                        <p class="mb-2">l = √625 = 25 cm</p>
+                        <p class="mb-2">एक टोपी का वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × 25 = 550 cm²</p>
+                        <p class="mb-2">10 टोपियों के लिए क्षेत्रफल = 10 × 550 = 5500 cm²</p>
+                        <p><strong>उत्तर:</strong> 5500 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु की त्रिज्या 7 cm और ऊँचाई 24 cm है। तिर्यक ऊँचाई l² = 576 + 49 = 625, इसलिए l = 25 cm। एक टोपी का वक्र पृष्ठीय क्षेत्रफल = πrl = (22/7) × 7 × 25 = 550 cm²। 10 टोपियों के लिए 5500 cm² शीट चाहिए।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक बस स्टॉप को शेष सड़क से 50 खोखले शंकुओं द्वारा बैरिकेड किया जाना है, जो पुनः चक्रित गत्ते से बने हैं। प्रत्येक शंकु का आधार व्यास 40 cm और ऊँचाई 1 m है। यदि प्रत्येक शंकु की बाहरी सतह को पेंट करना है और पेंट का व्यय ₹12 प्रति m² है, तो इन सभी शंकुओं को पेंट कराने का व्यय क्या होगा?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आधार व्यास = 40 cm = 0.4 m</p>
+                        <p class="mb-2">त्रिज्या (r) = 0.2 m</p>
+                        <p class="mb-2">ऊँचाई (h) = 1 m</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: l² = h² + r²</p>
+                        <p class="mb-2">l² = 1² + 0.2² = 1 + 0.04 = 1.04</p>
+                        <p class="mb-2">l = √1.04 = 1.02 m</p>
+                        <p class="mb-2">एक शंकु का वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= 3.14 × 0.2 × 1.02 = 0.64056 m²</p>
+                        <p class="mb-2">50 शंकुओं का क्षेत्रफल = 50 × 0.64056 = 32.028 m²</p>
+                        <p class="mb-2">पेंट का व्यय = 32.028 × 12 = ₹384.34</p>
+                        <p><strong>उत्तर:</strong> ₹384.34</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> प्रत्येक शंकु का व्यास 40 cm = 0.4 m, तो त्रिज्या 0.2 m। ऊँचाई 1 m। तिर्यक ऊँचाई l² = 1 + 0.04 = 1.04, इसलिए l = 1.02 m। एक शंकु का वक्र पृष्ठीय क्षेत्रफल = πrl = 3.14 × 0.2 × 1.02 = 0.64056 m²। 50 शंकुओं का क्षेत्रफल = 32.028 m²। पेंट का व्यय = 32.028 × 12 = ₹384.34।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 11.2 ==================== -->
+        <section id="exercise-11-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित त्रिज्याओं वाले गोलों का पृष्ठीय क्षेत्रफल ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 10.5 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 10.5 cm</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 10.5 × 10.5 cm²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 110.25 cm² = 1386 cm²</p>
+                        <p><strong>उत्तर:</strong> 1386 cm²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 5.6 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 5.6 cm</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.6 × 5.6 cm²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 31.36 cm² = 394.24 cm²</p>
+                        <p><strong>उत्तर:</strong> 394.24 cm²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 14 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 14 cm</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 14 × 14 cm²</p>
+                        <p class="mb-2">= 4 × 22 × 2 × 14 cm² = 2464 cm²</p>
+                        <p><strong>उत्तर:</strong> 2464 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का पृष्ठीय क्षेत्रफल = 4πr². (i) r = 10.5 cm: 4 × (22/7) × 10.5 × 10.5 = 1386 cm². (ii) r = 5.6 cm: 4 × (22/7) × 5.6 × 5.6 = 394.24 cm². (iii) r = 14 cm: 4 × (22/7) × 14 × 14 = 2464 cm².
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित व्यासों वाले गोलों का पृष्ठीय क्षेत्रफल ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 14 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 14 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">14</span><span class="denominator">2</span></div> = 7 cm</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × 7 cm² = 616 cm²</p>
+                        <p><strong>उत्तर:</strong> 616 cm²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 21 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 21 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">21</span><span class="denominator">2</span></div> = 10.5 cm</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 10.5 × 10.5 cm² = 1386 cm²</p>
+                        <p><strong>उत्तर:</strong> 1386 cm²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 3.5 m</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 3.5 m</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">3.5</span><span class="denominator">2</span></div> = 1.75 m</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">= 4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 1.75 × 1.75 m² = 38.5 m²</p>
+                        <p><strong>उत्तर:</strong> 38.5 m²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का पृष्ठीय क्षेत्रफल = 4πr². (i) व्यास 14 cm, r = 7 cm: 4 × (22/7) × 7 × 7 = 616 cm². (ii) व्यास 21 cm, r = 10.5 cm: 4 × (22/7) × 10.5 × 10.5 = 1386 cm². (iii) व्यास 3.5 m, r = 1.75 m: 4 × (22/7) × 1.75 × 1.75 = 38.5 m².
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: 10 cm त्रिज्या वाले एक अर्धगोले का कुल पृष्ठीय क्षेत्रफल ज्ञात कीजिए। (π = 3.14 लीजिए)</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 10 cm</p>
+                        <p class="mb-2">अर्धगोले का कुल पृष्ठीय क्षेत्रफल = 3πr²</p>
+                        <p class="mb-2">= 3 × 3.14 × 10 × 10 cm²</p>
+                        <p class="mb-2">= 3 × 3.14 × 100 = 942 cm²</p>
+                        <p><strong>उत्तर:</strong> 942 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> अर्धगोले का कुल पृष्ठीय क्षेत्रफल = 3πr². r = 10 cm, π = 3.14: 3 × 3.14 × 10 × 10 = 942 cm².
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक गोलाकार गुब्बारे की त्रिज्या 7 cm से 14 cm हो जाती है जब उसमें हवा भरी जाती है। दोनों स्थितियों में गुब्बारे के पृष्ठीय क्षेत्रफलों का अनुपात ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">प्रारंभिक त्रिज्या (r₁) = 7 cm</p>
+                        <p class="mb-2">अंतिम त्रिज्या (r₂) = 14 cm</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">अनुपात = <div class="fraction"><span class="numerator">4πr₁²</span><span class="denominator">4πr₂²</span></div> = <div class="fraction"><span class="numerator">r₁²</span><span class="denominator">r₂²</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">7²</span><span class="denominator">14²</span></div> = <div class="fraction"><span class="numerator">49</span><span class="denominator">196</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div></p>
+                        <p><strong>उत्तर:</strong> 1 : 4</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का पृष्ठीय क्षेत्रफल 4πr² है। अनुपात = (4πr₁²)/(4πr₂²) = (r₁/r₂)² = (7/14)² = (1/2)² = 1/4 = 1:4।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: पीतल से बना एक अर्धगोलाकार कटोरा 0.25 cm मोटी इस्पात की चादर से बना है। कटोरे की भीतरी त्रिज्या 5 cm है। कटोरे का बाहरी वक्र पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">भीतरी त्रिज्या (r) = 5 cm</p>
+                        <p class="mb-2">मोटाई = 0.25 cm</p>
+                        <p class="mb-2">बाहरी त्रिज्या (R) = 5 + 0.25 = 5.25 cm</p>
+                        <p class="mb-2">अर्धगोले का बाहरी वक्र पृष्ठीय क्षेत्रफल = 2πR²</p>
+                        <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.25 × 5.25 cm²</p>
+                        <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 27.5625 cm² = 173.25 cm²</p>
+                        <p><strong>उत्तर:</strong> 173.25 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> कटोरे की भीतरी त्रिज्या 5 cm है, मोटाई 0.25 cm, तो बाहरी त्रिज्या = 5.25 cm। बाहरी वक्र पृष्ठीय क्षेत्रफल = 2πR² = 2 × (22/7) × 5.25 × 5.25 = 173.25 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक गोले की त्रिज्या ज्ञात कीजिए, जिसका पृष्ठीय क्षेत्रफल 154 cm² है।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 154 cm²</p>
+                        <p class="mb-2">4πr² = 154</p>
+                        <p class="mb-2">4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × r² = 154</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">88</span><span class="denominator">7</span></div> × r² = 154</p>
+                        <p class="mb-2">r² = 154 × <div class="fraction"><span class="numerator">7</span><span class="denominator">88</span></div> = <div class="fraction"><span class="numerator">1078</span><span class="denominator">88</span></div> = 12.25</p>
+                        <p class="mb-2">r = √12.25 = 3.5 cm</p>
+                        <p><strong>उत्तर:</strong> 3.5 cm</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का पृष्ठीय क्षेत्रफल 154 cm² दिया है। 4πr² = 154, तो 4 × (22/7) × r² = 154। इस समीकरण को हल करेंगे: (88/7) × r² = 154, r² = 154 × (7/88) = 12.25, r = √12.25 = 3.5 cm।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: चंद्रमा का व्यास पृथ्वी के व्यास का लगभग एक-चौथाई है। इनके पृष्ठीय क्षेत्रफलों का अनुपात ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए पृथ्वी का व्यास = D</p>
+                        <p class="mb-2">चंद्रमा का व्यास = <div class="fraction"><span class="numerator">D</span><span class="denominator">4</span></div></p>
+                        <p class="mb-2">पृथ्वी की त्रिज्या (R) = <div class="fraction"><span class="numerator">D</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">चंद्रमा की त्रिज्या (r) = <div class="fraction"><span class="numerator">D</span><span class="denominator">8</span></div></p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">अनुपात = <div class="fraction"><span class="numerator">4πr²</span><span class="denominator">4πR²</span></div> = <div class="fraction"><span class="numerator">r²</span><span class="denominator">R²</span></div></p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">(D/8)²</span><span class="denominator">(D/2)²</span></div> = <div class="fraction"><span class="numerator">D²/64</span><span class="denominator">D²/4</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">16</span></div></p>
+                        <p><strong>उत्तर:</strong> 1 : 16</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> चंद्रमा का व्यास पृथ्वी के व्यास का 1/4 है। त्रिज्या का अनुपात = (1/4)/1 = 1/4। पृष्ठीय क्षेत्रफल का अनुपात = (r/R)² = (1/4)² = 1/16 = 1:16।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक अर्धगोलाकार कटोरा 0.25 cm मोटी स्टील से बना है। कटोरे की भीतरी त्रिज्या 5 cm है। कटोरे का बाहरी वक्र पृष्ठीय क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">भीतरी त्रिज्या (r) = 5 cm</p>
+                        <p class="mb-2">मोटाई = 0.25 cm</p>
+                        <p class="mb-2">बाहरी त्रिज्या (R) = 5 + 0.25 = 5.25 cm</p>
+                        <p class="mb-2">अर्धगोले का बाहरी वक्र पृष्ठीय क्षेत्रफल = 2πR²</p>
+                        <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.25 × 5.25 cm²</p>
+                        <p class="mb-2">= 2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 27.5625 cm² = 173.25 cm²</p>
+                        <p><strong>उत्तर:</strong> 173.25 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> कटोरे की भीतरी त्रिज्या 5 cm है, मोटाई 0.25 cm, तो बाहरी त्रिज्या = 5.25 cm। बाहरी वक्र पृष्ठीय क्षेत्रफल = 2πR² = 2 × (22/7) × 5.25 × 5.25 = 173.25 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक लंब वृत्तीय बेलन एक गोले को ठीक से घेरता है, जिसकी त्रिज्या r है। ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) गोले का पृष्ठीय क्षेत्रफल</h4>
+
+                    <div class="step">
+                        <p class="mb-2">गोले की त्रिज्या = r</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p><strong>उत्तर:</strong> 4πr²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) बेलन का वक्र पृष्ठीय क्षेत्रफल</h4>
+
+                    <div class="step">
+                        <p class="mb-2">बेलन की त्रिज्या = r</p>
+                        <p class="mb-2">बेलन की ऊँचाई = 2r (क्योंकि गोला ठीक से घेरता है)</p>
+                        <p class="mb-2">बेलन का वक्र पृष्ठीय क्षेत्रफल = 2πrh</p>
+                        <p class="mb-2">= 2πr × 2r = 4πr²</p>
+                        <p><strong>उत्तर:</strong> 4πr²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) (i) और (ii) में प्राप्त क्षेत्रफलों का अनुपात</h4>
+
+                    <div class="step">
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">बेलन का वक्र पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">अनुपात = <div class="fraction"><span class="numerator">4πr²</span><span class="denominator">4πr²</span></div> = 1</p>
+                        <p><strong>उत्तर:</strong> 1 : 1</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले की त्रिज्या r है। (i) गोले का पृष्ठीय क्षेत्रफल = 4πr². (ii) बेलन की त्रिज्या r और ऊँचाई 2r है (क्योंकि गोला ठीक से फिट होता है)। बेलन का वक्र पृष्ठीय क्षेत्रफल = 2πrh = 2πr × 2r = 4πr². (iii) अनुपात = (4πr²)/(4πr²) = 1:1।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 11.3 ==================== -->
+        <section id="exercise-11-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित लंब वृत्तीय शंकुओं का आयतन ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) त्रिज्या 6 cm, ऊँचाई 7 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 6 cm</p>
+                        <p class="mb-2">ऊँचाई (h) = 7 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 6 × 6 × 7 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 36 cm³ = 264 cm³</p>
+                        <p><strong>उत्तर:</strong> 264 cm³</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) त्रिज्या 3.5 cm, ऊँचाई 12 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 3.5 cm</p>
+                        <p class="mb-2">ऊँचाई (h) = 12 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 3.5 × 3.5 × 12 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 0.5 × 3.5 × 12 cm³ = 154 cm³</p>
+                        <p><strong>उत्तर:</strong> 154 cm³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु का आयतन = (1/3)πr²h. (i) r = 6 cm, h = 7 cm: (1/3) × (22/7) × 6 × 6 × 7 = 264 cm³. (ii) r = 3.5 cm, h = 12 cm: (1/3) × (22/7) × 3.5 × 3.5 × 12 = 154 cm³.
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित शंक्वाकार बर्तनों की धारिता लीटर में ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) त्रिज्या 7 cm, तिर्यक ऊँचाई 25 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 7 cm</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 25 cm</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: h² = l² - r²</p>
+                        <p class="mb-2">h² = 25² - 7² = 625 - 49 = 576</p>
+                        <p class="mb-2">h = √576 = 24 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × 7 × 24 cm³ = 1232 cm³</p>
+                        <p class="mb-2">लीटर में धारिता = <div class="fraction"><span class="numerator">1232</span><span class="denominator">1000</span></div> = 1.232 L</p>
+                        <p><strong>उत्तर:</strong> 1.232 L</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) ऊँचाई 12 cm, तिर्यक ऊँचाई 13 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊँचाई (h) = 12 cm</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 13 cm</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: r² = l² - h²</p>
+                        <p class="mb-2">r² = 13² - 12² = 169 - 144 = 25</p>
+                        <p class="mb-2">r = √25 = 5 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5 × 5 × 12 cm³ = <div class="fraction"><span class="numerator">2200</span><span class="denominator">7</span></div> cm³ = 314.29 cm³</p>
+                        <p class="mb-2">लीटर में धारिता = <div class="fraction"><span class="numerator">314.29</span><span class="denominator">1000</span></div> = 0.31429 L</p>
+                        <p><strong>उत्तर:</strong> 0.31429 L</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु का आयतन = (1/3)πr²h. (i) r = 7 cm, l = 25 cm: h² = 625 - 49 = 576, h = 24 cm. आयतन = (1/3) × (22/7) × 7 × 7 × 24 = 1232 cm³ = 1.232 L. (ii) h = 12 cm, l = 13 cm: r² = 169 - 144 = 25, r = 5 cm. आयतन = (1/3) × (22/7) × 5 × 5 × 12 = 314.29 cm³ = 0.31429 L.
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक शंकु की ऊँचाई 15 cm है। यदि इसका आयतन 1570 cm³ है, तो इसके आधार की त्रिज्या ज्ञात कीजिए। (π = 3.14 का प्रयोग कीजिए)</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊँचाई (h) = 15 cm</p>
+                        <p class="mb-2">आयतन = 1570 cm³</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">1570 = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 3.14 × r² × 15</p>
+                        <p class="mb-2">1570 = 15.7 × r²</p>
+                        <p class="mb-2">r² = <div class="fraction"><span class="numerator">1570</span><span class="denominator">15.7</span></div> = 100</p>
+                        <p class="mb-2">r = √100 = 10 cm</p>
+                        <p><strong>उत्तर:</strong> 10 cm</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु की ऊँचाई 15 cm और आयतन 1570 cm³ है। आयतन = (1/3)πr²h, तो 1570 = (1/3) × 3.14 × r² × 15। इस समीकरण को हल करेंगे: 1570 = 15.7 × r², r² = 1570/15.7 = 100, r = 10 cm।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: यदि 9 cm ऊँचाई वाले एक लंब वृत्तीय शंकु का आयतन 48π cm³ है, तो इसके आधार का व्यास ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊँचाई (h) = 9 cm</p>
+                        <p class="mb-2">आयतन = 48π cm³</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">48π = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr² × 9</p>
+                        <p class="mb-2">48π = 3πr²</p>
+                        <p class="mb-2">r² = <div class="fraction"><span class="numerator">48π</span><span class="denominator">3π</span></div> = 16</p>
+                        <p class="mb-2">r = √16 = 4 cm</p>
+                        <p class="mb-2">व्यास = 2r = 8 cm</p>
+                        <p><strong>उत्तर:</strong> 8 cm</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु की ऊँचाई 9 cm और आयतन 48π cm³ है। आयतन = (1/3)πr²h, तो 48π = (1/3)πr² × 9। इस समीकरण को हल करेंगे: 48π = 3πr², r² = 48π/3π = 16, r = 4 cm. व्यास = 2 × 4 = 8 cm।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: 3.5 m व्यास वाला एक शंक्वाकार गड्ढा 12 m गहरा है। इसकी धारिता किलोलीटर में ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">शीर्ष व्यास = 3.5 m</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">3.5</span><span class="denominator">2</span></div> = 1.75 m</p>
+                        <p class="mb-2">ऊँचाई (h) = 12 m</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 1.75 × 1.75 × 12 m³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 0.25 × 1.75 × 12 m³ = 38.5 m³</p>
+                        <p class="mb-2">1 m³ = 1 किलोलीटर</p>
+                        <p class="mb-2">धारिता = 38.5 किलोलीटर</p>
+                        <p><strong>उत्तर:</strong> 38.5 किलोलीटर</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गड्ढे का शीर्ष व्यास 3.5 m, तो त्रिज्या 1.75 m। ऊँचाई 12 m। आयतन = (1/3)πr²h = (1/3) × (22/7) × 1.75 × 1.75 × 12 = 38.5 m³. 1 m³ = 1 किलोलीटर, तो धारिता = 38.5 किलोलीटर।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक लंब वृत्तीय शंकु का आयतन 9856 cm³ है। यदि इसके आधार का व्यास 28 cm है, तो ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) शंकु की ऊँचाई</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आयतन = 9856 cm³</p>
+                        <p class="mb-2">व्यास = 28 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">28</span><span class="denominator">2</span></div> = 14 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">9856 = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 14 × 14 × h</p>
+                        <p class="mb-2">9856 = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 2 × 14 × h</p>
+                        <p class="mb-2">9856 = <div class="fraction"><span class="numerator">616</span><span class="denominator">3</span></div> × h</p>
+                        <p class="mb-2">h = 9856 × <div class="fraction"><span class="numerator">3</span><span class="denominator">616</span></div> = 48 cm</p>
+                        <p><strong>उत्तर:</strong> 48 cm</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) शंकु की तिर्यक ऊँचाई</h4>
+
+                    <div class="step">
+                        <p class="mb-2">ऊँचाई (h) = 48 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = 14 cm</p>
+                        <p class="mb-2">पाइथागोरस प्रमेय से: l² = h² + r²</p>
+                        <p class="mb-2">l² = 48² + 14² = 2304 + 196 = 2500</p>
+                        <p class="mb-2">l = √2500 = 50 cm</p>
+                        <p><strong>उत्तर:</strong> 50 cm</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) शंकु का वक्र पृष्ठीय क्षेत्रफल</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 14 cm</p>
+                        <p class="mb-2">तिर्यक ऊँचाई (l) = 50 cm</p>
+                        <p class="mb-2">वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 14 × 50 cm² = 2200 cm²</p>
+                        <p><strong>उत्तर:</strong> 2200 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु का आयतन 9856 cm³, व्यास 28 cm, तो त्रिज्या 14 cm। (i) आयतन = (1/3)πr²h, तो 9856 = (1/3) × (22/7) × 14 × 14 × h। हल करके h = 48 cm। (ii) l² = h² + r² = 2304 + 196 = 2500, l = 50 cm। (iii) वक्र पृष्ठीय क्षेत्रफल = πrl = (22/7) × 14 × 50 = 2200 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: 5 cm, 12 cm और 13 cm भुजाओं वाले एक समकोण त्रिभुज ABC को भुजा 12 cm के परितः घुमाया जाता है। इस प्रकार प्राप्त ठोस का आयतन ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">जब 12 cm भुजा के परितः घुमाया जाता है, तो शंकु प्राप्त होता है।</p>
+                        <p class="mb-2">ऊँचाई (h) = 12 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = 5 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5 × 5 × 12 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 25 × <div class="fraction"><span class="numerator">12</span><span class="denominator">7</span></div> cm³ = <div class="fraction"><span class="numerator">6600</span><span class="denominator">21</span></div> cm³ = 314.29 cm³</p>
+                        <p><strong>उत्तर:</strong> 314.29 cm³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> समकोण त्रिभुज को 12 cm भुजा के चारों ओर घुमाने पर शंकु बनता है। ऊँचाई 12 cm, त्रिज्या 5 cm। आयतन = (1/3)πr²h = (1/3) × (22/7) × 5 × 5 × 12 = 314.29 cm³।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: यदि ऊपर प्रश्न 7 वाले त्रिभुज ABC को भुजा 5 cm के परितः घुमाया जाए, तो इस प्रकार प्राप्त ठोस का आयतन ज्ञात कीजिए। साथ ही, दोनों ठोसों के आयतनों का अनुपात भी ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">जब 5 cm भुजा के परितः घुमाया जाता है, तो शंकु प्राप्त होता है।</p>
+                        <p class="mb-2">ऊँचाई (h) = 5 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = 12 cm</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 12 × 12 × 5 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 144 × <div class="fraction"><span class="numerator">5</span><span class="denominator">7</span></div> cm³ = <div class="fraction"><span class="numerator">15840</span><span class="denominator">21</span></div> cm³ = 754.29 cm³</p>
+                        <p><strong>उत्तर:</strong> 754.29 cm³</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">आयतनों का अनुपात</h4>
+
+                    <div class="step">
+                        <p class="mb-2">12 cm के परितः घुमाने पर आयतन = 314.29 cm³</p>
+                        <p class="mb-2">5 cm के परितः घुमाने पर आयतन = 754.29 cm³</p>
+                        <p class="mb-2">अनुपात = <div class="fraction"><span class="numerator">314.29</span><span class="denominator">754.29</span></div> = <div class="fraction"><span class="numerator">5</span><span class="denominator">12</span></div> = 5 : 12</p>
+                        <p><strong>उत्तर:</strong> 5 : 12</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> त्रिभुज को 5 cm भुजा के चारों ओर घुमाने पर शंकु बनता है। ऊँचाई 5 cm, त्रिज्या 12 cm। आयतन = (1/3)πr²h = (1/3) × (22/7) × 12 × 12 × 5 = 754.29 cm³। अनुपात = (12 cm पर आयतन)/(5 cm पर आयतन) = 314.29/754.29 = 5/12 = 5:12।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: गेहूँ की एक ढेरी शंकु के आकार की है जिसका व्यास 10.5 m और ऊँचाई 3 m है। इसका आयतन ज्ञात कीजिए। इस ढेरी को वर्षा से बचाने के लिए कैनवास से ढका जाना है। आवश्यक कैनवास का क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 10.5 m</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">10.5</span><span class="denominator">2</span></div> = 5.25 m</p>
+                        <p class="mb-2">ऊँचाई (h) = 3 m</p>
+                        <p class="mb-2">शंकु का आयतन = <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> πr²h</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.25 × 5.25 × 3 m³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div> × 22 × 0.75 × 5.25 × 3 m³ = 86.625 m³</p>
+                        <p><strong>उत्तर:</strong> 86.625 m³</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">आवश्यक कैनवास का क्षेत्रफल</h4>
+
+                    <div class="step">
+                        <p class="mb-2">पाइथागोरस प्रमेय से: l² = h² + r²</p>
+                        <p class="mb-2">l² = 3² + 5.25² = 9 + 27.5625 = 36.5625</p>
+                        <p class="mb-2">l = √36.5625 = 6.046 m</p>
+                        <p class="mb-2">वक्र पृष्ठीय क्षेत्रफल = πrl</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.25 × 6.046 m² = 99.825 m²</p>
+                        <p><strong>उत्तर:</strong> 99.825 m²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> शंकु का व्यास 10.5 m, तो त्रिज्या 5.25 m। ऊँचाई 3 m। आयतन = (1/3)πr²h = (1/3) × (22/7) × 5.25 × 5.25 × 3 = 86.625 m³। कैनवास क्षेत्रफल के लिए तिर्यक ऊँचाई l² = 9 + 27.5625 = 36.5625, l = 6.046 m। वक्र पृष्ठीय क्षेत्रफल = πrl = (22/7) × 5.25 × 6.046 = 99.825 m²।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 11.4 ==================== -->
+        <section id="exercise-11-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.4</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित त्रिज्याओं वाले गोलों का आयतन ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 7 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 7 cm</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 7 × 7 × 7 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 7 × 7 cm³ = <div class="fraction"><span class="numerator">4312</span><span class="denominator">3</span></div> cm³ = 1437.33 cm³</p>
+                        <p><strong>उत्तर:</strong> 1437.33 cm³</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 0.63 m</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिज्या (r) = 0.63 m</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 0.63 × 0.63 × 0.63 m³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 0.09 × 0.63 × 0.63 m³ = 1.0478 m³</p>
+                        <p><strong>उत्तर:</strong> 1.0478 m³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का आयतन = (4/3)πr³. (i) r = 7 cm: (4/3) × (22/7) × 7 × 7 × 7 = 1437.33 cm³. (ii) r = 0.63 m: (4/3) × (22/7) × 0.63 × 0.63 × 0.63 = 1.0478 m³.
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित व्यासों वाले एक ठोस गोलाकार गेंद द्वारा हटाए गए (विस्थापित) जल की मात्रा ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 28 cm</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 28 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">28</span><span class="denominator">2</span></div> = 14 cm</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 14 × 14 × 14 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 2 × 14 × 14 cm³ = <div class="fraction"><span class="numerator">34496</span><span class="denominator">3</span></div> cm³ = 11498.67 cm³</p>
+                        <p><strong>उत्तर:</strong> 11498.67 cm³</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 0.21 m</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 0.21 m</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">0.21</span><span class="denominator">2</span></div> = 0.105 m</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 0.105 × 0.105 × 0.105 m³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 0.015 × 0.105 × 0.105 m³ = 0.004851 m³</p>
+                        <p><strong>उत्तर:</strong> 0.004851 m³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का आयतन = (4/3)πr³. (i) व्यास 28 cm, r = 14 cm: (4/3) × (22/7) × 14 × 14 × 14 = 11498.67 cm³. (ii) व्यास 0.21 m, r = 0.105 m: (4/3) × (22/7) × 0.105 × 0.105 × 0.105 = 0.004851 m³.
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक धातु की गेंद का व्यास 4.2 cm है। यदि इस धातु का घनत्व 8.9 g प्रति cm³ है, तो गेंद का द्रव्यमान क्या होगा?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 4.2 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">4.2</span><span class="denominator">2</span></div> = 2.1 cm</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 2.1 × 2.1 × 2.1 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 0.3 × 2.1 × 2.1 cm³ = 38.808 cm³</p>
+                        <p class="mb-2">घनत्व = 8.9 g/cm³</p>
+                        <p class="mb-2">द्रव्यमान = आयतन × घनत्व = 38.808 × 8.9 = 345.3912 g</p>
+                        <p><strong>उत्तर:</strong> 345.39 g</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गेंद का व्यास 4.2 cm, तो त्रिज्या 2.1 cm। आयतन = (4/3)πr³ = (4/3) × (22/7) × 2.1 × 2.1 × 2.1 = 38.808 cm³. घनत्व 8.9 g/cm³, तो द्रव्यमान = 38.808 × 8.9 = 345.39 g।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: चंद्रमा का व्यास पृथ्वी के व्यास का लगभग एक-चौथाई है। चंद्रमा का आयतन पृथ्वी के आयतन का कौन-सा भाग है?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए पृथ्वी का व्यास = D</p>
+                        <p class="mb-2">चंद्रमा का व्यास = <div class="fraction"><span class="numerator">D</span><span class="denominator">4</span></div></p>
+                        <p class="mb-2">पृथ्वी की त्रिज्या (R) = <div class="fraction"><span class="numerator">D</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">चंद्रमा की त्रिज्या (r) = <div class="fraction"><span class="numerator">D</span><span class="denominator">8</span></div></p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">चंद्रमा का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> π(<div class="fraction"><span class="numerator">D</span><span class="denominator">8</span></div>)³ = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> π × <div class="fraction"><span class="numerator">D³</span><span class="denominator">512</span></div></p>
+                        <p class="mb-2">पृथ्वी का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> π(<div class="fraction"><span class="numerator">D</span><span class="denominator">2</span></div>)³ = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> π × <div class="fraction"><span class="numerator">D³</span><span class="denominator">8</span></div></p>
+                        <p class="mb-2">भाग = <div class="fraction"><span class="numerator">चंद्रमा का आयतन</span><span class="denominator">पृथ्वी का आयतन</span></div> = <div class="fraction"><span class="numerator">(4/3)π × D³/512</span><span class="denominator">(4/3)π × D³/8</span></div> = <div class="fraction"><span class="numerator">1/512</span><span class="denominator">1/8</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">64</span></div></p>
+                        <p><strong>उत्तर:</strong> <div class="fraction"><span class="numerator">1</span><span class="denominator">64</span></div></p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> चंद्रमा का व्यास पृथ्वी के व्यास का 1/4 है। त्रिज्या का अनुपात = 1/4। आयतन का अनुपात = (r/R)³ = (1/4)³ = 1/64. यानी चंद्रमा का आयतन पृथ्वी के आयतन का 1/64 है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: 10.5 cm व्यास वाला एक अर्धगोलाकार कटोरा कितने लीटर दूध धारण कर सकता है?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 10.5 cm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">10.5</span><span class="denominator">2</span></div> = 5.25 cm</p>
+                        <p class="mb-2">अर्धगोले का आयतन = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 5.25 × 5.25 × 5.25 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × 22 × 0.75 × 5.25 × 5.25 cm³ = 303.1875 cm³</p>
+                        <p class="mb-2">लीटर में धारिता = <div class="fraction"><span class="numerator">303.1875</span><span class="denominator">1000</span></div> = 0.3031875 L</p>
+                        <p><strong>उत्तर:</strong> 0.303 L (लगभग)</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> कटोरे का व्यास 10.5 cm, तो त्रिज्या 5.25 cm। अर्धगोले का आयतन = (2/3)πr³ = (2/3) × (22/7) × 5.25 × 5.25 × 5.25 = 303.1875 cm³. लीटर में = 303.1875/1000 = 0.303 L.
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक अर्धगोलाकार टंकी 1 cm मोटी लोहे की चादर से बनी है। यदि इसकी भीतरी त्रिज्या 1 m है, तो इस टंकी को बनाने में लगे लोहे का आयतन ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">भीतरी त्रिज्या (r) = 1 m = 100 cm</p>
+                        <p class="mb-2">मोटाई = 1 cm</p>
+                        <p class="mb-2">बाहरी त्रिज्या (R) = 100 + 1 = 101 cm</p>
+                        <p class="mb-2">लोहे का आयतन = बाहरी अर्धगोले का आयतन - भीतरी अर्धगोले का आयतन</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> πR³ - <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> πr³ = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> π(R³ - r³)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (101³ - 100³) cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × (1030301 - 1000000) cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 30301 cm³ = 63487.81 cm³</p>
+                        <p><strong>उत्तर:</strong> 63487.81 cm³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> टंकी की भीतरी त्रिज्या 1 m = 100 cm, मोटाई 1 cm, तो बाहरी त्रिज्या 101 cm। लोहे का आयतन = बाहरी अर्धगोले का आयतन - भीतरी अर्धगोले का आयतन = (2/3)π(R³ - r³) = (2/3) × (22/7) × (101³ - 100³) = (2/3) × (22/7) × 30301 = 63487.81 cm³।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक गोले का पृष्ठीय क्षेत्रफल 154 cm² है। इसका आयतन ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">पृष्ठीय क्षेत्रफल = 154 cm²</p>
+                        <p class="mb-2">गोले का पृष्ठीय क्षेत्रफल = 4πr²</p>
+                        <p class="mb-2">4πr² = 154</p>
+                        <p class="mb-2">4 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × r² = 154</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">88</span><span class="denominator">7</span></div> × r² = 154</p>
+                        <p class="mb-2">r² = 154 × <div class="fraction"><span class="numerator">7</span><span class="denominator">88</span></div> = 12.25</p>
+                        <p class="mb-2">r = √12.25 = 3.5 cm</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 3.5 × 3.5 × 3.5 cm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 0.5 × 3.5 × 3.5 cm³ = 179.67 cm³</p>
+                        <p><strong>उत्तर:</strong> 179.67 cm³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> गोले का पृष्ठीय क्षेत्रफल 154 cm² दिया है। 4πr² = 154, तो 4 × (22/7) × r² = 154। इस समीकरण को हल करेंगे: (88/7) × r² = 154, r² = 154 × (7/88) = 12.25, r = 3.5 cm। आयतन = (4/3)πr³ = (4/3) × (22/7) × 3.5 × 3.5 × 3.5 = 179.67 cm³।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक इमारत का गुंबद एक अर्धगोले के आकार का है। इसके भीतर से सफेदी कराने पर ₹498.96 का व्यय हुआ। यदि सफेदी कराने का व्यय ₹2.00 प्रति वर्ग मीटर है, तो ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) गुंबद का भीतरी पृष्ठीय क्षेत्रफल</h4>
+
+                    <div class="step">
+                        <p class="mb-2">कुल व्यय = ₹498.96</p>
+                        <p class="mb-2">प्रति m² व्यय = ₹2.00</p>
+                        <p class="mb-2">भीतरी पृष्ठीय क्षेत्रफल = <div class="fraction"><span class="numerator">498.96</span><span class="denominator">2</span></div> = 249.48 m²</p>
+                        <p><strong>उत्तर:</strong> 249.48 m²</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) गुंबद के भीतर की वायु का आयतन</h4>
+
+                    <div class="step">
+                        <p class="mb-2">भीतरी पृष्ठीय क्षेत्रफल = 249.48 m²</p>
+                        <p class="mb-2">अर्धगोले का वक्र पृष्ठीय क्षेत्रफल = 2πr²</p>
+                        <p class="mb-2">2πr² = 249.48</p>
+                        <p class="mb-2">2 × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × r² = 249.48</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">44</span><span class="denominator">7</span></div> × r² = 249.48</p>
+                        <p class="mb-2">r² = 249.48 × <div class="fraction"><span class="numerator">7</span><span class="denominator">44</span></div> = 39.69</p>
+                        <p class="mb-2">r = √39.69 = 6.3 m</p>
+                        <p class="mb-2">अर्धगोले का आयतन = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 6.3 × 6.3 × 6.3 m³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div> × 22 × 0.9 × 6.3 × 6.3 m³ = 523.908 m³</p>
+                        <p><strong>उत्तर:</strong> 523.908 m³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> (i) कुल व्यय ₹498.96, प्रति m² व्यय ₹2, तो क्षेत्रफल = 498.96/2 = 249.48 m². (ii) अर्धगोले का वक्र पृष्ठीय क्षेत्रफल = 2πr² = 249.48, तो 2 × (22/7) × r² = 249.48। हल करके r = 6.3 m। आयतन = (2/3)πr³ = (2/3) × (22/7) × 6.3 × 6.3 × 6.3 = 523.908 m³।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: सत्ताईस ठोस लोहे के गोले, जिनमें प्रत्येक की त्रिज्या r और पृष्ठीय क्षेत्रफल S है, को पिघलाकर एक गोला बनाया गया है जिसका पृष्ठीय क्षेत्रफल S' है। ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) नए गोले की त्रिज्या r'</h4>
+
+                    <div class="step">
+                        <p class="mb-2">27 छोटे गोलों का आयतन = 27 × <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">नए गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> π(r')³</p>
+                        <p class="mb-2">चूँकि आयतन संरक्षित रहता है:</p>
+                        <p class="mb-2"><div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> π(r')³ = 27 × <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">(r')³ = 27r³</p>
+                        <p class="mb-2">r' = 3r</p>
+                        <p><strong>उत्तर:</strong> 3r</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) S और S' का अनुपात</h4>
+
+                    <div class="step">
+                        <p class="mb-2">छोटे गोले का पृष्ठीय क्षेत्रफल (S) = 4πr²</p>
+                        <p class="mb-2">नए गोले का पृष्ठीय क्षेत्रफल (S') = 4π(r')² = 4π(3r)² = 36πr²</p>
+                        <p class="mb-2">अनुपात = <div class="fraction"><span class="numerator">S</span><span class="denominator">S'</span></div> = <div class="fraction"><span class="numerator">4πr²</span><span class="denominator">36πr²</span></div> = <div class="fraction"><span class="numerator">1</span><span class="denominator">9</span></div></p>
+                        <p><strong>उत्तर:</strong> 1 : 9</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> (i) 27 गोलों को पिघलाकर एक गोला बनाया है। आयतन समान रहेगा: (4/3)π(r')³ = 27 × (4/3)πr³, तो (r')³ = 27r³, r' = 3r. (ii) छोटे गोले का पृष्ठीय क्षेत्रफल S = 4πr², नए गोले का S' = 4π(3r)² = 36πr². अनुपात S/S' = 4πr²/36πr² = 1/9 = 1:9।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक दवा का कैप्सूल एक गोले के आकार का है, जिसका व्यास 3.5 mm है। इस कैप्सूल को भरने के लिए कितनी दवा (mm³ में) की आवश्यकता होगी?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">व्यास = 3.5 mm</p>
+                        <p class="mb-2">त्रिज्या (r) = <div class="fraction"><span class="numerator">3.5</span><span class="denominator">2</span></div> = 1.75 mm</p>
+                        <p class="mb-2">गोले का आयतन = <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> πr³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × <div class="fraction"><span class="numerator">22</span><span class="denominator">7</span></div> × 1.75 × 1.75 × 1.75 mm³</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">4</span><span class="denominator">3</span></div> × 22 × 0.25 × 1.75 × 1.75 mm³ = 22.458 mm³</p>
+                        <p><strong>उत्तर:</strong> 22.458 mm³</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> कैप्सूल का व्यास 3.5 mm, तो त्रिज्या 1.75 mm। आयतन = (4/3)πr³ = (4/3) × (22/7) × 1.75 × 1.75 × 1.75 = 22.458 mm³ दवा चाहिए।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 11 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1. शंकु:</strong></p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1">वक्र पृष्ठीय क्षेत्रफल = πrl</li>
+                    <li class="mb-1">कुल पृष्ठीय क्षेत्रफल = πr(l + r)</li>
+                    <li class="mb-1">आयतन = (1/3) πr²h</li>
+                    <li class="mb-1">तिर्यक ऊँचाई l = √(h² + r²)</li>
+                </ul>
+                <p class="mb-2"><strong>2. गोला:</strong></p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1">पृष्ठीय क्षेत्रफल = 4πr²</li>
+                    <li class="mb-1">आयतन = (4/3) πr³</li>
+                </ul>
+                <p class="mb-2"><strong>3. अर्धगोला:</strong></p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1">वक्र पृष्ठीय क्षेत्रफल = 2πr²</li>
+                    <li class="mb-1">कुल पृष्ठीय क्षेत्रफल = 3πr²</li>
+                    <li class="mb-1">आयतन = (2/3) πr³</li>
+                </ul>
+                <p class="mb-2"><strong>4. बेलन:</strong></p>
+                <ul class="list-disc ml-6 mb-2">
+                    <li class="mb-1">वक्र पृष्ठीय क्षेत्रफल = 2πrh</li>
+                    <li class="mb-1">कुल पृष्ठीय क्षेत्रफल = 2πr(h + r)</li>
+                    <li class="mb-1">आयतन = πr²h</li>
+                </ul>
+                <p class="mb-2"><strong>5. महत्वपूर्ण बिंदु:</strong> 1 m³ = 1000 L = 1 किलोलीटर; 1 L = 1000 cm³; 1 m = 100 cm</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 10: हीरोन का सूत्र</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .theorem {
+            background-color: #fef3c7;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #f59e0b;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 10<br>हीरोन का सूत्र</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 10.1 ==================== -->
+        <section id="exercise-10-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 10.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक यातायात संकेत बोर्ड पर 'आगे स्कूल है' लिखा है और यह भुजा 'a' वाले एक समबाहु त्रिभुज के आकार का है। हीरोन के सूत्र का प्रयोग करके इस बोर्ड का क्षेत्रफल ज्ञात कीजिए। यदि इसका परिमाप 180 cm हो, तो इस बोर्ड का क्षेत्रफल क्या होगा?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">समबाहु त्रिभुज के लिए, सभी भुजाएँ बराबर हैं: a = a, b = a, c = a</p>
+                        <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">a + a + a</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">3a</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2">हीरोन के सूत्र का उपयोग करने पर:</p>
+                        <p class="mb-2">क्षेत्रफल = √[s(s−a)(s−b)(s−c)]</p>
+                        <p class="mb-2">= √[ <div class="fraction"><span class="numerator">3a</span><span class="denominator">2</span></div> × (<div class="fraction"><span class="numerator">3a</span><span class="denominator">2</span></div> − a) × (<div class="fraction"><span class="numerator">3a</span><span class="denominator">2</span></div> − a) × (<div class="fraction"><span class="numerator">3a</span><span class="denominator">2</span></div> − a) ]</p>
+                        <p class="mb-2">= √[ <div class="fraction"><span class="numerator">3a</span><span class="denominator">2</span></div> × <div class="fraction"><span class="numerator">a</span><span class="denominator">2</span></div> × <div class="fraction"><span class="numerator">a</span><span class="denominator">2</span></div> × <div class="fraction"><span class="numerator">a</span><span class="denominator">2</span></div> ]</p>
+                        <p class="mb-2">= √[ <div class="fraction"><span class="numerator">3a⁴</span><span class="denominator">16</span></div> ] = <div class="fraction"><span class="numerator">a²</span><span class="denominator">4</span></div> √3</p>
+                        <p class="mb-2">जब परिमाप = 180 cm, तो प्रत्येक भुजा a = 180 ÷ 3 = 60 cm</p>
+                        <p class="mb-2">क्षेत्रफल = <div class="fraction"><span class="numerator">(60)²</span><span class="denominator">4</span></div> √3 = <div class="fraction"><span class="numerator">3600</span><span class="denominator">4</span></div> √3 = 900√3 cm²</p>
+                        <p><strong>उत्तर:</strong> क्षेत्रफल = 900√3 cm²</p>
+                    </div>
+
+                    <div class="theorem">
+                        <strong>प्रयुक्त सूत्र:</strong> हीरोन का सूत्र — त्रिभुज का क्षेत्रफल = √[s(s−a)(s−b)(s−c)], जहाँ s अर्ध-परिमाप है।
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> समबाहु त्रिभुज के लिए सभी भुजाएँ बराबर होती हैं। अर्ध-परिमाप s = 3a/2। हीरोन का सूत्र लगाने पर क्षेत्रफल = (a²/4)√3 मिलता है। जब परिमाप 180 cm है, तो हर भुजा 60 cm होगी। इस मान को सूत्र में रखने पर क्षेत्रफल = 900√3 cm² मिलता है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक फ्लाईओवर की त्रिभुजाकार दीवारों (side walls) पर विज्ञापनों के लिए प्रयोग किया जाता है। इन दीवारों की भुजाएँ 122 m, 22 m और 120 m हैं। विज्ञापनों से एक वर्ष के लिए ₹ 5000 प्रति m² की आय होती है। एक कंपनी इनमें से एक दीवार को 3 महीने के लिए किराए पर लेती है। कंपनी ने कितना किराया दिया?</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिभुज की भुजाएँ: a = 122 m, b = 22 m, c = 120 m</p>
+                        <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">122 + 22 + 120</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">264</span><span class="denominator">2</span></div> = 132 m</p>
+                        <p class="mb-2">s − a = 132 − 122 = 10 m</p>
+                        <p class="mb-2">s − b = 132 − 22 = 110 m</p>
+                        <p class="mb-2">s − c = 132 − 120 = 12 m</p>
+                        <p class="mb-2">क्षेत्रफल = √[s(s−a)(s−b)(s−c)] = √[132 × 10 × 110 × 12]</p>
+                        <p class="mb-2">= √[1742400] = 1320 m²</p>
+                        <p class="mb-2">वार्षिक आय = क्षेत्रफल × दर = 1320 × 5000 = ₹66,00,000</p>
+                        <p class="mb-2">3 महीने का किराया = <div class="fraction"><span class="numerator">3</span><span class="denominator">12</span></div> × 66,00,000 = <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div> × 66,00,000 = ₹16,50,000</p>
+                        <p><strong>उत्तर:</strong> ₹16,50,000</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> पहले त्रिभुज का क्षेत्रफल हीरोन के सूत्र से निकालते हैं। भुजाएँ 122 m, 22 m, 120 m हैं। अर्ध-परिमाप 132 m है। क्षेत्रफल = 1320 m²। वार्षिक आय = 1320 × 5000 = ₹66,00,000। 3 महीने का किराया = (3/12) × 66,00,000 = ₹16,50,000।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक पार्क में एक स्लाइड है। इसकी एक भुजा की दीवार पर कुछ रंग से "KEEP THE PARK GREEN AND CLEAN" लिखा हुआ है। यदि इस दीवार की भुजाएँ 15 m, 11 m और 6 m हैं, तो रंग से पुते भाग का क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">त्रिभुज की भुजाएँ: a = 15 m, b = 11 m, c = 6 m</p>
+                        <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">15 + 11 + 6</span><span class="denominator">2</span></div> = <div class="fraction"><span class="numerator">32</span><span class="denominator">2</span></div> = 16 m</p>
+                        <p class="mb-2">s − a = 16 − 15 = 1 m</p>
+                        <p class="mb-2">s − b = 16 − 11 = 5 m</p>
+                        <p class="mb-2">s − c = 16 − 6 = 10 m</p>
+                        <p class="mb-2">क्षेत्रफल = √[s(s−a)(s−b)(s−c)] = √[16 × 1 × 5 × 10]</p>
+                        <p class="mb-2">= √[800] = 20√2 m²</p>
+                        <p><strong>उत्तर:</strong> 20√2 m²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> त्रिभुज की भुजाएँ 15 m, 11 m, 6 m हैं। अर्ध-परिमाप 16 m है। हीरोन का सूत्र लगाने पर क्षेत्रफल = √[16 × 1 × 5 × 10] = √800 = 20√2 m²। यही पुता हुआ क्षेत्रफल है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक त्रिभुज की दो भुजाएँ 18 cm और 10 cm हैं तथा इसका परिमाप 42 cm है। इसका क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: a = 18 cm, b = 10 cm, परिमाप = 42 cm</p>
+                        <p class="mb-2">तीसरी भुजा c = परिमाप − (a + b) = 42 − (18 + 10) = 42 − 28 = 14 cm</p>
+                        <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">42</span><span class="denominator">2</span></div> = 21 cm</p>
+                        <p class="mb-2">s − a = 21 − 18 = 3 cm</p>
+                        <p class="mb-2">s − b = 21 − 10 = 11 cm</p>
+                        <p class="mb-2">s − c = 21 − 14 = 7 cm</p>
+                        <p class="mb-2">क्षेत्रफल = √[s(s−a)(s−b)(s−c)] = √[21 × 3 × 11 × 7]</p>
+                        <p class="mb-2">= √[4851] = 21√11 cm²</p>
+                        <p><strong>उत्तर:</strong> 21√11 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दो भुजाएँ 18 cm और 10 cm हैं, परिमाप 42 cm है। तो तीसरी भुजा = 42 − (18+10) = 14 cm। अर्ध-परिमाप 21 cm। हीरोन का सूत्र लगाने पर क्षेत्रफल = √[21 × 3 × 11 × 7] = √4851 = 21√11 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक त्रिभुज की भुजाओं का अनुपात 12 : 17 : 25 है और उसका परिमाप 540 cm है। इस त्रिभुज का क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मान लीजिए भुजाएँ 12x, 17x और 25x हैं।</p>
+                        <p class="mb-2">परिमाप = 12x + 17x + 25x = 54x</p>
+                        <p class="mb-2">दिया गया परिमाप = 540 cm</p>
+                        <p class="mb-2">अतः, 54x = 540 ⇒ x = 10</p>
+                        <p class="mb-2">भुजाएँ: a = 12 × 10 = 120 cm, b = 17 × 10 = 170 cm, c = 25 × 10 = 250 cm</p>
+                        <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">540</span><span class="denominator">2</span></div> = 270 cm</p>
+                        <p class="mb-2">s − a = 270 − 120 = 150 cm</p>
+                        <p class="mb-2">s − b = 270 − 170 = 100 cm</p>
+                        <p class="mb-2">s − c = 270 − 250 = 20 cm</p>
+                        <p class="mb-2">क्षेत्रफल = √[s(s−a)(s−b)(s−c)] = √[270 × 150 × 100 × 20]</p>
+                        <p class="mb-2">= √[81000000] = 9000 cm²</p>
+                        <p><strong>उत्तर:</strong> 9000 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> भुजाओं का अनुपात 12:17:25 है, परिमाप 540 cm। पहले x निकालते हैं: 12x+17x+25x=54x=540, तो x=10। भुजाएँ: 120 cm, 170 cm, 250 cm। अर्ध-परिमाप 270 cm। हीरोन का सूत्र लगाने पर क्षेत्रफल = √[270×150×100×20] = √81000000 = 9000 cm²।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक समद्विबाहु त्रिभुज का परिमाप 30 cm है और उसकी बराबर भुजाएँ 12 cm लंबी हैं। इस त्रिभुज का क्षेत्रफल ज्ञात कीजिए।</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">हल:</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दिया है: बराबर भुजाएँ = 12 cm प्रत्येक, परिमाप = 30 cm</p>
+                        <p class="mb-2">तीसरी भुजा = परिमाप − (12 + 12) = 30 − 24 = 6 cm</p>
+                        <p class="mb-2">भुजाएँ: a = 12 cm, b = 12 cm, c = 6 cm</p>
+                        <p class="mb-2">अर्ध-परिमाप s = <div class="fraction"><span class="numerator">30</span><span class="denominator">2</span></div> = 15 cm</p>
+                        <p class="mb-2">s − a = 15 − 12 = 3 cm</p>
+                        <p class="mb-2">s − b = 15 − 12 = 3 cm</p>
+                        <p class="mb-2">s − c = 15 − 6 = 9 cm</p>
+                        <p class="mb-2">क्षेत्रफल = √[s(s−a)(s−b)(s−c)] = √[15 × 3 × 3 × 9]</p>
+                        <p class="mb-2">= √[1215] = 9√15 cm²</p>
+                        <p><strong>उत्तर:</strong> 9√15 cm²</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> समद्विबाहु त्रिभुज में दो बराबर भुजाएँ 12 cm हैं, परिमाप 30 cm है। तो तीसरी भुजा = 30 − (12+12) = 6 cm। अर्ध-परिमाप 15 cm। हीरोन का सूत्र लगाने पर क्षेत्रफल = √[15×3×3×9] = √1215 = 9√15 cm²।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 10 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1. हीरोन का सूत्र:</strong> यदि किसी त्रिभुज की भुजाएँ a, b, c हों और अर्ध-परिमाप s = <div class="fraction"><span class="numerator">a + b + c</span><span class="denominator">2</span></div> हो, तो:</p>
+                <p class="mb-2 equation text-center">त्रिभुज का क्षेत्रफल = √[s(s−a)(s−b)(s−c)]</p>
+                <p class="mb-2"><strong>2. समबाहु त्रिभुज:</strong> भुजा a वाले समबाहु त्रिभुज का क्षेत्रफल = <div class="fraction"><span class="numerator">√3</span><span class="denominator">4</span></div> a²</p>
+                <p class="mb-2"><strong>3. समद्विबाहु त्रिभुज:</strong> यदि बराबर भुजाएँ a हों और आधार b हो, तो क्षेत्रफल = <div class="fraction"><span class="numerator">b</span><span class="denominator">4</span></div> √(4a² − b²)</p>
+                <p class="mb-2"><strong>4. समकोण त्रिभुज:</strong> समकोण बनाने वाली भुजाएँ a और b हों, तो क्षेत्रफल = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div> × a × b</p>
+                <p class="mb-2"><strong>5. महत्वपूर्ण बिंदु:</strong> हीरोन का सूत्र उन त्रिभुजों के लिए विशेष रूप से उपयोगी है जिनकी ऊँचाई ज्ञात नहीं होती, परन्तु तीनों भुजाएँ ज्ञात होती हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

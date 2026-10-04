@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 2: बहुपद</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .step-box {
+            background-color: #f9fafb;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 2<br>बहुपद</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 2.1 ==================== -->
+        <section id="exercise-2-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित में से कौन-कौन बहुपद हैं? कारण के साथ अपने उत्तर दीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) 4x² + 5x − 2</p>
+                    <p class="mb-2"><strong>बहुपद है।</strong> चर x की घातें अऋणात्मक पूर्णांक हैं (2, 1, 0)।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) y² + √2</p>
+                    <p class="mb-2"><strong>बहुपद है।</strong> चर y की घातें अऋणात्मक पूर्णांक हैं (2, 0)।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) 3√t + t√2</p>
+                    <p class="mb-2"><strong>बहुपद नहीं है।</strong> क्योंकि 3√t = 3t<sup>1/2</sup> में t की घात 1/2 है, जो पूर्णांक नहीं है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) y + <div class="fraction"><span class="numerator">2</span><span class="denominator">y</span></div></p>
+                    <p class="mb-2"><strong>बहुपद नहीं है।</strong> क्योंकि <div class="fraction"><span class="numerator">2</span><span class="denominator">y</span></div> = 2y<sup>−1</sup> में y की घात −1 है, जो ऋणात्मक है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) x¹⁰ + y³ + t⁵⁰</p>
+                    <p class="mb-2"><strong>बहुपद नहीं है।</strong> क्योंकि यह एक चर वाला बहुपद नहीं है, इसमें तीन चर x, y, t हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित में से प्रत्येक में x² का गुणांक लिखिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) 2 + x² + x</p>
+                    <p class="mb-2">x² का गुणांक = <strong>1</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) 2 − x² + x³</p>
+                    <p class="mb-2">x² का गुणांक = <strong>−1</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) <div class="fraction"><span class="numerator">π</span><span class="denominator">2</span></div>x² + x</p>
+                    <p class="mb-2">x² का गुणांक = <strong><div class="fraction"><span class="numerator">π</span><span class="denominator">2</span></div></strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) √2x − 1</p>
+                    <p class="mb-2">इसमें x² पद नहीं है।</p>
+                    <p class="mb-2">x² का गुणांक = <strong>0</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: 35 घात के द्विपद का और 100 घात के एकपदी का एक-एक उदाहरण दीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>35 घात के द्विपद का उदाहरण:</strong></p>
+                    <p class="mb-2">x³⁵ + 1 (दो पद, अधिकतम घात 35)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>100 घात के एकपदी का उदाहरण:</strong></p>
+                    <p class="mb-2">2x¹⁰⁰ (एक पद, अधिकतम घात 100)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्नलिखित बहुपदों में से प्रत्येक बहुपद की घात लिखिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) 5x³ + 4x² + 7x</p>
+                    <p class="mb-2">चर x की अधिकतम घात = 3</p>
+                    <p class="mb-2"><strong>घात = 3</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) 4 − y²</p>
+                    <p class="mb-2">चर y की अधिकतम घात = 2</p>
+                    <p class="mb-2"><strong>घात = 2</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) 5t − √7</p>
+                    <p class="mb-2">चर t की अधिकतम घात = 1</p>
+                    <p class="mb-2"><strong>घात = 1</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) 3</p>
+                    <p class="mb-2">यह एक अचर बहुपद है। इसे 3x⁰ के रूप में लिखा जा सकता है।</p>
+                    <p class="mb-2"><strong>घात = 0</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: बताइए कि निम्नलिखित बहुपदों में कौन-कौन बहुपद रैखिक हैं, कौन-कौन द्विघाती हैं और कौन-कौन त्रिघाती हैं:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) x² + x</p>
+                    <p class="mb-2">अधिकतम घात = 2</p>
+                    <p class="mb-2"><strong>द्विघाती बहुपद</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) x − x³</p>
+                    <p class="mb-2">अधिकतम घात = 3</p>
+                    <p class="mb-2"><strong>त्रिघाती बहुपद</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) y + y² + 4</p>
+                    <p class="mb-2">अधिकतम घात = 2</p>
+                    <p class="mb-2"><strong>द्विघाती बहुपद</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) 1 + x</p>
+                    <p class="mb-2">अधिकतम घात = 1</p>
+                    <p class="mb-2"><strong>रैखिक बहुपद</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) 3t</p>
+                    <p class="mb-2">अधिकतम घात = 1</p>
+                    <p class="mb-2"><strong>रैखिक बहुपद</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vi) r²</p>
+                    <p class="mb-2">अधिकतम घात = 2</p>
+                    <p class="mb-2"><strong>द्विघाती बहुपद</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vii) 7x³</p>
+                    <p class="mb-2">अधिकतम घात = 3</p>
+                    <p class="mb-2"><strong>त्रिघाती बहुपद</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 2.2 ==================== -->
+        <section id="exercise-2-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित पर बहुपद 5x − 4x² + 3 के मान ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">p(x) = 5x − 4x² + 3</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(i) x = 0</p>
+                    <p class="mb-2">p(0) = 5(0) − 4(0)² + 3 = 0 − 0 + 3 = <strong>3</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) x = −1</p>
+                    <p class="mb-2">p(−1) = 5(−1) − 4(−1)² + 3 = −5 − 4 + 3 = <strong>−6</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) x = 2</p>
+                    <p class="mb-2">p(2) = 5(2) − 4(2)² + 3 = 10 − 16 + 3 = <strong>−3</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित बहुपदों में से प्रत्येक बहुपद के लिए p(0), p(1) और p(2) ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) p(y) = y² − y + 1</h4>
+                    <div class="step">
+                        <p class="mb-2">p(0) = (0)² − 0 + 1 = 1</p>
+                        <p class="mb-2">p(1) = (1)² − 1 + 1 = 1 − 1 + 1 = 1</p>
+                        <p class="mb-2">p(2) = (2)² − 2 + 1 = 4 − 2 + 1 = 3</p>
+                        <p><strong>उत्तर:</strong> p(0) = 1, p(1) = 1, p(2) = 3</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) p(t) = 2 + t + 2t² − t³</h4>
+                    <div class="step">
+                        <p class="mb-2">p(0) = 2 + 0 + 0 − 0 = 2</p>
+                        <p class="mb-2">p(1) = 2 + 1 + 2(1)² − (1)³ = 2 + 1 + 2 − 1 = 4</p>
+                        <p class="mb-2">p(2) = 2 + 2 + 2(2)² − (2)³ = 2 + 2 + 8 − 8 = 4</p>
+                        <p><strong>उत्तर:</strong> p(0) = 2, p(1) = 4, p(2) = 4</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) p(x) = x³</h4>
+                    <div class="step">
+                        <p class="mb-2">p(0) = (0)³ = 0</p>
+                        <p class="mb-2">p(1) = (1)³ = 1</p>
+                        <p class="mb-2">p(2) = (2)³ = 8</p>
+                        <p><strong>उत्तर:</strong> p(0) = 0, p(1) = 1, p(2) = 8</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) p(x) = (x − 1)(x + 1)</h4>
+                    <div class="step">
+                        <p class="mb-2">p(x) = x² − 1</p>
+                        <p class="mb-2">p(0) = (0)² − 1 = −1</p>
+                        <p class="mb-2">p(1) = (1)² − 1 = 0</p>
+                        <p class="mb-2">p(2) = (2)² − 1 = 4 − 1 = 3</p>
+                        <p><strong>उत्तर:</strong> p(0) = −1, p(1) = 0, p(2) = 3</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: सत्यापित कीजिए कि दिखाए गए मान निम्नलिखित स्थितियों में संगत बहुपद के शून्यक हैं:</h3>
+
+                <div class="step">
+                    <p class="mb-2">(i) p(x) = 3x + 1; x = −<div class="fraction"><span class="numerator">1</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2">p(−1/3) = 3(−1/3) + 1 = −1 + 1 = 0</p>
+                    <p class="mb-2"><strong>✓ हाँ, यह शून्यक है।</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(ii) p(x) = 5x − π; x = <div class="fraction"><span class="numerator">4</span><span class="denominator">5</span></div></p>
+                    <p class="mb-2">p(4/5) = 5(4/5) − π = 4 − π ≠ 0</p>
+                    <p class="mb-2"><strong>✗ नहीं, यह शून्यक नहीं है।</strong> (क्योंकि 4 ≠ π)</p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(iii) p(x) = x² − 1; x = 1, −1</p>
+                    <p class="mb-2">p(1) = 1² − 1 = 0</p>
+                    <p class="mb-2">p(−1) = (−1)² − 1 = 1 − 1 = 0</p>
+                    <p class="mb-2"><strong>✓ हाँ, दोनों शून्यक हैं।</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(iv) p(x) = (x + 1)(x − 2); x = −1, 2</p>
+                    <p class="mb-2">p(−1) = (−1 + 1)(−1 − 2) = 0 × (−3) = 0</p>
+                    <p class="mb-2">p(2) = (2 + 1)(2 − 2) = 3 × 0 = 0</p>
+                    <p class="mb-2"><strong>✓ हाँ, दोनों शून्यक हैं।</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(v) p(x) = x²; x = 0</p>
+                    <p class="mb-2">p(0) = 0² = 0</p>
+                    <p class="mb-2"><strong>✓ हाँ, यह शून्यक है।</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(vi) p(x) = lx + m; x = −<div class="fraction"><span class="numerator">m</span><span class="denominator">l</span></div></p>
+                    <p class="mb-2">p(−m/l) = l(−m/l) + m = −m + m = 0</p>
+                    <p class="mb-2"><strong>✓ हाँ, यह शून्यक है।</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(vii) p(x) = 3x² − 1; x = −<div class="fraction"><span class="numerator">1</span><span class="denominator">√3</span></div>, <div class="fraction"><span class="numerator">2</span><span class="denominator">√3</span></div></p>
+                    <p class="mb-2">p(−1/√3) = 3(1/3) − 1 = 1 − 1 = 0</p>
+                    <p class="mb-2">p(2/√3) = 3(4/3) − 1 = 4 − 1 = 3 ≠ 0</p>
+                    <p class="mb-2"><strong>−1/√3 शून्यक है, 2/√3 शून्यक नहीं है।</strong></p>
+                </div>
+
+                <div class="step">
+                    <p class="mb-2">(viii) p(x) = 2x + 1; x = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">p(1/2) = 2(1/2) + 1 = 1 + 1 = 2 ≠ 0</p>
+                    <p class="mb-2"><strong>✗ नहीं, यह शून्यक नहीं है।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्नलिखित स्थितियों में से प्रत्येक स्थिति में बहुपद का शून्यक ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) p(x) = x + 5</p>
+                    <p class="mb-2">x + 5 = 0 ⇒ x = −5</p>
+                    <p class="mb-2"><strong>शून्यक = −5</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) p(x) = x − 5</p>
+                    <p class="mb-2">x − 5 = 0 ⇒ x = 5</p>
+                    <p class="mb-2"><strong>शून्यक = 5</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) p(x) = 2x + 5</p>
+                    <p class="mb-2">2x + 5 = 0 ⇒ 2x = −5 ⇒ x = −<div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2"><strong>शून्यक = −<div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div></strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) p(x) = 3x − 2</p>
+                    <p class="mb-2">3x − 2 = 0 ⇒ 3x = 2 ⇒ x = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2"><strong>शून्यक = <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div></strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) p(x) = 3x</p>
+                    <p class="mb-2">3x = 0 ⇒ x = 0</p>
+                    <p class="mb-2"><strong>शून्यक = 0</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vi) p(x) = ax, a ≠ 0</p>
+                    <p class="mb-2">ax = 0 ⇒ x = 0 (क्योंकि a ≠ 0)</p>
+                    <p class="mb-2"><strong>शून्यक = 0</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vii) p(x) = cx + d, c ≠ 0, c, d वास्तविक संख्याएँ हैं।</p>
+                    <p class="mb-2">cx + d = 0 ⇒ cx = −d ⇒ x = −<div class="fraction"><span class="numerator">d</span><span class="denominator">c</span></div></p>
+                    <p class="mb-2"><strong>शून्यक = −<div class="fraction"><span class="numerator">d</span><span class="denominator">c</span></div></strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 2.3 ==================== -->
+        <section id="exercise-2-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: x³ + 3x² + 3x + 1 को निम्नलिखित से भाग देने पर शेषफल ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">p(x) = x³ + 3x² + 3x + 1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(i) x + 1</p>
+                    <p class="mb-2">x + 1 = 0 ⇒ x = −1</p>
+                    <p class="mb-2">p(−1) = (−1)³ + 3(−1)² + 3(−1) + 1 = −1 + 3 − 3 + 1 = <strong>0</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) x − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">x − 1/2 = 0 ⇒ x = 1/2</p>
+                    <p class="mb-2">p(1/2) = (1/2)³ + 3(1/2)² + 3(1/2) + 1</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">8</span></div> + <div class="fraction"><span class="numerator">3</span><span class="denominator">4</span></div> + <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div> + 1</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1 + 6 + 12 + 8</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">27</span><span class="denominator">8</span></div></p>
+                    <p class="mb-2"><strong>शेषफल = <div class="fraction"><span class="numerator">27</span><span class="denominator">8</span></div></strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) x</p>
+                    <p class="mb-2">x = 0</p>
+                    <p class="mb-2">p(0) = 0³ + 3(0)² + 3(0) + 1 = <strong>1</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) x + π</p>
+                    <p class="mb-2">x + π = 0 ⇒ x = −π</p>
+                    <p class="mb-2">p(−π) = (−π)³ + 3(−π)² + 3(−π) + 1</p>
+                    <p class="mb-2">= −π³ + 3π² − 3π + 1</p>
+                    <p class="mb-2"><strong>शेषफल = −π³ + 3π² − 3π + 1</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) 5 + 2x</p>
+                    <p class="mb-2">5 + 2x = 0 ⇒ x = −<div class="fraction"><span class="numerator">5</span><span class="denominator">2</span></div></p>
+                    <p class="mb-2">p(−5/2) = (−5/2)³ + 3(−5/2)² + 3(−5/2) + 1</p>
+                    <p class="mb-2">= −<div class="fraction"><span class="numerator">125</span><span class="denominator">8</span></div> + <div class="fraction"><span class="numerator">75</span><span class="denominator">4</span></div> − <div class="fraction"><span class="numerator">15</span><span class="denominator">2</span></div> + 1</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">−125 + 150 − 60 + 8</span><span class="denominator">8</span></div> = <div class="fraction"><span class="numerator">−27</span><span class="denominator">8</span></div></p>
+                    <p class="mb-2"><strong>शेषफल = −<div class="fraction"><span class="numerator">27</span><span class="denominator">8</span></div></strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: x³ − ax² + 6x − a को x − a से भाग देने पर शेषफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">p(x) = x³ − ax² + 6x − a</p>
+                    <p class="mb-2">x − a = 0 ⇒ x = a</p>
+                    <p class="mb-2">p(a) = (a)³ − a(a)² + 6(a) − a</p>
+                    <p class="mb-2">= a³ − a³ + 6a − a</p>
+                    <p class="mb-2">= 5a</p>
+                    <p><strong>शेषफल = 5a</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: जाँच कीजिए कि 7 + 3x, 3x³ + 7x का एक गुणनखंड है या नहीं।</h3>
+                <div class="step">
+                    <p class="mb-2">p(x) = 3x³ + 7x</p>
+                    <p class="mb-2">7 + 3x = 0 ⇒ x = −<div class="fraction"><span class="numerator">7</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2">p(−7/3) = 3(−7/3)³ + 7(−7/3)</p>
+                    <p class="mb-2">= 3(−343/27) − 49/3</p>
+                    <p class="mb-2">= −<div class="fraction"><span class="numerator">343</span><span class="denominator">9</span></div> − <div class="fraction"><span class="numerator">49</span><span class="denominator">3</span></div></p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">−343 − 147</span><span class="denominator">9</span></div> = <div class="fraction"><span class="numerator">−490</span><span class="denominator">9</span></div> ≠ 0</p>
+                    <p><strong>उत्तर:</strong> नहीं, 7 + 3x, 3x³ + 7x का गुणनखंड नहीं है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 2.4 ==================== -->
+        <section id="exercise-2-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.4</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: बताइए कि निम्नलिखित बहुपदों में से किस बहुपद का एक गुणनखंड x + 1 है:</h3>
+                <div class="step">
+                    <p class="mb-2">x + 1 = 0 ⇒ x = −1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(i) p(x) = x³ + x² + x + 1</p>
+                    <p class="mb-2">p(−1) = (−1)³ + (−1)² + (−1) + 1 = −1 + 1 − 1 + 1 = <strong>0</strong></p>
+                    <p class="mb-2"><strong>✓ हाँ, x + 1 इसका गुणनखंड है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) p(x) = x⁴ + x³ + x² + x + 1</p>
+                    <p class="mb-2">p(−1) = 1 − 1 + 1 − 1 + 1 = <strong>1</strong> ≠ 0</p>
+                    <p class="mb-2"><strong>✗ नहीं, x + 1 इसका गुणनखंड नहीं है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) p(x) = x⁴ + 3x³ + 3x² + x + 1</p>
+                    <p class="mb-2">p(−1) = 1 − 3 + 3 − 1 + 1 = <strong>1</strong> ≠ 0</p>
+                    <p class="mb-2"><strong>✗ नहीं, x + 1 इसका गुणनखंड नहीं है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) p(x) = x³ − x² − (2 + √2)x + √2</p>
+                    <p class="mb-2">p(−1) = (−1)³ − (−1)² − (2 + √2)(−1) + √2</p>
+                    <p class="mb-2">= −1 − 1 + 2 + √2 + √2</p>
+                    <p class="mb-2">= 2√2 ≠ 0</p>
+                    <p class="mb-2"><strong>✗ नहीं, x + 1 इसका गुणनखंड नहीं है।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: गुणनखंड प्रमेय लागू करके बताइए कि निम्नलिखित स्थितियों में से प्रत्येक स्थिति में g(x), p(x) का एक गुणनखंड है या नहीं:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) p(x) = 2x³ + x² − 2x − 1, g(x) = x + 1</h4>
+                    <div class="step">
+                        <p class="mb-2">x + 1 = 0 ⇒ x = −1</p>
+                        <p class="mb-2">p(−1) = 2(−1)³ + (−1)² − 2(−1) − 1</p>
+                        <p class="mb-2">= −2 + 1 + 2 − 1 = 0</p>
+                        <p><strong>✓ हाँ, g(x) = x + 1, p(x) का गुणनखंड है।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) p(x) = x³ + 3x² + 3x + 1, g(x) = x + 2</h4>
+                    <div class="step">
+                        <p class="mb-2">x + 2 = 0 ⇒ x = −2</p>
+                        <p class="mb-2">p(−2) = (−2)³ + 3(−2)² + 3(−2) + 1</p>
+                        <p class="mb-2">= −8 + 12 − 6 + 1 = −1 ≠ 0</p>
+                        <p><strong>✗ नहीं, g(x) = x + 2, p(x) का गुणनखंड नहीं है।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) p(x) = x³ − 4x² + x + 6, g(x) = x − 3</h4>
+                    <div class="step">
+                        <p class="mb-2">x − 3 = 0 ⇒ x = 3</p>
+                        <p class="mb-2">p(3) = (3)³ − 4(3)² + 3 + 6</p>
+                        <p class="mb-2">= 27 − 36 + 3 + 6 = 0</p>
+                        <p><strong>✓ हाँ, g(x) = x − 3, p(x) का गुणनखंड है।</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: k का मान ज्ञात कीजिए जबकि निम्नलिखित स्थितियों में से प्रत्येक स्थिति में (x − 1), p(x) का एक गुणनखंड हो:</h3>
+                <div class="step">
+                    <p class="mb-2">x − 1 = 0 ⇒ x = 1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(i) p(x) = x² + x + k</p>
+                    <p class="mb-2">p(1) = (1)² + 1 + k = 2 + k = 0</p>
+                    <p class="mb-2">⇒ <strong>k = −2</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) p(x) = 2x² + kx + √2</p>
+                    <p class="mb-2">p(1) = 2(1)² + k(1) + √2 = 2 + k + √2 = 0</p>
+                    <p class="mb-2">⇒ <strong>k = −2 − √2</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) p(x) = kx² − √2x + 1</p>
+                    <p class="mb-2">p(1) = k(1)² − √2(1) + 1 = k − √2 + 1 = 0</p>
+                    <p class="mb-2">⇒ <strong>k = √2 − 1</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) p(x) = kx² − 3x + k</p>
+                    <p class="mb-2">p(1) = k(1)² − 3(1) + k = k − 3 + k = 2k − 3 = 0</p>
+                    <p class="mb-2">⇒ 2k = 3 ⇒ <strong>k = <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div></strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: गुणनखंड ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 12x² − 7x + 1</h4>
+                    <div class="step">
+                        <p class="mb-2">= 12x² − 4x − 3x + 1</p>
+                        <p class="mb-2">= 4x(3x − 1) − 1(3x − 1)</p>
+                        <p class="mb-2">= <strong>(3x − 1)(4x − 1)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 2x² + 7x + 3</h4>
+                    <div class="step">
+                        <p class="mb-2">= 2x² + 6x + x + 3</p>
+                        <p class="mb-2">= 2x(x + 3) + 1(x + 3)</p>
+                        <p class="mb-2">= <strong>(x + 3)(2x + 1)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 6x² + 5x − 6</h4>
+                    <div class="step">
+                        <p class="mb-2">= 6x² + 9x − 4x − 6</p>
+                        <p class="mb-2">= 3x(2x + 3) − 2(2x + 3)</p>
+                        <p class="mb-2">= <strong>(2x + 3)(3x − 2)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) 3x² − x − 4</h4>
+                    <div class="step">
+                        <p class="mb-2">= 3x² − 4x + 3x − 4</p>
+                        <p class="mb-2">= x(3x − 4) + 1(3x − 4)</p>
+                        <p class="mb-2">= <strong>(3x − 4)(x + 1)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: गुणनखंड ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) x³ − 2x² − x + 2</h4>
+                    <div class="step">
+                        <p class="mb-2">= x²(x − 2) − 1(x − 2)</p>
+                        <p class="mb-2">= (x − 2)(x² − 1)</p>
+                        <p class="mb-2">= <strong>(x − 2)(x − 1)(x + 1)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) x³ − 3x² − 9x − 5</h4>
+                    <div class="step">
+                        <p class="mb-2">p(x) = x³ − 3x² − 9x − 5</p>
+                        <p class="mb-2">p(5) = 125 − 75 − 45 − 5 = 0</p>
+                        <p class="mb-2">अतः (x − 5) एक गुणनखंड है।</p>
+                        <p class="mb-2">x³ − 3x² − 9x − 5 = (x − 5)(x² + 2x + 1)</p>
+                        <p class="mb-2">= (x − 5)(x + 1)²</p>
+                        <p class="mb-2"><strong>= (x − 5)(x + 1)(x + 1)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) x³ + 13x² + 32x + 20</h4>
+                    <div class="step">
+                        <p class="mb-2">p(x) = x³ + 13x² + 32x + 20</p>
+                        <p class="mb-2">p(−1) = −1 + 13 − 32 + 20 = 0</p>
+                        <p class="mb-2">अतः (x + 1) एक गुणनखंड है।</p>
+                        <p class="mb-2">x³ + 13x² + 32x + 20 = (x + 1)(x² + 12x + 20)</p>
+                        <p class="mb-2">= (x + 1)(x + 2)(x + 10)</p>
+                        <p class="mb-2"><strong>= (x + 1)(x + 2)(x + 10)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) 2y³ + y² − 2y − 1</h4>
+                    <div class="step">
+                        <p class="mb-2">= y²(2y + 1) − 1(2y + 1)</p>
+                        <p class="mb-2">= (2y + 1)(y² − 1)</p>
+                        <p class="mb-2">= <strong>(2y + 1)(y − 1)(y + 1)</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 2.5 ==================== -->
+        <section id="exercise-2-5" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.5</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: उपयुक्त सर्वसमिकाओं को प्रयोग करके निम्नलिखित गुणनफल ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) (x + 4)(x + 10)</h4>
+                    <div class="step">
+                        <p class="mb-2">सर्वसमिका: (x + a)(x + b) = x² + (a + b)x + ab</p>
+                        <p class="mb-2">= x² + (4 + 10)x + 4 × 10</p>
+                        <p class="mb-2">= <strong>x² + 14x + 40</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) (x + 8)(x − 10)</h4>
+                    <div class="step">
+                        <p class="mb-2">= x² + (8 − 10)x + 8 × (−10)</p>
+                        <p class="mb-2">= <strong>x² − 2x − 80</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) (3x + 4)(3x − 5)</h4>
+                    <div class="step">
+                        <p class="mb-2">= (3x)² + (4 − 5)(3x) + 4 × (−5)</p>
+                        <p class="mb-2">= 9x² − 3x − 20</p>
+                        <p class="mb-2"><strong>= 9x² − 3x − 20</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) (y² + <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div>)(y² − <div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div>)</h4>
+                    <div class="step">
+                        <p class="mb-2">सर्वसमिका: (a + b)(a − b) = a² − b²</p>
+                        <p class="mb-2">= (y²)² − (<div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div>)²</p>
+                        <p class="mb-2">= <strong>y⁴ − <div class="fraction"><span class="numerator">9</span><span class="denominator">4</span></div></strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) (3 − 2x)(3 + 2x)</h4>
+                    <div class="step">
+                        <p class="mb-2">= (3)² − (2x)²</p>
+                        <p class="mb-2">= <strong>9 − 4x²</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सीधे गुणा किए बिना निम्नलिखित गुणनफलों के मान ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 103 × 107</h4>
+                    <div class="step">
+                        <p class="mb-2">= (100 + 3)(100 + 7)</p>
+                        <p class="mb-2">= (100)² + (3 + 7)(100) + 3 × 7</p>
+                        <p class="mb-2">= 10000 + 1000 + 21</p>
+                        <p class="mb-2">= <strong>11021</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 95 × 96</h4>
+                    <div class="step">
+                        <p class="mb-2">= (100 − 5)(100 − 4)</p>
+                        <p class="mb-2">= (100)² + (−5 − 4)(100) + (−5)(−4)</p>
+                        <p class="mb-2">= 10000 − 900 + 20</p>
+                        <p class="mb-2">= <strong>9120</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 104 × 96</h4>
+                    <div class="step">
+                        <p class="mb-2">= (100 + 4)(100 − 4)</p>
+                        <p class="mb-2">= (100)² − (4)²</p>
+                        <p class="mb-2">= 10000 − 16</p>
+                        <p class="mb-2">= <strong>9984</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: उपयुक्त सर्वसमिकाएँ प्रयोग करके निम्नलिखित का गुणनखंडन कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 9x² + 6xy + y²</h4>
+                    <div class="step">
+                        <p class="mb-2">= (3x)² + 2(3x)(y) + (y)²</p>
+                        <p class="mb-2">सर्वसमिका: a² + 2ab + b² = (a + b)²</p>
+                        <p class="mb-2">= <strong>(3x + y)²</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 4y² − 4y + 1</h4>
+                    <div class="step">
+                        <p class="mb-2">= (2y)² − 2(2y)(1) + (1)²</p>
+                        <p class="mb-2">= <strong>(2y − 1)²</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) x² − 100</h4>
+                    <div class="step">
+                        <p class="mb-2">= (x)² − (10)²</p>
+                        <p class="mb-2">= <strong>(x − 10)(x + 10)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: उपयुक्त सर्वसमिकाओं का प्रयोग करके निम्नलिखित में से प्रत्येक का प्रसार कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) (x + 2y + 4z)²</h4>
+                    <div class="step">
+                        <p class="mb-2">सर्वसमिका: (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca</p>
+                        <p class="mb-2">= x² + (2y)² + (4z)² + 2(x)(2y) + 2(2y)(4z) + 2(4z)(x)</p>
+                        <p class="mb-2">= <strong>x² + 4y² + 16z² + 4xy + 16yz + 8xz</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) (2x − y + z)²</h4>
+                    <div class="step">
+                        <p class="mb-2">= [2x + (−y) + z]²</p>
+                        <p class="mb-2">= (2x)² + (−y)² + z² + 2(2x)(−y) + 2(−y)(z) + 2(z)(2x)</p>
+                        <p class="mb-2">= <strong>4x² + y² + z² − 4xy − 2yz + 4xz</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) (−2x + 3y + 2z)²</h4>
+                    <div class="step">
+                        <p class="mb-2">= [(−2x) + 3y + 2z]²</p>
+                        <p class="mb-2">= (−2x)² + (3y)² + (2z)² + 2(−2x)(3y) + 2(3y)(2z) + 2(2z)(−2x)</p>
+                        <p class="mb-2">= <strong>4x² + 9y² + 4z² − 12xy + 12yz − 8xz</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) (3a − 7b − c)²</h4>
+                    <div class="step">
+                        <p class="mb-2">= [3a + (−7b) + (−c)]²</p>
+                        <p class="mb-2">= (3a)² + (−7b)² + (−c)² + 2(3a)(−7b) + 2(−7b)(−c) + 2(−c)(3a)</p>
+                        <p class="mb-2">= <strong>9a² + 49b² + c² − 42ab + 14bc − 6ac</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) (−2x + 5y − 3z)²</h4>
+                    <div class="step">
+                        <p class="mb-2">= [(−2x) + 5y + (−3z)]²</p>
+                        <p class="mb-2">= (−2x)² + (5y)² + (−3z)² + 2(−2x)(5y) + 2(5y)(−3z) + 2(−3z)(−2x)</p>
+                        <p class="mb-2">= <strong>4x² + 25y² + 9z² − 20xy − 30yz + 12xz</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(vi) (<div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div>a − <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>b + 1)²</h4>
+                    <div class="step">
+                        <p class="mb-2">= [(<div class="fraction"><span class="numerator">a</span><span class="denominator">4</span></div>) + (−<div class="fraction"><span class="numerator">b</span><span class="denominator">2</span></div>) + 1]²</p>
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">a</span><span class="denominator">4</span></div>)² + (−<div class="fraction"><span class="numerator">b</span><span class="denominator">2</span></div>)² + (1)² + 2(<div class="fraction"><span class="numerator">a</span><span class="denominator">4</span></div>)(−<div class="fraction"><span class="numerator">b</span><span class="denominator">2</span></div>) + 2(−<div class="fraction"><span class="numerator">b</span><span class="denominator">2</span></div>)(1) + 2(1)(<div class="fraction"><span class="numerator">a</span><span class="denominator">4</span></div>)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">a²</span><span class="denominator">16</span></div> + <div class="fraction"><span class="numerator">b²</span><span class="denominator">4</span></div> + 1 − <div class="fraction"><span class="numerator">ab</span><span class="denominator">4</span></div> − b + <div class="fraction"><span class="numerator">a</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2"><strong>= <div class="fraction"><span class="numerator">a²</span><span class="denominator">16</span></div> + <div class="fraction"><span class="numerator">b²</span><span class="denominator">4</span></div> + 1 − <div class="fraction"><span class="numerator">ab</span><span class="denominator">4</span></div> − b + <div class="fraction"><span class="numerator">a</span><span class="denominator">2</span></div></strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: गुणनखंडन कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 4x² + 9y² + 16z² + 12xy − 24yz − 16xz</h4>
+                    <div class="step">
+                        <p class="mb-2">= (2x)² + (3y)² + (−4z)² + 2(2x)(3y) + 2(3y)(−4z) + 2(−4z)(2x)</p>
+                        <p class="mb-2">= <strong>(2x + 3y − 4z)²</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 2x² + y² + 8z² − 2√2xy + 4√2yz − 8xz</h4>
+                    <div class="step">
+                        <p class="mb-2">= (−√2x)² + (y)² + (2√2z)² + 2(−√2x)(y) + 2(y)(2√2z) + 2(2√2z)(−√2x)</p>
+                        <p class="mb-2">= <strong>(−√2x + y + 2√2z)²</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: निम्नलिखित घनों को प्रसारित रूप में लिखिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) (2x + 1)³</h4>
+                    <div class="step">
+                        <p class="mb-2">सर्वसमिका: (a + b)³ = a³ + b³ + 3ab(a + b)</p>
+                        <p class="mb-2">= (2x)³ + (1)³ + 3(2x)(1)(2x + 1)</p>
+                        <p class="mb-2">= 8x³ + 1 + 6x(2x + 1)</p>
+                        <p class="mb-2">= 8x³ + 1 + 12x² + 6x</p>
+                        <p class="mb-2"><strong>= 8x³ + 12x² + 6x + 1</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) (2a − 3b)³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (2a)³ − (3b)³ − 3(2a)(3b)(2a − 3b)</p>
+                        <p class="mb-2">= 8a³ − 27b³ − 18ab(2a − 3b)</p>
+                        <p class="mb-2">= 8a³ − 27b³ − 36a²b + 54ab²</p>
+                        <p class="mb-2"><strong>= 8a³ − 36a²b + 54ab² − 27b³</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) (<div class="fraction"><span class="numerator">3</span><span class="denominator">2</span></div>x + 1)³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (<div class="fraction"><span class="numerator">3x</span><span class="denominator">2</span></div>)³ + (1)³ + 3(<div class="fraction"><span class="numerator">3x</span><span class="denominator">2</span></div>)(1)(<div class="fraction"><span class="numerator">3x</span><span class="denominator">2</span></div> + 1)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">27x³</span><span class="denominator">8</span></div> + 1 + <div class="fraction"><span class="numerator">9x</span><span class="denominator">2</span></div>(<div class="fraction"><span class="numerator">3x</span><span class="denominator">2</span></div> + 1)</p>
+                        <p class="mb-2">= <div class="fraction"><span class="numerator">27x³</span><span class="denominator">8</span></div> + 1 + <div class="fraction"><span class="numerator">27x²</span><span class="denominator">4</span></div> + <div class="fraction"><span class="numerator">9x</span><span class="denominator">2</span></div></p>
+                        <p class="mb-2"><strong>= <div class="fraction"><span class="numerator">27x³</span><span class="denominator">8</span></div> + <div class="fraction"><span class="numerator">27x²</span><span class="denominator">4</span></div> + <div class="fraction"><span class="numerator">9x</span><span class="denominator">2</span></div> + 1</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) (x − <div class="fraction"><span class="numerator">2</span><span class="denominator">3</span></div>y)³</h4>
+                    <div class="step">
+                        <p class="mb-2">= x³ − (<div class="fraction"><span class="numerator">2y</span><span class="denominator">3</span></div>)³ − 3x(<div class="fraction"><span class="numerator">2y</span><span class="denominator">3</span></div>)(x − <div class="fraction"><span class="numerator">2y</span><span class="denominator">3</span></div>)</p>
+                        <p class="mb-2">= x³ − <div class="fraction"><span class="numerator">8y³</span><span class="denominator">27</span></div> − 2xy(x − <div class="fraction"><span class="numerator">2y</span><span class="denominator">3</span></div>)</p>
+                        <p class="mb-2">= x³ − <div class="fraction"><span class="numerator">8y³</span><span class="denominator">27</span></div> − 2x²y + <div class="fraction"><span class="numerator">4xy²</span><span class="denominator">3</span></div></p>
+                        <p class="mb-2"><strong>= x³ − 2x²y + <div class="fraction"><span class="numerator">4xy²</span><span class="denominator">3</span></div> − <div class="fraction"><span class="numerator">8y³</span><span class="denominator">27</span></div></strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: उपयुक्त सर्वसमिकाएँ प्रयोग करके निम्नलिखित के मान ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) (99)³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (100 − 1)³</p>
+                        <p class="mb-2">= (100)³ − (1)³ − 3(100)(1)(100 − 1)</p>
+                        <p class="mb-2">= 1000000 − 1 − 300(99)</p>
+                        <p class="mb-2">= 1000000 − 1 − 29700</p>
+                        <p class="mb-2"><strong>= 970299</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) (102)³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (100 + 2)³</p>
+                        <p class="mb-2">= (100)³ + (2)³ + 3(100)(2)(100 + 2)</p>
+                        <p class="mb-2">= 1000000 + 8 + 600(102)</p>
+                        <p class="mb-2">= 1000000 + 8 + 61200</p>
+                        <p class="mb-2"><strong>= 1061208</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) (998)³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (1000 − 2)³</p>
+                        <p class="mb-2">= (1000)³ − (2)³ − 3(1000)(2)(1000 − 2)</p>
+                        <p class="mb-2">= 1000000000 − 8 − 6000(998)</p>
+                        <p class="mb-2">= 1000000000 − 8 − 5988000</p>
+                        <p class="mb-2"><strong>= 994011992</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: निम्नलिखित में से प्रत्येक का गुणनखंडन कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 8a³ + b³ + 12a²b + 6ab²</h4>
+                    <div class="step">
+                        <p class="mb-2">= (2a)³ + (b)³ + 3(2a)²(b) + 3(2a)(b)²</p>
+                        <p class="mb-2">= <strong>(2a + b)³</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 8a³ − b³ − 12a²b + 6ab²</h4>
+                    <div class="step">
+                        <p class="mb-2">= (2a)³ − (b)³ − 3(2a)²(b) + 3(2a)(b)²</p>
+                        <p class="mb-2">= <strong>(2a − b)³</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) 27 − 125a³ − 135a + 225a²</h4>
+                    <div class="step">
+                        <p class="mb-2">= (3)³ − (5a)³ − 3(3)²(5a) + 3(3)(5a)²</p>
+                        <p class="mb-2">= <strong>(3 − 5a)³</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iv) 64a³ − 27b³ − 144a²b + 108ab²</h4>
+                    <div class="step">
+                        <p class="mb-2">= (4a)³ − (3b)³ − 3(4a)²(3b) + 3(4a)(3b)²</p>
+                        <p class="mb-2">= <strong>(4a − 3b)³</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(v) 27p³ − <div class="fraction"><span class="numerator">1</span><span class="denominator">216</span></div> − <div class="fraction"><span class="numerator">9</span><span class="denominator">2</span></div>p² + <div class="fraction"><span class="numerator">1</span><span class="denominator">4</span></div>p</h4>
+                    <div class="step">
+                        <p class="mb-2">= (3p)³ − (<div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div>)³ − 3(3p)²(<div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div>) + 3(3p)(<div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div>)²</p>
+                        <p class="mb-2">= <strong>(3p − <div class="fraction"><span class="numerator">1</span><span class="denominator">6</span></div>)³</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: सत्यापित कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) x³ + y³ = (x + y)(x² − xy + y²)</h4>
+                    <div class="step">
+                        <p class="mb-2">दायाँ पक्ष = (x + y)(x² − xy + y²)</p>
+                        <p class="mb-2">= x(x² − xy + y²) + y(x² − xy + y²)</p>
+                        <p class="mb-2">= x³ − x²y + xy² + x²y − xy² + y³</p>
+                        <p class="mb-2">= x³ + y³ = बायाँ पक्ष</p>
+                        <p><strong>✓ सत्यापित हुआ।</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) x³ − y³ = (x − y)(x² + xy + y²)</h4>
+                    <div class="step">
+                        <p class="mb-2">दायाँ पक्ष = (x − y)(x² + xy + y²)</p>
+                        <p class="mb-2">= x(x² + xy + y²) − y(x² + xy + y²)</p>
+                        <p class="mb-2">= x³ + x²y + xy² − x²y − xy² − y³</p>
+                        <p class="mb-2">= x³ − y³ = बायाँ पक्ष</p>
+                        <p><strong>✓ सत्यापित हुआ।</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: निम्नलिखित में से प्रत्येक का गुणनखंडन कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) 27y³ + 125z³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (3y)³ + (5z)³</p>
+                        <p class="mb-2">सर्वसमिका: a³ + b³ = (a + b)(a² − ab + b²)</p>
+                        <p class="mb-2">= <strong>(3y + 5z)(9y² − 15yz + 25z²)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) 64m³ − 343n³</h4>
+                    <div class="step">
+                        <p class="mb-2">= (4m)³ − (7n)³</p>
+                        <p class="mb-2">सर्वसमिका: a³ − b³ = (a − b)(a² + ab + b²)</p>
+                        <p class="mb-2">= <strong>(4m − 7n)(16m² + 28mn + 49n²)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: गुणनखंडन कीजिए: 27x³ + y³ + z³ − 9xyz</h3>
+                <div class="step">
+                    <p class="mb-2">= (3x)³ + (y)³ + (z)³ − 3(3x)(y)(z)</p>
+                    <p class="mb-2">सर्वसमिका: a³ + b³ + c³ − 3abc = (a + b + c)(a² + b² + c² − ab − bc − ca)</p>
+                    <p class="mb-2">= <strong>(3x + y + z)(9x² + y² + z² − 3xy − yz − 3xz)</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: सत्यापित कीजिए: x³ + y³ + z³ − 3xyz = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(x + y + z)[(x − y)² + (y − z)² + (z − x)²]</h3>
+                <div class="step">
+                    <p class="mb-2">दायाँ पक्ष = <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(x + y + z)[(x − y)² + (y − z)² + (z − x)²]</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(x + y + z)[x² − 2xy + y² + y² − 2yz + z² + z² − 2zx + x²]</p>
+                    <p class="mb-2">= <div class="fraction"><span class="numerator">1</span><span class="denominator">2</span></div>(x + y + z)[2x² + 2y² + 2z² − 2xy − 2yz − 2zx]</p>
+                    <p class="mb-2">= (x + y + z)(x² + y² + z² − xy − yz − zx)</p>
+                    <p class="mb-2">= x³ + y³ + z³ − 3xyz = बायाँ पक्ष</p>
+                    <p><strong>✓ सत्यापित हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: यदि x + y + z = 0 हो, तो दिखाइए कि x³ + y³ + z³ = 3xyz है।</h3>
+                <div class="step">
+                    <p class="mb-2">सर्वसमिका: x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)</p>
+                    <p class="mb-2">दिया है: x + y + z = 0</p>
+                    <p class="mb-2">∴ x³ + y³ + z³ − 3xyz = 0 × (x² + y² + z² − xy − yz − zx)</p>
+                    <p class="mb-2">⇒ x³ + y³ + z³ − 3xyz = 0</p>
+                    <p class="mb-2">⇒ <strong>x³ + y³ + z³ = 3xyz</strong></p>
+                    <p><strong>✓ सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: वास्तव में घनों का परिकलन किए बिना निम्नलिखित में से प्रत्येक का मान ज्ञात कीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) (−12)³ + (7)³ + (5)³</h4>
+                    <div class="step">
+                        <p class="mb-2">यहाँ x = −12, y = 7, z = 5</p>
+                        <p class="mb-2">x + y + z = −12 + 7 + 5 = 0</p>
+                        <p class="mb-2">∴ x³ + y³ + z³ = 3xyz</p>
+                        <p class="mb-2">= 3(−12)(7)(5)</p>
+                        <p class="mb-2">= <strong>−1260</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) (28)³ + (−15)³ + (−13)³</h4>
+                    <div class="step">
+                        <p class="mb-2">यहाँ x = 28, y = −15, z = −13</p>
+                        <p class="mb-2">x + y + z = 28 − 15 − 13 = 0</p>
+                        <p class="mb-2">∴ x³ + y³ + z³ = 3xyz</p>
+                        <p class="mb-2">= 3(28)(−15)(−13)</p>
+                        <p class="mb-2">= <strong>16380</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: नीचे दिए गए आयतों, जिनमें उनके क्षेत्रफल दिए गए हैं, में से प्रत्येक की लंबाई और चौड़ाई के लिए संभव व्यंजक दीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) क्षेत्रफल: 25a² − 35a + 12</h4>
+                    <div class="step">
+                        <p class="mb-2">= 25a² − 20a − 15a + 12</p>
+                        <p class="mb-2">= 5a(5a − 4) − 3(5a − 4)</p>
+                        <p class="mb-2">= (5a − 4)(5a − 3)</p>
+                        <p class="mb-2"><strong>लंबाई = (5a − 3), चौड़ाई = (5a − 4)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) क्षेत्रफल: 35y² + 13y − 12</h4>
+                    <div class="step">
+                        <p class="mb-2">= 35y² + 28y − 15y − 12</p>
+                        <p class="mb-2">= 7y(5y + 4) − 3(5y + 4)</p>
+                        <p class="mb-2">= (5y + 4)(7y − 3)</p>
+                        <p class="mb-2"><strong>लंबाई = (7y − 3), चौड़ाई = (5y + 4)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: घनाभों (cuboids), जिनके आयतन नीचे दिए गए हैं, की विमाओं के लिए संभव व्यंजक दीजिए:</h3>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) आयतन: 3x² − 12x</h4>
+                    <div class="step">
+                        <p class="mb-2">= 3x(x − 4)</p>
+                        <p class="mb-2"><strong>विमाएँ: 3, x, (x − 4)</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) आयतन: 12ky² + 8ky − 20k</h4>
+                    <div class="step">
+                        <p class="mb-2">= 4k(3y² + 2y − 5)</p>
+                        <p class="mb-2">= 4k(3y² + 5y − 3y − 5)</p>
+                        <p class="mb-2">= 4k[y(3y + 5) − 1(3y + 5)]</p>
+                        <p class="mb-2">= 4k(3y + 5)(y − 1)</p>
+                        <p class="mb-2"><strong>विमाएँ: 4k, (3y + 5), (y − 1)</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

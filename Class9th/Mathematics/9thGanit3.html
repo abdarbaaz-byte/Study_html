@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 3: निर्देशांक ज्यामिति</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .quadrant-box {
+            display: inline-block;
+            background-color: #eef2ff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin: 0.25rem;
+            font-weight: 600;
+            border-left: 4px solid #6366f1;
+        }
+        table.coord-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table.coord-table th, table.coord-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.5rem 1rem;
+            text-align: center;
+        }
+        table.coord-table th {
+            background-color: #eef2ff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 3<br>निर्देशांक ज्यामिति</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 3.1 ==================== -->
+        <section id="exercise-3-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 3.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक अन्य व्यक्ति को आप अपने अध्ययन मेज पर रखे टेबल लैंप की स्थिति किस तरह बताएँगे?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> अध्ययन मेज पर टेबल लैंप की स्थिति बताने के लिए हमें दो संदर्भ रेखाओं की आवश्यकता होती है।</p>
+                    <p class="mb-2">मान लीजिए मेज के दो किनारों को संदर्भ मानते हैं — एक लंबाई वाला किनारा (जैसे x-अक्ष) और एक चौड़ाई वाला किनारा (जैसे y-अक्ष)।</p>
+                    <p class="mb-2">अब मेज के एक कोने को मूलबिन्दु (0, 0) मानकर:</p>
+                    <p class="mb-2">1. लंबाई वाले किनारे से लैंप की दूरी मापिए (यह x-निर्देशांक होगा)।</p>
+                    <p class="mb-2">2. चौड़ाई वाले किनारे से लैंप की दूरी मापिए (यह y-निर्देशांक होगा)।</p>
+                    <p class="mb-2"><strong>उदाहरण:</strong> यदि लैंप लंबाई वाले किनारे से 30 cm दूर है और चौड़ाई वाले किनारे से 20 cm दूर है, तो लैंप की स्थिति (30, 20) होगी।</p>
+                    <p><strong>निष्कर्ष:</strong> इस प्रकार, दो लंबवत दूरियों की सहायता से मेज पर लैंप की सटीक स्थिति बताई जा सकती है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>स्पष्टीकरण:</strong> किसी तल में किसी वस्तु की स्थिति निर्धारित करने के लिए दो स्वतंत्र सूचनाओं (जैसे दो लंबवत दूरियाँ) की आवश्यकता होती है। यही निर्देशांक ज्यामिति का मूल विचार है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: (सड़क योजना): एक नगर में दो मुख्य सड़कें हैं, जो नगर के केन्द्र पर मिलती हैं। ये दो सड़कें उत्तर-दक्षिण की दिशा और पूर्व-पश्चिम की दिशा में हैं। नगर की अन्य सभी सड़कें इन मुख्य सड़कों के समांतर परस्पर 200 मीटर की दूरी पर हैं। प्रत्येक दिशा में लगभग पाँच सड़कें हैं। 1 सेंटीमीटर = 200 मीटर का पैमाना लेकर अपनी नोट बुक में नगर का एक मॉडल बनाइए। सड़कों को एकल रेखाओं से निरूपित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">आपके मॉडल में एक-दूसरे को काटती हुई अनेक क्रॉस-स्ट्रीट (चौराहे) हो सकती हैं। एक विशेष क्रॉस-स्ट्रीट दो सड़कों से बनी है, जिनमें से एक उत्तर-दक्षिण दिशा में जाती है और दूसरी पूर्व-पश्चिम की दिशा में। प्रत्येक क्रॉस-स्ट्रीट का निर्देशन इस प्रकार किया जाता है: यदि दूसरी सड़क उत्तर-दक्षिण दिशा में जाती है और पाँचवीं सड़क पूर्व-पश्चिम दिशा में जाती है और ये एक क्रॉसिंग पर मिलती हैं, तब इसे हम क्रॉस-स्ट्रीट (2, 5) कहेंगे।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) कितनी क्रॉस-स्ट्रीटों को (4, 3) माना जा सकता है?</strong></p>
+                    <p class="mb-2">प्रत्येक क्रॉस-स्ट्रीट एक अद्वितीय (unique) चौराहा होता है।</p>
+                    <p class="mb-2">क्रॉस-स्ट्रीट (4, 3) का अर्थ है: उत्तर-दक्षिण दिशा की चौथी सड़क और पूर्व-पश्चिम दिशा की तीसरी सड़क का प्रतिच्छेदन।</p>
+                    <p class="mb-2">चूँकि केवल एक ही चौथी सड़क और एक ही तीसरी सड़क होती है, अतः उनका प्रतिच्छेदन भी केवल एक होगा।</p>
+                    <p><strong>उत्तर: केवल 1 क्रॉस-स्ट्रीट को (4, 3) माना जा सकता है।</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) कितनी क्रॉस-स्ट्रीटों को (3, 4) माना जा सकता है?</strong></p>
+                    <p class="mb-2">इसी प्रकार, क्रॉस-स्ट्रीट (3, 4) का अर्थ है: उत्तर-दक्षिण दिशा की तीसरी सड़क और पूर्व-पश्चिम दिशा की चौथी सड़क का प्रतिच्छेदन।</p>
+                    <p><strong>उत्तर: केवल 1 क्रॉस-स्ट्रीट को (3, 4) माना जा सकता है।</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>ध्यान दें:</strong> (4, 3) और (3, 4) दो भिन्न चौराहों को दर्शाते हैं, इसलिए ये दोनों अलग-अलग हैं। यह निर्देशांक ज्यामिति का महत्वपूर्ण गुण है — (x, y) ≠ (y, x), जब तक x = y न हो।
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 3.2 ==================== -->
+        <section id="exercise-3-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 3.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित प्रश्नों में से प्रत्येक प्रश्न का उत्तर दीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) कार्तीय तल में किसी बिन्दु की स्थिति निर्धारित करने वाली क्षैतिज और ऊर्ध्वाधर रेखाओं के क्या नाम हैं?</strong></p>
+                    <p class="mb-2">क्षैतिज रेखा को <strong>x-अक्ष</strong> (x-axis) कहा जाता है।</p>
+                    <p class="mb-2">ऊर्ध्वाधर रेखा को <strong>y-अक्ष</strong> (y-axis) कहा जाता है।</p>
+                    <p class="mb-2">इन दोनों को सम्मिलित रूप से <strong>निर्देशांक अक्ष</strong> (coordinate axes) कहा जाता है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) इन दो रेखाओं से बने तल के प्रत्येक भाग के नाम बताइए।</strong></p>
+                    <p class="mb-2">दोनों अक्ष तल को चार भागों में विभाजित करते हैं, जिन्हें <strong>चतुर्थांश</strong> (quadrants) कहा जाता है:</p>
+                    <p class="mb-2"><span class="quadrant-box">I चतुर्थांश (+, +)</span> <span class="quadrant-box">II चतुर्थांश (−, +)</span></p>
+                    <p class="mb-2"><span class="quadrant-box">III चतुर्थांश (−, −)</span> <span class="quadrant-box">IV चतुर्थांश (+, −)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) उस बिन्दु का नाम बताइए जहाँ ये दो रेखाएँ प्रतिच्छेदित होती हैं।</strong></p>
+                    <p class="mb-2">जिस बिन्दु पर x-अक्ष और y-अक्ष एक-दूसरे को काटते हैं, उसे <strong>मूलबिन्दु</strong> (origin) कहा जाता है।</p>
+                    <p class="mb-2">इसे <strong>O</strong> से प्रकट किया जाता है और इसके निर्देशांक <strong>(0, 0)</strong> होते हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: आकृति 3.14 देखकर निम्नलिखित को लिखिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) B के निर्देशांक</p>
+                    <p class="mb-2">B, y-अक्ष के बाईं ओर (−5, 0) पर और x-अक्ष के ऊपर 2 इकाई पर स्थित है।</p>
+                    <p><strong>B = (−5, 2)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) C के निर्देशांक</p>
+                    <p class="mb-2">C, x-अक्ष के दाईं ओर 5 इकाई और y-अक्ष के नीचे 5 इकाई पर स्थित है।</p>
+                    <p><strong>C = (5, −5)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) निर्देशांक (−3, −5) द्वारा पहचाना गया बिन्दु</p>
+                    <p class="mb-2">x = −3, y = −5 ⇒ तीसरा चतुर्थांश। आकृति में यह बिन्दु <strong>E</strong> है।</p>
+                    <p><strong>उत्तर: E (−3, −5)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) निर्देशांक (2, −4) द्वारा पहचाना गया बिन्दु</p>
+                    <p class="mb-2">x = 2, y = −4 ⇒ चौथा चतुर्थांश। आकृति में यह बिन्दु <strong>G</strong> है।</p>
+                    <p><strong>उत्तर: G (2, −4)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) D का भुज (x-निर्देशांक)</p>
+                    <p class="mb-2">D का निर्देशांक (6, 2) है।</p>
+                    <p><strong>D का भुज = 6</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vi) बिन्दु H की कोटि (y-निर्देशांक)</p>
+                    <p class="mb-2">H का निर्देशांक (−5, −3) है।</p>
+                    <p><strong>H की कोटि = −3</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vii) बिन्दु L के निर्देशांक</p>
+                    <p class="mb-2">L, y-अक्ष पर 5 इकाई ऊपर स्थित है।</p>
+                    <p><strong>L = (0, 5)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(viii) बिन्दु M के निर्देशांक</p>
+                    <p class="mb-2">M, x-अक्ष के बाईं ओर 3 इकाई पर स्थित है (y-अक्ष पर नहीं)।</p>
+                    <p><strong>M = (−3, 0)</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 3.3 ==================== -->
+        <section id="exercise-3-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 3.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: किस चतुर्थांश में या किस अक्ष पर बिन्दु (−2, 4), (3, −1), (−1, 0), (1, 2) और (−3, −5) स्थित हैं? कार्तीय तल पर इनका स्थान निर्धारण करके अपने उत्तर सत्यापित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) बिन्दु (−2, 4)</strong></p>
+                    <p class="mb-2">x = −2 (ऋणात्मक), y = 4 (धनात्मक)</p>
+                    <p class="mb-2">चिह्न (−, +) ⇒ <strong>दूसरा चतुर्थांश (II)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) बिन्दु (3, −1)</strong></p>
+                    <p class="mb-2">x = 3 (धनात्मक), y = −1 (ऋणात्मक)</p>
+                    <p class="mb-2">चिह्न (+, −) ⇒ <strong>चौथा चतुर्थांश (IV)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) बिन्दु (−1, 0)</strong></p>
+                    <p class="mb-2">x = −1, y = 0</p>
+                    <p class="mb-2">चूँकि y-निर्देशांक 0 है, यह बिन्दु <strong>x-अक्ष पर (ऋणात्मक दिशा में)</strong> स्थित है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iv) बिन्दु (1, 2)</strong></p>
+                    <p class="mb-2">x = 1 (धनात्मक), y = 2 (धनात्मक)</p>
+                    <p class="mb-2">चिह्न (+, +) ⇒ <strong>पहला चतुर्थांश (I)</strong></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(v) बिन्दु (−3, −5)</strong></p>
+                    <p class="mb-2">x = −3 (ऋणात्मक), y = −5 (ऋणात्मक)</p>
+                    <p class="mb-2">चिह्न (−, −) ⇒ <strong>तीसरा चतुर्थांश (III)</strong></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>सत्यापन हेतु तालिका:</strong>
+                    <table class="coord-table">
+                        <tr>
+                            <th>बिन्दु</th>
+                            <th>x-निर्देशांक</th>
+                            <th>y-निर्देशांक</th>
+                            <th>चिह्न</th>
+                            <th>स्थान</th>
+                        </tr>
+                        <tr>
+                            <td>(−2, 4)</td>
+                            <td>−2</td>
+                            <td>+4</td>
+                            <td>(−, +)</td>
+                            <td>II चतुर्थांश</td>
+                        </tr>
+                        <tr>
+                            <td>(3, −1)</td>
+                            <td>+3</td>
+                            <td>−1</td>
+                            <td>(+, −)</td>
+                            <td>IV चतुर्थांश</td>
+                        </tr>
+                        <tr>
+                            <td>(−1, 0)</td>
+                            <td>−1</td>
+                            <td>0</td>
+                            <td>(−, 0)</td>
+                            <td>x-अक्ष (ऋणात्मक)</td>
+                        </tr>
+                        <tr>
+                            <td>(1, 2)</td>
+                            <td>+1</td>
+                            <td>+2</td>
+                            <td>(+, +)</td>
+                            <td>I चतुर्थांश</td>
+                        </tr>
+                        <tr>
+                            <td>(−3, −5)</td>
+                            <td>−3</td>
+                            <td>−5</td>
+                            <td>(−, −)</td>
+                            <td>III चतुर्थांश</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: अक्षों पर दूरी के उपयुक्त एकक लेकर नीचे सारणी में दिए गए बिन्दुओं को तल पर आलेखित कीजिए:</h3>
+                <div class="step">
+                    <table class="coord-table">
+                        <tr>
+                            <th>x</th>
+                            <td>−2</td>
+                            <td>−1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th>y</th>
+                            <td>8</td>
+                            <td>7</td>
+                            <td>−1.25</td>
+                            <td>3</td>
+                            <td>−1</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>बिन्दु इस प्रकार हैं:</strong></p>
+                    <p class="mb-2">A = (−2, 8) — x ऋणात्मक, y धनात्मक ⇒ II चतुर्थांश</p>
+                    <p class="mb-2">B = (−1, 7) — x ऋणात्मक, y धनात्मक ⇒ II चतुर्थांश</p>
+                    <p class="mb-2">C = (0, −1.25) — x = 0 ⇒ y-अक्ष पर (ऋणात्मक दिशा)</p>
+                    <p class="mb-2">D = (1, 3) — x धनात्मक, y धनात्मक ⇒ I चतुर्थांश</p>
+                    <p class="mb-2">E = (3, −1) — x धनात्मक, y ऋणात्मक ⇒ IV चतुर्थांश</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>आलेखन विधि:</strong></p>
+                    <p class="mb-2">1. ग्राफ पेपर पर x-अक्ष और y-अक्ष खींचिए।</p>
+                    <p class="mb-2">2. पैमाना: x-अक्ष पर 1 इकाई = 1 cm, y-अक्ष पर 1 इकाई = 1 cm।</p>
+                    <p class="mb-2">3. प्रत्येक बिन्दु के लिए x-निर्देशांक के अनुसार x-अक्ष पर चलें, फिर y-निर्देशांक के अनुसार ऊपर/नीचे जाएँ।</p>
+                    <p class="mb-2">4. बिन्दु A(−2, 8) के लिए: x-अक्ष पर बाईं ओर 2 इकाई, फिर ऊपर 8 इकाई।</p>
+                    <p class="mb-2">5. बिन्दु B(−1, 7) के लिए: x-अक्ष पर बाईं ओर 1 इकाई, फिर ऊपर 7 इकाई।</p>
+                    <p class="mb-2">6. बिन्दु C(0, −1.25) के लिए: y-अक्ष पर नीचे 1.25 इकाई।</p>
+                    <p class="mb-2">7. बिन्दु D(1, 3) के लिए: x-अक्ष पर दाईं ओर 1 इकाई, फिर ऊपर 3 इकाई।</p>
+                    <p class="mb-2">8. बिन्दु E(3, −1) के लिए: x-अक्ष पर दाईं ओर 3 इकाई, फिर नीचे 1 इकाई।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> सभी पाँच बिन्दु कार्तीय तल पर आलेखित हो गए।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>महत्वपूर्ण बिंदु:</strong> जब x = 0 हो, तो बिन्दु y-अक्ष पर स्थित होता है। जब y = 0 हो, तो बिन्दु x-अक्ष पर स्थित होता है। बिन्दु की स्थिति जानने के लिए उसके निर्देशांकों के चिह्न देखें।
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 3 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1.</strong> तल में एक बिन्दु की स्थिति निर्धारित करने के लिए दो लंबवत रेखाओं की आवश्यकता होती है — x-अक्ष और y-अक्ष।</p>
+                <p class="mb-2"><strong>2.</strong> इन दोनों अक्षों से बने तल को <strong>कार्तीय तल</strong> या <strong>निर्देशांक तल</strong> कहा जाता है।</p>
+                <p class="mb-2"><strong>3.</strong> अक्षों के प्रतिच्छेद बिन्दु को <strong>मूलबिन्दु</strong> कहा जाता है, जिसके निर्देशांक (0, 0) होते हैं।</p>
+                <p class="mb-2"><strong>4.</strong> y-अक्ष से बिन्दु की दूरी = <strong>x-निर्देशांक (भुज)</strong> और x-अक्ष से बिन्दु की दूरी = <strong>y-निर्देशांक (कोटि)</strong>।</p>
+                <p class="mb-2"><strong>5.</strong> चतुर्थांशों में चिह्न:</p>
+                <p class="mb-2 pl-4">I चतुर्थांश: (+, +) | II चतुर्थांश: (−, +) | III चतुर्थांश: (−, −) | IV चतुर्थांश: (+, −)</p>
+                <p class="mb-2"><strong>6.</strong> x-अक्ष पर बिन्दु: (x, 0) | y-अक्ष पर बिन्दु: (0, y)</p>
+                <p class="mb-2"><strong>7.</strong> यदि x ≠ y, तो (x, y) ≠ (y, x)।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

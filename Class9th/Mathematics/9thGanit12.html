@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 9 गणित - अध्याय 12: सांख्यिकी</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #eef2ff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 12<br>सांख्यिकी</h1>
+            <p class="mt-2 text-lg">कक्षा 9 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 12.1 ==================== -->
+        <section id="exercise-12-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 12.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: विश्व में 15-44 (वर्षों में) की आयु वाली महिलाओं में बीमारी और मृत्यु के कारणों का एक सर्वेक्षण निम्नलिखित आँकड़े (प्रतिशत में) देता है:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>क्र.सं.</th>
+                            <th>कारण</th>
+                            <th>स्त्री मृत्यु दर (%)</th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>जनन स्वास्थ्य अवस्थाएँ</td>
+                            <td>31.8</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>तंत्रिका संबंधी अवस्थाएँ</td>
+                            <td>25.4</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>चोट</td>
+                            <td>12.4</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>हृदय संबंधी अवस्थाएँ</td>
+                            <td>4.3</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>श्वसन संबंधी अवस्थाएँ</td>
+                            <td>4.1</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>अन्य कारण</td>
+                            <td>22.0</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ऊपर दी गई सूचना को ग्राफीय रूप में निरूपित कीजिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">इस आँकड़े को ग्राफीय रूप में निरूपित करने के लिए, हम दंड आलेख (bar graph) का उपयोग कर सकते हैं।</p>
+                        <p class="mb-2">दंड आलेख बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>दो लंबवत रेखाएँ खींचिए (x-अक्ष और y-अक्ष)</li>
+                            <li>x-अक्ष पर बीमारी और मृत्यु के कारणों को अंकित कीजिए</li>
+                            <li>y-अक्ष पर 0 से 35 तक प्रतिशत मान अंकित कीजिए</li>
+                            <li>समान चौड़ाई के आयताकार दंड खींचिए जिनकी ऊँचाई प्रतिशत के अनुरूप हो</li>
+                            <li>आलेख को उचित रूप से नामांकित कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) विश्व में महिलाओं की बीमारी और मृत्यु का प्रमुख कारण कौन-सी अवस्था है?</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आँकड़ों से हम देख सकते हैं कि:</p>
+                        <p class="mb-2">जनन स्वास्थ्य अवस्थाएँ सबसे अधिक प्रतिशत (31.8%) पर हैं।</p>
+                        <p><strong>उत्तर:</strong> जनन स्वास्थ्य अवस्थाएँ</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) अपने अध्यापक की सहायता से उन दो कारकों का पता लगाने का प्रयास कीजिए जो (ii) में दिए कारण के प्रमुख होने के लिए उत्तरदायी हैं।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दो कारक जो जनन स्वास्थ्य अवस्थाओं के प्रमुख कारण होने में बड़ी भूमिका निभाते हैं:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>गर्भावस्था और प्रसव के दौरान उचित स्वास्थ्य सेवाओं तक पहुँच की कमी</li>
+                            <li>महिलाओं के लिए अपर्याप्त पोषण और स्वास्थ्य सेवाएँ, विशेष रूप से विकासशील देशों में</li>
+                        </ol>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> इस आँकड़े को दंड आलेख में दिखाया जा सकता है। जनन स्वास्थ्य अवस्थाएँ (31.8%) महिलाओं की बीमारी और मृत्यु का सबसे बड़ा कारण हैं। इसके दो मुख्य कारण हैं: गर्भावस्था और प्रसव के दौरान उचित स्वास्थ्य सेवाओं की कमी, और विकासशील देशों में महिलाओं के लिए पर्याप्त पोषण और स्वास्थ्य सेवाओं की कमी।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: भारतीय समाज के विभिन्न वर्गों में प्रति हजार लड़कों पर लड़कियों की संख्या (निकटतम दहाई तक) का आँकड़ा नीचे दिया गया है।</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>वर्ग</th>
+                            <th>प्रति हजार लड़कों पर लड़कियों की संख्या</th>
+                        </tr>
+                        <tr>
+                            <td>अनुसूचित जाति (SC)</td>
+                            <td>940</td>
+                        </tr>
+                        <tr>
+                            <td>अनुसूचित जनजाति (ST)</td>
+                            <td>970</td>
+                        </tr>
+                        <tr>
+                            <td>गैर SC/ST</td>
+                            <td>920</td>
+                        </tr>
+                        <tr>
+                            <td>पिछड़े जिले</td>
+                            <td>950</td>
+                        </tr>
+                        <tr>
+                            <td>गैर-पिछड़े जिले</td>
+                            <td>920</td>
+                        </tr>
+                        <tr>
+                            <td>ग्रामीण</td>
+                            <td>930</td>
+                        </tr>
+                        <tr>
+                            <td>शहरी</td>
+                            <td>910</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) ऊपर दी गई सूचना को दंड आलेख से निरूपित कीजिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दंड आलेख बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>दो लंबवत रेखाएँ खींचिए (x-अक्ष और y-अक्ष)</li>
+                            <li>x-अक्ष पर समाज के विभिन्न वर्गों को अंकित कीजिए</li>
+                            <li>y-अक्ष पर प्रति हजार लड़कों पर लड़कियों की संख्या 900 से 1000 तक अंकित कीजिए</li>
+                            <li>समान चौड़ाई के आयताकार दंड खींचिए जिनकी ऊँचाई मानों के अनुरूप हो</li>
+                            <li>आलेख को उचित रूप से नामांकित कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) कक्षा में चर्चा कीजिए कि आलेख से कौन-से निष्कर्ष निकाले जा सकते हैं।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आलेख से हम निम्नलिखित निष्कर्ष निकाल सकते हैं:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>अनुसूचित जनजाति (ST) में प्रति हजार लड़कों पर लड़कियों की संख्या सबसे अधिक (970) है।</li>
+                            <li>शहरी क्षेत्रों में प्रति हजार लड़कों पर लड़कियों की संख्या सबसे कम (910) है।</li>
+                            <li>शहरी क्षेत्रों की तुलना में ग्रामीण क्षेत्रों में लड़कियों और लड़कों का अनुपात सामान्यतः अधिक है।</li>
+                            <li>गैर SC/ST और गैर-पिछड़े जिलों में अनुपात समान (920) है।</li>
+                        </ol>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> इस आँकड़े को दंड आलेख में दिखाया जा सकता है। आलेख से हम यह निष्कर्ष निकाल सकते हैं कि अनुसूचित जनजाति में लड़कियों का अनुपात सबसे अधिक है (970), जबकि शहरी क्षेत्रों में सबसे कम (910)। ग्रामीण क्षेत्रों में लड़कियों का अनुपात शहरी क्षेत्रों से बेहतर है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक राज्य के विधान सभा चुनावों में विभिन्न राजनीतिक दलों द्वारा जीती गई सीटों की संख्या नीचे दी गई है:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>राजनीतिक दल</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                            <th>E</th>
+                            <th>F</th>
+                        </tr>
+                        <tr>
+                            <td>जीती गई सीटें</td>
+                            <td>75</td>
+                            <td>55</td>
+                            <td>37</td>
+                            <td>29</td>
+                            <td>10</td>
+                            <td>37</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) चुनाव परिणामों को निरूपित करने के लिए एक दंड आलेख खींचिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दंड आलेख बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>दो लंबवत रेखाएँ खींचिए (x-अक्ष और y-अक्ष)</li>
+                            <li>x-अक्ष पर राजनीतिक दलों A, B, C, D, E, F को अंकित कीजिए</li>
+                            <li>y-अक्ष पर सीटों की संख्या 0 से 80 तक अंकित कीजिए</li>
+                            <li>समान चौड़ाई के आयताकार दंड खींचिए जिनकी ऊँचाई जीती गई सीटों के अनुरूप हो</li>
+                            <li>आलेख को उचित रूप से नामांकित कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) किस राजनीतिक दल ने अधिकतम सीटें जीतीं?</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आँकड़ों से:</p>
+                        <p class="mb-2">दल A ने 75 सीटें जीतीं।</p>
+                        <p class="mb-2">यह सभी दलों में सबसे अधिक संख्या है।</p>
+                        <p><strong>उत्तर:</strong> राजनीतिक दल A</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> इस आँकड़े को दंड आलेख में दिखाया जा सकता है। दल A ने सबसे अधिक 75 सीटें जीती हैं, जो कि अधिकतम है।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक पौधे की 40 पत्तियों की लंबाइयाँ एक मिलीमीटर तक शुद्ध मापी गई हैं और प्राप्त आँकड़े निम्नलिखित सारणी में दर्शाए गए हैं:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>लंबाई (mm में)</th>
+                            <th>पत्तियों की संख्या</th>
+                        </tr>
+                        <tr>
+                            <td>118 - 126</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>127 - 135</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>136 - 144</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>145 - 153</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>154 - 162</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>163 - 171</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>172 - 180</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) दिए हुए आँकड़ों को निरूपित करने के लिए एक आयतचित्र खींचिए। [संकेत: पहले वर्ग अंतरालों को सतत बनाइए]</h4>
+
+                    <div class="step">
+                        <p class="mb-2">पहले, हमें वर्ग अंतरालों को सतत बनाना होगा:</p>
+                        <p class="mb-2">वर्गों के बीच का अंतर 1 है (जैसे, 126 और 127)</p>
+                        <p class="mb-2">इन्हें सतत बनाने के लिए, हम निचली सीमाओं से 0.5 घटाते हैं और ऊपरी सीमाओं में 0.5 जोड़ते हैं।</p>
+                        <p class="mb-2">सतत वर्ग अंतराल:</p>
+                        <table>
+                            <tr>
+                                <th>लंबाई (mm में)</th>
+                                <th>पत्तियों की संख्या</th>
+                            </tr>
+                            <tr>
+                                <td>117.5 - 126.5</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>126.5 - 135.5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>135.5 - 144.5</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>144.5 - 153.5</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>153.5 - 162.5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>162.5 - 171.5</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>171.5 - 180.5</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                        <p class="mb-2">अब, इन सतत वर्ग अंतरालों को x-अक्ष पर और बारंबारताओं को y-अक्ष पर लेकर एक आयतचित्र खींचिए।</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) क्या इसी आँकड़े के लिए कोई अन्य उपयुक्त ग्राफीय निरूपण भी संभव है?</h4>
+
+                    <div class="step">
+                        <p class="mb-2">हाँ, हम इस आँकड़े को बारंबारता बहुभुज (frequency polygon) का उपयोग करके भी निरूपित कर सकते हैं।</p>
+                        <p class="mb-2">बारंबारता बहुभुज बनाने के लिए:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>प्रत्येक वर्ग अंतराल के वर्ग-चिह्न (मध्यबिंदु) ज्ञात कीजिए</li>
+                            <li>वर्ग-चिह्नों को x-अक्ष पर और बारंबारताओं को y-अक्ष पर लेकर बिंदु अंकित कीजिए</li>
+                            <li>इन बिंदुओं को रेखाखंडों से जोड़िए</li>
+                            <li>रेखा को दोनों सिरों पर x-अक्ष तक बढ़ाइए</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(iii) क्या यह कहना सही है कि अधिकतम संख्या में पत्तियों की लंबाई 153 mm है? क्यों?</h4>
+
+                    <div class="step">
+                        <p class="mb-2">नहीं, यह कहना सही नहीं है कि अधिकतम संख्या में पत्तियों की लंबाई 153 mm है।</p>
+                        <p class="mb-2">वर्ग 145-153 में सबसे अधिक बारंबारता (12 पत्तियाँ) है, लेकिन इसका अर्थ है कि इस वर्ग की पत्तियों की लंबाई 145 mm और 153 mm के बीच है।</p>
+                        <p class="mb-2">हम यह नहीं कह सकते कि ये सभी 12 पत्तियाँ ठीक 153 mm लंबी हैं।</p>
+                        <p><strong>उत्तर:</strong> नहीं, क्योंकि वर्ग 145-153 उन पत्तियों को दर्शाता है जिनकी लंबाई 145 mm से 153 mm के बीच है, न कि ठीक 153 mm।</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> पहले वर्ग अंतरालों को सतत बनाएँ, फिर आयतचित्र बनाएँ। इस आँकड़े के लिए बारंबारता बहुभुज भी उपयुक्त है। यह गलत है कि अधिकतम पत्तियाँ 153 mm लंबी हैं, क्योंकि वर्ग 145-153 में 145 mm से 153 mm तक की पत्तियाँ हैं, सभी ठीक 153 mm की नहीं हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: निम्नलिखित सारणी 400 नियॉन लैंपों के जीवनकालों (life times) को दर्शाती है:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>जीवनकाल (घंटों में)</th>
+                            <th>लैंपों की संख्या</th>
+                        </tr>
+                        <tr>
+                            <td>300 - 400</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>400 - 500</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>500 - 600</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>600 - 700</td>
+                            <td>86</td>
+                        </tr>
+                        <tr>
+                            <td>700 - 800</td>
+                            <td>74</td>
+                        </tr>
+                        <tr>
+                            <td>800 - 900</td>
+                            <td>62</td>
+                        </tr>
+                        <tr>
+                            <td>900 - 1000</td>
+                            <td>48</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) दी हुई सूचना को एक आयतचित्र की सहायता से निरूपित कीजिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">आयतचित्र बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>दो लंबवत रेखाएँ खींचिए (x-अक्ष और y-अक्ष)</li>
+                            <li>x-अक्ष पर जीवनकाल के अंतरालों (300-400, 400-500, आदि) को अंकित कीजिए</li>
+                            <li>y-अक्ष पर लैंपों की संख्या 0 से 90 तक अंकित कीजिए</li>
+                            <li>आयताकार दंड खींचिए जिनकी चौड़ाई वर्ग अंतराल के बराबर और ऊँचाई बारंबारता के बराबर हो</li>
+                            <li>चूँकि वर्ग अंतराल समान हैं, प्रत्येक आयत का क्षेत्रफल बारंबारता के समानुपाती होता है</li>
+                            <li>आलेख को उचित रूप से नामांकित कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) कितने लैंपों का जीवनकाल 700 घंटों से अधिक है?</h4>
+
+                    <div class="step">
+                        <p class="mb-2">700 घंटों से अधिक जीवनकाल वाले लैंप:</p>
+                        <p class="mb-2">700-800: 74 लैंप</p>
+                        <p class="mb-2">800-900: 62 लैंप</p>
+                        <p class="mb-2">900-1000: 48 लैंप</p>
+                        <p class="mb-2">कुल = 74 + 62 + 48 = 184 लैंप</p>
+                        <p><strong>उत्तर:</strong> 184 लैंप</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> इस आँकड़े को आयतचित्र में दिखाया जा सकता है। 700 घंटों से अधिक जीवनकाल वाले लैंप: 700-800 (74), 800-900 (62), 900-1000 (48)। कुल = 74 + 62 + 48 = 184 लैंप।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: दो वर्गों के विद्यार्थियों के प्राप्तांकों के बंटन नीचे दी गई सारणी में दिए गए हैं:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th colspan="2">वर्ग A</th>
+                            <th colspan="2">वर्ग B</th>
+                        </tr>
+                        <tr>
+                            <th>प्राप्तांक</th>
+                            <th>बारंबारता</th>
+                            <th>प्राप्तांक</th>
+                            <th>बारंबारता</th>
+                        </tr>
+                        <tr>
+                            <td>0 - 10</td>
+                            <td>3</td>
+                            <td>0 - 10</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>10 - 20</td>
+                            <td>9</td>
+                            <td>10 - 20</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20 - 30</td>
+                            <td>17</td>
+                            <td>20 - 30</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>30 - 40</td>
+                            <td>12</td>
+                            <td>30 - 40</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>40 - 50</td>
+                            <td>9</td>
+                            <td>40 - 50</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">दोनों वर्गों के विद्यार्थियों के प्राप्तांकों को एक ही ग्राफ पर दो बारंबारता बहुभुजों द्वारा निरूपित कीजिए। इन दो बहुभुजों से दोनों वर्गों के प्रदर्शन की तुलना कीजिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">दोनों वर्गों के लिए बारंबारता बहुभुज बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>प्रत्येक वर्ग अंतराल के लिए वर्ग-चिह्न ज्ञात कीजिए:
+                                <div class="fraction">
+                                    <span class="numerator">ऊपरी सीमा + निचली सीमा</span>
+                                    <span class="denominator">2</span>
+                                </div>
+                            </li>
+                            <li>वर्ग A के लिए:
+                                <ul class="list-disc pl-5">
+                                    <li>0-10: वर्ग-चिह्न = (0+10)/2 = 5</li>
+                                    <li>10-20: वर्ग-चिह्न = (10+20)/2 = 15</li>
+                                    <li>20-30: वर्ग-चिह्न = (20+30)/2 = 25</li>
+                                    <li>30-40: वर्ग-चिह्न = (30+40)/2 = 35</li>
+                                    <li>40-50: वर्ग-चिह्न = (40+50)/2 = 45</li>
+                                </ul>
+                            </li>
+                            <li>वर्ग B के लिए:
+                                <ul class="list-disc pl-5">
+                                    <li>0-10: वर्ग-चिह्न = (0+10)/2 = 5</li>
+                                    <li>10-20: वर्ग-चिह्न = (10+20)/2 = 15</li>
+                                    <li>20-30: वर्ग-चिह्न = (20+30)/2 = 25</li>
+                                    <li>30-40: वर्ग-चिह्न = (30+40)/2 = 35</li>
+                                    <li>40-50: वर्ग-चिह्न = (40+50)/2 = 45</li>
+                                </ul>
+                            </li>
+                            <li>वर्ग-चिह्नों और बारंबारताओं का उपयोग करके दोनों वर्गों के लिए बिंदु अंकित कीजिए</li>
+                            <li>बिंदुओं को रेखाखंडों से जोड़कर दो बारंबारता बहुभुज बनाइए</li>
+                            <li>वर्ग A और वर्ग B के लिए अलग-अलग रंगों का उपयोग कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <p class="mb-2">प्रदर्शन की तुलना:</p>
+                        <ul class="list-disc pl-5">
+                            <li>वर्ग A में उच्च अंकों के वर्गों (20-30 और 30-40) में अधिक विद्यार्थी हैं।</li>
+                            <li>वर्ग B में निचले अंकों के वर्गों (0-10 और 10-20) में अधिक विद्यार्थी हैं।</li>
+                            <li>वर्ग A का प्रदर्शन कुल मिलाकर बेहतर है क्योंकि अधिक विद्यार्थियों ने उच्च अंक प्राप्त किए हैं।</li>
+                            <li>वर्ग B को 40-50 अंकों के वर्ग में सुधार की आवश्यकता है क्योंकि इस श्रेणी में केवल 1 विद्यार्थी है।</li>
+                        </ul>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> दोनों वर्गों के अंकों को एक ही ग्राफ पर दो बारंबारता बहुभुजों के रूप में दिखाया जा सकता है। तुलना से पता चलता है कि वर्ग A का प्रदर्शन बेहतर है क्योंकि उसमें उच्च अंकों की श्रेणी (20-30 और 30-40) में अधिक विद्यार्थी हैं। वर्ग B में निचले अंकों की श्रेणी (0-10 और 10-20) में अधिक विद्यार्थी हैं।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक क्रिकेट मैच में दो टीमों A और B द्वारा पहले 60 गेंदों में बनाए गए रन नीचे दिए गए हैं:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>गेंदों की संख्या</th>
+                            <th>टीम A</th>
+                            <th>टीम B</th>
+                        </tr>
+                        <tr>
+                            <td>1 - 6</td>
+                            <td>2</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>7 - 12</td>
+                            <td>1</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>13 - 18</td>
+                            <td>8</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>19 - 24</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>25 - 30</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>31 - 36</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>37 - 42</td>
+                            <td>6</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>43 - 48</td>
+                            <td>10</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>49 - 54</td>
+                            <td>6</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>55 - 60</td>
+                            <td>2</td>
+                            <td>10</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">दोनों टीमों के आँकड़ों को एक ही ग्राफ पर बारंबारता बहुभुजों द्वारा निरूपित कीजिए। [संकेत: पहले वर्ग अंतरालों को सतत बनाइए।]</h4>
+
+                    <div class="step">
+                        <p class="mb-2">पहले, वर्ग अंतरालों को सतत बनाइए:</p>
+                        <p class="mb-2">वर्गों के बीच का अंतर 1 है (जैसे, 6 और 7)</p>
+                        <p class="mb-2">इन्हें सतत बनाने के लिए, हम निचली सीमाओं से 0.5 घटाते हैं और ऊपरी सीमाओं में 0.5 जोड़ते हैं।</p>
+                        <p class="mb-2">सतत वर्ग अंतराल:</p>
+                        <table>
+                            <tr>
+                                <th>गेंदों की संख्या</th>
+                                <th>टीम A</th>
+                                <th>टीम B</th>
+                            </tr>
+                            <tr>
+                                <td>0.5 - 6.5</td>
+                                <td>2</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>6.5 - 12.5</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>12.5 - 18.5</td>
+                                <td>8</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.5</td>
+                                <td>9</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>24.5 - 30.5</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>30.5 - 36.5</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>36.5 - 42.5</td>
+                                <td>6</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>42.5 - 48.5</td>
+                                <td>10</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>48.5 - 54.5</td>
+                                <td>6</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>54.5 - 60.5</td>
+                                <td>2</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="step">
+                        <p class="mb-2">अब, दोनों टीमों के लिए बारंबारता बहुभुज बनाइए:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>प्रत्येक सतत वर्ग अंतराल के लिए वर्ग-चिह्न ज्ञात कीजिए</li>
+                            <li>वर्ग-चिह्नों और बनाए गए रनों का उपयोग करके दोनों टीमों के लिए बिंदु अंकित कीजिए</li>
+                            <li>बिंदुओं को रेखाखंडों से जोड़कर दो बारंबारता बहुभुज बनाइए</li>
+                            <li>टीम A और टीम B के लिए अलग-अलग रंगों का उपयोग कीजिए</li>
+                            <li>उचित नामांकन और संकेत जोड़िए</li>
+                        </ol>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> पहले वर्ग अंतरालों को सतत बनाएँ (0.5-6.5, 6.5-12.5, आदि)। फिर दोनों टीमों के आँकड़ों को एक ही ग्राफ पर दो बारंबारता बहुभुजों के रूप में दिखाएँ। टीम A और टीम B के लिए अलग-अलग रंगों का उपयोग करें।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक पार्क में खेल रहे विभिन्न आयु वर्गों के बच्चों की संख्या का एक यादृच्छिक सर्वेक्षण (random survey) निम्नलिखित आँकड़े देता है:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>आयु (वर्षों में)</th>
+                            <th>बच्चों की संख्या</th>
+                        </tr>
+                        <tr>
+                            <td>1 - 2</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>2 - 3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>3 - 5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>5 - 7</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>7 - 10</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10 - 15</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>15 - 17</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">उपर्युक्त आँकड़ों को निरूपित करने के लिए एक आयतचित्र खींचिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि वर्ग अंतरालों की चौड़ाइयाँ भिन्न-भिन्न हैं, हमें आयतों की ऊँचाइयों को समायोजित करना होगा।</p>
+                        <p class="mb-2">आयतचित्र बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>न्यूनतम वर्ग माप ज्ञात कीजिए: 1 वर्ष (वर्ग 1-2 और 2-3 के लिए)</li>
+                            <li>भिन्न चौड़ाइयों वाले वर्गों के लिए बारंबारताओं को समायोजित कीजिए:
+                                <ul class="list-disc pl-5">
+                                    <li>वर्ग 3-5 (चौड़ाई = 2) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">6</span>
+                                            <span class="denominator">2</span>
+                                        </div> × 1 = 3
+                                    </li>
+                                    <li>वर्ग 5-7 (चौड़ाई = 2) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">12</span>
+                                            <span class="denominator">2</span>
+                                        </div> × 1 = 6
+                                    </li>
+                                    <li>वर्ग 7-10 (चौड़ाई = 3) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">9</span>
+                                            <span class="denominator">3</span>
+                                        </div> × 1 = 3
+                                    </li>
+                                    <li>वर्ग 10-15 (चौड़ाई = 5) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">10</span>
+                                            <span class="denominator">5</span>
+                                        </div> × 1 = 2
+                                    </li>
+                                    <li>वर्ग 15-17 (चौड़ाई = 2) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">4</span>
+                                            <span class="denominator">2</span>
+                                        </div> × 1 = 2
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>वर्ग अंतरालों के बराबर चौड़ाई और समायोजित बारंबारताओं के बराबर ऊँचाई वाले आयत खींचिए</li>
+                            <li>आलेख को उचित रूप से नामांकित कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> क्योंकि वर्ग अंतराल भिन्न चौड़ाइयों के हैं, हमें बारंबारताओं को समायोजित करना होगा। न्यूनतम वर्ग माप 1 वर्ष है। प्रत्येक वर्ग के लिए समायोजित बारंबारता निकालकर आयतचित्र बनाएँ।
+                    </div>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: 100 उपनामों (surnames) को एक स्थानीय टेलीफोन निर्देशिका से यादृच्छिक रूप से चुना गया और अंग्रेजी वर्णमाला के अक्षरों की संख्या का बारंबारता बंटन निम्नलिखित पाया गया:</h3>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>अक्षरों की संख्या</th>
+                            <th>उपनामों की संख्या</th>
+                        </tr>
+                        <tr>
+                            <td>1 - 4</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>4 - 6</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>6 - 8</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td>8 - 12</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>12 - 20</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700">(i) दी गई सूचना को निरूपित करने के लिए एक आयतचित्र खींचिए।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">चूँकि वर्ग अंतरालों की चौड़ाइयाँ भिन्न-भिन्न हैं, हमें आयतों की ऊँचाइयों को समायोजित करना होगा।</p>
+                        <p class="mb-2">आयतचित्र बनाने के चरण:</p>
+                        <ol class="list-decimal pl-5">
+                            <li>न्यूनतम वर्ग माप ज्ञात कीजिए: 2 (वर्ग 4-6 और 6-8 के लिए)</li>
+                            <li>भिन्न चौड़ाइयों वाले वर्गों के लिए बारंबारताओं को समायोजित कीजिए:
+                                <ul class="list-disc pl-5">
+                                    <li>वर्ग 1-4 (चौड़ाई = 3) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">6</span>
+                                            <span class="denominator">3</span>
+                                        </div> × 2 = 4
+                                    </li>
+                                    <li>वर्ग 4-6 (चौड़ाई = 2) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">30</span>
+                                            <span class="denominator">2</span>
+                                        </div> × 2 = 30
+                                    </li>
+                                    <li>वर्ग 6-8 (चौड़ाई = 2) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">44</span>
+                                            <span class="denominator">2</span>
+                                        </div> × 2 = 44
+                                    </li>
+                                    <li>वर्ग 8-12 (चौड़ाई = 4) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">16</span>
+                                            <span class="denominator">4</span>
+                                        </div> × 2 = 8
+                                    </li>
+                                    <li>वर्ग 12-20 (चौड़ाई = 8) के लिए: समायोजित बारंबारता = 
+                                        <div class="fraction">
+                                            <span class="numerator">4</span>
+                                            <span class="denominator">8</span>
+                                        </div> × 2 = 1
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>वर्ग अंतरालों के बराबर चौड़ाई और समायोजित बारंबारताओं के बराबर ऊँचाई वाले आयत खींचिए</li>
+                            <li>आलेख को उचित रूप से नामांकित कीजिए</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="font-semibold text-lg mb-3 text-indigo-700 mt-4">(ii) वह वर्ग अंतराल लिखिए जिसमें अधिकतम उपनाम हैं।</h4>
+
+                    <div class="step">
+                        <p class="mb-2">मूल आँकड़ों से (समायोजित नहीं):</p>
+                        <p class="mb-2">वर्ग 6-8 में 44 उपनामों की सबसे अधिक बारंबारता है।</p>
+                        <p><strong>उत्तर:</strong> 6 - 8</p>
+                    </div>
+
+                    <div class="hinglish-explanation">
+                        <strong>हिंदी स्पष्टीकरण:</strong> आयतचित्र बनाने के लिए, भिन्न चौड़ाइयों वाले वर्ग अंतरालों के लिए बारंबारताओं को समायोजित करना होगा। न्यूनतम वर्ग माप 2 है। अधिकतम उपनाम वर्ग 6-8 में हैं (44 उपनाम)।
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- सारांश कार्ड -->
+        <div class="solution-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">📌 अध्याय 12 का सारांश</h3>
+            <div class="step">
+                <p class="mb-2"><strong>1. आँकड़ों का प्रस्तुतीकरण:</strong> आँकड़ों को सारणीबद्ध रूप में, दंड आलेख, आयतचित्र और बारंबारता बहुभुज के रूप में प्रस्तुत किया जा सकता है।</p>
+                <p class="mb-2"><strong>2. दंड आलेख (Bar Graph):</strong> श्रेणीबद्ध आँकड़ों को आयताकार दंडों द्वारा दर्शाया जाता है, जहाँ दंडों की ऊँचाई बारंबारता के समानुपाती होती है।</p>
+                <p class="mb-2"><strong>3. आयतचित्र (Histogram):</strong> सतत वर्ग अंतरालों वाले आँकड़ों को आयतों द्वारा दर्शाया जाता है, जहाँ आयतों की चौड़ाई वर्ग अंतराल के बराबर और ऊँचाई बारंबारता के अनुपात में होती है।</p>
+                <p class="mb-2"><strong>4. बारंबारता बहुभुज (Frequency Polygon):</strong> वर्ग-चिह्नों और बारंबारताओं के संगत बिंदुओं को रेखाखंडों से जोड़कर बनाया जाता है।</p>
+                <p class="mb-2"><strong>5. सतत वर्ग अंतराल:</strong> यदि वर्ग अंतराल सतत न हों, तो निचली सीमा से 0.5 घटाकर और ऊपरी सीमा में 0.5 जोड़कर उन्हें सतत बनाया जाता है।</p>
+                <p class="mb-2"><strong>6. असमान चौड़ाई वाले वर्ग अंतराल:</strong> यदि वर्ग अंतरालों की चौड़ाइयाँ असमान हों, तो बारंबारताओं को समायोजित किया जाता है ताकि आयतों का क्षेत्रफल बारंबारता के समानुपाती हो।</p>
+                <p class="mb-2"><strong>7. वर्ग-चिह्न:</strong> वर्ग-चिह्न = <div class="fraction"><span class="numerator">(ऊपरी सीमा + निचली सीमा)</span><span class="denominator">2</span></div></p>
+                <p class="mb-2"><strong>8. महत्वपूर्ण बिंदु:</strong> आँकड़ों का उचित ग्राफीय निरूपण उनके विश्लेषण और तुलना को सरल बनाता है।</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
