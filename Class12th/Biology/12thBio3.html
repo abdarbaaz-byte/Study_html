@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 3 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 3: जनन स्वास्थ्य</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">समाज में जनन स्वास्थ्य के महत्त्व के बारे में अपने विचार प्रकट कीजिए?</div>
+                        <div class="answer-text">
+                            विश्व स्वास्थ्य संगठन (WHO) के अनुसार, जनन स्वास्थ्य का अर्थ जनन के सभी पहलुओं सहित एक संपूर्ण स्वास्थ्य (शारीरिक, भावनात्मक, व्यवहारात्मक तथा सामाजिक स्वास्थ्य) है। समाज में जनन स्वास्थ्य का अत्यधिक महत्त्व है क्योंकि:<br><br>
+                            1. यह एक स्वस्थ समाज के निर्माण में सहायक है।<br>
+                            2. इससे लोगों को जनन अंगों, किशोरावस्था के परिवर्तनों, सुरक्षित यौन-क्रियाओं तथा यौन संचारित रोगों के बारे में सही जानकारी मिलती है।<br>
+                            3. यह अनियंत्रित जनसंख्या वृद्धि को नियंत्रित करने में मदद करता है।<br>
+                            4. यह मातृ एवं शिशु मृत्यु दर को कम करता है तथा सुरक्षित प्रसव में सहायक है।<br>
+                            5. जागरूकता के माध्यम से यह यौन दुरुपयोग और अपराधों को रोकने में मदद करता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जनन स्वास्थ्य के उन पहलुओं को सुझाएँ, जिन पर आज के परिदृश्य में विशेष ध्यान देने की जरूरत है?</div>
+                        <div class="answer-text">
+                            आज के परिदृश्य में जनन स्वास्थ्य के निम्नलिखित पहलुओं पर विशेष ध्यान देने की आवश्यकता है:<br><br>
+                            1. <strong>यौन शिक्षा:</strong> विद्यालयों और समाज में युवाओं को यौन शिक्षा प्रदान करना ताकि वे भ्रांतियों से बच सकें।<br>
+                            2. <strong>यौन संचारित रोगों (STDs) और एड्स:</strong> इनके प्रति जागरूकता और समय पर जाँच तथा उपचार।<br>
+                            3. <strong>मातृ एवं शिशु स्वास्थ्य:</strong> सुरक्षित प्रसव और प्रसवोत्तर (Postnatal) देखभाल को बढ़ावा देना।<br>
+                            4. <strong>गर्भनिरोधक उपायों की जानकारी:</strong> परिवार नियोजन के विभिन्न सुरक्षित विकल्पों के बारे में जागरूकता।<br>
+                            5. <strong>मादा भ्रूण हत्या:</strong> उल्बवेधन (Amniocentesis) के दुरुपयोग को रोकना और लिंगानुपात को संतुलित करना।<br>
+                            6. <strong>बंध्यता (Infertility):</strong> इसके उपचार और सहायक जनन प्रौद्योगिकियों (ART) के बारे में सही जानकारी प्रदान करना।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या विद्यालयों में यौन शिक्षा आवश्यक है? यदि हाँ तो क्यों?</div>
+                        <div class="answer-text">
+                            हाँ, विद्यालयों में यौन शिक्षा अत्यंत आवश्यक है। इसके प्रमुख कारण निम्नलिखित हैं:<br><br>
+                            1. यह युवाओं को सही और वैज्ञानिक जानकारी प्रदान करती है, जिससे वे यौन संबंधी भ्रांतियों और गलत धारणाओं से बच सकें।<br>
+                            2. यह उन्हें किशोरावस्था में होने वाले शारीरिक और भावनात्मक परिवर्तनों के लिए तैयार करती है।<br>
+                            3. यह यौन संचारित रोगों (STDs) और एड्स के खतरों के प्रति जागरूकता पैदा करती है।<br>
+                            4. यह असुरक्षित यौन संबंधों और किशोर गर्भधारण (Teenage pregnancy) को रोकने में मदद करती है।<br>
+                            5. यह समाज में यौन दुरुपयोग और अपराधों के बारे में जागरूकता बढ़ाकर एक सुरक्षित वातावरण बनाने में सहायक है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या आप मानते हैं कि पिछले 50 वर्षों के दौरान हमारे देश के जनन स्वास्थ्य में सुधार हुआ है? यदि हाँ, तो इस प्रकार के सुधार वाले कुछ क्षेत्रों का वर्णन कीजिए?</div>
+                        <div class="answer-text">
+                            हाँ, पिछले 50 वर्षों के दौरान भारत के जनन स्वास्थ्य में उल्लेखनीय सुधार हुआ है। सुधार वाले प्रमुख क्षेत्र निम्नलिखित हैं:<br><br>
+                            1. <strong>मृत्यु दर में कमी:</strong> बेहतर चिकित्सा सुविधाओं और प्रसवोत्तर देखभाल के कारण मातृ मृत्यु दर (MMR) और शिशु मृत्यु दर (IMR) में भारी गिरावट आई है।<br>
+                            2. <strong>लघु परिवार की प्रवृत्ति:</strong> जागरूकता और गर्भनिरोधक उपायों के प्रसार के कारण लघु परिवार (Small family) अपनाने वाले दंपतियों की संख्या में वृद्धि हुई है।<br>
+                            3. <strong>संस्थागत प्रसव:</strong> अस्पतालों और स्वास्थ्य केंद्रों में सुरक्षित प्रसव (Institutional deliveries) की संख्या में वृद्धि हुई है।<br>
+                            4. <strong>यौन रोगों की जाँच:</strong> यौन संचारित रोगों (STDs) की बेहतर जाँच, पहचान और उपचार की सुविधाएँ उपलब्ध हुई हैं।<br>
+                            5. <strong>कानूनी सुरक्षा:</strong> गर्भपात (MTP) को वैधानिक मान्यता मिलना और मादा भ्रूण हत्या को रोकने के लिए कड़े कानून (PCPNDT Act) बनाए गए हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जनसंख्या विस्फोट के कौन से कारण हैं?</div>
+                        <div class="answer-text">
+                            जनसंख्या विस्फोट (Population explosion) के प्रमुख कारण निम्नलिखित हैं:<br><br>
+                            1. <strong>मृत्यु दर में तीव्र गिरावट:</strong> बेहतर स्वास्थ्य सुविधाओं और पोषण के कारण लोगों की औसत आयु बढ़ी है और मृत्यु दर कम हुई है।<br>
+                            2. <strong>शिशु और मातृ मृत्यु दर में कमी:</strong> चिकित्सा विज्ञान की प्रगति से शिशु और मातृ मृत्यु दर में कमी आई है।<br>
+                            3. <strong>जनन आयु वर्ग की बड़ी आबादी:</strong> देश में युवाओं और जनन क्षमता वाले लोगों की संख्या में लगातार वृद्धि हो रही है।<br>
+                            4. <strong>अशिक्षा और अज्ञानता:</strong> ग्रामीण क्षेत्रों में परिवार नियोजन के साधनों के प्रति जागरूकता की कमी।<br>
+                            5. <strong>सामाजिक और धार्मिक कारण:</strong> पुत्र प्राप्ति की इच्छा और बड़े परिवार को सामाजिक सुरक्षा का प्रतीक मानना।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या गर्भनिरोधकों का उपयोग न्यायोचित है? कारण बताएँ।</div>
+                        <div class="answer-text">
+                            हाँ, गर्भनिरोधकों (Contraceptives) का उपयोग पूरी तरह से न्यायोचित है। इसके प्रमुख कारण निम्नलिखित हैं:<br><br>
+                            1. <strong>अनचाही गर्भावस्था को रोकना:</strong> यह अनचाहे गर्भधारण और असुरक्षित गर्भपात (Unsafe abortions) को रोकने में मदद करता है।<br>
+                            2. <strong>जनसंख्या नियंत्रण:</strong> यह बढ़ती जनसंख्या को नियंत्रित करने में महत्वपूर्ण भूमिका निभाता है।<br>
+                            3. <strong>मातृ स्वास्थ्य की रक्षा:</strong> बार-बार गर्भधारण करने से महिलाओं के स्वास्थ्य पर पड़ने वाले बुरे प्रभावों को रोकता है।<br>
+                            4. <strong>यौन संचारित रोगों से बचाव:</strong> कंडोम जैसे कुछ गर्भनिरोधक STDs और HIV/AIDS से भी सुरक्षा प्रदान करते हैं।<br>
+                            5. <strong>जन्म में अंतराल:</strong> यह दंपतियों को बच्चों के जन्म के बीच उचित अंतराल रखने की सुविधा देता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जनन प्रॉथ को हटाना गर्भ निरोधकों का विकल्प नहीं माना जा सकता है? क्यों?</div>
+                        <div class="answer-text">
+                            जनन प्रॉथ (Reproductive tract) को हटाना या शल्य क्रिया द्वारा बंध्यकरण (जैसे नसबंदी - शुक्रवाहक-उच्छेदन या डिंबवाहिनी नलिका उच्छेदन) गर्भ निरोधकों का सामान्य विकल्प नहीं माना जा सकता, क्योंकि:<br><br>
+                            1. <strong>यह एक स्थायी विधि है:</strong> इसमें पूर्वस्थिति (Reversibility) लाना बहुत कठिन होता है। एक बार नसबंदी कराने के बाद दंपति दोबारा संतान उत्पन्न नहीं कर सकते।<br>
+                            2. <strong>यह शल्य क्रिया है:</strong> इसमें चीरा लगाना पड़ता है, जिससे संक्रमण या अन्य जटिलताओं का खतरा रहता है।<br>
+                            3. <strong>यह युवा दंपतियों के लिए उपयुक्त नहीं है:</strong> जो दंपति भविष्य में संतान चाहते हैं या जिनका परिवार पूरा नहीं हुआ है, वे इस विधि को नहीं अपना सकते।<br>
+                            4. <strong>यह केवल स्थायी समाधान चाहने वालों के लिए है:</strong> यह उन्हीं लोगों के लिए सुझाया जाता है जिन्हें आगे कोई संतान नहीं चाहिए। अस्थायी या आवधिक रोकथाम के लिए यह उपयुक्त नहीं है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">उल्बवेधन एक घातक लिंग निर्धारण (जाँच) प्रक्रिया है, जो हमारे देश में निषिद्ध है? क्या यह आवश्यक होना चाहिए? टिप्पणी करें।</div>
+                        <div class="answer-text">
+                            उल्बवेधन (Amniocentesis) एक चिकित्सीय प्रक्रिया है जिसमें गर्भस्थ शिशु के चारों ओर के एमनीओटिक द्रव्य का नमूना लेकर भ्रूण की आनुवंशिक जाँच की जाती है।<br><br>
+                            <strong>हमारे देश में निषिद्ध क्यों है?</strong> इसका दुरुपयोग भ्रूण के लिंग की जाँच करने और मादा भ्रूण हत्या (Female foeticide) करने के लिए किया जा रहा था। लिंगानुपात को बिगड़ने से रोकने के लिए भारत सरकार ने इसे लिंग निर्धारण के लिए प्रतिबंधित (PCPNDT Act) कर दिया है।<br><br>
+                            <strong>क्या यह आवश्यक होना चाहिए?</strong> इसका उपयोग लिंग निर्धारण के लिए कदापि नहीं होना चाहिए क्योंकि यह सामाजिक असंतुलन और महिलाओं के खिलाफ अपराध को जन्म देता है। हालाँकि, आनुवंशिक विकारों (जैसे डाउन सिंड्रोम, हीमोफीलिया, सिकल सेल एनीमिया) की जाँच के लिए इसका चिकित्सीय उपयोग वैज्ञानिक और नैतिक रूप से आवश्यक और उचित है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">बंध्य दंपतियों को संतान पाने हेतु सहायता देने वाली कुछ विधियाँ बताएँ।</div>
+                        <div class="answer-text">
+                            बंध्य दंपतियों की सहायता के लिए सहायक जनन प्रौद्योगिकियाँ (Assisted Reproductive Technologies - ART) उपलब्ध हैं। कुछ प्रमुख विधियाँ निम्नलिखित हैं:<br><br>
+                            1. <strong>पात्रे निषेचन (IVF - In Vitro Fertilization):</strong> इसे 'टेस्ट ट्यूब बेबी' कार्यक्रम कहते हैं। इसमें प्रयोगशाला में अंडाणु और शुक्राणु का संलयन कराकर युग्मनज बनाया जाता है।<br>
+                            2. <strong>ZIFT (Zygote Intra Fallopian Transfer):</strong> इसमें 8-ब्लास्टोमियर तक के भ्रूण (युग्मनज) को फैलोपी नलिका में स्थानांतरित किया जाता है।<br>
+                            3. <strong>IUT (Intra Uterine Transfer):</strong> इसमें 8-ब्लास्टोमियर से अधिक विकसित भ्रूण को सीधे गर्भाशय में स्थानांतरित किया जाता है।<br>
+                            4. <strong>GIFT (Gamete Intra Fallopian Transfer):</strong> इसमें दाता से अंडाणु लेकर उसे उस स्त्री की फैलोपी नलिका में स्थानांतरित किया जाता है जो अंडाणु उत्पन्न नहीं कर सकती।<br>
+                            5. <strong>ICSI (Intra Cytoplasmic Sperm Injection):</strong> इसमें शुक्राणु को सीधे अंडाणु के कोशिकाद्रव्य में इंजेक्ट किया जाता है।<br>
+                            6. <strong>कृत्रिम वीर्यसेचन (AI - Artificial Insemination):</strong> इसमें पति या स्वस्थ दाता के शुक्राणुओं को कृत्रिम रूप से स्त्री की योनि या गर्भाशय में प्रविष्ट कराया जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">किसी व्यक्ति को यौन संचारित रोगों के संपर्क में आने से बचने के लिए कौन से उपाय अपनाने चाहिए?</div>
+                        <div class="answer-text">
+                            यौन संचारित रोगों (STDs) से बचने के लिए निम्नलिखित सरल और प्रभावी उपाय अपनाने चाहिए:<br><br>
+                            1. <strong>अनजान व्यक्तियों से बचें:</strong> किसी अनजान व्यक्ति या बहुत से लोगों के साथ यौन संबंध न रखें।<br>
+                            2. <strong>कंडोम का उपयोग:</strong> मैथुन के समय सदैव कंडोम का इस्तेमाल करने का प्रयास करें। यह गर्भनिरोधक के साथ-साथ STDs और HIV/AIDS से भी बचाव करता है।<br>
+                            3. <strong>समय पर जाँच और इलाज:</strong> यदि किसी भी प्रकार की आशंका हो, तो तुरंत किसी योग्य डॉक्टर से प्रारंभिक जाँच कराएँ। रोग का पता चलने पर इसका पूरा इलाज कराएँ।<br>
+                            4. <strong>जागरूकता:</strong> यौन संचारित रोगों के लक्षणों और उनसे बचाव के बारे में जानकारी रखें।<br>
+                            5. <strong>साझा सुइयों से बचें:</strong> संक्रमित रक्त या साझा सुइयों (जैसे नशीली दवाओं के लिए) का उपयोग न करें।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्न वाक्य सही हैं या गलत, व्याख्या सहित बताएँ-</div>
+                        <div class="answer-text">
+                            (क) गर्भपात स्वतः भी हो सकता है - <strong>सही (True)</strong><br>
+                            <strong>व्याख्या:</strong> कई बार गुणसूत्रीय असामान्यताओं, संक्रमण या अन्य कारणों से भ्रूण का विकास रुक जाता है और स्वतः ही गर्भपात (Spontaneous abortion/Miscarriage) हो जाता है।<br><br>
+                            
+                            (ख) बंध्यता को जीवनक्षम संतति न पैदा कर पाने की अयोग्यता के रूप में परिभाषित किया गया है और यह सदैव स्त्री की असामान्यताओं/दोषों के कारण होती है - <strong>गलत (False)</strong><br>
+                            <strong>व्याख्या:</strong> बंध्यता स्त्री या पुरुष दोनों में से किसी के भी दोष के कारण हो सकती है। भारत में अक्सर गलती से इसका दोष केवल स्त्रियों को दिया जाता है, जो कि वैज्ञानिक रूप से गलत है।<br><br>
+                            
+                            (ग) एक प्राकृतिक गर्भनिरोधक उपाय के रूप में शिशु को पूर्णरूप से स्तनपान कराना सहायक होता है - <strong>सही (True)</strong><br>
+                            <strong>व्याख्या:</strong> इसे स्तनपान अनार्तव (Lactational Amenorrhea) कहते हैं। प्रसव के बाद 6 महीने तक यदि माँ पूर्ण रूप से शिशु को स्तनपान कराती है (बिना किसी अतिरिक्त आहार या पानी के), तो इस अवधि में अंडोत्सर्ग नहीं होता और गर्भधारण की संभावना लगभग शून्य होती है।<br><br>
+                            
+                            (घ) लोगों के जनन स्वास्थ्य के सुधार हेतु यौन संबंधित पहलुओं के बारे में जागरूकता पैदा करना एक प्रभावी उपाय है - <strong>सही (True)</strong><br>
+                            <strong>व्याख्या:</strong> जागरूकता से लोग STDs, सुरक्षित यौन संबंध, परिवार नियोजन और स्वच्छता के महत्व को समझते हैं, जिससे समाज का जनन स्वास्थ्य बेहतर होता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित कथनों को सही करें-</div>
+                        <div class="answer-text">
+                            (क) <strong>गलत कथन:</strong> गर्भनिरोध के शल्य क्रियात्मक उपाय युग्मक बनने को रोकते हैं।<br>
+                            <strong>सही कथन:</strong> गर्भनिरोध के शल्य क्रियात्मक उपाय (नसबंदी) युग्मकों के <strong>परिवहन (संचार)</strong> को रोकते हैं, उनके निर्माण को नहीं।<br><br>
+                            
+                            (ख) <strong>गलत कथन:</strong> सभी प्रकार के यौन संचारित रोग पूरी तरह से उपचार योग्य हैं।<br>
+                            <strong>सही कथन:</strong> यकृतशोध-बी (Hepatitis-B), जननिक परिसर्प (Genital herpes) और एचआईवी/एड्स (HIV/AIDS) जैसे कुछ यौन संचारित रोग पूरी तरह से उपचार योग्य <strong>नहीं</strong> हैं।<br><br>
+                            
+                            (ग) <strong>गलत कथन:</strong> ग्रामीण महिलाओं के बीच गर्भनिरोधक के रूप में गोलियाँ (पिल्स) बहुत अधिक लोकप्रिय हैं।<br>
+                            <strong>सही कथन:</strong> गोलियाँ (पिल्स) मुख्य रूप से <strong>शहरी और शिक्षित</strong> महिलाओं के बीच अधिक लोकप्रिय हैं, ग्रामीण महिलाओं में इनका उपयोग अपेक्षाकृत कम है।<br><br>
+                            
+                            (घ) <strong>गलत कथन:</strong> ई टी (ET) तकनीकों में भ्रूण को सदैव गर्भाशय में स्थानांतरित किया जाता है।<br>
+                            <strong>सही कथन:</strong> ई टी (ET) तकनीकों में 8-ब्लास्टोमियर तक के भ्रूण को <strong>फैलोपी नलिका (ZIFT)</strong> में और 8-ब्लास्टोमियर से अधिक विकसित भ्रूण को <strong>गर्भाशय (IUT)</strong> में स्थानांतरित किया जाता है।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

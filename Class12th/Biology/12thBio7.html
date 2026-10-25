@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 7 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 7: मानव स्वास्थ्य तथा रोग</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">कौन से विभिन्न जन स्वास्थ्य उपाय हैं, जिन्हें आप संक्रामक रोगों के विरूद्ध रक्षा-उपायों के रूप में सुझायेंगे?</div>
+                        <div class="answer-text">
+                            संक्रामक रोगों के विरूद्ध रक्षा के लिए निम्नलिखित जन स्वास्थ्य उपायों को सुझाया जा सकता है:<br><br>
+                            1. <strong>स्वच्छ पेयजल की व्यवस्था:</strong> पानी को उबालकर, फिल्टर करके या क्लोरीन मिलाकर पीने योग्य बनाना।<br>
+                            2. <strong>अपशिष्टों का समुचित निपटान:</strong> मल-मूत्र और कूड़े-करकट का वैज्ञानिक तरीके से निपटान (सीवेज ट्रीटमेंट), खुले में शौच को रोकना।<br>
+                            3. <strong>रोगवाहकों (वेक्टर्स) का नियंत्रण:</strong> मच्छरों, मक्खियों आदि के प्रजनन स्थलों को नष्ट करना, कीटनाशकों का छिड़काव, मच्छरदानी और जाली का उपयोग।<br>
+                            4. <strong>टीकाकरण (प्रतिरक्षीकरण):</strong> बच्चों और वयस्कों को संक्रामक रोगों (जैसे पोलियो, डिप्थीरिया, खसरा आदि) के विरुद्ध टीके लगवाना।<br>
+                            5. <strong>खाद्य सुरक्षा:</strong> खाद्य पदार्थों को ढककर रखना और ताजा भोजन करना।<br>
+                            6. <strong>स्वास्थ्य शिक्षा:</strong> लोगों को व्यक्तिगत स्वच्छता और रोगों के प्रति जागरूक करना।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जैविकी के अध्ययन ने संक्रामक रोगों को नियंत्रित करने में किस प्रकार हमारी सहायता की है?</div>
+                        <div class="answer-text">
+                            जैविकी (Biology) के अध्ययन ने संक्रामक रोगों को नियंत्रित करने में निम्नलिखित प्रकार से महत्वपूर्ण सहायता की है:<br><br>
+                            1. <strong>टीकों की खोज:</strong> चेचक, पोलियो, टिटनेस, डिप्थीरिया आदि रोगों के प्रभावी टीके विकसित किए गए, जिससे इन रोगों का उन्मूलन या नियंत्रण संभव हुआ।<br>
+                            2. <strong>प्रतिजैविकों (एंटीबायोटिक्स) की खोज:</strong> पेनिसिलिन और अन्य एंटीबायोटिक्स की खोज से जीवाणुजनित रोगों का इलाज आसान हो गया।<br>
+                            3. <strong>निदान (Diagnostics) की सुविधा:</strong> एलिसा (ELISA), PCR आदि तकनीकों से रोगों की जल्दी और सटीक पहचान हो पाती है।<br>
+                            4. <strong>जैव प्रौद्योगिकी:</strong> पुनर्योगज DNA तकनीक से सुरक्षित और अधिक प्रभावी टीके (जैसे हेपेटाइटिस-B वैक्सीन) बनाए गए हैं।<br>
+                            5. <strong>रोगजनकों की समझ:</strong> रोगजनकों के जीवन चक्र और उनके संचरण के तरीकों को समझकर उनके नियंत्रण के उपाय विकसित किए गए हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित रोगों का संचरण कैसे होता है? (क) अमीबता (ख) मलेरिया (ग) एस्केरिसता (घ) न्युमोनिया</div>
+                        <div class="answer-text">
+                            <strong>(क) अमीबता (Amoebiasis):</strong> यह एंटअमीवा हिस्टोलिटिका परजीवी से होता है। इसका संचरण मुख्य रूप से <strong>दूषित भोजन और पानी</strong> के सेवन से होता है। घरेलू मक्खियाँ इसके यांत्रिक वाहक का काम करती हैं, जो संक्रमित व्यक्ति के मल से परजीवी को भोजन तक पहुँचा देती हैं।<br><br>
+                            <strong>(ख) मलेरिया (Malaria):</strong> यह प्लाज्मोडियम प्रोटोजोआ से होता है। इसका संचरण <strong>संक्रमित मादा एनोफिलीज मच्छर</strong> के काटने से होता है। मच्छर रोगवाहक (Vector) का कार्य करता है।<br><br>
+                            <strong>(ग) एस्केरिसता (Ascariasis):</strong> यह गोलकृमि (एस्केरिस) से होता है। संक्रमित व्यक्ति के मल से इसके अंडे बाहर आते हैं और मिट्टी, पानी व सब्जियों को दूषित कर देते हैं। स्वस्थ व्यक्ति में यह <strong>दूषित पानी, फलों और सब्जियों</strong> के सेवन से फैलता है।<br><br>
+                            <strong>(घ) न्युमोनिया (Pneumonia):</strong> यह स्ट्रेप्टोकोकस न्युमोनी और हीमोफिलस इन्फ्लुएंजी जीवाणुओं से होता है। इसका संचरण संक्रमित व्यक्ति द्वारा छोड़े गए <strong>बिंदुकों (Droplets) या एयरोसोल</strong> को साँस द्वारा अंदर लेने से या संक्रमित व्यक्ति के बर्तनों/वस्तुओं का उपयोग करने से होता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जल-वाहित रोगों की रोकथाम के लिए आप क्या उपाय अपनायेंगे?</div>
+                        <div class="answer-text">
+                            जल-वाहित रोगों (जैसे टाइफॉइड, हैजा, अमीबता, एस्केरिसता) की रोकथाम के लिए निम्नलिखित उपाय अपनाए जाने चाहिए:<br><br>
+                            1. <strong>स्वच्छ पेयजल:</strong> पानी को उबालकर, फिल्टर करके या क्लोरीन की गोलियों से शुद्ध करके पीना।<br>
+                            2. <strong>स्वच्छता:</strong> पीने के पानी के स्रोतों (कुओं, हैंडपंप, तालाबों) को साफ रखना और उन्हें ढककर रखना।<br>
+                            3. <strong>मल-मूत्र का सुरक्षित निपटान:</strong> खुले में शौच न करना, सीवेज लाइनों का रखरखाव और पानी के स्रोतों के पास गंदगी न जाने देना।<br>
+                            4. <strong>खाद्य स्वच्छता:</strong> फलों और सब्जियों को पानी से अच्छी तरह धोकर खाना, खाद्य पदार्थों को मक्खियों से बचाकर ढककर रखना।<br>
+                            5. <strong>व्यक्तिगत स्वच्छता:</strong> शौच के बाद और भोजन से पहले साबुन से हाथ धोना।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">डी एन ए वैक्सीन के संदर्भ में ‘उपयुक्त जीन’ के अर्थ के बारे में अपने अध्याय से चर्चा कीजिए।</div>
+                        <div class="answer-text">
+                            पुनर्योगज DNA (Recombinant DNA) प्रौद्योगिकी का उपयोग करके टीके बनाए जाते हैं। इसमें रोगजनक (विषाणु या जीवाणु) के उस <strong>जीन</strong> को चुना जाता है जो उस रोगजनक की <strong>प्रतिजनी पॉलीपेप्टाइड (Antigenic polypeptide)</strong> का कोडन करता है। इस विशिष्ट जीन को 'उपयुक्त जीन' कहते हैं।<br><br>
+                            इस जीन को जीवाणु या यीस्ट (खमीर) में डालकर उस प्रोटीन (प्रतिजन) का बड़े पैमाने पर उत्पादन किया जाता है। जब यह शुद्ध प्रोटीन शरीर में डाला जाता है, तो यह रोग पैदा किए बिना ही शरीर में प्रतिरक्षा प्रतिक्रिया उत्पन्न कर देता है। इस प्रकार का टीका अधिक सुरक्षित और प्रभावी होता है (जैसे- यीस्ट से बनने वाला हेपेटाइटिस-B टीका)।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्राथमिक और द्वितीयक लसीकाओं के अंगों के नाम बताइए।</div>
+                        <div class="answer-text">
+                            मानव शरीर में लसीकाभ अंग (Lymphoid organs) दो प्रकार के होते हैं:<br><br>
+                            <strong>1. प्राथमिक लसीकाभ अंग (Primary Lymphoid Organs):</strong> ये वे अंग हैं जहाँ लसीकाणु (Lymphocytes) उत्पन्न होते हैं और परिपक्व होते हैं। उदाहरण: <strong>अस्थि मज्जा (Bone Marrow)</strong> और <strong>थाइमस (Thymus)</strong>।<br><br>
+                            <strong>2. द्वितीयक लसीकाभ अंग (Secondary Lymphoid Organs):</strong> ये वे अंग हैं जहाँ परिपक्व लसीकाणु प्रतिजनों के संपर्क में आते हैं और प्रतिरक्षा अनुक्रिया उत्पन्न करते हैं। उदाहरण: <strong>प्लीहा (Spleen)</strong>, <strong>लसीका ग्रंथियाँ (Lymph nodes)</strong>, <strong>टॉन्सिल (Tonsils)</strong>, <strong>पेयर पैच (Peyer's patches)</strong> और <strong>परिशेषिका (Appendix)</strong>।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">इस अध्याय में निम्नलिखित सुप्रसिद्ध संकेताक्षर इस्तेमाल किए गए हैं। इनका पूरा रूप बताइए- (क) एमएएलटी (ख) सीएमआई (ग) एड्स (घ) एनएसीओ (च) एचआईवी</div>
+                        <div class="answer-text">
+                            (क) <strong>एमएएलटी (MALT):</strong> म्यूकोसल एसोसिएटेड लिम्फॉयड टिश्यू (Mucosa Associated Lymphoid Tissue)<br>
+                            (ख) <strong>सीएमआई (CMI):</strong> सेल-मीडिएटेड इम्युनिटी (Cell-Mediated Immunity)<br>
+                            (ग) <strong>एड्स (AIDS):</strong> एक्वायर्ड इम्यूनो डेफिसिएंसी सिंड्रोम (Acquired Immuno Deficiency Syndrome)<br>
+                            (घ) <strong>एनएसीओ (NACO):</strong> नेशनल एड्स कंट्रोल ऑर्गनाइजेशन (National AIDS Control Organisation)<br>
+                            (च) <strong>एचआईवी (HIV):</strong> ह्यूमन इम्यूनो डेफिसिएंसी वायरस (Human Immuno Deficiency Virus)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित में भेद कीजिए और प्रत्येक के उदाहरण दीजिए। (क) सहज (जन्मजात) और उपार्जित प्रतिरक्षा (ख) सक्रिय और निष्क्रिय प्रतिरक्षा</div>
+                        <div class="answer-text">
+                            <strong>(क) सहज (जन्मजात) और उपार्जित प्रतिरक्षा में अंतर:</strong><br>
+                            <strong>सहज प्रतिरक्षा (Innate Immunity):</strong> यह जन्म से ही उपस्थित होती है और अविशिष्ट (Non-specific) होती है। इसमें शारीरिक (त्वचा), कायिकीय (आमाशय का अम्ल), कोशिकीय (श्वेताणु) और साइटोकाइन रोध शामिल हैं। <em>उदाहरण:</em> त्वचा का रोगाणुओं को रोकना।<br>
+                            <strong>उपार्जित प्रतिरक्षा (Acquired Immunity):</strong> यह जीवनकाल में प्राप्त होती है और रोगजनक-विशिष्ट (Pathogen-specific) होती है। इसमें स्मृति (Memory) होती है। <em>उदाहरण:</em> चेचक होने के बाद उसके प्रति जीवन भर प्रतिरक्षा होना।<br><br>
+
+                            <strong>(ख) सक्रिय और निष्क्रिय प्रतिरक्षा में अंतर:</strong><br>
+                            <strong>सक्रिय प्रतिरक्षा (Active Immunity):</strong> इसमें परपोषी के शरीर में प्रतिजन के संपर्क में आने पर स्वयं प्रतिरक्षी बनते हैं। यह धीमी होती है लेकिन दीर्घकालिक होती है। <em>उदाहरण:</em> टीकाकरण (वैक्सीन) या प्राकृतिक संक्रमण।<br>
+                            <strong>निष्क्रिय प्रतिरक्षा (Passive Immunity):</strong> इसमें बने हुए तैयार प्रतिरक्षी सीधे शरीर में दिए जाते हैं। यह तुरंत प्रभाव डालती है लेकिन अल्पकालिक होती है। <em>उदाहरण:</em> साँप के काटने पर दिया जाने वाला प्रतिआविष (एंटीवेनम) या माँ के कोलोस्ट्रम (पीयूष) से शिशु को मिलने वाली प्रतिरक्षा।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्रतिरक्षी (प्रतिपंड) अणु का अच्छी तरह नामांकित चित्र बनाइए।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 10 (चित्र 7.4) का संदर्भ लें।<br><br>
+                            <strong>आरेख में निम्नलिखित भागों को नामांकित करें:</strong><br>
+                            1. प्रतिजन बंधक स्थल (Antigen binding site)<br>
+                            2. लघु शृंखला (Light chain)<br>
+                            3. दीर्घ शृंखला (Heavy chain)<br><br>
+                            <em>(संरचना का वर्णन: प्रतिरक्षी अणु H₂L₂ संरचना वाला प्रोटीन होता है, जिसमें दो दीर्घ (Heavy) और दो लघु (Light) पेप्टाइड शृंखलाएँ होती हैं। ये 'Y' आकार के होते हैं।)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">वे कौन से विभिन्न रास्ते हैं जिनके द्वारा मानव प्रतिरक्षान्यूनता विषाणु (एच आई वी) का संचारण होता है?</div>
+                        <div class="answer-text">
+                            मानव प्रतिरक्षान्यूनता विषाणु (HIV) निम्नलिखित मार्गों से संचारित होता है:<br><br>
+                            1. <strong>यौन संपर्क:</strong> संक्रमित व्यक्ति के साथ असुरक्षित यौन संबंध बनाने से।<br>
+                            2. <strong>रक्त संचारण:</strong> संदूषित (Contaminated) रक्त या रक्त उत्पादों के आधान (Transfusion) से।<br>
+                            3. <strong>संक्रमित सुइयों का साझा प्रयोग:</strong> विशेष रूप से नशीली दवाओं (ड्रग्स) के अंत:शिरा (Intravenous) उपयोग करने वालों में सुई और सिरिंज साझा करने से।<br>
+                            4. <strong>माँ से बच्चे में:</strong> संक्रमित माँ से अपरा (Placenta) के माध्यम से गर्भस्थ शिशु में।<br><br>
+                            <em>नोट: HIV केवल शारीरिक तरल पदार्थों के आदान-प्रदान से फैलता है, छूने, हाथ मिलाने या हवा से नहीं फैलता।</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">वे कौन सी क्रियाविधि है जिससे एड्स विषाणु संक्रमित व्यक्ति के प्रतिरक्षा तंत्र का ह्रास करता है।</div>
+                        <div class="answer-text">
+                            एड्स विषाणु (HIV) द्वारा प्रतिरक्षा तंत्र के ह्रास की क्रियाविधि निम्नलिखित है:<br><br>
+                            1. HIV शरीर में प्रवेश करने के बाद मुख्य रूप से <strong>बृहत्भक्षकाणु (Macrophages)</strong> में प्रवेश करता है।<br>
+                            2. वहाँ अपने विलोम ट्रांसक्रिप्टेज (Reverse Transcriptase) एंजाइम की सहायता से अपने RNA से विषाणुजनित DNA (Viral DNA) बनाता है।<br>
+                            3. यह विषाणुजनित DNA परपोषी कोशिका के DNA में समाहित (Integrate) हो जाता है।<br>
+                            4. इसके बाद HIV <strong>सहायक T-लसीकाणुओं (Helper T-lymphocytes या TH)</strong> पर हमला करता है, उनमें प्रतिकृति बनाता है और उन्हें नष्ट कर देता है।<br>
+                            5. समय के साथ TH कोशिकाओं की संख्या में लगातार कमी आ जाती है। चूँकि TH कोशिकाएँ पूरे प्रतिरक्षा तंत्र को नियंत्रित करती हैं, इसलिए प्रतिरक्षा तंत्र कमजोर पड़ जाता है (Immuno-deficiency)।<br>
+                            6. परिणामस्वरूप, रोगी जीवाणुओं, विषाणुओं, कवकों और परजीवियों के अवसरवादी संक्रमणों (Opportunistic infections) का शिकार हो जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्रसामान्य कोशिका से कैंसर कोशिका किस प्रकार भिन्न है?</div>
+                        <div class="answer-text">
+                            प्रसामान्य कोशिका (Normal cell) और कैंसर कोशिका (Cancer cell) में मुख्य अंतर निम्नलिखित हैं:<br><br>
+                            1. <strong>संस्पर्श संदमन (Contact Inhibition):</strong> प्रसामान्य कोशिकाओं में संस्पर्श संदमन का गुण होता है, अर्थात् दूसरी कोशिकाओं के संपर्क में आने पर उनकी वृद्धि रुक जाती है। कैंसर कोशिकाओं में यह गुण खत्म हो जाता है, और वे अनियंत्रित रूप से विभाजित होती रहती हैं।<br>
+                            2. <strong>वृद्धि और विभेदन:</strong> प्रसामान्य कोशिकाओं की वृद्धि और विभेदन नियंत्रित और नियमित होता है। कैंसर कोशिकाओं में ये नियामक तंत्र टूट जाते हैं।<br>
+                            3. <strong>अर्वुद (Tumor) का निर्माण:</strong> कैंसर कोशिकाएँ विभाजित होकर कोशिकाओं का भंडार (अर्वुद) बना देती हैं, जबकि प्रसामान्य कोशिकाएँ ऐसा नहीं करतीं।<br>
+                            4. <strong>मेटास्टेसिस:</strong> कैंसर कोशिकाओं में रक्त के माध्यम से शरीर के दूसरे भागों में फैलने (Metastasis) की क्षमता होती है, जो प्रसामान्य कोशिकाओं में नहीं होती।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 13</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">मैटास्टेसिस का क्या मतलब है व्याख्या कीजिए।</div>
+                        <div class="answer-text">
+                            <strong>मैटास्टेसिस (Metastasis):</strong> यह दुर्दम (Malignant) अर्वुदों (Tumors) का सबसे खतरनाक गुण है। इसका अर्थ है कैंसर कोशिकाओं का शरीर के एक भाग से दूसरे भाग में फैलना।<br><br>
+                            <strong>व्याख्या:</strong> दुर्दम अर्वुद से कुछ कोशिकाएँ टूटकर अलग हो जाती हैं और रक्त या लसीका तंत्र के माध्यम से शरीर के दूर-दराज के अंगों तक पहुँच जाती हैं। वहाँ पहुँचकर वे नए अर्वुद (द्वितीयक अर्वुद) बनाना शुरू कर देती हैं। इसी प्रक्रिया को मैटास्टेसिस कहते हैं। यही कारण है कि कैंसर शरीर के अन्य अंगों में भी फैल जाता है और उपचार को कठिन बना देता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 14</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">ऐल्कोहल/ड्रग के द्वारा होने वाले कुप्रयोग के हानिकारक प्रभावों की सूची बनाएँ।</div>
+                        <div class="answer-text">
+                            ऐल्कोहल और ड्रग के कुप्रयोग के प्रमुख हानिकारक प्रभाव निम्नलिखित हैं:<br><br>
+                            1. <strong>तत्कालिक प्रभाव:</strong> अंधाधुंध व्यवहार, बर्बरता और हिंसा।<br>
+                            2. <strong>जीवन के लिए खतरा:</strong> अत्यधिक मात्रा में सेवन से श्वसन-पात (Respiratory failure), हृदय-पात (Heart failure) या मस्तिष्क रक्तस्राव (Cerebral hemorrhage) के कारण मृत्यु हो सकती है।<br>
+                            3. <strong>शैक्षिक और व्यवहारिक समस्याएँ:</strong> पढ़ाई में प्रदर्शन में गिरावट, स्कूल/कॉलेज से अनुपस्थिति, आक्रामकता, अवसाद, एकाकीपन और परिवार से संबंधों में कड़वाहट।<br>
+                            4. <strong>संक्रमण का खतरा:</strong> अंत:शिरा (नसों में) द्वारा ड्रग लेने वालों में संक्रमित सुइयों के साझा प्रयोग से एड्स (AIDS) और यकृतशोध-B (Hepatitis B) जैसे घातक रोग हो सकते हैं।<br>
+                            5. <strong>शारीरिक क्षति:</strong> लंबे समय तक सेवन से तंत्रिका तंत्र (Nervous system) और यकृत (Liver) को गंभीर क्षति (Cirrhosis) पहुँचती है।<br>
+                            6. <strong>खिलाड़ियों में प्रभाव:</strong> प्रदर्शन बढ़ाने के लिए उपचयी स्टेरॉयड के सेवन से महिलाओं में मर्दाना लक्षण (Masculinization) और पुरुषों में शुक्राणु उत्पादन में कमी आ सकती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 15</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या आप ऐसा सोचते हैं कि मित्रगण किसी को ऐल्कोहल/ड्रग सेवन के लिए प्रभावित कर सकते हैं? यदि हाँ, तो व्यक्ति ऐसे प्रभावों से कैसे अपने आपको बचा सकते हैं?</div>
+                        <div class="answer-text">
+                            हाँ, यह बहुत सत्य है कि मित्रों का दबाव (Peer pressure) किशोरों को ऐल्कोहल या ड्रग के सेवन के लिए प्रभावित कर सकता है। किशोरावस्था में साथियों में घुलने-मिलने और उनके बीच स्वीकार्यता पाने की इच्छा बहुत प्रबल होती है, जिसके कारण वे गलत आदतों को अपना लेते हैं।<br><br>
+                            <strong>बचाव के उपाय:</strong><br>
+                            1. <strong>स्पष्ट मना करना:</strong> व्यक्ति को 'ना' कहने का साहस रखना चाहिए और गलत काम के लिए स्पष्ट रूप से मना करना चाहिए।<br>
+                            2. <strong>सही मित्रों का चुनाव:</strong> ऐसे मित्रों का चयन करना चाहिए जो सकारात्मक गतिविधियों (जैसे खेल, पढ़ाई) में रुचि रखते हों।<br>
+                            3. <strong>विषम परिस्थितियों से बचना:</strong> ऐसी पार्टियों या जगहों पर जाने से बचें जहाँ नशीले पदार्थों का सेवन किया जाता हो।<br>
+                            4. <strong>अपने शौक पर ध्यान देना:</strong> अपनी ऊर्जा को खेलकूद, संगीत, योग या अन्य रचनात्मक गतिविधियों में लगाएँ।<br>
+                            5. <strong>माता-पिता/शिक्षकों से सलाह:</strong> यदि मित्र बार-बार दबाव डाल रहे हों, तो अपने माता-पिता या शिक्षकों से खुलकर बात करें और उनसे मार्गदर्शन लें।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 16</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">ऐसा क्या है कि जब कोई व्यक्ति ऐल्कोहल या ड्रग लेना शुरू कर देता है तो उस आदत से छुटकारा पाना कठिन होता है? अपने अध्यापक से चर्चा कीजिए।</div>
+                        <div class="answer-text">
+                            ऐल्कोहल या ड्रग की लत से छुटकारा पाना कठिन होता है क्योंकि इनमें <strong>व्यसन (Addiction)</strong> और <strong>निर्भरता (Dependence)</strong> की प्रकृति होती है। इसके मुख्य कारण हैं:<br><br>
+                            1. <strong>सहनशीलता (Tolerance) में वृद्धि:</strong> बार-बार सेवन से शरीर के ग्राही (Receptors) इन पदार्थों के प्रति सुन्न हो जाते हैं। इसलिए वही प्रभाव पाने के लिए व्यक्ति को अधिक मात्रा में लेना पड़ता है।<br>
+                            2. <strong>विनिवर्तन संलक्षण (Withdrawal Syndrome):</strong> अचानक ड्रग लेना बंद करने पर शरीर में चिंता, कंपन, मिचली और पसीना जैसे गंभीर लक्षण प्रकट होते हैं। इनसे बचने के लिए व्यक्ति फिर से इसे लेने को विवश हो जाता है।<br>
+                            3. <strong>मानसिक आसक्ति:</strong> व्यक्ति को लगता है कि यह उसके तनाव, अवसाद या परीक्षा के डर को कम करता है, जबकि वास्तव में यह समस्या को और बढ़ाता है।<br><br>
+                            <em>(नोट: यह एक चर्चात्मक प्रश्न है, आप इस विषय पर अपने अध्यापक के साथ और चर्चा कर सकते हैं।)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 17</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">आपके विचार से किशोरों को ऐल्कोहॉल या ड्रग के सेवन के लिए क्या प्रेरित करता है और इससे कैसे बचा जा सकता है?</div>
+                        <div class="answer-text">
+                            <strong>किशोरों को ऐल्कोहॉल या ड्रग के सेवन के लिए प्रेरित करने वाले कारक:</strong><br>
+                            1. <strong>जिज्ञासा:</strong> नई चीजों को आजमाने की इच्छा और रोमांच (Thrill)।<br>
+                            2. <strong>समकक्षी दबाव (Peer Pressure):</strong> मित्रों के दबाव में आकर 'स्टाइल' में शामिल होने के लिए।<br>
+                            3. <strong>तनाव और अवसाद:</strong> पढ़ाई, परीक्षा, करियर या पारिवारिक समस्याओं से बचने के लिए।<br>
+                            4. <strong>पारिवारिक अस्थिरता:</strong> माता-पिता का तालमेल न होना या अकेलापन।<br>
+                            5. <strong>मीडिया का प्रभाव:</strong> फिल्मों, टीवी और इंटरनेट पर इन पदार्थों को 'कूल' दिखाना।<br><br>
+                            <strong>बचाव के उपाय:</strong><br>
+                            1. <strong>जागरूकता और शिक्षा:</strong> स्कूलों में इनके दुष्प्रभावों के बारे में जानकारी देना।<br>
+                            2. <strong>सकारात्मक गतिविधियाँ:</strong> खेलकूद, संगीत, योग और सामाजिक कार्यों में भागीदारी बढ़ाना।<br>
+                            3. <strong>पारिवारिक सहयोग:</strong> माता-पिता का व्यवहार मित्रवत होना चाहिए ताकि बच्चे अपनी समस्याएँ खुलकर बता सकें।<br>
+                            4. <strong>परामर्श:</strong> तनाव की स्थिति में विशेषज्ञ (काउंसलर) की सहायता लेना।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

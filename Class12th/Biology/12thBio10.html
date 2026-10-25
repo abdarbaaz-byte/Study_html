@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 10 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 10: जैव प्रौद्योगिकी एवं उसके उपयोग</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">विषाणु मुक्त पादप तैयार करने के लिए पादप का कौन सा भाग सबसे अधिक उपयुक्त है तथा क्यों?</div>
+                        <div class="answer-text">
+                            विषाणु मुक्त पादप (Virus-free plants) तैयार करने के लिए पादप का <strong>विभज्योतक (Meristem)</strong> भाग सबसे अधिक उपयुक्त होता है।<br><br>
+                            <strong>कारण:</strong> यदि कोई पादप विषाणु से संक्रमित हो जाता है, तब भी उसका विभज्योतक (शीर्ष या कक्षीय) विषाणु से अप्रभावित रहता है। अतः विभज्योतक को अलग कर उसे परखनली (Test tube) में उगाया जाता है, जिससे विषाणु मुक्त पादप तैयार हो सकें। इस तकनीक का उपयोग केला, गन्ना, आलू आदि के लिए सफलतापूर्वक किया गया है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">सूक्ष्मप्रवर्धन द्वारा पादपों के उत्पादन के मुख्य लाभ क्या हैं?</div>
+                        <div class="answer-text">
+                            सूक्ष्मप्रवर्धन (Micropropagation) द्वारा पादपों के उत्पादन के मुख्य लाभ निम्नलिखित हैं:<br><br>
+                            1. <strong>अल्प समय में अधिक उत्पादन:</strong> अत्यंत कम समय में हजारों पादपों का प्रवर्धन संभव होता है।<br>
+                            2. <strong>आनुवंशिक समानता:</strong> इस विधि से उत्पन्न सभी पादप आनुवंशिक रूप से मूल पादप के समान (सोमाक्लोन) होते हैं।<br>
+                            3. <strong>रोगमुक्त पादप:</strong> यह विधि रोगग्रस्त पादपों से स्वस्थ (विषाणु मुक्त) पादपों को प्राप्त करने में सहायक है।<br>
+                            4. <strong>दुर्लभ प्रजातियों का संरक्षण:</strong> विलुप्तप्राय या दुर्लभ पादपों का संरक्षण इस विधि से आसानी से किया जा सकता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पत्ती में कत्तोतक पादप के प्रवर्धन में जिस माध्यम का प्रयोग किया गया है, उसमें विभिन्न घटकों का पता लगाओ।</div>
+                        <div class="answer-text">
+                            पत्ती के ऊतक संवर्धन (Tissue culture) में प्रयोग किए जाने वाले पोषक माध्यम (Nutrient medium) में निम्नलिखित घटक शामिल होते हैं:<br><br>
+                            1. <strong>कार्बन स्रोत:</strong> सुक्रोज (Sucrose) ऊर्जा और कार्बन के लिए।<br>
+                            2. <strong>अकार्बनिक लवण:</strong> मैक्रोन्यूट्रिएंट्स (नाइट्रेट, फॉस्फेट, सल्फेट आदि) और माइक्रोन्यूट्रिएंट्स (लोहा, जिंक, तांबा आदि)।<br>
+                            3. <strong>विटामिन और अमीनो अम्ल:</strong> वृद्धि और विकास के लिए।<br>
+                            4. <strong>वृद्धि नियंत्रक (हॉर्मोन):</strong> जैसे ऑक्सिन (Auxin) और साइटोकाइनिन (Cytokinin), जो कोशिका विभाजन और अंग विभेदन को प्रेरित करते हैं।<br>
+                            5. <strong>जेलिंग एजेंट:</strong> ऐगार (Agar) जो माध्यम को ठोस रूप प्रदान करता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">बीटी (Bt) आविष के रवे कुछ जीवाणुओं द्वारा बनाए जाते हैं लेकिन जीवाणु स्वयं को नहीं मारते हैं; क्योंकि—</div>
+                        <div class="answer-text">
+                            <strong>(ग) आविष निष्क्रिय होता है।</strong><br><br>
+                            <strong>व्याख्या:</strong> बीटी (Bt) जीवविष प्रोटीन जीवाणु के अंदर एक निष्क्रिय (Inactive) रूप में रहता है। यह तब तक सक्रिय नहीं होता जब तक कि कोई कीट (पीड़क) इसे न खा ले। कीट की आंत में उपस्थित क्षारीय pH के कारण यह निष्क्रिय प्रोटीन घुलनशील होकर सक्रिय रूप में परिवर्तित हो जाता है और कीट को मार देता है। इसीलिए जीवाणु स्वयं इस विष से सुरक्षित रहता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पारजीवी जीवाणु क्या है? किसी एक उदाहरण द्वारा सचित्र वर्णन करो।</div>
+                        <div class="answer-text">
+                            <em>(नोट: यहाँ 'पारजीवी जीवाणु' के स्थान पर 'पारजीवी जंतु/जीव' (Transgenic Animals) का उत्तर दिया गया है क्योंकि यह अध्याय के विषय-वस्तु के अनुरूप है।)</em><br><br>
+                            <strong>पारजीवी जंतु (Transgenic Animals):</strong> ऐसे जंतु जिनके डीएनए में कृत्रिम रूप से एक अतिरिक्त (बाहरी) जीन डाला गया होता है और जो अपना लक्षण व्यक्त करता है, उन्हें पारजीवी जंतु कहते हैं।<br><br>
+                            <strong>उदाहरण:</strong> <strong>रोजी गाय (Rosie Cow)</strong>। वर्ष 1997 में सर्वप्रथम पारजीवी गाय 'रोजी' का निर्माण किया गया था। इस गाय के डीएनए में मानव प्रोटीन (अल्फा-लैक्टएल्ब्यूमिन) का जीन डाला गया था, जिससे वह ऐसा दूध देती है जिसमें मानव प्रोटीन (2.4 ग्राम प्रति लीटर) मिलता है। यह दूध मानव शिशु के लिए अत्यधिक संतुलित पोषक तत्व है।<br><br>
+                            <em>(चित्र के लिए पाठ्यपुस्तक में दिए गए जीन स्थानांतरण प्रक्रिया के चित्र का संदर्भ लें, जहाँ मानव जीन को निषेचित अंडे में डालकर सरोगेट माँ में स्थानांतरित किया जाता है।)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">आनुवंशिक रूपांतरित फसलों के उत्पादन के लाभ व हानि का तुलनात्मक विभेद किजिए।</div>
+                        <div class="answer-text">
+                            <strong>लाभ:</strong><br>
+                            1. <strong>कीट-प्रतिरोधकता:</strong> जैसे Bt कपास, जिससे कीटनाशकों की आवश्यकता कम हो जाती है।<br>
+                            2. <strong>अजैविक तनाव सहनशीलता:</strong> ठंडा, सूखा, लवण और ताप के प्रति अधिक सहनशील फसलें।<br>
+                            3. <strong>पोषण में सुधार:</strong> जैसे 'गोल्डन राइस' जिसमें विटामिन-A की मात्रा अधिक होती है।<br>
+                            4. <strong>उपज में वृद्धि:</strong> फसलों की उत्पादकता और गुणवत्ता में सुधार।<br><br>
+
+                            <strong>हानि (जोखिम):</strong><br>
+                            1. <strong>पर्यावरणीय जोखिम:</strong> जीएम फसलें प्राकृतिक पारिस्थितिकी तंत्र को प्रभावित कर सकती हैं और जैव विविधता को नुकसान पहुँचा सकती हैं।<br>
+                            2. <strong>सुपरवीड्स का विकास:</strong> कीटनाशक-प्रतिरोधी फसलों से प्रतिरोधी खरपतवार (Superweeds) विकसित हो सकते हैं।<br>
+                            3. <strong>मानव स्वास्थ्य पर प्रभाव:</strong> इनके दीर्घकालिक प्रभावों के बारे में अभी पूरी जानकारी नहीं है (एलर्जी आदि)।<br>
+                            4. <strong>नैतिक और सामाजिक मुद्दे:</strong> बीजों पर बहुराष्ट्रीय कंपनियों का एकाधिकार (Patent) और किसानों की परंपरागत अधिकारों का हनन।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्राई प्रोटीस क्या है? उस जीव का नाम बताओ जो इसे पैदा करता है। मनुष्य इस प्रोटीन को अपने फायदे के लिए कैसे उपयोग में लाता है।</div>
+                        <div class="answer-text">
+                            <strong>क्राई प्रोटीन (Cry Protein):</strong> यह एक प्रकार का विषैला प्रोटीन (Bt toxin) है जो कुछ जीवाणुओं द्वारा उत्पन्न किया जाता है और विशिष्ट कीटों (जैसे सुंडी, भृंग) को मारने में सक्षम होता है।<br><br>
+                            <strong>जीव का नाम:</strong> इसे <em>बैसिलस थुरिंजिएंसिस (Bacillus thuringiensis)</em> नामक जीवाणु पैदा करता है।<br><br>
+                            <strong>मनुष्य द्वारा उपयोग:</strong> मनुष्य इस जीवाणु से क्राई जीन (जैसे cry1Ac, cry2Ab) को पृथक करके फसलों (जैसे Bt कपास, Bt मक्का) के जीनोम में स्थानांतरित कर देता है। इससे वे फसलें कीट-प्रतिरोधी (Pest-resistant) हो जाती हैं और रासायनिक कीटनाशकों के उपयोग की आवश्यकता कम हो जाती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जीन चिकित्सा क्या है? एडीनोसीन डिएमीनेंज (ए डी ए) की कमी का उदाहरण देते हुए इसका सचित्र वर्णन करें।</div>
+                        <div class="answer-text">
+                            <strong>जीन चिकित्सा (Gene Therapy):</strong> यह एक विधि है जिसके द्वारा किसी व्यक्ति या भ्रूण की कोशिकाओं में दोषपूर्ण/उत्परिवर्तित जीन को सामान्य (स्वस्थ) जीन से प्रतिस्थापित करके आनुवंशिक रोगों का उपचार किया जाता है।<br><br>
+                            <strong>ADA की कमी का उदाहरण:</strong> एडीनोसीन डिएमीनेज (ADA) एंजाइम की कमी से 'सीवियर कंबाइंड इम्यूनोडेफिशिएंसी' (SCID) रोग होता है, जिसमें प्रतिरक्षा तंत्र बहुत कमजोर हो जाता है।<br><br>
+                            <strong>उपचार विधि:</strong><br>
+                            1. रोगी के रक्त से लसीकाणु (Lymphocytes) निकाले जाते हैं।<br>
+                            2. इन लसीकाणुओं को शरीर से बाहर (In vitro) संवर्धित किया जाता है।<br>
+                            3. एक पश्चविषाणु (Retrovirus) संवाहक की सहायता से सक्रिय ADA जीन को इन कोशिकाओं में प्रवेश कराया जाता है।<br>
+                            4. इन आनुवंशिक रूप से संशोधित लसीकाणुओं को वापस रोगी के शरीर में स्थानांतरित कर दिया जाता है।<br><br>
+                            <em>(चित्र के लिए पाठ्यपुस्तक में दिए गए जीन चिकित्सा के आरेख का संदर्भ लें।)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">ई.कोलाई जैसे जीवाणु में मानव जीन की क्लोनिंग एवं अभिव्यक्ति के प्रायोगिक चरणों का आरखीय निरूपण प्रस्तुत करें।</div>
+                        <div class="answer-text">
+                            <em>(निर्देश: यह एक आरेखीय प्रश्न है। नीचे चरणों का क्रम दिया गया है, जिन्हें आप आरेख के रूप में प्रस्तुत कर सकते हैं।)</em><br><br>
+                            <strong>चरण:</strong><br>
+                            1. <strong>मानव डीएनए का पृथक्करण:</strong> मानव कोशिका से वांछित जीन (जैसे इंसुलिन जीन) प्राप्त करना।<br>
+                            2. <strong>संवाहक (Vector) तैयार करना:</strong> प्लाज्मिड डीएनए (जैसे pBR322) को उसी प्रतिबंधन एंजाइम (Restriction Enzyme) से काटना।<br>
+                            3. <strong>पुनर्योगज डीएनए का निर्माण:</strong> मानव जीन और प्लाज्मिड को डीएनए लाइगेज एंजाइम से जोड़ना।<br>
+                            4. <strong>रूपांतरण (Transformation):</strong> पुनर्योगज डीएनए को ई.कोलाई (E. coli) जीवाणु में प्रवेश कराना।<br>
+                            5. <strong>चयन और क्लोनिंग:</strong> प्रतिजैविक युक्त माध्यम पर जीवाणुओं को उगाना ताकि केवल पुनर्योगज जीवाणु ही जीवित रहें और उनकी संख्या बढ़े।<br>
+                            6. <strong>अभिव्यक्ति:</strong> ई.कोलाई द्वारा मानव इंसुलिन प्रोटीन का उत्पादन।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">तेल के रसायन शास्त्र तथा आरडीएनए जिसके बारे में आपको जितना भी ज्ञान प्राप्त है, उसमें आधार बीजों तेल हाइड्रोकाबन हटाने की कोई एक विधि सुझाओ।</div>
+                        <div class="answer-text">
+                            <em>(नोट: यह एक खुला/चर्चात्मक प्रश्न है।)</em><br><br>
+                            तिलहन बीजों से अवांछित हाइड्रोकार्बन (जैसे एरुसिक एसिड) हटाने के लिए आरडीएनए (rDNA) तकनीक का उपयोग किया जा सकता है।<br><br>
+                            <strong>विधि:</strong> बीजों में तेल के संश्लेषण के मार्ग (Lipid biosynthesis pathway) में शामिल एंजाइमों (जैसे डीसैचुरेज एंजाइम) के जीन को आरडीएनए तकनीक से निष्क्रिय (Knock-out) करना या बदलना। इससे बीज में वांछित वसीय अम्लों (जैसे ओलिक एसिड) का उत्पादन बढ़ जाता है और अवांछित हाइड्रोकार्बन (एरुसिक एसिड) का निर्माण रुक जाता है। इससे तेल की गुणवत्ता बढ़ जाती है। (जैसे कैनोला तेल में सुधार)।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">इंटरनेट से पता लगाओ कि गोल्डन राइस (गोल्डन धान) क्या है?</div>
+                        <div class="answer-text">
+                            <strong>गोल्डन राइस (Golden Rice):</strong> यह एक आनुवंशिक रूप से रूपांतरित (GM) चावल (धान) की किस्म है।<br><br>
+                            इसे आरडीएनए तकनीक द्वारा इस प्रकार विकसित किया गया है कि इसके दानों में <strong>बीटा-कैरोटीन (Beta-carotene)</strong> की मात्रा अधिक होती है। बीटा-कैरोटीन, विटामिन-A का पूर्वगामी (Precursor) है। चूँकि इस चावल का रंग सुनहरा (गोल्डन) पीला होता है, इसलिए इसे 'गोल्डन राइस' कहा जाता है। यह विशेष रूप से उन विकासशील देशों के लिए विकसित किया गया है जहाँ विटामिन-A की कमी से होने वाले रोग (जैसे रतौंधी और अंधापन) आम हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या हमारे रक्त में प्रोटीओजेन तथा न्यूक्लीएजन हैं?</div>
+                        <div class="answer-text">
+                            नहीं, सामान्यतः हमारे रक्त प्लाज्मा (Blood plasma) में प्रोटीएज (Protease) और न्यूक्लिएज (Nuclease) एंजाइम <strong>मुक्त रूप से उपस्थित नहीं होते हैं</strong>।<br><br>
+                            <strong>कारण:</strong> ये एंजाइम मुख्य रूप से कोशिकाओं के अंदर (Intracellular) पाए जाते हैं, जहाँ वे पुराने या क्षतिग्रस्त प्रोटीन और DNA/RNA के टूटने-बनने (Turnover) में मदद करते हैं। यदि ये एंजाइम रक्त में मुक्त रूप से होंगे, तो वे रक्त के आवश्यक प्रोटीन और न्यूक्लिक अम्लों को ही तोड़ देंगे। हालाँकि, रक्त में कुछ विशिष्ट एंजाइम होते हैं (जैसे क्लॉटिंग कारक), लेकिन सामान्य पाचक प्रोटीएज और न्यूक्लिएज रक्त में नहीं होते।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 13</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">इंटरनेट से पता लगाओ कि मुखीय सक्रिय औषध प्रोटीन को किस प्रकार बनाएँगे। इस कार्य में आने वाली मुख्य समस्याओं का वर्णन करें।</div>
+                        <div class="answer-text">
+                            मुखीय (Oral) सक्रिय औषध प्रोटीन (Oral active protein drugs) को आरडीएनए तकनीक द्वारा विकसित किया जाता है, जिससे प्रोटीन दवाओं को गोली के रूप में लिया जा सके।<br><br>
+                            <strong>निर्माण विधि:</strong> प्रोटीन को इस प्रकार डिज़ाइन करना कि वह पेट के अम्लीय वातावरण में स्थिर रहे, या उसे एक विशेष कोटिंग (Enteric coating) में लपेटना जो पेट में न घुले और आंत में जाकर खुले।<br><br>
+                            <strong>मुख्य समस्याएँ:</strong><br>
+                            1. <strong>अम्लीय विनाश:</strong> पेट का अम्ल (HCl) प्रोटीन को विकृत (Denature) कर देता है।<br>
+                            2. <strong>पाचक एंजाइम:</strong> पेट और आंत के प्रोटीएज एंजाइम प्रोटीन को अमीनो अम्ल में तोड़ देते हैं।<br>
+                            3. <strong>अवशोषण में कठिनाई:</strong> प्रोटीन अणु का आकार बड़ा होने के कारण वे आंत की दीवार से आसानी से रक्त में अवशोषित नहीं हो पाते हैं।<br>
+                            4. <strong>जैव उपलब्धता (Bioavailability):</strong> प्रोटीन दवाओं की शरीर में उपलब्धता कम होती है, इसलिए उन्हें इंजेक्शन के रूप में ही देना अधिक प्रभावी रहता है।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

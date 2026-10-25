@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 11 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 11: जीव और समष्टियाँ</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">उन गुणों को बताइए जो व्यष्टियों में तो नहीं पर समष्टियों में होते हैं।</div>
+                        <div class="answer-text">
+                            व्यष्टि (Individual) और समष्टि (Population) में मूलभूत अंतर यह है कि व्यष्टि एक अकेला जीव है, जबकि समष्टि एक ही जाति के जीवों का समूह है। निम्नलिखित गुण केवल समष्टियों में पाए जाते हैं, व्यष्टियों में नहीं:<br><br>
+                            1. <strong>जन्म दर (Birth Rate) और मृत्यु दर (Death Rate):</strong> एक व्यष्टि का जन्म और मृत्यु होती है, लेकिन समष्टि में 'प्रति व्यक्ति जन्म दर' और 'प्रति व्यक्ति मृत्यु दर' की गणना की जाती है।<br>
+                            2. <strong>लिंग अनुपात (Sex Ratio):</strong> समष्टि में नर और मादा व्यष्टियों का अनुपात (जैसे 60% मादा और 40% नर) होता है, जो एक अकेले व्यष्टि में संभव नहीं।<br>
+                            3. <strong>आयु वितरण (Age Distribution):</strong> समष्टि में विभिन्न आयु वर्गों (जन्मपूर्व, जननक्षम, जन्मोत्तर) के व्यष्टियों का प्रतिशत होता है, जिसे आयु परिपमिड (Age Pyramid) द्वारा दर्शाया जाता है।<br>
+                            4. <strong>समष्टि घनत्व (Population Density):</strong> यह एक निश्चित क्षेत्र में व्यष्टियों की संख्या को दर्शाता है।<br>
+                            5. <strong>आप्रवासन (Immigration) और उत्प्रवासन (Emigration):</strong> समष्टि में जीवों का आना (आप्रवासन) और जाना (उत्प्रवासन) समष्टि के आकार को प्रभावित करता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अगर चरघातांकी रूप से (एक्सपोनेन्शियली) बढ़ रही समष्टि 3 वर्ष दोगुने साइज की हो जाती है, तो समष्टि की वृद्धि की इंट्रीन्जिक दर (r) क्या है?</div>
+                        <div class="answer-text">
+                            चरघातांकी वृद्धि (Exponential Growth) का समीकरण है:<br>
+                            <strong>N<sub>t</sub> = N<sub>0</sub> e<sup>rt</sup></strong><br><br>
+                            जहाँ, N<sub>t</sub> = समय t पर समष्टि का आकार<br>
+                            N<sub>0</sub> = प्रारंभिक समष्टि का आकार<br>
+                            r = इंट्रीन्जिक वृद्धि दर<br>
+                            t = समय (वर्षों में)<br>
+                            e = प्राकृतिक लघुगणक का आधार (2.71828)<br><br>
+                            
+                            प्रश्न के अनुसार, समष्टि 3 वर्षों में दोगुनी हो जाती है। इसलिए, N<sub>t</sub> = 2N<sub>0</sub> और t = 3 वर्ष।<br>
+                            समीकरण में मान रखने पर:<br>
+                            2N<sub>0</sub> = N<sub>0</sub> e<sup>r × 3</sup><br>
+                            2 = e<sup>3r</sup><br>
+                            दोनों तरफ प्राकृतिक लघुगणक (ln) लेने पर:<br>
+                            ln(2) = 3r<br>
+                            0.693 = 3r<br>
+                            r = 0.693 / 3<br>
+                            <strong>r ≈ 0.231 प्रति वर्ष</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पादपों में शाकाहारिता (हर्बीवोरी) के विरुद्ध रक्षा करने की महत्त्वपूर्ण विधियाँ बताइए।</div>
+                        <div class="answer-text">
+                            पादप अपने परभक्षियों (शाकाहारी प्राणियों) से बचने के लिए निम्नलिखित प्रमुख रक्षा विधियाँ विकसित करते हैं:<br><br>
+                            1. <strong>आकारिकीय रक्षा विधियाँ (Morphological Defenses):</strong> पादपों में कांटे (जैसे बबूल/अकेशिया, कैक्टस), कठोर आवरण, या रोम होते हैं जो शाकाहारियों को खाने से रोकते हैं।<br>
+                            2. <strong>रासायनिक रक्षा विधियाँ (Chemical Defenses):</strong> पादप विभिन्न विषैले रसायन उत्पन्न और संग्रहित करते हैं जो खाने पर शाकाहारियों को बीमार कर देते हैं, उनके पाचन को रोकते हैं, या उन्हें मार देते हैं।<br>
+                            - उदाहरण: कैलोट्रॉपिस खरपतवार हृदय ग्लाइकोसाइड (Cardiac glycoside) नामक विषैला रसायन बनाता है जिसके कारण पशु इसे नहीं खाते।<br>
+                            - अन्य रसायनों में निकोटीन (तंबाकू में), कैफीन (कॉफी में), क्विनीन (सिनकोना में), स्ट्रिक्नीन, और अफीम (पोस्त में) शामिल हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">ऑर्किड पौधा, आम के पेड़ की शाखा पर उग रहा है। ऑर्किड और आम के पेड़ के बीच पारस्परिक क्रिया का वर्णन आप कैसे करेंगे?</div>
+                        <div class="answer-text">
+                            ऑर्किड और आम के पेड़ के बीच की पारस्परिक क्रिया <strong>सहभोजिता (Commensalism)</strong> का उदाहरण है।<br><br>
+                            <strong>व्याख्या:</strong><br>
+                            1. सहभोजिता में एक जाति को लाभ होता है (+) और दूसरी जाति को न लाभ होता है न हानि (0)।<br>
+                            2. इस संबंध में <strong>ऑर्किड को लाभ</strong> होता है क्योंकि यह आम के पेड़ की शाखा पर उगकर अपना आवास और सहारा प्राप्त करता है तथा प्रकाश और वायु तक बेहतर पहुँच प्राप्त करता है।<br>
+                            3. <strong>आम के पेड़ को कोई नुकसान नहीं</strong> होता है; यह ऑर्किड को कोई आवश्यक पोषक तत्व प्रदान नहीं करता है (यह प्रकाश संश्लेषण द्वारा अपना भोजन स्वयं बनाता है)।<br>
+                            अतः यह (+/0) प्रकार की पारस्परिक क्रिया है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">कीट पीडकों (पेस्ट/इंसेक्ट) के प्रबंध के लिए जैव-नियंत्रण विधि के पीछे क्या पारिस्थितिक सिद्धांत है?</div>
+                        <div class="answer-text">
+                            जैव-नियंत्रण (Biological Control) विधि के पीछे मुख्य पारिस्थितिक सिद्धांत <strong>परभक्षण (Predation)</strong> और <strong>परजीविता (Parasitism)</strong> है।<br><br>
+                            <strong>व्याख्या:</strong><br>
+                            1. प्रकृति में, परभक्षी अपने शिकार की समष्टि (Population) को नियंत्रित रखते हैं।<br>
+                            2. जब कोई विदेशी या आक्रामक कीट (Pest) फसलों पर हमला करता है, तो उसके प्राकृतिक परभक्षियों को कृत्रिम रूप से खेतों में छोड़ा जाता है।<br>
+                            3. ये परभक्षी कीट (जैसे लेडीबर्ड बीटल एफिड्स को खाता है) या परजीवी (जैसे Bt जीवाणु) कीटों की संख्या को नियंत्रित करते हैं, जिससे फसल को नुकसान कम होता है।<br>
+                            4. इसका सिद्धांत यह है कि कीटों की समष्टि को पूरी तरह से खत्म करने के बजाय उसे आर्थिक क्षति स्तर (Economic Threshold Level) से नीचे रखा जाए।<br>
+                            उदाहरण: कैक्टस (नागफनी) को नियंत्रित करने के लिए एक विशेष शलभ (Moth) का उपयोग।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">समष्टि (पॉपुलेशन) और समुदाय (कम्युनिटी) की परिभाषा दीजिए।</div>
+                        <div class="answer-text">
+                            <strong>समष्टि (Population):</strong> किसी निश्चित भौगोलिक क्षेत्र में एक ही जाति (Species) के व्यष्टियों (Individuals) के समूह को समष्टि कहते हैं, जो आपस में संकरण (Interbreed) कर सकते हैं और समान संसाधनों का उपयोग करते हैं।<br>
+                            <em>उदाहरण:</em> किसी तालाब में कमल के सभी पौधे, या किसी वन में बाघों की सभी संख्या।<br><br>
+                            
+                            <strong>समुदाय (Community):</strong> किसी विशेष भौगोलिक क्षेत्र में पाई जाने वाली विभिन्न जातियों की सभी समष्टियों के समूह को समुदाय कहते हैं, जो आपस में पारस्परिक क्रिया (Interaction) करती हैं।<br>
+                            <em>उदाहरण:</em> किसी तालाब में रहने वाले सभी पौधे, मछलियाँ, जीवाणु, कीट आदि मिलकर एक जलीय समुदाय बनाते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित की परिभाषा दीजिए और प्रत्येक का एक-एक उदाहरण दीजिए — (क) सहभोजिता (कमेंसेलिज्म) (ख) परजीविता (पैरासिटिज्म) (ग) छद्मावरण (कैमफ्लाज) (घ) सहोपकारिता (म्युचुअलिज्म) (च) अंतरजातीय स्पर्धा (इंटरस्पेसिफिक कंपीटीशन)</div>
+                        <div class="answer-text">
+                            <strong>(क) सहभोजिता (Commensalism):</strong> यह पारस्परिक क्रिया है जिसमें एक जाति को लाभ होता है (+) और दूसरी जाति को न लाभ होता है न हानि (0)।<br>
+                            <em>उदाहरण:</em> आम के पेड़ पर उगने वाला ऑर्किड, या व्हेल की पीठ पर बैठा बार्नेकल।<br><br>
+
+                            <strong>(ख) परजीविता (Parasitism):</strong> यह पारस्परिक क्रिया है जिसमें एक जाति (परजीवी) को लाभ होता है (+) और दूसरी जाति (परपोषी) को हानि होती है (-)। परजीवी परपोषी से पोषण लेता है।<br>
+                            <em>उदाहरण:</em> मनुष्य की आंत में रहने वाला राउंडवर्म (Ascaris), या पौधों पर उगने वाला अमरबेल (Cuscuta)।<br><br>
+
+                            <strong>(ग) छद्मावरण (Camouflage):</strong> यह शिकार या परभक्षी द्वारा अपने पर्यावरण के रंग और बनावट के साथ घुल मिल जाने की कला है, ताकि वे पकड़ में न आएँ।<br>
+                            <em>उदाहरण:</em> घास पर बैठी हरी टिड्डी या पेड़ की छाल जैसी दिखने वाली छिपकली।<br><br>
+
+                            <strong>(घ) सहोपकारिता (Mutualism):</strong> यह पारस्परिक क्रिया है जिसमें दोनों जातियों को लाभ होता है (+/+)。<br>
+                            <em>उदाहरण:</em> लाइकेन (Lichen) में कवक और शैवाल का संबंध, या माइकोराइजा (कवक और पौधों की जड़ें)।<br><br>
+
+                            <strong>(च) अंतरजातीय स्पर्धा (Interspecific Competition):</strong> यह पारस्परिक क्रिया है जिसमें दो विभिन्न जातियाँ समान संसाधनों के लिए प्रतिस्पर्धा करती हैं, जिससे दोनों को हानि होती है (-/-)।<br>
+                            <em>उदाहरण:</em> दक्षिण अमेरिकी झीलों में फ्लेमिंगो और स्थानीय मछलियों का ज़ूप्लांकटन के लिए संघर्ष।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">उपयुक्त आरेख की सहायता से लॉजिस्टिक (संभार तंत्र) समष्टि वृद्धि का वर्णन कीजिए।</div>
+                        <div class="answer-text">
+                            प्राकृतिक परिस्थितियों में संसाधन सीमित होते हैं, इसलिए समष्टि की वृद्धि अनंत नहीं रह सकती। सीमित संसाधनों के अंतर्गत होने वाली वृद्धि को <strong>लॉजिस्टिक वृद्धि (Logistic Growth)</strong> कहते हैं।<br><br>
+                            <strong>समीकरण:</strong><br>
+                            <strong>dN/dt = rN (K - N) / K</strong><br>
+                            जहाँ, N = समष्टि घनत्व, r = इंट्रीन्जिक वृद्धि दर, K = पोषण क्षमता (Carrying Capacity)।<br><br>
+                            
+                            <strong>वृद्धि के चरण:</strong><br>
+                            1. <strong>पश्चता प्रावस्था (Lag Phase):</strong> प्रारंभ में वृद्धि धीमी होती है।<br>
+                            2. <strong>चरघातांकी प्रावस्था (Exponential Phase):</strong> संसाधन पर्याप्त होने पर वृद्धि तेज हो जाती है।<br>
+                            3. <strong>मंदन प्रावस्था (Deceleration Phase):</strong> संसाधन सीमित होने पर वृद्धि दर धीमी पड़ने लगती है।<br>
+                            4. <strong>अनंतस्पर्शी प्रावस्था (Stationary Phase):</strong> जब समष्टि घनत्व K (पोषण क्षमता) तक पहुँच जाता है, तो वृद्धि रुक जाती है।<br><br>
+
+                            <strong>आरेख (S-आकार का वक्र):</strong> जब हम समय (t) के सापेक्ष समष्टि आकार (N) का आरेख खींचते हैं, तो एक 'S' आकार का वक्र (Sigmoid curve) प्राप्त होता है। यह वक्र दर्शाता है कि वृद्धि अंततः पोषण क्षमता (K) पर स्थिर हो जाती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित कथनों में परजीविता (पैरासिटिज्म) को कौन सा सबसे अच्छी तरह स्पष्ट करता है – (क) एक जीव को लाभ होता है। (ख) दोनों जीवों को लाभ होता है। (ग) एक जीव को लाभ होता है दूसरा प्रभावित नहीं होता है। (घ) एक जीव को लाभ होता है दूसरा प्रभावित होता है।</div>
+                        <div class="answer-text">
+                            <strong>सही उत्तर: (घ) एक जीव को लाभ होता है दूसरा प्रभावित होता है।</strong><br><br>
+                            <strong>व्याख्या:</strong> परजीविता में परजीवी (Parasite) को लाभ होता है क्योंकि वह परपोषी (Host) से भोजन और आश्रय प्राप्त करता है। दूसरी ओर, परपोषी को हानि होती है क्योंकि परजीवी उसके पोषक तत्वों का उपभोग करता है, जिससे उसकी वृद्धि, जनन और उत्तरजीविता प्रभावित होती है। अतः यह (+/-) प्रकार की पारस्परिक क्रिया है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">समष्टि (पॉपुलेशन) की कोई तीन महत्त्वपूर्ण विशेषताएँ बताइए और व्याख्या कीजिए।</div>
+                        <div class="answer-text">
+                            समष्टि की तीन महत्त्वपूर्ण विशेषताएँ निम्नलिखित हैं:<br><br>
+                            1. <strong>समष्टि घनत्व (Population Density):</strong> यह किसी निश्चित क्षेत्र में व्यष्टियों की संख्या को दर्शाता है। इसे प्रति इकाई क्षेत्र में व्यष्टियों की संख्या के रूप में मापा जाता है। यह समष्टि के आकार और संसाधनों की उपलब्धता को दर्शाता है।<br><br>
+                            2. <strong>जन्म दर और मृत्यु दर (Birth Rate and Death Rate):</strong> जन्म दर समष्टि में नए व्यष्टियों के जुड़ने की दर है, जबकि मृत्यु दर व्यष्टियों के हटने की दर है। ये दोनों दरें समष्टि के आकार में परिवर्तन (वृद्धि या कमी) के मुख्य कारक हैं।<br><br>
+                            3. <strong>आयु वितरण (Age Distribution):</strong> यह समष्टि में विभिन्न आयु वर्गों (जन्मपूर्व, जननक्षम, जन्मोत्तर) के व्यष्टियों का अनुपात है। इसे आयु परिपमिड (Age Pyramid) द्वारा दर्शाया जाता है। यह समष्टि की वृद्धि की प्रवृत्ति (बढ़ती, स्थिर या घटती) को दर्शाता है।<br><br>
+                            <em>(अन्य विशेषताएँ: लिंग अनुपात, आप्रवासन, उत्प्रवासन आदि भी हैं।)</em>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

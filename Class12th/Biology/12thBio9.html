@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 9 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 9: जैव प्रौद्योगिकी- सिद्धांत व प्रक्रम</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या आप दस पुनयोगज प्रोटीन के बारे में बता सकते हैं जो चिकित्सीय व्यवहार के काम में लाए जाते हैं? पता लगाइये कि वे चिकित्सीय औषधि के रूप में कहाँ प्रयोग किए जाते हैं। (इंटरनेट की सहायता लें)।</div>
+                        <div class="answer-text">
+                            चिकित्सीय उपयोग में आने वाले दस प्रमुख पुनर्योगज प्रोटीन (Recombinant Proteins) और उनके उपयोग निम्नलिखित हैं:<br><br>
+                            1. <strong>इंसुलिन (Insulin):</strong> मधुमेह (Diabetes) के इलाज में उपयोग। इसे 'ह्यूमुलिन' नाम से जाना जाता है।<br>
+                            2. <strong>ह्यूमन ग्रोथ हॉर्मोन (Human Growth Hormone):</strong> बौनापन (Dwarfism) के इलाज में।<br>
+                            3. <strong>इंटरफेरॉन (Interferon):</strong> विषाणु संक्रमण (Viral infections) और कैंसर के इलाज में।<br>
+                            4. <strong>एरिथ्रोपोएटिन (Erythropoietin):</strong> एनीमिया (गुर्दे की बीमारी से जुड़े) के इलाज में।<br>
+                            5. <strong>फैक्टर VIII (Factor VIII):</strong> हीमोफीलिया-A के इलाज में (रक्त का थक्का जमाने के लिए)।<br>
+                            6. <strong>टीश्यू प्लाज्मिनोजेन एक्टिवेटर (tPA):</strong> हृदयाघात (Heart attack) में रक्त के थक्के (Clot) को घोलने के लिए।<br>
+                            7. <strong>हेपेटाइटिस-B वैक्सीन (Hepatitis B Vaccine):</strong> हेपेटाइटिस-B से बचाव के लिए। इसमें पुनर्योगज HBsAg प्रोटीन का उपयोग होता है।<br>
+                            8. <strong>इंटरल्यूकिन (Interleukin):</strong> प्रतिरक्षा तंत्र को उत्तेजित करने के लिए, कैंसर के इलाज में।<br>
+                            9. <strong>स्ट्रेप्टोकाइनेज (Streptokinase):</strong> रक्त के थक्कों को घोलने के लिए।<br>
+                            10. <strong>डीएनएज (DNase):</strong> सिस्टिक फाइब्रोसिस के इलाज में (फेफड़ों में बलगम को पतला करने के लिए)।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एक चित्र (चार्ट) (आरेखित निरूपण के साथ) बनाइए जो प्रतिबंधन एंजाइम को, (जिस क्रियाधार डीएनए पर यह कार्य करता है उसे), उन स्थलों को जहाँ यह डीएनए को काटता है व इनसे उत्पन्न उत्पाद को दर्शाता है।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 6 पर दिए गए <strong>चित्र 9.1</strong> का संदर्भ लें।<br><br>
+                            <strong>आरेख में दर्शाने योग्य भाग:</strong><br>
+                            1. <strong>संवाहक डीएनए:</strong> इसमें पहचान अनुक्रम GAATTC दिखाएँ।<br>
+                            2. <strong>बाहरी डीएनए:</strong> इसमें भी वही अनुक्रम दर्शाएँ।<br>
+                            3. <strong>प्रतिबंधन एंजाइम की क्रिया:</strong> EcoRI एंजाइम द्वारा G और A के बीच डीएनए काटना।<br>
+                            4. <strong>चिपचिपा सिरा (Sticky end):</strong> कटे हुए डीएनए के सिरों पर एकल-शृंखला प्रलंब (AATT और TTAA)।<br>
+                            5. <strong>डीएनए लाइगेज द्वारा जोड़ना:</strong> चिपचिपे सिरों के जुड़ने से पुनर्योगज डीएनए का निर्माण।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">कक्षा ग्यारहवीं में जो आप पढ़ चुके हैं उसके आधार पर क्या आप बता सकते हैं कि आणविक आकार के आधार पर एंजाइम बड़े हैं या डीएनए। आप इसके बारे में कैसे पता लगायेंगे?</div>
+                        <div class="answer-text">
+                            आणविक आकार के आधार पर <strong>डीएनए का अणु एंजाइम से बहुत बड़ा होता है</strong>।<br><br>
+                            <strong>कारण:</strong><br>
+                            1. एंजाइम प्रोटीन होते हैं जो अमीनो अम्लों के बहुलक होते हैं, जिनका आणविक भार सामान्यतः कुछ किलोडाल्टन से लेकर कुछ सौ किलोडाल्टन तक होता है (जैसे EcoRI का आणविक भार लगभग 31 kDa है)।<br>
+                            2. डीएनए न्यूक्लियोटाइड्स का बहुलक है, और एक जीवाणु के डीएनए में लाखों-करोड़ों न्यूक्लियोटाइड्स होते हैं (जैसे E. coli के डीएनए का आणविक भार अरबों डाल्टन में होता है)।<br><br>
+                            <strong>पता लगाने की विधि:</strong> हम <strong>जेल वैद्युत संचलन (Gel Electrophoresis)</strong> और <strong>अवसादन (Sedimentation) / अपकेंद्रीकरण</strong> जैसी तकनीकों का उपयोग करके अणुओं के आकार की तुलना कर सकते हैं। बड़े अणु जेल में कम दूरी तय करते हैं और तेजी से अवसादित होते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">मानव की एक कोशिका में डीएनए की मोलर सांद्रता क्या होगी? अपने अध्यापक से परामर्श लीजिए।</div>
+                        <div class="answer-text">
+                            <em>(यह एक गणना-आधारित प्रश्न है, जिसका उत्तर इस प्रकार है:)</em><br><br>
+                            मानव द्विगुणित (Diploid) कोशिका में डीएनए की मात्रा लगभग <strong>6.6 × 10⁹ क्षार युग्म (bp)</strong> होती है।<br>
+                            डीएनए का आणविक भार = 6.6 × 10⁹ × 660 डाल्टन (प्रति क्षार युग्म का औसत भार)<br>
+                            ≈ 4.36 × 10¹² डाल्टन<br>
+                            एक मानव कोशिका में डीएनए का द्रव्यमान = 4.36 × 10¹² / 6.022 × 10²³ ≈ 7.2 × 10⁻¹² ग्राम = 7.2 पिकोग्राम।<br>
+                            एक मानव कोशिका में डीएनए का आयतन बहुत कम (लगभग 10⁻¹⁵ लीटर) होता है।<br>
+                            अतः मोलर सांद्रता (M) = (द्रव्यमान / आणविक भार) / आयतन<br>
+                            ≈ (7.2 × 10⁻¹² / 660 × 6.6 × 10⁹) / 10⁻¹⁵ ≈ <strong>0.0016 M (लगभग 1.6 mM)</strong>।<br><br>
+                            <em>(नोट: यह लगभग मान है। सटीक मान अध्यापक से परामर्श करके जानें।)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या सुकेंद्रकी कोशिकाओं में प्रतिबंधन एंडोन्यूक्लिएज मिलते हैं? अपने उत्तर सही सिद्ध कीजिए।</div>
+                        <div class="answer-text">
+                            <strong>हाँ</strong>, सुकेंद्रकी (Eukaryotic) कोशिकाओं में भी प्रतिबंधन एंडोन्यूक्लिएज (Restriction Endonucleases) मिलते हैं।<br><br>
+                            <strong>कारण/प्रमाण:</strong><br>
+                            1. प्रतिबंधन एंजाइम मुख्य रूप से जीवाणुओं में पाए जाते हैं, जहाँ वे अपने ही डीएनए को विदेशी डीएनए (जैसे बैक्टीरियोफेज) से बचाने का काम करते हैं (Restriction-Modification System)।<br>
+                            2. लेकिन सुकेंद्रकी कोशिकाओं (पौधों और जानवरों) में भी ऐसे एंजाइम पाए जाते हैं जो विशिष्ट डीएनए अनुक्रमों को पहचानकर काट सकते हैं। उदाहरण के लिए, कुछ स्तनधारी कोशिकाओं में भी ऐसे एंजाइम पाए गए हैं।<br>
+                            3. हालाँकि, सुकेंद्रकी कोशिकाओं में इनकी भूमिका मुख्य रूप से डीएनए मरम्मत, पुनर्संयोजन (Recombination) और जीन विनियमन से जुड़ी होती है, न कि रक्षा तंत्र से।<br>
+                            4. शोध से पता चला है कि सुकेंद्रकीय प्रतिबंधन एंजाइमों का उपयोग आनुवंशिक इंजीनियरिंग में भी किया जा सकता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अच्छी हवा व मिश्रण विशेषता के अतिरिक्त कंपन्न प्लास्क की तुलना में कौन सी अन्य कंपन्न प्लास्क सुविधाएँ हैं?</div>
+                        <div class="answer-text">
+                            <em>(नोट: प्रश्न में 'कंपन्न प्लास्क' का अर्थ 'बायोरिएक्टर' या 'फरमेंटर' से है।)</em><br><br>
+                            बायोरिएक्टर (Bioreactor) में अच्छी हवा (ऑक्सीजन) और मिश्रण (Stirring) के अतिरिक्त निम्नलिखित सुविधाएँ होती हैं:<br><br>
+                            1. <strong>तापमान नियंत्रण तंत्र (Temperature Control System):</strong> संवर्धन के लिए अनुकूलतम तापमान बनाए रखने के लिए।<br>
+                            2. <strong>पीएच नियंत्रण तंत्र (pH Control System):</strong> माध्यम का पीएच स्थिर रखने के लिए।<br>
+                            3. <strong>झग नियंत्रण तंत्र (Foam Control System):</strong> संवर्धन के दौरान बनने वाले झाग को नियंत्रित करने के लिए।<br>
+                            4. <strong>प्रतिचयन द्वार (Sampling Port):</strong> समय-समय पर संवर्धन का नमूना निकालकर जाँच के लिए।<br>
+                            5. <strong>ऑक्सीजन प्रदाय तंत्र (Oxygen Delivery System):</strong> जीवाणु रहित हवा को बुलबुलों के रूप में प्रवाहित करने के लिए।<br>
+                            6. <strong>निर्जीवाणुकरण प्रणाली:</strong> संपूर्ण तंत्र को स्टरलाइज़ करने की सुविधा।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शिक्षक से परामर्श कर पाँच पैलंडोमिक अनुप्रयास करना होगा कि क्षारक-युग्म नियमों का पालन करते हुए पैलंडोमिक अनुक्रम बनाने के उदाहरण का पता लगाइए।</div>
+                        <div class="answer-text">
+                            DNA में <strong>पैलिंड्रोम (Palindrome)</strong> क्षारक युग्मों का वह अनुक्रम है जो दोनों रज्जुकों पर एक ही दिशा (5' → 3') में पढ़ने पर समान होता है।<br><br>
+                            <strong>पाँच पैलिंड्रोमिक अनुक्रमों के उदाहरण:</strong><br>
+                            1. <strong>EcoRI:</strong> 5'-GAATTC-3' (पूरक: 3'-CTTAAG-5', दोनों तरफ से पढ़ने पर GAATTC ही बनता है)।<br>
+                            2. <strong>HindIII:</strong> 5'-AAGCTT-3'<br>
+                            3. <strong>BamHI:</strong> 5'-GGATCC-3'<br>
+                            4. <strong>SalI:</strong> 5'-GTCGAC-3'<br>
+                            5. <strong>PstI:</strong> 5'-CTGCAG-3'<br><br>
+                            <em>नियम:</em> पैलिंड्रोम बनाने के लिए पहले आधे भाग को लिखकर उसका पूरक (A↔T, G↔C) उल्टी दिशा में लगाया जाता है, जिससे दोनों तरफ से पढ़ने पर समान अनुक्रम प्राप्त होता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अभिसूत्री विभाजन को ध्यान में रखते हुए क्या बता सकते हैं कि पुनयोगज डीएनए किस अवस्था में बनते हैं?</div>
+                        <div class="answer-text">
+                            पुनर्योगज डीएनए (Recombinant DNA) <strong>प्रोफेज-I (Prophase-I) की पेकिटीन अवस्था (Pachytene stage)</strong> में होने वाली <strong>क्रॉसिंग ओवर (Crossing over)</strong> प्रक्रिया के समान है।<br><br>
+                            <strong>व्याख्या:</strong><br>
+                            1. अर्धसूत्री विभाजन (Meiosis) के प्रोफेज-I में समजात गुणसूत्रों (Homologous chromosomes) के अर्धगुणसूत्री (Non-sister chromatids) के बीच DNA खंडों का आदान-प्रदान होता है, जिसे क्रॉसिंग ओवर कहते हैं।<br>
+                            2. यह प्रक्रिया भी पुनर्योगज DNA के निर्माण जैसी ही है, जहाँ DNA के टुकड़े कटते और जुड़ते हैं।<br>
+                            3. इस प्रक्रिया में भी प्रतिबंधन एंजाइम और लाइगेज जैसे एंजाइमों की भूमिका होती है।<br>
+                            4. दोनों ही प्रक्रियाओं का परिणाम आनुवंशिक विविधता (Genetic variation) होता है।<br><br>
+                            <em>नोट: प्रयोगशाला में बनाए जाने वाले पुनर्योगज DNA का मॉडल प्राकृतिक रूप से होने वाली क्रॉसिंग ओवर प्रक्रिया से प्रेरित है।</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या आप बता सकते हैं कि प्रतिवेदक (रिपोर्टर) एंजाइम को वरणयोग्य चिह्नन की उपस्थिति में बाहरी डीएनए को परपोषी कोशिकाओं में स्थानांतरण के लिए मॉनिटर करने के लिए किस प्रकार उपयोग में लाया जा सकता है?</div>
+                        <div class="answer-text">
+                            <strong>रिपोर्टर एंजाइम (Reporter Enzyme)</strong> का उपयोग यह जाँचने के लिए किया जाता है कि बाहरी DNA परपोषी कोशिका में प्रवेश कर गया है या नहीं।<br><br>
+                            <strong>विधि:</strong><br>
+                            1. संवाहक (Vector) में एक विशिष्ट जीन (जैसे β-गैलेक्टोसाइडेज या GFP) जोड़ दिया जाता है, जो एक विशेष रंग या प्रतिदीप्ति (Fluorescence) उत्पन्न करता है।<br>
+                            2. जब बाहरी DNA को इस संवाहक में डालकर परपोषी में स्थानांतरित किया जाता है, तो कुछ कोशिकाएँ इसे ग्रहण कर लेती हैं।<br>
+                            3. इन रूपांतरित कोशिकाओं को एक विशेष माध्यम पर उगाया जाता है जिसमें <strong>वर्णकजनक (Chromogenic) क्रियाधार</strong> होता है।<br>
+                            4. यदि कोशिका में रिपोर्टर एंजाइम सक्रिय है, तो यह क्रियाधार को रंगीन उत्पाद में बदल देता है, जिससे कोशिका का रंग बदल जाता है (जैसे नीली कॉलोनी)।<br>
+                            5. इस प्रकार, रंग या प्रतिदीप्ति के आधार पर सफलतापूर्वक रूपांतरित कोशिकाओं (Transformants) की पहचान की जा सकती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित का संक्षिप्त वर्णन कीजिए- (क) प्रतिकृतीयन का उद्भव (ख) बायोरिएक्टर (ग) अनुप्रवाह संसाधन</div>
+                        <div class="answer-text">
+                            <strong>(क) प्रतिकृतीयन का उद्भव (Origin of Replication - ori):</strong><br>
+                            यह DNA अनुक्रम का वह विशिष्ट स्थल है जहाँ से प्रतिकृति (Replication) प्रारंभ होती है। किसी भी विदेशी DNA को परपोषी में स्वतंत्र रूप से गुणित होने के लिए इस 'ori' अनुक्रम से जुड़ा होना आवश्यक है। यह संवाहक (Vector) का अनिवार्य घटक है।<br><br>
+                            
+                            <strong>(ख) बायोरिएक्टर (Bioreactor):</strong><br>
+                            यह एक बड़ा बर्तन या टैंक होता है जिसमें सूक्ष्मजीवों, पादपों या जंतु कोशिकाओं को नियंत्रित परिस्थितियों (तापमान, pH, ऑक्सीजन, पोषक तत्व) में वृद्धि करके बड़े पैमाने पर वांछित उत्पाद (जैसे प्रोटीन, एंजाइम, प्रतिजैविक) प्राप्त किया जाता है।<br><br>
+                            
+                            <strong>(ग) अनुप्रवाह संसाधन (Downstream Processing):</strong><br>
+                            जैव-संश्लेषण (Biosynthesis) पूरा होने के बाद, उत्पाद को शुद्ध करने, परीक्षण करने और बाजार के लिए तैयार करने की सभी प्रक्रियाओं को अनुप्रवाह संसाधन कहते हैं। इसमें पृथक्करण (Separation), शोधन (Purification), संरूपण (Formulation) और गुणवत्ता नियंत्रण (Quality control) शामिल हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">संक्षेप में बताइए (क) पीसीआर (ख) प्रतिबंधन एंजाइम और डीएनए (ग) काइटिनेज</div>
+                        <div class="answer-text">
+                            <strong>(क) पीसीआर (PCR - Polymerase Chain Reaction):</strong><br>
+                            यह प्रयोगशाला में DNA के एक विशिष्ट खंड की लाखों-अरबों प्रतियाँ (Amplification) बनाने की तकनीक है। इसमें <em>Taq</em> DNA पॉलीमरेज एंजाइम, प्राइमर (Primers) और न्यूक्लियोटाइड्स का उपयोग करके तीन चरणों (विकृतीकरण, तापानुशीलन, विस्तार) को चक्रीय रूप से दोहराया जाता है।<br><br>
+                            
+                            <strong>(ख) प्रतिबंधन एंजाइम और डीएनए (Restriction Enzymes and DNA):</strong><br>
+                            प्रतिबंधन एंडोन्यूक्लिएज एंजाइम DNA को विशिष्ट पहचान अनुक्रमों (Recognition sequences) पर काटते हैं। ये 'आणविक कैंची' (Molecular scissors) की तरह काम करते हैं। इनके द्वारा काटे गए DNA सिरों पर 'चिपचिपे सिरे' (Sticky ends) बनते हैं जो पुनर्योगज DNA के निर्माण में सहायक होते हैं।<br><br>
+                            
+                            <strong>(ग) काइटिनेज (Chitinase):</strong><br>
+                            यह एक एंजाइम है जो काइटिन (Chitin) को विघटित करता है। काइटिन कवक (Fungi) की कोशिका भित्ति का मुख्य घटक है। आनुवंशिक इंजीनियरिंग में, कवक कोशिकाओं से DNA निकालने के लिए उनकी कोशिका भित्ति को तोड़ने हेतु इस एंजाइम का उपयोग किया जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अपने अध्यापक से चर्चा करके पता लगाइए कि निम्नलिखित के बीच कैसे भेद करेंगे- (क) प्लाज्मिड डीएनए और गुणसूत्रीय डीएनए (ख) आरएनए और डीएनए (ग) एक्सोन्यूक्लिएज और एंडोन्यूक्लिएज</div>
+                        <div class="answer-text">
+                            <strong>(क) प्लाज्मिड DNA और गुणसूत्रीय DNA में अंतर:</strong><br>
+                            - <strong>प्लाज्मिड DNA:</strong> यह जीवाणु कोशिका में गुणसूत्र से अलग, छोटा, गोलाकार, द्विरज्जुकीय DNA होता है जो स्वतंत्र रूप से प्रतिकृति कर सकता है। इसमें कुछ आवश्यक जीन (जैसे प्रतिजैविक प्रतिरोध) होते हैं।<br>
+                            - <strong>गुणसूत्रीय DNA:</strong> यह कोशिका का मुख्य आनुवंशिक पदार्थ है, जो बड़ा, रेखीय होता है और प्रोटीन (हिस्टोन) के साथ जुड़ा रहता है। इसमें जीवन के लिए आवश्यक अधिकांश जीन होते हैं।<br><br>
+
+                            <strong>(ख) RNA और DNA में अंतर:</strong><br>
+                            - <strong>शर्करा:</strong> RNA में राइबोस (Ribose) होती है, DNA में डीऑक्सीराइबोस (Deoxyribose)।<br>
+                            - <strong>क्षार:</strong> RNA में यूरैसिल (Uracil) होता है, DNA में थाइमीन (Thymine)।<br>
+                            - <strong>रज्जुक:</strong> RNA सामान्यतः एकल-रज्जुकीय (Single-stranded) होता है, DNA द्विरज्जुकीय (Double-stranded)।<br><br>
+
+                            <strong>(ग) एक्सोन्यूक्लिएज और एंडोन्यूक्लिएज में अंतर:</strong><br>
+                            - <strong>एक्सोन्यूक्लिएज (Exonuclease):</strong> ये DNA के सिरों (Ends) से न्यूक्लियोटाइड्स को एक-एक करके हटाते हैं।<br>
+                            - <strong>एंडोन्यूक्लिएज (Endonuclease):</strong> ये DNA के भीतर (Internal) विशिष्ट स्थलों पर काटते हैं, न कि सिरों से।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

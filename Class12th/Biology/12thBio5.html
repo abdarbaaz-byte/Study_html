@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 5 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 5: वंशागति के आणविक आधार</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्न को नाइट्रोजनीकृत क्षार व न्यूक्लियोटाइड के रूप में वर्गीकृत कीजिए — एडेनीन, साइटीडीन, थाइमीन, ग्वानोसीन, यूरैसील व साइटोसीन</div>
+                        <div class="answer-text">
+                            <strong>नाइट्रोजनीकृत क्षार (Nitrogenous Bases):</strong> एडेनीन, थाइमीन, यूरैसील व साइटोसीन।<br>
+                            <strong>न्यूक्लियोटाइड (Nucleotides):</strong> साइटीडीन व ग्वानोसीन।<br><br>
+                            <em>व्याख्या:</em> जब नाइट्रोजनीकृत क्षार पेंटोस शर्करा से जुड़ जाता है, तो न्यूक्लियोसाइड बनता है, और जब इसमें फॉस्फेट समूह जुड़ता है, तो यह न्यूक्लियोटाइड बन जाता है। एडेनीन, थाइमीन, यूरैसील और साइटोसीन केवल क्षार हैं, जबकि साइटीडीन और ग्वानोसीन शर्करा और फॉस्फेट से युक्त न्यूक्लियोटाइड हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">यदि एक द्विरज्जुक डीएनए में 20 प्रतिशत साइटोसीन है तो डीएनए में मिलने वाले एडेनीन के प्रतिशत की गणना कीजिए।</div>
+                        <div class="answer-text">
+                            चारगाफ़ के नियम (Chargaff's Rule) के अनुसार, द्विरज्जुक डीएनए में प्यूरीन और पायरिमिडीन का अनुपात बराबर होता है। अर्थात्:<br>
+                            <strong>एडेनीन (A) = थाइमीन (T)</strong> तथा <strong>ग्वानीन (G) = साइटोसीन (C)</strong><br><br>
+                            दिया गया है: साइटोसीन (C) = 20%<br>
+                            अतः ग्वानीन (G) = 20%<br>
+                            (C + G) का कुल प्रतिशत = 20% + 20% = 40%<br>
+                            शेष प्रतिशत (A + T) = 100% - 40% = 60%<br>
+                            चूँकि A = T, इसलिए एडेनीन (A) = 60% / 2 = <strong>30%</strong><br><br>
+                            अतः डीएनए में एडेनीन का प्रतिशत <strong>30%</strong> होगा।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">यदि डीएनए के एक रज्जुक के अनुक्रम निम्नवत लिखें है- 5'-ATGCATGCATGCATGCATGCATGCATGC-3' तो पूरक रज्जुक के अनुक्रम को 5'→3' दिशा में लिखें।</div>
+                        <div class="answer-text">
+                            दिया गया रज्जुक (5' → 3'): 5'-ATGCATGCATGCATGCATGCATGCATGC-3'<br><br>
+                            पूरक रज्जुक का निर्माण क्षार युग्मन के नियम (A=T, G≡C) से होता है। चूँकि रज्जुक प्रतिसमानांतर (Antiparallel) होते हैं, इसलिए पूरक रज्जुक 3' → 5' दिशा में होगा:<br>
+                            3'-TACGTACGTACGTACGTACGTACGTACG-5'<br><br>
+                            इसे 5' → 3' दिशा में लिखने के लिए क्रम को उलट देंगे:<br>
+                            <strong>5'-GCATGCATGCATGCATGCATGCATGCAT-3'</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">यदि अनुलेखन ईकाई में कूटलेखन रज्जुक के अनुक्रम को निम्नवत लिखा गया है– 5'-ATGCATGCATGCATGCATGCATGCATGC-3' तो दूत आरएनए के अनुक्रम को लिखें।</div>
+                        <div class="answer-text">
+                            कूटलेखन रज्जुक (Coding strand) वह रज्जुक है जिसका अनुक्रम mRNA के समान होता है, केवल थाइमीन (T) के स्थान पर यूरैसिल (U) होता है।<br><br>
+                            दिया गया कूटलेखन रज्जुक: 5'-ATGCATGCATGCATGCATGCATGCATGC-3'<br>
+                            अतः दूत आरएनए (mRNA) का अनुक्रम होगा:<br>
+                            <strong>5'-AUGCAUGCAUGCAUGCAUGCAUGCAUGCAUGC-3'</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">डीएनए द्विकुंडली की कौन सी विशेषता वाटसन व क्रिक को डीएनए प्रतिकृति के सेमी-कंजर्वेटिव रूप को कल्पित करने में सहयोग किया; इसकी व्याख्या कीजिए।</div>
+                        <div class="answer-text">
+                            डीएनए द्विकुंडली की सबसे महत्वपूर्ण विशेषता यह है कि इसके <strong>दोनों पॉलीन्यूक्लियोटाइड रज्जुक एक-दूसरे के पूरक (Complementary) होते हैं</strong> और विपरीत ध्रुवणता (Antiparallel) रखते हैं।<br><br>
+                            <strong>व्याख्या:</strong> चूँकि दोनों रज्जुकों के क्षारों के बीच विशिष्ट हाइड्रोजन बंध (A=T, G≡C) होते हैं, इसलिए एक रज्जुक के अनुक्रम से दूसरे रज्जुक के अनुक्रम का पता लगाया जा सकता है। वाटसन और क्रिक ने प्रस्तावित किया कि प्रतिकृति के समय दोनों रज्जुक अलग हो जाते हैं और प्रत्येक रज्जुक एक टेम्पलेट (Template) का कार्य करता है, जिससे नए पूरक रज्जुक का संश्लेषण होता है। इस प्रकार, प्रत्येक नए डीएनए अणु में एक पुरानी (पैतृक) और एक नई (संतति) रज्जुक होती है। इसे ही <strong>अर्धसरक्षी प्रतिकृति (Semi-conservative replication)</strong> कहते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">टेम्पलेट (डीएनए या आरएनए) के रासायनिक प्रकृति व इससे (डीएनए या आरएनए) संश्लेषित न्यूक्लिक अम्लों की प्रकृति के आधार पर न्यूक्लिक अम्ल पॉलीमरेज के विभिन्न प्रकार की सूची बनाइए।</div>
+                        <div class="answer-text">
+                            न्यूक्लिक अम्ल पॉलीमरेज के प्रकार:<br><br>
+                            1. <strong>डीएनए-निर्भर डीएनए पॉलीमरेज (DNA-dependent DNA polymerase):</strong> यह डीएनए टेम्पलेट का उपयोग करके डीएनए का संश्लेषण करता है (प्रतिकृति में)।<br>
+                            2. <strong>डीएनए-निर्भर आरएनए पॉलीमरेज (DNA-dependent RNA polymerase):</strong> यह डीएनए टेम्पलेट का उपयोग करके आरएनए का संश्लेषण करता है (अनुलेखन में)।<br>
+                            3. <strong>आरएनए-निर्भर आरएनए पॉलीमरेज (RNA-dependent RNA polymerase):</strong> यह आरएनए टेम्पलेट का उपयोग करके आरएनए का संश्लेषण करता है (कुछ RNA वायरस में)।<br>
+                            4. <strong>आरएनए-निर्भर डीएनए पॉलीमरेज (RNA-dependent DNA polymerase / Reverse Transcriptase):</strong> यह आरएनए टेम्पलेट का उपयोग करके डीएनए का संश्लेषण करता है (HIV जैसे रेट्रोवायरस में)।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">डीएनए आनुवंशिक पदार्थ है, इसे सिद्ध करने हेतु अपने प्रयोग के दौरान हर्षे व चेस ने डीएनए व प्रोटीन के बीच कैसे अंतर स्थापित किया?</div>
+                        <div class="answer-text">
+                            अल्फ्रेड हर्षे और मार्था चेस (1952) ने जीवाणुभोजी (Bacteriophage) का उपयोग करके यह सिद्ध किया कि डीएनए आनुवंशिक पदार्थ है। उन्होंने डीएनए और प्रोटीन के बीच अंतर स्थापित करने के लिए <strong>रेडियोसक्रिय समस्थानिकों (Radioactive isotopes)</strong> का उपयोग किया:<br><br>
+                            1. उन्होंने कुछ जीवाणुभोजियों को <strong>रेडियोसक्रिय फॉस्फोरस (32P)</strong> युक्त माध्यम में विकसित किया। चूँकि डीएनए में फॉस्फोरस होता है, इसलिए इन वायरस का डीएनए रेडियोसक्रिय हो गया।<br>
+                            2. दूसरे जीवाणुभोजियों को <strong>रेडियोसक्रिय सल्फर (35S)</strong> युक्त माध्यम में विकसित किया। चूँकि प्रोटीन में सल्फर होता है (डीएनए में नहीं), इसलिए इन वायरस का प्रोटीन आवरण रेडियोसक्रिय हो गया।<br>
+                            3. जब इन वायरस ने ई.कोलाई जीवाणुओं को संक्रमित किया, तो 32P चिह्नित डीएनए जीवाणु के अंदर पाया गया, जबकि 35S चिह्नित प्रोटीन जीवाणु के बाहर ही रहा।<br>
+                            4. इससे सिद्ध हुआ कि संक्रमण के दौरान केवल डीएनए ही जीवाणु में प्रवेश करता है और नई संतति का निर्माण करता है, अतः डीएनए ही आनुवंशिक पदार्थ है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्न के बीच अंतर बताइए — (क) पुनरावृत्ति डीएनए एवं अनुषंगी डीएनए (ख) एमआरएनए और टीआरएनए (ग) टेम्पलेट रज्जु और कोडिंग रज्जु</div>
+                        <div class="answer-text">
+                            <strong>(क) पुनरावृत्ति डीएनए (Repetitive DNA) एवं अनुषंगी डीएनए (Satellite DNA):</strong><br>
+                            पुनरावृत्ति डीएनए वे अनुक्रम हैं जो जीनोम में कई बार दोहराए जाते हैं। अनुषंगी डीएनए पुनरावृत्ति डीएनए का ही एक प्रकार है, जो घनत्व प्रवणता अपकेंद्रीकरण में मुख्य डीएनए से अलग होकर अलग शिखर (Peak) बनाता है। अनुषंगी डीएनए में पुनरावृत्ति की संख्या बहुत अधिक होती है।<br><br>
+                            
+                            <strong>(ख) एमआरएनए (mRNA) और टीआरएनए (tRNA):</strong><br>
+                            एमआरएनए (दूत आरएनए) डीएनए से आनुवंशिक सूचना लेकर राइबोसोम तक पहुँचाता है और प्रोटीन संश्लेषण के लिए टेम्पलेट प्रदान करता है। टीआरएनए (अंतरण आरएनए) एक अनुकूलक (Adapter) अणु है जो एमीनो अम्लों को राइबोसोम तक लाता है और एमआरएनए के प्रकूट (Codon) को पढ़ता है।<br><br>
+
+                            <strong>(ग) टेम्पलेट रज्जु (Template strand) और कोडिंग रज्जु (Coding strand):</strong><br>
+                            टेम्पलेट रज्जु वह रज्जुक है जिसकी ध्रुवणता 3' → 5' होती है और जिसका उपयोग आरएनए संश्लेषण के लिए टेम्पलेट के रूप में होता है। कोडिंग रज्जु वह रज्जुक है जिसकी ध्रुवणता 5' → 3' होती है और इसका अनुक्रम आरएनए के समान होता है (केवल T के स्थान पर U)। यह अनुलेखन में सीधे भाग नहीं लेता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">स्थानांतरण के दौरान राइबोसोम की दो मुख्य भूमिकाओं की सूची बनाइए।</div>
+                        <div class="answer-text">
+                            स्थानांतरण (Translation) के दौरान राइबोसोम की दो मुख्य भूमिकाएँ निम्नलिखित हैं:<br><br>
+                            1. <strong>स्थल प्रदान करना:</strong> राइबोसोम एमआरएनए, टीआरएनए और एमीनो अम्लों के लिए एक स्थल प्रदान करता है, जिससे प्रकूट-प्रतिप्रकूट (Codon-Anticodon) युग्मन संभव हो पाता है।<br>
+                            2. <strong>पेप्टाइड बंध का निर्माण (उत्प्रेरक भूमिका):</strong> राइबोसोम एक राइबोजाइम (RNA एंजाइम) के रूप में कार्य करता है, जो अमीनो अम्लों के बीच पेप्टाइड बंध (Peptide bond) के निर्माण को उत्प्रेरित करता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">उस संवर्धन में जहाँ ई.कोलाई वृद्धि कर रहा हो लैक्टोज डालने पर लैक-ओपेरान उत्प्रेरित होता है। तब कभी संवर्धन में लैक्टोज डालने पर लैक ओपेरान कार्य करना क्यों बंद कर देता है?</div>
+                        <div class="answer-text">
+                            (नोट: प्रश्न में त्रुटि है, वास्तव में लैक-ओपेरान लैक्टोज की <strong>अनुपस्थिति</strong> में कार्य करना बंद कर देता है।)<br><br>
+                            लैक-ओपेरान का नियमन दमनकारी (Repressor) तंत्र द्वारा होता है:<br>
+                            1. <strong>लैक्टोज की अनुपस्थिति में:</strong> नियामक जीन (i) द्वारा उत्पन्न दमनकारी प्रोटीन प्रचालक (Operator) स्थल से जुड़ जाता है, जिससे आरएनए पॉलीमरेज उन्नायक (Promoter) से आगे नहीं बढ़ पाता और अनुलेखन (Transcription) रुक जाता है। अतः ओपेरान बंद रहता है।<br>
+                            2. <strong>लैक्टोज की उपस्थिति में:</strong> लैक्टोज (प्रेरक) दमनकारी प्रोटीन से बंधकर उसे निष्क्रिय कर देता है। अब दमनकारी प्रचालक स्थल से हट जाता है और आरएनए पॉलीमरेज अनुलेखन शुरू कर देता है। अतः ओपेरान चालू हो जाता है।<br><br>
+                            इसके अतिरिक्त, यदि ग्लूकोज और लैक्टोज दोनों उपस्थित हों, तो ई.कोलाई पहले ग्लूकोज का उपयोग करता है और लैक-ओपेरान की अभिव्यक्ति कम हो जाती है (कैटाबोलाइट दमन)।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्न के कार्यों का वर्णन (एक या दो पंक्तियों से) करो — (क) उन्नायक (प्रोमोटर) (ख) अंतरण आरएनए (tRNA) (ग) एकजान</div>
+                        <div class="answer-text">
+                            <strong>(क) उन्नायक (प्रोमोटर):</strong> यह डीएनए पर स्थित एक विशिष्ट अनुक्रम है, जहाँ आरएनए पॉलीमरेज बंधकर अनुलेखन (Transcription) की प्रक्रिया शुरू करता है।<br><br>
+                            <strong>(ख) अंतरण आरएनए (tRNA):</strong> यह एक अनुकूलक (Adapter) अणु है जो विशिष्ट एमीनो अम्लों को राइबोसोम तक लाता है और एमआरएनए के प्रकूट (Codon) को पहचानकर उससे जुड़ता है।<br><br>
+                            <strong>(ग) एकजान (Exon):</strong> ये जीन के वे कूटलेखन अनुक्रम (Coding sequences) हैं जो स्प्लाइसिंग के बाद परिपक्व आरएनए (mRNA) में बने रहते हैं और प्रोटीन संश्लेषण में भाग लेते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">मानव जीनोम परियोजना को महापरियोजना क्यों कहा गया।</div>
+                        <div class="answer-text">
+                            मानव जीनोम परियोजना (Human Genome Project - HGP) को महापरियोजना (Mega Project) इसलिए कहा गया क्योंकि:<br><br>
+                            1. इसका लक्ष्य मानव डीएनए में उपस्थित लगभग <strong>3 बिलियन (3×10⁹) क्षार युग्मों</strong> के पूर्ण अनुक्रम (Sequence) को निर्धारित करना था।<br>
+                            2. इस परियोजना पर लगभग <strong>9 बिलियन अमेरिकी डॉलर</strong> का भारी खर्च आया।<br>
+                            3. इसमें दुनिया भर के कई देशों (अमेरिका, यू.के., जापान, फ्रांस, जर्मनी, चीन आदि) के वैज्ञानिकों ने सहयोग किया और इसे पूरा करने में 13 वर्ष लगे (1990-2003)।<br>
+                            4. इसके लिए उच्च क्षमता वाले सुपर कंप्यूटरों और जैव सूचना विज्ञान (Bioinformatics) की आवश्यकता पड़ी।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 13</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">डी एन ए अंगुलिछापी क्या है। इसके उपयोगिता पर प्रकाश डालिए।</div>
+                        <div class="answer-text">
+                            <strong>डीएनए अंगुलिछापी (DNA Fingerprinting):</strong> यह एक तकनीक है जिसका उपयोग व्यक्तियों के डीएनए में उपस्थित पुनरावृत्ति अनुक्रमों (Repetitive sequences जैसे VNTR - Variable Number of Tandem Repeats) में विभिन्नताओं के आधार पर उनकी पहचान करने के लिए किया जाता है। प्रत्येक व्यक्ति का डीएनए अंगुलिछाप (समरूप जुड़वाँ को छोड़कर) अद्वितीय होता है।<br><br>
+                            <strong>उपयोगिताएँ:</strong><br>
+                            1. <strong>न्यायालयीन विज्ञान (Forensic Science):</strong> अपराधियों की पहचान करने में (जैसे रक्त, बाल, लार, वीर्य आदि के नमूनों से)।<br>
+                            2. <strong>पैतृत्व परीक्षण (Paternity Testing):</strong> बच्चे के वास्तविक पिता का निर्धारण करने में।<br>
+                            3. <strong>जनसंख्या व आनुवंशिक विविधता का अध्ययन:</strong> विभिन्न जातियों और प्रजातियों में आनुवंशिक भिन्नता का पता लगाने में।<br>
+                            4. <strong>प्रत्यारोपण (Transplantation):</strong> अंग प्रत्यारोपण के लिए उपयुक्त दाता की पहचान करने में।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 14</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्न का संक्षिप्त वर्णन कीजिए— (क) अनुलेखन (ख) बहुरूपता (ग) स्थानांतरण (घ) जैव सूचना विज्ञान</div>
+                        <div class="answer-text">
+                            <strong>(क) अनुलेखन (Transcription):</strong> डीएनए के एक रज्जुक (टेम्पलेट) से पूरक आरएनए (mRNA) के संश्लेषण की प्रक्रिया को अनुलेखन कहते हैं। यह प्रक्रिया केंद्रक में होती है और इसमें RNA पॉलीमरेज एंजाइम भाग लेता है।<br><br>
+                            
+                            <strong>(ख) बहुरूपता (Polymorphism):</strong> किसी जनसंख्या में व्यक्तियों के डीएनए अनुक्रमों में पाए जाने वाले आनुवंशिक भिन्नताओं (Variations) को बहुरूपता कहते हैं। यह मुख्य रूप से अव्यक्तिक (Intron) या पुनरावृत्ति डीएनए क्षेत्रों में देखी जाती है और यह डीएनए अंगुलिछापी का आधार है।<br><br>
+                            
+                            <strong>(ग) स्थानांतरण (Translation):</strong> राइबोसोम पर mRNA में उपस्थित आनुवंशिक कूट (Codon) की सूचना के अनुसार अमीनो अम्लों की श्रृंखला (पॉलीपेप्टाइड) बनने की प्रक्रिया को स्थानांतरण कहते हैं। इसमें tRNA, mRNA और राइबोसोम मुख्य भूमिका निभाते हैं।<br><br>
+                            
+                            <strong>(घ) जैव सूचना विज्ञान (Bioinformatics):</strong> जीव विज्ञान की जानकारियों (जैसे डीएनए, प्रोटीन के अनुक्रमों) को कंप्यूटर विज्ञान और सूचना प्रौद्योगिकी की सहायता से संग्रहित, विश्लेषित और प्रबंधित करने के विज्ञान को जैव सूचना विज्ञान कहते हैं। यह मानव जीनोम परियोजना जैसे बड़े कार्यों में अत्यंत उपयोगी रहा है।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

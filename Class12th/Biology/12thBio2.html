@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 2 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 2: मानव जनन</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">रिक्त स्थानों की पूर्ति करें:</div>
+                        <div class="answer-text">
+                            (क) मानव <strong>लैंगिक</strong> उत्पत्ति वाला है।<br>
+                            (ख) मानव <strong>सजीवप्रजक (जरायुज)</strong> हैं।<br>
+                            (ग) मानव में <strong>आंतरिक</strong> निषेचन होता है।<br>
+                            (घ) नर एवं मादा युग्मक <strong>अगुणित</strong> होते हैं।<br>
+                            (ङ) युग्मनज <strong>द्विगुणित</strong> होता है।<br>
+                            (च) एक परिपक्व पुटक से अंडाणु (ओवम) के मोचित होने की प्रक्रिया को <strong>अंडोत्सर्ग (ओव्यूलेशन)</strong> कहते हैं।<br>
+                            (छ) अंडोत्सर्ग (ओव्यूलेशन) <strong>एल एच (ल्यूटिनाइजिंग हॉर्मोन)</strong> नामक हॉर्मोन द्वारा प्रेरित होता है।<br>
+                            (ज) नर एवं स्त्री के युग्मक के संलयन (फ्यूजन) को <strong>निषेचन (फर्टिलाइजेशन)</strong> कहते हैं।<br>
+                            (झ) निषेचन <strong>अंडवाहिनी (तुंबिका)</strong> में संपन्न होता है।<br>
+                            (ञ) युग्मनज विभक्त होकर <strong>कोरकपुटी (ब्लास्टोसिस्ट)</strong> की रचना करता है जो गर्भाशय में अंतर्रोपित होता है।<br>
+                            (ट) भ्रूण और गर्भाशय के बीच संवहनी संपर्क बनाने वाली संरचना को <strong>अपरा (प्लेसेंटा)</strong> कहते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पुरुष जनन-तंत्र का एक नामांकित आरेख बनाएँ।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 2 पर दिए गए <strong>चित्र 2.1 (अ) और 2.1 (ब)</strong> का संदर्भ लें।<br><br>
+                            <strong>आरेख में निम्नलिखित भागों को नामांकित करें:</strong><br>
+                            1. वृषण (Testis)<br>
+                            2. वृषणकोष (Scrotum)<br>
+                            3. अधिवृषण (Epididymis)<br>
+                            4. शुक्रवाहक (Vas deferens)<br>
+                            5. शुक्राशय (Seminal vesicle)<br>
+                            6. प्रोस्टेट ग्रंथि (Prostate gland)<br>
+                            7. बल्बोयूरेथ्रल ग्रंथि (Bulbourethral gland)<br>
+                            8. मूत्रमार्ग (Urethra)<br>
+                            9. शिश्न (Penis)<br>
+                            10. अग्रच्छद (Foreskin)<br>
+                            11. शिश्न मुंड (Glans penis)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">स्त्री जनन-तंत्र का एक नामांकित आरेख बनाई।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 4 पर दिए गए <strong>चित्र 2.3 (अ) और 2.3 (ब)</strong> का संदर्भ लें।<br><br>
+                            <strong>आरेख में निम्नलिखित भागों को नामांकित करें:</strong><br>
+                            1. अंडाशय (Ovary)<br>
+                            2. अंडवाहिनी (Oviduct/Fallopian tube)<br>
+                            3. झालर (Fimbriae)<br>
+                            4. कीपक (Infundibulum)<br>
+                            5. तुंबिका (Ampulla)<br>
+                            6. संकीर्ण पथ (Isthmus)<br>
+                            7. गर्भाशय (Uterus)<br>
+                            8. गर्भाशय ग्रीवा (Cervix)<br>
+                            9. योनि (Vagina)<br>
+                            10. भगशेफ (Clitoris)<br>
+                            11. वृहत भगोष्ठ (Labia majora)<br>
+                            12. लघु भगोष्ठ (Labia minora)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">वृषण तथा अंडाशय के बारे में प्रत्येक के दो-दो प्रमुख कार्यों का वर्णन करें।</div>
+                        <div class="answer-text">
+                            <strong>वृषण (Testis) के दो प्रमुख कार्य:</strong><br>
+                            1. <strong>शुक्राणु का निर्माण:</strong> वृषण की शुक्रजनक नलिकाओं में शुक्राणुजनन (Spermatogenesis) की क्रिया द्वारा नर युग्मक (शुक्राणु) उत्पन्न होते हैं।<br>
+                            2. <strong>हॉर्मोन का स्रवण:</strong> वृषण की अंतराली कोशिकाएँ (लीडिग कोशिकाएँ) पुंजन (एंड्रोजन/टेस्टोस्टेरोन) हॉर्मोन का संश्लेषण और स्रवण करती हैं, जो पुरुष के द्वितीयक लैंगिक लक्षणों को नियंत्रित करता है।<br><br>
+                            
+                            <strong>अंडाशय (Ovary) के दो प्रमुख कार्य:</strong><br>
+                            1. <strong>अंडाणु का निर्माण:</strong> अंडाशय में अंडजनन (Oogenesis) की क्रिया द्वारा मादा युग्मक (अंडाणु) उत्पन्न होता है।<br>
+                            2. <strong>हॉर्मोन का स्रवण:</strong> अंडाशय विभिन्न स्टेरॉयड हॉर्मोन जैसे एस्ट्रोजन और प्रोजेस्टेरॉन का स्रवण करता है, जो मादा के द्वितीयक लैंगिक लक्षणों और आर्तव चक्र को नियंत्रित करते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शुक्रजनक नलिका की संरचना का वर्णन करें।</div>
+                        <div class="answer-text">
+                            शुक्रजनक नलिका (Seminiferous tubule) वृषण पालिकाओं के भीतर पाई जाने वाली अत्यधिक कुंडलित नलिकाएँ होती हैं। इनकी संरचना इस प्रकार है:<br><br>
+                            1. <strong>आंतरिक स्तर:</strong> शुक्रजनक नलिका की भीतरी भित्ति दो प्रकार की कोशिकाओं से स्तरित होती है - <strong>नर जर्म कोशिकाएँ (शुक्राणुजन)</strong> और <strong>सटौली कोशिकाएँ (Sertoli cells)</strong>।<br>
+                            2. <strong>शुक्राणुजन (Spermatogonia):</strong> ये अर्धसूत्री विभाजन के फलस्वरूप शुक्राणुओं का निर्माण करती हैं।<br>
+                            3. <strong>सटौली कोशिकाएँ:</strong> ये जर्म कोशिकाओं को पोषण प्रदान करती हैं।<br>
+                            4. <strong>बाहरी क्षेत्र:</strong> नलिकाओं के बाहरी क्षेत्र को अंतराली अवकाश (Interstitial space) कहते हैं, जिसमें रुधिर वाहिकाएँ और <strong>अंतराली कोशिकाएँ (लीडिग कोशिकाएँ)</strong> होती हैं। लीडिग कोशिकाएँ एंड्रोजन हॉर्मोन का स्रवण करती हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शुक्राणुजनन क्या है? संक्षेप में शुक्राणुजनन की प्रक्रिया का वर्णन करें।</div>
+                        <div class="answer-text">
+                            <strong>शुक्राणुजनन (Spermatogenesis):</strong> वृषण की शुक्रजनक नलिकाओं में अपरिपक्व नर जर्म कोशिकाओं (शुक्राणुजन) से परिपक्व शुक्राणुओं के निर्माण की प्रक्रिया को शुक्राणुजनन कहते हैं। यह किशोरावस्था (यौवनारंभ) पर शुरू होती है।<br><br>
+                            <strong>प्रक्रिया:</strong><br>
+                            1. शुक्राणुजन (2n, 46 गुणसूत्र) समसूत्री विभाजन द्वारा संख्या में बढ़ते हैं।<br>
+                            2. कुछ शुक्राणुजन अर्धसूत्री विभाजन (Meiosis) में प्रवेश करते हैं और <strong>प्राथमिक शुक्राणु कोशिकाएँ (Primary spermatocytes)</strong> बनाते हैं।<br>
+                            3. प्राथमिक शुक्राणु कोशिका प्रथम अर्धसूत्री विभाजन द्वारा दो <strong>द्वितीयक शुक्राणु कोशिकाएँ (Secondary spermatocytes, n)</strong> बनाती है।<br>
+                            4. द्वितीयक शुक्राणु कोशिकाएँ दूसरे अर्धसूत्री विभाजन द्वारा चार <strong>शुक्राणुप्रसू (Spermatids)</strong> बनाती हैं।<br>
+                            5. शुक्राणुप्रसू रूपांतरित होकर परिपक्व <strong>शुक्राणु (Sperms)</strong> बनाते हैं। इस रूपांतरण प्रक्रिया को शुक्राणुजनन (Spermiogenesis) कहते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शुक्राणुजनन की प्रक्रिया के नियमन में शामिल हॉमोनों के नाम बताएँ?</div>
+                        <div class="answer-text">
+                            शुक्राणुजनन की प्रक्रिया के नियमन में निम्नलिखित हॉर्मोन शामिल होते हैं:<br><br>
+                            1. <strong>गोनेडोट्रॉपिन रिलीजिंग हॉर्मोन (GnRH):</strong> यह हाइपोथैलेमस द्वारा स्रावित होता है और पीयूष ग्रंथि को उद्दीपित करता है।<br>
+                            2. <strong>पीत पिंडकर हॉर्मोन / ल्यूटिनाइजिंग हॉर्मोन (LH):</strong> यह लीडिग कोशिकाओं को एंड्रोजन (टेस्टोस्टेरोन) के संश्लेषण और स्रवण के लिए उद्दीपित करता है। एंड्रोजन शुक्राणुजनन को उद्दीपित करता है।<br>
+                            3. <strong>पुटकोद्वीपक हॉर्मोन / फॉलिकल स्टिमुलेटिंग हॉर्मोन (FSH):</strong> यह सटौली कोशिकाओं पर कार्य करता है और कुछ ऐसे घटकों का स्रवण करता है जो शुक्राणुजनन में सहायता करते हैं।<br>
+                            4. <strong>पुंजन (एंड्रोजन/टेस्टोस्टेरोन):</strong> यह सीधे तौर पर शुक्राणुजनन की प्रक्रिया को उद्दीपित करता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शुक्राणुजनन एवं वीर्यसंचन (स्पर्मिएशन) की परिभाषा लिखें।</div>
+                        <div class="answer-text">
+                            <strong>शुक्राणुजनन (Spermatogenesis):</strong> वृषण की शुक्रजनक नलिकाओं की नर जर्म कोशिकाओं (शुक्राणुजन) से अर्धसूत्री विभाजन द्वारा परिपक्व नर युग्मक (शुक्राणु) के निर्माण की प्रक्रिया को शुक्राणुजनन कहते हैं।<br><br>
+                            <strong>वीर्यसंचन / स्पर्मिएशन (Spermiation):</strong> शुक्राणुजनन के पश्चात् परिपक्व शुक्राणुओं का शुक्रजनक नलिकाओं से मोचित (release) होने की प्रक्रिया को वीर्यसंचन या स्पर्मिएशन कहते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शुक्राणु का एक नामांकित आरेख बनाएँ।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 8 पर दिए गए <strong>चित्र 2.6</strong> का संदर्भ लें।<br><br>
+                            <strong>आरेख में निम्नलिखित भागों को नामांकित करें:</strong><br>
+                            1. शीर्ष (Head)<br>
+                            2. अग्रिपंडक (Acrosome)<br>
+                            3. केंद्रकयुक्त गुणसूत्री पदार्थ (Nucleus)<br>
+                            4. ग्रीवा (Neck)<br>
+                            5. मध्य खंड (Middle piece)<br>
+                            6. सूत्रकणिका (Mitochondria)<br>
+                            7. पूँछ (Tail)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शुक्रीय प्रद्रव्य (सेमिनल प्लाज्मा) के प्रमुख संघटक क्या हैं?</div>
+                        <div class="answer-text">
+                            शुक्रीय प्रद्रव्य (Seminal plasma) मुख्य रूप से सहायक ग्रंथियों (शुक्राशय, प्रोस्टेट ग्रंथि और बल्बोयूरेथ्रल ग्रंथि) के स्रावों से बनता है। इसके प्रमुख संघटक हैं:<br><br>
+                            1. <strong>फ्रुक्टोज (फल शर्करा):</strong> यह शुक्राणुओं को ऊर्जा प्रदान करता है।<br>
+                            2. <strong>कैल्सियम:</strong> यह शुक्राणु की गतिशीलता और निषेचन प्रक्रिया में सहायक होता है।<br>
+                            3. <strong>कुछ प्रकिण्व (एंजाइम्स):</strong> जो अंडाणु के आवरण को भेदने में मदद करते हैं।<br>
+                            4. <strong>अन्य पोषक तत्व और तरल पदार्थ:</strong> जो शुक्राणुओं के परिवहन और पोषण में सहायता करते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पुरुष की सहायक नलिकाओं एवं ग्रंथियों के प्रमुख कार्य क्या हैं?</div>
+                        <div class="answer-text">
+                            <strong>सहायक नलिकाओं (Accessory Ducts) के कार्य:</strong><br>
+                            1. शुक्रजनक नलिकाओं से शुक्राणुओं को एकत्रित करना।<br>
+                            2. शुक्राणुओं का भंडारण और परिवहन करना।<br>
+                            3. शुक्राणुओं को परिपक्वता और गतिशीलता प्रदान करने में सहायता करना।<br><br>
+                            
+                            <strong>सहायक ग्रंथियों (Accessory Glands) के कार्य:</strong><br>
+                            1. शुक्रीय प्रद्रव्य (Seminal plasma) का स्रवण करना, जिसमें फ्रुक्टोज, कैल्सियम और एंजाइम होते हैं।<br>
+                            2. शुक्राणुओं को पोषण और ऊर्जा प्रदान करना।<br>
+                            3. मैथुन के दौरान शिश्न में स्नेहन (Lubrication) प्रदान करना।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अंडजनन क्या है? अंडजनन की संक्षिप्त व्याख्या करें।</div>
+                        <div class="answer-text">
+                            <strong>अंडजनन (Oogenesis):</strong> अंडाशय में परिपक्व मादा युग्मक (अंडाणु) के निर्माण की प्रक्रिया को अंडजनन कहते हैं।<br><br>
+                            <strong>संक्षिप्त व्याख्या:</strong><br>
+                            1. यह प्रक्रिया भ्रूणीय अवस्था में ही शुरू हो जाती है जब अंडाशय में लाखों अंडजननी (Oogonia) बनती हैं।<br>
+                            2. जन्म के बाद अंडजननी का निर्माण नहीं होता है; वे प्राथमिक अंडक (Primary oocytes) में परिवर्तित होकर प्रोफेज-I में रुक जाती हैं।<br>
+                            3. यौवनारंभ पर, प्राथमिक अंडक प्राथमिक पुटक में बदल जाती हैं।<br>
+                            4. प्रत्येक आर्तव चक्र में, एक प्राथमिक पुटक परिपक्व ग्राफी पुटक में बदलता है।<br>
+                            5. अर्धसूत्री विभाजन-I पूरा होने पर एक बड़ी द्वितीयक अंडक (Secondary oocyte) और एक छोटी प्रथम ध्रुवीय पिंड (First polar body) बनती है।<br>
+                            6. अंडोत्सर्ग (Ovulation) के समय द्वितीयक अंडक मुक्त होता है। अर्धसूत्री विभाजन-II केवल निषेचन के बाद पूरा होता है, जिससे एक अंडाणु (Ovum) और एक द्वितीय ध्रुवीय पिंड बनता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 13</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अंडाशय के अनुप्रस्थ काट (ट्रांसवर्स सेक्शन) का एक नामांकित आरेख बनाएँ।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 8 पर दिए गए <strong>चित्र 2.7</strong> का संदर्भ लें।<br><br>
+                            <strong>आरेख में निम्नलिखित भागों को नामांकित करें:</strong><br>
+                            1. रुधिर वाहिकाएँ (Blood vessels)<br>
+                            2. प्राथमिक पुटक (Primary follicle)<br>
+                            3. तृतीयक पुटक (Tertiary follicle)<br>
+                            4. ग्राफी पुटक (Graafian follicle)<br>
+                            5. पीत पिंड (Corpus luteum)<br>
+                            6. द्वितीयक अंडक (Secondary oocyte)<br>
+                            7. अंडाशय पीठिका (Ovarian stroma)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 14</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">ग्राफी पुटक (ग्राफिएन फॉलिकल) का एक नामांकित आरेख बनाएँ।</div>
+                        <div class="answer-text">
+                            <strong>निर्देश:</strong> कृपया पाठ्यपुस्तक के पृष्ठ 8 पर दिए गए <strong>चित्र 2.7</strong> का संदर्भ लें।<br><br>
+                            <strong>आरेख में निम्नलिखित भागों को नामांकित करें:</strong><br>
+                            1. अंत: प्रावरक (Theca interna)<br>
+                            2. बाह्य प्रावरक (Theca externa)<br>
+                            3. गह्वर (Antrum)<br>
+                            4. द्वितीयक अंडक (Secondary oocyte)<br>
+                            5. पारदर्शी अंडावरण (Zona pellucida)<br>
+                            6. कणिकामय कोशिकाएँ (Granulosa cells)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 15</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित के कार्य बताएँ—</div>
+                        <div class="answer-text">
+                            (क) <strong>पीत पिंड (कॉर्पस ल्युटियम):</strong> यह अंडोत्सर्ग के बाद ग्राफी पुटक के शेष भाग से बनता है। यह भारी मात्रा में <strong>प्रोजेस्टेरॉन</strong> हॉर्मोन स्रावित करता है, जो गर्भाशय अंत:स्तर को निषेचित अंडाणु के अंतर्रोपण और गर्भावस्था को बनाए रखने के लिए आवश्यक है।<br><br>
+                            (ख) <strong>गर्भाशय अंत:स्तर (इंडोमेट्रियम):</strong> यह गर्भाशय की भीतरी ग्रंथिल परत है। यह आर्तव चक्र के दौरान चक्रीय परिवर्तनों से गुजरती है और निषेचित अंडाणु के अंतर्रोपण (Implantation) के लिए स्थान प्रदान करती है तथा भ्रूण के विकास में सहायता करती है।<br><br>
+                            (ग) <strong>अग्रिपंडक (एक्रोसोम):</strong> यह शुक्राणु के शीर्ष पर स्थित टोपीनुमा संरचना है। इसमें प्रकिण्व (एंजाइम्स) भरे होते हैं जो अंडाणु के पारदर्शी अंडावरण (Zona pellucida) को भेदने में मदद करते हैं, जिससे निषेचन संभव हो पाता है।<br><br>
+                            (घ) <strong>शुक्राणु पुच्छ (स्पर्म टेल):</strong> यह शुक्राणु को गति प्रदान करती है, जिससे शुक्राणु मादा जनन पथ में तैरकर अंडाणु तक पहुँच पाता है।<br><br>
+                            (ङ) <strong>झालर (फिम्ब्री):</strong> ये अंडवाहिनी के कीपक (Infundibulum) के किनारों पर उपस्थित अंगुली सदृश प्रक्षेप होते हैं। ये अंडोत्सर्ग के दौरान अंडाशय से उत्सर्जित अंडाणु को एकत्रित करने में सहायक होते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 16</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">सही या गलत कथनों को पहचानें —</div>
+                        <div class="answer-text">
+                            (क) पुंजनों (एंडोजेन्स) का उत्पादन सटौली कोशिकाओं द्वारा होता है। - <strong>गलत (False)</strong> (यह लीडिग कोशिकाओं द्वारा होता है)।<br>
+                            (ख) शुक्राणु को सटौली कोशिकाओं से पोषण प्राप्त होता है। - <strong>सही (True)</strong><br>
+                            (ग) लीडिग कोशिकाएँ अंडाशय में पाई जाती हैं। - <strong>गलत (False)</strong> (ये वृषण में पाई जाती हैं)।<br>
+                            (घ) लीडिग कोशिकाएँ पुंजनों (एंडोजेन्स) को संश्लेषित करती हैं। - <strong>सही (True)</strong><br>
+                            (ङ) अंडजनन पीत पिंड (कॉर्पस ल्युटियम) में संपन्न होता है। - <strong>गलत (False)</strong> (यह अंडाशय में होता है)।<br>
+                            (च) सगर्भता (प्रेगनेसी) के दौरान आर्तव चक्र (मेन्सटुअल साइकिल) बंद होता है। - <strong>सही (True)</strong><br>
+                            (छ) योनिच्छद (हाइमेन) की उपस्थिति अथवा अनुपस्थिति को कौमार्य (वर्जिनिटी) या यौन अनुभव का विश्वसनीय संकेत नहीं हैं। - <strong>सही (True)</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 17</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">आर्तव चक्र क्या हैं? आर्तव चक्र (मेन्सटुअल साइकिल) का कौन से हॉमॉन नियमन करते हैं?</div>
+                        <div class="answer-text">
+                            <strong>आर्तव चक्र (Menstrual Cycle):</strong> मादा प्राइमेटों (जैसे मनुष्य, बंदर) में होने वाले जनन चक्र को आर्तव चक्र या मासिक धर्म कहते हैं। यह प्राय: 28/29 दिनों की अवधि के बाद दोहराया जाता है। प्रत्येक चक्र के मध्य में एक अंडाणु उत्सर्जित होता है (अंडोत्सर्ग) और यदि निषेचन नहीं होता है, तो गर्भाशय अंत:स्तर टूटकर रक्तस्राव के रूप में बाहर निकलता है जिसे रजोधर्म कहते हैं।<br><br>
+                            <strong>नियमन करने वाले हॉर्मोन:</strong><br>
+                            1. <strong>पीयूष ग्रंथि के हॉर्मोन:</strong> पुटकोद्वीपक हॉर्मोन (FSH) और पीत पिंडकर हॉर्मोन (LH)।<br>
+                            2. <strong>अंडाशयी हॉर्मोन:</strong> एस्ट्रोजन और प्रोजेस्टेरॉन।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 18 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 18</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्रसव (पार्ट्यूरिशन) क्या हैं? प्रसव को प्रेरित करने में कौन से हॉर्मोन शामिल होते हैं?</div>
+                        <div class="answer-text">
+                            <strong>प्रसव (Parturition):</strong> सगर्भता के अंत में गर्भाशय के जोरदार संकुचनों के कारण गर्भ (शिशु) के बाहर निकलने की क्रिया को शिशु-जन्म या प्रसव कहा जाता है।<br><br>
+                            <strong>प्रसव को प्रेरित करने वाले हॉर्मोन:</strong><br>
+                            1. <strong>ऑक्सीटोसिन (Oxytocin):</strong> यह मुख्य हॉर्मोन है जो मातृ पीयूष ग्रंथि से स्रावित होता है। यह गर्भाशय की पेशियों पर कार्य करके जोरदार संकुचन उत्पन्न करता है।<br>
+                            2. <strong>रिलैक्सिन (Relaxin):</strong> यह सगर्भता के उत्तरार्ध में अंडाशय द्वारा स्रावित होता है, जो श्रोणि स्नायुओं को शिथिल करने में मदद करता है।<br>
+                            3. <strong>एस्ट्रोजन और प्रोजेस्टेरॉन:</strong> इनका स्तर भी प्रसव प्रक्रिया के दौरान बदलता है और गर्भाशय संकुचन को प्रभावित करता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 19 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 19</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">हमारे समाज में लडकियाँ जन्म देने का दोष महिलाओं को दिया जाता है। बताएँ कि यह क्यों सही नहीं है?</div>
+                        <div class="answer-text">
+                            यह कहना वैज्ञानिक रूप से पूरी तरह से गलत है। शिशु के लिंग का निर्धारण <strong>पिता</strong> के गुणसूत्रों द्वारा होता है, न कि माता के।<br><br>
+                            <strong>व्याख्या:</strong><br>
+                            1. स्त्री में लिंग गुणसूत्रों का स्वरूप <strong>XX</strong> होता है, इसलिए वह सदैव <strong>X गुणसूत्र</strong> वाला ही अंडाणु उत्पन्न करती है।<br>
+                            2. पुरुष में लिंग गुणसूत्रों का स्वरूप <strong>XY</strong> होता है। इसलिए उसके 50% शुक्राणुओं में X गुणसूत्र और 50% में Y गुणसूत्र होता है।<br>
+                            3. यदि X गुणसूत्र वाला शुक्राणु अंडाणु का निषेचन करता है, तो युग्मनज <strong>XX</strong> बनता है जो <strong>लड़की</strong> होगी।<br>
+                            4. यदि Y गुणसूत्र वाला शुक्राणु अंडाणु का निषेचन करता है, तो युग्मनज <strong>XY</strong> बनता है जो <strong>लड़का</strong> होगा।<br><br>
+                            अतः यह सिद्ध होता है कि संतान का लिंग पिता पर निर्भर करता है, इसलिए महिलाओं को दोष देना अनुचित और अवैज्ञानिक है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 20 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 20</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एक माह में मानव अंडाशय से कितने अंडे मोचित होते हैं? यदि माता ने समरूप जुडवाँ बच्चों को जन्म दिया हो तो आप क्या सोचते हैं कि कितने अंडे मोचित हुए होंगे? क्या आपका उत्तर बदलेगा यदि जन्मे हुए जुडवाँ बच्चे, द्विअंडज यमज थे?</div>
+                        <div class="answer-text">
+                            1. एक माह (एक आर्तव चक्र) में मानव अंडाशय से सामान्यतः <strong>एक</strong> ही अंडा मोचित होता है।<br><br>
+                            2. यदि माता ने <strong>समरूप जुड़वाँ (Identical twins)</strong> बच्चों को जन्म दिया है, तो केवल <strong>एक</strong> ही अंडे मोचित हुआ होगा। क्योंकि समरूप जुड़वाँ एक ही निषेचित अंडाणु (युग्मनज) के दो भागों में विभाजित होने से बनते हैं।<br><br>
+                            3. हाँ, उत्तर बदल जाएगा यदि जुड़वाँ बच्चे <strong>द्विअंडज यमज (Fraternal twins)</strong> थे। इस स्थिति में <strong>दो</strong> अंडे मोचित हुए होंगे, क्योंकि द्विअंडज यमज दो अलग-अलग अंडाणुओं के दो अलग-अलग शुक्राणुओं द्वारा निषेचित होने से बनते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 21 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 21</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">आप क्या सोचते हैं कि कुतिया, जिसने 6 बच्चों को जन्म दिया है, के अंडाशय से कितने अंडे मोचित हुए थे?</div>
+                        <div class="answer-text">
+                            कुतिया (Dog) एक <strong>बहु-अंडोत्सर्गी (Polyovulatory)</strong> प्राणी है, जिसका अर्थ है कि एक ही आर्तव चक्र में उसके अंडाशय से एक से अधिक अंडे मोचित हो सकते हैं।<br><br>
+                            चूँकि कुतिया ने 6 बच्चों को जन्म दिया है, इसलिए यह माना जा सकता है कि उसके अंडाशय से कम से कम <strong>6 अंडे</strong> मोचित हुए थे और सभी 6 अंडों का निषेचन अलग-अलग शुक्राणुओं द्वारा हुआ था, जिसके परिणामस्वरूप 6 भ्रूण विकसित हुए।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

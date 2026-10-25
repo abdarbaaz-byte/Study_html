@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 8 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 8: मानव कल्याण में सूक्ष्मजीव</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जीवाणुओं को नग्न नेत्रों द्वारा नहीं देखा जा सकता, परंतु सूक्ष्मदर्शी की सहायता से देखा जा सकता है। यदि आपको अपने घर से अपनी जीव विज्ञान प्रयोगशाला तक एक नमूना ले जाना हो और सूक्ष्मदर्शी की सहायता से इस नमूने से सूक्ष्मजीवों की उपस्थिति को प्रदर्शित करना हो, तो किस प्रकार का नमूना आप अपने साथ ले जायेंगे और क्यों?</div>
+                        <div class="answer-text">
+                            मैं अपने साथ <strong>दही (Curd)</strong> का एक ताजा नमूना ले जाऊँगा।<br><br>
+                            <strong>कारण:</strong><br>
+                            1. दही में <strong>लैक्टिक एसिड बैक्टीरिया (लैक्टोबैसिलस)</strong> प्रचुर मात्रा में पाए जाते हैं।<br>
+                            2. यह घर में आसानी से उपलब्ध होता है और इसे सुरक्षित रूप से प्रयोगशाला तक ले जाया जा सकता है।<br>
+                            3. सूक्ष्मदर्शी के नीचे दही की एक बूँद की जाँच करने पर जीवाणुओं की गतिशीलता और आकार (दंडाकार) स्पष्ट रूप से देखा जा सकता है।<br>
+                            4. यह नमूना रोगजनक (Pathogenic) नहीं है, इसलिए इसका उपयोग करना सुरक्षित है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">उपपचय के दौरान सूक्ष्मजीव गैसों का निष्कासन करते हैं; उदाहरण द्वारा सिद्ध करें।</div>
+                        <div class="answer-text">
+                            सूक्ष्मजीव किण्वन (Fermentation) और श्वसन के दौरान विभिन्न गैसों का उत्पादन करते हैं।<br><br>
+                            <strong>उदाहरण:</strong><br>
+                            1. <strong>यीस्ट (सैकरोमाइसीज सैरीवीसी):</strong> जब यीस्ट को आटे (मैदा) में मिलाकर गीला किया जाता है, तो यह किण्वन प्रक्रिया द्वारा शर्करा को अल्कोहल और <strong>कार्बन डाइऑक्साइड (CO₂)</strong> गैस में बदल देता है। यही CO₂ गैस आटे को फुलाकर ब्रेड को स्पंजी बनाती है।<br>
+                            2. <strong>प्रोपियोनिबैक्टीरियम शारमैनाई:</strong> 'स्विस चीज़' में बड़े-बड़े छिद्र इस जीवाणु द्वारा उत्पन्न होने वाली CO₂ गैस के कारण ही होते हैं।<br>
+                            3. <strong>मीथेनोजेन:</strong> ये जीवाणु अवायवीय (Anaerobic) परिस्थितियों में कार्बनिक पदार्थों को विघटित करके <strong>मीथेन (CH₄)</strong> गैस उत्पन्न करते हैं, जो बायोगैस का मुख्य घटक है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">किस भोजन (आहार) में लैक्टिक एसिड बैक्टीरिया मिलते हैं? इनके कुछ लाभप्रद उपयोगों का वर्णन करें।</div>
+                        <div class="answer-text">
+                            लैक्टिक एसिड बैक्टीरिया (LAB) मुख्य रूप से <strong>दही</strong> में पाए जाते हैं। इसके अलावा ये अचार, छाछ, और कुछ प्रकार के पनीर में भी मौजूद होते हैं।<br><br>
+                            <strong>लाभप्रद उपयोग:</strong><br>
+                            1. <strong>दही का निर्माण:</strong> LAB दूध में वृद्धि करके उसे दही में बदल देते हैं। ये लैक्टिक एसिड उत्पन्न करते हैं जो दूध के प्रोटीन (केसिन) को जमा देता है।<br>
+                            2. <strong>पोषण में सुधार:</strong> दही में विटामिन B₁₂ की मात्रा बढ़ जाती है, जिससे उसका पोषण मूल्य बढ़ जाता है।<br>
+                            3. <strong>रोगों से बचाव:</strong> हमारे पेट (आंतों) में LAB रोग पैदा करने वाले अन्य सूक्ष्मजीवों की वृद्धि को रोकते हैं और पाचन में सहायता करते हैं।<br>
+                            4. <strong>खाद्य संरक्षण:</strong> अचार बनाने में LAB का उपयोग किया जाता है जो अम्लीय वातावरण बनाकर खराब होने से बचाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">कुछ पारंपरिक भारतीय आहार जो गेहूँ, चावल तथा चना (अथवा उनके उत्पाद) से बनते हैं और उनमें सूक्ष्मजीवों का प्रयोग शामिल हो, उनके नाम बताएँ।</div>
+                        <div class="answer-text">
+                            सूक्ष्मजीवों का उपयोग करके बनाए जाने वाले कुछ पारंपरिक भारतीय खाद्य पदार्थ निम्नलिखित हैं:<br><br>
+                            1. <strong>इडली और डोसा:</strong> ये चावल और उड़द दाल के मिश्रण को रातभर किण्वित (Ferment) करके बनाए जाते हैं। किण्वन के दौरान बैक्टीरिया CO₂ गैस पैदा करते हैं जिससे आटा फूल जाता है।<br>
+                            2. <strong>ढोकला:</strong> यह चने की दाल और चावल के आटे के किण्वन से बनता है।<br>
+                            3. <strong>ब्रेड:</strong> गेहूँ के आटे (मैदा) में यीस्ट (सैकरोमाइसीज सैरीवीसी) मिलाकर किण्वन द्वारा बनाया जाता है।<br>
+                            4. <strong>टोडी:</strong> दक्षिण भारत का एक पारंपरिक पेय, जो ताड़ के पेड़ के तने के रस के किण्वन से बनता है।<br>
+                            5. <strong>अचार और पापड़:</strong> इनके संरक्षण में लैक्टिक एसिड बैक्टीरिया की भूमिका होती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">हानिप्रद जीवाणु द्वारा उत्पन्न करने वाले रोगों के नियंत्रण में किस प्रकार सूक्ष्मजीव महत्त्वपूर्ण भूमिका निभाते हैं?</div>
+                        <div class="answer-text">
+                            सूक्ष्मजीव (विशेषकर कवक और कुछ जीवाणु) <strong>प्रतिजैविक (Antibiotics)</strong> नामक रासायनिक पदार्थों का उत्पादन करते हैं, जो हानिकारक जीवाणुओं को मारने या उनकी वृद्धि को रोकने में सक्षम होते हैं।<br><br>
+                            <strong>उदाहरण:</strong><br>
+                            1. <strong>पेनिसिलीन:</strong> यह सबसे पहला खोजा गया प्रतिजैविक है, जो <em>पेनिसिलियम नोटेटम</em> नामक कवक से प्राप्त होता है। यह न्युमोनिया, डिप्थीरिया और कई अन्य जीवाणु रोगों के इलाज में प्रभावी है।<br>
+                            2. <strong>स्ट्रेप्टोमाइसिन:</strong> यह जीवाणु <em>स्ट्रेप्टोमाइसिस</em> से प्राप्त होता है और तपेदिक (TB) के इलाज में उपयोगी है।<br>
+                            इस प्रकार, सूक्ष्मजीवों से प्राप्त प्रतिजैविकों ने हानिकारक जीवाणुओं के कारण होने वाले भयानक रोगों (जैसे प्लेग, काली खाँसी) के इलाज में क्रांति ला दी है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">किन्हीं दो कवक प्रजातियों के नाम लिखें, जिनका प्रयोग प्रतिजैविकों (ऐंटीबॉयोटिकों) के उत्पादन में किया जाता है।</div>
+                        <div class="answer-text">
+                            प्रतिजैविकों के उत्पादन में उपयोग होने वाली दो प्रमुख कवक प्रजातियाँ हैं:<br><br>
+                            1. <strong>पेनिसिलियम नोटेटम (Penicillium notatum):</strong> इससे पेनिसिलीन प्रतिजैविक प्राप्त होता है।<br>
+                            2. <strong>ट्राइकोडरमा पॉलीस्पोरम (Trichoderma polysporum):</strong> इससे साइक्लोस्पोरिन-A प्राप्त होता है, जिसका उपयोग अंग प्रत्यारोपण में प्रतिरक्षा-निरोधक (Immunosuppressant) के रूप में किया जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">वाहितमल से आप क्या समझते हैं, वाहितमल हमारे लिए किस प्रकार से हानिप्रद हैं?</div>
+                        <div class="answer-text">
+                            <strong>वाहितमल (Sewage):</strong> नगरों और शहरों से उत्पन्न होने वाला अपशिष्ट जल (Wastewater), जिसमें मुख्य रूप से मानव मल-मूत्र, साबुन, कार्बनिक पदार्थ और रोगजनक सूक्ष्मजीव होते हैं, उसे वाहितमल कहते हैं।<br><br>
+                            <strong>हानिप्रद प्रभाव:</strong><br>
+                            1. <strong>जल प्रदूषण:</strong> यदि इसे बिना उपचार के नदियों या तालाबों में छोड़ दिया जाए, तो यह जल को अत्यधिक प्रदूषित कर देता है।<br>
+                            2. <strong>रोगों का संचरण:</strong> इसमें बड़ी मात्रा में रोगजनक जीवाणु, विषाणु और परजीवी होते हैं, जो हैजा, टाइफॉइड, पेचिश जैसे जल-जनित रोगों का कारण बनते हैं।<br>
+                            3. <strong>पर्यावरणीय क्षति:</strong> इसमें उपस्थित कार्बनिक पदार्थों को विघटित करने के लिए जल में घुली ऑक्सीजन की भारी खपत होती है (उच्च BOD), जिससे जलीय जीवों (मछलियों) का जीवन संकट में पड़ जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्राथमिक तथा द्वितीयक वाहितमल उपचार के बीच पाए जाने वाले मुख्य अंतर कौन से हैं?</div>
+                        <div class="answer-text">
+                            प्राथमिक और द्वितीयक वाहितमल उपचार में मुख्य अंतर निम्नलिखित हैं:<br><br>
+                            <strong>1. प्राथमिक उपचार (Primary Treatment):</strong><br>
+                            - यह एक <strong>भौतिक प्रक्रिया</strong> है।<br>
+                            - इसमें बड़े और छोटे ठोस कणों को छानकर (Filtration) और बैठाकर (Sedimentation) अलग किया जाता है।<br>
+                            - इसमें सूक्ष्मजीवों की कोई सक्रिय भूमिका नहीं होती है।<br><br>
+
+                            <strong>2. द्वितीयक उपचार (Secondary Treatment):</strong><br>
+                            - यह एक <strong>जैविक (Biological) प्रक्रिया</strong> है।<br>
+                            - इसमें वायुवीय (Aerobic) या अवायवीय (Anaerobic) सूक्ष्मजीवों का उपयोग किया जाता है।<br>
+                            - सूक्ष्मजीव जल में घुले कार्बनिक पदार्थों को खाते हैं और उन्हें विघटित कर देते हैं, जिससे जल का BOD (जैव रासायनिक ऑक्सीजन मांग) कम हो जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">सूक्ष्मजीवों का प्रयोग ऊर्जा के स्रोतों के रूप में भी किया जा सकता है। यदि हाँ; तो किस प्रकार से इस पर विचार करें?</div>
+                        <div class="answer-text">
+                            हाँ, सूक्ष्मजीवों का उपयोग ऊर्जा के स्रोत के रूप में किया जा सकता है।<br><br>
+                            <strong>व्याख्या:</strong><br>
+                            1. <strong>बायोगैस उत्पादन:</strong> <em>मीथेनोजेन</em> (जैसे <em>मीथेनोबैक्टीरियम</em>) नामक जीवाणु अवायवीय (Anaerobic) स्थितियों में कार्बनिक पदार्थों (जैसे गोबर, कृषि अपशिष्ट) को विघटित करके <strong>बायोगैस</strong> (मुख्य रूप से मीथेन) उत्पन्न करते हैं। इस गैस का उपयोग ग्रामीण क्षेत्रों में खाना पकाने और बिजली उत्पादन के लिए ईंधन के रूप में किया जाता है।<br>
+                            2. <strong>जैव हाइड्रोजन:</strong> कुछ सूक्ष्मजीव प्रकाश संश्लेषण या किण्वन के दौरान हाइड्रोजन गैस उत्पन्न करते हैं, जिसे भविष्य का स्वच्छ ईंधन माना जा रहा है।<br>
+                            3. <strong>माइक्रोबियल फ्यूल सेल:</strong> शोधकर्ता सूक्ष्मजीवों की मदद से जैविक अपशिष्टों से बिजली उत्पन्न करने की तकनीक विकसित कर रहे हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">सूक्ष्मजीवों का प्रयोग रसायन उर्वरकों तथा पीडकनाशियों के प्रयोग को कम करने के किए भी किया जा सकता है। यह किस प्रकार संपन्न होगा? व्याख्या कीजिए।</div>
+                        <div class="answer-text">
+                            सूक्ष्मजीवों का उपयोग रासायनिक उर्वरकों और कीटनाशकों के विकल्प के रूप में निम्नलिखित प्रकार से किया जाता है:<br><br>
+                            1. <strong>जैव उर्वरक (Biofertilizers):</strong> रासायनिक उर्वरकों के स्थान पर जैव उर्वरकों का उपयोग किया जाता है। जैसे- <em>राइजोबियम</em> जीवाणु फलीदार पौधों की जड़ों में रहकर वायुमंडलीय नाइट्रोजन का स्थिरीकरण करते हैं, और <em>माइकोराइजा</em> कवक मिट्टी से फॉस्फोरस का अवशोषण बढ़ाते हैं। इससे मिट्टी की उर्वरता प्राकृतिक रूप से बढ़ती है।<br>
+                            2. <strong>जैव नियंत्रण (Biocontrol):</strong> हानिकारक कीटों को मारने के लिए रासायनिक कीटनाशकों के बजाय जैविक एजेंटों का उपयोग किया जाता है। जैसे- <em>बैसिलस थुरिंजिएंसिस (Bt)</em> जीवाणु से प्राप्त विष (Toxin) कैटरपिलर (सुंडी) को मार देता है, लेकिन अन्य जीवों को हानि नहीं पहुँचाता। इसी प्रकार <em>ट्राइकोडरमा</em> कवक कई पादप रोगजनकों को नियंत्रित करता है।<br>
+                            इन जैविक तरीकों से पर्यावरण में प्रदूषण कम होता है और खेती सुरक्षित रहती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जल के तीन नमूने लो – नदी का जल, दूसरा अनुपचारित वाहितमल जल तथा तीसरा- वाहितमल उपचार संयंत्र से निकला द्वितीयक बहि:स्राव; इन तीनों नमूनों पर ‘अ’ ‘ब’ ‘स’ के लेबल लगाओ। इस बारे में प्रयोगशाला कर्मचारी को पता नहीं है कि कौन सा क्या है? इन तीनों नमूनों ‘अ’ ‘ब’ ‘स’ का बीओडि का रिकाडं किया गया जो क्रमशः 20 mg/L, 8 mg/L तथा 400 mg/L निकाला। इन नमूनों में कौन सा सबसे अधिक प्रदूषित नमूना है? इस तथ्य को सामने रखते हुए कि नदी का जल अपेक्षाकृत अधिक स्वच्छ है। क्या आप सही लेबल का प्रयोग कर सकते हैं?</div>
+                        <div class="answer-text">
+                            <strong>1. सबसे अधिक प्रदूषित नमूना:</strong> जिस नमूने का BOD सबसे अधिक है, वह सबसे अधिक प्रदूषित होता है क्योंकि उसमें कार्बनिक पदार्थों की मात्रा अधिक होती है जिन्हें विघटित करने के लिए अधिक ऑक्सीजन की आवश्यकता होती है। अतः <strong>नमूना 'स' (BOD = 400 mg/L)</strong> सबसे अधिक प्रदूषित है।<br><br>
+
+                            <strong>2. सही लेबल:</strong><br>
+                            - <strong>नमूना 'स' (400 mg/L BOD):</strong> यह <strong>अनुपचारित वाहितमल जल</strong> है, क्योंकि इसमें कार्बनिक पदार्थों और रोगजनकों की भारी मात्रा होती है।<br>
+                            - <strong>नमूना 'ब' (8 mg/L BOD):</strong> यह <strong>नदी का जल</strong> है, क्योंकि दिया गया है कि नदी का जल अपेक्षाकृत अधिक स्वच्छ है (सबसे कम BOD)।<br>
+                            - <strong>नमूना 'अ' (20 mg/L BOD):</strong> यह <strong>द्वितीयक बहि:स्राव</strong> है, क्योंकि उपचार के बाद इसका BOD (20 mg/L) अनुपचारित मल (400 mg/L) से बहुत कम हो जाता है, लेकिन यह पूरी तरह से स्वच्छ नदी के पानी (8 mg/L) से थोड़ा अधिक प्रदूषित रहता है।<br><br>
+
+                            अतः सही लेबल है: <strong>अ – द्वितीयक बहि:स्राव, ब – नदी का जल, स – अनुपचारित वाहितमल जल</strong>।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">उस सूक्ष्मजीवी का नाम बताओ जिससे साइक्लोस्पोरिन-ए (प्रतिरक्षा निषेधात्मक औषधि) तथा स्टैटिन (रक्त कोलिस्ट्रॉल लघुकरण कारक) को प्राप्त किया जाता है।</div>
+                        <div class="answer-text">
+                            1. <strong>साइक्लोस्पोरिन-A:</strong> यह <strong>ट्राइकोडरमा पॉलीस्पोरम (Trichoderma polysporum)</strong> नामक कवक से प्राप्त किया जाता है। इसका उपयोग अंग प्रत्यारोपण में प्रतिरक्षा-निरोधक (Immunosuppressant) औषधि के रूप में किया जाता है।<br>
+                            2. <strong>स्टैटिन:</strong> यह <strong>मोनास्कस परप्यूरीअस (Monascus purpureus)</strong> नामक यीस्ट से प्राप्त किया जाता है। इसका उपयोग रक्त में कोलेस्ट्रॉल के स्तर को कम करने के लिए किया जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 13</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित में सूक्ष्मजीवियों की भूमिका का पता लगाओ तथा अपने अध्यापक से इनके विषय में विचार-विमर्श करें। (क) एकल कोशिका प्रौदीन (एससीपी) (ख) मृदा</div>
+                        <div class="answer-text">
+                            <strong>(क) एकल कोशिका प्रोटीन (Single Cell Protein - SCP):</strong><br>
+                            SCP का अर्थ है सूक्ष्मजीवों (जैसे बैक्टीरिया, यीस्ट, कवक और शैवाल) से प्राप्त प्रोटीन। इन सूक्ष्मजीवों को औद्योगिक पैमाने पर उगाया जाता है और उनके बायोमास को सुखाकर पशुओं और मनुष्यों के लिए प्रोटीन युक्त आहार के रूप में उपयोग किया जाता है (जैसे स्पिरुलिना)। यह पारंपरिक कृषि की तुलना में बहुत तेजी से उत्पन्न होता है और भूमि की भी कम आवश्यकता होती है।<br><br>
+                            <strong>(ख) मृदा (Soil):</strong><br>
+                            मृदा में अरबों की संख्या में सूक्ष्मजीव रहते हैं जो मृदा की उर्वरता बनाए रखने में महत्वपूर्ण भूमिका निभाते हैं। वे मृत कार्बनिक पदार्थों (पत्तियों, जानवरों के अवशेष) को विघटित (Decompose) करके ह्यूमस और पोषक तत्वों (नाइट्रोजन, फॉस्फोरस) में बदल देते हैं, जो पौधों के लिए उपयोगी होते हैं। साथ ही कुछ जीवाणु (जैसे राइजोबियम) वायुमंडलीय नाइट्रोजन का स्थिरीकरण करते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 14</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित को घटते क्रम में मानव समाज कल्याण के प्रति उनके महत्त्व के अनुसार संयोजित करें; महत्त्वपूर्ण पदार्थ को पहले रखते हुए कारणों सहित अपना उत्तर लिखें। बायोगैस, सिट्रिक एसिड, पैनीसिलिन तथा दही</div>
+                        <div class="answer-text">
+                            मानव कल्याण के प्रति महत्त्व के घटते क्रम में संयोजन (उच्च से निम्न):<br><br>
+                            <strong>1. पैनीसिलिन (Penicillin):</strong> यह एक प्रतिजैविक (Antibiotic) है जो जीवन-रक्षक है। इसने न्युमोनिया, डिप्थीरिया आदि घातक रोगों के इलाज में क्रांति लाकर लाखों जिंदगियाँ बचाई हैं।<br>
+                            <strong>2. दही (Curd):</strong> यह दैनिक आहार का हिस्सा है और पोषण (विटामिन B12, प्रोटीन) प्रदान करता है तथा पेट के लिए लाभकारी है। यह सर्वसुलभ है।<br>
+                            <strong>3. बायोगैस (Biogas):</strong> यह ग्रामीण क्षेत्रों में ऊर्जा (ईंधन) का एक महत्वपूर्ण स्रोत है, जो गोबर से उत्पन्न होती है और खाना पकाने व प्रकाश देने में काम आती है।<br>
+                            <strong>4. सिट्रिक एसिड (Citric Acid):</strong> यह एक औद्योगिक रसायन है जो मुख्य रूप से खाद्य पदार्थों और पेय पदार्थों में परिरक्षक और स्वाद बढ़ाने के रूप में काम आता है। यह मानव जीवन के लिए अनिवार्य नहीं है, बल्कि औद्योगिक उपयोगिता अधिक है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 15</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">जैव उर्वरक किस प्रकार से मृदा की उर्वरता को बढ़ाते हैं?</div>
+                        <div class="answer-text">
+                            जैव उर्वरक (Biofertilizers) वे जीवित सूक्ष्मजीव हैं (जैसे जीवाणु, कवक, सायनोबैक्टीरिया) जो मृदा की उर्वरता को निम्नलिखित प्रकार से बढ़ाते हैं:<br><br>
+                            1. <strong>नाइट्रोजन स्थिरीकरण:</strong> जीवाणु जैसे <em>राइजोबियम</em> (फलीदार पौधों की जड़ों में ग्रंथियों में), <em>एजोटोबैक्टर</em> और <em>एजोस्पाइरिलम</em> (मुक्त रूप से मिट्टी में) वायुमंडलीय नाइट्रोजन को कार्बनिक रूप में परिवर्तित कर देते हैं, जिसे पौधे आसानी से अवशोषित कर सकते हैं।<br>
+                            2. <strong>फॉस्फोरस का घुलनशीलकरण:</strong> कवक जैसे <em>माइकोराइजा</em> (जो पौधों की जड़ों के साथ सहजीवी संबंध बनाते हैं) मिट्टी में उपस्थित अघुलनशील फॉस्फोरस को घुलनशील रूप में बदलकर पौधों तक पहुँचाते हैं।<br>
+                            3. <strong>कार्बनिक पदार्थों की वृद्धि:</strong> सायनोबैक्टीरिया (जैसे ऐनाबीना) मृदा में कार्बनिक पदार्थों की मात्रा बढ़ाते हैं, जिससे मिट्टी की जल-धारण क्षमता और संरचना में सुधार होता है।<br>
+                            इस प्रकार, जैव उर्वरक रासायनिक उर्वरकों पर निर्भरता कम करके पर्यावरण-हितैषी तरीके से मृदा की प्राकृतिक उर्वरता को बढ़ाते हैं।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

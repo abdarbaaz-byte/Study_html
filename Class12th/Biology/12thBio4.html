@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 4 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    
+        .answer-text ol, .answer-text ul { padding-left: 1.4rem; margin: 0.45rem 0; }
+        .answer-text li { margin-bottom: 0.35rem; }
+        .answer-text .punnett { border-collapse: collapse; margin: 0.8rem auto; width: 100%; max-width: 520px; text-align: center; }
+        .answer-text .punnett th, .answer-text .punnett td { border: 1px solid var(--medium-gray); padding: 0.65rem; }
+        .answer-text .punnett th { background: var(--light-gray); color: var(--primary-dark); }
+</style>
+</head><body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 4: वंशागति तथा विविधता के सिद्धांत</h2>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">मेंडल द्वारा प्रयोगों के लिए मटर के पौधे चुनने से क्या लाभ हुआ?</div>
+                        <div class="answer-text">मेंडल ने अपने प्रयोगों के लिए मटर के पौधे (Pisum sativum) को चुना, क्योंकि इसमें कई ऐसे गुण थे जो वंशागति के अध्ययन के लिए उपयोगी थे। प्रमुख लाभ निम्नलिखित हैं:
+<ol><li>मटर में स्पष्ट विपरीत लक्षणों के कई जोड़े पाए जाते हैं, जैसे लंबा/बौना पौधा तथा पीले/हरे बीज।</li><li>यह स्व-परागण करने वाला पौधा है, इसलिए इसके शुद्ध वंशक्रम आसानी से प्राप्त किए जा सकते हैं।</li><li>कृत्रिम पर-परागण कराकर इच्छित संकरण भी सरलता से कराया जा सकता है।</li><li>इसका जीवन-चक्र अपेक्षाकृत छोटा होता है और कम समय में कई पीढ़ियों का अध्ययन किया जा सकता है।</li><li>इससे बड़ी संख्या में बीज प्राप्त होते हैं, जिससे परिणामों का सांख्यिकीय विश्लेषण संभव हुआ।</li><li>इसके पौधों का पालन-पोषण सरल था और प्रयोगों में खर्च भी कम आता था।</li></ol>
+अतः मटर के पौधे के स्पष्ट लक्षण, नियंत्रित परागण और अधिक संतति ने मेंडल को वंशागति के नियम स्थापित करने में सहायता दी।</div>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्न में भेद कीजिए — (क) प्रभाविता और अप्रभाविता (ख) समयुग्मजी और विषमयुग्मजी (ग) एकसंकर और द्विसंकर।</div>
+                        <div class="answer-text"><b>(क) प्रभाविता और अप्रभाविता</b><br><b>प्रभावी लक्षण:</b> विषमयुग्मजी अवस्था में भी व्यक्त होने वाला लक्षण प्रभावी कहलाता है। उदाहरण—मटर में लंबापन (T)।<br><b>अप्रभावी लक्षण:</b> जो विषमयुग्मजी अवस्था में व्यक्त नहीं होता और सामान्यतः समयुग्मजी अवस्था में ही दिखाई देता है, अप्रभावी कहलाता है। उदाहरण—बौनापन (t)।<br><br>
+<b>(ख) समयुग्मजी और विषमयुग्मजी</b><br><b>समयुग्मजी:</b> किसी जीन के दोनों युग्मविकल्पी समान हों, जैसे TT या tt। ऐसे जीव एक ही प्रकार के युग्मक बनाते हैं।<br><b>विषमयुग्मजी:</b> दोनों युग्मविकल्पी अलग हों, जैसे Tt। ऐसे जीव दो प्रकार के युग्मक बना सकते हैं।<br><br>
+<b>(ग) एकसंकर और द्विसंकर</b><br><b>एकसंकर संकरण:</b> इसमें एक जोड़ी विपरीत लक्षणों की वंशागति का अध्ययन किया जाता है, जैसे TT × tt। F₂ पीढ़ी में सामान्यतः लक्षणप्ररूप अनुपात 3:1 होता है।<br><b>द्विसंकर संकरण:</b> इसमें दो जोड़ी विपरीत लक्षणों की वंशागति का अध्ययन किया जाता है, जैसे बीज का रंग और आकार। स्वतंत्र अपव्यूहन की स्थिति में F₂ लक्षणप्ररूप अनुपात 9:3:3:1 होता है।</div>
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">कोई द्विगुणित जीव 6 जीन स्थलों के लिए विषमयुग्मजी है। कितने प्रकार के युग्मकों का उत्पादन संभव है?</div>
+                        <div class="answer-text">यदि कोई द्विगुणित जीव 6 जीन स्थलों पर विषमयुग्मजी है, तो प्रत्येक जीन स्थल से युग्मक में दो में से एक युग्मविकल्पी जा सकता है। अतः युग्मकों के प्रकारों की संख्या का सूत्र है:<br><b>युग्मकों के प्रकार = 2ⁿ</b>, जहाँ n विषमयुग्मजी जीन स्थलों की संख्या है।<br>यहाँ n = 6।<br>इसलिए 2⁶ = 2 × 2 × 2 × 2 × 2 × 2 = <b>64 प्रकार</b> के युग्मक संभव हैं। यह स्वतंत्र अपव्यूहन मानकर निकाला गया परिणाम है।</div>
+                    </div>
+                </div>
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एकसंकर क्रॉस का प्रयोग करते हुए प्रभाविता के नियम की व्याख्या कीजिए।</div>
+                        <div class="answer-text">मेंडल ने शुद्ध लंबे मटर के पौधे (TT) और शुद्ध बौने पौधे (tt) के बीच संकरण कराया।<br><b>जनक पीढ़ी (P):</b> TT × tt<br><b>युग्मक:</b> T तथा t<br><b>प्रथम संतति पीढ़ी (F₁):</b> सभी पौधों का जीनप्ररूप Tt और लक्षणप्ररूप लंबा था। बौनापन F₁ में दिखाई नहीं दिया।<br><br>जब F₁ के लंबे पौधों का स्व-परागण कराया गया, तो F₂ पीढ़ी में लंबे और बौने दोनों पौधे प्राप्त हुए। लक्षणप्ररूप अनुपात 3 लंबे : 1 बौना तथा जीनप्ररूप अनुपात 1 TT : 2 Tt : 1 tt था।<br><br><b>निष्कर्ष:</b> विषमयुग्मजी अवस्था में एक युग्मविकल्पी दूसरे पर प्रभावी होकर अपना लक्षण व्यक्त करता है, जबकि अप्रभावी युग्मविकल्पी का प्रभाव छिप जाता है। इसे प्रभाविता का नियम कहते हैं।</div>
+                    </div>
+                </div>
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">परीक्षार्थ संकरण की परिभाषा लिखिए और चित्र बनाइए।</div>
+                        <div class="answer-text"><b>परीक्षार्थ संकरण (Test cross):</b> किसी प्रभावी लक्षण वाले, परंतु अज्ञात जीनप्ररूप के जीव का अप्रभावी समयुग्मजी जीव से संकरण कराकर उसका जीनप्ररूप ज्ञात करने की विधि परीक्षार्थ संकरण कहलाती है।<br><br>
+<b>स्थिति 1: अज्ञात पौधा TT हो</b><br>TT × tt → सभी संतति Tt (लंबे पौधे)।<br><br><b>स्थिति 2: अज्ञात पौधा Tt हो</b><br>Tt × tt → ½ Tt (लंबे) और ½ tt (बौने), अर्थात् लक्षणप्ररूप अनुपात 1:1।<br><br>
+इस प्रकार सभी संतति प्रभावी लक्षण वाली हो तो अज्ञात जनक के TT होने की संभावना होती है; जबकि 1:1 अनुपात मिलने पर वह विषमयुग्मजी (Tt) होता है।</div>
+                    </div>
+                </div>
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एक ही जीन स्थल वाले समयुग्मजी मादा और विषमयुग्मजी नर के संकरण से प्राप्त F₁ पीढ़ी के लक्षणप्ररूप वितरण का पनेट वर्ग बनाकर प्रदर्शन कीजिए।</div>
+                        <div class="answer-text">मान लें कि प्रभावी युग्मविकल्पी A और अप्रभावी युग्मविकल्पी a है। समयुग्मजी मादा AA तथा विषमयुग्मजी नर Aa है।<br><b>संकरण:</b> ♀ AA × ♂ Aa<br>मादा के युग्मक: A; नर के युग्मक: A और a।<br><br>
+<table class="punnett"><tr><th>मादा \ नर</th><th>A</th><th>a</th></tr><tr><th>A</th><td>AA</td><td>Aa</td></tr><tr><th>A</th><td>AA</td><td>Aa</td></tr></table>
+<br>संतति में 50% AA तथा 50% Aa होंगे। दोनों जीनप्ररूपों में प्रभावी लक्षण व्यक्त होगा। इसलिए F₁ का <b>लक्षणप्ररूप अनुपात 100% प्रभावी : 0% अप्रभावी</b> है और जीनप्ररूप अनुपात 1 AA : 1 Aa है।</div>
+                    </div>
+                </div>
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पीले बीज वाले लंबे पौधे (Yy Tt) का संकरण हरे बीज वाले लंबे (yy Tt) पौधे से करने पर किस प्रकार के लक्षणप्ररूप संतति की आशा की जा सकती है?</div>
+                        <div class="answer-text">दोनों लक्षणों को अलग-अलग देखें। बीज के रंग में Y प्रभावी (पीला) और y अप्रभावी (हरा) है। पौधे की ऊँचाई में T प्रभावी (लंबा) और t अप्रभावी (बौना) है।<br><b>संकरण:</b> YyTt × yyTt<br><br>बीज रंग के लिए Yy × yy से ½ पीले और ½ हरे बीज मिलेंगे। ऊँचाई के लिए Tt × Tt से ¾ लंबे और ¼ बौने पौधे मिलेंगे। स्वतंत्र अपव्यूहन मानने पर संयुक्त लक्षणप्ररूप:<br><ol><li>पीले-लंबे = ½ × ¾ = 3/8</li><li>पीले-बौने = ½ × ¼ = 1/8</li><li>हरे-लंबे = ½ × ¾ = 3/8</li><li>हरे-बौने = ½ × ¼ = 1/8</li></ol>
+अतः अनुपात <b>3 : 1 : 3 : 1</b> होगा। दिए गए विकल्पों में पीले-लंबे, पीले-बौने, हरे-लंबे तथा हरे-बौने सभी प्रकार की संतति संभव है।</div>
+                    </div>
+                </div>
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">दो विषमयुग्मजी जनकों का क्रॉस AaBb × AaBb किया गया। यदि दोनों जीन स्थल सहलग्न हैं, तो F₁ पीढ़ी के लक्षणों का वितरण क्या होगा?</div>
+                        <div class="answer-text">जब दोनों जीन स्थल सहलग्न होते हैं, तो वे एक ही गुणसूत्र पर स्थित होने के कारण सामान्यतः साथ-साथ वंशागत होते हैं। इसलिए स्वतंत्र अपव्यूहन का नियम लागू नहीं माना जा सकता।<br><br>प्रश्न में सहलग्नता की व्यवस्था (जैसे AB/ab या Ab/aB), पुनर्संयोजन की आवृत्ति तथा क्रॉसिंग-ओवर की जानकारी नहीं दी गई है। इसलिए केवल AaBb × AaBb लिखे होने से F₂/F₁ लक्षणप्ररूप का कोई निश्चित संख्यात्मक अनुपात निकालना संभव नहीं है।<br><br>यदि पूर्ण सहलग्नता और AB/ab व्यवस्था मानें, तो युग्मक मुख्यतः AB और ab होंगे; संतति का वितरण इसी व्यवस्था पर निर्भर करेगा। परीक्षा में उत्तर देते समय स्पष्ट लिखें कि <b>सहलग्न जीनों में सामान्य 9:3:3:1 अनुपात अपेक्षित नहीं होता</b>; वास्तविक अनुपात दी गई सहलग्नता और पुनर्संयोजन पर निर्भर है।</div>
+                    </div>
+                </div>
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">आनुवंशिकी में टी. एच. मॉर्गन के योगदान का संक्षेप में उल्लेख कीजिए।</div>
+                        <div class="answer-text">टी. एच. मॉर्गन ने फल-मक्खी (Drosophila melanogaster) पर प्रयोग करके मेंडल के नियमों तथा गुणसूत्रों और जीनों के संबंध को समझने में महत्त्वपूर्ण योगदान दिया। उनके प्रमुख योगदान हैं:<ol><li>उन्होंने जीनों के गुणसूत्रों पर स्थित होने के प्रमाण प्रस्तुत किए।</li><li>उन्होंने सहलग्नता (linkage) की अवधारणा को स्पष्ट किया—एक ही गुणसूत्र पर स्थित जीन प्रायः साथ-साथ वंशागत होते हैं।</li><li>उन्होंने पुनर्संयोजन (recombination) का अध्ययन किया और बताया कि जीनों के बीच दूरी बढ़ने पर पुनर्संयोजन की संभावना बढ़ सकती है।</li><li>उनके कार्य ने गुणसूत्रीय वंशागति सिद्धांत को समर्थन दिया तथा जीन मानचित्रण की नींव रखी।</li></ol></div>
+                    </div>
+                </div>
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">वंशावली विश्लेषण क्या है? यह किस प्रकार उपयोगी है?</div>
+                        <div class="answer-text">वंशावली विश्लेषण (Pedigree analysis) किसी परिवार की कई पीढ़ियों में किसी विशेष लक्षण या आनुवंशिक रोग के संचरण का प्रतीकों की सहायता से अध्ययन है। इसमें पुरुष, स्त्री, प्रभावित व्यक्ति, वाहक तथा विवाह/संतान संबंधों को मानक चिह्नों से दिखाया जाता है।<br><br><b>उपयोगिता:</b><ol><li>यह पता लगाने में सहायता करता है कि कोई लक्षण प्रभावी है या अप्रभावी तथा ऑटोसोमल है या लिंग-सहलग्न।</li><li>परिवार में आनुवंशिक रोग के वाहकों की पहचान करने में सहायक है।</li><li>आने वाली संतति में रोग होने की संभावना का अनुमान लगाया जा सकता है।</li><li>चिकित्सकीय आनुवंशिक परामर्श और परिवार नियोजन में उपयोगी है।</li></ol></div>
+                    </div>
+                </div>
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">मनुष्य में लिंग-निर्धारण कैसे होता है?</div>
+                        <div class="answer-text">मनुष्य में लिंग-निर्धारण XY प्रकार का होता है। स्त्री में 44 ऑटोसोम तथा XX लिंग गुणसूत्र होते हैं; पुरुष में 44 ऑटोसोम तथा XY लिंग गुणसूत्र होते हैं।<ol><li>अंडाणु निर्माण के समय स्त्री के सभी अंडाणुओं में X गुणसूत्र होता है।</li><li>पुरुष दो प्रकार के शुक्राणु बनाता है—X वाले और Y वाले, लगभग समान संख्या में।</li><li>X-युक्त शुक्राणु अंडाणु से निषेचन करे तो XX युग्मनज बनता है, जिससे सामान्यतः स्त्री शिशु विकसित होता है।</li><li>Y-युक्त शुक्राणु निषेचन करे तो XY युग्मनज बनता है, जिससे सामान्यतः पुरुष शिशु विकसित होता है।</li></ol>अतः संतान का आनुवंशिक लिंग निषेचन के समय शुक्राणु द्वारा लाए गए X या Y गुणसूत्र पर निर्भर करता है।</div>
+                    </div>
+                </div>
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">शिशु का रुधिर वर्ग O है। पिता का रुधिर वर्ग A और माता का B है। जनकों के जीनप्ररूप ज्ञात कीजिए तथा अन्य संतति में संभावित जीनप्ररूप बताइए।</div>
+                        <div class="answer-text">ABO रुधिर वर्ग में Iᴬ और Iᴮ सह-प्रभावी हैं तथा i दोनों के प्रति अप्रभावी है। रुधिर वर्ग O का जीनप्ररूप ii होता है। शिशु को एक i युग्मविकल्पी पिता से और दूसरा i माता से मिला होगा।<br><br>इसलिए पिता का जीनप्ररूप <b>Iᴬi</b> (रुधिर वर्ग A) तथा माता का जीनप्ररूप <b>Iᴮi</b> (रुधिर वर्ग B) होना चाहिए।<br><br>
+<table class="punnett"><tr><th>माता \ पिता</th><th>Iᴬ</th><th>i</th></tr><tr><th>Iᴮ</th><td>IᴬIᴮ (AB)</td><td>Iᴮi (B)</td></tr><tr><th>i</th><td>Iᴬi (A)</td><td>ii (O)</td></tr></table>
+<br>अतः अन्य संतति में संभावित जीनप्ररूप IᴬIᴮ, Iᴬi, Iᴮi तथा ii हैं। प्रत्येक की संभावना 25% है; इसलिए संभावित रुधिर वर्ग AB, A, B और O हैं, प्रत्येक की संभावना 25% है।</div>
+                    </div>
+                </div>
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 13</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित शब्दों को उदाहरण सहित समझाइए—(क) सह-प्रभाविता (ख) अपूर्ण प्रभाविता।</div>
+                        <div class="answer-text"><b>(क) सह-प्रभाविता:</b> जब विषमयुग्मजी अवस्था में दोनों युग्मविकल्पी पूर्ण रूप से व्यक्त होते हैं और कोई भी दूसरे को नहीं दबाता, तो इसे सह-प्रभाविता कहते हैं। उदाहरण—मनुष्य में AB रुधिर वर्ग; Iᴬ और Iᴮ दोनों एंटीजन बनाते हैं, इसलिए दोनों लक्षण साथ व्यक्त होते हैं।<br><br><b>(ख) अपूर्ण प्रभाविता:</b> जब विषमयुग्मजी अवस्था में कोई भी युग्मविकल्पी पूर्ण प्रभावी नहीं होता और मध्यवर्ती लक्षण दिखाई देता है, तो इसे अपूर्ण प्रभाविता कहते हैं। उदाहरण—स्नैपड्रैगन/गुलअब्बास में लाल पुष्प (RR) और सफेद पुष्प (rr) के संकरण से F₁ में गुलाबी पुष्प (Rr) बनते हैं। F₂ में लक्षणप्ररूप अनुपात 1 लाल : 2 गुलाबी : 1 सफेद होता है।</div>
+                    </div>
+                </div>
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 14</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">बिंदु-उत्परिवर्तन क्या है? एक उदाहरण दीजिए।</div>
+                        <div class="answer-text">DNA के एक ही नाइट्रोजनी क्षारक या क्षारक-युग्म में होने वाला परिवर्तन बिंदु-उत्परिवर्तन कहलाता है। यह जीन के आनुवंशिक संदेश को बदल सकता है और परिणामस्वरूप प्रोटीन में अमीनो अम्ल बदल सकता है।<br><br><b>उदाहरण:</b> सिकल-सेल एनीमिया में β-ग्लोबिन जीन के छठे कोडॉन में परिवर्तन के कारण सामान्य हीमोग्लोबिन में ग्लूटामिक अम्ल के स्थान पर वेलीन आ जाता है। इससे कम ऑक्सीजन की स्थिति में लाल रक्त कोशिकाएँ हँसिया-आकार की हो सकती हैं।</div>
+                    </div>
+                </div>
+                <!-- Question 15 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 15</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">वंशागति के गुणसूत्रवाद को किसने प्रस्तावित किया?</div>
+                        <div class="answer-text">वंशागति का गुणसूत्रीय सिद्धांत वाल्टर सटन और थियोडोर बोवेरी ने स्वतंत्र रूप से प्रस्तावित किया। इस सिद्धांत के अनुसार जीन गुणसूत्रों पर स्थित होते हैं और अर्धसूत्री विभाजन के समय समजात गुणसूत्रों का पृथक्करण तथा युग्मकों का निर्माण मेंडल के वंशागति नियमों की व्याख्या करता है।</div>
+                    </div>
+                </div>
+                <!-- Question 16 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 16</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">किन्हीं दो अलिंगसूत्री आनुवंशिक विकारों का उनके लक्षणों सहित उल्लेख कीजिए।</div>
+                        <div class="answer-text"><b>1. सिकल-सेल एनीमिया:</b> यह अलिंगसूत्री अप्रभावी आनुवंशिक विकार है। β-ग्लोबिन जीन में बिंदु-उत्परिवर्तन से हीमोग्लोबिन की संरचना बदल जाती है। कम ऑक्सीजन में लाल रक्त कोशिकाएँ हँसिया-आकार की हो जाती हैं। इससे रक्ताल्पता, थकान, दर्द तथा रक्त-प्रवाह में बाधा जैसे लक्षण हो सकते हैं।<br><br><b>2. थैलेसीमिया:</b> यह अलिंगसूत्री अप्रभावी रक्त विकार है, जिसमें α- या β-ग्लोबिन शृंखला का निर्माण कम हो जाता है। इससे हीमोग्लोबिन कम बनता है और रक्ताल्पता होती है। रोगी में कमजोरी, थकान, पीलापन तथा गंभीर अवस्था में अन्य जटिलताएँ हो सकती हैं।</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

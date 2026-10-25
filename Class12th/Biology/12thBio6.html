@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 6 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 6: विकास</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">डाविन के चयन सिद्धांत के परिप्रेक्ष्य में जीवाणुओं में देखी गई प्रतिजैविक प्रतिरोध का स्पष्टीकरण करें।</div>
+                        <div class="answer-text">
+                            डार्विन के प्राकृतिक चयन (Natural Selection) के सिद्धांत के अनुसार, किसी भी जीवसंख्या (Population) में विविधताएँ (Variations) विद्यमान रहती हैं। जीवाणुओं में भी यह विविधता पाई जाती है।<br><br>
+                            <strong>स्पष्टीकरण:</strong><br>
+                            1. जब किसी रोगी पर प्रतिजैविक (Antibiotic) का प्रयोग किया जाता है, तो अधिकांश सामान्य जीवाणु मर जाते हैं।<br>
+                            2. लेकिन कुछ जीवाणुओं में पहले से ही ऐसे उत्परिवर्तन (Mutation) होते हैं जो उन्हें उस प्रतिजैविक के प्रति प्रतिरोधी (Resistant) बनाते हैं।<br>
+                            3. ये प्रतिरोधी जीवाणु जीवित बच जाते हैं और तेजी से विभाजित होकर अपनी संख्या बढ़ा लेते हैं।<br>
+                            4. चूँकि यह प्रतिरोधक क्षमता वंशानुगत (Heritable) होती है, अगली पीढ़ी में यह गुण स्थानांतरित हो जाता है।<br>
+                            5. परिणामस्वरूप, कुछ समय बाद उस प्रतिजैविक का उपयोग करने पर भी जीवाणु मरते नहीं हैं और पूरी जीवसंख्या प्रतिरोधी हो जाती है।<br><br>
+                            यह डार्विन के "अस्तित्व के लिए संघर्ष" (Struggle for existence) और "योग्यतम की उत्तरजीविता" (Survival of the fittest) का स्पष्ट उदाहरण है, जिसमें प्रकृति ने प्रतिरोधी जीवाणुओं का चयन किया।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">समाचार पत्रों और लोकप्रिय वैज्ञानिक लेखों से विकास संबंधी नए जीवाश्मों और मतभेदों की जानकारी प्राप्त करें।</div>
+                        <div class="answer-text">
+                            <em>(नोट: यह एक गतिविधि-आधारित प्रश्न है, जिसके उत्तर समय-समय पर बदलते रहते हैं। विद्यार्थियों को समाचार पत्रों या इंटरनेट से हालिया खोजों को खोजने की सलाह दी जाती है। यहाँ कुछ सामान्य जानकारी दी गई है:)</em><br><br>
+                            1. <strong>नए जीवाश्म:</strong> वैज्ञानिकों ने समय-समय पर ऐसे जीवाश्म खोजे हैं जो विकास के 'मिसिंग लिंक' (Missing Link) को सिद्ध करते हैं। उदाहरण के लिए, <strong>टिक्टालिक (Tiktaalik)</strong> का जीवाश्म, जो मछली और उभयचर (Amphibian) के बीच की कड़ी माना जाता है।<br>
+                            2. <strong>मतभेद:</strong> विकास के संबंध में वैज्ञानिकों में कुछ मतभेद भी रहते हैं, जैसे कि विकास की गति को लेकर। कुछ वैज्ञानिक इसे धीरे-धीरे होने वाली प्रक्रिया (Gradualism) मानते हैं, जबकि कुछ इसे अचानक छोटे समय में होने वाली प्रक्रिया (Punctuated Equilibrium) मानते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">‘प्रजाति’ की स्पष्ट परिभाषा देने का प्रयास करें।</div>
+                        <div class="answer-text">
+                            जैविक वर्गीकरण में <strong>प्रजाति (Species)</strong> को एक मौलिक इकाई माना जाता है।<br><br>
+                            <strong>परिभाषा:</strong> प्रजाति ऐसे जीवों का समूह है जो प्राकृतिक परिस्थितियों में आपस में संकरण (Interbreed) करके जीवनक्षम और उत्पादक (Fertile) संतान उत्पन्न कर सकते हैं।<br><br>
+                            <strong>विशेषताएँ:</strong><br>
+                            1. एक प्रजाति के सदस्यों में आपस में आकारिकीय (Morphological) और आनुवंशिक समानताएँ होती हैं।<br>
+                            2. वे एक साझे पूर्वज के वंशज होते हैं।<br>
+                            3. वे विभिन्न प्रजातियों के सदस्यों के साथ संकरण नहीं कर सकते या यदि करते भी हैं तो संतान बंध्य (Sterile) होती है (जैसे- घोड़ा और गधा संकरण करके खच्चर बनाते हैं, जो बंध्य होता है)।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">मानव-विकास के विभिन्न घटकों का पता करें (संकेत - मिस्तष्क साइज और कार्य, कंकाल-संरचना, भोजन में पसंदगी आदि)।</div>
+                        <div class="answer-text">
+                            मानव विकास के दौरान कई महत्वपूर्ण परिवर्तन हुए, जिन्हें निम्न प्रकार समझा जा सकता है:<br><br>
+                            1. <strong>मस्तिष्क का आकार और कार्य:</strong> विकास के क्रम में मस्तिष्क का आकार लगातार बढ़ता गया। जहाँ <em>होमो हैबिलिस</em> का मस्तिष्क 650-800 cc था, वहीं <em>होमो इरेक्टस</em> का 900 cc हो गया। <em>नियंडरटाल</em> मानव का मस्तिष्क लगभग 1400 cc का हो गया। मस्तिष्क के आकार बढ़ने से बुद्धि, भाषा और सामाजिक कौशल का विकास हुआ।<br>
+                            2. <strong>कंकाल-संरचना:</strong> शुरुआती पूर्वजों (जैसे <em>ऑस्ट्रेलोपिथेकस</em>) में दो पैरों पर सीधे चलने की क्षमता विकसित हुई। रीढ़ की हड्डी में S-आकार का मोड़ आया जिससे द्विपाद चलना संभव हुआ।<br>
+                            3. <strong>भोजन में पसंदगी:</strong> शुरुआत में ये फलाहारी (Frugivorous) थे। बाद में <em>होमो हैबिलिस</em> ने शिकार करना शुरू किया, और <em>होमो इरेक्टस</em> माँस खाने लगा। आग की खोज से भोजन पकाना शुरू हुआ जिससे मस्तिष्क का विकास और भी तेज हुआ।<br>
+                            4. <strong>हाथों का उपयोग:</strong> उपकरण (पत्थर के हथियार) बनाने और उनका उपयोग करने की क्षमता विकसित हुई।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">इंटरनेट (अंतरजाल-तंत्र) या लोकप्रिय विज्ञान लेखों से पता करें कि क्या मानवेतर किसी प्राणी में आत्म संचेतना थी।</div>
+                        <div class="answer-text">
+                            <em>(नोट: यह एक खोजपूर्ण प्रश्न है। नीचे इसका सामान्य उत्तर दिया गया है:)</em><br><br>
+                            आत्म-संचेतना (Self-consciousness) या आत्म-जागरूकता का पता लगाने के लिए वैज्ञानिक 'दर्पण परीक्षण' (Mirror Test) का उपयोग करते हैं। इसमें जानवर के शरीर पर एक रंगीन बिंदु लगा दिया जाता है और उसे दर्पण के सामने रखा जाता है। यदि वह जानवर दर्पण में देखकर अपने शरीर पर लगे निशान को छूता या हटाने की कोशिश करता है, तो यह सिद्ध होता है कि उसे अपने अस्तित्व का बोध है।<br><br>
+                            <strong>परिणाम:</strong> शोध से पता चला है कि मानव के अतिरिक्त कुछ ही उच्च बुद्धि वाले प्राणियों में आत्म-संचेतना पाई जाती है। इनमें <strong>चिम्पैंज़ी, बोनोबो, गोरिल्ला, डॉल्फिन, हाथी और यूरेशियन मैग्पाई (एक पक्षी)</strong> शामिल हैं। अधिकांश अन्य जानवर इस परीक्षण में असफल रहते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">इंटरनेट (अंतरजाल-तंत्र) संसाधनों के उपयोग करते हुए आज के 10 जानवरों और उनके विलुप्त जोडीदारों की सूची बनाएँ (दोनों के नाम दें)।</div>
+                        <div class="answer-text">
+                            आधुनिक जानवरों और उनके विलुप्त पूर्वजों/समकक्षों की सूची:<br><br>
+                            1. <strong>वूली मैमथ (Woolly Mammoth)</strong> - हाथी (Elephant)<br>
+                            2. <strong>स्माइलोडन (Smilodon / Saber-toothed cat)</strong> - बाघ/शेर (Tiger/Lion)<br>
+                            3. <strong>मेगालोडन (Megalodon - विशाल शार्क)</strong> - ग्रेट व्हाइट शार्क (Great White Shark)<br>
+                            4. <strong>डोडो (Dodo)</strong> - कबूतर (Pigeon)<br>
+                            5. <strong>आयरिश एल्क (Irish Elk)</strong> - हिरण (Deer)<br>
+                            6. <strong>मोआ (Moa)</strong> - शुतुरमुर्ग/एमू (Ostrich/Emu)<br>
+                            7. <strong>टास्मानियन वुल्फ (Tasmanian Wolf / Thylacine)</strong> - कुत्ता/भेड़िया (Dog/Wolf) <em>(यह अभिसारी विकास का उदाहरण है)</em><br>
+                            8. <strong>पैसेंजर कबूतर (Passenger Pigeon)</strong> - सामान्य कबूतर (Common Pigeon)<br>
+                            9. <strong>गुफा भालू (Cave Bear)</strong> - भूरा भालू (Brown Bear)<br>
+                            10. <strong>स्टेगोसोरस (Stegosaurus)</strong> - घड़ियाल/मगरमच्छ (Crocodile) <em>(दूर के रिश्तेदार)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">विविध जंतुओं और पौधों के चित्र बनाएँ।</div>
+                        <div class="answer-text">
+                            <em>(निर्देश: यह एक चित्रकारी आधारित प्रश्न है। कृपया पाठ्यपुस्तक के चित्र 6.2, 6.3, 6.5, 6.6, 6.9, 6.10 और 6.11 में दिए गए जंतुओं और पौधों के चित्रों को अपनी कॉपी में बनाएँ।)</em><br><br>
+                            उदाहरण के लिए आप निम्न के चित्र बना सकते हैं:<br>
+                            - डायनासोर (Dinosaurs)<br>
+                            - डार्विन की फिंच (Darwin's Finches)<br>
+                            - मार्सुपियल्स (Kangaroo, Koala)<br>
+                            - मानव खोपड़ी का विकास (चित्र 6.11)<br>
+                            - पादप विकास का वृक्ष (चित्र 6.9)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अनुकूलनी विकरण को एक उदाहरण का वर्णन करें।</div>
+                        <div class="answer-text">
+                            <strong>अनुकूली विकिरण (Adaptive Radiation):</strong> एक ही भौगोलिक क्षेत्र में एक सामान्य पूर्वज से विभिन्न प्रकार के जीवों का विकास होना, जो विभिन्न आवासों के अनुकूलित हो जाते हैं, अनुकूली विकिरण कहलाता है।<br><br>
+                            <strong>उदाहरण - डार्विन की फिंच (Darwin's Finches):</strong><br>
+                            डार्विन ने गैलापैगोस द्वीप पर छोटी चिड़ियों (फिंच) की कई प्रजातियाँ देखीं। उन्होंने पाया कि ये सभी मूल रूप से एक ही प्रजाति से आई थीं, लेकिन इनके भोजन और आवास के अनुसार इनकी <strong>चोंचों का आकार और आकारिकी (Morphology)</strong> बहुत अलग-अलग हो गई थी।<br>
+                            - जिन फिंचों ने बीज खाए, उनकी चोंच मजबूत और चौड़ी हो गई।<br>
+                            - जिन्होंने कीट खाए, उनकी चोंच पतली और नुकीली हो गई।<br>
+                            - कुछ ने कैक्टस के फूलों से रस पीना शुरू किया, उनकी चोंच लंबी और ट्यूब जैसी हो गई।<br><br>
+                            इस प्रकार, एक सामान्य पूर्वज से कई नई प्रजातियों का विकास हुआ। <strong>ऑस्ट्रेलियाई मार्सुपियल्स (कंगारू, कोआला, वोम्बैट आदि)</strong> भी अनुकूली विकिरण का एक शानदार उदाहरण है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">क्या हम मानव विकास को अनुकूलनी विकिरण कह सकते हैं?</div>
+                        <div class="answer-text">
+                            हाँ, हम मानव विकास को कुछ सीमा तक अनुकूली विकिरण (Adaptive Radiation) कह सकते हैं।<br><br>
+                            <strong>कारण:</strong><br>
+                            1. आधुनिक मानव (<em>होमो सेपियंस</em>) का उद्भव अफ्रीका में हुआ था। वहाँ से वे पूरी दुनिया में फैल गए।<br>
+                            2. जैसे-जैसे मानव विभिन्न भौगोलिक क्षेत्रों (जैसे ठंडे क्षेत्र, रेगिस्तान, जंगल) में फैले, उन्होंने उन विशिष्ट पर्यावरणीय परिस्थितियों के अनुकूल खुद को ढाला।<br>
+                            3. इसके परिणामस्वरूप मानव में विभिन्न जातियों (Races) या नस्लों का विकास हुआ, जिनमें त्वचा का रंग, बालों का प्रकार, शरीर का आकार आदि में अंतर है।<br>
+                            4. हालाँकि, मानव विकास में सांस्कृतिक और तकनीकी विकास (जैसे औजार, आग, कृषि) ने जैविक विकास से अधिक महत्वपूर्ण भूमिका निभाई है, इसलिए इसे पूर्ण रूप से केवल जैविक अनुकूली विकिरण नहीं कहा जा सकता, लेकिन जैविक दृष्टिकोण से यह इसका एक उदाहरण है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">विभिन्न संसाधनों जैसे कि विद्यालय का पुस्तकालय या इंटरनेट (अंतरजाल-तंत्र) तथा अध्यापक से चर्चा के बाद किसी जानवर जैसे कि घोड़े के विकासीय चरणों को खोजें।</div>
+                        <div class="answer-text">
+                            घोड़े (Horse) का विकासीय इतिहास लगभग 5 करोड़ वर्ष पुराना है। इसके प्रमुख विकासीय चरण निम्नलिखित हैं:<br><br>
+                            1. <strong>इयोहिप्पस (Eohippus):</strong> इसे 'डॉन हॉर्स' कहते हैं। यह लगभग 60 सेमी लंबा, लोमड़ी के आकार का होता था। इसके अग्रपाद में 4 पंजे और पश्चपाद में 3 पंजे होते थे। यह जंगलों में रहता था।<br>
+                            2. <strong>मेसोहिप्पस (Mesohippus):</strong> इसका आकार बड़ा हो गया। इसके पैरों में 3 पंजे थे और मध्य वाला पंजा अन्य की तुलना में बड़ा था।<br>
+                            3. <strong>मेरिकहिप्पस (Merychippus):</strong> यह घास के मैदानों में रहने लगा। इसके दांत घास चबाने के लिए उपयुक्त हो गए। इसके पैरों में 3 पंजे थे, लेकिन केवल मध्य वाला पंजा ही जमीन को छूता था।<br>
+                            4. <strong>प्लायोहिप्पस (Pliohippus):</strong> इसके पैरों में केवल एक ही अंगुली (पंजा) बची थी जो बहुत मजबूत हो गई थी।<br>
+                            5. <strong>इक्वस (Equus):</strong> यह आधुनिक घोड़ा है। इसके पैरों में केवल एक ही खुर (Hoof) होता है, जो दौड़ने के लिए बहुत अनुकूल है। इसका शरीर लंबा और मजबूत होता है।<br><br>
+                            यह विकास दर्शाता है कि कैसे जंगल से घास के मैदानों में जाने पर घोड़े के पैरों में कम अंगुलियां और मजबूत खुर विकसित हुए जिससे तेज दौड़ना संभव हुआ।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

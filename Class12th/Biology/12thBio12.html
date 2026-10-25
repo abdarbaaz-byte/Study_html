@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Biology - Chapter 12 Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #1a4b8c;
+            --primary-light: #2a6ec6;
+            --primary-dark: #0d2d56;
+            --secondary: #00a8e8;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark: #212529;
+            --border-radius: 8px;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "studyscript.netlify.app";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 9999;
+            font-weight: 900;
+            letter-spacing: 8px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .content-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Questions Grid */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem;
+        }
+
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .question-number i {
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 1.05rem;
+        }
+
+        .answer-text {
+            color: var(--dark);
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .chapter-title {
+                font-size: 1.7rem;
+            }
+            
+            .chapter-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            body::after {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            body::after {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="chapter-title">कक्षा 12 जीव विज्ञान</h1>
+                <h2 class="chapter-subtitle">अध्याय 12: पारितंत्र</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="section-title">अभ्यास प्रश्नों के उत्तर</h2>
+            </div>
+
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 1</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">रिक्त स्थानों को भरो।<br>(क) पादपों को ..................................... कहते हैं; क्योंकि कार्बन डाईऑक्साइड का स्थिरीकरण करते हैं।<br>(ख) पादप द्वारा प्रमुख पारितंत्र का परिमित्त (सं- का) (....................) प्रकार का है।<br>(ग) एक जलीय पारितंत्र में, उत्पादकता का सीमा कारक .................... है।<br>(घ) हमारे पारितंत्र में सामान्य अपरदन .................... है।<br>(च) पृथ्वी पर कार्बन का प्रमुख भंडार .................... है।</div>
+                        <div class="answer-text">
+                            (क) पादपों को <strong>उत्पादक (Producers)</strong> कहते हैं; क्योंकि कार्बन डाईऑक्साइड का स्थिरीकरण करते हैं।<br>
+                            (ख) पादप द्वारा प्रमुख पारितंत्र का परिमित्त (सं-का) <strong>ऊर्जा (Energy)</strong> प्रकार का है।<br>
+                            (ग) एक जलीय पारितंत्र में, उत्पादकता का सीमा कारक <strong>प्रकाश (Light)</strong> है।<br>
+                            (घ) हमारे पारितंत्र में सामान्य अपरदन <strong>अपरद (Detritus)</strong> है।<br>
+                            (च) पृथ्वी पर कार्बन का प्रमुख भंडार <strong>जीवाश्म ईंधन (Fossil fuels)</strong> है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 2</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एक खाद्य शृंखला में निम्नलिखित में सर्वाधिक संख्या किसकी होती है- (क) उत्पादक (ख) प्राथमिक उपभोक्ता (ग) द्वितीयक उपभोक्ता (घ) अपघटक</div>
+                        <div class="answer-text">
+                            <strong>सही उत्तर: (क) उत्पादक</strong><br><br>
+                            <strong>व्याख्या:</strong> किसी भी खाद्य शृंखला में ऊर्जा और संख्या का पिरामिड आधार से शिखर की ओर संकरा होता जाता है। उत्पादक (पादप) प्रथम पोषण स्तर पर होते हैं और उनकी संख्या, जैवमात्रा तथा संचित ऊर्जा सर्वाधिक होती है। जैसे-जैसे हम उच्च पोषण स्तरों की ओर बढ़ते हैं, प्रत्येक स्तर पर ऊर्जा का कुछ भाग ऊष्मा के रूप में नष्ट हो जाता है (10% नियम), जिससे प्राथमिक उपभोक्ताओं, द्वितीयक उपभोक्ताओं की संख्या क्रमशः घटती जाती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 3</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एक झील में द्वितीय (दूसरी) पोषण स्तर होता है- (क) पादप्पलवक (ख) प्राणिप्लवक (ग) नितलक (बैनथॉस) (घ) मछलियाँ</div>
+                        <div class="answer-text">
+                            <strong>सही उत्तर: (ख) प्राणिप्लवक (Zooplankton)</strong><br><br>
+                            <strong>व्याख्या:</strong> झील के पारितंत्र में,<br>
+                            - प्रथम पोषण स्तर (उत्पादक) = पादपप्लवक (Phytoplankton)<br>
+                            - द्वितीय पोषण स्तर (प्राथमिक उपभोक्ता) = प्राणिप्लवक (Zooplankton) जो पादपप्लवक को खाते हैं।<br>
+                            - तृतीय पोषण स्तर (द्वितीयक उपभोक्ता) = छोटी मछलियाँ जो प्राणिप्लवक खाती हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 4</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">द्वितीयक उत्पादक हैं- (क) शाकाहारी (शाकभक्षी) (ख) उत्पादक (ग) मांसाहारी (मांसभक्षी) (घ) उपरोक्त कोई भी नहीं</div>
+                        <div class="answer-text">
+                            <strong>सही उत्तर: (क) शाकाहारी (शाकभक्षी)</strong><br><br>
+                            <strong>व्याख्या:</strong> द्वितीयक उत्पादकता (Secondary Productivity) उपभोक्ताओं द्वारा नए कार्बनिक पदार्थों के निर्माण की दर को कहते हैं। प्राथमिक उपभोक्ता (शाकाहारी) जब उत्पादकों (पादपों) को खाते हैं और उन्हें अपने शरीर के नए ऊतकों (जैवमात्रा) में बदलते हैं, तो उन्हें द्वितीयक उत्पादक कहा जा सकता है। हालाँकि तकनीकी रूप से सभी उपभोक्ता (शाकाहारी और मांसाहारी दोनों) द्वितीयक उत्पादन करते हैं, लेकिन प्रश्न के विकल्पों के आधार पर शाकाहारी सबसे उपयुक्त उत्तर हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 5</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्रासंगिक सौर विकिरण में प्रकाश संश्लेषणात्मक सक्रिय विकिरण का क्या प्रतिशत होता है? (क) 100% (ग) 50% (ग) 1-5% (घ) 2-10%</div>
+                        <div class="answer-text">
+                            <strong>सही उत्तर: (घ) 2-10%</strong><br><br>
+                            <strong>व्याख्या:</strong> आपतित सौर विकिरण (Incident Solar Radiation) का लगभग 50% भाग प्रकाश संश्लेषणात्मक सक्रिय विकिरण (PAR - Photosynthetically Active Radiation) होता है। लेकिन पादप इस PAR का केवल 2 से 10 प्रतिशत भाग ही प्रकाश संश्लेषण में ग्रहण कर पाते हैं। यही आंशिक मात्रा संपूर्ण विश्व के जीवन का संपोषण करती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 6</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित में अंतर स्पष्ट करें — (क) चारण खाद्य शृंखला एवं अपरद खाद्य शृंखला (ख) उत्पादन एवं अपघटन (ग) ऊर्ध्ववर्ती (शिखरांश) व अभोवर्ती पिरेमिड</div>
+                        <div class="answer-text">
+                            <strong>(क) चारण खाद्य शृंखला (Grazing Food Chain) एवं अपरद खाद्य शृंखला (Detritus Food Chain) में अंतर:</strong><br>
+                            - <strong>चारण खाद्य शृंखला:</strong> यह जीवित हरे पादपों (उत्पादक) से शुरू होती है और शाकाहारी तथा मांसाहारी जीवों तक जाती है। इसमें ऊर्जा का प्रवाह सीधे सौर ऊर्जा से उत्पादकों और फिर उपभोक्ताओं की ओर होता है।<br>
+                            - <strong>अपरद खाद्य शृंखला:</strong> यह मृत कार्बनिक पदार्थों (अपरद) से शुरू होती है। इसमें अपघटक (जीवाणु, कवक) मृत पदार्थों को तोड़कर ऊर्जा प्राप्त करते हैं। यह स्थलीय पारितंत्रों में अधिक महत्वपूर्ण है।<br><br>
+
+                            <strong>(ख) उत्पादन (Production) एवं अपघटन (Decomposition) में अंतर:</strong><br>
+                            - <strong>उत्पादन:</strong> यह प्रक्रिया है जिसमें जीव (जैसे पादप) सरल अकार्बनिक पदार्थों से जटिल कार्बनिक पदार्थ (जैसे ग्लूकोज) का निर्माण करते हैं (प्रकाश संश्लेषण)। इसमें ऊर्जा का संचय होता है।<br>
+                            - <strong>अपघटन:</strong> यह विपरीत प्रक्रिया है जिसमें सूक्ष्मजीव (जीवाणु, कवक) जटिल कार्बनिक पदार्थों को सरल अकार्बनिक पदार्थों (जैसे CO₂, H₂O, खनिज) में तोड़ देते हैं। इसमें ऊर्जा मुक्त होती है।<br><br>
+
+                            <strong>(ग) ऊर्ध्ववर्ती (शिखरांश) व अभोवर्ती पिरेमिड में अंतर:</strong><br>
+                            - <strong>ऊर्ध्ववर्ती पिरैमिड (Upright Pyramid):</strong> इसमें आधार (उत्पादक) चौड़ा और शिखर संकरा होता है। यह संख्या, जैवमात्रा या ऊर्जा में देखा जाता है। सामान्यतः घास के मैदान और वन पारितंत्र में यह सामान्य है।<br>
+                            - <strong>अभोवर्ती पिरैमिड (Inverted Pyramid):</strong> इसमें आधार संकरा और शिखर चौड़ा होता है। यह उदाहरण तब देखा जाता है जब उत्पादक की जैवमात्रा कम होती है लेकिन उनकी उत्पादकता दर अधिक होती है। इसका प्रमुख उदाहरण समुद्र या झील में पादपप्लवक (उत्पादक) और प्राणिप्लवक/मछलियों (उपभोक्ता) का जैवमात्रा पिरामिड है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">निम्नलिखित में अंतर स्पष्ट करें — (क) खाद्य शृंखला तथा खाद्य जाल (बेब) (ख) लिटर (कर्कट) एवं अपरद (ग) प्राथमिक एवं द्वितीयक उत्पादकता</div>
+                        <div class="answer-text">
+                            <strong>(क) खाद्य शृंखला (Food Chain) तथा खाद्य जाल (Food Web) में अंतर:</strong><br>
+                            - <strong>खाद्य शृंखला:</strong> जीवों का एक सीधा क्रम है जिसमें एक जीव दूसरे को खाता है। इसमें ऊर्जा का प्रवाह एक रेखीय मार्ग से होता है। (जैसे: घास → बकरी → मनुष्य)।<br>
+                            - <strong>खाद्य जाल:</strong> कई खाद्य शृंखलाओं के परस्पर जुड़ने से बनने वाला जटिल जाल है। यह प्रकृति में अधिक यथार्थवादी है क्योंकि अधिकांश जीव एक से अधिक प्रकार के भोजन खाते हैं।<br><br>
+
+                            <strong>(ख) लिटर (Litter) एवं अपरद (Detritus) में अंतर:</strong><br>
+                            - <strong>लिटर (Litter):</strong> पादपों के गिरे हुए मृत अंग (जैसे पत्तियाँ, छाल, फूल) जो भूमि पर जमा हो जाते हैं, उन्हें लिटर कहते हैं। यह अपघटन के लिए कच्चा माल है।<br>
+                            - <strong>अपरद (Detritus):</strong> यह व्यापक शब्द है जिसमें सभी मृत कार्बनिक पदार्थ (पादपों के मृत अंग, जानवरों के मृत शरीर, मल) शामिल होते हैं। लिटर, अपरद का ही एक भाग है।<br><br>
+
+                            <strong>(ग) प्राथमिक एवं द्वितीयक उत्पादकता में अंतर:</strong><br>
+                            - <strong>प्राथमिक उत्पादकता:</strong> यह उत्पादकों (हरे पादपों) द्वारा प्रकाश संश्लेषण के माध्यम से कार्बनिक पदार्थों के निर्माण की दर है।<br>
+                            - <strong>द्वितीयक उत्पादकता:</strong> यह उपभोक्ताओं (शाकाहारी और मांसाहारी) द्वारा अपने भोजन (जो उन्होंने खाया) को अपने शरीर के नए ऊतकों में बदलने की दर है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पारिस्थितिक तंत्र के घटकों की व्याख्या करें।</div>
+                        <div class="answer-text">
+                            पारिस्थितिक तंत्र (Ecosystem) दो प्रकार के घटकों से मिलकर बनता है:<br><br>
+                            <strong>1. अजैविक घटक (Abiotic Components):</strong> ये निर्जीव भौतिक और रासायनिक कारक हैं, जैसे- प्रकाश, तापमान, जल, वायु, मृदा, खनिज लवण आदि। ये उत्पादकों को कच्चा माल प्रदान करते हैं और उनकी वृद्धि को नियंत्रित करते हैं।<br><br>
+                            
+                            <strong>2. जैविक घटक (Biotic Components):</strong> इन्हें उनके पोषण संबंधी आदतों के आधार पर तीन भागों में बाँटा जा सकता है:<br>
+                            - <strong>उत्पादक (Producers):</strong> ये स्वपोषी जीव (हरे पादप, शैवाल) हैं जो प्रकाश संश्लेषण द्वारा अपना भोजन स्वयं बनाते हैं।<br>
+                            - <strong>उपभोक्ता (Consumers):</strong> ये विषमपोषी जीव हैं जो भोजन के लिए उत्पादकों या अन्य जीवों पर निर्भर रहते हैं। ये शाकाहारी (प्राथमिक), मांसाहारी (द्वितीयक) या सर्वाहारी हो सकते हैं।<br>
+                            - <strong>अपघटक (Decomposers):</strong> ये सूक्ष्मजीव (जीवाणु, कवक) हैं जो मृत जीवों और अपशिष्टों को तोड़कर पोषक तत्वों को मृदा में वापस लौटाते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">पारिस्थितिकी परिमिड को परिभाषित करें तथा जैवमात्रा या जैवभार तथा संख्या के परिमिडों की उदाहरण सहित व्याख्या करें।</div>
+                        <div class="answer-text">
+                            <strong>पारिस्थितिक पिरैमिड (Ecological Pyramid):</strong> यह एक आरेखीय निरूपण है जो किसी पारितंत्र में विभिन्न पोषण स्तरों (उत्पादक, प्राथमिक उपभोक्ता, द्वितीयक उपभोक्ता) पर जीवों की संख्या, जैवमात्रा या संचित ऊर्जा के बीच संबंध को दर्शाता है।<br><br>
+
+                            <strong>1. संख्या का पिरैमिड (Pyramid of Numbers):</strong> यह प्रत्येक पोषण स्तर पर व्यष्टियों (जीवों) की संख्या को दर्शाता है।<br>
+                            - <em>उदाहरण:</em> घास का मैदान पारितंत्र - घास (उत्पादक) की संख्या सबसे अधिक, फिर टिड्डे (प्राथमिक उपभोक्ता), फिर मेंढक (द्वितीयक उपभोक्ता) और अंत में साँप (तृतीयक उपभोक्ता) की संख्या सबसे कम। यह एक ऊर्ध्ववर्ती पिरैमिड है।<br><br>
+
+                            <strong>2. जैवमात्रा का पिरैमिड (Pyramid of Biomass):</strong> यह प्रत्येक पोषण स्तर पर जीवों के कुल शुष्क भार (जैवमात्रा) को दर्शाता है।<br>
+                            - <em>उदाहरण:</em> वन पारितंत्र - वृक्षों (उत्पादक) का जैवमात्रा सबसे अधिक होता है, फिर कीटों, पक्षियों का कम होता जाता है। यह भी सामान्यतः ऊर्ध्ववर्ती होता है।<br>
+                            - <em>अपवाद:</em> समुद्री पारितंत्र में पादपप्लवक (उत्पादक) की जैवमात्रा छोटी मछलियों (उपभोक्ता) से कम होती है, इसलिए यहाँ जैवमात्रा का पिरैमिड <strong>अभोवर्ती (उल्टा)</strong> होता है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 10</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">प्राथिमक उत्पादकता क्या है? उन कारकों की संक्षेप में चर्चा करें जो प्राथिमक उत्पादकता को प्रभावित करते हैं।</div>
+                        <div class="answer-text">
+                            <strong>प्राथमिक उत्पादकता (Primary Productivity):</strong> किसी निश्चित समयावधि में प्रति इकाई क्षेत्र में उत्पादकों (हरे पादपों) द्वारा प्रकाश संश्लेषण के माध्यम से कार्बनिक पदार्थ (जैवमात्रा) के उत्पादन की दर को प्राथमिक उत्पादकता कहते हैं।<br><br>
+                            
+                            <strong>प्रभावित करने वाले कारक:</strong><br>
+                            1. <strong>प्रकाश (Light):</strong> प्रकाश संश्लेषण के लिए आवश्यक है। प्रकाश की तीव्रता और अवधि उत्पादकता को सीधे प्रभावित करती है।<br>
+                            2. <strong>तापमान (Temperature):</strong> एंजाइम-उत्प्रेरित प्रकाश संश्लेषण प्रक्रिया तापमान पर निर्भर करती है। अत्यधिक ठंडा या गर्म तापमान उत्पादकता को कम करता है।<br>
+                            3. <strong>जल (Water):</strong> जल की उपलब्धता पादपों की वृद्धि और प्रकाश संश्लेषण के लिए आवश्यक है।<br>
+                            4. <strong>पोषक तत्व (Nutrients):</strong> नाइट्रोजन, फॉस्फोरस, पोटैशियम आदि की उपलब्धता पादप वृद्धि को नियंत्रित करती है।<br>
+                            5. <strong>कार्बन डाइऑक्साइड (CO₂):</strong> प्रकाश संश्लेषण के लिए आवश्यक गैस की सांद्रता भी उत्पादकता को प्रभावित करती है।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 11</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">अपघटन की परिभाषा दें तथा अपघटन की प्रक्रिया एवं उसके उत्पादों की व्याख्या करें।</div>
+                        <div class="answer-text">
+                            <strong>अपघटन (Decomposition):</strong> जटिल कार्बनिक पदार्थों (जैसे मृत पादप और जंतु अवशेष) को सूक्ष्मजीवों (अपघटकों) द्वारा सरल अकार्बनिक पदार्थों (जैसे CO₂, H₂O, खनिज लवण) में तोड़ने की प्रक्रिया को अपघटन कहते हैं।<br><br>
+                            
+                            <strong>अपघटन की प्रक्रिया के चरण:</strong><br>
+                            1. <strong>खंडन (Fragmentation):</strong> अपरदाहारी (जैसे केंचुआ) बड़े मृत पदार्थों को छोटे कणों में तोड़ देते हैं।<br>
+                            2. <strong>निक्षालन (Leaching):</strong> जल में घुलनशील अकार्बनिक पोषक तत्व मृदा में नीचे चले जाते हैं।<br>
+                            3. <strong>अपचय (Catabolism):</strong> जीवाणु और कवक के एंजाइम अपरद को सरल अकार्बनिक पदार्थों में बदल देते हैं।<br>
+                            4. <strong>ह्यूमस भवन (Humification):</strong> इससे गहरे रंग का अनाकार पदार्थ 'ह्यूमस' बनता है जो पोषक तत्वों का भंडार है।<br>
+                            5. <strong>खनिजीकरण (Mineralisation):</strong> ह्यूमस का पुनः अपघटन होकर अकार्बनिक पोषक तत्व मुक्त होते हैं।<br><br>
+
+                            <strong>उत्पाद:</strong> अपघटन से कार्बन डाइऑक्साइड, जल, अमोनिया और विभिन्न खनिज लवण (नाइट्रेट, फॉस्फेट) मुक्त होते हैं जो पौधों द्वारा पुनः उपयोग किए जा सकते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="question-number">
+                            <i class="fas fa-question-circle"></i>
+                            <span>प्रश्न 12</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="question-text">एक पारिस्थितिक तंत्र में ऊर्जा प्रवाह का वर्णन करें।</div>
+                        <div class="answer-text">
+                            पारिस्थितिक तंत्र में ऊर्जा का प्रवाह मुख्य रूप से सूर्य से शुरू होता है और यह एकदिशीय (Unidirectional) होता है।<br><br>
+                            <strong>ऊर्जा प्रवाह के चरण:</strong><br>
+                            1. <strong>सौर ऊर्जा का ग्रहण:</strong> हरे पादप (उत्पादक) सौर ऊर्जा को प्रकाश संश्लेषण द्वारा रासायनिक ऊर्जा में बदल देते हैं।<br>
+                            2. <strong>उत्पादक से उपभोक्ता तक:</strong> शाकाहारी जीव (प्राथमिक उपभोक्ता) पादपों को खाते हैं, जिससे ऊर्जा उनके शरीर में स्थानांतरित होती है।<br>
+                            3. <strong>उच्च पोषण स्तरों तक:</strong> मांसाहारी जीव (द्वितीयक और तृतीयक उपभोक्ता) अन्य जीवों को खाते हैं, जिससे ऊर्जा खाद्य शृंखला में आगे बढ़ती है।<br>
+                            4. <strong>ऊर्जा का ह्रास:</strong> प्रत्येक पोषण स्तर पर, जीवों द्वारा श्वसन, गति और अन्य जैविक क्रियाओं में ऊर्जा का कुछ भाग ऊष्मा के रूप में नष्ट हो जाता है (लगभग 90%)। इसलिए केवल 10% ऊर्जा ही अगले पोषण स्तर तक पहुँच पाती है, इसे <strong>'10% नियम'</strong> कहते हैं।<br>
+                            5. <strong>अपघटन:</strong> मृत जीवों और अपशिष्टों की ऊर्जा अपघटकों (जीवाणु, कवक) द्वारा प्राप्त की जाती है।
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">StudyScript</div>
+                <p class="copyright">© 2023 StudyScript. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
