@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 6: अवकलज के अनुप्रयोग</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        /* Matrix Styling */
+        .matrix-container {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+        }
+        .bracket {
+            font-size: 3.5em;
+            line-height: 0.8;
+            font-family: 'Times New Roman', serif;
+            font-weight: 300;
+            transform: scaleY(1.2);
+        }
+        .matrix-table {
+            border-collapse: collapse;
+            margin: 0 0.1em;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+        .matrix-table td {
+            padding: 0.2em 0.4em;
+            min-width: 1.5em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 6<br>अवकलज के अनुप्रयोग</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 6.1 ==================== -->
+        <section id="exercise-6-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.1 (परिवर्तन की दर)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: वृत्त के क्षेत्रफल के परिवर्तन की दर ज्ञात कीजिए जबकि त्रिज्या r = 6 cm पर r के सापेक्ष है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना वृत्त का क्षेत्रफल A है, तो <span class="math-expr">A = &pi;r<sup>2</sup></span></p>
+                    <p class="mb-2">r के सापेक्ष A के परिवर्तन की दर: <span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dr</span></span> = 2&pi;r</span></p>
+                    <p class="mb-2">r = 6 cm पर, <span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dr</span></span> = 2&pi;(6) = 12&pi; cm<sup>2</sup>/cm</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक घन का आयतन 8 cm<sup>3</sup>/s की दर से बढ़ रहा है। पृष्ठ क्षेत्रफल किस दर से बढ़ रहा है जबकि इसके किनारे की लम्बाई 12 cm है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना घन की भुजा x, आयतन V और पृष्ठ क्षेत्रफल S है।</p>
+                    <p class="mb-2"><span class="math-expr">V = x<sup>3</sup> &rArr; <span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 3x<sup>2</sup> <span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = 8</span></p>
+                    <p class="mb-2"><span class="math-expr">S = 6x<sup>2</sup> &rArr; <span class="fraction"><span class="numerator">dS</span><span class="denominator">dt</span></span> = 12x <span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span></span></p>
+                    <p class="mb-2">x = 12 cm पर, <span class="math-expr">3(144) <span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = 8 &rArr; <span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = <span class="fraction"><span class="numerator">8</span><span class="denominator">432</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">54</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dS</span><span class="denominator">dt</span></span> = 12(12)(<span class="fraction"><span class="numerator">1</span><span class="denominator">54</span></span>) = <span class="fraction"><span class="numerator">144</span><span class="denominator">54</span></span> = <span class="fraction"><span class="numerator">8</span><span class="denominator">3</span></span> cm<sup>2</sup>/s</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक वृत्त की त्रिज्या समान रूप से 3 cm/s की दर से बढ़ रही है। ज्ञात कीजिए कि वृत्त का क्षेत्रफल किस दर से बढ़ रहा है जब त्रिज्या 10 cm है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">A = &pi;r<sup>2</sup></span>, <span class="math-expr"><span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = 3 cm/s</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dt</span></span> = 2&pi;r <span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span></span></p>
+                    <p class="mb-2">r = 10 cm पर, <span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dt</span></span> = 2&pi;(10)(3) = 60&pi; cm<sup>2</sup>/s</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक परिवर्तनशील घन का किनारा 3 cm/s की दर से बढ़ रहा है। घन का आयतन किस दर से बढ़ रहा है जबकि किनारा 10 cm लम्बा है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">V = x<sup>3</sup></span>, <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = 3 cm/s</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 3x<sup>2</sup> <span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span></span></p>
+                    <p class="mb-2">x = 10 cm पर, <span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 3(100)(3) = 900 cm<sup>3</sup>/s</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक स्थिर झील में एक पत्थर डाला जाता है और तरंगें वृत्तों में 5 cm/s की गति से चलती हैं। जब वृत्ताकार तरंग की त्रिज्या 8 cm है तो उस क्षण, घिरा हुआ क्षेत्रफल किस दर से बढ़ रहा है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">A = &pi;r<sup>2</sup></span>, <span class="math-expr"><span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = 5 cm/s</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dt</span></span> = 2&pi;r <span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = 2&pi;(8)(5) = 80&pi; cm<sup>2</sup>/s</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक वृत्त की त्रिज्या 0.7 cm/s की दर से बढ़ रही है। इसकी परिधि की वृद्धि की दर क्या है जब r = 4.9 cm है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> परिधि <span class="math-expr">C = 2&pi;r</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dC</span><span class="denominator">dt</span></span> = 2&pi; <span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = 2&pi;(0.7) = 1.4&pi; cm/s</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक आयत की लम्बाई x, 5 cm/min की दर से घट रही है और चौड़ाई y, 4 cm/min की दर से बढ़ रही है। जब x = 8 cm और y = 6 cm हैं तब आयत के (a) परिमाप (b) क्षेत्रफल के परिवर्तन की दर ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = -5</span> cm/min, <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> = 4</span> cm/min</p>
+                    <p class="mb-2">(a) परिमाप <span class="math-expr">P = 2(x+y)</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dP</span><span class="denominator">dt</span></span> = 2(<span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> + <span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span>) = 2(-5+4) = -2</span> cm/min</p>
+                    <p class="mb-2">(b) क्षेत्रफल <span class="math-expr">A = xy</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dt</span></span> = x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> + y<span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = 8(4) + 6(-5) = 32 - 30 = 2</span> cm<sup>2</sup>/min</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक गुब्बारा जो सदैव गोलाकार रहता है, एक पंप द्वारा 900 cm<sup>3</sup> गैस प्रति सेकंड भर कर फुलाया जाता है। गुब्बारे की त्रिज्या के परिवर्तन की दर ज्ञात कीजिए जब त्रिज्या 15 cm है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">V = <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>&pi;r<sup>3</sup></span>, <span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 900</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 4&pi;r<sup>2</sup> <span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> &rArr; 900 = 4&pi;(225) <span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = <span class="fraction"><span class="numerator">900</span><span class="denominator">900&pi;</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">&pi;</span></span></span> cm/s</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक गुब्बारा जो सदैव गोलाकार रहता है, की त्रिज्या परिवर्तनशील है। त्रिज्या के सापेक्ष आयतन के परिवर्तन की दर ज्ञात कीजिए जब त्रिज्या 10 cm है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">V = <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>&pi;r<sup>3</sup></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dr</span></span> = 4&pi;r<sup>2</sup></span></p>
+                    <p class="mb-2">r = 10 cm पर, <span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dr</span></span> = 4&pi;(100) = 400&pi; cm<sup>3</sup>/cm</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक 5 m लम्बी सीढ़ी दीवार के सहारे झुकी है। सीढ़ी का नीचे का सिरा, जमीन के अनुदिश, दीवार से दूर 2 cm/s की दर से खींचा जाता है। दीवार पर इसकी ऊँचाई किस दर से घट रही है जबकि सीढ़ी के नीचे का सिरा दीवार से 4 m दूर है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना दीवार से दूरी x है और ऊँचाई y है। <span class="math-expr">x<sup>2</sup> + y<sup>2</sup> = 25</span></p>
+                    <p class="mb-2"><span class="math-expr">2x<span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> + 2y<span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> = 0</span></p>
+                    <p class="mb-2">जब x = 4 m, y = 3 m, और <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> = 0.02</span> m/s</p>
+                    <p class="mb-2"><span class="math-expr">4(0.02) + 3<span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> = 0 &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> = -0.08/3</span> m/s = -8/3 cm/s</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: एक कण वक्र 6y = x<sup>3</sup> + 2 के अनुगत गति कर रहा है। वक्र पर उन बिन्दुओं को ज्ञात कीजिए जबकि x-निर्देशांक की तुलना में y-निर्देशांक 8 गुना तीव्रता से बदल रहा है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">6<span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> = 3x<sup>2</sup> <span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span> &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2">दिया है: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dt</span></span> = 8<span class="fraction"><span class="numerator">dx</span><span class="denominator">dt</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span> = 8 &rArr; x<sup>2</sup> = 16 &rArr; x = &plusmn;4</span></p>
+                    <p class="mb-2">जब x = 4, <span class="math-expr">6y = 64 + 2 = 66 &rArr; y = 11</span></p>
+                    <p class="mb-2">जब x = -4, <span class="math-expr">6y = -64 + 2 = -62 &rArr; y = -31/3</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: हवा के एक बुलबुले की त्रिज्या 1/2 cm/s की दर से बढ़ रही है। बुलबुले का आयतन किस दर से बढ़ रहा है जबकि त्रिज्या 1 cm है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">V = <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>&pi;r<sup>3</sup></span>, <span class="math-expr"><span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> cm/s</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 4&pi;r<sup>2</sup> <span class="fraction"><span class="numerator">dr</span><span class="denominator">dt</span></span> = 4&pi;(1)<sup>2</sup>(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>) = 2&pi;</span> cm<sup>3</sup>/s</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: एक गुब्बारा, जो सदैव गोलाकार रहता है, का परिवर्तनशील व्यास 3/2 (2x+1) है। x के सापेक्ष आयतन के परिवर्तन की दर ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> व्यास = <span class="math-expr"><span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span>(2x+1) &rArr; r = <span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span>(2x+1)</span></p>
+                    <p class="mb-2"><span class="math-expr">V = <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>&pi;r<sup>3</sup> = <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>&pi;<span class="nowrap">(<span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span>(2x+1))</span><sup>3</sup> = <span class="fraction"><span class="numerator">9</span><span class="denominator">16</span></span>&pi;(2x+1)<sup>3</sup></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dx</span></span> = <span class="fraction"><span class="numerator">9</span><span class="denominator">16</span></span>&pi; &middot; 3(2x+1)<sup>2</sup> &middot; 2 = <span class="fraction"><span class="numerator">27</span><span class="denominator">8</span></span>&pi;(2x+1)<sup>2</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: एक पाइप से रेत 12 cm<sup>3</sup>/s की दर से गिर रही है। गिरती रेत जमीन पर एक ऐसा शंकु बनाती है जिसकी ऊँचाई सदैव आधार की त्रिज्या का छठा भाग है। रेत से बने शंकु की ऊँचाई किस दर से बढ़ रही है जबकि ऊँचाई 4 cm है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">h = <span class="fraction"><span class="numerator">1</span><span class="denominator">6</span></span>r &rArr; r = 6h</span></p>
+                    <p class="mb-2"><span class="math-expr">V = <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>&pi;r<sup>2</sup>h = <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>&pi;(36h<sup>2</sup>)h = 12&pi;h<sup>3</sup></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dV</span><span class="denominator">dt</span></span> = 36&pi;h<sup>2</sup><span class="fraction"><span class="numerator">dh</span><span class="denominator">dt</span></span> &rArr; 12 = 36&pi;(16)<span class="fraction"><span class="numerator">dh</span><span class="denominator">dt</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dh</span><span class="denominator">dt</span></span> = <span class="fraction"><span class="numerator">12</span><span class="denominator">576&pi;</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">48&pi;</span></span></span> cm/s</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: एक वस्तु की x इकाइयों के उत्पादन से संबंध कुल लागत C(x) (रुपये में) C(x) = 0.007x<sup>3</sup> - 0.003x<sup>2</sup> + 15x + 4000 से प्रदत्त है। सीमांत लागत ज्ञात कीजिए जबकि 17 इकाइयों का उत्पादन किया गया है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> सीमांत लागत = <span class="math-expr"><span class="fraction"><span class="numerator">dC</span><span class="denominator">dx</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">dC</span><span class="denominator">dx</span></span> = 0.021x<sup>2</sup> - 0.006x + 15</span></p>
+                    <p class="mb-2">x = 17 पर: <span class="math-expr">0.021(289) - 0.006(17) + 15 = 6.069 - 0.102 + 15 = 20.967</span></p>
+                    <p><strong>उत्तर:</strong> लगभग 20.97 रुपये</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: किसी उत्पाद की x इकाइयों के विक्रय से प्राप्त कुल आय R(x) रुपयों में R(x) = 13x<sup>2</sup> + 26x + 15 से प्रदत्त है। सीमांत आय ज्ञात कीजिए जब x = 7 है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> सीमांत आय = <span class="math-expr"><span class="fraction"><span class="numerator">dR</span><span class="denominator">dx</span></span> = 26x + 26</span></p>
+                    <p class="mb-2">x = 7 पर, <span class="math-expr">26(7) + 26 = 182 + 26 = 208</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: एक वृत्त की त्रिज्या r = 6 cm पर r के सापेक्ष क्षेत्रफल में परिवर्तन की दर है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 10&pi; (B) 12&pi; (C) 8&pi; (D) 11&pi;</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dA</span><span class="denominator">dr</span></span> = 2&pi;r = 12&pi;</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: एक उत्पाद की x इकाइयों के विक्रय से प्राप्त कुल आय रुपयों में R(x) = 3x<sup>2</sup> + 36x + 5 से प्रदत्त है। जब x = 15 है तो सीमांत आय है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 116 (B) 96 (C) 90 (D) 126</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">dR/dx = 6x + 36 = 6(15) + 36 = 126</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 6.2 ==================== -->
+        <section id="exercise-6-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.2 (वर्धमान और ह्रासमान फलन)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: सिद्ध कीजिए R पर f(x) = 3x + 17 से प्रदत्त फलन वर्धमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 3 > 0</span> सभी x &isin; R के लिए।</p>
+                    <p class="mb-2">अतः f(x) पूर्ण वास्तविक रेखा R पर वर्धमान फलन है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सिद्ध कीजिए कि R पर f(x) = e<sup>2x</sup> से प्रदत्त फलन वर्धमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 2e<sup>2x</sup> > 0</span> सभी x &isin; R के लिए।</p>
+                    <p class="mb-2">अतः f(x) R पर वर्धमान फलन है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: सिद्ध कीजिए f(x) = sin x से प्रदत्त फलन (a) (0, &pi;/2) में वर्धमान है (b) (&pi;/2, &pi;) में ह्रासमान है (c) (0, &pi;) में न तो वर्धमान है और न ही ह्रासमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = cos x</span></p>
+                    <p class="mb-2">(a) <span class="math-expr">x &isin; (0, &pi;/2) &rArr; cos x > 0 &rArr; f'(x) > 0</span> (वर्धमान)</p>
+                    <p class="mb-2">(b) <span class="math-expr">x &isin; (&pi;/2, &pi;) &rArr; cos x < 0 &rArr; f'(x) < 0</span> (ह्रासमान)</p>
+                    <p class="mb-2">(c) (0, &pi;) में cos x का चिह्न बदलता है, अतः यहाँ न वर्धमान न ह्रासमान है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: अंतराल ज्ञात कीजिए जिनमें f(x) = 2x<sup>2</sup> - 3x से प्रदत्त फलन f (a) वर्धमान (b) ह्रासमान</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 4x - 3</span></p>
+                    <p class="mb-2"><span class="math-expr">f'(x) = 0 &rArr; x = 3/4</span></p>
+                    <p class="mb-2">(a) <span class="math-expr">x > 3/4</span> के लिए <span class="math-expr">f'(x) > 0</span> &rArr; (3/4, &infin;) में वर्धमान</p>
+                    <p class="mb-2">(b) <span class="math-expr">x < 3/4</span> के लिए <span class="math-expr">f'(x) < 0</span> &rArr; (-&infin;, 3/4) में ह्रासमान</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: अंतराल ज्ञात कीजिए जिनमें f(x) = 2x<sup>3</sup> - 3x<sup>2</sup> - 36x + 7 से प्रदत्त फलन f (a) वर्धमान (b) ह्रासमान</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 6x<sup>2</sup> - 6x - 36 = 6(x<sup>2</sup> - x - 6) = 6(x-3)(x+2)</span></p>
+                    <p class="mb-2">क्रांतिक बिंदु: x = -2, 3</p>
+                    <p class="mb-2">(a) वर्धमान: <span class="math-expr">(-&infin;, -2) &cup; (3, &infin;)</span></p>
+                    <p class="mb-2">(b) ह्रासमान: <span class="math-expr">(-2, 3)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: अंतराल ज्ञात कीजिए जिनमें निम्नलिखित फलन f वर्धमान या ह्रासमान है:</h3>
+                <div class="step">
+                    <p class="mb-2">(a) <span class="math-expr">f(x) = x<sup>2</sup> + 2x + 5</span> &rArr; f'(x) = 2x+2. वर्धमान: (-1, &infin;), ह्रासमान: (-&infin;, -1)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(b) <span class="math-expr">f(x) = 10 - 6x - 2x<sup>2</sup></span> &rArr; f'(x) = -6 - 4x = -2(2x+3). वर्धमान: (-&infin;, -3/2), ह्रासमान: (-3/2, &infin;)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(c) <span class="math-expr">f(x) = -2x<sup>3</sup> - 9x<sup>2</sup> - 12x + 1</span> &rArr; f'(x) = -6(x+1)(x+2). वर्धमान: (-2, -1), ह्रासमान: (-&infin;, -2) &cup; (-1, &infin;)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(d) <span class="math-expr">f(x) = 6 - 9x - x<sup>2</sup></span> &rArr; f'(x) = -9 - 2x. वर्धमान: (-&infin;, -9/2), ह्रासमान: (-9/2, &infin;)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(e) <span class="math-expr">f(x) = (x+1)<sup>3</sup>(x-3)<sup>3</sup></span> &rArr; f'(x) = 6(x+1)<sup>2</sup>(x-3)<sup>2</sup>(x-1). वर्धमान: (1, &infin;), ह्रासमान: (-&infin;, 1) (x=-1, 3 को छोड़कर जहाँ f'(x)=0)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: सिद्ध कीजिए कि y = log(1+x) - 2x/(2+x), x > -1, अपने संपूर्ण प्रांत में एक वर्धमान फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">y' = <span class="fraction"><span class="numerator">1</span><span class="denominator">1+x</span></span> - <span class="nowrap">(<span class="fraction"><span class="numerator">4</span><span class="denominator">(2+x)<sup>2</sup></span></span>)</span> = <span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">(1+x)(2+x)<sup>2</sup></span></span> > 0</span> सभी x > -1 के लिए।</p>
+                    <p class="mb-2">अतः फलन वर्धमान है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: x के उन मानों को ज्ञात कीजिए जिनके लिए y = [x(x-2)]<sup>2</sup> एक वर्धमान फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">y' = 2[x(x-2)] &middot; (2x-2) = 4x(x-1)(x-2)</span></p>
+                    <p class="mb-2">y' = 0 &rArr; x = 0, 1, 2</p>
+                    <p class="mb-2">x < 0: (-), 0 < x < 1: (+), 1 < x < 2: (-), x > 2: (+)</p>
+                    <p class="mb-2">अतः वर्धमान है: (0, 1) &cup; (2, &infin;)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: सिद्ध कीजिए कि [0, &pi;/2] में y = 4sin&theta;/(2+cos&theta;) - &theta;, &theta; का एक वर्धमान फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">y' = <span class="fraction"><span class="numerator">8cos&theta; + 4</span><span class="denominator">(2+cos&theta;)<sup>2</sup></span></span> - 1 = <span class="fraction"><span class="numerator">4cos&theta; - cos<sup>2</sup>&theta;</span><span class="denominator">(2+cos&theta;)<sup>2</sup></span></span> = <span class="fraction"><span class="numerator">cos&theta;(4-cos&theta;)</span><span class="denominator">(2+cos&theta;)<sup>2</sup></span></span></span></p>
+                    <p class="mb-2">[0, &pi;/2] में cos&theta; &ge; 0, अतः y' &ge; 0. फलन वर्धमान है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: सिद्ध कीजिए कि लघुगणकीय फलन (0, &infin;) में वर्धमान फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f(x) = log x</span>, <span class="math-expr">f'(x) = 1/x > 0</span> सभी x > 0 के लिए। अतः वर्धमान है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: सिद्ध कीजिए कि (-1, 1) में f(x) = x<sup>2</sup> - x + 1 से प्रदत्त फलन न तो वर्धमान है और न ही ह्रासमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 2x - 1</span>. यह x = 1/2 पर चिह्न बदलता है जो (-1, 1) में है।</p>
+                    <p class="mb-2">x < 1/2 के लिए ऋणात्मक, x > 1/2 के लिए धनात्मक। अतः न तो वर्धमान न ह्रासमान।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: निम्नलिखित में कौन से फलन [0, &pi;/2] में ह्रासमान है?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) cos x (B) cos 2x (C) cos 3x (D) tan x</p>
+                    <p class="mb-2"><strong>हल:</strong> cos x का अवकलज -sin x है, जो [0, &pi;/2] में ऋणात्मक है।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: निम्नलिखित अंतरालों में से किस अंतराल में f(x) = x<sup>100</sup> + sin x - 1 द्वारा प्रदत्त फलन f ह्रासमान है?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) (0,1) (B) (&pi;/2, &pi;) (C) (0, &pi;/2) (D) इनमें से कोई नहीं</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 100x<sup>99</sup> + cos x</span>. विकल्पों की जाँच करने पर, विकल्प (B) में x > &pi;/2 &rArr; cos x < 0 और 100x<sup>99</sup> बड़ा धनात्मक है, लेकिन x<sup>99</sup> का प्रभाव देखना होगा।</p>
+                    <p class="mb-2">वास्तव में, (&pi;/2, &pi;) में cos x ऋणात्मक है, परन्तु 100x<sup>99</sup> बहुत बड़ा धनात्मक है, अतः यहाँ फलन वर्धमान है। (0, 1) में cos x > 0 तथा x<sup>99</sup> > 0, अतः वर्धमान है।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है (कोई नहीं)।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: a का वह न्यूनतम मान ज्ञात कीजिए जिसके लिए अंतराल [1, 2] में f(x) = x<sup>2</sup> + ax + 1 से प्रदत्त फलन वर्धमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 2x + a &ge; 0</span> सभी x &isin; [1, 2] के लिए।</p>
+                    <p class="mb-2">x = 1 पर न्यूनतम मान: 2(1) + a &ge; 0 &rArr; a &ge; -2.</p>
+                    <p><strong>उत्तर:</strong> a का न्यूनतम मान -2 है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: मान लीजिए [-1, 1] से असंयुक्त एक अंतराल I हो तो सिद्ध कीजिए कि I में f(x) = x + 1/x से प्रदत्त फलन f, वर्धमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 1 - 1/x<sup>2</sup> = <span class="fraction"><span class="numerator">x<sup>2</sup>-1</span><span class="denominator">x<sup>2</sup></span></span></span></p>
+                    <p class="mb-2">I, [-1, 1] से असंयुक्त है, अतः I में x > 1 या x < -1. दोनों स्थितियों में x<sup>2</sup> > 1 &rArr; f'(x) > 0.</p>
+                    <p class="mb-2">अतः f(x) I में वर्धमान है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: सिद्ध कीजिए कि फलन f(x) = log sin x, (0, &pi;/2) में वर्धमान और (&pi;/2, &pi;) में ह्रासमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = cot x</span></p>
+                    <p class="mb-2">(0, &pi;/2) में cot x > 0 &rArr; वर्धमान</p>
+                    <p class="mb-2">(&pi;/2, &pi;) में cot x < 0 &rArr; ह्रासमान</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: सिद्ध कीजिए कि फलन f(x) = log|cos x| (0, &pi;/2) में वर्धमान और (3&pi;/2, 2&pi;) में ह्रासमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = -tan x</span></p>
+                    <p class="mb-2">(0, &pi;/2) में tan x > 0 &rArr; f'(x) < 0 (ह्रासमान)</p>
+                    <p class="mb-2">(3&pi;/2, 2&pi;) में tan x < 0 &rArr; f'(x) > 0 (वर्धमान)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: सिद्ध कीजिए कि R में दिया गया फलन f(x) = x<sup>3</sup> - 3x<sup>2</sup> + 3x - 100 वर्धमान है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 3x<sup>2</sup> - 6x + 3 = 3(x-1)<sup>2</sup> &ge; 0</span></p>
+                    <p class="mb-2">अतः f(x) वर्धमान है (x=1 को छोड़कर जहाँ यह स्थिर है)।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: निम्नलिखित में से किस अंतराल में y = x<sup>2</sup>e<sup>-x</sup> वर्धमान है?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) (-&infin;, &infin;) (B) (-2, 0) (C) (2, &infin;) (D) (0, 2)</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">y' = 2xe<sup>-x</sup> - x<sup>2</sup>e<sup>-x</sup> = xe<sup>-x</sup>(2-x)</span></p>
+                    <p class="mb-2">y' > 0 जब x > 0 और 2-x > 0 &rArr; x &isin; (0, 2)</p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 6.3 ==================== -->
+        <section id="exercise-6-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 6.3 (उच्चतम और निम्नतम)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित दिए गए फलनों के उच्चतम या निम्नतम मान, यदि कोई तो, ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) <span class="math-expr">f(x) = (2x-1)<sup>2</sup> + 3</span> &rArr; न्यूनतम मान 3 (x = 1/2 पर)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) <span class="math-expr">f(x) = 9x<sup>2</sup> + 12x + 2</span> &rArr; f'(x) = 18x+12=0 &rArr; x=-2/3. न्यूनतम मान = -2</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) <span class="math-expr">f(x) = -(x-1)<sup>2</sup> + 10</span> &rArr; उच्चतम मान 10 (x = 1 पर)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) <span class="math-expr">g(x) = x<sup>3</sup> + 1</span> &rArr; न तो उच्चतम न निम्नतम (f'(x) = 3x<sup>2</sup> &ge; 0)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित दिए गए फलनों के उच्चतम या निम्नतम मान, यदि कोई हों, तो ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) <span class="math-expr">f(x) = |x+2| - 1</span> &rArr; न्यूनतम मान -1</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) <span class="math-expr">g(x) = -|x+1| + 3</span> &rArr; उच्चतम मान 3</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) <span class="math-expr">h(x) = sin(2x) + 5</span> &rArr; उच्चतम 6, न्यूनतम 4</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) <span class="math-expr">f(x) = |sin 4x + 3|</span> &rArr; उच्चतम 4, न्यूनतम 2</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) <span class="math-expr">h(x) = x + 1, x &isin; (-1, 1)</span> &rArr; न उच्चतम न निम्नतम</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्नलिखित फलनों के स्थानीय उच्चतम या निम्नतम, यदि कोई हों तो, ज्ञात कीजिए तथा स्थानीय उच्चतम या स्थानीय निम्नतम मान, जैसी स्थिति हो, भी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) <span class="math-expr">f(x) = x<sup>2</sup></span> &rArr; f'(x)=2x=0 &rArr; x=0. f''(0)=2>0 &rArr; स्थानीय निम्नतम, मान 0</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) <span class="math-expr">g(x) = x<sup>3</sup> - 3x</span> &rArr; g'(x)=3x<sup>2</sup>-3=0 &rArr; x=&plusmn;1. x=1 पर निम्नतम (-2), x=-1 पर उच्चतम (2)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) <span class="math-expr">h(x) = sin x + cos x, 0 < x < &pi;/2</span> &rArr; h'(x) = cos x - sin x = 0 &rArr; x=&pi;/4. h''(&pi;/4)<0 &rArr; उच्चतम, मान &radic;2</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) <span class="math-expr">f(x) = sin x - cos x, 0 < x < 2&pi;</span> &rArr; f'(x) = cos x + sin x = 0 &rArr; x=3&pi;/4, 7&pi;/4. 3&pi;/4 पर उच्चतम (&radic;2), 7&pi;/4 पर निम्नतम (-&radic;2)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(v) <span class="math-expr">f(x) = x<sup>3</sup> - 6x<sup>2</sup> + 9x + 15</span> &rArr; f'(x) = 3(x-1)(x-3). x=1 पर उच्चतम (19), x=3 पर निम्नतम (15)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vi) <span class="math-expr">g(x) = x/2 + 2/x, x > 0</span> &rArr; g'(x) = 1/2 - 2/x<sup>2</sup> = 0 &rArr; x=2. g''(2)>0 &rArr; निम्नतम, मान 2</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(vii) <span class="math-expr">g(x) = 1/(x<sup>2</sup>+2)</span> &rArr; g'(x) = -2x/(x<sup>2</sup>+2)<sup>2</sup> = 0 &rArr; x=0. g''(0)<0 &rArr; उच्चतम, मान 1/2</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(viii) <span class="math-expr">f(x) = x&radic;(1-x), 0 < x < 1</span> &rArr; f'(x) = (1-x)^(-1/2) - (x/2)(1-x)^(-3/2) = 0 &rArr; x=2/3. f''(2/3)<0 &rArr; उच्चतम, मान 2/(3&radic;3)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: सिद्ध कीजिए कि निम्नलिखित फलनों का उच्चतम या निम्नतम मान नहीं है:</h3>
+                <div class="step">
+                    <p class="mb-2">(i) <span class="math-expr">f(x) = e<sup>x</sup></span> &rArr; f'(x) = e<sup>x</sup> &ne; 0 कभी नहीं। अतः कोई उच्चतम/निम्नतम नहीं।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) <span class="math-expr">g(x) = log x</span> &rArr; g'(x) = 1/x &ne; 0. अतः कोई उच्चतम/निम्नतम नहीं।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) <span class="math-expr">h(x) = x<sup>3</sup>+x<sup>2</sup>+x+1</span> &rArr; h'(x) = 3x<sup>2</sup>+2x+1. विविक्तकर (Discriminant) = 4-12 = -8 < 0. अतः h'(x) &ne; 0.</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: प्रदत्त अंतरालों में निम्नलिखित फलनों के निरपेक्ष उच्चतम मान और निरपेक्ष निम्नतम मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">(i) <span class="math-expr">f(x) = x<sup>3</sup>, x &isin; [-2, 2]</span> &rArr; f'(x)=3x<sup>2</sup>=0 &rArr; x=0. f(-2)=-8, f(0)=0, f(2)=8. निरपेक्ष उच्चतम 8, निम्नतम -8.</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(ii) <span class="math-expr">f(x) = sin x + cos x, [0, &pi;]</span> &rArr; f'(x)=cos x - sin x=0 &rArr; x=&pi;/4. f(0)=1, f(&pi;/4)=&radic;2, f(&pi;)=-1. उच्चतम &radic;2, निम्नतम -1.</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iii) <span class="math-expr">f(x) = 4x - x<sup>2</sup>/2, [-2, 9/2]</span> &rArr; f'(x)=4-x=0 &rArr; x=4. f(-2)=-10, f(4)=8, f(9/2)=63/8. उच्चतम 8, निम्नतम -10.</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(iv) <span class="math-expr">f(x) = (x-1)<sup>2</sup>+3, [-3, 1]</span> &rArr; f'(x)=2(x-1)=0 &rArr; x=1. f(-3)=19, f(1)=3. उच्चतम 19, निम्नतम 3.</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: यदि लाभ फलन p(x) = 41 - 72x - 18x<sup>2</sup> से प्रदत्त है तो किसी कंपनी द्वारा अर्जित उच्चतम लाभ ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">p'(x) = -72 - 36x = 0 &rArr; x = -2</span></p>
+                    <p class="mb-2"><span class="math-expr">p''(x) = -36 < 0</span> &rArr; उच्चतम</p>
+                    <p class="mb-2"><span class="math-expr">p(-2) = 41 - 72(-2) - 18(-2)<sup>2</sup> = 41 + 144 - 72 = 113</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: अंतराल [0, 3] पर 3x<sup>4</sup> - 8x<sup>3</sup> + 12x<sup>2</sup> - 48x + 25 के उच्चतम मान और निम्नतम मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 12x<sup>3</sup> - 24x<sup>2</sup> + 24x - 48 = 12(x<sup>3</sup>-2x<sup>2</sup>+2x-4) = 12(x-2)(x<sup>2</sup>+2)</span></p>
+                    <p class="mb-2">x = 2 क्रांतिक बिंदु है।</p>
+                    <p class="mb-2">f(0) = 25, f(2) = -39, f(3) = 16</p>
+                    <p><strong>उत्तर:</strong> उच्चतम मान 25 (x=0 पर), निम्नतम मान -39 (x=2 पर)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: अंतराल [0, 2&pi;] के किन बिंदुओं पर फलन sin 2x अपना उच्चतम मान प्राप्त करता है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 2cos 2x = 0 &rArr; 2x = &pi;/2, 3&pi;/2, 5&pi;/2, 7&pi;/2 &rArr; x = &pi;/4, 3&pi;/4, 5&pi;/4, 7&pi;/4</span></p>
+                    <p class="mb-2">f''(x) = -4 sin 2x. x = &pi;/4, 5&pi;/4 पर f'' < 0 (उच्चतम)।</p>
+                    <p><strong>उत्तर:</strong> x = &pi;/4 और 5&pi;/4 पर उच्चतम मान 1 है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: फलन sin x + cos x का उच्चतम मान क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> अधिकतम मान = <span class="math-expr">&radic;(1<sup>2</sup> + 1<sup>2</sup>) = &radic;2</span></p>
+                    <p><strong>उत्तर:</strong> &radic;2</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: अंतराल [1, 3] में 2x<sup>3</sup> - 24x + 107 का महत्तम मान ज्ञात कीजिए। इसी फलन का अंतराल [-3, -1] में भी महत्तम मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 6x<sup>2</sup> - 24 = 0 &rArr; x = &plusmn;2</span></p>
+                    <p class="mb-2">[1, 3] के लिए, x=2 क्रांतिक बिंदु है। f(1)=85, f(2)=75, f(3)=89. महत्तम = 89</p>
+                    <p class="mb-2">[-3, -1] के लिए, x=-2 क्रांतिक बिंदु है। f(-3)=125, f(-2)=139, f(-1)=129. महत्तम = 139</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: यदि दिया है कि अंतराल [0, 2] में x = 1 पर फलन x<sup>4</sup> - 62x<sup>2</sup> + ax + 9 उच्चतम मान प्राप्त करता है, तो a का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> x = 1 पर उच्चतम मान है, अतः f'(1) = 0</p>
+                    <p class="mb-2"><span class="math-expr">f'(x) = 4x<sup>3</sup> - 124x + a</span></p>
+                    <p class="mb-2"><span class="math-expr">4(1)<sup>3</sup> - 124(1) + a = 0 &rArr; 4 - 124 + a = 0 &rArr; a = 120</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: [0, 2&pi;] पर x + sin 2x का उच्चतम और निम्नतम मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f'(x) = 1 + 2cos 2x = 0 &rArr; cos 2x = -1/2 &rArr; 2x = 2&pi;/3, 4&pi;/3 &rArr; x = &pi;/3, 2&pi;/3</span></p>
+                    <p class="mb-2">f(0)=0, f(&pi;/3)=&pi;/3+&radic;3/2, f(2&pi;/3)=2&pi;/3-&radic;3/2, f(2&pi;)=2&pi;</p>
+                    <p class="mb-2">उच्चतम = 2&pi;, निम्नतम = 0</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: ऐसी दो संख्याएँ ज्ञात कीजिए जिनका योग 24 है और जिनका गुणनफल उच्चतम हो।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना संख्याएँ x और 24-x हैं। गुणनफल <span class="math-expr">P = x(24-x) = 24x - x<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">P' = 24 - 2x = 0 &rArr; x = 12</span>. P'' = -2 < 0 (उच्चतम)</p>
+                    <p><strong>उत्तर:</strong> संख्याएँ 12 और 12 हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: ऐसी दो धन संख्याएँ x और y ज्ञात कीजिए ताकि x + y = 60 और xy<sup>3</sup> उच्चतम हो।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">y = 60-x</span>. <span class="math-expr">P = x(60-x)<sup>3</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">P' = (60-x)<sup>3</sup> - 3x(60-x)<sup>2</sup> = (60-x)<sup>2</sup>(60-4x) = 0 &rArr; x=15</span></p>
+                    <p><strong>उत्तर:</strong> x = 15, y = 45</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: ऐसी दो धन संख्याएँ x और y ज्ञात कीजिए जिनका योग 35 हो और गुणनफल x<sup>5</sup>y<sup>3</sup> उच्चतम हो।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P = x<sup>5</sup>(35-x)<sup>3</sup></span></p>
+                    <p class="mb-2">log P का अवकलन करने पर: <span class="math-expr">5/x - 3/(35-x) = 0 &rArr; 175 - 5x = 3x &rArr; 8x = 175 &rArr; x = 175/8</span></p>
+                    <p><strong>उत्तर:</strong> x = 175/8, y = 105/8</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: ऐसी दो धन संख्याएँ ज्ञात कीजिए जिनका योग 16 हो और जिनके घनों का योग निम्नतम हो।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">S = x<sup>3</sup> + (16-x)<sup>3</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">S' = 3x<sup>2</sup> - 3(16-x)<sup>2</sup> = 0 &rArr; x<sup>2</sup> = (16-x)<sup>2</sup> &rArr; x = 8</span></p>
+                    <p><strong>उत्तर:</strong> संख्याएँ 8 और 8 हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: 18 cm भुजा के टिन के किसी वर्गाकार टुकड़े से प्रत्येक कोने पर एक वर्ग काटकर तथा इस प्रकार बने टिन के फलकों को मोड़कर ढक्कन रहित एक संदूक बनाना है। काटे जाने वाले वर्ग की भुजा कितनी होगी जिससे संदूक का आयतन उच्चतम हो?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना काटे गए वर्ग की भुजा x है। आयतन <span class="math-expr">V = x(18-2x)<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">V' = (18-2x)<sup>2</sup> - 4x(18-2x) = (18-2x)(18-6x) = 0 &rArr; x=3, 9</span></p>
+                    <p class="mb-2">x=9 पर आयतन शून्य होगा, अतः x=3 स्वीकार्य है। V''(3) < 0 (उच्चतम)</p>
+                    <p><strong>उत्तर:</strong> 3 cm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: 45 cm × 24 cm के टिन की आयताकार चादर के कोनों पर वर्ग काटकर तथा इस प्रकार बने टिन के फलकों को मोड़कर ढक्कन रहित एक संदूक बनाना है। काटे जाने वाले वर्ग की भुजा कितनी होगी जिससे संदूक का आयतन उच्चतम हो?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना वर्ग की भुजा x है। <span class="math-expr">V = x(45-2x)(24-2x)</span></p>
+                    <p class="mb-2"><span class="math-expr">V = 4x<sup>3</sup> - 138x<sup>2</sup> + 1080x</span></p>
+                    <p class="mb-2"><span class="math-expr">V' = 12x<sup>2</sup> - 276x + 1080 = 12(x-18)(x-5) = 0 &rArr; x=5, 18</span></p>
+                    <p class="mb-2">x=18 संभव नहीं (24-36 < 0), अतः x=5. V''(5) < 0</p>
+                    <p><strong>उत्तर:</strong> 5 cm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: सिद्ध कीजिए कि किसी दिए वृत्त के अंतर्गत सभी आयतों में वर्ग का क्षेत्रफल उच्चतम होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना वृत्त की त्रिज्या r है और आयत की भुजाएँ x, y हैं। <span class="math-expr">x<sup>2</sup>+y<sup>2</sup> = 4r<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">A = xy = x&radic;(4r<sup>2</sup>-x<sup>2</sup>)</span>. <span class="math-expr">A' = 0 &rArr; x = r&radic;2</span></p>
+                    <p class="mb-2">तब <span class="math-expr">y = r&radic;2</span>. अतः x=y, इसलिए यह वर्ग है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: सिद्ध कीजिए कि प्रदत्त पृष्ठ एवं महत्तम आयतन के बेलन की ऊँचाई, आधार के व्यास के बराबर होती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> पृष्ठ <span class="math-expr">S = 2&pi;r<sup>2</sup> + 2&pi;rh</span> (स्थिर). <span class="math-expr">h = (S - 2&pi;r<sup>2</sup>)/(2&pi;r)</span></p>
+                    <p class="mb-2"><span class="math-expr">V = &pi;r<sup>2</sup>h = (Sr - 2&pi;r<sup>3</sup>)/2</span>. <span class="math-expr">dV/dr = (S - 6&pi;r<sup>2</sup>)/2 = 0 &rArr; S = 6&pi;r<sup>2</sup></span></p>
+                    <p class="mb-2">तब <span class="math-expr">h = (6&pi;r<sup>2</sup> - 2&pi;r<sup>2</sup>)/(2&pi;r) = 2r</span> = व्यास</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 21 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 21: 100 cm<sup>3</sup> आयतन वाले डिब्बे सभी बंद बेलनाकार (लंब वृत्तीय) डिब्बों में से न्यूनतम पृष्ठ क्षेत्रफल वाले डिब्बे की विमाएँ ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">V = &pi;r<sup>2</sup>h = 100 &rArr; h = 100/(&pi;r<sup>2</sup>)</span></p>
+                    <p class="mb-2"><span class="math-expr">S = 2&pi;r<sup>2</sup> + 2&pi;rh = 2&pi;r<sup>2</sup> + 200/r</span></p>
+                    <p class="mb-2"><span class="math-expr">S' = 4&pi;r - 200/r<sup>2</sup> = 0 &rArr; r<sup>3</sup> = 50/&pi; &rArr; r = (50/&pi;)<sup>1/3</sup></span></p>
+                    <p class="mb-2">तब <span class="math-expr">h = 100/(&pi;(50/&pi;)<sup>2/3</sup>) = 2(50/&pi;)<sup>1/3</sup> = 2r</span></p>
+                    <p><strong>उत्तर:</strong> त्रिज्या = (50/&pi;)<sup>1/3</sup> cm, ऊँचाई = 2(50/&pi;)<sup>1/3</sup> cm</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 22 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 22: एक 28 cm लंबे तार को दो टुकड़ों में विभक्त किया जाना है। एक टुकड़े से वर्ग तथा दूसरे से वृत्त बनाया जाना है। दोनों टुकड़ों की लंबाई कितनी होनी चाहिए जिससे वर्ग एवं वृत्त का सम्मिलित क्षेत्रफल न्यूनतम हो?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना वर्ग की भुजा x और वृत्त की त्रिज्या r है। <span class="math-expr">4x + 2&pi;r = 28 &rArr; x = (28-2&pi;r)/4</span></p>
+                    <p class="mb-2"><span class="math-expr">A = x<sup>2</sup> + &pi;r<sup>2</sup></span>. dA/dr = 0 &rArr; <span class="math-expr">r = 14/(&pi;+4)</span></p>
+                    <p class="mb-2">वृत्त की लंबाई = <span class="math-expr">2&pi;r = 28&pi;/(&pi;+4)</span>, वर्ग की लंबाई = <span class="math-expr">112/(&pi;+4)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 23 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 23: सिद्ध कीजिए कि R त्रिज्या के गोले के अंतर्गत विशालतम शंकु का आयतन, गोले के आयतन का 8/27 होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> शंकु की ऊँचाई h, त्रिज्या r, गोले की त्रिज्या R. <span class="math-expr">r<sup>2</sup> = R<sup>2</sup> - (h-R)<sup>2</sup> = 2Rh - h<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">V = <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>&pi;r<sup>2</sup>h = <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>&pi;(2Rh - h<sup>2</sup>)h</span></p>
+                    <p class="mb-2"><span class="math-expr">dV/dh = 0 &rArr; h = 4R/3</span>. अधिकतम आयतन = <span class="math-expr">(8/27) &times; (4/3)&pi;R<sup>3</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 24 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 24: सिद्ध कीजिए कि न्यूनतम पृष्ठ वाले दिए आयतन के लंब वृत्तीय शंकु की ऊँचाई, आधार की त्रिज्या के &radic;2 गुनी होती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">V = (1/3)&pi;r<sup>2</sup>h</span> (स्थिर). <span class="math-expr">S = &pi;r&radic;(r<sup>2</sup>+h<sup>2</sup>) + &pi;r<sup>2</sup></span></p>
+                    <p class="mb-2">h को V से बदलकर, dS/dr = 0 करने पर <span class="math-expr">h = r&radic;2</span> प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 25 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 25: सिद्ध कीजिए कि दी हुई तिर्यक ऊँचाई और महत्तम आयतन वाले शंकु का अर्ध शीर्ष कोण tan<sup>-1</sup>&radic;2 होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> तिर्यक ऊँचाई l स्थिर है। <span class="math-expr">h = l cos&alpha;, r = l sin&alpha;</span></p>
+                    <p class="mb-2"><span class="math-expr">V = (1/3)&pi;l<sup>3</sup>sin<sup>2</sup>&alpha;cos&alpha;</span>. <span class="math-expr">dV/d&alpha; = 0 &rArr; tan<sup>2</sup>&alpha; = 2 &rArr; &alpha; = tan<sup>-1</sup>&radic;2</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 26 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 26: सिद्ध कीजिए कि दिए हुए पृष्ठ और महत्तम आयतन वाले लंब वृत्तीय शंकु के अर्ध शीर्ष कोण sin<sup>-1</sup>(1/3) होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">S = &pi;r<sup>2</sup> + &pi;rl</span> स्थिर। <span class="math-expr">l = r/sin&alpha;</span></p>
+                    <p class="mb-2"><span class="math-expr">V = (1/3)&pi;r<sup>3</sup>cot&alpha;</span>. r को S से बदलकर, dV/d&alpha; = 0 करने पर <span class="math-expr">sin&alpha; = 1/3</span> प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 27 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 27: वक्र x<sup>2</sup> = 2y पर (0, 5) से न्यूनतम दूरी पर स्थित बिंदु है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) (2&radic;2, 4) (B) (2&radic;2, 0) (C) (0, 0) (D) (2, 2)</p>
+                    <p class="mb-2"><strong>हल:</strong> दूरी का वर्ग <span class="math-expr">D = x<sup>2</sup> + (y-5)<sup>2</sup> = 2y + y<sup>2</sup> - 10y + 25 = y<sup>2</sup> - 8y + 25</span></p>
+                    <p class="mb-2"><span class="math-expr">D' = 2y - 8 = 0 &rArr; y = 4, x = &plusmn;2&radic;2</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 28 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 28: x के सभी वास्तविक मानों के लिए (1-x+x<sup>2</sup>)/(1+x+x<sup>2</sup>) का न्यूनतम मान है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 0 (B) 1 (C) 3 (D) 1/3</p>
+                    <p class="mb-2"><strong>हल:</strong> माना <span class="math-expr">y = (1-x+x<sup>2</sup>)/(1+x+x<sup>2</sup>)</span>. <span class="math-expr">yx<sup>2</sup>+yx+y = x<sup>2</sup>-x+1</span></p>
+                    <p class="mb-2"><span class="math-expr">(y-1)x<sup>2</sup> + (y+1)x + (y-1) = 0</span>. वास्तविक मूलों के लिए D &ge; 0</p>
+                    <p class="mb-2"><span class="math-expr">(y+1)<sup>2</sup> - 4(y-1)<sup>2</sup> &ge; 0 &rArr; 1/3 &le; y &le; 3</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 29 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 29: [x(x-1)+1]<sup>1/3</sup>, 0 &le; x &le; 1 का उच्चतम मान है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) (1/3)<sup>1/3</sup> (B) 1/2 (C) 1 (D) 0</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f(x) = (x<sup>2</sup>-x+1)<sup>1/3</sup></span>. <span class="math-expr">f'(x) = (1/3)(x<sup>2</sup>-x+1)<sup>-2/3</sup>(2x-1) = 0 &rArr; x = 1/2</span></p>
+                    <p class="mb-2">f(0)=1, f(1/2)=(3/4)<sup>1/3</sup>, f(1)=1. उच्चतम मान 1.</p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

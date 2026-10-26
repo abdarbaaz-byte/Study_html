@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 5: सांतत्य तथा अवकलनीयता</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        /* Matrix Styling */
+        .matrix-container {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+        }
+        .bracket {
+            font-size: 3.5em;
+            line-height: 0.8;
+            font-family: 'Times New Roman', serif;
+            font-weight: 300;
+            transform: scaleY(1.2);
+        }
+        .matrix-table {
+            border-collapse: collapse;
+            margin: 0 0.1em;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+        .matrix-table td {
+            padding: 0.2em 0.4em;
+            min-width: 1.5em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 5<br>सांतत्य तथा अवकलनीयता</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 5.1 ==================== -->
+        <section id="exercise-5-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: सिद्ध कीजिए कि फलन f(x) = 5x - 3, x = 0, x = -3 तथा x = 5 पर संतत है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> फलन f(x) = 5x - 3 एक बहुपद फलन है, इसलिए यह सभी वास्तविक संख्याओं के लिए संतत है। हम प्रत्येक बिंदु पर सांतत्य की जाँच करते हैं:</p>
+                    <p class="mb-2"><strong>x = 0 पर:</strong> <span class="math-expr">&lim;<sub>x&rarr;0</sub> f(x) = 5(0) - 3 = -3 = f(0)</span> &rArr; संतत है।</p>
+                    <p class="mb-2"><strong>x = -3 पर:</strong> <span class="math-expr">&lim;<sub>x&rarr;-3</sub> f(x) = 5(-3) - 3 = -18 = f(-3)</span> &rArr; संतत है।</p>
+                    <p class="mb-2"><strong>x = 5 पर:</strong> <span class="math-expr">&lim;<sub>x&rarr;5</sub> f(x) = 5(5) - 3 = 22 = f(5)</span> &rArr; संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: x = 3 पर फलन f(x) = 2x<sup>2</sup> - 1 के सांतत्य की जाँच कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f(3) = 2(3)<sup>2</sup> - 1 = 17</span></p>
+                    <p class="mb-2"><span class="math-expr">&lim;<sub>x&rarr;3</sub> f(x) = &lim;<sub>x&rarr;3</sub> (2x<sup>2</sup> - 1) = 2(3)<sup>2</sup> - 1 = 17</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">&lim;<sub>x&rarr;3</sub> f(x) = f(3)</span>, अतः फलन x = 3 पर संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्नलिखित फलनों के सांतत्य की जाँच कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(a) <span class="math-expr">f(x) = x - 5</span></p>
+                    <p class="mb-2">बहुपद फलन है, अतः सभी वास्तविक संख्याओं के लिए संतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(b) <span class="math-expr">f(x) = <span class="fraction"><span class="numerator">1</span><span class="denominator">x - 5</span></span>, x &ne; 5</span></p>
+                    <p class="mb-2">यह परिमेय फलन है, जो x = 5 को छोड़कर सभी जगह संतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(c) <span class="math-expr">f(x) = <span class="fraction"><span class="numerator">x<sup>2</sup> - 25</span><span class="denominator">x + 5</span></span>, x &ne; -5</span></p>
+                    <p class="mb-2">यह x = -5 पर परिभाषित नहीं है, अतः इसके अतिरिक्त सभी जगह संतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2">(d) <span class="math-expr">f(x) = |x - 5|</span></p>
+                    <p class="mb-2">मापांक फलन सभी वास्तविक संख्याओं के लिए संतत होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: सिद्ध कीजिए कि फलन f(x) = x<sup>n</sup>, x = n, पर संतत है, जहाँ n एक धन पूर्णांक है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f(n) = n<sup>n</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">&lim;<sub>x&rarr;n</sub> f(x) = &lim;<sub>x&rarr;n</sub> x<sup>n</sup> = n<sup>n</sup></span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">&lim;<sub>x&rarr;n</sub> f(x) = f(n)</span>, अतः x = n पर फलन संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: क्या f(x) = <span class="math-expr">x, यदि x &le; 1; 5, यदि x > 1</span> द्वारा परिभाषित फलन f, x = 0, x = 1, तथा x = 2 पर संतत है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>x = 0 पर:</strong> <span class="math-expr">f(0) = 0</span>, <span class="math-expr">&lim;<sub>x&rarr;0</sub> f(x) = 0</span> &rArr; संतत है।</p>
+                    <p class="mb-2"><strong>x = 1 पर:</strong> <span class="math-expr">f(1) = 1</span></p>
+                    <p class="mb-2">LHL: <span class="math-expr">&lim;<sub>x&rarr;1<sup>-</sup></sub> f(x) = 1</span>, RHL: <span class="math-expr">&lim;<sub>x&rarr;1<sup>+</sup></sub> f(x) = 5</span></p>
+                    <p class="mb-2">LHL &ne; RHL, अतः x = 1 पर असंतत है।</p>
+                    <p class="mb-2"><strong>x = 2 पर:</strong> <span class="math-expr">f(2) = 5</span>, <span class="math-expr">&lim;<sub>x&rarr;2</sub> f(x) = 5</span> &rArr; संतत है।</p>
+                    <p><strong>उत्तर:</strong> x = 0 और x = 2 पर संतत है, परंतु x = 1 पर असंतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 से 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6 से 12: f के सभी असांतत्य के बिंदुओं को ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 6:</strong> <span class="math-expr">f(x) = 2x+3 (x &le; 2), 2x-3 (x > 2)</span></p>
+                    <p class="mb-2">x = 2 पर: LHL = 7, RHL = 1. LHL &ne; RHL, अतः x = 2 पर असंतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 7:</strong> <span class="math-expr">f(x) = |x|+3 (x &le; -3), -2x (-3 < x < 3), 6x+2 (x &ge; 3)</span></p>
+                    <p class="mb-2">x = -3 पर: LHL = 6, RHL = 6, f(-3) = 6 &rArr; संतत।</p>
+                    <p class="mb-2">x = 3 पर: LHL = -6, RHL = 20 &rArr; असंतत।</p>
+                    <p><strong>उत्तर:</strong> x = 3 पर असंतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 8:</strong> <span class="math-expr">f(x) = |x|/x (x &ne; 0), 0 (x = 0)</span></p>
+                    <p class="mb-2">x = 0 पर: LHL = -1, RHL = 1 &rArr; असंतत।</p>
+                    <p><strong>उत्तर:</strong> x = 0 पर असंतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 9:</strong> <span class="math-expr">f(x) = x/|x| (x < 0), -1 (x &ge; 0)</span></p>
+                    <p class="mb-2">x = 0 पर: LHL = -1, RHL = -1, f(0) = -1 &rArr; संतत।</p>
+                    <p><strong>उत्तर:</strong> कोई असांतत्य बिंदु नहीं है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 10:</strong> <span class="math-expr">f(x) = x+1 (x &ge; 1), x<sup>2</sup>+1 (x < 1)</span></p>
+                    <p class="mb-2">x = 1 पर: LHL = 2, RHL = 2, f(1) = 2 &rArr; संतत।</p>
+                    <p><strong>उत्तर:</strong> कोई असांतत्य बिंदु नहीं है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 11:</strong> <span class="math-expr">f(x) = x<sup>3</sup>-3 (x &le; 2), x<sup>2</sup>+1 (x > 2)</span></p>
+                    <p class="mb-2">x = 2 पर: LHL = 5, RHL = 5, f(2) = 5 &rArr; संतत।</p>
+                    <p><strong>उत्तर:</strong> कोई असांतत्य बिंदु नहीं है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 12:</strong> <span class="math-expr">f(x) = x<sup>10</sup>-1 (x &le; 1), x<sup>2</sup> (x > 1)</span></p>
+                    <p class="mb-2">x = 1 पर: LHL = 0, RHL = 1 &rArr; असंतत।</p>
+                    <p><strong>उत्तर:</strong> x = 1 पर असंतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: क्या f(x) = x+5 (x &le; 1), x-5 (x > 1) द्वारा परिभाषित फलन, एक संतत फलन है?</h3>
+                <div class="step">
+                    <p class="mb-2">x = 1 पर: LHL = 1+5 = 6, RHL = 1-5 = -4</p>
+                    <p class="mb-2">LHL &ne; RHL, अतः फलन x = 1 पर असंतत है। इसलिए यह संतत फलन नहीं है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 से 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14 से 16: फलन f के सांतत्य पर विचार कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 14:</strong> <span class="math-expr">f(x) = 3 (0 &le; x &le; 1), 4 (1 < x < 3), 5 (3 &le; x &le; 10)</span></p>
+                    <p class="mb-2">x = 1 पर: LHL = 3, RHL = 4 &rArr; असंतत।</p>
+                    <p class="mb-2">x = 3 पर: LHL = 4, RHL = 5 &rArr; असंतत।</p>
+                    <p><strong>उत्तर:</strong> x = 1 और x = 3 पर असंतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 15:</strong> <span class="math-expr">f(x) = 2x (x < 0), 0 (0 &le; x &le; 1), 4x (x > 1)</span></p>
+                    <p class="mb-2">x = 0 पर: LHL = 0, RHL = 0, f(0) = 0 &rArr; संतत।</p>
+                    <p class="mb-2">x = 1 पर: LHL = 0, RHL = 4 &rArr; असंतत।</p>
+                    <p><strong>उत्तर:</strong> x = 1 पर असंतत है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 16:</strong> <span class="math-expr">f(x) = -2 (x &le; -1), 2x (-1 < x &le; 1), 2 (x > 1)</span></p>
+                    <p class="mb-2">x = -1 पर: LHL = -2, RHL = -2 &rArr; संतत।</p>
+                    <p class="mb-2">x = 1 पर: LHL = 2, RHL = 2 &rArr; संतत।</p>
+                    <p><strong>उत्तर:</strong> फलन सभी बिंदुओं पर संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: a और b के उन मानों को ज्ञात कीजिए जिनके लिए f(x) = ax+1 (x &le; 3), bx+3 (x > 3) द्वारा परिभाषित फलन x = 3 पर संतत है।</h3>
+                <div class="step">
+                    <p class="mb-2">x = 3 पर संतत होने के लिए, LHL = RHL = f(3)</p>
+                    <p class="mb-2">LHL = <span class="math-expr">&lim;<sub>x&rarr;3<sup>-</sup></sub> (ax+1) = 3a + 1</span></p>
+                    <p class="mb-2">RHL = <span class="math-expr">&lim;<sub>x&rarr;3<sup>+</sup></sub> (bx+3) = 3b + 3</span></p>
+                    <p class="mb-2"><span class="math-expr">f(3) = 3a + 1</span></p>
+                    <p class="mb-2">अतः <span class="math-expr">3a + 1 = 3b + 3 &rArr; 3a - 3b = 2 &rArr; a - b = <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: &lambda; के किस मान के लिए f(x) = &lambda;(x<sup>2</sup>-2x) (x &le; 0), 4x+1 (x > 0) द्वारा परिभाषित फलन x = 0 पर संतत है। x = 1 पर इसके सांत्य पर विचार कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>x = 0 पर:</strong> LHL = 0, RHL = 1. LHL &ne; RHL. अतः किसी भी &lambda; के लिए फलन x = 0 पर संतत नहीं हो सकता।</p>
+                    <p class="mb-2"><strong>x = 1 पर:</strong> यहाँ फलन f(x) = 4x + 1 है, जो कि एक बहुपद है। अतः x = 1 पर फलन संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: दर्शाइए कि g(x) = x - [x] द्वारा परिभाषित फलन समस्त पूर्णांक बिंदुओं पर असंतत है। यहाँ [x] उस महत्तम पूर्णांक निरूपित करता है, जो x के बराबर या x से कम है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> माना n एक पूर्णांक है।</p>
+                    <p class="mb-2">LHL: <span class="math-expr">&lim;<sub>x&rarr;n<sup>-</sup></sub> g(x) = &lim;<sub>x&rarr;n<sup>-</sup></sub> (x - [x]) = n - (n - 1) = 1</span></p>
+                    <p class="mb-2">RHL: <span class="math-expr">&lim;<sub>x&rarr;n<sup>+</sup></sub> g(x) = &lim;<sub>x&rarr;n<sup>+</sup></sub> (x - [x]) = n - n = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">g(n) = n - n = 0</span></p>
+                    <p class="mb-2">LHL &ne; RHL, अतः यह प्रत्येक पूर्णांक पर असंतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: क्या f(x) = x<sup>2</sup> - sin x + 5 द्वारा परिभाषित फलन x = &pi; पर संतत है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f(&pi;) = &pi;<sup>2</sup> - sin &pi; + 5 = &pi;<sup>2</sup> + 5</span></p>
+                    <p class="mb-2"><span class="math-expr">&lim;<sub>x&rarr;&pi;</sub> f(x) = &pi;<sup>2</sup> - sin &pi; + 5 = &pi;<sup>2</sup> + 5</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">&lim;<sub>x&rarr;&pi;</sub> f(x) = f(&pi;)</span>, अतः x = &pi; पर फलन संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 21 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 21: निम्नलिखित फलनों के सांतत्य पर विचार कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2">(a) <span class="math-expr">f(x) = sin x + cos x</span> &rArr; सभी जगह संतत है।</p>
+                    <p class="mb-2">(b) <span class="math-expr">f(x) = sin x - cos x</span> &rArr; सभी जगह संतत है।</p>
+                    <p class="mb-2">(c) <span class="math-expr">f(x) = sin x &middot; cos x</span> &rArr; सभी जगह संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 22 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 22: cosine, cosecant, secant और cotangent फलनों के सांतत्य पर विचार कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> cos x सभी वास्तविक संख्याओं के लिए संतत है।</p>
+                    <p class="mb-2">cosec x, sec x और cot x अपने-अपने प्रांतों में संतत हैं, अर्थात जहाँ उनके हर (denominator) शून्य नहीं होते।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 23 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 23: f के सभी असांतत्य के बिंदुओं को ज्ञात कीजिए, जहाँ f(x) = sin x / x (x < 0), x+1 (x &ge; 0)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>x = 0 पर:</strong></p>
+                    <p class="mb-2">LHL = <span class="math-expr">&lim;<sub>x&rarr;0<sup>-</sup></sub> (sin x)/x = 1</span></p>
+                    <p class="mb-2">RHL = <span class="math-expr">&lim;<sub>x&rarr;0<sup>+</sup></sub> (x+1) = 1</span></p>
+                    <p class="mb-2">f(0) = 1</p>
+                    <p class="mb-2">LHL = RHL = f(0), अतः x = 0 पर संतत है।</p>
+                    <p class="mb-2">अतः कोई भी असांतत्य का बिंदु नहीं है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 24 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 24: निर्धारित कीजिए कि फलन f(x) = x<sup>2</sup> sin(1/x) (x &ne; 0), 0 (x = 0) द्वारा परिभाषित एक संतत फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>x = 0 पर:</strong> LHL = RHL = <span class="math-expr">&lim;<sub>x&rarr;0</sub> x<sup>2</sup> sin(1/x) = 0</span> (सैंडविच प्रमेय से)</p>
+                    <p class="mb-2">f(0) = 0. अतः x = 0 पर संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 25 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 25: f के सांत्य की जाँच कीजिए, जहाँ f(x) = sin x - cos x (x &ne; 0), -1 (x = 0)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>x = 0 पर:</strong> LHL = RHL = <span class="math-expr">&lim;<sub>x&rarr;0</sub> (sin x - cos x) = -1</span></p>
+                    <p class="mb-2">f(0) = -1</p>
+                    <p class="mb-2">LHL = RHL = f(0), अतः x = 0 पर संतत है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 26 से 29 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 26 से 29: k के मानों को ज्ञात कीजिए ताकि प्रदत्त फलन निर्दिष्ट बिंदु पर संतत हो:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 26:</strong> f(x) = k cos x / (&pi; - 2x) (x &ne; &pi;/2), 3 (x = &pi;/2)</p>
+                    <p class="mb-2">x = &pi;/2 पर: LHL = RHL = <span class="math-expr">&lim;<sub>x&rarr;&pi;/2</sub> <span class="nowrap"><span class="fraction"><span class="numerator">k cos x</span><span class="denominator">&pi; - 2x</span></span></span></span></p>
+                    <p class="mb-2">= <span class="math-expr">&lim;<sub>x&rarr;&pi;/2</sub> <span class="nowrap"><span class="fraction"><span class="numerator">-k sin x</span><span class="denominator">-2</span></span></span> = <span class="fraction"><span class="numerator">k</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2">f(&pi;/2) = 3. अतः k/2 = 3 &rArr; k = 6.</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 27:</strong> f(x) = kx<sup>2</sup> (x &le; 2), 3 (x > 2)</p>
+                    <p class="mb-2">x = 2 पर: LHL = 4k, RHL = 3. अतः 4k = 3 &rArr; k = 3/4.</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 28:</strong> f(x) = kx+1 (x &le; &pi;), cos x (x > &pi;)</p>
+                    <p class="mb-2">x = &pi; पर: LHL = k&pi;+1, RHL = cos &pi; = -1. अतः k&pi;+1 = -1 &rArr; k = -2/&pi;.</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>प्रश्न 29:</strong> f(x) = kx+1 (x &le; 5), 3x-5 (x > 5)</p>
+                    <p class="mb-2">x = 5 पर: LHL = 5k+1, RHL = 15-5 = 10. अतः 5k+1 = 10 &rArr; k = 9/5.</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 30 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 30: a तथा b के मानों को ज्ञात कीजिए ताकि f(x) = 5 (x &le; 2), ax+b (2 < x < 10), 21 (x &ge; 10) द्वारा परिभाषित फलन एक संतत फलन हो।</h3>
+                <div class="step">
+                    <p class="mb-2">x = 2 पर: LHL = 5, RHL = 2a+b. अतः 2a+b = 5 ...(1)</p>
+                    <p class="mb-2">x = 10 पर: LHL = 10a+b, RHL = 21. अतः 10a+b = 21 ...(2)</p>
+                    <p class="mb-2">(2) - (1) &rArr; 8a = 16 &rArr; a = 2. a का मान (1) में रखने पर b = 1.</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 31 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 31: दर्शाइए कि f(x) = cos(x<sup>2</sup>) द्वारा परिभाषित फलन एक संतत फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> f(x) = h(g(x)), जहाँ g(x) = x<sup>2</sup> और h(x) = cos x. चूँकि दोनों संतत हैं, अतः संयुक्त फलन भी संतत होगा।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 32 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 32: दर्शाइए कि f(x) = |cos x| द्वारा परिभाषित फलन एक संतत फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मापांक फलन और cosine फलन दोनों संतत हैं, अतः इनका संयोजन भी संतत होगा।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 33 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 33: जाँचिए कि क्या sin|x| एक संतत फलन है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> |x| सभी जगह संतत है और sin x भी सभी जगह संतत है। अतः इनका संयोजन sin|x| भी सभी जगह संतत होगा।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 34 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 34: f(x) = |x| - |x+1| द्वारा परिभाषित फलन f के सभी असांतत्य के बिंदुओं को ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> f(x) को टुकड़ों में लिखने पर:</p>
+                    <p class="mb-2">x < -1: f(x) = -x - (-(x+1)) = -x + x + 1 = 1</p>
+                    <p class="mb-2">-1 &le; x < 0: f(x) = -x - (x+1) = -2x - 1</p>
+                    <p class="mb-2">x &ge; 0: f(x) = x - (x+1) = -1</p>
+                    <p class="mb-2">x = -1 पर: LHL = 1, RHL = 1, f(-1) = 1 &rArr; संतत।</p>
+                    <p class="mb-2">x = 0 पर: LHL = -1, RHL = -1, f(0) = -1 &rArr; संतत।</p>
+                    <p class="mb-2">अतः कोई असांतत्य बिंदु नहीं है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.2 ==================== -->
+        <section id="exercise-5-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.2</h2>
+
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1 से 8 में x के सापेक्ष निम्नलिखित फलनों का अवकलन कीजिए (शृंखला नियम द्वारा):</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>1. sin(x<sup>2</sup> + 5)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = cos(x<sup>2</sup>+5) &middot; d/dx(x<sup>2</sup>+5) = 2x cos(x<sup>2</sup>+5)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>2. cos(sin x)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -sin(sin x) &middot; d/dx(sin x) = -cos x &middot; sin(sin x)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>3. sin(ax + b)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = cos(ax+b) &middot; a = a cos(ax+b)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>4. sec(tan(&radic;x))</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = sec(tan&radic;x) tan(tan&radic;x) &middot; sec<sup>2</sup>(&radic;x) &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;x</span></span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>5. <span class="math-expr"><span class="fraction"><span class="numerator">sin(ax+b)</span><span class="denominator">cos(cx+d)</span></span></span></strong></p>
+                    <p class="mb-2">भागफल नियम और शृंखला नियम से हल करने पर प्राप्त होगा।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>6. cos x<sup>3</sup> &middot; sin<sup>2</sup>(x<sup>5</sup>)</strong></p>
+                    <p class="mb-2">गुणनफल नियम और शृंखला नियम से हल करने पर।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>7. 2&radic;(cot(x<sup>2</sup>))</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = 2 &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;(cot x<sup>2</sup>)</span></span> &middot; (-cosec<sup>2</sup>(x<sup>2</sup>)) &middot; 2x = <span class="fraction"><span class="numerator">-2x cosec<sup>2</sup>(x<sup>2</sup>)</span><span class="denominator">&radic;(cot x<sup>2</sup>)</span></span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>8. cos(&radic;x)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -sin(&radic;x) &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;x</span></span> = <span class="fraction"><span class="numerator">-sin&radic;x</span><span class="denominator">2&radic;x</span></span></span></p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: सिद्ध कीजिए कि फलन f(x) = |x - 1|, x &isin; R, x = 1 पर अवकलित नहीं है।</h3>
+                <div class="step">
+                    <p class="mb-2">LHD: <span class="math-expr">&lim;<sub>h&rarr;0<sup>-</sup></sub> <span class="nowrap">(<span class="fraction"><span class="numerator">|1+h-1| - |1-1|</span><span class="denominator">h</span></span>)</span> = &lim; <span class="nowrap">(<span class="fraction"><span class="numerator">-h</span><span class="denominator">h</span></span>)</span> = -1</span></p>
+                    <p class="mb-2">RHD: <span class="math-expr">&lim;<sub>h&rarr;0<sup>+</sup></sub> <span class="nowrap">(<span class="fraction"><span class="numerator">|1+h-1| - |1-1|</span><span class="denominator">h</span></span>)</span> = &lim; <span class="nowrap">(<span class="fraction"><span class="numerator">h</span><span class="denominator">h</span></span>)</span> = 1</span></p>
+                    <p class="mb-2">LHD &ne; RHD, अतः x = 1 पर अवकलनीय नहीं है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.3 ==================== -->
+        <section id="exercise-5-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.3</h2>
+            <div class="solution-card">
+                <h3 class="text-xl question-title">निम्नलिखित प्रश्नों में dy/dx ज्ञात कीजिए (अस्पष्ट फलन):</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>1. 2x + 3y = sin x</strong></p>
+                    <p class="mb-2"><span class="math-expr">2 + 3(dy/dx) = cos x &rArr; dy/dx = (cos x - 2)/3</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>2. 2x + 3y = sin y</strong></p>
+                    <p class="mb-2"><span class="math-expr">2 + 3(dy/dx) = cos y (dy/dx) &rArr; dy/dx = 2/(cos y - 3)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>3. ax + by<sup>2</sup> = cos y</strong></p>
+                    <p class="mb-2"><span class="math-expr">a + 2by(dy/dx) = -sin y (dy/dx) &rArr; dy/dx = -a/(2by + sin y)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>4. xy + y<sup>2</sup> = tan x + y</strong></p>
+                    <p class="mb-2"><span class="math-expr">y + x(dy/dx) + 2y(dy/dx) = sec<sup>2</sup>x + dy/dx</span></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx(x + 2y - 1) = sec<sup>2</sup>x - y &rArr; dy/dx = (sec<sup>2</sup>x - y)/(x + 2y - 1)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>5. x<sup>2</sup> + xy + y<sup>2</sup> = 100</strong></p>
+                    <p class="mb-2"><span class="math-expr">2x + y + x(dy/dx) + 2y(dy/dx) = 0 &rArr; dy/dx = -(2x+y)/(x+2y)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>6. x<sup>3</sup> + x<sup>2</sup>y + xy<sup>2</sup> + y<sup>3</sup> = 81</strong></p>
+                    <p class="mb-2"><span class="math-expr">3x<sup>2</sup> + 2xy + x<sup>2</sup>(dy/dx) + y<sup>2</sup> + 2xy(dy/dx) + 3y<sup>2</sup>(dy/dx) = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -(3x<sup>2</sup> + 2xy + y<sup>2</sup>) / (x<sup>2</sup> + 2xy + 3y<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>7. sin<sup>2</sup>y + cos xy = k</strong></p>
+                    <p class="mb-2"><span class="math-expr">2 sin y cos y (dy/dx) - sin(xy)(y + x(dy/dx)) = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = (y sin(xy)) / (sin 2y - x sin(xy))</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>8. sin<sup>2</sup>x + cos<sup>2</sup>y = 1</strong></p>
+                    <p class="mb-2"><span class="math-expr">2 sin x cos x - 2 cos y sin y (dy/dx) = 0 &rArr; sin 2x - sin 2y (dy/dx) = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = sin 2x / sin 2y</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>9. y = sin<sup>-1</sup>(2x/(1+x<sup>2</sup>))</strong></p>
+                    <p class="mb-2">x = tan &theta; रखने पर, y = sin<sup>-1</sup>(sin 2&theta;) = 2&theta; = 2 tan<sup>-1</sup>x</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = 2/(1+x<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>10. y = tan<sup>-1</sup>((3x - x<sup>3</sup>)/(1 - 3x<sup>2</sup>))</strong></p>
+                    <p class="mb-2">x = tan &theta; रखने पर, y = tan<sup>-1</sup>(tan 3&theta;) = 3&theta; = 3 tan<sup>-1</sup>x</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = 3/(1+x<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>11. y = cos<sup>-1</sup>((1-x<sup>2</sup>)/(1+x<sup>2</sup>))</strong></p>
+                    <p class="mb-2">x = tan &theta; रखने पर, y = cos<sup>-1</sup>(cos 2&theta;) = 2&theta; = 2 tan<sup>-1</sup>x</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = 2/(1+x<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>12. y = sin<sup>-1</sup>((1-x<sup>2</sup>)/(1+x<sup>2</sup>))</strong></p>
+                    <p class="mb-2">x = tan &theta; रखने पर, y = sin<sup>-1</sup>(cos 2&theta;) = sin<sup>-1</sup>(sin(&pi;/2 - 2&theta;)) = &pi;/2 - 2&theta;</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -2/(1+x<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>13. y = cos<sup>-1</sup>(2x/(1+x<sup>2</sup>))</strong></p>
+                    <p class="mb-2">x = tan &theta; रखने पर, y = cos<sup>-1</sup>(sin 2&theta;) = &pi;/2 - 2&theta;</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -2/(1+x<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>14. y = sin<sup>-1</sup>(2x&radic;(1-x<sup>2</sup>))</strong></p>
+                    <p class="mb-2">x = sin &theta; रखने पर, y = sin<sup>-1</sup>(sin 2&theta;) = 2&theta; = 2 sin<sup>-1</sup>x</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = 2/&radic;(1-x<sup>2</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>15. y = sec<sup>-1</sup>(1/(2x<sup>2</sup>-1))</strong></p>
+                    <p class="mb-2">x = cos &theta; रखने पर, y = sec<sup>-1</sup>(1/cos 2&theta;) = sec<sup>-1</sup>(sec 2&theta;) = 2&theta; = 2 cos<sup>-1</sup>x</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -2/&radic;(1-x<sup>2</sup>)</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.4 ==================== -->
+        <section id="exercise-5-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.4</h2>
+            <div class="solution-card">
+                <h3 class="text-xl question-title">x के सापेक्ष निम्नलिखित का अवकलन कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>1. e<sup>x</sup>/sin x</strong></p>
+                    <p class="mb-2">भागफल नियम: <span class="math-expr">dy/dx = <span class="nowrap">(<span class="fraction"><span class="numerator">e<sup>x</sup>sin x - e<sup>x</sup>cos x</span><span class="denominator">sin<sup>2</sup>x</span></span>)</span> = e<sup>x</sup>(sin x - cos x)/sin<sup>2</sup>x</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>2. e<sup>sin<sup>-1</sup>x</sup></strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = e<sup>sin<sup>-1</sup>x</sup> &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;(1-x<sup>2</sup>)</span></span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>3. e<sup>x<sup>3</sup></sup></strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = e<sup>x<sup>3</sup></sup> &middot; 3x<sup>2</sup></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>4. sin(tan<sup>-1</sup>e<sup>-x</sup>)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = cos(tan<sup>-1</sup>e<sup>-x</sup>) &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">1+(e<sup>-x</sup>)<sup>2</sup></span></span> &middot; (-e<sup>-x</sup>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>5. log(cos e<sup>x</sup>)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = <span class="fraction"><span class="numerator">1</span><span class="denominator">cos e<sup>x</sup></span></span> &middot; (-sin e<sup>x</sup>) &middot; e<sup>x</sup> = -e<sup>x</sup> tan e<sup>x</sup></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>6. e<sup>x</sup> + e<sup>x<sup>2</sup></sup> + ... + e<sup>x<sup>5</sup></sup></strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = e<sup>x</sup> + 2x e<sup>x<sup>2</sup></sup> + 3x<sup>2</sup> e<sup>x<sup>3</sup></sup> + 4x<sup>3</sup> e<sup>x<sup>4</sup></sup> + 5x<sup>4</sup> e<sup>x<sup>5</sup></sup></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>7. &radic;(e<sup>&radic;x</sup>)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = <span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;(e<sup>&radic;x</sup>)</span></span> &middot; e<sup>&radic;x</sup> &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;x</span></span> = <span class="fraction"><span class="numerator">e<sup>&radic;x</sup></span><span class="denominator">4&radic;(x e<sup>&radic;x</sup>)</span></span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>8. log(log x)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = <span class="fraction"><span class="numerator">1</span><span class="denominator">log x</span></span> &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">x log x</span></span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>9. cos x / log x</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = <span class="nowrap">(<span class="fraction"><span class="numerator">-sin x &middot; log x - cos x &middot; (1/x)</span><span class="denominator">(log x)<sup>2</sup></span></span>)</span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>10. cos(log x + e<sup>x</sup>)</strong></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -sin(log x + e<sup>x</sup>) &middot; (1/x + e<sup>x</sup>)</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.5 ==================== -->
+        <section id="exercise-5-5" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.5</h2>
+            <div class="solution-card">
+                <h3 class="text-xl question-title">1 से 11 तक के प्रश्नों में प्रदत्त फलनों का x के सापेक्ष अवकलन कीजिए (लघुगणकीय अवकलन):</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>1. cos x &middot; cos 2x &middot; cos 3x</strong></p>
+                    <p class="mb-2">y = cos x cos 2x cos 3x, log y = log cos x + log cos 2x + log cos 3x</p>
+                    <p class="mb-2"><span class="math-expr">(1/y)dy/dx = -tan x - 2tan 2x - 3tan 3x</span></p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = -y(tan x + 2tan 2x + 3tan 3x)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>2. &radic;((x-1)(x-2)/((x-3)(x-4)(x-5)))</strong></p>
+                    <p class="mb-2">log y = 1/2 [log(x-1) + log(x-2) - log(x-3) - log(x-4) - log(x-5)]</p>
+                    <p class="mb-2"><span class="math-expr">(1/y)dy/dx = 1/2 [1/(x-1) + 1/(x-2) - 1/(x-3) - 1/(x-4) - 1/(x-5)]</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>3. (log x)<sup>cos x</sup></strong></p>
+                    <p class="mb-2">log y = cos x log(log x)</p>
+                    <p class="mb-2"><span class="math-expr">(1/y)dy/dx = -sin x log(log x) + cos x &middot; (1/(x log x))</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>4. x<sup>x</sup> - 2<sup>sin x</sup></strong></p>
+                    <p class="mb-2">माना u = x<sup>x</sup>, v = 2<sup>sin x</sup>. log u = x log x &rArr; du/dx = x<sup>x</sup>(1 + log x)</p>
+                    <p class="mb-2">dv/dx = 2<sup>sin x</sup> log 2 &middot; cos x</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = x<sup>x</sup>(1 + log x) - 2<sup>sin x</sup> cos x log 2</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>5. (x+3)<sup>2</sup> &middot; (x+4)<sup>3</sup> &middot; (x+5)<sup>4</sup></strong></p>
+                    <p class="mb-2">log y = 2log(x+3) + 3log(x+4) + 4log(x+5)</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = y [2/(x+3) + 3/(x+4) + 4/(x+5)]</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>6. (x + 1/x)<sup>x</sup> + x<sup>(1+1/x)</sup></strong></p>
+                    <p class="mb-2">दोनों पदों को अलग-अलग लघुगणकीय अवकलन द्वारा हल करें।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>7. (log x)<sup>x</sup> + x<sup>log x</sup></strong></p>
+                    <p class="mb-2">u = (log x)<sup>x</sup> &rArr; du/dx = (log x)<sup>x</sup> [log(log x) + 1/log x]</p>
+                    <p class="mb-2">v = x<sup>log x</sup> &rArr; dv/dx = x<sup>log x</sup> [2(log x)/x]</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>8. (sin x)<sup>x</sup> + sin<sup>-1</sup>&radic;x</strong></p>
+                    <p class="mb-2">u = (sin x)<sup>x</sup> &rArr; du/dx = (sin x)<sup>x</sup> [x cot x + log(sin x)]</p>
+                    <p class="mb-2">v = sin<sup>-1</sup>&radic;x &rArr; dv/dx = 1/(2&radic;x &middot; &radic;(1-x))</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>9. x<sup>sin x</sup> + (sin x)<sup>cos x</sup></strong></p>
+                    <p class="mb-2">u = x<sup>sin x</sup> &rArr; du/dx = x<sup>sin x</sup> [sin x / x + cos x log x]</p>
+                    <p class="mb-2">v = (sin x)<sup>cos x</sup> &rArr; dv/dx = (sin x)<sup>cos x</sup> [-sin x log(sin x) + cos<sup>2</sup>x/sin x]</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>10. x<sup>x cos x</sup> + (x<sup>2</sup>+1)/(x<sup>2</sup>-1)</strong></p>
+                    <p class="mb-2">पहले पद का लघुगणकीय अवकलन, दूसरे पद का भागफल नियम।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>11. (x cos x)<sup>x</sup> + (x sin x)<sup>1/x</sup></strong></p>
+                    <p class="mb-2">दोनों पदों का लघुगणकीय अवकलन करें।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>12. x<sup>y</sup> + y<sup>x</sup> = 1</strong></p>
+                    <p class="mb-2">लघुगणक लेकर अवकलन करने पर: <span class="math-expr">y x<sup>y-1</sup> + x<sup>y</sup> log x (dy/dx) + y<sup>x</sup> log y + x y<sup>x-1</sup> (dy/dx) = 0</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>13. y<sup>x</sup> = x<sup>y</sup></strong></p>
+                    <p class="mb-2">x log y = y log x &rArr; log y + (x/y)(dy/dx) = (dy/dx) log x + y/x</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>14. (cos x)<sup>y</sup> = (cos y)<sup>x</sup></strong></p>
+                    <p class="mb-2">y log(cos x) = x log(cos y) &rArr; अवकलन करने पर dy/dx प्राप्त होगा।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>15. xy = e<sup>(x-y)</sup></strong></p>
+                    <p class="mb-2">log x + log y = x - y &rArr; 1/x + (1/y)(dy/dx) = 1 - dy/dx</p>
+                    <p class="mb-2"><span class="math-expr">dy/dx = <span class="nowrap">(<span class="fraction"><span class="numerator">y(x-1)</span><span class="denominator">x(y+1)</span></span>)</span></span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>16. f(x) = (1+x)(1+x<sup>2</sup>)(1+x<sup>4</sup>)(1+x<sup>8</sup>)</strong></p>
+                    <p class="mb-2">लघुगणक लेकर अवकलन करने पर, f'(1) का मान ज्ञात करें।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>17. f(x) = x<sup>x</sup></strong></p>
+                    <p class="mb-2">लघुगणक लेकर: log y = x log x &rArr; dy/dx = x<sup>x</sup>(1 + log x)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>18. x<sup>x</sup> + x<sup>a</sup> + a<sup>x</sup> + a<sup>a</sup></strong></p>
+                    <p class="mb-2">dy/dx = x<sup>x</sup>(1 + log x) + a x<sup>a-1</sup> + a<sup>x</sup> log a</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.6 ==================== -->
+        <section id="exercise-5-6" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.6</h2>
+            <div class="solution-card">
+                <h3 class="text-xl question-title">यदि x और y निम्नलिखित प्रकार से प्राचलिक रूप में संबंधित हों, तो dy/dx ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>1. x = 2at<sup>2</sup>, y = at<sup>4</sup></strong></p>
+                    <p class="mb-2">dx/dt = 4at, dy/dt = 4at<sup>3</sup> &rArr; dy/dx = (4at<sup>3</sup>)/(4at) = t<sup>2</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>2. x = a cos &theta;, y = b cos &theta;</strong></p>
+                    <p class="mb-2">dx/d&theta; = -a sin &theta;, dy/d&theta; = -b sin &theta; &rArr; dy/dx = b/a</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>3. x = sin t, y = cos 2t</strong></p>
+                    <p class="mb-2">dx/dt = cos t, dy/dt = -2 sin 2t &rArr; dy/dx = -2 sin 2t / cos t = -4 sin t</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>4. x = 4t, y = 4/t</strong></p>
+                    <p class="mb-2">dx/dt = 4, dy/dt = -4/t<sup>2</sup> &rArr; dy/dx = -1/t<sup>2</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>5. x = cos &theta; - cos 2&theta;, y = sin &theta; - sin 2&theta;</strong></p>
+                    <p class="mb-2">dx/d&theta; = -sin &theta; + 2sin 2&theta;, dy/d&theta; = cos &theta; - 2cos 2&theta; &rArr; dy/dx = (cos &theta; - 2cos 2&theta;) / (-sin &theta; + 2sin 2&theta;)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>6. x = a(&theta; - sin &theta;), y = a(1 + cos &theta;)</strong></p>
+                    <p class="mb-2">dx/d&theta; = a(1 - cos &theta;), dy/d&theta; = -a sin &theta; &rArr; dy/dx = -a sin &theta; / a(1 - cos &theta;) = -cot(&theta;/2)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>7. x = sin<sup>3</sup>t/&radic;(cos 2t), y = cos<sup>3</sup>t/&radic;(cos 2t)</strong></p>
+                    <p class="mb-2">अवकलन करने पर dy/dx = -cot t प्राप्त होता है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>8. x = a(cos t + log tan(t/2)), y = a sin t</strong></p>
+                    <p class="mb-2">dx/dt = a(-sin t + 1/sin t) = a cos<sup>2</sup>t / sin t, dy/dt = a cos t &rArr; dy/dx = tan t</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>9. x = a sec &theta;, y = b tan &theta;</strong></p>
+                    <p class="mb-2">dx/d&theta; = a sec &theta; tan &theta;, dy/d&theta; = b sec<sup>2</sup>&theta; &rArr; dy/dx = (b/a) cosec &theta;</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>10. x = a(cos &theta; + &theta; sin &theta;), y = a(sin &theta; - &theta; cos &theta;)</strong></p>
+                    <p class="mb-2">dx/d&theta; = a(&theta; cos &theta;), dy/d&theta; = a(&theta; sin &theta;) &rArr; dy/dx = tan &theta;</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>11. x = &radic;(a<sup>sin<sup>-1</sup>t</sup>), y = &radic;(a<sup>cos<sup>-1</sup>t</sup>)</strong></p>
+                    <p class="mb-2">log x = (1/2) sin<sup>-1</sup>t log a, log y = (1/2) cos<sup>-1</sup>t log a</p>
+                    <p class="mb-2">(1/x)(dx/dt) = (1/2) log a / &radic;(1-t<sup>2</sup>), (1/y)(dy/dt) = (-1/2) log a / &radic;(1-t<sup>2</sup>)</p>
+                    <p class="mb-2">dy/dx = (dy/dt)/(dx/dt) = -y/x.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 5.7 ==================== -->
+        <section id="exercise-5-7" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 5.7</h2>
+            <div class="solution-card">
+                <h3 class="text-xl question-title">1 से 10 तक के प्रश्नों में दिए फलनों के द्वितीय कोटि के अवकलज ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>1. y = x<sup>2</sup> + 3x + 2</strong></p>
+                    <p class="mb-2">dy/dx = 2x + 3 &rArr; d<sup>2</sup>y/dx<sup>2</sup> = 2</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>2. y = x<sup>20</sup></strong></p>
+                    <p class="mb-2">dy/dx = 20x<sup>19</sup> &rArr; d<sup>2</sup>y/dx<sup>2</sup> = 380x<sup>18</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>3. y = x cos x</strong></p>
+                    <p class="mb-2">dy/dx = cos x - x sin x &rArr; d<sup>2</sup>y/dx<sup>2</sup> = -sin x - (sin x + x cos x) = -2sin x - x cos x</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>4. y = log x</strong></p>
+                    <p class="mb-2">dy/dx = 1/x &rArr; d<sup>2</sup>y/dx<sup>2</sup> = -1/x<sup>2</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>5. y = x<sup>3</sup> log x</strong></p>
+                    <p class="mb-2">dy/dx = 3x<sup>2</sup> log x + x<sup>2</sup> &rArr; d<sup>2</sup>y/dx<sup>2</sup> = 6x log x + 3x + 2x = 6x log x + 5x</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>6. y = e<sup>x</sup> sin 5x</strong></p>
+                    <p class="mb-2">dy/dx = e<sup>x</sup> sin 5x + 5e<sup>x</sup> cos 5x</p>
+                    <p class="mb-2">d<sup>2</sup>y/dx<sup>2</sup> = e<sup>x</sup>(-24 sin 5x + 10 cos 5x)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>7. y = e<sup>6x</sup> cos 3x</strong></p>
+                    <p class="mb-2">d<sup>2</sup>y/dx<sup>2</sup> = e<sup>6x</sup>(27 cos 3x + 36 sin 3x)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>8. y = tan<sup>-1</sup>x</strong></p>
+                    <p class="mb-2">dy/dx = 1/(1+x<sup>2</sup>) &rArr; d<sup>2</sup>y/dx<sup>2</sup> = -2x/(1+x<sup>2</sup>)<sup>2</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>9. y = log(log x)</strong></p>
+                    <p class="mb-2">dy/dx = 1/(x log x) &rArr; d<sup>2</sup>y/dx<sup>2</sup> = -(log x + 1)/(x<sup>2</sup> (log x)<sup>2</sup>)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>10. y = sin(log x)</strong></p>
+                    <p class="mb-2">dy/dx = cos(log x)/x &rArr; d<sup>2</sup>y/dx<sup>2</sup> = -[sin(log x) + cos(log x)] / x<sup>2</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>11. यदि y = 5 cos x - 3 sin x है तो सिद्ध कीजिए कि d<sup>2</sup>y/dx<sup>2</sup> + y = 0</strong></p>
+                    <p class="mb-2">dy/dx = -5 sin x - 3 cos x, d<sup>2</sup>y/dx<sup>2</sup> = -5 cos x + 3 sin x = -y</p>
+                    <p class="mb-2">अतः d<sup>2</sup>y/dx<sup>2</sup> + y = -y + y = 0 (इति सिद्धम्)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>12. यदि y = cos<sup>-1</sup>x है तो d<sup>2</sup>y/dx<sup>2</sup> को केवल y के पदों में ज्ञात कीजिए।</strong></p>
+                    <p class="mb-2">dy/dx = -1/&radic;(1-x<sup>2</sup>), d<sup>2</sup>y/dx<sup>2</sup> = -x/(1-x<sup>2</sup>)<sup>3/2</sup></p>
+                    <p class="mb-2">x = cos y रखने पर: d<sup>2</sup>y/dx<sup>2</sup> = -cos y / sin<sup>3</sup>y = -cot y csc<sup>2</sup>y</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>13. यदि y = 3 cos(log x) + 4 sin(log x) है तो दर्शाइए कि x<sup>2</sup>y<sub>2</sub> + xy<sub>1</sub> + y = 0</strong></p>
+                    <p class="mb-2">y<sub>1</sub> = [-3 sin(log x) + 4 cos(log x)] / x</p>
+                    <p class="mb-2">x y<sub>1</sub> = -3 sin(log x) + 4 cos(log x)</p>
+                    <p class="mb-2">पुनः अवकलन करने पर सिद्ध होगा।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>14. यदि y = Ae<sup>mx</sup> + Be<sup>nx</sup> है तो दर्शाइए कि y<sub>2</sub> - (m+n)y<sub>1</sub> + mny = 0</strong></p>
+                    <p class="mb-2">y<sub>1</sub> = mAe<sup>mx</sup> + nBe<sup>nx</sup></p>
+                    <p class="mb-2">y<sub>2</sub> = m<sup>2</sup>Ae<sup>mx</sup> + n<sup>2</sup>Be<sup>nx</sup></p>
+                    <p class="mb-2">मान रखने पर सिद्ध होता है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>15. यदि y = 500e<sup>7x</sup> + 600e<sup>-7x</sup> है तो दर्शाइए कि d<sup>2</sup>y/dx<sup>2</sup> = 49y है।</strong></p>
+                    <p class="mb-2">dy/dx = 3500e<sup>7x</sup> - 4200e<sup>-7x</sup></p>
+                    <p class="mb-2">d<sup>2</sup>y/dx<sup>2</sup> = 24500e<sup>7x</sup> + 29400e<sup>-7x</sup> = 49(500e<sup>7x</sup> + 600e<sup>-7x</sup>) = 49y</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>16. यदि e<sup>y</sup>(x+1) = 1 है तो दर्शाइए कि d<sup>2</sup>y/dx<sup>2</sup> = (dy/dx)<sup>2</sup> है।</strong></p>
+                    <p class="mb-2">y = -log(x+1) &rArr; y<sub>1</sub> = -1/(x+1)</p>
+                    <p class="mb-2">y<sub>2</sub> = 1/(x+1)<sup>2</sup> = (-1/(x+1))<sup>2</sup> = (y<sub>1</sub>)<sup>2</sup></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>17. यदि y = (tan<sup>-1</sup>x)<sup>2</sup> है तो दर्शाइए कि (x<sup>2</sup>+1)<sup>2</sup>y<sub>2</sub> + 2x(x<sup>2</sup>+1)y<sub>1</sub> = 2 है।</strong></p>
+                    <p class="mb-2">y<sub>1</sub> = 2 tan<sup>-1</sup>x / (1+x<sup>2</sup>) &rArr; (1+x<sup>2</sup>)y<sub>1</sub> = 2 tan<sup>-1</sup>x</p>
+                    <p class="mb-2">पुनः अवकलन करने पर सिद्ध होगा।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

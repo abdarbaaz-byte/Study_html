@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 13: प्रायिकता</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 13<br>प्रायिकता</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 13.1 ==================== -->
+        <section id="exercise-13-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 13.1 (सप्रतिबंध प्रायिकता)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: यदि E और F इस प्रकार की घटनाएँ हैं कि P(E) = 0.6, P(F) = 0.3 और P(E ∩ F) = 0.2, तो P(E|F) और P(F|E) ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">P(E ∩ F)</span><span class="denominator">P(F)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.2</span><span class="denominator">0.3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(F|E) = <span class="nowrap"><span class="fraction"><span class="numerator">P(E ∩ F)</span><span class="denominator">P(E)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.2</span><span class="denominator">0.6</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: P(A|B) ज्ञात कीजिए, यदि P(B) = 0.5 और P(A ∩ B) = 0.32</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(A|B) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(B)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.32</span><span class="denominator">0.5</span></span></span> = 0.64</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि P(A) = 0.8, P(B) = 0.5 और P(B|A) = 0.4 ज्ञात कीजिए (i) P(A ∩ B) (ii) P(A|B) (iii) P(A ∪ B)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2">(i) <span class="math-expr">P(B|A) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(A)</span></span></span> &rArr; P(A ∩ B) = P(B|A) &middot; P(A) = 0.4 &times; 0.8 = 0.32</span></p>
+                    <p class="mb-2">(ii) <span class="math-expr">P(A|B) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(B)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.32</span><span class="denominator">0.5</span></span></span> = 0.64</span></p>
+                    <p class="mb-2">(iii) <span class="math-expr">P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.8 + 0.5 - 0.32 = 0.98</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: P(A ∪ B) ज्ञात कीजिए यदि 2P(A) = P(B) = 5/13 और P(A|B) = 2/5</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(A) = <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">26</span></span></span>, P(B) = <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">13</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|B) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(B)</span></span></span> &rArr; <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">5/13</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(A ∩ B) = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">13</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">13</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">26</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">13</span></span></span> - <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">13</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">11</span><span class="denominator">26</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: यदि P(A) = 6/11, P(B) = 5/11 और P(A ∪ B) = 7/11 तो ज्ञात कीजिए (i) P(A ∩ B) (ii) P(A|B) (iii) P(B|A)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2">(i) <span class="math-expr">P(A ∩ B) = P(A) + P(B) - P(A ∪ B) = <span class="nowrap"><span class="fraction"><span class="numerator">6</span><span class="denominator">11</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">11</span></span></span> - <span class="nowrap"><span class="fraction"><span class="numerator">7</span><span class="denominator">11</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">11</span></span></span></span></p>
+                    <p class="mb-2">(ii) <span class="math-expr">P(A|B) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(B)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">4/11</span><span class="denominator">5/11</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">5</span></span></span></span></p>
+                    <p class="mb-2">(iii) <span class="math-expr">P(B|A) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(A)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">4/11</span><span class="denominator">6/11</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: एक सिक्के को तीन बार उछाला गया है:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) E : तीसरी उछाल पर चित्त, F : पहली दोनों उछालों पर चित्त</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> E = {HHH, THH, HTH, TTH}, F = {HHH, HHT}</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {HHH} &rArr; P(E ∩ F) = 1/8, P(F) = 2/8 = 1/4</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/8</span><span class="denominator">1/4</span></span></span> = 1/2</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) E : न्यूनतम दो चित्त, F : अधिकतम एक चित्त</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> E = {HHH, HHT, HTH, THH}, F = {TTT, HTT, THT, TTH}</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = &phi; &rArr; P(E|F) = 0</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) E : अधिकतम दो पट, F : न्यूनतम दो पट</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> E = {HHH, HHT, HTH, THH, HTT, THT, TTH}, F = {HTT, THT, TTH, TTT}</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {HTT, THT, TTH} &rArr; P(E ∩ F) = 3/8, P(F) = 4/8 = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">3/8</span><span class="denominator">1/2</span></span></span> = 3/4</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: दो सिक्कों को एक बार उछाला गया है:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) E : एक सिक्के पर पट प्रकट होता है, F : एक सिक्के पर चित्त प्रकट होता है</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> E = {HT, TH}, F = {HT, TH}</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {HT, TH} &rArr; P(E ∩ F) = 2/4 = 1/2, P(F) = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/2</span><span class="denominator">1/2</span></span></span> = 1</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) E: कोई पट प्रकट नहीं होता है, F: कोई चित्त प्रकट नहीं होता है</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> E = {HH}, F = {TT}</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = &phi; &rArr; P(E|F) = 0</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक पासे को तीन बार उछाला गया है: E : तीसरी उछाल पर संख्या 4 प्रकट होना, F : पहली दो उछालों पर क्रमशः 6 तथा 5 प्रकट होना</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> कुल प्रतिदर्श समष्टि = 216</p>
+                    <p class="mb-2"><span class="math-expr">F = {(6,5,1), (6,5,2), (6,5,3), (6,5,4), (6,5,5), (6,5,6)} &rArr; P(F) = 6/216 = 1/36</span></p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {(6,5,4)} &rArr; P(E ∩ F) = 1/216</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/216</span><span class="denominator">6/216</span></span></span> = 1/6</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक पारिवारिक चित्र में माता, पिता व पुत्र यादृच्छया खड़े हैं: E : पुत्र एक सिरे पर खड़ा है, F : पिता मध्य में खड़े हैं</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> कुल व्यवस्थाएँ = 3! = 6</p>
+                    <p class="mb-2"><span class="math-expr">F = {MDF, FDM} &rArr; P(F) = 2/6 = 1/3</span> (M = माता, D = पुत्र, F = पिता)</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {MDF, FDM} &rArr; P(E ∩ F) = 2/6 = 1/3</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/3</span><span class="denominator">1/3</span></span></span> = 1</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक काले और एक लाल पासे को उछाला गया है:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(a) पासों पर प्राप्त संख्याओं का योग 9 होने की सप्रतिबंध प्रायिकता ज्ञात कीजिए यदि यह ज्ञात हो कि काले पासे पर 5 प्रकट हुआ है।</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> कुल 36 परिणाम। F = {(5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}. P(F) = 6/36</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {(5,4)}. P(E ∩ F) = 1/36</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/36</span><span class="denominator">6/36</span></span></span> = 1/6</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(b) पासों पर प्राप्त संख्याओं का योग 8 होने की सप्रतिबंध प्रायिकता ज्ञात कीजिए यदि यह ज्ञात हो कि लाल पासे पर प्रकट संख्या 4 से कम है।</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> लाल पासे पर 1, 2, 3 आ सकते हैं। F = {(1,1), (1,2), ..., (1,6), (2,1), ..., (2,6), (3,1), ..., (3,6)}. P(F) = 18/36 = 1/2</p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {(2,6), (3,5)}. P(E ∩ F) = 2/36 = 1/18</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/18</span><span class="denominator">1/2</span></span></span> = 1/9</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: एक न्याय्य पासे को उछाला गया है। घटनाओं E = {1,3,5}, F = {2,3}, और G = {2,3,4,5} के लिए निम्नलिखित ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) P(E|F) और P(F|E)</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">E ∩ F = {3}, P(E ∩ F) = 1/6. P(F) = 2/6 = 1/3. P(E) = 3/6 = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/6</span><span class="denominator">1/3</span></span></span> = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(F|E) = <span class="nowrap"><span class="fraction"><span class="numerator">1/6</span><span class="denominator">1/2</span></span></span> = 1/3</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) P(E|G) और P(G|E)</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">E ∩ G = {3,5}, P(E ∩ G) = 2/6 = 1/3. P(G) = 4/6 = 2/3</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|G) = <span class="nowrap"><span class="fraction"><span class="numerator">1/3</span><span class="denominator">2/3</span></span></span> = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(G|E) = <span class="nowrap"><span class="fraction"><span class="numerator">1/3</span><span class="denominator">1/2</span></span></span> = 2/3</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) P(E ∪ F|G) और P(E ∩ F|G)</strong></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">E ∪ F = {1,2,3,5}. (E ∪ F) ∩ G = {2,3,5}. P((E ∪ F) ∩ G) = 3/6 = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E ∪ F|G) = <span class="nowrap"><span class="fraction"><span class="numerator">1/2</span><span class="denominator">2/3</span></span></span> = 3/4</span></p>
+                    <p class="mb-2"><span class="math-expr">E ∩ F = {3}. (E ∩ F) ∩ G = {3}. P((E ∩ F) ∩ G) = 1/6</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E ∩ F|G) = <span class="nowrap"><span class="fraction"><span class="numerator">1/6</span><span class="denominator">2/3</span></span></span> = 1/4</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: मान लें कि जन्म लेने वाले बच्चे का लड़का या लड़की होना समसंभाव्य है। यदि किसी परिवार में दो बच्चे हैं, तो दोनों बच्चों के लड़की होने की सप्रतिबंध प्रायिकता क्या है, यदि यह दिया गया है कि (i) सबसे छोटा बच्चा लड़की है (ii) न्यूनतम एक बच्चा लड़की है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> प्रतिदर्श समष्टि S = {BB, BG, GB, GG} (B = लड़का, G = लड़की)</p>
+                    <p class="mb-2"><strong>(i)</strong> F = {BG, GG}. E = {GG}. <span class="math-expr">E ∩ F = {GG}</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/4</span><span class="denominator">2/4</span></span></span> = 1/2</span></p>
+                    <p class="mb-2"><strong>(ii)</strong> F = {BG, GB, GG}. E = {GG}. <span class="math-expr">E ∩ F = {GG}</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">1/4</span><span class="denominator">3/4</span></span></span> = 1/3</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: एक प्रशिक्षक के पास 300 सत्य/असत्य प्रकार के आसान प्रश्न 200 सत्य/असत्य प्रकार के कठिन प्रश्न, 500 बहु-विकल्पीय प्रकार के आसान प्रश्न और 400 बहु-विकल्पीय प्रकार के कठिन प्रश्नों का संग्रह है। यदि प्रश्नों के संग्रह से एक प्रश्न यादृच्छया चुना जाता है, तो एक आसान प्रश्न की बहु-विकल्पीय होने की प्रायिकता क्या होगी?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> कुल प्रश्न = 300 + 200 + 500 + 400 = 1400</p>
+                    <p class="mb-2">मान लीजिए A = आसान प्रश्न, E = बहु-विकल्पीय प्रश्न</p>
+                    <p class="mb-2"><span class="math-expr">P(A ∩ E) = 500/1400, P(E) = 900/1400</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E) = <span class="nowrap"><span class="fraction"><span class="numerator">500/1400</span><span class="denominator">900/1400</span></span></span> = 5/9</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: यह दिया गया है कि दो पासों को फेंकने पर प्राप्त संख्याएँ भिन्न-भिन्न हैं। दोनों संख्याओं का योग 4 होने की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> F = भिन्न संख्याएँ। <span class="math-expr">P(F) = 30/36</span></p>
+                    <p class="mb-2"><span class="math-expr">E = योग 4 = {(1,3), (2,2), (3,1)}. E ∩ F = {(1,3), (3,1)}. P(E ∩ F) = 2/36</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E|F) = <span class="nowrap"><span class="fraction"><span class="numerator">2/36</span><span class="denominator">30/36</span></span></span> = 1/15</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: एक पासे को फेंकने के परीक्षण पर विचार कीजिए। यदि पासे पर प्रकट संख्या 3 का गुणज है तो पासे को पुनः फेंके और यदि कोई अन्य संख्या प्रकट हो तो एक सिक्के को उछालें। घटना ‘न्यूनतम एक पासे पर संख्या 3 प्रकट होना’ दिया गया है तो घटना ‘सिक्के पर पट प्रकट होने’ की सप्रतिबंध प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> प्रतिदर्श समष्टि = {1H, 1T, 2H, 2T, 4H, 4T, 5H, 5T, 3-1, 3-2, 3-3, 3-4, 3-5, 3-6, 6-1, 6-2, 6-3, 6-4, 6-5, 6-6}</p>
+                    <p class="mb-2">A = न्यूनतम एक 3 = {3-1, 3-2, 3-3, 3-4, 3-5, 3-6, 6-3}. <span class="math-expr">P(A) = 7/20</span></p>
+                    <p class="mb-2">B = पट = {1T, 2T, 4T, 5T}. <span class="math-expr">A ∩ B = {3-1, 3-2, 3-4, 3-5}</span>. <span class="math-expr">P(A ∩ B) = 4/20</span></p>
+                    <p class="mb-2"><span class="math-expr">P(B|A) = <span class="nowrap"><span class="fraction"><span class="numerator">4/20</span><span class="denominator">7/20</span></span></span> = 4/7</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: यदि P(A) = 1/2, P(B) = 0 तब P(A|B) है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 0 &nbsp;&nbsp; (B) 1/2 &nbsp;&nbsp; (C) परिभाषित नहीं &nbsp;&nbsp; (D) 1</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(A|B) = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(B)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0</span><span class="denominator">0</span></span></span></span>, जो कि परिभाषित नहीं है।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: यदि A और B दो घटनाएँ इस प्रकार हैं कि P(A|B) = P(B|A) ≠ 0 तब</h3>
+                <div class="step">
+                    <p class="mb-2">(A) A ⊂ B &nbsp;&nbsp; (B) A = B &nbsp;&nbsp; (C) A ∩ B = φ &nbsp;&nbsp; (D) P(A) = P(B)</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(B)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">P(A ∩ B)</span><span class="denominator">P(A)</span></span></span> &rArr; P(A) = P(B)</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 13.2 ==================== -->
+        <section id="exercise-13-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 13.2 (गुणन नियम और स्वतंत्र घटनाएँ)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: यदि P(A) = 3/5, P(B) = 1/5 और A और B स्वतंत्र घटनाएँ हैं तो P(A ∩ B) ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> स्वतंत्र घटनाओं के लिए, <span class="math-expr">P(A ∩ B) = P(A) &middot; P(B)</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">25</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: दो पत्ते एक ही साथ 52 पत्तों की गड्डी से बिना प्रतिस्थापित किए निकाले जाते हैं। दोनों पत्तों के काले रंग का होने की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> पहला काला पत्ता निकलने की प्रायिकता = 26/52</p>
+                    <p class="mb-2">दूसरा काला पत्ता निकलने की प्रायिकता (पहले के बाद) = 25/51</p>
+                    <p class="mb-2"><span class="math-expr">P = <span class="nowrap"><span class="fraction"><span class="numerator">26</span><span class="denominator">52</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">25</span><span class="denominator">51</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">25</span><span class="denominator">102</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: एक थैले में 10 काली और 8 लाल गेंदें हैं। दो गेंदें एक-एक करके बिना प्रतिस्थापित किए निकाली जाती हैं। दोनों गेंदों के लाल होने की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> कुल गेंदें = 18, लाल = 8</p>
+                    <p class="mb-2"><span class="math-expr">P = <span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">18</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">7</span><span class="denominator">17</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">28</span><span class="denominator">153</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: P(A) = 0.3, P(B) = 0.4 है। यदि A और B स्वतंत्र घटनाएँ हैं तो ज्ञात कीजिए: (i) P(A ∩ B) (ii) P(A ∪ B) (iii) P(A|B) (iv) P(B|A)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2">(i) <span class="math-expr">P(A ∩ B) = 0.3 &times; 0.4 = 0.12</span></p>
+                    <p class="mb-2">(ii) <span class="math-expr">P(A ∪ B) = 0.3 + 0.4 - 0.12 = 0.58</span></p>
+                    <p class="mb-2">(iii) <span class="math-expr">P(A|B) = P(A) = 0.3</span> (क्योंकि स्वतंत्र हैं)</p>
+                    <p class="mb-2">(iv) <span class="math-expr">P(B|A) = P(B) = 0.4</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: यदि P(A) = 3/5, P(B) = 1/5 और A और B स्वतंत्र घटनाएँ हैं तो P(A ∪ B) ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(A ∩ B) = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">25</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(A ∪ B) = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">5</span></span></span> - <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">25</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">15 + 5 - 3</span><span class="denominator">25</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">17</span><span class="denominator">25</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: यदि P(A) = 1/2, P(B) = 1/3 और P(A ∪ B) = 2/3 तो ज्ञात कीजिए: (i) P(A ∩ B) (ii) P(A|B) (iii) P(B|A)</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2">(i) <span class="math-expr">P(A ∩ B) = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span> - <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">6</span></span></span></span></p>
+                    <p class="mb-2">(ii) <span class="math-expr">P(A|B) = <span class="nowrap"><span class="fraction"><span class="numerator">1/6</span><span class="denominator">1/3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span></span></p>
+                    <p class="mb-2">(iii) <span class="math-expr">P(B|A) = <span class="nowrap"><span class="fraction"><span class="numerator">1/6</span><span class="denominator">1/2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: दो सिक्कों को एक साथ उछाला जाता है। यदि घटना 'कम से कम एक चित्त प्रकट होना' की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P(कम से कम एक चित्त) = 1 - P(कोई चित्त नहीं) = 1 - 1/4 = 3/4</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक पासे को एक बार उछाला जाता है। यदि घटना 'विषम संख्या प्राप्त होना' की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> विषम संख्याएँ = {1, 3, 5}. P(विषम) = 3/6 = 1/2</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: मान लें A और B स्वतंत्र घटनाएँ हैं तथा P(A) = 0.3 और P(B) = 0.4. तब (i) P(A ∩ B) (ii) P(A ∪ B) (iii) P(A|B) (iv) P(B|A) ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> (i) 0.12, (ii) 0.58, (iii) 0.3, (iv) 0.4 (चूँकि स्वतंत्र हैं)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: दी गई घटनाएँ A और B ऐसी हैं, जहाँ P(A) = 1/4, P(B) = 1/2 और P(A ∩ B) = 1/8 तब P(A-नहीं और B-नहीं) ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(A' ∩ B') = P(A ∪ B)' = 1 - P(A ∪ B)</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A ∪ B) = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> - <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">8</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">8</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(A' ∩ B') = 1 - <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">8</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">8</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: मान लें A तथा B स्वतंत्र घटनाएँ हैं और P(A) = 1/12 तथा P(B) = 7/12 और P(A-नहीं और B-नहीं) = 1/4. क्या A और B स्वतंत्र घटनाएँ हैं?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">P(A' ∩ B') = (1 - 1/12)(1 - 7/12) = (11/12) &times; (5/12) = 55/144</span></p>
+                    <p class="mb-2">दिया गया मान 1/4 = 36/144 है, जो कि 55/144 के बराबर नहीं है।</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> नहीं, A और B स्वतंत्र नहीं हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: एक पासे को तीन बार उछाला जाता है तो कम से कम एक बार विषम संख्या प्राप्त होने की प्रायिकता ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P(कम से कम एक विषम) = 1 - P(सभी सम) = 1 - (1/2)^3 = 1 - 1/8 = 7/8</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: दो गेंद एक बॉक्स से बिना प्रतिस्थापित किए निकाली जाती है। बॉक्स में 10 काली और 8 लाल गेंदें हैं तो प्रायिकता ज्ञात कीजिए (i) दोनों गेंदें लाल हों (ii) प्रथम काली एवं दूसरी लाल हो (iii) एक काली तथा दूसरी लाल हो।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2">(i) <span class="math-expr">P = <span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">18</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">7</span><span class="denominator">17</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">28</span><span class="denominator">153</span></span></span></span></p>
+                    <p class="mb-2">(ii) <span class="math-expr">P = <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">18</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">17</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">40</span><span class="denominator">153</span></span></span></span></p>
+                    <p class="mb-2">(iii) (काली, लाल) या (लाल, काली) = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">18</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">17</span></span></span></span> + <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">18</span></span></span> &times; <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">17</span></span></span></span> = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">80</span><span class="denominator">153</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: एक विशेष समस्या को A और B द्वारा स्वतंत्र रूप से हल करने की प्रायिकताएँ क्रमशः 1/2 और 1/3 है। यदि दोनों, स्वतंत्र रूप से, समस्या हल करने का प्रयास करते हैं, तो प्रायिकता ज्ञात कीजिए कि (i) समस्या हल हो जाती है (ii) उनमें से तथ्यतः कोई एक समस्या हल कर लेता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2">(i) <span class="math-expr">P = 1 - P(A')P(B') = 1 - (1/2)(2/3) = 1 - 1/3 = 2/3</span></p>
+                    <p class="mb-2">(ii) <span class="math-expr">P = P(A)P(B') + P(A')P(B) = (1/2)(2/3) + (1/2)(1/3) = 1/3 + 1/6 = 1/2</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: ताश के 52 पत्तों की एक सुमिश्रित गड्डी से एक पत्ता यादृच्छया निकाला जाता है। निम्नलिखित में से किन दशाओं में घटनाएँ E और F स्वतंत्र हैं?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> E : हुकुम का पत्ता, F : इक्का</p>
+                    <p class="mb-2"><span class="math-expr">P(E)=13/52=1/4, P(F)=4/52=1/13, P(E ∩ F)=1/52</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E)P(F) = 1/4 &times; 1/13 = 1/52 = P(E ∩ F)</span>. (स्वतंत्र हैं)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> E : काला पत्ता, F : बादशाह</p>
+                    <p class="mb-2"><span class="math-expr">P(E)=26/52=1/2, P(F)=4/52=1/13, P(E ∩ F)=2/52=1/26</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E)P(F) = 1/2 &times; 1/13 = 1/26 = P(E ∩ F)</span>. (स्वतंत्र हैं)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> E : बादशाह या बेगम, F : बेगम या गुलाम</p>
+                    <p class="mb-2"><span class="math-expr">P(E)=8/52=2/13, P(F)=8/52=2/13, P(E ∩ F)=4/52=1/13</span> (केवल बेगम)</p>
+                    <p class="mb-2"><span class="math-expr">P(E)P(F) = 4/169 &ne; 1/13</span>. (स्वतंत्र नहीं हैं)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: एक छात्रावास में 60% विद्यार्थी हिंदी का, 40% अंग्रेजी का और 20% दोनों अखबार पढ़ते हैं। एक छात्रा को यादृच्छया चुना जाता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P(H) = 0.6, P(E) = 0.4, P(H ∩ E) = 0.2</p>
+                    <p class="mb-2">(a) P(न तो हिंदी न ही अंग्रेजी) = 1 - P(H ∪ E) = 1 - (0.6 + 0.4 - 0.2) = 1 - 0.8 = 0.2</p>
+                    <p class="mb-2">(b) P(E|H) = P(E ∩ H)/P(H) = 0.2/0.6 = 1/3</p>
+                    <p class="mb-2">(c) P(H|E) = P(H ∩ E)/P(E) = 0.2/0.4 = 1/2</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: यदि पासों का एक जोड़ा उछाला जाता है तो प्रत्येक पासे पर सम अभाज्य संख्या प्राप्त करने की प्रायिकता निम्नलिखित में से क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 0 &nbsp;&nbsp; (B) 1/3 &nbsp;&nbsp; (C) 1/12 &nbsp;&nbsp; (D) 1/36</p>
+                    <p class="mb-2"><strong>हल:</strong> सम अभाज्य संख्या केवल 2 है। प्रत्येक पासे पर 2 आने की प्रायिकता 1/6 है।</p>
+                    <p class="mb-2"><span class="math-expr">P = 1/6 &times; 1/6 = 1/36</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: दो घटनाओं A और B को परस्पर स्वतंत्र कहते हैं, यदि</h3>
+                <div class="step">
+                    <p class="mb-2">(A) A और B परस्पर अपवर्जी हैं &nbsp;&nbsp; (B) P(A'B') = [1–P(A)][1–P(B)]</p>
+                    <p class="mb-2">(C) P(A) = P(B) &nbsp;&nbsp; (D) P(A) + P(B) = 1</p>
+                    <p class="mb-2"><strong>हल:</strong> यदि A और B स्वतंत्र हैं, तो A' और B' भी स्वतंत्र होते हैं।</p>
+                    <p class="mb-2"><span class="math-expr">P(A' ∩ B') = P(A')P(B') = (1-P(A))(1-P(B))</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 13.3 ==================== -->
+        <section id="exercise-13-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 13.3 (बेज प्रमेय)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: एक कलश में 5 लाल और 5 काली गेंदें हैं। यादृच्छया एक गेंद निकाली जाती है, इसका रंग नोट करने के बाद पुनः कलश में रख दी जाती है। पुनः निकाले गए रंग की 2 अतिरिक्त गेंदें कलश में रख दी जाती हैं तथा कलश में से एक गेंद निकाली जाती है। दूसरी गेंद के लाल होने की प्रायिकता क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = पहली गेंद लाल, E2 = पहली गेंद काली</p>
+                    <p class="mb-2"><span class="math-expr">P(E1) = 5/10, P(E2) = 5/10</span></p>
+                    <p class="mb-2">A = दूसरी गेंद लाल</p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = 7/12, P(A|E2) = 5/12</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A) = P(E1)P(A|E1) + P(E2)P(A|E2) = <span class="nowrap">(<span class="fraction"><span class="numerator">5</span><span class="denominator">10</span></span>)</span><span class="nowrap">(<span class="fraction"><span class="numerator">7</span><span class="denominator">12</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">5</span><span class="denominator">10</span></span>)</span><span class="nowrap">(<span class="fraction"><span class="numerator">5</span><span class="denominator">12</span></span>)</span> = <span class="nowrap"><span class="fraction"><span class="numerator">35 + 25</span><span class="denominator">120</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">60</span><span class="denominator">120</span></span></span> = 1/2</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक थैले में 4 लाल और 4 काली गेंदें हैं और एक अन्य थैले में 2 लाल और 6 काली गेंदें हैं। दोनों थैलों में से एक को यादृच्छया चुना जाता है और उसमें से एक गेंद निकाली जाती है जो कि लाल है। इस बात की क्या प्रायिकता है कि गेंद पहले थैले से निकाली गई है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = पहला थैला, E2 = दूसरा थैला, A = लाल गेंद</p>
+                    <p class="mb-2"><span class="math-expr">P(E1) = 1/2, P(E2) = 1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = 4/8 = 1/2, P(A|E2) = 2/8 = 1/4</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">P(E1)P(A|E1)</span><span class="denominator">P(E1)P(A|E1) + P(E2)P(A|E2)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">(1/2)(1/2)</span><span class="denominator">(1/2)(1/2) + (1/2)(1/4)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1/4</span><span class="denominator">3/8</span></span></span> = 2/3</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यह ज्ञात है कि एक महाविद्यालय के छात्रों में से 60% छात्रावास में रहते हैं और 40% छात्रावास में नहीं रहते हैं। पूर्ववर्ती वर्ष के परिणाम सूचित करते हैं कि छात्रावास में रहने वाले छात्रों में से 30% और छात्रावास में न रहने वाले छात्रों में से 20% छात्रों ने A-ग्रेड लिया। वर्ष के अंत में महाविद्यालय के एक छात्र को यादृच्छया चुना गया और यह पाया गया कि उसे A-ग्रेड मिला है। इस बात की क्या प्रायिकता है कि वह छात्र छात्रावास में रहने वाला है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = छात्रावास में रहता है, E2 = नहीं रहता है, A = A-ग्रेड मिला</p>
+                    <p class="mb-2"><span class="math-expr">P(E1) = 0.6, P(E2) = 0.4</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = 0.3, P(A|E2) = 0.2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">0.6 &times; 0.3</span><span class="denominator">0.6 &times; 0.3 + 0.4 &times; 0.2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.18</span><span class="denominator">0.26</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">9</span><span class="denominator">13</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक बहुविकल्पी प्रश्न के उत्तर में एक विद्यार्थी या तो प्रश्न का उत्तर जानता है या वह अनुमान लगाता है। मान लें कि उसके उत्तर जानने की प्रायिकता 3/4 है और अनुमान लगाने की 1/4 है। मान लें कि छात्र के प्रश्न के उत्तर का अनुमान लगाने पर सही उत्तर देने की प्रायिकता 1/4 है तो इस बात की क्या प्रायिकता है कि कोई छात्र प्रश्न का उत्तर जानता है यदि यह ज्ञात है कि उसने सही उत्तर दिया है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = जानता है, E2 = अनुमान लगाता है, A = सही उत्तर</p>
+                    <p class="mb-2"><span class="math-expr">P(E1) = 3/4, P(E2) = 1/4</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = 1, P(A|E2) = 1/4</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">(3/4)(1)</span><span class="denominator">(3/4)(1) + (1/4)(1/4)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">3/4</span><span class="denominator">13/16</span></span></span> = 12/13</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: किसी विशेष रोग के सही निदान के लिए रक्त की जाँच 99% असरदार है, जब वास्तव में रोगी उस रोग से ग्रस्त होता है। किंतु 0.5% बार किसी स्वस्थ व्यक्ति की रक्त जाँच करने पर निदान गलत रिपोर्ट देता है जो व्यक्ति को रोग से ग्रस्त बतलाता है। यदि किसी जनसमुदाय में 0.1% लोग उस रोग से ग्रस्त हैं तो क्या प्रायिकता है कि कोई यादृच्छया चुना गया व्यक्ति उस रोग से ग्रस्त होगा यदि उसके रक्त की जाँच में यह बताया गया है कि उसे वह रोग है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = रोगी है, E2 = स्वस्थ है, A = जाँच पॉजिटिव</p>
+                    <p class="mb-2"><span class="math-expr">P(E1) = 0.001, P(E2) = 0.999</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = 0.99, P(A|E2) = 0.005</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">0.001 &times; 0.99</span><span class="denominator">0.001 &times; 0.99 + 0.999 &times; 0.005</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.00099</span><span class="denominator">0.00099 + 0.004995</span></span></span> &approx; 0.165</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: तीन सिक्के दिए गए हैं। एक सिक्के के दोनों ओर चित्त है। दूसरा सिक्का अभिनत है जिसमें चित्त 75% बार प्रकट होता है और तीसरा अनभिनत सिक्का है। तीनों में से एक सिक्के को यादृच्छया चुना गया और उसे उछाला गया। यदि सिक्के पर चित्त प्रकट हो, तो क्या प्रायिकता है कि वह दोनों चित्त वाला सिक्का है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = दोनों चित्त वाला, E2 = अभिनत, E3 = अनभिनत, A = चित्त</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=1/3, P(E2)=1/3, P(E3)=1/3</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1)=1, P(A|E2)=3/4, P(A|E3)=1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">1/3</span><span class="denominator">1/3 + 1/3(3/4) + 1/3(1/2)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">1 + 3/4 + 1/2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">9/4</span></span></span> = 4/9</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक बीमा कंपनी 2000 स्कूटर चालकों, 4000 कार चालकों और 6000 ट्रक चालकों की बीमा करती है। दुर्घटनाओं की प्रायिकताएँ क्रमशः 0.01, 0.03 और 0.15 हैं। बीमाकृत व्यक्तियों (चालकों) में से एक दुर्घटनाग्रस्त हो जाता है। उस व्यक्ति के स्कूटर चालक होने की प्रायिकता क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> कुल = 12000. E1=स्कूटर, E2=कार, E3=ट्रक</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=2/12, P(E2)=4/12, P(E3)=6/12</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1)=0.01, P(A|E2)=0.03, P(A|E3)=0.15</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">(2/12)(0.01)</span><span class="denominator">(2/12)(0.01) + (4/12)(0.03) + (6/12)(0.15)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.02</span><span class="denominator">0.02 + 0.12 + 0.90</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">104</span></span></span> = 1/52</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: एक कारखाने में A और B दो मशीने लगी हैं। पूर्व विवरण से पता चलता है कि कुल उत्पादन का 60% मशीन A और 40% मशीन B द्वारा किया जाता है। इसके अतिरिक्त मशीन A का 2% और मशीन B का 1% उत्पादन खराब है। यदि कुल उत्पादन का एक ढेर बना लिया जाता है और उस ढेर से यादृच्छया निकाली गई वस्तु खराब हो, तो इस वस्तु के ‘मशीन A’ द्वारा बने होने की प्रायिकता क्या होगी?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1=A, E2=B, A=खराब</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=0.6, P(E2)=0.4, P(A|E1)=0.02, P(A|E2)=0.01</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">0.6 &times; 0.02</span><span class="denominator">0.6 &times; 0.02 + 0.4 &times; 0.01</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.012</span><span class="denominator">0.016</span></span></span> = 3/4</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: दो दल एक निगम के निदेशक मंडल में स्थान पाने की प्रतिस्पर्धा में हैं। पहले तथा दूसरे दल के जीतने की प्रायिकताएँ क्रमशः 0.6 तथा 0.4 हैं। इसके अतिरिक्त यदि पहला दल जीतता है तो एक नए उत्पाद के प्रारम्भ होने की प्रायिकता 0.7 है और यदि दूसरा दल जीतता है तो इस बात की संगत प्रायिकता 0.3 है। इसकी प्रायिकता ज्ञात कीजिए कि नया उत्पादन दूसरे दल द्वारा प्रारम्भ किया गया था।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1=पहला दल जीतता है, E2=दूसरा दल जीतता है, A=नया उत्पाद</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=0.6, P(E2)=0.4, P(A|E1)=0.7, P(A|E2)=0.3</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E2|A) = <span class="nowrap"><span class="fraction"><span class="numerator">0.4 &times; 0.3</span><span class="denominator">0.6 &times; 0.7 + 0.4 &times; 0.3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.12</span><span class="denominator">0.42 + 0.12</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">12</span><span class="denominator">54</span></span></span> = 2/9</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: मान लीजिए कि कोई लड़की एक पासा उछालती है। यदि उसे 5 या 6 की संख्या प्राप्त होती है तो वह एक सिक्के को तीन बार उछालती है और 'चित्तों' की संख्या नोट करती है। यदि उसे 1, 2, 3 या 4 की संख्या प्राप्त होती है तो वह एक सिक्के को एक बार उछालती है और यह नोट करती है कि उस पर 'चित्त' या 'पट' प्राप्त हुआ। यदि उसे ठीक एक चित्त प्राप्त होता है, तो उसके द्वारा उछाले गए पासे पर 1, 2, 3 या 4 प्राप्त होने की प्रायिकता क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1 = 1,2,3,4 प्राप्त होना, E2 = 5,6 प्राप्त होना, A = ठीक एक चित्त</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=4/6=2/3, P(E2)=2/6=1/3</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = 1/2</span> (एक सिक्का, एक चित्त)</p>
+                    <p class="mb-2"><span class="math-expr">P(A|E2) = 3/8</span> (तीन सिक्के, ठीक एक चित्त)</p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">(2/3)(1/2)</span><span class="denominator">(2/3)(1/2) + (1/3)(3/8)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1/3</span><span class="denominator">1/3 + 1/8</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1/3</span><span class="denominator">11/24</span></span></span> = 8/11</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: एक व्यावसायिक निर्माता के पास A, B तथा C मशीन ऑपरेटर हैं। प्रथम ऑपरेटर A 1% खराब सामग्री उत्पादित करता हैं तथा ऑपरेटर B और C क्रमशः 5% और 7% खराब सामग्री उत्पादित करता है। कार्य पर A कुल समय का 50% लगाता है, B कुल समय का 30% तथा C कुल समय का 20% लगाता है। यदि एक खराब सामग्री उत्पादित है तो इसे A द्वारा उत्पादित किए जाने की प्रायिकता क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1=A, E2=B, E3=C, A=खराब</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=0.5, P(E2)=0.3, P(E3)=0.2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1)=0.01, P(A|E2)=0.05, P(A|E3)=0.07</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">0.5 &times; 0.01</span><span class="denominator">0.5 &times; 0.01 + 0.3 &times; 0.05 + 0.2 &times; 0.07</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">0.005</span><span class="denominator">0.005 + 0.015 + 0.014</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">34</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: 52 ताशों की गड्डी से एक पत्ता खो जाता है। शेष पत्तों से दो पत्ते निकाले जाते हैं जो ईंट के पत्ते हैं। खो गए पत्ते की ईंट होने की प्रायिकता क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> E1=खोया पत्ता ईंट का, E2=खोया पत्ता ईंट का नहीं, A=शेष से दो ईंट निकले</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=13/52, P(E2)=39/52</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1) = <span class="nowrap"><span class="fraction"><span class="numerator">12C2</span><span class="denominator">51C2</span></span></span>, P(A|E2) = <span class="nowrap"><span class="fraction"><span class="numerator">13C2</span><span class="denominator">51C2</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">(13/52)(12C2/51C2)</span><span class="denominator">(13/52)(12C2/51C2) + (39/52)(13C2/51C2)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">13 &times; 66</span><span class="denominator">13 &times; 66 + 39 &times; 78</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">858</span><span class="denominator">3900</span></span></span> = 11/50</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: A द्वारा सत्य बोलने की प्रायिकता 4/5 है। एक सिक्का उछाला जाता है तथा A बताता है कि चित्र प्रदर्शित हुआ। वास्तविक रूप में चित्र प्रकट होने की प्रायिकता है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 4/5 &nbsp;&nbsp; (B) 1/5 &nbsp;&nbsp; (C) 1/2 &nbsp;&nbsp; (D) 2/5</p>
+                    <p class="mb-2"><strong>हल:</strong> E1=चित्र, E2=पट, A=A ने चित्र बताया</p>
+                    <p class="mb-2"><span class="math-expr">P(E1)=1/2, P(E2)=1/2</span></p>
+                    <p class="mb-2"><span class="math-expr">P(A|E1)=4/5, P(A|E2)=1/5</span></p>
+                    <p class="mb-2"><span class="math-expr">P(E1|A) = <span class="nowrap"><span class="fraction"><span class="numerator">(1/2)(4/5)</span><span class="denominator">(1/2)(4/5) + (1/2)(1/5)</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">4/10</span><span class="denominator">5/10</span></span></span> = 4/5</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: यदि A और B ऐसी घटनाएँ हैं कि A ⊂ B तथा P(B) ≠ 0 तो निम्न में से कौन ठीक है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) P(A|B) = P(B) &nbsp;&nbsp; (B) P(A|B) < P(A) &nbsp;&nbsp; (C) P(A|B) ≥ P(A) &nbsp;&nbsp; (D) इनमें से कोई नहीं</p>
+                    <p class="mb-2"><strong>हल:</strong> यदि A ⊂ B, तो <span class="math-expr">A ∩ B = A</span>. इसलिए <span class="math-expr">P(A|B) = P(A)/P(B)</span>.</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">P(B) ≤ 1</span>, इसलिए <span class="math-expr">P(A|B) ≥ P(A)</span>.</p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

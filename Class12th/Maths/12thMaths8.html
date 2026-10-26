@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 8: समाकलनों के अनुप्रयोग</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 8<br>समाकलनों के अनुप्रयोग</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 8.1 ==================== -->
+        <section id="exercise-8-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 8.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: दीर्घवृत्त <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">16</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">9</span></span></span> = 1</span> से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिया गया दीर्घवृत्त है: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">4<sup>2</sup></span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">3<sup>2</sup></span></span></span> = 1</span></p>
+                    <p class="mb-2">यहाँ अर्ध-दीर्घ अक्ष a = 4 और अर्ध-लघु अक्ष b = 3 है।</p>
+                    <p class="mb-2">दीर्घवृत्त x-अक्ष और y-अक्ष दोनों के परितः सममित है। अतः इससे घिरे क्षेत्र का कुल क्षेत्रफल, प्रथम चतुर्थांश में घिरे क्षेत्र के क्षेत्रफल का 4 गुना होगा।</p>
+                    <p class="mb-2">प्रथम चतुर्थांश में, <span class="math-expr">y = 3&radic;(1 - x<sup>2</sup>/16) = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span></span>&radic;(16 - x<sup>2</sup>)</span></p>
+                    <p class="mb-2">क्षेत्रफल <span class="math-expr">= 4 &int;<sub>0</sub><sup>4</sup> y dx = 4 &int;<sub>0</sub><sup>4</sup> <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span></span>&radic;(16 - x<sup>2</sup>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= 3 &int;<sub>0</sub><sup>4</sup> &radic;(4<sup>2</sup> - x<sup>2</sup>) dx</span></p>
+                    <p class="mb-2">सूत्र <span class="math-expr">&int; &radic;(a<sup>2</sup> - x<sup>2</sup>) dx = <span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span></span>&radic;(a<sup>2</sup> - x<sup>2</sup>) + <span class="nowrap"><span class="fraction"><span class="numerator">a<sup>2</sup></span><span class="denominator">2</span></span></span> sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span>)</span></span> का प्रयोग करने पर:</p>
+                    <p class="mb-2"><span class="math-expr">= 3 [<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span></span>&radic;(16 - x<sup>2</sup>) + <span class="nowrap"><span class="fraction"><span class="numerator">16</span><span class="denominator">2</span></span></span> sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">x</span><span class="denominator">4</span></span>)</span>]<sub>0</sub><sup>4</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">= 3 [(0 + 8 sin<sup>-1</sup>(1)) - (0 + 0)]</span></p>
+                    <p class="mb-2"><span class="math-expr">= 3 [8 &times; <span class="nowrap"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span>] = 12&pi;</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">12&pi;</span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: दीर्घवृत्त <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">4</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">9</span></span></span> = 1</span> से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिया गया दीर्घवृत्त है: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2<sup>2</sup></span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">3<sup>2</sup></span></span></span> = 1</span></p>
+                    <p class="mb-2">यहाँ x-अक्ष के अनुदिश अर्ध-अक्ष a = 2 और y-अक्ष के अनुदिश b = 3 है।</p>
+                    <p class="mb-2">दीर्घवृत्त से घिरे क्षेत्र का कुल क्षेत्रफल <span class="math-expr">= &pi;ab</span></p>
+                    <p class="mb-2"><span class="math-expr">= &pi; &times; 2 &times; 3 = 6&pi;</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">6&pi;</span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: प्रथम चतुर्थांश में वृत्त <span class="math-expr">x<sup>2</sup> + y<sup>2</sup> = 4</span> एवं रेखाओं <span class="math-expr">x = 0, x = 2</span> से घिरे क्षेत्र का क्षेत्रफल है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) &pi; &nbsp;&nbsp; (B) &pi;/2 &nbsp;&nbsp; (C) &pi;/3 &nbsp;&nbsp; (D) &pi;/4</p>
+                    <p class="mb-2"><strong>हल:</strong> दिया गया वृत्त <span class="math-expr">x<sup>2</sup> + y<sup>2</sup> = 4</span> है, जिसकी त्रिज्या r = 2 है।</p>
+                    <p class="mb-2">प्रथम चतुर्थांश में, <span class="math-expr">y = &radic;(4 - x<sup>2</sup>)</span></p>
+                    <p class="mb-2">क्षेत्रफल <span class="math-expr">= &int;<sub>0</sub><sup>2</sup> &radic;(4 - x<sup>2</sup>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= [<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span></span>&radic;(4 - x<sup>2</sup>) + <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">2</span></span></span> sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)</span>]<sub>0</sub><sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">= (0 + 2 sin<sup>-1</sup>(1)) - (0 + 0) = 2 &times; <span class="nowrap"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span> = &pi;</span></p>
+                    <p>(दूसरी विधि: प्रथम चतुर्थांश में वृत्त का क्षेत्रफल = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span></span> &times; &pi;r<sup>2</sup> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span></span> &times; &pi;(4) = &pi;</span>)</p>
+                    <p><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: वक्र <span class="math-expr">y<sup>2</sup> = 4x</span>, y-अक्ष एवं रेखा <span class="math-expr">y = 3</span> से घिरे क्षेत्र का क्षेत्रफल है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 2 &nbsp;&nbsp; (B) 9/4 &nbsp;&nbsp; (C) 9/3 &nbsp;&nbsp; (D) 9/2</p>
+                    <p class="mb-2"><strong>हल:</strong> दिया गया वक्र <span class="math-expr">y<sup>2</sup> = 4x &rArr; x = <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">4</span></span></span></span> है।</p>
+                    <p class="mb-2">y-अक्ष और रेखा y = 3 के बीच घिरा क्षेत्र y = 0 से y = 3 तक होगा।</p>
+                    <p class="mb-2">क्षेत्रफल <span class="math-expr">= &int;<sub>0</sub><sup>3</sup> x dy = &int;<sub>0</sub><sup>3</sup> <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">4</span></span></span> dy</span></p>
+                    <p class="mb-2"><span class="math-expr">= [<span class="nowrap"><span class="fraction"><span class="numerator">y<sup>3</sup></span><span class="denominator">12</span></span></span>]<sub>0</sub><sup>3</sup> = <span class="nowrap"><span class="fraction"><span class="numerator">27</span><span class="denominator">12</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">9</span><span class="denominator">4</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== विविध प्रश्नावली ==================== -->
+        <section id="misc-exercise-8" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">विविध प्रश्नावली (Miscellaneous Exercise)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: वक्र <span class="math-expr">y<sup>2</sup> = x</span>, रेखाओं <span class="math-expr">x = 1, x = 4</span> तथा x-अक्ष से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिया गया वक्र <span class="math-expr">y<sup>2</sup> = x &rArr; y = &radic;x</span> है। (चूँकि प्रथम चतुर्थांश में y धनात्मक है)</p>
+                    <p class="mb-2">x-अक्ष और रेखाओं x = 1, x = 4 के बीच घिरा क्षेत्र:</p>
+                    <p class="mb-2">क्षेत्रफल <span class="math-expr">= &int;<sub>1</sub><sup>4</sup> y dx = &int;<sub>1</sub><sup>4</sup> x<sup>1/2</sup> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= [<span class="nowrap"><span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span></span>]<sub>1</sub><sup>4</sup> = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span> [x<sup>3/2</sup>]<sub>1</sub><sup>4</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span> (4<sup>3/2</sup> - 1<sup>3/2</sup>) = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span> (8 - 1) = <span class="nowrap"><span class="fraction"><span class="numerator">14</span><span class="denominator">3</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">14</span><span class="denominator">3</span></span></span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: वक्र <span class="math-expr">y<sup>2</sup> = 9x</span>, <span class="math-expr">x = 2, x = 4</span> तथा x-अक्ष से प्रथम चतुर्थांश में घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिया गया वक्र <span class="math-expr">y<sup>2</sup> = 9x &rArr; y = 3&radic;x</span> है। (प्रथम चतुर्थांश में)</p>
+                    <p class="mb-2">क्षेत्रफल <span class="math-expr">= &int;<sub>2</sub><sup>4</sup> y dx = &int;<sub>2</sub><sup>4</sup> 3x<sup>1/2</sup> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= 3 [<span class="nowrap"><span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span></span>]<sub>2</sub><sup>4</sup> = 2 [x<sup>3/2</sup>]<sub>2</sub><sup>4</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">= 2 (4<sup>3/2</sup> - 2<sup>3/2</sup>) = 2 (8 - 2&radic;2) = 16 - 4&radic;2</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">(16 - 4&radic;2)</span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: वक्र <span class="math-expr">x<sup>2</sup> = 4y</span>, <span class="math-expr">y = 2, y = 4</span> तथा y-अक्ष से प्रथम चतुर्थांश में घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिया गया वक्र <span class="math-expr">x<sup>2</sup> = 4y &rArr; x = 2&radic;y</span> है। (प्रथम चतुर्थांश में)</p>
+                    <p class="mb-2">क्षेत्रफल <span class="math-expr">= &int;<sub>2</sub><sup>4</sup> x dy = &int;<sub>2</sub><sup>4</sup> 2y<sup>1/2</sup> dy</span></p>
+                    <p class="mb-2"><span class="math-expr">= 2 [<span class="nowrap"><span class="fraction"><span class="numerator">y<sup>3/2</sup></span><span class="denominator">3/2</span></span></span>]<sub>2</sub><sup>4</sup> = <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span></span> [y<sup>3/2</sup>]<sub>2</sub><sup>4</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span></span> (4<sup>3/2</sup> - 2<sup>3/2</sup>) = <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span></span> (8 - 2&radic;2)</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span> (8 - 2&radic;2)</span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: दीर्घवृत्त <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">16</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">9</span></span></span> = 1</span> से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> यह प्रश्न प्रश्नावली 8.1 के प्रश्न 1 के समान है।</p>
+                    <p class="mb-2">दीर्घवृत्त का समीकरण: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">4<sup>2</sup></span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup></span><span class="denominator">3<sup>2</sup></span></span></span> = 1</span></p>
+                    <p class="mb-2">यहाँ a = 4 और b = 3 है।</p>
+                    <p class="mb-2">कुल क्षेत्रफल <span class="math-expr">= &pi;ab</span></p>
+                    <p class="mb-2"><span class="math-expr">= &pi; &times; 4 &times; 3 = 12&pi;</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">12&pi;</span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: रेखाओं <span class="math-expr">2x + y = 4, 3x - 2y = 6</span> एवं <span class="math-expr">x - 3y + 5 = 0</span> से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दी गई रेखाओं के प्रतिच्छेदन बिंदु ज्ञात करते हैं:</p>
+                    <p class="mb-2"><strong>(1) L<sub>1</sub> और L<sub>2</sub> का प्रतिच्छेदन:</strong> <span class="math-expr">2x + y = 4</span> और <span class="math-expr">3x - 2y = 6</span></p>
+                    <p class="mb-2"><span class="math-expr">y = 4 - 2x</span> को दूसरे में रखने पर: <span class="math-expr">3x - 2(4 - 2x) = 6 &rArr; 7x = 14 &rArr; x = 2, y = 0</span>. बिंदु: <strong>A(2, 0)</strong></p>
+                    <p class="mb-2"><strong>(2) L<sub>2</sub> और L<sub>3</sub> का प्रतिच्छेदन:</strong> <span class="math-expr">3x - 2y = 6</span> और <span class="math-expr">x - 3y = -5</span></p>
+                    <p class="mb-2"><span class="math-expr">x = 3y - 5</span> रखने पर: <span class="math-expr">3(3y - 5) - 2y = 6 &rArr; 7y = 21 &rArr; y = 3, x = 4</span>. बिंदु: <strong>B(4, 3)</strong></p>
+                    <p class="mb-2"><strong>(3) L<sub>3</sub> और L<sub>1</sub> का प्रतिच्छेदन:</strong> <span class="math-expr">x - 3y = -5</span> और <span class="math-expr">2x + y = 4</span></p>
+                    <p class="mb-2"><span class="math-expr">x = 3y - 5</span> रखने पर: <span class="math-expr">2(3y - 5) + y = 4 &rArr; 7y = 14 &rArr; y = 2, x = 1</span>. बिंदु: <strong>C(1, 2)</strong></p>
+                    <p class="mb-2">अतः तीनों रेखाएँ एक त्रिभुज बनाती हैं जिसके शीर्ष A(2, 0), B(4, 3), C(1, 2) हैं।</p>
+                    <p class="mb-2">त्रिभुज का क्षेत्रफल <span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> |x<sub>1</sub>(y<sub>2</sub> - y<sub>3</sub>) + x<sub>2</sub>(y<sub>3</sub> - y<sub>1</sub>) + x<sub>3</sub>(y<sub>1</sub> - y<sub>2</sub>)|</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> |2(3 - 2) + 4(2 - 0) + 1(0 - 3)|</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> |2(1) + 4(2) + 1(-3)| = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> |2 + 8 - 3| = <span class="nowrap"><span class="fraction"><span class="numerator">7</span><span class="denominator">2</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">7</span><span class="denominator">2</span></span></span> वर्ग इकाई</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

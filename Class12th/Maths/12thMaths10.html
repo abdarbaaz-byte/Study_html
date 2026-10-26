@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 10: सदिश बीजगणित</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .vector {
+            text-decoration: overline;
+            display: inline-block;
+        }
+        
+        /* Fixed Matrix Styling using Pseudo-elements */
+        .matrix-container {
+            display: inline-flex;
+            position: relative;
+            padding: 0 8px; /* Space for the vertical lines */
+            vertical-align: middle;
+            margin: 0 0.2em;
+        }
+        .matrix-container::before,
+        .matrix-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 1.5px solid black; /* The vertical determinant lines */
+        }
+        .matrix-container::before {
+            left: 0;
+        }
+        .matrix-container::after {
+            right: 0;
+        }
+        .matrix-table {
+            border-collapse: collapse;
+            margin: 0;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+        .matrix-table td {
+            padding: 0.2em 0.5em;
+            min-width: 1.5em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 10<br>सदिश बीजगणित</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 10.3 ==================== -->
+        <section id="exercise-10-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 10.3 (अदिश गुणनफल)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: दो सदिशों <span class="vector math-expr">a</span> और <span class="vector math-expr">b</span> के परिमाण क्रमशः &radic;3 और 2 हैं तथा <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = &radic;6</span> है, तो इन सदिशों के बीच का कोण ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = |<span class="vector">a</span>| |<span class="vector">b</span>| cos&theta;</span></p>
+                    <p class="mb-2"><span class="math-expr">&radic;6 = (&radic;3)(2) cos&theta; &rArr; &radic;6 = 2&radic;3 cos&theta;</span></p>
+                    <p class="mb-2"><span class="math-expr">cos&theta; = <span class="nowrap"><span class="fraction"><span class="numerator">&radic;6</span><span class="denominator">2&radic;3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">&radic;2</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&theta; = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सदिशों <span class="math-expr"><span class="vector">a</span> = i&#770; - 2j&#770; + 3k&#770;</span> और <span class="math-expr"><span class="vector">b</span> = 3i&#770; - 2j&#770; + k&#770;</span> के बीच का कोण ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = (1)(3) + (-2)(-2) + (3)(1) = 3 + 4 + 3 = 10</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span>| = &radic;(1<sup>2</sup> + (-2)<sup>2</sup> + 3<sup>2</sup>) = &radic;(1 + 4 + 9) = &radic;14</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b</span>| = &radic;(3<sup>2</sup> + (-2)<sup>2</sup> + 1<sup>2</sup>) = &radic;(9 + 4 + 1) = &radic;14</span></p>
+                    <p class="mb-2"><span class="math-expr">cos&theta; = <span class="nowrap"><span class="fraction"><span class="numerator"><span class="vector">a</span> &middot; <span class="vector">b</span></span><span class="denominator">|<span class="vector">a</span>| |<span class="vector">b</span>|</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">&radic;14 &times; &radic;14</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">14</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">7</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&theta; = cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">7</span></span></span>)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: सदिश <span class="math-expr"><span class="vector">a</span> = i&#770; - j&#770;</span> का सदिश <span class="math-expr"><span class="vector">b</span> = i&#770; + j&#770;</span> पर प्रक्षेप ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> प्रक्षेप का सूत्र = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator"><span class="vector">a</span> &middot; <span class="vector">b</span></span><span class="denominator">|<span class="vector">b</span>|</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = (1)(1) + (-1)(1) = 1 - 1 = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b</span>| = &radic;(1<sup>2</sup> + 1<sup>2</sup>) = &radic;2</span></p>
+                    <p><strong>उत्तर:</strong> प्रक्षेप = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">0</span><span class="denominator">&radic;2</span></span></span> = 0</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: सदिश <span class="math-expr"><span class="vector">a</span> = i&#770; + 3j&#770; + 7k&#770;</span> का सदिश <span class="math-expr"><span class="vector">b</span> = 7i&#770; - j&#770; + 8k&#770;</span> पर प्रक्षेप ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = (1)(7) + (3)(-1) + (7)(8) = 7 - 3 + 56 = 60</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b</span>| = &radic;(7<sup>2</sup> + (-1)<sup>2</sup> + 8<sup>2</sup>) = &radic;(49 + 1 + 64) = &radic;114</span></p>
+                    <p><strong>उत्तर:</strong> प्रक्षेप = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">60</span><span class="denominator">&radic;114</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: दर्शाइए कि दिए हुए तीन सदिशों में से प्रत्येक मात्रक सदिश है: <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>(2i&#770; + 3j&#770; + 6k&#770;), <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>(3i&#770; - 6j&#770; + 2k&#770;), <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>(6i&#770; + 2j&#770; - 3k&#770;)</span> साथ ही सिद्ध कीजिए कि ये परस्पर लंबवत हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr"><span class="vector">a</span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>(2i&#770; + 3j&#770; + 6k&#770;)</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span>| = <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>&radic;(4 + 9 + 36) = <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span> &times; 7 = 1</span> (मात्रक सदिश)</p>
+                    <p class="mb-2">इसी प्रकार, अन्य दोनों सदिशों का परिमाण भी 1 होगा।</p>
+                    <p class="mb-2"><strong>लंबवतता:</strong> मान लीजिए <span class="math-expr"><span class="vector">b</span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>(3i&#770; - 6j&#770; + 2k&#770;)</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">49</span></span>[(2)(3) + (3)(-6) + (6)(2)] = <span class="fraction"><span class="numerator">1</span><span class="denominator">49</span></span>[6 - 18 + 12] = 0</span></p>
+                    <p class="mb-2">इसी प्रकार अन्य युग्मों के लिए भी अदिश गुणनफल 0 प्राप्त होगा। अतः ये परस्पर लंबवत हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: यदि <span class="math-expr">(<span class="vector">a</span> + <span class="vector">b</span>) &middot; (<span class="vector">a</span> - <span class="vector">b</span>) = 8</span> और <span class="math-expr">|<span class="vector">a</span>| = 8|<span class="vector">b</span>|</span> है, तो <span class="math-expr">|<span class="vector">a</span>|</span> और <span class="math-expr">|<span class="vector">b</span>|</span> ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">(<span class="vector">a</span> + <span class="vector">b</span>) &middot; (<span class="vector">a</span> - <span class="vector">b</span>) = |<span class="vector">a</span>|<sup>2</sup> - |<span class="vector">b</span>|<sup>2</sup> = 8</span></p>
+                    <p class="mb-2"><span class="math-expr">(8|<span class="vector">b</span>|)<sup>2</sup> - |<span class="vector">b</span>|<sup>2</sup> = 8 &rArr; 64|<span class="vector">b</span>|<sup>2</sup> - |<span class="vector">b</span>|<sup>2</sup> = 8 &rArr; 63|<span class="vector">b</span>|<sup>2</sup> = 8</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b</span>|<sup>2</sup> = <span class="fraction"><span class="numerator">8</span><span class="denominator">63</span></span> &rArr; |<span class="vector">b</span>| = <span class="nowrap"><span class="fraction"><span class="numerator">2&radic;2</span><span class="denominator">3&radic;7</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span>| = 8|<span class="vector">b</span>| = 8 &times; <span class="nowrap"><span class="fraction"><span class="numerator">2&radic;2</span><span class="denominator">3&radic;7</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">16&radic;2</span><span class="denominator">3&radic;7</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">|<span class="vector">a</span>| = <span class="nowrap"><span class="fraction"><span class="numerator">16&radic;2</span><span class="denominator">3&radic;7</span></span></span>, |<span class="vector">b</span>| = <span class="nowrap"><span class="fraction"><span class="numerator">2&radic;2</span><span class="denominator">3&radic;7</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: <span class="math-expr">(3<span class="vector">a</span> - 5<span class="vector">b</span>) &middot; (2<span class="vector">a</span> + 7<span class="vector">b</span>)</span> का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= 6(<span class="vector">a</span> &middot; <span class="vector">a</span>) + 21(<span class="vector">a</span> &middot; <span class="vector">b</span>) - 10(<span class="vector">b</span> &middot; <span class="vector">a</span>) - 35(<span class="vector">b</span> &middot; <span class="vector">b</span>)</span></p>
+                    <p class="mb-2"><span class="math-expr">= 6|<span class="vector">a</span>|<sup>2</sup> + 11(<span class="vector">a</span> &middot; <span class="vector">b</span>) - 35|<span class="vector">b</span>|<sup>2</sup></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">6|<span class="vector">a</span>|<sup>2</sup> + 11(<span class="vector">a</span> &middot; <span class="vector">b</span>) - 35|<span class="vector">b</span>|<sup>2</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: दो सदिशों <span class="math-expr"><span class="vector">a</span></span> और <span class="math-expr"><span class="vector">b</span></span> के परिमाण ज्ञात कीजिए, यदि उनके परिमाण समान हैं तथा उनके बीच का कोण 60° है और उनका अदिश गुणनफल <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">|<span class="vector">a</span>| = |<span class="vector">b</span>| = x</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = |<span class="vector">a</span>| |<span class="vector">b</span>| cos 60&deg; = x &middot; x &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> = <span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> &rArr; x<sup>2</sup> = 1 &rArr; x = 1</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">|<span class="vector">a</span>| = 1, |<span class="vector">b</span>| = 1</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: यदि एक मात्रक सदिश <span class="math-expr"><span class="vector">a</span></span> के लिए <span class="math-expr">(<span class="vector">x</span> - <span class="vector">a</span>) &middot; (<span class="vector">x</span> + <span class="vector">a</span>) = 12</span> है, तो <span class="math-expr">|<span class="vector">x</span>|</span> ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">(<span class="vector">x</span> - <span class="vector">a</span>) &middot; (<span class="vector">x</span> + <span class="vector">a</span>) = |<span class="vector">x</span>|<sup>2</sup> - |<span class="vector">a</span>|<sup>2</sup> = 12</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr"><span class="vector">a</span></span> मात्रक सदिश है, अतः <span class="math-expr">|<span class="vector">a</span>| = 1</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">x</span>|<sup>2</sup> - 1 = 12 &rArr; |<span class="vector">x</span>|<sup>2</sup> = 13</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">|<span class="vector">x</span>| = &radic;13</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: यदि <span class="math-expr"><span class="vector">a</span> = 2i&#770; + 2j&#770; + 3k&#770;, <span class="vector">b</span> = -i&#770; + 2j&#770; + k&#770;</span> और <span class="math-expr"><span class="vector">c</span> = 3i&#770; + j&#770;</span> इस प्रकार हैं कि <span class="math-expr"><span class="vector">a</span> + &lambda;<span class="vector">b</span></span> सदिश <span class="math-expr"><span class="vector">c</span></span> के लंबवत है, तो &lambda; का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> + &lambda;<span class="vector">b</span> = (2 - &lambda;)i&#770; + (2 + 2&lambda;)j&#770; + (3 + &lambda;)k&#770;</span></p>
+                    <p class="mb-2">चूँकि यह <span class="math-expr"><span class="vector">c</span></span> के लंबवत है, अतः <span class="math-expr">(<span class="vector">a</span> + &lambda;<span class="vector">b</span>) &middot; <span class="vector">c</span> = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">[(2 - &lambda;)(3) + (2 + 2&lambda;)(1) + (3 + &lambda;)(0)] = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">6 - 3&lambda; + 2 + 2&lambda; = 0 &rArr; 8 - &lambda; = 0</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&lambda; = 8</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: दर्शाइए कि <span class="math-expr">|<span class="vector">a</span> + <span class="vector">b</span>| = |<span class="vector">a</span> - <span class="vector">b</span>|</span>, किसी भी दो सदिशों <span class="math-expr"><span class="vector">a</span></span> और <span class="math-expr"><span class="vector">b</span></span> के लिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">|<span class="vector">a</span> + <span class="vector">b</span>|<sup>2</sup> = |<span class="vector">a</span>|<sup>2</sup> + 2(<span class="vector">a</span> &middot; <span class="vector">b</span>) + |<span class="vector">b</span>|<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span> - <span class="vector">b</span>|<sup>2</sup> = |<span class="vector">a</span>|<sup>2</sup> - 2(<span class="vector">a</span> &middot; <span class="vector">b</span>) + |<span class="vector">b</span>|<sup>2</sup></span></p>
+                    <p class="mb-2">यदि दोनों बराबर हैं, तो <span class="math-expr">4(<span class="vector">a</span> &middot; <span class="vector">b</span>) = 0 &rArr; <span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span>, अर्थात <span class="math-expr"><span class="vector">a</span> &perp; <span class="vector">b</span></span></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: यदि <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">a</span> = 0</span> और <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span> है, तो सदिश <span class="math-expr"><span class="vector">b</span></span> के बारे में क्या निष्कर्ष निकाला जा सकता है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">a</span> = 0 &rArr; |<span class="vector">a</span>|<sup>2</sup> = 0 &rArr; <span class="vector">a</span> = <span class="vector">0</span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span> का अर्थ है कि <span class="math-expr"><span class="vector">b</span></span> शून्य सदिश या <span class="math-expr"><span class="vector">a</span></span> के लंबवत कोई भी सदिश हो सकता है।</p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="vector">b</span></span> कोई भी सदिश हो सकता है (यह शून्य सदिश या <span class="math-expr"><span class="vector">a</span></span> के लंबवत सदिश हो सकता है)।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: यदि <span class="math-expr"><span class="vector">a</span>, <span class="vector">b</span>, <span class="vector">c</span></span> मात्रक सदिश इस प्रकार हैं कि <span class="math-expr"><span class="vector">a</span> + <span class="vector">b</span> + <span class="vector">c</span> = <span class="vector">0</span></span> है, तो <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> + <span class="vector">b</span> &middot; <span class="vector">c</span> + <span class="vector">c</span> &middot; <span class="vector">a</span></span> का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">|<span class="vector">a</span> + <span class="vector">b</span> + <span class="vector">c</span>|<sup>2</sup> = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span>|<sup>2</sup> + |<span class="vector">b</span>|<sup>2</sup> + |<span class="vector">c</span>|<sup>2</sup> + 2(<span class="vector">a</span> &middot; <span class="vector">b</span> + <span class="vector">b</span> &middot; <span class="vector">c</span> + <span class="vector">c</span> &middot; <span class="vector">a</span>) = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">1 + 1 + 1 + 2(<span class="vector">a</span> &middot; <span class="vector">b</span> + <span class="vector">b</span> &middot; <span class="vector">c</span> + <span class="vector">c</span> &middot; <span class="vector">a</span>) = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">2(<span class="vector">a</span> &middot; <span class="vector">b</span> + <span class="vector">b</span> &middot; <span class="vector">c</span> + <span class="vector">c</span> &middot; <span class="vector">a</span>) = -3</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> + <span class="vector">b</span> &middot; <span class="vector">c</span> + <span class="vector">c</span> &middot; <span class="vector">a</span> = -<span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: यदि <span class="math-expr"><span class="vector">a</span> = <span class="vector">0</span></span> अथवा <span class="math-expr"><span class="vector">b</span> = <span class="vector">0</span></span>, तो <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span> परंतु विलोम का सत्य होना आवश्यक नहीं है। उदाहरण द्वारा पुष्टि कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr"><span class="vector">a</span> = i&#770;</span> और <span class="math-expr"><span class="vector">b</span> = j&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = (1)(0) + (0)(1) + (0)(0) = 0</span></p>
+                    <p class="mb-2">यहाँ <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span> है, परंतु न तो <span class="math-expr"><span class="vector">a</span> = <span class="vector">0</span></span> है और न ही <span class="math-expr"><span class="vector">b</span> = <span class="vector">0</span></span>।</p>
+                    <p><strong>अतः विलोम सत्य नहीं है।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: यदि किसी त्रिभुज ABC के शीर्ष A, B, C क्रमशः (1, 2, 3), (-1, 0, 0), (0, 1, 2) हैं तो &angle;ABC ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">BA</span> = (1+1)i&#770; + (2-0)j&#770; + (3-0)k&#770; = 2i&#770; + 2j&#770; + 3k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">BC</span> = (0+1)i&#770; + (1-0)j&#770; + (2-0)k&#770; = i&#770; + j&#770; + 2k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">BA</span> &middot; <span class="vector">BC</span> = 2(1) + 2(1) + 3(2) = 2 + 2 + 6 = 10</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">BA</span>| = &radic;(4 + 4 + 9) = &radic;17</span>, <span class="math-expr">|<span class="vector">BC</span>| = &radic;(1 + 1 + 4) = &radic;6</span></p>
+                    <p class="mb-2"><span class="math-expr">cos(&angle;ABC) = <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">&radic;17 &times; &radic;6</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">&radic;102</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&angle;ABC = cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">&radic;102</span></span></span>)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: दर्शाइए कि बिंदु A(1, 2, 7), B(2, 6, 3) और C(3, 10, -1) संरेख हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">AB</span> = (2-1)i&#770; + (6-2)j&#770; + (3-7)k&#770; = i&#770; + 4j&#770; - 4k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">BC</span> = (3-2)i&#770; + (10-6)j&#770; + (-1-3)k&#770; = i&#770; + 4j&#770; - 4k&#770;</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr"><span class="vector">AB</span> = <span class="vector">BC</span></span>, इसलिए सदिश समांतर हैं और बिंदु B उभयनिष्ठ है।</p>
+                    <p><strong>अतः बिंदु A, B, C संरेख हैं।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: दर्शाइए कि सदिश <span class="math-expr">2i&#770; - j&#770; + k&#770;, i&#770; - 3j&#770; - 5k&#770;</span> और <span class="math-expr">3i&#770; - 4j&#770; - 4k&#770;</span> एक समकोण त्रिभुज के शीर्षों की रचना करते हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr"><span class="vector">a</span> = 2i&#770; - j&#770; + k&#770;</span>, <span class="math-expr"><span class="vector">b</span> = i&#770; - 3j&#770; - 5k&#770;</span>, <span class="math-expr"><span class="vector">c</span> = 3i&#770; - 4j&#770; - 4k&#770;</span></p>
+                    <p class="mb-2">ध्यान दें: <span class="math-expr"><span class="vector">a</span> + <span class="vector">b</span> = (2+1)i&#770; + (-1-3)j&#770; + (1-5)k&#770; = 3i&#770; - 4j&#770; - 4k&#770; = <span class="vector">c</span></span></p>
+                    <p class="mb-2">अतः ये त्रिभुज बनाते हैं। अब जाँचें: <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = (2)(1) + (-1)(-3) + (1)(-5) = 2 + 3 - 5 = 0</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span> है, अतः यह एक समकोण त्रिभुज है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: यदि शून्येतर सदिश <span class="math-expr"><span class="vector">a</span></span> का परिमाण 'a' है और &lambda; एक शून्येतर अदिश है तो &lambda;<span class="math-expr"><span class="vector">a</span></span> एक मात्रक सदिश है यदि:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) &lambda; = 1 &nbsp;&nbsp; (B) &lambda; = -1 &nbsp;&nbsp; (C) a = 1/|&lambda;| &nbsp;&nbsp; (D) a = |&lambda;|</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">|&lambda;<span class="vector">a</span>| = 1 &rArr; |&lambda;| |<span class="vector">a</span>| = 1 &rArr; |&lambda;| a = 1 &rArr; a = <span class="fraction"><span class="numerator">1</span><span class="denominator">|&lambda;|</span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 10.4 ==================== -->
+        <section id="exercise-10-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 10.4 (सदिश गुणनफल)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: यदि <span class="math-expr"><span class="vector">a</span> = i&#770; - 7j&#770; + 7k&#770;</span> और <span class="math-expr"><span class="vector">b</span> = 3i&#770; - 2j&#770; + 2k&#770;</span>, तो <span class="math-expr">|<span class="vector">a</span> &times; <span class="vector">b</span>|</span> ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>1</td><td>-7</td><td>7</td></tr><tr><td>3</td><td>-2</td><td>2</td></tr></table></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= i&#770;(-14 + 14) - j&#770;(2 - 21) + k&#770;(-2 + 21) = 0i&#770; + 19j&#770; + 19k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span> &times; <span class="vector">b</span>| = &radic;(0<sup>2</sup> + 19<sup>2</sup> + 19<sup>2</sup>) = &radic;(2 &times; 361) = 19&radic;2</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">19&radic;2</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सदिश <span class="math-expr"><span class="vector">a</span> + <span class="vector">b</span></span> और <span class="math-expr"><span class="vector">a</span> - <span class="vector">b</span></span> की लंब दिशा में मात्रक सदिश ज्ञात कीजिए जहाँ <span class="math-expr"><span class="vector">a</span> = 3i&#770; + 2j&#770; + 2k&#770;</span> और <span class="math-expr"><span class="vector">b</span> = i&#770; + 2j&#770; - 2k&#770;</span> है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> + <span class="vector">b</span> = 4i&#770; + 4j&#770; + 0k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> - <span class="vector">b</span> = 2i&#770; + 0j&#770; + 4k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">(<span class="vector">a</span> + <span class="vector">b</span>) &times; (<span class="vector">a</span> - <span class="vector">b</span>) = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>4</td><td>4</td><td>0</td></tr><tr><td>2</td><td>0</td><td>4</td></tr></table></span> = i&#770;(16) - j&#770;(16) + k&#770;(-8) = 16i&#770; - 16j&#770; - 8k&#770;</span></p>
+                    <p class="mb-2">परिमाण = <span class="math-expr">&radic;(256 + 256 + 64) = &radic;576 = 24</span></p>
+                    <p class="mb-2">मात्रक सदिश = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">24</span></span></span>(16i&#770; - 16j&#770; - 8k&#770;) = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span>i&#770; - <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span>j&#770; - <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span>k&#770;</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि एक मात्रक सदिश <span class="math-expr"><span class="vector">a</span></span>, <span class="math-expr">i&#770;</span> के साथ <span class="math-expr">&pi;/3</span>, <span class="math-expr">j&#770;</span> के साथ <span class="math-expr">&pi;/4</span> और <span class="math-expr">k&#770;</span> के साथ एक न्यून कोण &theta; बनाता है तो &theta; का मान ज्ञात कीजिए और इसकी सहायता से <span class="math-expr"><span class="vector">a</span></span> के घटक भी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">l = cos(&pi;/3) = 1/2</span>, <span class="math-expr">m = cos(&pi;/4) = 1/&radic;2</span>, <span class="math-expr">n = cos&theta;</span></p>
+                    <p class="mb-2"><span class="math-expr">l<sup>2</sup> + m<sup>2</sup> + n<sup>2</sup> = 1 &rArr; <span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span><sup>2</sup> + <span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span>)</span><sup>2</sup> + cos<sup>2</sup>&theta; = 1</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> + cos<sup>2</sup>&theta; = 1 &rArr; cos<sup>2</sup>&theta; = <span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span></span></p>
+                    <p class="mb-2">चूँकि &theta; न्यून कोण है, <span class="math-expr">cos&theta; = 1/2 &rArr; &theta; = &pi;/3</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&theta; = &pi;/3</span>; घटक: <span class="math-expr"><span class="vector">a</span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>i&#770; + <span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span>j&#770; + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>k&#770;</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: दर्शाइए कि <span class="math-expr">(<span class="vector">a</span> - <span class="vector">b</span>) &times; (<span class="vector">a</span> + <span class="vector">b</span>) = 2(<span class="vector">a</span> &times; <span class="vector">b</span>)</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">(<span class="vector">a</span> - <span class="vector">b</span>) &times; (<span class="vector">a</span> + <span class="vector">b</span>) = <span class="vector">a</span> &times; <span class="vector">a</span> + <span class="vector">a</span> &times; <span class="vector">b</span> - <span class="vector">b</span> &times; <span class="vector">a</span> - <span class="vector">b</span> &times; <span class="vector">b</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= 0 + <span class="vector">a</span> &times; <span class="vector">b</span> + <span class="vector">a</span> &times; <span class="vector">b</span> - 0</span> (क्योंकि <span class="math-expr"><span class="vector">b</span> &times; <span class="vector">a</span> = -<span class="vector">a</span> &times; <span class="vector">b</span></span>)</p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= 2(<span class="vector">a</span> &times; <span class="vector">b</span>)</span>। अतः सिद्ध हुआ।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: &lambda; और &mu; ज्ञात कीजिए, यदि <span class="math-expr">(2i&#770; + 6j&#770; + 27k&#770;) &times; (i&#770; + &lambda;j&#770; + &mu;k&#770;) = <span class="vector">0</span></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> चूँकि सदिश गुणनफल शून्य है, सदिश समांतर हैं।</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">2</span><span class="denominator">1</span></span> = <span class="fraction"><span class="numerator">6</span><span class="denominator">&lambda;</span></span> = <span class="fraction"><span class="numerator">27</span><span class="denominator">&mu;</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&lambda; = <span class="fraction"><span class="numerator">6</span><span class="denominator">2</span></span> = 3</span> और <span class="math-expr">&mu; = <span class="fraction"><span class="numerator">27</span><span class="denominator">2</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&lambda; = 3, &mu; = <span class="fraction"><span class="numerator">27</span><span class="denominator">2</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: दिया हुआ है कि <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0</span> और <span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = <span class="vector">0</span></span>। सदिश <span class="math-expr"><span class="vector">a</span></span> और <span class="math-expr"><span class="vector">b</span></span> के बारे में आप क्या निष्कर्ष निकाल सकते हैं?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> &middot; <span class="vector">b</span> = 0 &rArr; <span class="vector">a</span> &perp; <span class="vector">b</span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = <span class="vector">0</span> &rArr; <span class="vector">a</span> &parallel; <span class="vector">b</span></span></p>
+                    <p class="mb-2">कोई भी सदिश एक साथ लंबवत और समांतर नहीं हो सकता, जब तक कि उनमें से एक शून्य सदिश न हो।</p>
+                    <p><strong>उत्तर:</strong> या तो <span class="math-expr"><span class="vector">a</span> = <span class="vector">0</span></span> है या <span class="math-expr"><span class="vector">b</span> = <span class="vector">0</span></span> है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: मान लीजिए सदिश <span class="math-expr"><span class="vector">a</span>, <span class="vector">b</span>, <span class="vector">c</span></span> क्रमशः <span class="math-expr">a<sub>1</sub>i&#770; + a<sub>2</sub>j&#770; + a<sub>3</sub>k&#770;, b<sub>1</sub>i&#770; + b<sub>2</sub>j&#770; + b<sub>3</sub>k&#770;, c<sub>1</sub>i&#770; + c<sub>2</sub>j&#770; + c<sub>3</sub>k&#770;</span> के रूप में दिए हुए हैं तब दर्शाइए कि <span class="math-expr"><span class="vector">a</span> &times; (<span class="vector">b</span> + <span class="vector">c</span>) = <span class="vector">a</span> &times; <span class="vector">b</span> + <span class="vector">a</span> &times; <span class="vector">c</span></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> यह सदिश गुणनफल का वितरण नियम है।</p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b</span> + <span class="vector">c</span> = (b<sub>1</sub>+c<sub>1</sub>)i&#770; + (b<sub>2</sub>+c<sub>2</sub>)j&#770; + (b<sub>3</sub>+c<sub>3</sub>)k&#770;</span></p>
+                    <p class="mb-2">LHS की गणना करने पर: <span class="math-expr"><span class="vector">a</span> &times; (<span class="vector">b</span> + <span class="vector">c</span>) = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>a<sub>1</sub></td><td>a<sub>2</sub></td><td>a<sub>3</sub></td></tr><tr><td>b<sub>1</sub>+c<sub>1</sub></td><td>b<sub>2</sub>+c<sub>2</sub></td><td>b<sub>3</sub>+c<sub>3</sub></td></tr></table></span></span></p>
+                    <p class="mb-2">सारणिक के गुणधर्म (योग नियम) से इसे विभाजित करने पर:</p>
+                    <p class="mb-2"><span class="math-expr">= <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>a<sub>1</sub></td><td>a<sub>2</sub></td><td>a<sub>3</sub></td></tr><tr><td>b<sub>1</sub></td><td>b<sub>2</sub></td><td>b<sub>3</sub></td></tr></table></span> + <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>a<sub>1</sub></td><td>a<sub>2</sub></td><td>a<sub>3</sub></td></tr><tr><td>c<sub>1</sub></td><td>c<sub>2</sub></td><td>c<sub>3</sub></td></tr></table></span> = <span class="vector">a</span> &times; <span class="vector">b</span> + <span class="vector">a</span> &times; <span class="vector">c</span></span></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: यदि <span class="math-expr"><span class="vector">a</span> = <span class="vector">0</span></span> अथवा <span class="math-expr"><span class="vector">b</span> = <span class="vector">0</span></span> तब <span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = <span class="vector">0</span></span> होता है। क्या विलोम सत्य है? उदाहरण सहित अपने उत्तर की पुष्टि कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> विलोम सत्य नहीं है।</p>
+                    <p class="mb-2"><strong>उदाहरण:</strong> मान लीजिए <span class="math-expr"><span class="vector">a</span> = i&#770;</span> और <span class="math-expr"><span class="vector">b</span> = 2i&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = (i&#770;) &times; (2i&#770;) = 2(i&#770; &times; i&#770;) = 2(<span class="vector">0</span>) = <span class="vector">0</span></span></p>
+                    <p class="mb-2">यहाँ <span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = <span class="vector">0</span></span> है, परंतु न तो <span class="math-expr"><span class="vector">a</span> = <span class="vector">0</span></span> है और न ही <span class="math-expr"><span class="vector">b</span> = <span class="vector">0</span></span>।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: एक त्रिभुज का क्षेत्रफल ज्ञात कीजिए जिसके शीर्ष A(1, 1, 2), B(2, 3, 5) और C(1, 5, 5) हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">AB</span> = (2-1)i&#770; + (3-1)j&#770; + (5-2)k&#770; = i&#770; + 2j&#770; + 3k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">AC</span> = (1-1)i&#770; + (5-1)j&#770; + (5-2)k&#770; = 0i&#770; + 4j&#770; + 3k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">AB</span> &times; <span class="vector">AC</span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>0</td><td>4</td><td>3</td></tr></table></span> = i&#770;(6-12) - j&#770;(3-0) + k&#770;(4-0) = -6i&#770; - 3j&#770; + 4k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">AB</span> &times; <span class="vector">AC</span>| = &radic;(36 + 9 + 16) = &radic;61</span></p>
+                    <p class="mb-2">क्षेत्रफल = <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> |<span class="vector">AB</span> &times; <span class="vector">AC</span>|</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">&radic;61</span><span class="denominator">2</span></span></span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: एक समांतर चतुर्भुज का क्षेत्रफल ज्ञात कीजिए जिसकी संलग्न भुजाएँ सदिश <span class="math-expr"><span class="vector">a</span> = i&#770; - j&#770; + 3k&#770;</span> और <span class="math-expr"><span class="vector">b</span> = 2i&#770; - 7j&#770; + k&#770;</span> द्वारा निर्धारित हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>1</td><td>-1</td><td>3</td></tr><tr><td>2</td><td>-7</td><td>1</td></tr></table></span> = i&#770;(-1+21) - j&#770;(1-6) + k&#770;(-7+2) = 20i&#770; + 5j&#770; - 5k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">a</span> &times; <span class="vector">b</span>| = &radic;(400 + 25 + 25) = &radic;450 = 15&radic;2</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">15&radic;2</span> वर्ग इकाई</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: मान लीजिए सदिश <span class="math-expr"><span class="vector">a</span></span> और <span class="math-expr"><span class="vector">b</span></span> इस प्रकार हैं कि <span class="math-expr">|<span class="vector">a</span>| = 3</span> और <span class="math-expr">|<span class="vector">b</span>| = &radic;2/3</span>, तब <span class="math-expr"><span class="vector">a</span> &times; <span class="vector">b</span></span> एक मात्रक सदिश है यदि <span class="math-expr"><span class="vector">a</span></span> और <span class="math-expr"><span class="vector">b</span></span> के बीच का कोण है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) &pi;/6 &nbsp;&nbsp; (B) &pi;/4 &nbsp;&nbsp; (C) &pi;/3 &nbsp;&nbsp; (D) &pi;/2</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">|<span class="vector">a</span> &times; <span class="vector">b</span>| = 1 &rArr; |<span class="vector">a</span>| |<span class="vector">b</span>| sin&theta; = 1</span></p>
+                    <p class="mb-2"><span class="math-expr">3 &times; <span class="nowrap">(<span class="fraction"><span class="numerator">&radic;2</span><span class="denominator">3</span></span>)</span> &times; sin&theta; = 1 &rArr; &radic;2 sin&theta; = 1 &rArr; sin&theta; = <span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&theta; = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: एक आयत के शीर्षों A, B, C और D जिनके स्थिति सदिश क्रमशः <span class="math-expr">-i&#770; + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>j&#770; + 4k&#770;, i&#770; + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>j&#770; + 4k&#770;, i&#770; - <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>j&#770; + 4k&#770;</span> और <span class="math-expr">-i&#770; - <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>j&#770; + 4k&#770;</span> है, का क्षेत्रफल है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 1/2 &nbsp;&nbsp; (B) 1 &nbsp;&nbsp; (C) 2 &nbsp;&nbsp; (D) 4</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">AB</span> = 2i&#770;</span>, <span class="math-expr"><span class="vector">BC</span> = -j&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">AB</span>| = 2</span>, <span class="math-expr">|<span class="vector">BC</span>| = 1</span></p>
+                    <p class="mb-2">क्षेत्रफल = <span class="math-expr">|<span class="vector">AB</span>| &times; |<span class="vector">BC</span>| = 2 &times; 1 = 2</span> (क्योंकि ये लंबवत हैं)</p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

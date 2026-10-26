@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 12: रैखिक प्रोग्रामन</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 12<br>रैखिक प्रोग्रामन</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 12.1 ==================== -->
+        <section id="exercise-12-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 12.1 (आलेखीय विधि से हल)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्न अवरोधों के अंतर्गत Z = 3x + 4y का अधिकतमीकरण कीजिए: x + y &le; 4, x &ge; 0, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x + y &le; 4</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">x &ge; 0, y &ge; 0</span> ...(2)</p>
+                    <p class="mb-2">रेखा <span class="math-expr">x + y = 4</span> बिंदुओं (4, 0) और (0, 4) से गुजरती है।</p>
+                    <p class="mb-2">असमिका <span class="math-expr">x + y &le; 4</span> मूल बिंदु (0,0) को शामिल करती है। अतः सुसंगत क्षेत्र OAB (परिबद्ध) है, जहाँ O(0,0), A(4,0) और B(0,4) हैं।</p>
+                    <p class="mb-2">कोनीय बिंदुओं पर Z = 3x + 4y का मान:</p>
+                    <p class="mb-2">O(0, 0) पर: <span class="math-expr">Z = 3(0) + 4(0) = 0</span></p>
+                    <p class="mb-2">A(4, 0) पर: <span class="math-expr">Z = 3(4) + 4(0) = 12</span></p>
+                    <p class="mb-2">B(0, 4) पर: <span class="math-expr">Z = 3(0) + 4(4) = 16</span></p>
+                    <p><strong>उत्तर:</strong> Z का अधिकतम मान 16 है, जो बिंदु (0, 4) पर प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्न अवरोधों के अंतर्गत Z = -3x + 4y का न्यूनतमीकरण कीजिए: x + 2y &le; 8, 3x + 2y &le; 12, x &ge; 0, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x + 2y &le; 8</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">3x + 2y &le; 12</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x &ge; 0, y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2">रेखाओं के प्रतिच्छेदन बिंदु ज्ञात करते हैं: <span class="math-expr">x + 2y = 8</span> और <span class="math-expr">3x + 2y = 12</span>. घटाने पर <span class="math-expr">2x = 4 &rArr; x = 2, y = 3</span></p>
+                    <p class="mb-2">सुसंगत क्षेत्र परिबद्ध है जिसके कोनीय बिंदु हैं: O(0,0), A(4,0), B(2,3), C(0,4).</p>
+                    <p class="mb-2">Z = -3x + 4y का मान:</p>
+                    <p class="mb-2">O(0, 0) पर: <span class="math-expr">Z = 0</span></p>
+                    <p class="mb-2">A(4, 0) पर: <span class="math-expr">Z = -12</span></p>
+                    <p class="mb-2">B(2, 3) पर: <span class="math-expr">Z = -6 + 12 = 6</span></p>
+                    <p class="mb-2">C(0, 4) पर: <span class="math-expr">Z = 16</span></p>
+                    <p><strong>उत्तर:</strong> Z का न्यूनतम मान -12 है, जो बिंदु (4, 0) पर प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निम्न अवरोधों के अंतर्गत Z = 5x + 3y का अधिकतमीकरण कीजिए: 3x + 5y &le; 15, 5x + 2y &le; 10, x &ge; 0, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">3x + 5y &le; 15</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">5x + 2y &le; 10</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x &ge; 0, y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2">रेखाओं के प्रतिच्छेदन बिंदु: <span class="math-expr">3x + 5y = 15</span> और <span class="math-expr">5x + 2y = 10</span></p>
+                    <p class="mb-2">पहले को 2 से और दूसरे को 5 से गुणा करने पर: <span class="math-expr">6x + 10y = 30</span>, <span class="math-expr">25x + 10y = 50</span>. घटाने पर: <span class="math-expr">19x = 20 &rArr; x = <span class="fraction"><span class="numerator">20</span><span class="denominator">19</span></span>, y = <span class="fraction"><span class="numerator">45</span><span class="denominator">19</span></span></span></p>
+                    <p class="mb-2">सुसंगत क्षेत्र के कोनीय बिंदु: O(0,0), A(2,0), B(<span class="math-expr"><span class="fraction"><span class="numerator">20</span><span class="denominator">19</span></span></span>, <span class="math-expr"><span class="fraction"><span class="numerator">45</span><span class="denominator">19</span></span></span>), C(0,3)</p>
+                    <p class="mb-2">Z = 5x + 3y का मान:</p>
+                    <p class="mb-2">O(0, 0): <span class="math-expr">Z = 0</span></p>
+                    <p class="mb-2">A(2, 0): <span class="math-expr">Z = 10</span></p>
+                    <p class="mb-2">C(0, 3): <span class="math-expr">Z = 9</span></p>
+                    <p class="mb-2">B(<span class="math-expr"><span class="fraction"><span class="numerator">20</span><span class="denominator">19</span></span></span>, <span class="math-expr"><span class="fraction"><span class="numerator">45</span><span class="denominator">19</span></span></span>): <span class="math-expr">Z = <span class="nowrap"><span class="fraction"><span class="numerator">100</span><span class="denominator">19</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">135</span><span class="denominator">19</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">235</span><span class="denominator">19</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> Z का अधिकतम मान <span class="math-expr"><span class="fraction"><span class="numerator">235</span><span class="denominator">19</span></span></span> है, जो बिंदु (<span class="math-expr"><span class="fraction"><span class="numerator">20</span><span class="denominator">19</span></span></span>, <span class="math-expr"><span class="fraction"><span class="numerator">45</span><span class="denominator">19</span></span></span>) पर प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: निम्न अवरोधों के अंतर्गत Z = 3x + 5y का न्यूनतमीकरण कीजिए: x + 3y &ge; 3, x + y &ge; 2, x, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x + 3y &ge; 3</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">x + y &ge; 2</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x, y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2">रेखाओं के प्रतिच्छेदन बिंदु: <span class="math-expr">x + 3y = 3</span> और <span class="math-expr">x + y = 2</span>. घटाने पर: <span class="math-expr">2y = 1 &rArr; y = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>, x = <span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2">सुसंगत क्षेत्र (अपरिबद्ध) के कोनीय बिंदु: A(<span class="math-expr"><span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></span>, <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span>), B(3,0), C(0,2)</p>
+                    <p class="mb-2">Z = 3x + 5y का मान:</p>
+                    <p class="mb-2">A(<span class="math-expr"><span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></span>, <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span>): <span class="math-expr">Z = <span class="nowrap"><span class="fraction"><span class="numerator">9</span><span class="denominator">2</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">2</span></span></span> = 7</span></p>
+                    <p class="mb-2">B(3, 0): <span class="math-expr">Z = 9</span></p>
+                    <p class="mb-2">C(0, 2): <span class="math-expr">Z = 10</span></p>
+                    <p><strong>उत्तर:</strong> Z का न्यूनतम मान 7 है, जो बिंदु (<span class="math-expr"><span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></span>, <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span>) पर प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: निम्न अवरोधों के अंतर्गत Z = 3x + 2y का न्यूनतमीकरण कीजिए: x + 2y &le; 10, 3x + y &le; 15, x, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x + 2y &le; 10</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">3x + y &le; 15</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x, y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2">रेखाओं के प्रतिच्छेदन बिंदु: <span class="math-expr">x + 2y = 10</span> और <span class="math-expr">3x + y = 15</span>. पहले को 3 से गुणा करने पर: <span class="math-expr">3x + 6y = 30</span>. दूसरे से घटाने पर: <span class="math-expr">5y = 15 &rArr; y = 3, x = 4</span></p>
+                    <p class="mb-2">सुसंगत क्षेत्र (परिबद्ध) के कोनीय बिंदु: O(0,0), A(5,0), B(4,3), C(0,5)</p>
+                    <p class="mb-2">Z = 3x + 2y का मान:</p>
+                    <p class="mb-2">O(0, 0): <span class="math-expr">Z = 0</span></p>
+                    <p class="mb-2">A(5, 0): <span class="math-expr">Z = 15</span></p>
+                    <p class="mb-2">B(4, 3): <span class="math-expr">Z = 12 + 6 = 18</span></p>
+                    <p class="mb-2">C(0, 5): <span class="math-expr">Z = 10</span></p>
+                    <p><strong>उत्तर:</strong> यदि प्रश्न में "न्यूनतमीकरण" (Minimize) है, तो Z का न्यूनतम मान 0 है, जो बिंदु (0, 0) पर प्राप्त होता है। (यदि यह "अधिकतमीकरण" है, तो अधिकतम मान 18 है, जो बिंदु (4, 3) पर प्राप्त होता है।)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: निम्न अवरोधों के अंतर्गत Z = x + 2y का न्यूनतमीकरण कीजिए: 2x + y &ge; 3, x + 2y &ge; 6, x, y &ge; 0. दिखाइए कि Z का न्यूनतम मान दो बिंदुओं से अधिक बिंदुओं पर घटित होता है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">2x + y &ge; 3</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">x + 2y &ge; 6</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x, y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2">रेखाओं के प्रतिच्छेदन बिंदु: <span class="math-expr">2x + y = 3</span> और <span class="math-expr">x + 2y = 6</span>. पहले से <span class="math-expr">y = 3 - 2x</span> रखने पर: <span class="math-expr">x + 2(3-2x) = 6 &rArr; x + 6 - 4x = 6 &rArr; -3x = 0 &rArr; x = 0, y = 3</span></p>
+                    <p class="mb-2">सुसंगत क्षेत्र (अपरिबद्ध) के कोनीय बिंदु: A(0,3), B(6,0)</p>
+                    <p class="mb-2">Z = x + 2y का मान:</p>
+                    <p class="mb-2">A(0, 3): <span class="math-expr">Z = 0 + 6 = 6</span></p>
+                    <p class="mb-2">B(6, 0): <span class="math-expr">Z = 6 + 0 = 6</span></p>
+                    <p class="mb-2">चूँकि बिंदु A और B पर Z का मान समान (6) है, और उद्देश्य फलन \(Z = x + 2y\) की रेखा \(x + 2y = 6\) के समांतर है, इसलिए रेखाखंड AB पर स्थित प्रत्येक बिंदु पर Z का मान 6 (न्यूनतम) होगा।</p>
+                    <p><strong>उत्तर:</strong> Z का न्यूनतम मान 6 है, जो रेखाखंड AB के सभी बिंदुओं (अनंत बिंदुओं) पर प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: निम्न अवरोधों के अंतर्गत Z = 5x + 10y का न्यूनतमीकरण तथा अधिकतमीकरण कीजिए: x + 2y &le; 120, x + y &ge; 60, x - 2y &ge; 0, x, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x + 2y &le; 120</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">x + y &ge; 60</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x - 2y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2"><span class="math-expr">x, y &ge; 0</span> ...(4)</p>
+                    <p class="mb-2">प्रतिच्छेदन बिंदु:</p>
+                    <p class="mb-2"><strong>P1:</strong> <span class="math-expr">x+y=60</span> और <span class="math-expr">x-2y=0 &rArr; x=2y &rArr; 2y+y=60 &rArr; y=20, x=40</span> (बिंदु: 40, 20)</p>
+                    <p class="mb-2"><strong>P2:</strong> <span class="math-expr">x+2y=120</span> और <span class="math-expr">x-2y=0 &rArr; 2x=120 &rArr; x=60, y=30</span> (बिंदु: 60, 30)</p>
+                    <p class="mb-2"><strong>P3:</strong> <span class="math-expr">x+y=60</span> और <span class="math-expr">y=0 &rArr; x=60</span> (बिंदु: 60, 0)</p>
+                    <p class="mb-2">सुसंगत क्षेत्र के कोनीय बिंदु: A(60,0), B(60,30), C(40,20), D(0,60)</p>
+                    <p class="mb-2">Z = 5x + 10y का मान:</p>
+                    <p class="mb-2">A(60, 0): <span class="math-expr">Z = 300</span></p>
+                    <p class="mb-2">B(60, 30): <span class="math-expr">Z = 300 + 300 = 600</span></p>
+                    <p class="mb-2">C(40, 20): <span class="math-expr">Z = 200 + 200 = 400</span></p>
+                    <p class="mb-2">D(0, 60): <span class="math-expr">Z = 0 + 600 = 600</span></p>
+                    <p><strong>उत्तर:</strong> न्यूनतम मान 300 है (बिंदु 60, 0 पर) और अधिकतम मान 600 है, जो बिंदु (60, 30) और (0, 60) दोनों पर प्राप्त होता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: निम्न अवरोधों के अंतर्गत Z = x + 2y का न्यूनतमीकरण तथा अधिकतमीकरण कीजिए: x + 2y &ge; 100, 2x - y &le; 0, 2x + y &le; 200, x, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x + 2y &ge; 100</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">2x - y &le; 0</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">2x + y &le; 200</span> ...(3)</p>
+                    <p class="mb-2"><span class="math-expr">x, y &ge; 0</span> ...(4)</p>
+                    <p class="mb-2">प्रतिच्छेदन बिंदु:</p>
+                    <p class="mb-2"><strong>P1:</strong> <span class="math-expr">2x-y=0</span> और <span class="math-expr">x+2y=100 &rArr; y=2x &rArr; x+4x=100 &rArr; x=20, y=40</span> (बिंदु: 20, 40)</p>
+                    <p class="mb-2"><strong>P2:</strong> <span class="math-expr">2x-y=0</span> और <span class="math-expr">2x+y=200 &rArr; 4x=200 &rArr; x=50, y=100</span> (बिंदु: 50, 100)</p>
+                    <p class="mb-2"><strong>P3:</strong> <span class="math-expr">x+2y=100</span> और <span class="math-expr">2x+y=200 &rArr; y=200-2x &rArr; x+400-4x=100 &rArr; 3x=300 &rArr; x=100, y=0</span> (बिंदु: 100, 0)</p>
+                    <p class="mb-2">सुसंगत क्षेत्र के कोनीय बिंदु: A(20,40), B(50,100), C(100,0)</p>
+                    <p class="mb-2">Z = x + 2y का मान:</p>
+                    <p class="mb-2">A(20, 40): <span class="math-expr">Z = 20 + 80 = 100</span></p>
+                    <p class="mb-2">B(50, 100): <span class="math-expr">Z = 50 + 200 = 250</span></p>
+                    <p class="mb-2">C(100, 0): <span class="math-expr">Z = 100 + 0 = 100</span></p>
+                    <p><strong>उत्तर:</strong> न्यूनतम मान 100 है (बिंदुओं (20, 40) और (100, 0) पर) और अधिकतम मान 250 है (बिंदु (50, 100) पर)।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: निम्न अवरोधों के अंतर्गत Z = -x + 2y का अधिकतमीकरण कीजिए: x &ge; 3, x + y &ge; 5, x + 2y &ge; 6, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x &ge; 3</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">x + y &ge; 5</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x + 2y &ge; 6</span> ...(3)</p>
+                    <p class="mb-2"><span class="math-expr">y &ge; 0</span> ...(4)</p>
+                    <p class="mb-2">सुसंगत क्षेत्र अपरिबद्ध है। कोनीय बिंदु:</p>
+                    <p class="mb-2"><strong>P1:</strong> <span class="math-expr">x=3</span> और <span class="math-expr">x+y=5 &rArr; y=2</span> (बिंदु: 3, 2)</p>
+                    <p class="mb-2"><strong>P2:</strong> <span class="math-expr">x+y=5</span> और <span class="math-expr">x+2y=6 &rArr; y=1, x=4</span> (बिंदु: 4, 1)</p>
+                    <p class="mb-2"><strong>P3:</strong> <span class="math-expr">x+2y=6</span> और <span class="math-expr">y=0 &rArr; x=6</span> (बिंदु: 6, 0)</p>
+                    <p class="mb-2">Z = -x + 2y का मान:</p>
+                    <p class="mb-2">(3, 2): <span class="math-expr">Z = -3 + 4 = 1</span></p>
+                    <p class="mb-2">(4, 1): <span class="math-expr">Z = -4 + 2 = -2</span></p>
+                    <p class="mb-2">(6, 0): <span class="math-expr">Z = -6 + 0 = -6</span></p>
+                    <p class="mb-2">चूँकि सुसंगत क्षेत्र अपरिबद्ध है, हम असमिका <span class="math-expr">Z > 1 &rArr; -x + 2y > 1</span> की जाँच करते हैं। यह अर्धतल सुसंगत क्षेत्र के साथ उभयनिष्ठ बिंदु रखता है (जैसे कि बिंदु x=3, y=10 के लिए Z=17 > 1)।</p>
+                    <p><strong>उत्तर:</strong> अतः Z का कोई अधिकतम मान नहीं है (Z अनंत तक जा सकता है)।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: निम्न अवरोधों के अंतर्गत Z = x + y का अधिकतमीकरण कीजिए: x - y &le; -1, -x + y &le; 0, x, y &ge; 0</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिए गए अवरोध हैं:</p>
+                    <p class="mb-2"><span class="math-expr">x - y &le; -1 &rArr; y &ge; x + 1</span> ...(1)</p>
+                    <p class="mb-2"><span class="math-expr">-x + y &le; 0 &rArr; y &le; x</span> ...(2)</p>
+                    <p class="mb-2"><span class="math-expr">x, y &ge; 0</span> ...(3)</p>
+                    <p class="mb-2">(1) और (2) से, हमें प्राप्त होता है: <span class="math-expr">x + 1 &le; y &le; x</span></p>
+                    <p class="mb-2">इसका अर्थ है कि <span class="math-expr">x + 1 &le; x</span>, जो कि <span class="math-expr">1 &le; 0</span> है, जो सत्य नहीं है।</p>
+                    <p><strong>उत्तर:</strong> अतः दिए गए अवरोधों के लिए कोई भी सुसंगत क्षेत्र नहीं है। इसलिए समस्या का कोई हल नहीं है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 2: प्रतिलोम त्रिकोणमितीय फलन</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        /* Line break rokne ke liye naya class */
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 2<br>प्रतिलोम त्रिकोणमितीय फलन</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 2.1 ==================== -->
+        <section id="exercise-2-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: <span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span></span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> = y</span>, तो <span class="math-expr">sin y = <span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span></span> होगा।</p>
+                    <p class="mb-2">हमें ज्ञात है कि <span class="math-expr">sin<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>]</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">sin(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span>) = <span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span></span> का मुख्य मान <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span></span> है।</p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>हिंदी स्पष्टीकरण:</strong> मुख्य शाखा के परिसर (Principal Range) का ध्यान रखना आवश्यक है, जो कि <span class="math-expr">[-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>]</span> है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span>)</span></span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span>)</span> = y</span>, तो <span class="math-expr">cos y = <span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span></span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[0, &pi;]</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">cos(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>) = <span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: <span class="math-expr">cosec<sup>-1</sup>(2)</span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cosec<sup>-1</sup>(2) = y</span>, तो <span class="math-expr">cosec y = 2</span> &rArr; <span class="math-expr">sin y = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">cosec<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>] - {0}</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">sin(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>) = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">cosec<sup>-1</sup>(2) = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: <span class="math-expr">tan<sup>-1</sup>(-&radic;3)</span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">tan<sup>-1</sup>(-&radic;3) = y</span>, तो <span class="math-expr">tan y = -&radic;3</span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>)</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">tan(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">3</span></span>) = -&radic;3</span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">tan<sup>-1</sup>(-&radic;3) = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">3</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span></span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> = y</span>, तो <span class="math-expr">cos y = <span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span></span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[0, &pi;]</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">cos(<span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span>) = <span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: <span class="math-expr">tan<sup>-1</sup>(-1)</span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">tan<sup>-1</sup>(-1) = y</span>, तो <span class="math-expr">tan y = -1</span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>)</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">tan(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span>) = -1</span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">tan<sup>-1</sup>(-1) = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: <span class="math-expr">sec<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">2</span><span class="denominator">&radic;3</span></span>)</span></span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">sec<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">2</span><span class="denominator">&radic;3</span></span>)</span> = y</span>, तो <span class="math-expr">sec y = <span class="fraction"><span class="numerator">2</span><span class="denominator">&radic;3</span></span></span> &rArr; <span class="math-expr">cos y = <span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span></span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">sec<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[0, &pi;] - {<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>}</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">cos(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>) = <span class="fraction"><span class="numerator">&radic;3</span><span class="denominator">2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">sec<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">2</span><span class="denominator">&radic;3</span></span>)</span> = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: <span class="math-expr">cot<sup>-1</sup>(&radic;3)</span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cot<sup>-1</sup>(&radic;3) = y</span>, तो <span class="math-expr">cot y = &radic;3</span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">cot<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">(0, &pi;)</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">cot(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>) = &radic;3</span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">cot<sup>-1</sup>(&radic;3) = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span>)</span></span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span>)</span> = y</span>, तो <span class="math-expr">cos y = <span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span></span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[0, &pi;]</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">cos(<span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span>) = <span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span>)</span> = <span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+                <div class="hinglish-explanation">
+                    <strong>नोट:</strong> पुस्तक में इसे <span class="math-expr">cos<sup>-1</sup>(-&radic;2)</span> छपा है, लेकिन मानक NCERT प्रश्न के अनुसार यह <span class="math-expr"><span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span></span> ही है।
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: <span class="math-expr">cosec<sup>-1</sup>(-&radic;2)</span> का मुख्य मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cosec<sup>-1</sup>(-&radic;2) = y</span>, तो <span class="math-expr">cosec y = -&radic;2</span> &rArr; <span class="math-expr">sin y = <span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span></span> होगा।</p>
+                    <p class="mb-2"><span class="math-expr">cosec<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">[-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>] - {0}</span> होता है।</p>
+                    <p class="mb-2">चूँकि <span class="math-expr">sin(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span>) = <span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;2</span></span></span> है,</p>
+                    <p><strong>उत्तर:</strong> अतः <span class="math-expr">cosec<sup>-1</sup>(-&radic;2) = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: <span class="math-expr">tan<sup>-1</sup>(1) + cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> + sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span></span> का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">हम जानते हैं कि:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup>(1) = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">अब सभी मानों को जोड़ने पर:</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> + <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span> - <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">3&pi; + 8&pi; - 2&pi;</span><span class="denominator">12</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">9&pi;</span><span class="denominator">12</span></span> = <span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: <span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span> + 2sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span></span> का मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">अब मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> + 2(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>)</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> + <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> = <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: यदि <span class="math-expr">sin<sup>-1</sup> x = y</span>, तो:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="math-expr">0 &le; y &le; &pi;</span></p>
+                    <p class="mb-2">(B) <span class="math-expr">-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span> &le; y &le; <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2">(C) <span class="math-expr">0 < y < &pi;</span></p>
+                    <p class="mb-2">(D) <span class="math-expr">-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span> < y < <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><strong>हल:</strong> हमें ज्ञात है कि <span class="math-expr">sin<sup>-1</sup> x</span> का मुख्य शाखा परिसर <span class="math-expr">[-<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>]</span> होता है।</p>
+                    <p><strong>उत्तर:</strong> अतः विकल्प (B) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: <span class="math-expr">tan<sup>-1</sup>&radic;3 - sec<sup>-1</sup>(-2)</span> का मान बराबर है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="math-expr">&pi;</span></p>
+                    <p class="mb-2">(B) <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2">(C) <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2">(D) <span class="math-expr"><span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2"><strong>हल:</strong></p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup>&radic;3 = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">sec<sup>-1</sup>(-2) = &pi; - sec<sup>-1</sup>(2) = &pi; - <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> = <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2">अब दोनों को घटाने पर:</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> - <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span> = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 2.2 ==================== -->
+        <section id="exercise-2-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 2.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: सिद्ध कीजिए कि <span class="math-expr">3sin<sup>-1</sup> x = sin<sup>-1</sup>(3x - 4x<sup>3</sup>), x &isin; [<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>]</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = sin &theta;</span>, तो <span class="math-expr">&theta; = sin<sup>-1</sup> x</span> होगा।</p>
+                    <p class="mb-2">अब दाएँ पक्ष (RHS) में <span class="math-expr">x</span> का मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">3x - 4x<sup>3</sup> = 3sin &theta; - 4sin<sup>3</sup> &theta;</span></p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">sin 3&theta; = 3sin &theta; - 4sin<sup>3</sup> &theta;</span> होता है, इसलिए:</p>
+                    <p class="mb-2"><span class="math-expr">sin<sup>-1</sup>(3x - 4x<sup>3</sup>) = sin<sup>-1</sup>(sin 3&theta;) = 3&theta;</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">x &isin; [<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>]</span>, तो <span class="math-expr">&theta; &isin; [<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>]</span> और <span class="math-expr">3&theta; &isin; [<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>]</span> (मुख्य शाखा में) होगा।</p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">sin<sup>-1</sup>(sin 3&theta;) = 3&theta; = 3sin<sup>-1</sup> x</span></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: सिद्ध कीजिए कि <span class="math-expr">3cos<sup>-1</sup> x = cos<sup>-1</sup>(4x<sup>3</sup> - 3x), x &isin; [<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>, 1]</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = cos &theta;</span>, तो <span class="math-expr">&theta; = cos<sup>-1</sup> x</span> होगा।</p>
+                    <p class="mb-2">दाएँ पक्ष में मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">4x<sup>3</sup> - 3x = 4cos<sup>3</sup> &theta; - 3cos &theta;</span></p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">cos 3&theta; = 4cos<sup>3</sup> &theta; - 3cos &theta;</span>, इसलिए:</p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup>(4x<sup>3</sup> - 3x) = cos<sup>-1</sup>(cos 3&theta;) = 3&theta;</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">x &isin; [<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>, 1]</span>, तो <span class="math-expr">&theta; &isin; [0, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span>]</span> और <span class="math-expr">3&theta; &isin; [0, &pi;]</span> (मुख्य शाखा में) होगा।</p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">cos<sup>-1</sup>(cos 3&theta;) = 3&theta; = 3cos<sup>-1</sup> x</span></p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: सरलतम रूप में लिखिए: <span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">&radic;1+x<sup>2</sup> - 1</span><span class="denominator">x</span></span> ), x &ne; 0</span></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = tan &theta;</span>, तो <span class="math-expr">&theta; = tan<sup>-1</sup> x</span> होगा।</p>
+                    <p class="mb-2">अब व्यंजक में मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">&radic;1+tan<sup>2</sup>&theta; - 1</span><span class="denominator">tan &theta;</span></span> )</span></span></p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">1 + tan<sup>2</sup>&theta; = sec<sup>2</sup>&theta;</span>, इसलिए:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">sec &theta; - 1</span><span class="denominator">tan &theta;</span></span> )</span></span></p>
+                    <p class="mb-2">इसे sine और cosine में बदलने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator"><span class="fraction"><span class="numerator">1</span><span class="denominator">cos &theta;</span></span> - 1</span><span class="denominator"><span class="fraction"><span class="numerator">sin &theta;</span><span class="denominator">cos &theta;</span></span></span></span> )</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">1 - cos &theta;</span><span class="denominator">sin &theta;</span></span> )</span></span></p>
+                    <p class="mb-2">अर्धकोण सूत्र से: <span class="math-expr"><span class="fraction"><span class="numerator">1 - cos &theta;</span><span class="denominator">sin &theta;</span></span> = tan(<span class="fraction"><span class="numerator">&theta;</span><span class="denominator">2</span></span>)</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">&theta;</span><span class="denominator">2</span></span>)) = <span class="fraction"><span class="numerator">&theta;</span><span class="denominator">2</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> tan<sup>-1</sup> x</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> tan<sup>-1</sup> x</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: सरलतम रूप में लिखिए: <span class="math-expr">tan<sup>-1</sup> ( &radic;(<span class="nowrap"><span class="fraction"><span class="numerator">1 - cos x</span><span class="denominator">1 + cos x</span></span></span>) ), 0 < x < &pi;</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि:</p>
+                    <p class="mb-2"><span class="math-expr">1 - cos x = 2sin<sup>2</sup>(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)</span> और <span class="math-expr">1 + cos x = 2cos<sup>2</sup>(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)</span></p>
+                    <p class="mb-2">व्यंजक में मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( &radic;(<span class="nowrap"><span class="fraction"><span class="numerator">2sin<sup>2</sup>(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)</span><span class="denominator">2cos<sup>2</sup>(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)</span></span></span>) )</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> ( &radic;(tan<sup>2</sup>(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)) )</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> ( tan(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>) )</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">0 < x < &pi;</span>, इसलिए <span class="math-expr">0 < <span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span> < <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span> (मुख्य शाखा में) होगा।</p>
+                    <p class="mb-2">अतः <span class="math-expr">tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span>)) = <span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: सरलतम रूप में लिखिए: <span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">cos x - sin x</span><span class="denominator">cos x + sin x</span></span></span> ), <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span> < x < <span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> अंश और हर दोनों में <span class="math-expr">cos x</span> से भाग देने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">1 - tan x</span><span class="denominator">1 + tan x</span></span> )</span></span></p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">tan(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> - x) = <span class="fraction"><span class="numerator">1 - tan x</span><span class="denominator">1 + tan x</span></span></span> होता है।</p>
+                    <p class="mb-2">अतः व्यंजक बनता है: <span class="math-expr">tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> - x))</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span> < x < <span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span></span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span> < <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> - x < <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span> (मुख्य शाखा में) होगा।</p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> - x)) = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> - x</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span> - x</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: सरलतम रूप में लिखिए: <span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">&radic;a<sup>2</sup> - x<sup>2</sup></span></span></span> ), |x| < a</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = a sin &theta;</span>, तो <span class="math-expr">&theta; = sin<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span></span>)</span> होगा।</p>
+                    <p class="mb-2">व्यंजक में मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">a sin &theta;</span><span class="denominator">&radic;a<sup>2</sup> - a<sup>2</sup>sin<sup>2</sup>&theta;</span></span> )</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">a sin &theta;</span><span class="denominator">&radic;a<sup>2</sup>cos<sup>2</sup>&theta;</span></span> )</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">a sin &theta;</span><span class="denominator">a cos &theta;</span></span> ) = tan<sup>-1</sup>(tan &theta;) = &theta;</span></p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">&theta; = sin<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span></span>)</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">sin<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span></span>)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: सरलतम रूप में लिखिए: <span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">3a<sup>2</sup>x - x<sup>3</sup></span><span class="denominator">a<sup>3</sup> - 3ax<sup>2</sup></span></span></span> ), a > 0; <span class="fraction"><span class="numerator">-a</span><span class="denominator">&radic;3</span></span> < x < <span class="fraction"><span class="numerator">a</span><span class="denominator">&radic;3</span></span></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = a tan &theta;</span>, तो <span class="math-expr">&theta; = tan<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span></span>)</span> होगा।</p>
+                    <p class="mb-2">व्यंजक में मान रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">3a<sup>3</sup>tan &theta; - a<sup>3</sup>tan<sup>3</sup>&theta;</span><span class="denominator">a<sup>3</sup> - 3a<sup>3</sup>tan<sup>2</sup>&theta;</span></span> )</span></span></p>
+                    <p class="mb-2">अंश और हर से <span class="math-expr">a<sup>3</sup></span> काटने पर:</p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">3tan &theta; - tan<sup>3</sup>&theta;</span><span class="denominator">1 - 3tan<sup>2</sup>&theta;</span></span> )</span></span></p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">tan 3&theta; = <span class="fraction"><span class="numerator">3tan &theta; - tan<sup>3</sup>&theta;</span><span class="denominator">1 - 3tan<sup>2</sup>&theta;</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup>(tan 3&theta;) = 3&theta;</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr"><span class="fraction"><span class="numerator">-a</span><span class="denominator">&radic;3</span></span> < x < <span class="fraction"><span class="numerator">a</span><span class="denominator">&radic;3</span></span></span>, तो <span class="math-expr">&theta; &isin; (<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>)</span> और <span class="math-expr">3&theta; &isin; (<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>)</span> होगा।</p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">3&theta; = 3 tan<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span></span>)</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">3 tan<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">a</span></span></span>)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: मान ज्ञात कीजिए: <span class="math-expr">tan<sup>-1</sup> [2cos(2sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span>)]</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> सबसे पहले अंदर वाले भाग को हल करते हैं:</p>
+                    <p class="mb-2"><span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">अब इसे व्यंजक में रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup> [2cos(2 &times; <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span>)]</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> [2cos(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span>)]</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup> [2 &times; (<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>)]</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan<sup>-1</sup>(1)</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: मान ज्ञात कीजिए: <span class="math-expr">tan<sup>-1</sup> [sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">2x</span><span class="denominator">1+x<sup>2</sup></span></span>)</span> + cos<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">1-y<sup>2</sup></span><span class="denominator">1+y<sup>2</sup></span></span>)</span>], |x| < 1, y > 0 तथा xy < 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = tan &theta;</span> और <span class="math-expr">y = tan &phi;</span>।</p>
+                    <p class="mb-2">तो, <span class="math-expr">sin<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">2x</span><span class="denominator">1+x<sup>2</sup></span></span></span>) = sin<sup>-1</sup>(sin 2&theta;) = 2&theta; = 2tan<sup>-1</sup>x</span></p>
+                    <p class="mb-2">और <span class="math-expr">cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">1-y<sup>2</sup></span><span class="denominator">1+y<sup>2</sup></span></span></span>) = cos<sup>-1</sup>(cos 2&phi;) = 2&phi; = 2tan<sup>-1</sup>y</span></p>
+                    <p class="mb-2">अब इन्हें मिलाने पर:</p>
+                    <p class="mb-2"><span class="math-expr">2(tan<sup>-1</sup>x + tan<sup>-1</sup>y)</span></p>
+                    <p class="mb-2">चूँकि <span class="math-expr">xy < 1</span> है, इसलिए:</p>
+                    <p class="mb-2"><span class="math-expr">= 2 tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">x+y</span><span class="denominator">1-xy</span></span> )</span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">2 tan<sup>-1</sup> ( <span class="nowrap"><span class="fraction"><span class="numerator">x+y</span><span class="denominator">1-xy</span></span> )</span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: मान ज्ञात कीजिए: <span class="math-expr">sin<sup>-1</sup>(sin(<span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span>))</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हमें ज्ञात है कि <span class="math-expr">sin<sup>-1</sup>(sin x) = x</span> केवल तभी होता है जब <span class="math-expr">x &isin; [<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>]</span> हो।</p>
+                    <p class="mb-2">यहाँ <span class="math-expr">x = <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span></span> है, जो कि मुख्य शाखा में नहीं है।</p>
+                    <p class="mb-2">लेकिन <span class="math-expr">sin(<span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span>) = sin(&pi; - <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span>) = sin(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span>)</span></p>
+                    <p class="mb-2">और <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> &isin; [<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>]</span></p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">sin<sup>-1</sup>(sin(<span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">3</span></span>)) = sin<sup>-1</sup>(sin(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span>)) = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: मान ज्ञात कीजिए: <span class="math-expr">tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span>))</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">tan<sup>-1</sup></span> का मुख्य शाखा परिसर <span class="math-expr">(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>)</span> है।</p>
+                    <p class="mb-2">यहाँ <span class="math-expr"><span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span></span> मुख्य शाखा में नहीं है।</p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">tan(<span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span>) = tan(<span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span> - &pi;) = tan(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span>)</span></p>
+                    <p class="mb-2">और <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span> &isin; (<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span>, <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>)</span></p>
+                    <p class="mb-2">इसलिए, <span class="math-expr">tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">4</span></span>)) = tan<sup>-1</sup>(tan(<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span>)) = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">4</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: मान ज्ञात कीजिए: <span class="math-expr">tan( sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span>)</span> + cot<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span>)</span> )</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span>)</span> = A</span>, तो <span class="math-expr">sin A = <span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span></span>। पाइथागोरस प्रमेय से <span class="math-expr">tan A = <span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span></span> होगा।</p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">cot<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span>)</span> = B</span>, तो <span class="math-expr">cot B = <span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></span> &rArr; <span class="math-expr">tan B = <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span>।</p>
+                    <p class="mb-2">अब हमें <span class="math-expr">tan(A + B)</span> का मान निकालना है:</p>
+                    <p class="mb-2"><span class="math-expr">tan(A + B) = <span class="fraction"><span class="numerator">tan A + tan B</span><span class="denominator">1 - tan A &middot; tan B</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator"><span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span> + <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span><span class="denominator">1 - (<span class="fraction"><span class="numerator">3</span><span class="denominator">4</span></span>)(<span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>)</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator"><span class="fraction"><span class="numerator">17</span><span class="denominator">12</span></span></span><span class="denominator">1 - <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator"><span class="fraction"><span class="numerator">17</span><span class="denominator">12</span></span></span><span class="denominator"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span></span> = <span class="fraction"><span class="numerator">17</span><span class="denominator">6</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">17</span><span class="denominator">6</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: <span class="math-expr">cos<sup>-1</sup>(cos(<span class="fraction"><span class="numerator">7&pi;</span><span class="denominator">6</span></span>))</span> का मान बराबर है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="math-expr"><span class="fraction"><span class="numerator">7&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">(B) <span class="math-expr"><span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">(C) <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2">(D) <span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">cos<sup>-1</sup></span> का मुख्य परिसर <span class="math-expr">[0, &pi;]</span> होता है।</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">7&pi;</span><span class="denominator">6</span></span></span> परिसर में नहीं है, इसलिए हम इसे बदलते हैं:</p>
+                    <p class="mb-2"><span class="math-expr">cos(<span class="fraction"><span class="numerator">7&pi;</span><span class="denominator">6</span></span>) = cos(2&pi; - <span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span>) = cos(<span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span>)</span></p>
+                    <p class="mb-2">और <span class="math-expr"><span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span> &isin; [0, &pi;]</span> है, इसलिए:</p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>-1</sup>(cos(<span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span>)) = <span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: <span class="math-expr">sin( <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> - sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> )</span> का मान है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2">(B) <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2">(C) <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span></span></p>
+                    <p class="mb-2">(D) <span class="math-expr">1</span></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">sin<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">-1</span><span class="denominator">2</span></span>)</span> = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">इसे व्यंजक में रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">sin( <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> - (<span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">6</span></span>) )</span></p>
+                    <p class="mb-2"><span class="math-expr">= sin( <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> + <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span> )</span></p>
+                    <p class="mb-2"><span class="math-expr">= sin( <span class="fraction"><span class="numerator">2&pi; + &pi;</span><span class="denominator">6</span></span> ) = sin(<span class="fraction"><span class="numerator">3&pi;</span><span class="denominator">6</span></span>)</span></p>
+                    <p class="mb-2"><span class="math-expr">= sin(<span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span>) = 1</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: <span class="math-expr">tan<sup>-1</sup>&radic;3 - cot<sup>-1</sup>(-&radic;3)</span> का मान है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="math-expr">&pi;</span></p>
+                    <p class="mb-2">(B) <span class="math-expr"><span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2">(C) <span class="math-expr">0</span></p>
+                    <p class="mb-2">(D) <span class="math-expr">2&radic;3</span></p>
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि:</p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup>&radic;3 = <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">cot<sup>-1</sup>(-&radic;3) = &pi; - cot<sup>-1</sup>(&radic;3) = &pi; - <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">6</span></span> = <span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span></span></p>
+                    <p class="mb-2">अब दोनों को घटाने पर:</p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">&pi;</span><span class="denominator">3</span></span> - <span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span> = <span class="fraction"><span class="numerator">2&pi;</span><span class="denominator">6</span></span> - <span class="fraction"><span class="numerator">5&pi;</span><span class="denominator">6</span></span> = <span class="fraction"><span class="numerator">-3&pi;</span><span class="denominator">6</span></span> = <span class="fraction"><span class="numerator">-&pi;</span><span class="denominator">2</span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

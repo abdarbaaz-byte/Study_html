@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 11: त्रि-विमीय ज्यामिति</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        .vector {
+            text-decoration: overline;
+            display: inline-block;
+        }
+        
+        /* Fixed Matrix Styling using Pseudo-elements */
+        .matrix-container {
+            display: inline-flex;
+            position: relative;
+            padding: 0 8px; /* Space for the vertical lines */
+            vertical-align: middle;
+            margin: 0 0.2em;
+        }
+        .matrix-container::before,
+        .matrix-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 1.5px solid black; /* The vertical determinant lines */
+        }
+        .matrix-container::before {
+            left: 0;
+        }
+        .matrix-container::after {
+            right: 0;
+        }
+        .matrix-table {
+            border-collapse: collapse;
+            margin: 0;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+        .matrix-table td {
+            padding: 0.2em 0.5em;
+            min-width: 1.5em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 11<br>त्रि-विमीय ज्यामिति</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 11.1 ==================== -->
+        <section id="exercise-11-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.1 (दिक्-कोसाइन और दिक्-अनुपात)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: यदि एक रेखा x, y और z-अक्ष के साथ क्रमशः 90°, 135°, 45° के कोण बनाती है तो इसकी दिक्-कोसाइन ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिया गया है, <span class="math-expr">&alpha; = 90&deg;, &beta; = 135&deg;, &gamma; = 45&deg;</span></p>
+                    <p class="mb-2">दिक्-कोसाइन: <span class="math-expr">l = cos &alpha;, m = cos &beta;, n = cos &gamma;</span></p>
+                    <p class="mb-2"><span class="math-expr">l = cos 90&deg; = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">m = cos 135&deg; = -<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">n = cos 45&deg; = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">0, -<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;2</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: एक रेखा की दिक्-कोसाइन ज्ञात कीजिए जो निर्देशांक्षों के साथ समान कोण बनाती है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए रेखा निर्देशांक्षों के साथ समान कोण &alpha; बनाती है।</p>
+                    <p class="mb-2">तब <span class="math-expr">l = m = n = cos &alpha;</span></p>
+                    <p class="mb-2">हम जानते हैं कि <span class="math-expr">l<sup>2</sup> + m<sup>2</sup> + n<sup>2</sup> = 1</span></p>
+                    <p class="mb-2"><span class="math-expr">cos<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 1 &rArr; 3cos<sup>2</sup>&alpha; = 1</span></p>
+                    <p class="mb-2"><span class="math-expr">cos &alpha; = &plusmn;<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;3</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">&plusmn;<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;3</span></span></span>, &plusmn;<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;3</span></span></span>, &plusmn;<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;3</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि एक रेखा के दिक्-अनुपात -18, 12, -4 हैं, तो इसकी दिक्-कोसाइन क्या है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिक्-अनुपात (a, b, c) = (-18, 12, -4)</p>
+                    <p class="mb-2"><span class="math-expr">&radic;(a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup>) = &radic;((-18)<sup>2</sup> + 12<sup>2</sup> + (-4)<sup>2</sup>)</span></p>
+                    <p class="mb-2"><span class="math-expr">= &radic;(324 + 144 + 16) = &radic;484 = 22</span></p>
+                    <p class="mb-2">दिक्-कोसाइन: <span class="math-expr">l = <span class="nowrap"><span class="fraction"><span class="numerator">-18</span><span class="denominator">22</span></span></span>, m = <span class="nowrap"><span class="fraction"><span class="numerator">12</span><span class="denominator">22</span></span></span>, n = <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">22</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">-<span class="nowrap"><span class="fraction"><span class="numerator">9</span><span class="denominator">11</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">6</span><span class="denominator">11</span></span></span>, -<span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">11</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: दर्शाइए कि बिंदु (2, 3, 4), (-1, -2, 1), (5, 8, 7) संरेख हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए A(2, 3, 4), B(-1, -2, 1) और C(5, 8, 7) हैं।</p>
+                    <p class="mb-2">AB के दिक्-अनुपात: <span class="math-expr">x<sub>2</sub>-x<sub>1</sub>, y<sub>2</sub>-y<sub>1</sub>, z<sub>2</sub>-z<sub>1</sub></span></p>
+                    <p class="mb-2"><span class="math-expr">= (-1-2), (-2-3), (1-4) = -3, -5, -3</span></p>
+                    <p class="mb-2">BC के दिक्-अनुपात: <span class="math-expr">= (5-(-1)), (8-(-2)), (7-1) = 6, 10, 6</span></p>
+                    <p class="mb-2">स्पष्ट है कि <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">-3</span><span class="denominator">6</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">-5</span><span class="denominator">10</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">-3</span><span class="denominator">6</span></span></span> = -<span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></span></span></p>
+                    <p class="mb-2">अतः AB और BC समांतर हैं। चूँकि B उभयनिष्ठ है, इसलिए A, B, C संरेख हैं।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक त्रिभुज की भुजाओं की दिक्-कोसाइन ज्ञात कीजिए यदि त्रिभुज के शीर्ष बिंदु (3, 5, -4), (-1, 1, 2) और (-5, -5, -2) हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए A(3, 5, -4), B(-1, 1, 2) और C(-5, -5, -2) हैं।</p>
+                    <p class="mb-2"><strong>भुजा AB:</strong> दिक्-अनुपात = (-1-3), (1-5), (2-(-4)) = -4, -4, 6</p>
+                    <p class="mb-2">परिमाण = <span class="math-expr">&radic;(16 + 16 + 36) = &radic;68 = 2&radic;17</span></p>
+                    <p class="mb-2">दिक्-कोसाइन = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">2&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">2&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">6</span><span class="denominator">2&radic;17</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">-2</span><span class="denominator">&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-2</span><span class="denominator">&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">&radic;17</span></span></span></span></p>
+                    <p class="mb-2"><strong>भुजा BC:</strong> दिक्-अनुपात = (-5-(-1)), (-5-1), (-2-2) = -4, -6, -4</p>
+                    <p class="mb-2">परिमाण = <span class="math-expr">&radic;(16 + 36 + 16) = &radic;68 = 2&radic;17</span></p>
+                    <p class="mb-2">दिक्-कोसाइन = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">2&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-6</span><span class="denominator">2&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">2&radic;17</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">-2</span><span class="denominator">&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-3</span><span class="denominator">&radic;17</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-2</span><span class="denominator">&radic;17</span></span></span></span></p>
+                    <p class="mb-2"><strong>भुजा CA:</strong> दिक्-अनुपात = (3-(-5)), (5-(-5)), (-4-(-2)) = 8, 10, -2</p>
+                    <p class="mb-2">परिमाण = <span class="math-expr">&radic;(64 + 100 + 4) = &radic;168 = 2&radic;42</span></p>
+                    <p class="mb-2">दिक्-कोसाइन = <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">2&radic;42</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">10</span><span class="denominator">2&radic;42</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-2</span><span class="denominator">2&radic;42</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">&radic;42</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">5</span><span class="denominator">&radic;42</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-1</span><span class="denominator">&radic;42</span></span></span></span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 11.2 ==================== -->
+        <section id="exercise-11-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 11.2 (रेखा का समीकरण, कोण, न्यूनतम दूरी)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: दर्शाइए कि दिक्-कोसाइन <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-3</span><span class="denominator">13</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">13</span></span></span></span>; <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">4</span><span class="denominator">13</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">13</span></span></span></span>; <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">13</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">13</span></span></span>, <span class="nowrap"><span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span></span></span> वाली तीन रेखाएँ परस्पर लंबवत हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए दिक्-कोसाइन क्रमशः (l<sub>1</sub>, m<sub>1</sub>, n<sub>1</sub>), (l<sub>2</sub>, m<sub>2</sub>, n<sub>2</sub>) और (l<sub>3</sub>, m<sub>3</sub>, n<sub>3</sub>) हैं।</p>
+                    <p class="mb-2"><strong>रेखा 1 और 2:</strong> <span class="math-expr">l<sub>1</sub>l<sub>2</sub> + m<sub>1</sub>m<sub>2</sub> + n<sub>1</sub>n<sub>2</sub> = <span class="nowrap">(<span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">4</span><span class="denominator">13</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">-3</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">-4</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">3</span><span class="denominator">13</span></span>)</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">48 - 36 - 12</span><span class="denominator">169</span></span></span> = 0</span> (लंबवत)</p>
+                    <p class="mb-2"><strong>रेखा 1 और 3:</strong> <span class="math-expr"><span class="nowrap">(<span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">3</span><span class="denominator">13</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">-3</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">-4</span><span class="denominator">13</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">-4</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span>)</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">36 + 12 - 48</span><span class="denominator">169</span></span></span> = 0</span> (लंबवत)</p>
+                    <p class="mb-2"><strong>रेखा 2 और 3:</strong> <span class="math-expr"><span class="nowrap">(<span class="fraction"><span class="numerator">4</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">3</span><span class="denominator">13</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">-4</span><span class="denominator">13</span></span>)</span> + <span class="nowrap">(<span class="fraction"><span class="numerator">3</span><span class="denominator">13</span></span>)(<span class="fraction"><span class="numerator">12</span><span class="denominator">13</span></span>)</span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="nowrap"><span class="fraction"><span class="numerator">12 - 48 + 36</span><span class="denominator">169</span></span></span> = 0</span> (लंबवत)</p>
+                    <p><strong>अतः तीनों रेखाएँ परस्पर लंबवत हैं।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: दर्शाइए कि बिंदुओं (1, -1, 2), (3, 4, -2) से होकर जाने वाली रेखा बिंदुओं (0, 3, 2) और (3, 5, 6) से जाने वाली रेखा पर लंब है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> पहली रेखा के दिक्-अनुपात: <span class="math-expr">(3-1), (4-(-1)), (-2-2) = 2, 5, -4</span></p>
+                    <p class="mb-2">दूसरी रेखा के दिक्-अनुपात: <span class="math-expr">(3-0), (5-3), (6-2) = 3, 2, 4</span></p>
+                    <p class="mb-2">इनका गुणनफल: <span class="math-expr">(2)(3) + (5)(2) + (-4)(4) = 6 + 10 - 16 = 0</span></p>
+                    <p><strong>अतः दोनों रेखाएँ परस्पर लंब हैं।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: दर्शाइए कि बिंदुओं (4, 7, 8), (2, 3, 4) से होकर जाने वाली रेखा, बिंदुओं (-1, -2, 1), (1, 2, 5) से जाने वाली रेखा के समांतर है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> पहली रेखा के दिक्-अनुपात: <span class="math-expr">(2-4), (3-7), (4-8) = -2, -4, -4</span></p>
+                    <p class="mb-2">दूसरी रेखा के दिक्-अनुपात: <span class="math-expr">(1-(-1)), (2-(-2)), (5-1) = 2, 4, 4</span></p>
+                    <p class="mb-2">स्पष्ट है कि <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">-2</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">4</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">-4</span><span class="denominator">4</span></span></span> = -1</span></p>
+                    <p><strong>अतः दोनों रेखाएँ समांतर हैं।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: बिंदु (1, 2, 3) से गुजरने वाली रेखा का समीकरण ज्ञात कीजिए जो सदिश <span class="math-expr">3i&#770; + 2j&#770; - 2k&#770;</span> के समांतर है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> रेखा बिंदु (1, 2, 3) से गुजरती है और समांतर सदिश <span class="math-expr"><span class="vector">b</span> = 3i&#770; + 2j&#770; - 2k&#770;</span> है।</p>
+                    <p class="mb-2">सदिश समीकरण: <span class="math-expr"><span class="vector">r</span> = (i&#770; + 2j&#770; + 3k&#770;) + &lambda;(3i&#770; + 2j&#770; - 2k&#770;)</span></p>
+                    <p class="mb-2">कार्तीय समीकरण: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-1</span><span class="denominator">3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-2</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-3</span><span class="denominator">-2</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: बिंदु जिसकी स्थिति सदिश <span class="math-expr">2i&#770; - j&#770; + 4k&#770;</span> से गुजरने व सदिश <span class="math-expr">i&#770; + 2j&#770; - k&#770;</span> की दिशा में जाने वाली रेखा का सदिश और कातीय रूपों में समीकरण ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> स्थिति सदिश <span class="math-expr"><span class="vector">a</span> = 2i&#770; - j&#770; + 4k&#770;</span>, दिशा सदिश <span class="math-expr"><span class="vector">b</span> = i&#770; + 2j&#770; - k&#770;</span></p>
+                    <p class="mb-2">सदिश समीकरण: <span class="math-expr"><span class="vector">r</span> = (2i&#770; - j&#770; + 4k&#770;) + &lambda;(i&#770; + 2j&#770; - k&#770;)</span></p>
+                    <p class="mb-2">कार्तीय समीकरण: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-2</span><span class="denominator">1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y+1</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-4</span><span class="denominator">-1</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: उस रेखा का कातीय समीकरण ज्ञात कीजिए जो बिंदु (-2, 4, -5) से जाती है और रेखा <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x+3</span><span class="denominator">3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-4</span><span class="denominator">5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z+8</span><span class="denominator">6</span></span></span></span> के समांतर है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दी गई रेखा के दिक्-अनुपात: 3, 5, 6</p>
+                    <p class="mb-2">रेखा बिंदु (-2, 4, -5) से गुजरती है और समांतर है।</p>
+                    <p class="mb-2">अभीष्ट समीकरण: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x+2</span><span class="denominator">3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-4</span><span class="denominator">5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z+5</span><span class="denominator">6</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: एक रेखा का कातीय समीकरण <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-5</span><span class="denominator">3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y+4</span><span class="denominator">7</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-6</span><span class="denominator">2</span></span></span></span> है। इसका सदिश समीकरण ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दी गई रेखा बिंदु (5, -4, 6) से गुजरती है और इसके दिक्-अनुपात 3, 7, 2 हैं।</p>
+                    <p class="mb-2">स्थिति सदिश <span class="math-expr"><span class="vector">a</span> = 5i&#770; - 4j&#770; + 6k&#770;</span>, दिशा सदिश <span class="math-expr"><span class="vector">b</span> = 3i&#770; + 7j&#770; + 2k&#770;</span></p>
+                    <p class="mb-2">सदिश समीकरण: <span class="math-expr"><span class="vector">r</span> = (5i&#770; - 4j&#770; + 6k&#770;) + &lambda;(3i&#770; + 7j&#770; + 2k&#770;)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: निम्नलिखित रेखा-युग्मों के बीच का कोण ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) <span class="math-expr"><span class="vector">r</span> = 2i&#770; - 5j&#770; + k&#770; + &lambda;(3i&#770; + 2j&#770; + 6k&#770;)</span> और <span class="math-expr"><span class="vector">r</span> = 7i&#770; - 6k&#770; + &mu;(i&#770; + 2j&#770; + 2k&#770;)</span></strong></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">b<sub>1</sub></span> = 3i&#770; + 2j&#770; + 6k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>2</sub></span> = i&#770; + 2j&#770; + 2k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b<sub>1</sub></span> &middot; <span class="vector">b<sub>2</sub></span> = (3)(1) + (2)(2) + (6)(2) = 3 + 4 + 12 = 19</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b<sub>1</sub></span>| = &radic;(9+4+36) = 7</span>, <span class="math-expr">|<span class="vector">b<sub>2</sub></span>| = &radic;(1+4+4) = 3</span></p>
+                    <p class="mb-2"><span class="math-expr">cos&theta; = <span class="nowrap"><span class="fraction"><span class="numerator">19</span><span class="denominator">7 &times; 3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">19</span><span class="denominator">21</span></span></span> &rArr; &theta; = cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">19</span><span class="denominator">21</span></span></span>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) <span class="math-expr"><span class="vector">r</span> = 3i&#770; + j&#770; - 2k&#770; + &lambda;(i&#770; - j&#770; - 2k&#770;)</span> और <span class="math-expr"><span class="vector">r</span> = 2i&#770; - j&#770; - 56k&#770; + &mu;(3i&#770; - 5j&#770; - 4k&#770;)</span></strong></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">b<sub>1</sub></span> = i&#770; - j&#770; - 2k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>2</sub></span> = 3i&#770; - 5j&#770; - 4k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b<sub>1</sub></span> &middot; <span class="vector">b<sub>2</sub></span> = (1)(3) + (-1)(-5) + (-2)(-4) = 3 + 5 + 8 = 16</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b<sub>1</sub></span>| = &radic;6</span>, <span class="math-expr">|<span class="vector">b<sub>2</sub></span>| = &radic;(9+25+16) = &radic;50 = 5&radic;2</span></p>
+                    <p class="mb-2"><span class="math-expr">cos&theta; = <span class="nowrap"><span class="fraction"><span class="numerator">16</span><span class="denominator">&radic;6 &times; 5&radic;2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">16</span><span class="denominator">5&radic;12</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">5&radic;3</span></span></span> &rArr; &theta; = cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">5&radic;3</span></span></span>)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: निम्नलिखित रेखा-युग्मों के बीच का कोण ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-2</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-1</span><span class="denominator">5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z+3</span><span class="denominator">-3</span></span></span></span> और <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x+2</span><span class="denominator">-1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-4</span><span class="denominator">8</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-5</span><span class="denominator">4</span></span></span></span></strong></p>
+                    <p class="mb-2"><strong>हल:</strong> दिक्-अनुपात: (2, 5, -3) और (-1, 8, 4)</p>
+                    <p class="mb-2"><span class="math-expr">a<sub>1</sub>a<sub>2</sub> + b<sub>1</sub>b<sub>2</sub> + c<sub>1</sub>c<sub>2</sub> = (2)(-1) + (5)(8) + (-3)(4) = -2 + 40 - 12 = 26</span></p>
+                    <p class="mb-2"><span class="math-expr">&radic;(a<sub>1</sub><sup>2</sup>+b<sub>1</sub><sup>2</sup>+c<sub>1</sub><sup>2</sup>) = &radic;(4+25+9) = &radic;38</span></p>
+                    <p class="mb-2"><span class="math-expr">&radic;(a<sub>2</sub><sup>2</sup>+b<sub>2</sub><sup>2</sup>+c<sub>2</sub><sup>2</sup>) = &radic;(1+64+16) = 9</span></p>
+                    <p class="mb-2"><span class="math-expr">cos&theta; = <span class="nowrap"><span class="fraction"><span class="numerator">26</span><span class="denominator">9&radic;38</span></span></span> &rArr; &theta; = cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">26</span><span class="denominator">9&radic;38</span></span></span>)</span></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z</span><span class="denominator">1</span></span></span></span> और <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-5</span><span class="denominator">4</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-2</span><span class="denominator">1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-3</span><span class="denominator">8</span></span></span></span></strong></p>
+                    <p class="mb-2"><strong>हल:</strong> दिक्-अनुपात: (2, 2, 1) और (4, 1, 8)</p>
+                    <p class="mb-2"><span class="math-expr">a<sub>1</sub>a<sub>2</sub> + b<sub>1</sub>b<sub>2</sub> + c<sub>1</sub>c<sub>2</sub> = (2)(4) + (2)(1) + (1)(8) = 8 + 2 + 8 = 18</span></p>
+                    <p class="mb-2"><span class="math-expr">&radic;(a<sub>1</sub><sup>2</sup>+b<sub>1</sub><sup>2</sup>+c<sub>1</sub><sup>2</sup>) = 3</span>, <span class="math-expr">&radic;(a<sub>2</sub><sup>2</sup>+b<sub>2</sub><sup>2</sup>+c<sub>2</sub><sup>2</sup>) = 9</span></p>
+                    <p class="mb-2"><span class="math-expr">cos&theta; = <span class="nowrap"><span class="fraction"><span class="numerator">18</span><span class="denominator">27</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span> &rArr; &theta; = cos<sup>-1</sup>(<span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></span>)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: p का मान ज्ञात कीजिए ताकि रेखाएँ <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">1-x</span><span class="denominator">3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">7y-14</span><span class="denominator">2p</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-3</span><span class="denominator">2</span></span></span></span> और <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">7-7x</span><span class="denominator">3p</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-5</span><span class="denominator">1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">6-z</span><span class="denominator">5</span></span></span></span> परस्पर लंब हों।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> पहली रेखा: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-1</span><span class="denominator">-3</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-2</span><span class="denominator">2p/7</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-3</span><span class="denominator">2</span></span></span></span> (दिक्-अनुपात: -3, 2p/7, 2)</p>
+                    <p class="mb-2">दूसरी रेखा: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-1</span><span class="denominator">-3p/7</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-5</span><span class="denominator">1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-6</span><span class="denominator">-5</span></span></span></span> (दिक्-अनुपात: -3p/7, 1, -5)</p>
+                    <p class="mb-2">लंबवत होने के लिए: <span class="math-expr">(-3)(-3p/7) + (2p/7)(1) + (2)(-5) = 0</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">9p</span><span class="denominator">7</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">2p</span><span class="denominator">7</span></span></span> - 10 = 0 &rArr; <span class="nowrap"><span class="fraction"><span class="numerator">11p</span><span class="denominator">7</span></span></span> = 10</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">p = <span class="nowrap"><span class="fraction"><span class="numerator">70</span><span class="denominator">11</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: दिखाइए कि रेखाएँ <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-5</span><span class="denominator">7</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y+2</span><span class="denominator">-5</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z</span><span class="denominator">1</span></span></span></span> और <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y</span><span class="denominator">2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z</span><span class="denominator">3</span></span></span></span> परस्पर लंब हैं।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दिक्-अनुपात: (7, -5, 1) और (1, 2, 3)</p>
+                    <p class="mb-2"><span class="math-expr">a<sub>1</sub>a<sub>2</sub> + b<sub>1</sub>b<sub>2</sub> + c<sub>1</sub>c<sub>2</sub> = (7)(1) + (-5)(2) + (1)(3) = 7 - 10 + 3 = 0</span></p>
+                    <p><strong>अतः रेखाएँ परस्पर लंब हैं।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: रेखाओं <span class="math-expr"><span class="vector">r</span> = (i&#770; + 2j&#770; + k&#770;) + &lambda;(i&#770; - j&#770; + k&#770;)</span> और <span class="math-expr"><span class="vector">r</span> = 2i&#770; - j&#770; - k&#770; + &mu;(2i&#770; + j&#770; + 2k&#770;)</span> के बीच की न्यूनतम दूरी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a<sub>1</sub></span> = i&#770; + 2j&#770; + k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>1</sub></span> = i&#770; - j&#770; + k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>2</sub></span> = 2i&#770; - j&#770; - k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>2</sub></span> = 2i&#770; + j&#770; + 2k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span> = (2-1)i&#770; + (-1-2)j&#770; + (-1-1)k&#770; = i&#770; - 3j&#770; - 2k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>1</td><td>-1</td><td>1</td></tr><tr><td>2</td><td>1</td><td>2</td></tr></table></span> = i&#770;(-2-1) - j&#770;(2-2) + k&#770;(1-(-2)) = -3i&#770; - 0j&#770; + 3k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>| = &radic;(9+0+9) = 3&radic;2</span></p>
+                    <p class="mb-2"><span class="math-expr">(<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>) &middot; (<span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span>) = (-3)(1) + (0)(-3) + (3)(-2) = -3 + 0 - 6 = -9</span></p>
+                    <p class="mb-2"><span class="math-expr">d = |<span class="nowrap"><span class="fraction"><span class="numerator">-9</span><span class="denominator">3&radic;2</span></span></span>| = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">&radic;2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">3&radic;2</span><span class="denominator">2</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: रेखाओं <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x+1</span><span class="denominator">7</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y+1</span><span class="denominator">-6</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z+1</span><span class="denominator">1</span></span></span></span> और <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">x-3</span><span class="denominator">1</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y-5</span><span class="denominator">-2</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">z-7</span><span class="denominator">1</span></span></span></span> के बीच की न्यूनतम दूरी ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">x<sub>1</sub>=-1, y<sub>1</sub>=-1, z<sub>1</sub>=-1</span>, <span class="math-expr">a<sub>1</sub>=7, b<sub>1</sub>=-6, c<sub>1</sub>=1</span></p>
+                    <p class="mb-2"><span class="math-expr">x<sub>2</sub>=3, y<sub>2</sub>=5, z<sub>2</sub>=7</span>, <span class="math-expr">a<sub>2</sub>=1, b<sub>2</sub>=-2, c<sub>2</sub>=1</span></p>
+                    <p class="mb-2"><span class="math-expr">x<sub>2</sub>-x<sub>1</sub> = 4, y<sub>2</sub>-y<sub>1</sub> = 6, z<sub>2</sub>-z<sub>1</sub> = 8</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>7</td><td>-6</td><td>1</td></tr><tr><td>1</td><td>-2</td><td>1</td></tr></table></span> = i&#770;(-6+2) - j&#770;(7-1) + k&#770;(-14+6) = -4i&#770; - 6j&#770; - 8k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>| = &radic;(16+36+64) = &radic;116 = 2&radic;29</span></p>
+                    <p class="mb-2"><span class="math-expr">(<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>) &middot; (<span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span>) = (-4)(4) + (-6)(6) + (-8)(8) = -16 - 36 - 64 = -116</span></p>
+                    <p class="mb-2"><span class="math-expr">d = |<span class="nowrap"><span class="fraction"><span class="numerator">-116</span><span class="denominator">2&radic;29</span></span></span>| = <span class="nowrap"><span class="fraction"><span class="numerator">58</span><span class="denominator">&radic;29</span></span></span> = 2&radic;29</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: रेखाएँ, जिनके सदिश समीकरण निम्नलिखित हैं, के बीच की न्यूनतम दूरी ज्ञात कीजिए: <span class="math-expr"><span class="vector">r</span> = (i&#770; + 2j&#770; + 3k&#770;) + &lambda;(i&#770; - 3j&#770; + 2k&#770;)</span> और <span class="math-expr"><span class="vector">r</span> = 4i&#770; + 5j&#770; + 6k&#770; + &mu;(2i&#770; + 3j&#770; + k&#770;)</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="vector">a<sub>1</sub></span> = i&#770; + 2j&#770; + 3k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>1</sub></span> = i&#770; - 3j&#770; + 2k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>2</sub></span> = 4i&#770; + 5j&#770; + 6k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>2</sub></span> = 2i&#770; + 3j&#770; + k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span> = 3i&#770; + 3j&#770; + 3k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>1</td><td>-3</td><td>2</td></tr><tr><td>2</td><td>3</td><td>1</td></tr></table></span> = i&#770;(-3-6) - j&#770;(1-4) + k&#770;(3+6) = -9i&#770; + 3j&#770; + 9k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>| = &radic;(81+9+81) = &radic;171 = 3&radic;19</span></p>
+                    <p class="mb-2"><span class="math-expr">(<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>) &middot; (<span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span>) = (-9)(3) + (3)(3) + (9)(3) = -27 + 9 + 27 = 9</span></p>
+                    <p class="mb-2"><span class="math-expr">d = |<span class="nowrap"><span class="fraction"><span class="numerator">9</span><span class="denominator">3&radic;19</span></span></span>| = <span class="nowrap"><span class="fraction"><span class="numerator">3</span><span class="denominator">&radic;19</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: रेखाएँ, जिनकी सदिश समीकरण निम्नलिखित हैं, के बीच की न्यूनतम दूरी ज्ञात कीजिए: <span class="math-expr"><span class="vector">r</span> = (1-t)i&#770; + (t-2)j&#770; + (3-2t)k&#770;</span> और <span class="math-expr"><span class="vector">r</span> = (s+1)i&#770; + (2s-1)j&#770; - (2s+1)k&#770;</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> पहली रेखा: <span class="math-expr"><span class="vector">r</span> = (i&#770; - 2j&#770; + 3k&#770;) + t(-i&#770; + j&#770; - 2k&#770;)</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>1</sub></span> = i&#770; - 2j&#770; + 3k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>1</sub></span> = -i&#770; + j&#770; - 2k&#770;</span></p>
+                    <p class="mb-2">दूसरी रेखा: <span class="math-expr"><span class="vector">r</span> = (i&#770; - j&#770; - k&#770;) + s(i&#770; + 2j&#770; - 2k&#770;)</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>2</sub></span> = i&#770; - j&#770; - k&#770;</span>, <span class="math-expr"><span class="vector">b<sub>2</sub></span> = i&#770; + 2j&#770; - 2k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span> = j&#770; - 4k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span> = <span class="matrix-container"><table class="matrix-table"><tr><td>i&#770;</td><td>j&#770;</td><td>k&#770;</td></tr><tr><td>-1</td><td>1</td><td>-2</td></tr><tr><td>1</td><td>2</td><td>-2</td></tr></table></span> = i&#770;(-2+4) - j&#770;(2+2) + k&#770;(-2-1) = 2i&#770; - 4j&#770; - 3k&#770;</span></p>
+                    <p class="mb-2"><span class="math-expr">|<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>| = &radic;(4+16+9) = &radic;29</span></p>
+                    <p class="mb-2"><span class="math-expr">(<span class="vector">b<sub>1</sub></span> &times; <span class="vector">b<sub>2</sub></span>) &middot; (<span class="vector">a<sub>2</sub></span> - <span class="vector">a<sub>1</sub></span>) = (2)(0) + (-4)(1) + (-3)(-4) = 0 - 4 + 12 = 8</span></p>
+                    <p class="mb-2"><span class="math-expr">d = |<span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">&radic;29</span></span></span>| = <span class="nowrap"><span class="fraction"><span class="numerator">8</span><span class="denominator">&radic;29</span></span></span></span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

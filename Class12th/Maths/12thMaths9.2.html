@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 9: अवकल समीकरण</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 9<br>अवकल समीकरण</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 9.4 ==================== -->
+        <section id="exercise-9-4" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 9.4 (समघातीय अवकल समीकरण)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: <span class="math-expr">(x<sup>2</sup> + xy) dy = (x<sup>2</sup> + y<sup>2</sup>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup> + y<sup>2</sup></span><span class="denominator">x<sup>2</sup> + xy</span></span></span></span></p>
+                    <p class="mb-2">यह एक समघातीय अवकल समीकरण है। मान लीजिए <span class="math-expr">y = vx &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1 + v<sup>2</sup></span><span class="denominator">1 + v</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1 + v<sup>2</sup> - v - v<sup>2</sup></span><span class="denominator">1 + v</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1 - v</span><span class="denominator">1 + v</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">1 + v</span><span class="denominator">1 - v</span></span></span> dv = &int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap">(-1 + <span class="fraction"><span class="numerator">2</span><span class="denominator">1 - v</span></span>)</span> dv = log|x| + C</span></p>
+                    <p class="mb-2"><span class="math-expr">-v - 2log|1 - v| = log|x| + C</span></p>
+                    <p class="mb-2"><span class="math-expr">-<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - 2log<span class="nowrap">|<span class="fraction"><span class="numerator">x - y</span><span class="denominator">x</span></span>|</span> = log|x| + C</span></p>
+                    <p class="mb-2"><span class="math-expr">-<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - 2log|x - y| + 2log|x| = log|x| + C</span></p>
+                    <p class="mb-2"><span class="math-expr">-<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - 2log|x - y| + log|x| = C</span></p>
+                    <p class="mb-2"><span class="math-expr">log|x| - 2log|x - y| = C + <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">(x - y)<sup>2</sup> = Cx e<sup>-y/x</sup></span> (या <span class="math-expr">y/x + 2log|x - y| - log|x| = C</span>)</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: <span class="math-expr">y' = <span class="nowrap"><span class="fraction"><span class="numerator">x + y</span><span class="denominator">x</span></span></span></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = 1 + <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">y = vx &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = 1 + v &rArr; x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = 1</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; dv = &int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> &rArr; v = log|x| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = x log|x| + Cx</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: <span class="math-expr">(x - y) dy - (x + y) dx = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">x + y</span><span class="denominator">x - y</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1 + v</span><span class="denominator">1 - v</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1 + v</span><span class="denominator">1 - v</span></span></span> - v = <span class="nowrap"><span class="fraction"><span class="numerator">1 + v - v + v<sup>2</sup></span><span class="denominator">1 - v</span></span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1 + v<sup>2</sup></span><span class="denominator">1 - v</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">1 - v</span><span class="denominator">1 + v<sup>2</sup></span></span></span> dv = &int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">tan<sup>-1</sup>v - <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>log(1 + v<sup>2</sup>) = log|x| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">2tan<sup>-1</sup><span class="nowrap">(<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span>)</span> - log(x<sup>2</sup> + y<sup>2</sup>) = C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: <span class="math-expr">(x<sup>2</sup> - y<sup>2</sup>) dx + 2xy dy = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>2</sup> - x<sup>2</sup></span><span class="denominator">2xy</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">v<sup>2</sup> - 1</span><span class="denominator">2v</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">v<sup>2</sup> - 1 - 2v<sup>2</sup></span><span class="denominator">2v</span></span></span> = -<span class="nowrap"><span class="fraction"><span class="numerator">1 + v<sup>2</sup></span><span class="denominator">2v</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">2v</span><span class="denominator">1 + v<sup>2</sup></span></span></span> dv = -&int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">log(1 + v<sup>2</sup>) = -log|x| + C &rArr; log<span class="nowrap">(<span class="fraction"><span class="numerator">x<sup>2</sup> + y<sup>2</sup></span><span class="denominator">x<sup>2</sup></span></span>)</span> + log|x| = C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">x<sup>2</sup> + y<sup>2</sup> = Cx</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: <span class="math-expr">x<sup>2</sup><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = x<sup>2</sup> - 2y<sup>2</sup> + xy</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = 1 - 2<span class="nowrap">(<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span>)</span><sup>2</sup> + <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = 1 - 2v<sup>2</sup> + v</span></p>
+                    <p class="mb-2"><span class="math-expr">x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = 1 - 2v<sup>2</sup> &rArr; &int; <span class="nowrap"><span class="fraction"><span class="numerator">dv</span><span class="denominator">1 - 2v<sup>2</sup></span></span></span> = &int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;2</span></span></span> log<span class="nowrap">|<span class="fraction"><span class="numerator">1 + &radic;2v</span><span class="denominator">1 - &radic;2v</span></span>|</span> = log|x| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">2&radic;2</span></span></span> log<span class="nowrap">|<span class="fraction"><span class="numerator">x + &radic;2y</span><span class="denominator">x - &radic;2y</span></span>|</span> = log|x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: <span class="math-expr">x dy - y dx = &radic;(x<sup>2</sup> + y<sup>2</sup>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - y = &radic;(x<sup>2</sup> + y<sup>2</sup>) &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span></span>&radic;(x<sup>2</sup> + y<sup>2</sup>)</span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> - v = <span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span>&radic;(x<sup>2</sup> + v<sup>2</sup>x<sup>2</sup>) = &radic;(1 + v<sup>2</sup>)</span></p>
+                    <p class="mb-2"><span class="math-expr">x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = &radic;(1 + v<sup>2</sup>) &rArr; &int; <span class="nowrap"><span class="fraction"><span class="numerator">dv</span><span class="denominator">&radic;(1 + v<sup>2</sup>)</span></span></span> = &int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">log|v + &radic;(1 + v<sup>2</sup>)| = log|x| + C &rArr; v + &radic;(1 + v<sup>2</sup>) = Cx</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y + &radic;(x<sup>2</sup> + y<sup>2</sup>) = Cx<sup>2</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: <span class="math-expr">{x cos(y/x) + y sin(y/x)} y dx = {y sin(y/x) - x cos(y/x)} x dy</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> दोनों पक्षों को <span class="math-expr">x<sup>2</sup></span> से भाग देने पर और <span class="math-expr">y = vx</span> रखने पर:</p>
+                    <p class="mb-2"><span class="math-expr">(cos v + v sin v) v dx = (v sin v - cos v) (v dx + x dv)</span></p>
+                    <p class="mb-2"><span class="math-expr">v cos v dx + v<sup>2</sup> sin v dx = v<sup>2</sup> sin v dx + v x sin v dv - v cos v dx - x cos v dv</span></p>
+                    <p class="mb-2"><span class="math-expr">2v cos v dx = x(v sin v - cos v) dv</span></p>
+                    <p class="mb-2"><span class="math-expr">2<span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">v sin v - cos v</span><span class="denominator">v cos v</span></span></span> dv = (tan v - <span class="fraction"><span class="numerator">1</span><span class="denominator">v</span></span>) dv</span></p>
+                    <p class="mb-2"><span class="math-expr">2 log|x| = -log|cos v| - log|v| + C &rArr; log(x<sup>2</sup> v cos v) = C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">xy cos(y/x) = C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: <span class="math-expr">x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - y + x sin(y/x) = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - sin<span class="nowrap">(<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span>)</span></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = v - sin v &rArr; x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = -sin v</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; cosec v dv = -&int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> &rArr; log|tan(v/2)| = -log|x| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">x = C e<sup>cos(y/x)</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: <span class="math-expr">y dx + x log(y/x) dy - 2x dy = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">2x - x log(y/x)</span><span class="denominator">y</span></span></span></span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">x = vy &rArr; <span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> = v + y<span class="fraction"><span class="numerator">dv</span><span class="denominator">dy</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">v + y<span class="fraction"><span class="numerator">dv</span><span class="denominator">dy</span></span> = 2v - v log v &rArr; y<span class="fraction"><span class="numerator">dv</span><span class="denominator">dy</span></span> = v(1 - log v)</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">dv</span><span class="denominator">v(1 - log v)</span></span></span> = &int; <span class="fraction"><span class="numerator">dy</span><span class="denominator">y</span></span></span>. मान लीजिए <span class="math-expr">1 - log v = t &rArr; -<span class="fraction"><span class="numerator">1</span><span class="denominator">v</span></span> dv = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">-log|t| = log|y| + C &rArr; log|y(1 - log v)| = C'</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y<span class="nowrap">(1 - log<span class="nowrap">(<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span>)</span>)</span> = C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: <span class="math-expr">{1 + e<sup>x/y</sup>} dx + e<sup>x/y</sup> {1 - x/y} dy = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x = vy &rArr; dx = v dy + y dv</span></p>
+                    <p class="mb-2"><span class="math-expr">(1 + e<sup>v</sup>)(v dy + y dv) + e<sup>v</sup>(1 - v) dy = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">(v + v e<sup>v</sup> + e<sup>v</sup> - v e<sup>v</sup>) dy + y(1 + e<sup>v</sup>) dv = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">(v + e<sup>v</sup>) dy + y(1 + e<sup>v</sup>) dv = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="fraction"><span class="numerator">dy</span><span class="denominator">y</span></span> + &int; <span class="nowrap"><span class="fraction"><span class="numerator">1 + e<sup>v</sup></span><span class="denominator">v + e<sup>v</sup></span></span></span> dv = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">log|y| + log|v + e<sup>v</sup>| = log C &rArr; y(v + e<sup>v</sup>) = C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">x + y e<sup>x/y</sup> = C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: <span class="math-expr">(x + y) dy + (x - y) dx = 0; y = 1 यदि x = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y - x</span><span class="denominator">y + x</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">v - 1</span><span class="denominator">v + 1</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">v - 1 - v<sup>2</sup> - v</span><span class="denominator">v + 1</span></span></span> = -<span class="nowrap"><span class="fraction"><span class="numerator">v<sup>2</sup> + 1</span><span class="denominator">v + 1</span></span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">v + 1</span><span class="denominator">v<sup>2</sup> + 1</span></span></span> dv = -&int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log(v<sup>2</sup> + 1) + tan<sup>-1</sup>v = -log|x| + C</span></p>
+                    <p class="mb-2"><span class="math-expr">log(x<sup>2</sup> + y<sup>2</sup>) + 2tan<sup>-1</sup>(y/x) = C'</span>. (1, 1) रखने पर: <span class="math-expr">log 2 + 2(&pi;/4) = C'</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">log(x<sup>2</sup> + y<sup>2</sup>) + 2tan<sup>-1</sup>(y/x) = log 2 + <span class="fraction"><span class="numerator">&pi;</span><span class="denominator">2</span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: <span class="math-expr">x<sup>2</sup> dy + (xy + y<sup>2</sup>) dx = 0; y = 1 यदि x = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = -<span class="nowrap">(<span class="fraction"><span class="numerator">xy + y<sup>2</sup></span><span class="denominator">x<sup>2</sup></span></span>)</span> = -<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - <span class="nowrap">(<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span>)</span><sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = -v - v<sup>2</sup> &rArr; x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = -v(2 + v)</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">dv</span><span class="denominator">v(v + 2)</span></span></span> = -&int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> &rArr; <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log<span class="nowrap">|<span class="fraction"><span class="numerator">v</span><span class="denominator">v + 2</span></span>|</span> = -log|x| + C</span></p>
+                    <p class="mb-2"><span class="math-expr">log<span class="nowrap">|<span class="fraction"><span class="numerator">y/x</span><span class="denominator">y/x + 2</span></span>|</span> = -2log|x| + C' &rArr; <span class="nowrap"><span class="fraction"><span class="numerator">y</span><span class="denominator">y + 2x</span></span></span> = C x<sup>-2</sup></span></p>
+                    <p class="mb-2">(1, 1) रखने पर: <span class="math-expr"><span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span> = C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">x<sup>2</sup>y = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></span>(y + 2x) &rArr; 3x<sup>2</sup>y = y + 2x</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: <span class="math-expr">[x sin<sup>2</sup>(y/x) - y] dx + x dy = 0; y = &pi;/4 यदि x = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - sin<sup>2</sup>(y/x)</span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = v - sin<sup>2</sup>v &rArr; x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = -sin<sup>2</sup>v</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; cosec<sup>2</sup>v dv = -&int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> &rArr; -cot v = -log|x| + C &rArr; cot v = log|x| + C'</span></p>
+                    <p class="mb-2">x=1, y=&pi;/4 रखने पर: <span class="math-expr">cot(&pi;/4) = log 1 + C' &rArr; C'=1</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">cot(y/x) = log|x| + 1 &rArr; y = x cot<sup>-1</sup>(log|x| + 1)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> + cosec(y/x) = 0; y = 0 यदि x = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> - cosec(y/x)</span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = v - cosec v &rArr; x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = -cosec v</span></p>
+                    <p class="mb-2"><span class="math-expr">&int; sin v dv = -&int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> &rArr; -cos v = -log|x| + C &rArr; cos v = log|x| + C'</span></p>
+                    <p class="mb-2">x=1, y=0 रखने पर: <span class="math-expr">cos 0 = 0 + C' &rArr; C'=1</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">cos(y/x) = log|x| + 1 &rArr; y = x cos<sup>-1</sup>(log|x| + 1)</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: <span class="math-expr">2xy + y<sup>2</sup> - 2x<sup>2</sup><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = 0; y = 2 यदि x = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = <span class="nowrap"><span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span></span> + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span><span class="nowrap">(<span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span>)</span><sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y = vx &rArr; v + x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = v + <span class="fraction"><span class="numerator">v<sup>2</sup></span><span class="denominator">2</span></span> &rArr; x<span class="fraction"><span class="numerator">dv</span><span class="denominator">dx</span></span> = <span class="fraction"><span class="numerator">v<sup>2</sup></span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">&int; <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">v<sup>2</sup></span></span></span> dv = &int; <span class="fraction"><span class="numerator">dx</span><span class="denominator">x</span></span> &rArr; -<span class="fraction"><span class="numerator">2</span><span class="denominator">v</span></span> = log|x| + C &rArr; -<span class="fraction"><span class="numerator">2x</span><span class="denominator">y</span></span> = log|x| + C</span></p>
+                    <p class="mb-2">x=1, y=2 रखने पर: <span class="math-expr">-1 = 0 + C &rArr; C = -1</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">2x</span><span class="denominator">y</span></span> = 1 - log|x| &rArr; y = <span class="nowrap"><span class="fraction"><span class="numerator">2x</span><span class="denominator">1 - log|x|</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> = h<span class="nowrap">(<span class="fraction"><span class="numerator">x</span><span class="denominator">y</span></span>)</span></span> के रूप वाले समघातीय अवकल समीकरण को हल करने के लिए निम्नलिखित में से कौन सा प्रतिस्थापन किया जाता है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) y = vx &nbsp;&nbsp; (B) v = yx &nbsp;&nbsp; (C) x = vy &nbsp;&nbsp; (D) x = v</p>
+                    <p class="mb-2"><strong>हल:</strong> जब समीकरण <span class="math-expr">dx/dy</span> के रूप में हो, तो <span class="math-expr">x = vy</span> प्रतिस्थापन उपयुक्त होता है।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: निम्नलिखित में से कौन सा समघातीय अवकल समीकरण है?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="math-expr">(4x + 6y + 5) dy - (3y + 2x + 4) dx = 0</span></p>
+                    <p class="mb-2">(B) <span class="math-expr">(xy) dx - (x<sup>3</sup> + y<sup>3</sup>) dy = 0</span></p>
+                    <p class="mb-2">(C) <span class="math-expr">(x<sup>3</sup> + 2y<sup>2</sup>) dx + 2xy dy = 0</span></p>
+                    <p class="mb-2">(D) <span class="math-expr">y<sup>2</sup> dx + (x<sup>2</sup> - xy - y<sup>2</sup>) dy = 0</span></p>
+                    <p class="mb-2"><strong>हल:</strong> विकल्प (D) में सभी पदों की घात 2 है।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 9.5 ==================== -->
+        <section id="exercise-9-5" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 9.5 (रैखिक अवकल समीकरण)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + 2y = sin x</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> यह <span class="math-expr">dy/dx + Py = Q</span> के रूप में है। यहाँ P = 2, Q = sin x</p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; 2 dx</sup> = e<sup>2x</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y &middot; e<sup>2x</sup> = &int; e<sup>2x</sup> sin x dx + C = <span class="nowrap"><span class="fraction"><span class="numerator">e<sup>2x</sup></span><span class="denominator">5</span></span></span>(2sin x - cos x) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">5</span></span></span>(2sin x - cos x) + C e<sup>-2x</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + 3y = e<sup>-2x</sup></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P = 3, Q = e<sup>-2x</sup></p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; 3 dx</sup> = e<sup>3x</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y &middot; e<sup>3x</sup> = &int; e<sup>3x</sup> &middot; e<sup>-2x</sup> dx = &int; e<sup>x</sup> dx = e<sup>x</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = e<sup>-2x</sup> + C e<sup>-3x</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + <span class="fraction"><span class="numerator">y</span><span class="denominator">x</span></span> = x<sup>2</sup></span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P = 1/x, Q = x<sup>2</sup></p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; 1/x dx</sup> = e<sup>log x</sup> = x</span></p>
+                    <p class="mb-2"><span class="math-expr">y &middot; x = &int; x &middot; x<sup>2</sup> dx = &int; x<sup>3</sup> dx = <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>4</sup></span><span class="denominator">4</span></span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>3</sup></span><span class="denominator">4</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">C</span><span class="denominator">x</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + (sec x)y = tan x</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P = sec x, Q = tan x</p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; sec x dx</sup> = e<sup>log(sec x + tan x)</sup> = sec x + tan x</span></p>
+                    <p class="mb-2"><span class="math-expr">y(sec x + tan x) = &int; tan x(sec x + tan x) dx = &int; (sec x tan x + tan<sup>2</sup>x) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= &int; (sec x tan x + sec<sup>2</sup>x - 1) dx = sec x + tan x - x + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = 1 - <span class="nowrap"><span class="fraction"><span class="numerator">x</span><span class="denominator">sec x + tan x</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">C</span><span class="denominator">sec x + tan x</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: <span class="math-expr">cos<sup>2</sup>x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + y = tan x</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + y sec<sup>2</sup>x = tan x sec<sup>2</sup>x</span></p>
+                    <p class="mb-2">P = sec<sup>2</sup>x, Q = tan x sec<sup>2</sup>x</p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; sec<sup>2</sup>x dx</sup> = e<sup>tan x</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y &middot; e<sup>tan x</sup> = &int; tan x sec<sup>2</sup>x e<sup>tan x</sup> dx</span>. मान लीजिए <span class="math-expr">t = tan x &rArr; dt = sec<sup>2</sup>x dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= &int; t e<sup>t</sup> dt = t e<sup>t</sup> - e<sup>t</sup> = e<sup>tan x</sup>(tan x - 1) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = tan x - 1 + C e<sup>-tan x</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: <span class="math-expr">x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + 2y = x<sup>2</sup> log x</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + <span class="fraction"><span class="numerator">2</span><span class="denominator">x</span></span>y = x log x</span></p>
+                    <p class="mb-2">P = 2/x, Q = x log x. I.F. = <span class="math-expr">e<sup>&int; 2/x dx</sup> = x<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y &middot; x<sup>2</sup> = &int; x<sup>3</sup> log x dx = log x <span class="nowrap">(<span class="fraction"><span class="numerator">x<sup>4</sup></span><span class="denominator">4</span></span>)</span> - &int; <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>4</sup></span><span class="denominator">4</span></span></span> &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> dx = <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>4</sup></span><span class="denominator">4</span></span></span> log x - <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>4</sup></span><span class="denominator">16</span></span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">4</span></span></span> log x - <span class="nowrap"><span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">16</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">C</span><span class="denominator">x<sup>2</sup></span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: <span class="math-expr">x log x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + y = <span class="fraction"><span class="numerator">2</span><span class="denominator">x</span></span> log x</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">x log x</span></span></span>y = <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x<sup>2</sup></span></span></span></span></p>
+                    <p class="mb-2">P = 1/(x log x), Q = 2/x<sup>2</sup>. I.F. = <span class="math-expr">e<sup>&int; 1/(x log x) dx</sup> = e<sup>log(log x)</sup> = log x</span></p>
+                    <p class="mb-2"><span class="math-expr">y log x = &int; <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x<sup>2</sup></span></span></span> log x dx = 2 <span class="nowrap">[log x (-<span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span>)</span> - &int; <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span></span>(-<span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span>) dx]</span></p>
+                    <p class="mb-2"><span class="math-expr">= -<span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x</span></span></span> log x - <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x</span></span></span> + C = -<span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x</span></span></span>(log x + 1) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = -<span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x</span></span></span> - <span class="nowrap"><span class="fraction"><span class="numerator">2</span><span class="denominator">x log x</span></span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">C</span><span class="denominator">log x</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: <span class="math-expr">(1 + x<sup>2</sup>) dy + 2xy dx = cot x dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">2x</span><span class="denominator">1 + x<sup>2</sup></span></span></span>y = <span class="nowrap"><span class="fraction"><span class="numerator">cot x</span><span class="denominator">1 + x<sup>2</sup></span></span></span></span></p>
+                    <p class="mb-2">P = 2x/(1+x<sup>2</sup>), Q = cot x/(1+x<sup>2</sup>). I.F. = <span class="math-expr">e<sup>&int; 2x/(1+x<sup>2</sup>) dx</sup> = 1 + x<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y(1 + x<sup>2</sup>) = &int; cot x dx = log|sin x| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = <span class="nowrap"><span class="fraction"><span class="numerator">log|sin x| + C</span><span class="denominator">1 + x<sup>2</sup></span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: <span class="math-expr">x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + y - x + xy cot x = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + y<span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> + cot x)</span> = 1</span></p>
+                    <p class="mb-2">P = 1/x + cot x, Q = 1. I.F. = <span class="math-expr">e<sup>&int; (1/x + cot x) dx</sup> = e<sup>log x + log(sin x)</sup> = x sin x</span></p>
+                    <p class="mb-2"><span class="math-expr">y(x sin x) = &int; x sin x dx = -x cos x + sin x + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = <span class="nowrap"><span class="fraction"><span class="numerator">-x cos x + sin x + C</span><span class="denominator">x sin x</span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: <span class="math-expr">(x + y)<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> - x = y</span></p>
+                    <p class="mb-2">P = -1, Q = y. I.F. = <span class="math-expr">e<sup>&int; -1 dy</sup> = e<sup>-y</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">x e<sup>-y</sup> = &int; y e<sup>-y</sup> dy = -y e<sup>-y</sup> - e<sup>-y</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">x = -y - 1 + C e<sup>y</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: <span class="math-expr">y dx + (x - y<sup>2</sup>) dy = 0</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> + <span class="fraction"><span class="numerator">1</span><span class="denominator">y</span></span>x = y</span></p>
+                    <p class="mb-2">P = 1/y, Q = y. I.F. = <span class="math-expr">e<sup>&int; 1/y dy</sup> = y</span></p>
+                    <p class="mb-2"><span class="math-expr">xy = &int; y<sup>2</sup> dy = <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>3</sup></span><span class="denominator">3</span></span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">xy = <span class="nowrap"><span class="fraction"><span class="numerator">y<sup>3</sup></span><span class="denominator">3</span></span></span> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: <span class="math-expr">(x + 3y<sup>2</sup>)<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = y</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> - <span class="fraction"><span class="numerator">x</span><span class="denominator">y</span></span> = 3y</span></p>
+                    <p class="mb-2">P = -1/y, Q = 3y. I.F. = <span class="math-expr">e<sup>&int; -1/y dy</sup> = 1/y</span></p>
+                    <p class="mb-2"><span class="math-expr">x &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">y</span></span> = &int; 3y &middot; <span class="fraction"><span class="numerator">1</span><span class="denominator">y</span></span> dy = &int; 3 dy = 3y + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">x = 3y<sup>2</sup> + Cy</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + 2y tan x = sin x; y = 0 यदि x = &pi;/3</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P = 2 tan x, Q = sin x. I.F. = <span class="math-expr">e<sup>&int; 2 tan x dx</sup> = sec<sup>2</sup>x</span></p>
+                    <p class="mb-2"><span class="math-expr">y sec<sup>2</sup>x = &int; sin x sec<sup>2</sup>x dx = &int; tan x sec x dx = sec x + C</span></p>
+                    <p class="mb-2">x=&pi;/3, y=0 रखने पर: <span class="math-expr">0 = sec(&pi;/3) + C &rArr; C = -2</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = cos x - 2 cos<sup>2</sup>x</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: <span class="math-expr">(1 + x<sup>2</sup>)<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + 2xy = <span class="fraction"><span class="numerator">1</span><span class="denominator">1 + x<sup>2</sup></span></span>; y = 0 यदि x = 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">2x</span><span class="denominator">1 + x<sup>2</sup></span></span></span>y = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">(1 + x<sup>2</sup>)<sup>2</sup></span></span></span></span></p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; 2x/(1+x<sup>2</sup>) dx</sup> = 1 + x<sup>2</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y(1 + x<sup>2</sup>) = &int; <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">1 + x<sup>2</sup></span></span></span> dx = tan<sup>-1</sup>x + C</span></p>
+                    <p class="mb-2">x=1, y=0 रखने पर: <span class="math-expr">0 = &pi;/4 + C &rArr; C = -&pi;/4</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = <span class="nowrap"><span class="fraction"><span class="numerator">tan<sup>-1</sup>x - &pi;/4</span><span class="denominator">1 + x<sup>2</sup></span></span></span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - 3y cot x = sin 2x; y = 2 यदि x = &pi;/2</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> P = -3 cot x, Q = sin 2x. I.F. = <span class="math-expr">e<sup>&int; -3 cot x dx</sup> = e<sup>-3log(sin x)</sup> = cosec<sup>3</sup>x</span></p>
+                    <p class="mb-2"><span class="math-expr">y cosec<sup>3</sup>x = &int; sin 2x cosec<sup>3</sup>x dx = &int; 2sin x cos x cosec<sup>3</sup>x dx = &int; 2cot x cosec x dx = -2cosec x + C</span></p>
+                    <p class="mb-2">x=&pi;/2, y=2 रखने पर: <span class="math-expr">2(1) = -2(1) + C &rArr; C=4</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = -2sin<sup>2</sup>x + 4sin<sup>3</sup>x</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: मूल बिंदु से गुजरने वाले एक वक्र का समीकरण ज्ञात कीजिए यदि इस वक्र के किसी बिंदु (x, y) पर स्पर्श रेखा की प्रवणता उस बिंदु के निर्देशांकों के योग के बराबर है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> = x + y &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - y = x</span></p>
+                    <p class="mb-2">P = -1, Q = x. I.F. = <span class="math-expr">e<sup>-x</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y e<sup>-x</sup> = &int; x e<sup>-x</sup> dx = -x e<sup>-x</sup> - e<sup>-x</sup> + C</span></p>
+                    <p class="mb-2">(0,0) से गुजरता है: <span class="math-expr">0 = -1 + C &rArr; C=1</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = e<sup>x</sup> - x - 1</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: बिंदु (0, 2) से गुजरने वाले वक्र का समीकरण ज्ञात कीजिए यदि इस वक्र के किसी बिंदु के निर्देशांकों का योग उस बिंदु पर खींची गई स्पर्श रेखा की प्रवणता के परिमाण से 5 अधिक है।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">x + y = <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> + 5 &rArr; <span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - y = x - 5</span></p>
+                    <p class="mb-2">P = -1, Q = x - 5. I.F. = <span class="math-expr">e<sup>-x</sup></span></p>
+                    <p class="mb-2"><span class="math-expr">y e<sup>-x</sup> = &int; (x - 5)e<sup>-x</sup> dx = -(x - 4)e<sup>-x</sup> + C</span></p>
+                    <p class="mb-2">(0, 2) से गुजरता है: <span class="math-expr">2 = 4 + C &rArr; C = -2</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">y = 4 - x - 2e<sup>x</sup></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: अवकल समीकरण <span class="math-expr">x<span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - y = 2x<sup>2</sup></span> का समाकलन गुणक है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) e<sup>-x</sup> &nbsp;&nbsp; (B) e<sup>-y</sup> &nbsp;&nbsp; (C) 1/x &nbsp;&nbsp; (D) x</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dy</span><span class="denominator">dx</span></span> - <span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span>y = 2x</span>. यहाँ P = -1/x</p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; -1/x dx</sup> = e<sup>-log x</sup> = 1/x</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: अवकल समीकरण <span class="math-expr">(1 - y<sup>2</sup>)<span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> + yx = ay</span> का समाकलन गुणक है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) <span class="fraction"><span class="numerator">1</span><span class="denominator">y<sup>2</sup>-1</span></span> &nbsp;&nbsp; (B) <span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;(y<sup>2</sup>-1)</span></span> &nbsp;&nbsp; (C) <span class="fraction"><span class="numerator">1</span><span class="denominator">1-y<sup>2</sup></span></span> &nbsp;&nbsp; (D) <span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;(1-y<sup>2</sup>)</span></span></p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr"><span class="fraction"><span class="numerator">dx</span><span class="denominator">dy</span></span> + <span class="nowrap"><span class="fraction"><span class="numerator">y</span><span class="denominator">1 - y<sup>2</sup></span></span></span>x = <span class="nowrap"><span class="fraction"><span class="numerator">ay</span><span class="denominator">1 - y<sup>2</sup></span></span></span></span>. P = y/(1-y<sup>2</sup>)</p>
+                    <p class="mb-2">I.F. = <span class="math-expr">e<sup>&int; y/(1-y<sup>2</sup>) dy</sup> = e<sup>-1/2 log(1-y<sup>2</sup>)</sup> = <span class="nowrap"><span class="fraction"><span class="numerator">1</span><span class="denominator">&radic;(1-y<sup>2</sup>)</span></span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

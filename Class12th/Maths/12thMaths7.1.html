@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 7: समाकलन</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+             font-size: 1.1rem;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 7<br>समाकलन</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 7.1 ==================== -->
+        <section id="exercise-7-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 7.1 (निरीक्षण विधि द्वारा प्रतिअवकलज)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: <span class="math-expr">sin 2x</span> का प्रतिअवकलज ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> (cos 2x) = -2 sin 2x</span></p>
+                    <p class="mb-2">अतः <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> <span class="nowrap">(-<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> cos 2x)</span> = sin 2x</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">∫ sin 2x dx = -<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> cos 2x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: <span class="math-expr">cos 3x</span> का प्रतिअवकलज ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> (sin 3x) = 3 cos 3x</span></p>
+                    <p class="mb-2">अतः <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> <span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> sin 3x)</span> = cos 3x</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">∫ cos 3x dx = <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> sin 3x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: <span class="math-expr">e<sup>2x</sup></span> का प्रतिअवकलज ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> (e<sup>2x</sup>) = 2e<sup>2x</sup></span></p>
+                    <p class="mb-2">अतः <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> <span class="nowrap">(<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> e<sup>2x</sup>)</span> = e<sup>2x</sup></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">∫ e<sup>2x</sup> dx = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> e<sup>2x</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: <span class="math-expr">(ax + b)<sup>2</sup></span> का प्रतिअवकलज ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> हम जानते हैं कि <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> (ax + b)<sup>3</sup> = 3a(ax + b)<sup>2</sup></span></p>
+                    <p class="mb-2">अतः <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> <span class="nowrap">[<span class="fraction"><span class="numerator">1</span><span class="denominator">3a</span></span> (ax + b)<sup>3</sup>]</span> = (ax + b)<sup>2</sup></span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">∫ (ax + b)<sup>2</sup> dx = <span class="fraction"><span class="numerator">1</span><span class="denominator">3a</span></span> (ax + b)<sup>3</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: <span class="math-expr">sin 2x - 4e<sup>3x</sup></span> का प्रतिअवकलज ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">∫ (sin 2x - 4e<sup>3x</sup>) dx = ∫ sin 2x dx - 4∫ e<sup>3x</sup> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> cos 2x - 4(<span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> e<sup>3x</sup>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> cos 2x - <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span> e<sup>3x</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: <span class="math-expr">∫ (4e<sup>3x</sup> + 1) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= 4∫ e<sup>3x</sup> dx + ∫ 1 dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= 4(<span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> e<sup>3x</sup>) + x + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span> e<sup>3x</sup> + x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: <span class="math-expr">∫ x<sup>2</sup>(1 - <span class="fraction"><span class="numerator">1</span><span class="denominator">x<sup>2</sup></span></span>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (x<sup>2</sup> - 1) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>3</sup></span><span class="denominator">3</span></span> - x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: <span class="math-expr">∫ (ax<sup>2</sup> + bx + c) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= a∫ x<sup>2</sup> dx + b∫ x dx + c∫ 1 dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= a(<span class="fraction"><span class="numerator">x<sup>3</sup></span><span class="denominator">3</span></span>) + b(<span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span>) + cx + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">a</span><span class="denominator">3</span></span>x<sup>3</sup> + <span class="fraction"><span class="numerator">b</span><span class="denominator">2</span></span>x<sup>2</sup> + cx + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: <span class="math-expr">∫ (2x<sup>2</sup> + e<sup>x</sup>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= 2∫ x<sup>2</sup> dx + ∫ e<sup>x</sup> dx</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>x<sup>3</sup> + e<sup>x</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: <span class="math-expr">∫ (√x - <span class="fraction"><span class="numerator">1</span><span class="denominator">√x</span></span>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ x<sup>1/2</sup> dx - ∫ x<sup>-1/2</sup> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span> - <span class="fraction"><span class="numerator">x<sup>1/2</sup></span><span class="denominator">1/2</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>x<sup>3/2</sup> - 2x<sup>1/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x<sup>3</sup> + 5x<sup>2</sup> - 4</span><span class="denominator">x<sup>2</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (x + 5 - 4x<sup>-2</sup>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span> + 5x - 4(<span class="fraction"><span class="numerator">x<sup>-1</sup></span><span class="denominator">-1</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span> + 5x + <span class="fraction"><span class="numerator">4</span><span class="denominator">x</span></span> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x<sup>3</sup> + 3x + 4</span><span class="denominator">√x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (x<sup>5/2</sup> + 3x<sup>1/2</sup> + 4x<sup>-1/2</sup>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>7/2</sup></span><span class="denominator">7/2</span></span> + 3(<span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + 4(<span class="fraction"><span class="numerator">x<sup>1/2</sup></span><span class="denominator">1/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">7</span></span>x<sup>7/2</sup> + 2x<sup>3/2</sup> + 8x<sup>1/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x<sup>3</sup> - x<sup>2</sup> + x - 1</span><span class="denominator">x - 1</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">x<sup>2</sup>(x - 1) + 1(x - 1)</span><span class="denominator">x - 1</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ (x<sup>2</sup> + 1) dx</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>3</sup></span><span class="denominator">3</span></span> + x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: <span class="math-expr">∫ (1 - x)√x dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (x<sup>1/2</sup> - x<sup>3/2</sup>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span> - <span class="fraction"><span class="numerator">x<sup>5/2</sup></span><span class="denominator">5/2</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>x<sup>3/2</sup> - <span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span>x<sup>5/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: <span class="math-expr">∫ √x(3x<sup>2</sup> + 2x + 3) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (3x<sup>5/2</sup> + 2x<sup>3/2</sup> + 3x<sup>1/2</sup>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= 3(<span class="fraction"><span class="numerator">x<sup>7/2</sup></span><span class="denominator">7/2</span></span>) + 2(<span class="fraction"><span class="numerator">x<sup>5/2</sup></span><span class="denominator">5/2</span></span>) + 3(<span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">6</span><span class="denominator">7</span></span>x<sup>7/2</sup> + <span class="fraction"><span class="numerator">4</span><span class="denominator">5</span></span>x<sup>5/2</sup> + 2x<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: <span class="math-expr">∫ (2x - 3cos x + e<sup>x</sup>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= 2(<span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">2</span></span>) - 3(sin x) + e<sup>x</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= x<sup>2</sup> - 3sin x + e<sup>x</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: <span class="math-expr">∫ (2x<sup>2</sup> - 3sin x + 5√x) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= 2(<span class="fraction"><span class="numerator">x<sup>3</sup></span><span class="denominator">3</span></span>) - 3(-cos x) + 5(<span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>x<sup>3</sup> + 3cos x + <span class="fraction"><span class="numerator">10</span><span class="denominator">3</span></span>x<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: <span class="math-expr">∫ sec x(sec x + tan x) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (sec<sup>2</sup> x + sec x tan x) dx</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= tan x + sec x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: <span class="math-expr">∫ <span class="fraction"><span class="numerator">sec<sup>2</sup> x</span><span class="denominator">cosec<sup>2</sup> x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1/cos<sup>2</sup> x</span><span class="denominator">1/sin<sup>2</sup> x</span></span> dx = ∫ <span class="fraction"><span class="numerator">sin<sup>2</sup> x</span><span class="denominator">cos<sup>2</sup> x</span></span> dx = ∫ tan<sup>2</sup> x dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ (sec<sup>2</sup> x - 1) dx</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= tan x - x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: <span class="math-expr">∫ <span class="fraction"><span class="numerator">2 - 3sin x</span><span class="denominator">cos<sup>2</sup> x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (<span class="fraction"><span class="numerator">2</span><span class="denominator">cos<sup>2</sup> x</span></span> - <span class="fraction"><span class="numerator">3sin x</span><span class="denominator">cos<sup>2</sup> x</span></span>) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ (2sec<sup>2</sup> x - 3sec x tan x) dx</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= 2tan x - 3sec x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 21 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 21: <span class="math-expr">∫ (√x + <span class="fraction"><span class="numerator">1</span><span class="denominator">√x</span></span>) dx</span> का मान है:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (x<sup>1/2</sup> + x<sup>-1/2</sup>) dx = <span class="fraction"><span class="numerator">x<sup>3/2</sup></span><span class="denominator">3/2</span></span> + <span class="fraction"><span class="numerator">x<sup>1/2</sup></span><span class="denominator">1/2</span></span> + C</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>x<sup>3/2</sup> + 2x<sup>1/2</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 22 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 22: यदि <span class="math-expr"><span class="fraction"><span class="numerator">d</span><span class="denominator">dx</span></span> f(x) = 4x<sup>3</sup> - <span class="fraction"><span class="numerator">3</span><span class="denominator">x<sup>4</sup></span></span></span> जिसमें f(2) = 0 तो f(x) है:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">f(x) = ∫ (4x<sup>3</sup> - 3x<sup>-4</sup>) dx = x<sup>4</sup> - 3(<span class="fraction"><span class="numerator">x<sup>-3</sup></span><span class="denominator">-3</span></span>) + C = x<sup>4</sup> + <span class="fraction"><span class="numerator">1</span><span class="denominator">x<sup>3</sup></span></span> + C</span></p>
+                    <p class="mb-2">f(2) = 0 रखने पर: <span class="math-expr">(2)<sup>4</sup> + <span class="fraction"><span class="numerator">1</span><span class="denominator">(2)<sup>3</sup></span></span> + C = 0</span></p>
+                    <p class="mb-2"><span class="math-expr">16 + <span class="fraction"><span class="numerator">1</span><span class="denominator">8</span></span> + C = 0 &rArr; C = -<span class="fraction"><span class="numerator">129</span><span class="denominator">8</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">f(x) = x<sup>4</sup> + <span class="fraction"><span class="numerator">1</span><span class="denominator">x<sup>3</sup></span></span> - <span class="fraction"><span class="numerator">129</span><span class="denominator">8</span></span></span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 7.2 ==================== -->
+        <section id="exercise-7-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 7.2 (प्रतिस्थापन द्वारा समाकलन)</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: <span class="math-expr">∫ <span class="fraction"><span class="numerator">2x</span><span class="denominator">1 + x<sup>2</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">1 + x<sup>2</sup> = t</span>, तो <span class="math-expr">2x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">∫ <span class="fraction"><span class="numerator">2x</span><span class="denominator">1 + x<sup>2</sup></span></span> dx = ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= log|1 + x<sup>2</sup>| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: <span class="math-expr">∫ <span class="fraction"><span class="numerator">(log x)<sup>2</sup></span><span class="denominator">x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">log x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ t<sup>2</sup> dt = <span class="fraction"><span class="numerator">t<sup>3</sup></span><span class="denominator">3</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>(log x)<sup>3</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: <span class="math-expr">∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">x + x log x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">x(1 + log x)</span></span> dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">1 + log x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= log|1 + log x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: <span class="math-expr">∫ sin x sin(cos x) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">cos x = t</span>, तो <span class="math-expr">-sin x dx = dt &rArr; sin x dx = -dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ sin t (-dt) = -∫ sin t dt = -(-cos t) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= cos(cos x) + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: <span class="math-expr">∫ sin(ax+b) cos(ax+b) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ sin(2ax + 2b) dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">2ax + 2b = t</span>, तो <span class="math-expr">2a dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ sin t <span class="fraction"><span class="numerator">dt</span><span class="denominator">2a</span></span> = <span class="fraction"><span class="numerator">1</span><span class="denominator">4a</span></span> (-cos t) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">4a</span></span> cos(2ax + 2b) + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: <span class="math-expr">∫ √(ax + b) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">ax + b = t</span>, तो <span class="math-expr">a dx = dt &rArr; dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">a</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">a</span></span> ∫ t<sup>1/2</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">a</span></span> (<span class="fraction"><span class="numerator">t<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3a</span></span> (ax + b)<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: <span class="math-expr">∫ x√(x + 2) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x + 2 = t</span>, तो <span class="math-expr">dx = dt</span> और <span class="math-expr">x = t - 2</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ (t - 2) t<sup>1/2</sup> dt = ∫ (t<sup>3/2</sup> - 2t<sup>1/2</sup>) dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">t<sup>5/2</sup></span><span class="denominator">5/2</span></span> - 2(<span class="fraction"><span class="numerator">t<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span>(x + 2)<sup>5/2</sup> - <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>(x + 2)<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: <span class="math-expr">∫ x√(1 + 2x<sup>2</sup>) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">1 + 2x<sup>2</sup> = t</span>, तो <span class="math-expr">4x dx = dt &rArr; x dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">4</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> ∫ t<sup>1/2</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> (<span class="fraction"><span class="numerator">t<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">6</span></span>(1 + 2x<sup>2</sup>)<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: <span class="math-expr">∫ (4x + 2)√(x<sup>2</sup> + x + 1) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x<sup>2</sup> + x + 1 = t</span>, तो <span class="math-expr">(2x + 1) dx = dt &rArr; (4x + 2) dx = 2 dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= 2∫ t<sup>1/2</sup> dt = 2(<span class="fraction"><span class="numerator">t<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span>(x<sup>2</sup> + x + 1)<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: <span class="math-expr">∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">x - √x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">√x(√x - 1)</span></span> dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">√x - 1 = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2√x</span></span> dx = dt &rArr; <span class="fraction"><span class="numerator">1</span><span class="denominator">√x</span></span> dx = 2 dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= 2∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = 2 log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= 2 log|√x - 1| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x</span><span class="denominator">√(x + 4)</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x + 4 = t</span>, तो <span class="math-expr">dx = dt</span> और <span class="math-expr">x = t - 4</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">t - 4</span><span class="denominator">√t</span></span> dt = ∫ (t<sup>1/2</sup> - 4t<sup>-1/2</sup>) dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">t<sup>3/2</sup></span><span class="denominator">3/2</span></span> - 4(<span class="fraction"><span class="numerator">t<sup>1/2</sup></span><span class="denominator">1/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span>(x + 4)<sup>3/2</sup> - 8(x + 4)<sup>1/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: <span class="math-expr">∫ (x<sup>3</sup> - 1)<sup>1/3</sup> x<sup>5</sup> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x<sup>3</sup> - 1 = t</span>, तो <span class="math-expr">3x<sup>2</sup> dx = dt &rArr; x<sup>2</sup> dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2">और <span class="math-expr">x<sup>3</sup> = t + 1 &rArr; x<sup>5</sup> dx = x<sup>3</sup> &middot; x<sup>2</sup> dx = (t + 1)<span class="fraction"><span class="numerator">dt</span><span class="denominator">3</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> ∫ (t + 1) t<sup>1/3</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> ∫ (t<sup>4/3</sup> + t<sup>1/3</sup>) dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span> [<span class="fraction"><span class="numerator">t<sup>7/3</sup></span><span class="denominator">7/3</span></span> + <span class="fraction"><span class="numerator">t<sup>4/3</sup></span><span class="denominator">4/3</span></span>] + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">7</span></span>(x<sup>3</sup> - 1)<sup>7/3</sup> + <span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span>(x<sup>3</sup> - 1)<sup>4/3</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x<sup>2</sup></span><span class="denominator">(2 + 3x<sup>3</sup>)<sup>3</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">2 + 3x<sup>3</sup> = t</span>, तो <span class="math-expr">9x<sup>2</sup> dx = dt &rArr; x<sup>2</sup> dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">9</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">9</span></span> ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t<sup>3</sup></span></span> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">9</span></span> ∫ t<sup>-3</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">9</span></span> (<span class="fraction"><span class="numerator">t<sup>-2</sup></span><span class="denominator">-2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">18(2 + 3x<sup>3</sup>)<sup>2</sup></span></span> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: <span class="math-expr">∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">x(log x)<sup>m</sup></span></span> dx, x > 0, m &ne; 1</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">log x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t<sup>m</sup></span></span> dt = ∫ t<sup>-m</sup> dt = <span class="fraction"><span class="numerator">t<sup>-m+1</sup></span><span class="denominator">-m+1</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">(log x)<sup>1-m</sup></span><span class="denominator">1-m</span></span> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x</span><span class="denominator">9 - 4x<sup>2</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">9 - 4x<sup>2</sup> = t</span>, तो <span class="math-expr">-8x dx = dt &rArr; x dx = -<span class="fraction"><span class="numerator">dt</span><span class="denominator">8</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">8</span></span> ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = -<span class="fraction"><span class="numerator">1</span><span class="denominator">8</span></span> log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">8</span></span> log|9 - 4x<sup>2</sup>| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: <span class="math-expr">∫ e<sup>2x+3</sup> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">2x + 3 = t</span>, तो <span class="math-expr">2 dx = dt &rArr; dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ e<sup>t</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> e<sup>t</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> e<sup>2x+3</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: <span class="math-expr">∫ x e<sup>x<sup>2</sup></sup> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x<sup>2</sup> = t</span>, तो <span class="math-expr">2x dx = dt &rArr; x dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ e<sup>t</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> e<sup>t</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> e<sup>x<sup>2</sup></sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: <span class="math-expr">∫ <span class="fraction"><span class="numerator">e<sup>tan<sup>-1</sup>x</sup></span><span class="denominator">1 + x<sup>2</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">tan<sup>-1</sup>x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">1 + x<sup>2</sup></span></span> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ e<sup>t</sup> dt = e<sup>t</sup> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= e<sup>tan<sup>-1</sup>x</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: <span class="math-expr">∫ <span class="fraction"><span class="numerator">e<sup>2x</sup> - 1</span><span class="denominator">e<sup>2x</sup> + 1</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> अंश और हर को <span class="math-expr">e<sup>x</sup></span> से भाग देने पर:</p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">e<sup>x</sup> - e<sup>-x</sup></span><span class="denominator">e<sup>x</sup> + e<sup>-x</sup></span></span> dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">e<sup>x</sup> + e<sup>-x</sup> = t</span>, तो <span class="math-expr">(e<sup>x</sup> - e<sup>-x</sup>) dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= log|e<sup>x</sup> + e<sup>-x</sup>| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: <span class="math-expr">∫ <span class="fraction"><span class="numerator">e<sup>2x</sup> - e<sup>-2x</sup></span><span class="denominator">e<sup>2x</sup> + e<sup>-2x</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">e<sup>2x</sup> + e<sup>-2x</sup> = t</span>, तो <span class="math-expr">(2e<sup>2x</sup> - 2e<sup>-2x</sup>) dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">&rArr; (e<sup>2x</sup> - e<sup>-2x</sup>) dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log|e<sup>2x</sup> + e<sup>-2x</sup>| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 21 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 21: <span class="math-expr">∫ tan<sup>2</sup>(2x - 3) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ [sec<sup>2</sup>(2x - 3) - 1] dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ sec<sup>2</sup>(2x - 3) dx - ∫ 1 dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">2x - 3 = t</span>, तो <span class="math-expr">2 dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> tan(2x - 3) - x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 22 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 22: <span class="math-expr">∫ sec<sup>2</sup>(7 - 4x) dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">7 - 4x = t</span>, तो <span class="math-expr">-4 dx = dt &rArr; dx = -<span class="fraction"><span class="numerator">dt</span><span class="denominator">4</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> ∫ sec<sup>2</sup> t dt = -<span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> tan t + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> tan(7 - 4x) + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 23 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 23: <span class="math-expr">∫ <span class="fraction"><span class="numerator">sin<sup>-1</sup>x</span><span class="denominator">√(1 - x<sup>2</sup>)</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">sin<sup>-1</sup>x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">√(1 - x<sup>2</sup>)</span></span> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ t dt = <span class="fraction"><span class="numerator">t<sup>2</sup></span><span class="denominator">2</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(sin<sup>-1</sup>x)<sup>2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 24 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 24: <span class="math-expr">∫ <span class="fraction"><span class="numerator">2cos x - 3sin x</span><span class="denominator">6cos x + 4sin x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> ध्यान दें कि हर का अवकलज <span class="math-expr">d/dx(6cos x + 4sin x) = -6sin x + 4cos x</span></p>
+                    <p class="mb-2">अंश <span class="math-expr">2cos x - 3sin x = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(-6sin x + 4cos x)</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ <span class="fraction"><span class="numerator">-6sin x + 4cos x</span><span class="denominator">6cos x + 4sin x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log|6cos x + 4sin x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 25 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 25: <span class="math-expr">∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">cos<sup>2</sup>x(1 - tan x)<sup>2</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">sec<sup>2</sup>x</span><span class="denominator">(1 - tan x)<sup>2</sup></span></span> dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">1 - tan x = t</span>, तो <span class="math-expr">-sec<sup>2</sup>x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">-1</span><span class="denominator">t<sup>2</sup></span></span> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">1 - tan x</span></span> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 26 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 26: <span class="math-expr">∫ <span class="fraction"><span class="numerator">cos√x</span><span class="denominator">√x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">√x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">2√x</span></span> dx = dt &rArr; <span class="fraction"><span class="numerator">1</span><span class="denominator">√x</span></span> dx = 2 dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= 2 ∫ cos t dt = 2 sin t + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= 2 sin√x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 27 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 27: <span class="math-expr">∫ √(sin 2x) cos 2x dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">sin 2x = t</span>, तो <span class="math-expr">2 cos 2x dx = dt &rArr; cos 2x dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">2</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ t<sup>1/2</sup> dt = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> (<span class="fraction"><span class="numerator">t<sup>3/2</sup></span><span class="denominator">3/2</span></span>) + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>(sin 2x)<sup>3/2</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 28 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 28: <span class="math-expr">∫ <span class="fraction"><span class="numerator">cos x</span><span class="denominator">√(1 + sin x)</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">1 + sin x = t</span>, तो <span class="math-expr">cos x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ t<sup>-1/2</sup> dt = <span class="fraction"><span class="numerator">t<sup>1/2</sup></span><span class="denominator">1/2</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= 2√(1 + sin x) + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 29 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 29: <span class="math-expr">∫ <span class="fraction"><span class="numerator">cot x</span><span class="denominator">log sin x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">log sin x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">sin x</span></span> &middot; cos x dx = dt &rArr; cot x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= log|log sin x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 30 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 30: <span class="math-expr">∫ <span class="fraction"><span class="numerator">sin x</span><span class="denominator">1 + cos x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">1 + cos x = t</span>, तो <span class="math-expr">-sin x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">-1</span><span class="denominator">t</span></span> dt = -log|t| + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -log|1 + cos x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 31 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 31: <span class="math-expr">∫ <span class="fraction"><span class="numerator">sin x</span><span class="denominator">(1 + cos x)<sup>2</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">1 + cos x = t</span>, तो <span class="math-expr">-sin x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">-1</span><span class="denominator">t<sup>2</sup></span></span> dt = ∫ -t<sup>-2</sup> dt = -(-t<sup>-1</sup>) + C = <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">1 + cos x</span></span> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 32 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 32: <span class="math-expr">∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">1 + cot x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">sin x</span><span class="denominator">sin x + cos x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ <span class="fraction"><span class="numerator">(sin x + cos x) - (cos x - sin x)</span><span class="denominator">sin x + cos x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ 1 dx - <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ <span class="fraction"><span class="numerator">cos x - sin x</span><span class="denominator">sin x + cos x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span> - <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log|sin x + cos x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 33 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 33: <span class="math-expr">∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">1 - tan x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">cos x</span><span class="denominator">cos x - sin x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ <span class="fraction"><span class="numerator">(cos x - sin x) + (cos x + sin x)</span><span class="denominator">cos x - sin x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span> + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> ∫ <span class="fraction"><span class="numerator">cos x + sin x</span><span class="denominator">cos x - sin x</span></span> dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">x</span><span class="denominator">2</span></span> + <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> log|cos x - sin x| + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 34 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 34: <span class="math-expr">∫ <span class="fraction"><span class="numerator">√tan x</span><span class="denominator">sin x cos x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">√tan x</span><span class="denominator">(tan x)cos<sup>2</sup>x</span></span> dx = ∫ <span class="fraction"><span class="numerator">sec<sup>2</sup>x</span><span class="denominator">√tan x</span></span> dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">tan x = t</span>, तो <span class="math-expr">sec<sup>2</sup>x dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ t<sup>-1/2</sup> dt = <span class="fraction"><span class="numerator">t<sup>1/2</sup></span><span class="denominator">1/2</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= 2√tan x + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 35 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 35: <span class="math-expr">∫ <span class="fraction"><span class="numerator">(1 + log x)<sup>2</sup></span><span class="denominator">x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">1 + log x = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ t<sup>2</sup> dt = <span class="fraction"><span class="numerator">t<sup>3</sup></span><span class="denominator">3</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>(1 + log x)<sup>3</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 36 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 36: <span class="math-expr">∫ <span class="fraction"><span class="numerator">(x + 1)(x + log x)<sup>2</sup></span><span class="denominator">x</span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ (1 + <span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span>)(x + log x)<sup>2</sup> dx</span></p>
+                    <p class="mb-2">मान लीजिए <span class="math-expr">x + log x = t</span>, तो <span class="math-expr">(1 + <span class="fraction"><span class="numerator">1</span><span class="denominator">x</span></span>) dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ t<sup>2</sup> dt = <span class="fraction"><span class="numerator">t<sup>3</sup></span><span class="denominator">3</span></span> + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span>(x + log x)<sup>3</sup> + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 37 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 37: <span class="math-expr">∫ <span class="fraction"><span class="numerator">x<sup>3</sup> sin(tan<sup>-1</sup>x<sup>4</sup>)</span><span class="denominator">1 + x<sup>8</sup></span></span> dx</span></h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">tan<sup>-1</sup>x<sup>4</sup> = t</span>, तो <span class="math-expr"><span class="fraction"><span class="numerator">1</span><span class="denominator">1 + (x<sup>4</sup>)<sup>2</sup></span></span> &middot; 4x<sup>3</sup> dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">&rArr; <span class="fraction"><span class="numerator">4x<sup>3</sup></span><span class="denominator">1 + x<sup>8</sup></span></span> dx = dt &rArr; <span class="fraction"><span class="numerator">x<sup>3</sup></span><span class="denominator">1 + x<sup>8</sup></span></span> dx = <span class="fraction"><span class="numerator">dt</span><span class="denominator">4</span></span></span></p>
+                    <p class="mb-2"><span class="math-expr">= <span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> ∫ sin t dt = -<span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> cos t + C</span></p>
+                    <p><strong>उत्तर:</strong> <span class="math-expr">= -<span class="fraction"><span class="numerator">1</span><span class="denominator">4</span></span> cos(tan<sup>-1</sup>x<sup>4</sup>) + C</span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 38 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 38: <span class="math-expr">∫ <span class="fraction"><span class="numerator">10x<sup>9</sup> + 10<sup>x</sup> log<sub>e</sub>10</span><span class="denominator">x<sup>10</sup> + 10<sup>x</sup></span></span> dx</span> बराबर है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) 10<sup>x</sup> - x<sup>10</sup> + C &nbsp; (B) 10<sup>x</sup> + x<sup>10</sup> + C &nbsp; (C) (10<sup>x</sup> - x<sup>10</sup>)<sup>-1</sup> + C &nbsp; (D) log(10<sup>x</sup> + x<sup>10</sup>) + C</p>
+                    <p class="mb-2"><strong>हल:</strong> मान लीजिए <span class="math-expr">x<sup>10</sup> + 10<sup>x</sup> = t</span>, तो <span class="math-expr">(10x<sup>9</sup> + 10<sup>x</sup> log<sub>e</sub>10) dx = dt</span></p>
+                    <p class="mb-2"><span class="math-expr">= ∫ <span class="fraction"><span class="numerator">1</span><span class="denominator">t</span></span> dt = log|t| + C = log|x<sup>10</sup> + 10<sup>x</sup>| + C</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 39 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 39: <span class="math-expr">∫ <span class="fraction"><span class="numerator">dx</span><span class="denominator">sin<sup>2</sup>x cos<sup>2</sup>x</span></span></span> बराबर है:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) tan x + cot x + C &nbsp; (B) tan x - cot x + C &nbsp; (C) tan x cot x + C &nbsp; (D) tan x - cot 2x + C</p>
+                    <p class="mb-2"><strong>हल:</strong> <span class="math-expr">= ∫ <span class="fraction"><span class="numerator">sin<sup>2</sup>x + cos<sup>2</sup>x</span><span class="denominator">sin<sup>2</sup>x cos<sup>2</sup>x</span></span> dx = ∫ (sec<sup>2</sup>x + cosec<sup>2</sup>x) dx</span></p>
+                    <p class="mb-2"><span class="math-expr">= tan x - cot x + C</span></p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

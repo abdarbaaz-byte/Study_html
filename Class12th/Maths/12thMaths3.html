@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 12 गणित - अध्याय 3: आव्यूह</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd6fe;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+            position: relative;
+            top: 0.3em;
+        }
+        .fraction span {
+            display: block;
+            padding: 0 0.3em;
+            font-family: 'Times New Roman', serif;
+        }
+        .fraction .numerator {
+            border-bottom: 1.5px solid black;
+        }
+        .math-expr {
+             font-family: 'Times New Roman', serif;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .explanation {
+            background-color: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equation {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .hinglish-explanation {
+            background-color: #e0f2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #0ea5e9;
+        }
+        /* Matrix Styling */
+        .matrix-container {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            margin: 0 0.2em;
+        }
+        .bracket {
+            font-size: 1.8em;
+            line-height: 2.0;
+            font-family: 'Times New Roman', serif;
+            font-weight: 10;
+            transform: scaleY(1.2);
+        }
+        .matrix-table {
+            border-collapse: collapse;
+            margin: 0 0.1em;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+        .matrix-table td {
+            padding: 0.2em 0.4em;
+            min-width: 1.5em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- ग्रेडिएंट टाइटल कार्ड -->
+        <div class="gradient-card text-white p-6 md:p-8 rounded-xl mb-8 text-center shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold">अध्याय 3<br>आव्यूह</h1>
+            <p class="mt-2 text-lg">कक्षा 12 : गणित | StudyScript</p>
+        </div>
+
+        <!-- ==================== प्रश्नावली 3.1 ==================== -->
+        <section id="exercise-3-1" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 3.1</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: आव्यूह A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>5</td><td>19</td><td>-7</td></tr><tr><td>35</td><td>-2</td><td><span class="fraction"><span class="numerator">5</span><span class="denominator">2</span></span></td><td>12</td></tr><tr><td>&radic;3</td><td>1</td><td>-5</td><td>17</td></tr></table><span class="bracket">]</span></div> के लिए ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) आव्यूह की कोटि:</strong> पंक्तियों की संख्या = 3, स्तंभों की संख्या = 4. अतः कोटि 3 × 4 है।</p>
+                    <p class="mb-2"><strong>(ii) अवयवों की संख्या:</strong> 3 × 4 = 12</p>
+                    <p class="mb-2"><strong>(iii) अवयव:</strong></p>
+                    <p class="mb-2">a<sub>13</sub> = 19</p>
+                    <p class="mb-2">a<sub>21</sub> = 35</p>
+                    <p class="mb-2">a<sub>33</sub> = -5</p>
+                    <p class="mb-2">a<sub>24</sub> = 12</p>
+                    <p class="mb-2">a<sub>23</sub> = <span class="fraction"><span class="numerator">5</span><span class="denominator">2</span></span></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: यदि किसी आव्यूह में 24 अवयव हैं तो इसकी संभव कोटियाँ क्या हैं? यदि इसमें 13 अवयव हों तो कोटियाँ क्या होंगी?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> किसी आव्यूह की कोटि m × n होती है, जहाँ अवयवों की संख्या m × n होती है।</p>
+                    <p class="mb-2">यदि अवयवों की संख्या 24 है, तो m × n = 24। 24 के गुणनखंडों के संभावित युग्म: (1, 24), (2, 12), (3, 8), (4, 6), (6, 4), (8, 3), (12, 2), (24, 1)।</p>
+                    <p class="mb-2">अतः संभव कोटियाँ: 1×24, 2×12, 3×8, 4×6, 6×4, 8×3, 12×2, 24×1</p>
+                    <p class="mb-2">यदि अवयवों की संख्या 13 है, तो 13 एक अभाज्य संख्या है। इसके गुणनखंड केवल 1 और 13 हैं।</p>
+                    <p><strong>उत्तर:</strong> 13 अवयव होने पर संभव कोटियाँ: 1×13, 13×1</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि किसी आव्यूह में 18 अवयव हैं तो इसकी संभव कोटियाँ क्या हैं? यदि इसमें 5 अवयव हों तो क्या होगा?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> 18 के गुणनखंड युग्म: (1, 18), (2, 9), (3, 6), (6, 3), (9, 2), (18, 1)।</p>
+                    <p class="mb-2">5 के गुणनखंड युग्म: (1, 5), (5, 1)।</p>
+                    <p><strong>उत्तर:</strong> 18 अवयव होने पर कोटियाँ: 1×18, 2×9, 3×6, 6×3, 9×2, 18×1. 5 अवयव होने पर कोटियाँ: 1×5, 5×1</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: एक 2 × 2 आव्यूह A = [a<sub>ij</sub>] की रचना कीजिए जिसके अवयव निम्नलिखित प्रकार से प्रदत्त हैं:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) a<sub>ij</sub> = <span class="fraction"><span class="numerator">(i+j)<sup>2</sup></span><span class="denominator">2</span></span></strong></p>
+                    <p class="mb-2">a<sub>11</sub> = (1+1)²/2 = 2, a<sub>12</sub> = (1+2)²/2 = 9/2</p>
+                    <p class="mb-2">a<sub>21</sub> = (2+1)²/2 = 9/2, a<sub>22</sub> = (2+2)²/2 = 8</p>
+                    <p><strong>उत्तर:</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td><span class="fraction"><span class="numerator">9</span><span class="denominator">2</span></span></td></tr><tr><td><span class="fraction"><span class="numerator">9</span><span class="denominator">2</span></span></td><td>8</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) a<sub>ij</sub> = <span class="fraction"><span class="numerator">i</span><span class="denominator">j</span></span></strong></p>
+                    <p class="mb-2">a<sub>11</sub> = 1, a<sub>12</sub> = 1/2, a<sub>21</sub> = 2, a<sub>22</sub> = 1</p>
+                    <p><strong>उत्तर:</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></td></tr><tr><td>2</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) a<sub>ij</sub> = <span class="fraction"><span class="numerator">(i+2j)<sup>2</sup></span><span class="denominator">2</span></span></strong></p>
+                    <p class="mb-2">a<sub>11</sub> = (1+2)²/2 = 9/2, a<sub>12</sub> = (1+4)²/2 = 25/2</p>
+                    <p class="mb-2">a<sub>21</sub> = (2+2)²/2 = 8, a<sub>22</sub> = (2+4)²/2 = 18</p>
+                    <p><strong>उत्तर:</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td><span class="fraction"><span class="numerator">9</span><span class="denominator">2</span></span></td><td><span class="fraction"><span class="numerator">25</span><span class="denominator">2</span></span></td></tr><tr><td>8</td><td>18</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: एक 3 × 4 आव्यूह की रचना कीजिए जिसके अवयव निम्नलिखित प्रकार से प्राप्त होते हैं:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) a<sub>ij</sub> = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> | -3i + j |</strong></p>
+                    <p class="mb-2">a<sub>11</sub> = 1/2 | -3+1 | = 1, a<sub>12</sub> = 1/2 | -3+2 | = 1/2, a<sub>13</sub> = 0, a<sub>14</sub> = 1/2</p>
+                    <p class="mb-2">a<sub>21</sub> = 1/2 | -6+1 | = 5/2, a<sub>22</sub> = 2, a<sub>23</sub> = 3/2, a<sub>24</sub> = 1</p>
+                    <p class="mb-2">a<sub>31</sub> = 1/2 | -9+1 | = 4, a<sub>32</sub> = 7/2, a<sub>33</sub> = 3, a<sub>34</sub> = 5/2</p>
+                    <p><strong>उत्तर:</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></td><td>0</td><td><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></td></tr><tr><td><span class="fraction"><span class="numerator">5</span><span class="denominator">2</span></span></td><td>2</td><td><span class="fraction"><span class="numerator">3</span><span class="denominator">2</span></span></td><td>1</td></tr><tr><td>4</td><td><span class="fraction"><span class="numerator">7</span><span class="denominator">2</span></span></td><td>3</td><td><span class="fraction"><span class="numerator">5</span><span class="denominator">2</span></span></td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) a<sub>ij</sub> = 2i - j</strong></p>
+                    <p class="mb-2">a<sub>11</sub> = 1, a<sub>12</sub> = 0, a<sub>13</sub> = -1, a<sub>14</sub> = -2</p>
+                    <p class="mb-2">a<sub>21</sub> = 3, a<sub>22</sub> = 2, a<sub>23</sub> = 1, a<sub>24</sub> = 0</p>
+                    <p class="mb-2">a<sub>31</sub> = 5, a<sub>32</sub> = 4, a<sub>33</sub> = 3, a<sub>34</sub> = 2</p>
+                    <p><strong>उत्तर:</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td><td>-1</td><td>-2</td></tr><tr><td>3</td><td>2</td><td>1</td><td>0</td></tr><tr><td>5</td><td>4</td><td>3</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: निम्नलिखित समीकरणों से x, y तथा z के मान ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>3</td></tr><tr><td>x</td><td>5</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>y</td><td>z</td></tr><tr><td>1</td><td>5</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">संगत अवयवों की तुलना करने पर: y = 4, z = 3, x = 1</p>
+                    <p><strong>उत्तर:</strong> x = 1, y = 4, z = 3</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x+y</td><td>2</td></tr><tr><td>5+z</td><td>xy</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6</td><td>2</td></tr><tr><td>5</td><td>8</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">x + y = 6, xy = 8 &rArr; x और y समीकरण t² - 6t + 8 = 0 के मूल हैं, अर्थात x = 2, y = 4 या x = 4, y = 2</p>
+                    <p class="mb-2">5 + z = 5 &rArr; z = 0</p>
+                    <p><strong>उत्तर:</strong> x = 2, y = 4, z = 0 (या x = 4, y = 2, z = 0)</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x+y+z</td></tr><tr><td>x+z</td></tr><tr><td>y+z</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>9</td></tr><tr><td>5</td></tr><tr><td>7</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">x + y + z = 9 ...(1)</p>
+                    <p class="mb-2">x + z = 5 ...(2)</p>
+                    <p class="mb-2">y + z = 7 ...(3)</p>
+                    <p class="mb-2">(2) को (1) में रखने पर: y + 5 = 9 &rArr; y = 4</p>
+                    <p class="mb-2">y का मान (3) में रखने पर: 4 + z = 7 &rArr; z = 3</p>
+                    <p class="mb-2">z का मान (2) में रखने पर: x + 3 = 5 &rArr; x = 2</p>
+                    <p><strong>उत्तर:</strong> x = 2, y = 4, z = 3</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: समीकरण <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a-b</td><td>2a+c</td></tr><tr><td>2a-b</td><td>3c+d</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>5</td></tr><tr><td>0</td><td>13</td></tr></table><span class="bracket">]</span></div> से a, b, c तथा d के मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">संगत अवयवों की तुलना करने पर:</p>
+                    <p class="mb-2">a - b = -1 ...(1)</p>
+                    <p class="mb-2">2a - b = 0 ...(2)</p>
+                    <p class="mb-2">2a + c = 5 ...(3)</p>
+                    <p class="mb-2">3c + d = 13 ...(4)</p>
+                    <p class="mb-2">(2) से (1) घटाने पर: a = 1</p>
+                    <p class="mb-2">a = 1 को (1) में रखने पर: 1 - b = -1 &rArr; b = 2</p>
+                    <p class="mb-2">a = 1 को (3) में रखने पर: 2(1) + c = 5 &rArr; c = 3</p>
+                    <p class="mb-2">c = 3 को (4) में रखने पर: 3(3) + d = 13 &rArr; 9 + d = 13 &rArr; d = 4</p>
+                    <p><strong>उत्तर:</strong> a = 1, b = 2, c = 3, d = 4</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: A = [a<sub>ij</sub>]<sub>m×n</sub> एक वर्ग आव्यूह है यदि:</h3>
+                <div class="step">
+                    <p class="mb-2">(A) m < n</p>
+                    <p class="mb-2">(B) m > n</p>
+                    <p class="mb-2">(C) m = n</p>
+                    <p class="mb-2">(D) इनमें से कोई नहीं</p>
+                    <p class="mb-2"><strong>हल:</strong> वर्ग आव्यूह में पंक्तियों और स्तंभों की संख्या समान होती है, अर्थात m = n।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (C) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: x तथा y के प्रदत्त किन मानों के लिए आव्यूहों के निम्नलिखित युग्म समान हैं?</h3>
+                <div class="step">
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3x+7</td><td>5</td></tr><tr><td>y+1</td><td>2-3x</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>y-2</td></tr><tr><td>8</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">3x + 7 = 0 &rArr; x = -7/3</p>
+                    <p class="mb-2">y + 1 = 8 &rArr; y = 7</p>
+                    <p class="mb-2">5 = y - 2 &rArr; y = 7</p>
+                    <p class="mb-2">2 - 3x = 4 &rArr; -3x = 2 &rArr; x = -2/3</p>
+                    <p class="mb-2">यहाँ x के दो अलग-अलग मान (-7/3 और -2/3) प्राप्त हो रहे हैं, जो संभव नहीं है।</p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) ज्ञात करना संभव नहीं है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: 3 × 3 कोटि के ऐसे आव्यूहों की कुल कितनी संख्या होगी जिनकी प्रत्येक प्रविष्टि 0 या 1 है?</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>हल:</strong> 3 × 3 आव्यूह में कुल 9 अवयव होते हैं। प्रत्येक अवयव के 2 विकल्प (0 या 1) हैं।</p>
+                    <p class="mb-2">अतः कुल संभव आव्यूह = 2<sup>9</sup> = 512</p>
+                    <p><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 3.2 ==================== -->
+        <section id="exercise-3-2" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 3.2</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: मान लीजिए कि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>2</td></tr></table><span class="bracket">]</span></div>, B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>3</td></tr><tr><td>-2</td><td>5</td></tr></table><span class="bracket">]</span></div>, C = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-2</td><td>5</td></tr><tr><td>3</td><td>4</td></tr></table><span class="bracket">]</span></div>, तो निम्नलिखित ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) A + B</strong></p>
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2+1</td><td>4+3</td></tr><tr><td>3-2</td><td>2+5</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>7</td></tr><tr><td>1</td><td>7</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) A - B</strong></p>
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2-1</td><td>4-3</td></tr><tr><td>3+2</td><td>2-5</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>1</td></tr><tr><td>5</td><td>-3</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii) 3A - C</strong></p>
+                    <p class="mb-2">3A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6</td><td>12</td></tr><tr><td>9</td><td>6</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">3A - C = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6-(-2)</td><td>12-5</td></tr><tr><td>9-3</td><td>6-4</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>8</td><td>7</td></tr><tr><td>6</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iv) AB</strong></p>
+                    <p class="mb-2">AB = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>2</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>3</td></tr><tr><td>-2</td><td>5</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>(2)(1)+(4)(-2)</td><td>(2)(3)+(4)(5)</td></tr><tr><td>(3)(1)+(2)(-2)</td><td>(3)(3)+(2)(5)</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-6</td><td>26</td></tr><tr><td>-1</td><td>19</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(v) BA</strong></p>
+                    <p class="mb-2">BA = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>3</td></tr><tr><td>-2</td><td>5</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>(1)(2)+(3)(3)</td><td>(1)(4)+(3)(2)</td></tr><tr><td>(-2)(2)+(5)(3)</td><td>(-2)(4)+(5)(2)</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>11</td><td>10</td></tr><tr><td>11</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: निम्नलिखित को परिकलित कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a</td><td>b</td></tr><tr><td>-b</td><td>a</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a</td><td>b</td></tr><tr><td>b</td><td>a</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2a</td><td>2b</td></tr><tr><td>0</td><td>2a</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a<sup>2</sup>+b<sup>2</sup></td><td>b<sup>2</sup>+c<sup>2</sup></td></tr><tr><td>a<sup>2</sup>+c<sup>2</sup></td><td>a<sup>2</sup>+b<sup>2</sup></td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2ab</td><td>2bc</td></tr><tr><td>-2ac</td><td>-2ab</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a<sup>2</sup>+b<sup>2</sup>+2ab</td><td>b<sup>2</sup>+c<sup>2</sup>+2bc</td></tr><tr><td>a<sup>2</sup>+c<sup>2</sup>-2ac</td><td>a<sup>2</sup>+b<sup>2</sup>-2ab</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>(a+b)<sup>2</sup></td><td>(b+c)<sup>2</sup></td></tr><tr><td>(a-c)<sup>2</sup></td><td>(a-b)<sup>2</sup></td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>4</td><td>-6</td></tr><tr><td>8</td><td>5</td><td>16</td></tr><tr><td>2</td><td>8</td><td>5</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>12</td><td>7</td><td>6</td></tr><tr><td>8</td><td>0</td><td>5</td></tr><tr><td>3</td><td>2</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>11</td><td>11</td><td>0</td></tr><tr><td>16</td><td>5</td><td>21</td></tr><tr><td>5</td><td>10</td><td>9</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iv)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos<sup>2</sup>x</td><td>sin<sup>2</sup>x</td></tr><tr><td>sin<sup>2</sup>x</td><td>cos<sup>2</sup>x</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>sin<sup>2</sup>x</td><td>cos<sup>2</sup>x</td></tr><tr><td>cos<sup>2</sup>x</td><td>sin<sup>2</sup>x</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos<sup>2</sup>x+sin<sup>2</sup>x</td><td>sin<sup>2</sup>x+cos<sup>2</sup>x</td></tr><tr><td>sin<sup>2</sup>x+cos<sup>2</sup>x</td><td>cos<sup>2</sup>x+sin<sup>2</sup>x</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: निदर्शित गुणनफल परिकलित कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a</td><td>b</td></tr><tr><td>-b</td><td>a</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a</td><td>-b</td></tr><tr><td>b</td><td>a</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>a<sup>2</sup>+b<sup>2</sup></td><td>0</td></tr><tr><td>0</td><td>a<sup>2</sup>+b<sup>2</sup></td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td></tr><tr><td>2</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td><td>4</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td><td>4</td></tr><tr><td>4</td><td>6</td><td>8</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-2</td></tr><tr><td>2</td><td>3</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>2</td><td>3</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>(1)(1)+(-2)(2)</td><td>(1)(2)+(-2)(3)</td><td>(1)(3)+(-2)(1)</td></tr><tr><td>(2)(1)+(3)(2)</td><td>(2)(2)+(3)(3)</td><td>(2)(3)+(3)(1)</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-3</td><td>-4</td><td>1</td></tr><tr><td>8</td><td>13</td><td>9</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iv)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td><td>4</td></tr><tr><td>3</td><td>4</td><td>5</td></tr><tr><td>4</td><td>5</td><td>6</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-3</td><td>5</td></tr><tr><td>0</td><td>2</td><td>4</td></tr><tr><td>3</td><td>0</td><td>5</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2+0+12</td><td>-6+6+0</td><td>10+12+20</td></tr><tr><td>3+0+15</td><td>-9+8+0</td><td>15+16+25</td></tr><tr><td>4+0+18</td><td>-12+10+0</td><td>20+20+30</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>14</td><td>0</td><td>42</td></tr><tr><td>18</td><td>-1</td><td>56</td></tr><tr><td>22</td><td>-2</td><td>70</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(v)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>2</td></tr><tr><td>-1</td><td>1</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td><td>1</td></tr><tr><td>-1</td><td>2</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2-1</td><td>0+2</td><td>2+1</td></tr><tr><td>3-2</td><td>0+4</td><td>3+2</td></tr><tr><td>-1-1</td><td>0+2</td><td>-1+1</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>4</td><td>5</td></tr><tr><td>-2</td><td>2</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(vi)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-1</td><td>3</td></tr><tr><td>-1</td><td>0</td><td>2</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>-3</td></tr><tr><td>1</td><td>0</td></tr><tr><td>3</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6-1+9</td><td>-9+0+3</td></tr><tr><td>-2+0+6</td><td>3+0+2</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>14</td><td>-6</td></tr><tr><td>4</td><td>5</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>2</td><td>-3</td></tr><tr><td>5</td><td>0</td><td>2</td></tr><tr><td>1</td><td>-1</td><td>1</td></tr></table><span class="bracket">]</span></div>, B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-1</td><td>2</td></tr><tr><td>4</td><td>2</td><td>5</td></tr><tr><td>2</td><td>0</td><td>3</td></tr></table><span class="bracket">]</span></div> तथा C = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>1</td><td>2</td></tr><tr><td>0</td><td>3</td><td>2</td></tr><tr><td>1</td><td>-2</td><td>3</td></tr></table><span class="bracket">]</span></div>, तो (A+B) तथा (B-C) परिकलित कीजिए। साथ ही सत्यापित कीजिए कि A+(B-C) = (A+B)-C.</h3>
+                <div class="step">
+                    <p class="mb-2">A + B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>1</td><td>-1</td></tr><tr><td>9</td><td>2</td><td>7</td></tr><tr><td>3</td><td>-1</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">B - C = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>-2</td><td>0</td></tr><tr><td>4</td><td>-1</td><td>3</td></tr><tr><td>1</td><td>2</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A + (B - C) = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>2</td><td>-3</td></tr><tr><td>5</td><td>0</td><td>2</td></tr><tr><td>1</td><td>-1</td><td>1</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>-2</td><td>0</td></tr><tr><td>4</td><td>-1</td><td>3</td></tr><tr><td>1</td><td>2</td><td>0</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>-3</td></tr><tr><td>9</td><td>-1</td><td>5</td></tr><tr><td>2</td><td>1</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">(A + B) - C = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>1</td><td>-1</td></tr><tr><td>9</td><td>2</td><td>7</td></tr><tr><td>3</td><td>-1</td><td>4</td></tr></table><span class="bracket">]</span></div> - <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>1</td><td>2</td></tr><tr><td>0</td><td>3</td><td>2</td></tr><tr><td>1</td><td>-2</td><td>3</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>-3</td></tr><tr><td>9</td><td>-1</td><td>5</td></tr><tr><td>2</td><td>1</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">अतः सत्यापित हुआ कि A + (B - C) = (A + B) - C.</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></td><td>1</td><td><span class="fraction"><span class="numerator">5</span><span class="denominator">3</span></span></td></tr><tr><td><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></td><td><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></td><td><span class="fraction"><span class="numerator">4</span><span class="denominator">3</span></span></td></tr><tr><td><span class="fraction"><span class="numerator">7</span><span class="denominator">3</span></span></td><td>2</td><td><span class="fraction"><span class="numerator">2</span><span class="denominator">3</span></span></td></tr></table><span class="bracket">]</span></div> तथा B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td><span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span></td><td><span class="fraction"><span class="numerator">3</span><span class="denominator">5</span></span></td><td>1</td></tr><tr><td><span class="fraction"><span class="numerator">1</span><span class="denominator">5</span></span></td><td><span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span></td><td><span class="fraction"><span class="numerator">4</span><span class="denominator">5</span></span></td></tr><tr><td><span class="fraction"><span class="numerator">7</span><span class="denominator">5</span></span></td><td><span class="fraction"><span class="numerator">6</span><span class="denominator">5</span></span></td><td><span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span></td></tr></table><span class="bracket">]</span></div>, तो 3A - 5B परिकलित कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">3A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td><td>5</td></tr><tr><td>1</td><td>2</td><td>4</td></tr><tr><td>7</td><td>6</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">5B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td><td>5</td></tr><tr><td>1</td><td>2</td><td>4</td></tr><tr><td>7</td><td>6</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">3A - 5B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: सरल कीजिए: cos θ <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos θ</td><td>sin θ</td></tr><tr><td>-sin θ</td><td>cos θ</td></tr></table><span class="bracket">]</span></div> + sin θ <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>sin θ</td><td>-cos θ</td></tr><tr><td>cos θ</td><td>sin θ</td></tr></table><span class="bracket">]</span></div></h3>
+                <div class="step">
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos<sup>2</sup>θ</td><td>cos θ sin θ</td></tr><tr><td>-sin θ cos θ</td><td>cos<sup>2</sup>θ</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>sin<sup>2</sup>θ</td><td>-sin θ cos θ</td></tr><tr><td>sin θ cos θ</td><td>sin<sup>2</sup>θ</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos<sup>2</sup>θ+sin<sup>2</sup>θ</td><td>cos θ sin θ-sin θ cos θ</td></tr><tr><td>-sin θ cos θ+sin θ cos θ</td><td>cos<sup>2</sup>θ+sin<sup>2</sup>θ</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: X तथा Y ज्ञात कीजिए यदि:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) X + Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>7</td><td>0</td></tr><tr><td>2</td><td>5</td></tr></table><span class="bracket">]</span></div> तथा X - Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>0</td></tr><tr><td>0</td><td>3</td></tr></table><span class="bracket">]</span></div></strong></p>
+                    <p class="mb-2">(X+Y) + (X-Y) = 2X = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>10</td><td>0</td></tr><tr><td>2</td><td>8</td></tr></table><span class="bracket">]</span></div> &rArr; X = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>0</td></tr><tr><td>1</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">(X+Y) - (X-Y) = 2Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>0</td></tr><tr><td>2</td><td>2</td></tr></table><span class="bracket">]</span></div> &rArr; Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>0</td></tr><tr><td>1</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) 2X + 3Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td></tr><tr><td>4</td><td>0</td></tr></table><span class="bracket">]</span></div> तथा 3X + 2Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>-2</td></tr><tr><td>-1</td><td>5</td></tr></table><span class="bracket">]</span></div></strong></p>
+                    <p class="mb-2">पहले समीकरण को 3 से और दूसरे को 2 से गुणा करने पर:</p>
+                    <p class="mb-2">6X + 9Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6</td><td>9</td></tr><tr><td>12</td><td>0</td></tr></table><span class="bracket">]</span></div> ...(1)</p>
+                    <p class="mb-2">6X + 4Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>-4</td></tr><tr><td>-2</td><td>10</td></tr></table><span class="bracket">]</span></div> ...(2)</p>
+                    <p class="mb-2">(1) - (2) &rArr; 5Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>13</td></tr><tr><td>14</td><td>-10</td></tr></table><span class="bracket">]</span></div> &rArr; Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td><span class="fraction"><span class="numerator">2</span><span class="denominator">5</span></span></td><td><span class="fraction"><span class="numerator">13</span><span class="denominator">5</span></span></td></tr><tr><td><span class="fraction"><span class="numerator">14</span><span class="denominator">5</span></span></td><td>-2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">Y का मान 2X + 3Y में रखने पर: 2X = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>3</td></tr><tr><td>4</td><td>0</td></tr></table><span class="bracket">]</span></div> - <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6/5</td><td>39/5</td></tr><tr><td>42/5</td><td>-6</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4/5</td><td>-24/5</td></tr><tr><td>-22/5</td><td>6</td></tr></table><span class="bracket">]</span></div> &rArr; X = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2/5</td><td>-12/5</td></tr><tr><td>-11/5</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: X तथा Y ज्ञात कीजिए यदि Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>2</td></tr><tr><td>1</td><td>4</td></tr></table><span class="bracket">]</span></div> तथा 2X + Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>-3</td><td>2</td></tr></table><span class="bracket">]</span></div></h3>
+                <div class="step">
+                    <p class="mb-2">2X = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>-3</td><td>2</td></tr></table><span class="bracket">]</span></div> - Y = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>-3</td><td>2</td></tr></table><span class="bracket">]</span></div> - <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>2</td></tr><tr><td>1</td><td>4</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-2</td><td>-2</td></tr><tr><td>-4</td><td>-2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">X = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-2</td><td>-2</td></tr><tr><td>-4</td><td>-2</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>-1</td></tr><tr><td>-2</td><td>-1</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: x तथा y ज्ञात कीजिए यदि 2 <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>3</td></tr><tr><td>0</td><td>x</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>y</td><td>0</td></tr><tr><td>1</td><td>2</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>6</td></tr><tr><td>1</td><td>8</td></tr></table><span class="bracket">]</span></div></h3>
+                <div class="step">
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>6</td></tr><tr><td>0</td><td>2x</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>y</td><td>0</td></tr><tr><td>1</td><td>2</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>6</td></tr><tr><td>1</td><td>8</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2+y</td><td>6</td></tr><tr><td>1</td><td>2x+2</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>6</td></tr><tr><td>1</td><td>8</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">2 + y = 5 &rArr; y = 3</p>
+                    <p class="mb-2">2x + 2 = 8 &rArr; 2x = 6 &rArr; x = 3</p>
+                    <p><strong>उत्तर:</strong> x = 3, y = 3</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: प्रदत्त समीकरण के x, y, z तथा t के लिए हल कीजिए यदि 2 <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x</td><td>z</td></tr><tr><td>y</td><td>t</td></tr></table><span class="bracket">]</span></div> + 3 <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-1</td></tr><tr><td>0</td><td>2</td></tr></table><span class="bracket">]</span></div> = 3 <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>5</td></tr><tr><td>4</td><td>6</td></tr></table><span class="bracket">]</span></div></h3>
+                <div class="step">
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2x</td><td>2z</td></tr><tr><td>2y</td><td>2t</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-3</td></tr><tr><td>0</td><td>6</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>9</td><td>15</td></tr><tr><td>12</td><td>18</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2x+3</td><td>2z-3</td></tr><tr><td>2y</td><td>2t+6</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>9</td><td>15</td></tr><tr><td>12</td><td>18</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">2x + 3 = 9 &rArr; x = 3</p>
+                    <p class="mb-2">2z - 3 = 15 &rArr; z = 9</p>
+                    <p class="mb-2">2y = 12 &rArr; y = 6</p>
+                    <p class="mb-2">2t + 6 = 18 &rArr; 2t = 12 &rArr; t = 6</p>
+                    <p><strong>उत्तर:</strong> x = 3, y = 6, z = 9, t = 6</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: यदि x <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td></tr><tr><td>3</td></tr></table><span class="bracket">]</span></div> + y <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td></tr><tr><td>1</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>10</td></tr><tr><td>5</td></tr></table><span class="bracket">]</span></div> है तो x तथा y के मान ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2x</td></tr><tr><td>3x</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-y</td></tr><tr><td>y</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>10</td></tr><tr><td>5</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">2x - y = 10 ...(1)</p>
+                    <p class="mb-2">3x + y = 5 ...(2)</p>
+                    <p class="mb-2">(1) और (2) को जोड़ने पर: 5x = 15 &rArr; x = 3</p>
+                    <p class="mb-2">x = 3 को (2) में रखने पर: 3(3) + y = 5 &rArr; 9 + y = 5 &rArr; y = -4</p>
+                    <p><strong>उत्तर:</strong> x = 3, y = -4</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: यदि 3 <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x</td><td>y</td></tr><tr><td>z</td><td>w</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x</td><td>6</td></tr><tr><td>-1</td><td>2w</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>4</td><td>x+y</td></tr><tr><td>z+w</td><td>3</td></tr></table><span class="bracket">]</span></div> है तो x, y, z तथा w के मानों को ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2"><div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3x</td><td>3y</td></tr><tr><td>3z</td><td>3w</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x+4</td><td>x+y+6</td></tr><tr><td>z+w-1</td><td>2w+3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">3x = x + 4 &rArr; 2x = 4 &rArr; x = 2</p>
+                    <p class="mb-2">3y = x + y + 6 &rArr; 2y = 2 + 6 &rArr; 2y = 8 &rArr; y = 4</p>
+                    <p class="mb-2">3w = 2w + 3 &rArr; w = 3</p>
+                    <p class="mb-2">3z = z + w - 1 &rArr; 2z = 3 - 1 &rArr; 2z = 2 &rArr; z = 1</p>
+                    <p><strong>उत्तर:</strong> x = 2, y = 4, z = 1, w = 3</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 13 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 13: यदि F(x) = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos x</td><td>-sin x</td><td>0</td></tr><tr><td>sin x</td><td>cos x</td><td>0</td></tr><tr><td>0</td><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> है तो सिद्ध कीजिए कि F(x) F(y) = F(x + y)</h3>
+                <div class="step">
+                    <p class="mb-2">F(x) F(y) = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos x</td><td>-sin x</td><td>0</td></tr><tr><td>sin x</td><td>cos x</td><td>0</td></tr><tr><td>0</td><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos y</td><td>-sin y</td><td>0</td></tr><tr><td>sin y</td><td>cos y</td><td>0</td></tr><tr><td>0</td><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos x cos y - sin x sin y</td><td>-cos x sin y - sin x cos y</td><td>0</td></tr><tr><td>sin x cos y + cos x sin y</td><td>-sin x sin y + cos x cos y</td><td>0</td></tr><tr><td>0</td><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos(x+y)</td><td>-sin(x+y)</td><td>0</td></tr><tr><td>sin(x+y)</td><td>cos(x+y)</td><td>0</td></tr><tr><td>0</td><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> = F(x+y)</p>
+                    <p><strong>अतः सिद्ध हुआ।</strong></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 14 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 14: दर्शाइए कि <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>-1</td></tr><tr><td>6</td><td>7</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>4</td></tr></table><span class="bracket">]</span></div> &ne; <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>4</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>-1</td></tr><tr><td>6</td><td>7</td></tr></table><span class="bracket">]</span></div></h3>
+                <div class="step">
+                    <p class="mb-2">LHS = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>-1</td></tr><tr><td>6</td><td>7</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>4</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>10-3</td><td>5-4</td></tr><tr><td>12+21</td><td>6+28</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>7</td><td>1</td></tr><tr><td>33</td><td>34</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">RHS = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>4</td></tr></table><span class="bracket">]</span></div> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>-1</td></tr><tr><td>6</td><td>7</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>10+6</td><td>-2+7</td></tr><tr><td>15+24</td><td>-3+28</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>16</td><td>5</td></tr><tr><td>39</td><td>25</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">LHS &ne; RHS</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 15 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 15: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>0</td><td>1</td></tr><tr><td>2</td><td>1</td><td>3</td></tr><tr><td>1</td><td>-1</td><td>0</td></tr></table><span class="bracket">]</span></div> है तो A<sup>2</sup> - 5A + 6I ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">A<sup>2</sup> = A × A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>-1</td><td>2</td></tr><tr><td>9</td><td>-2</td><td>5</td></tr><tr><td>0</td><td>-1</td><td>-2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">5A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>10</td><td>0</td><td>5</td></tr><tr><td>10</td><td>5</td><td>15</td></tr><tr><td>5</td><td>-5</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">6I = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6</td><td>0</td><td>0</td></tr><tr><td>0</td><td>6</td><td>0</td></tr><tr><td>0</td><td>0</td><td>6</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A<sup>2</sup> - 5A + 6I = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5-10+6</td><td>-1-0+0</td><td>2-5+0</td></tr><tr><td>9-10+0</td><td>-2-5+6</td><td>5-15+0</td></tr><tr><td>0-5+0</td><td>-1-(-5)+0</td><td>-2-0+6</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">= <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-1</td><td>-3</td></tr><tr><td>-1</td><td>-1</td><td>-10</td></tr><tr><td>-5</td><td>4</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 16 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 16: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td><td>2</td></tr><tr><td>0</td><td>2</td><td>1</td></tr><tr><td>2</td><td>0</td><td>3</td></tr></table><span class="bracket">]</span></div> है तो सिद्ध कीजिए कि A<sup>3</sup> - 6A<sup>2</sup> + 7A + 2I = O</h3>
+                <div class="step">
+                    <p class="mb-2">A<sup>2</sup> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td><td>0</td><td>8</td></tr><tr><td>2</td><td>4</td><td>5</td></tr><tr><td>8</td><td>0</td><td>13</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A<sup>3</sup> = A<sup>2</sup>A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>21</td><td>0</td><td>34</td></tr><tr><td>12</td><td>8</td><td>23</td></tr><tr><td>34</td><td>0</td><td>55</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A<sup>3</sup> - 6A<sup>2</sup> + 7A + 2I = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr></table><span class="bracket">]</span></div> = O</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 17 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 17: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-2</td></tr><tr><td>4</td><td>-2</td></tr></table><span class="bracket">]</span></div> तथा I = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> है तो k ज्ञात कीजिए यदि A<sup>2</sup> = kA - 2I</h3>
+                <div class="step">
+                    <p class="mb-2">A<sup>2</sup> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-2</td></tr><tr><td>4</td><td>-4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">kA - 2I = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3k-2</td><td>-2k</td></tr><tr><td>4k</td><td>-2k-2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A<sup>2</sup> = kA - 2I &rArr; 1 = 3k - 2 &rArr; 3k = 3 &rArr; k = 1</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 18 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 18: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>-tan(α/2)</td></tr><tr><td>tan(α/2)</td><td>0</td></tr></table><span class="bracket">]</span></div> तथा I एक 2×2 कोटि का तत्समक आव्यूह है, तो दर्शाइए कि I + A = (I - A) <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos α</td><td>-sin α</td></tr><tr><td>sin α</td><td>cos α</td></tr></table><span class="bracket">]</span></div></h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए t = tan(α/2), तो I+A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-t</td></tr><tr><td>t</td><td>1</td></tr></table><span class="bracket">]</span></div> तथा I-A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>t</td></tr><tr><td>-t</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">RHS = (I-A) <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos α</td><td>-sin α</td></tr><tr><td>sin α</td><td>cos α</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos α+t sin α</td><td>-sin α+t cos α</td></tr><tr><td>-t cos α+sin α</td><td>t sin α+cos α</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">t = tan(α/2) रखने पर और सूत्रों का प्रयोग करने पर RHS, LHS के बराबर हो जाता है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 19 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 19: एक न्यास (Trust) को 30,000 रुपये दो भिन्न प्रकार के बांडों में निवेश करने हैं। पहले बांड पर 5% वार्षिक तथा दूसरे बांड पर 7% वार्षिक ब्याज मिलता है। आव्यूह बीजगणित का प्रयोग करते हुए यह ज्ञात कीजिए कि दोनों बांडों में निवेश की गई राशि कितनी होगी?</h3>
+                <div class="step">
+                    <p class="mb-2">मान लीजिए पहले बांड में निवेश x रुपये और दूसरे में (30000 - x) रुपये हैं।</p>
+                    <p class="mb-2">कुल वार्षिक ब्याज = 5% of x + 7% of (30000 - x) = 2000 (मान लीजिए)</p>
+                    <p class="mb-2">इसे आव्यूह रूप में: [0.05, 0.07] <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>x</td></tr><tr><td>30000-x</td></tr></table><span class="bracket">]</span></div> = 2000</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 20 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 20: किसी विद्यालय की पुस्तक दुकान में 10 दर्जन रसायन विज्ञान, 8 दर्जन भौतिक विज्ञान तथा 10 दर्जन अर्थशास्त्र की पुस्तकें हैं। इनका विक्रय मूल्य क्रमशः 80 रुपये, 60 रुपये तथा 40 रुपये प्रति पुस्तक है। आव्यूह बीजगणित द्वारा ज्ञात कीजिए कि दुकान में कुल कितनी राशि की पुस्तकें हैं।</h3>
+                <div class="step">
+                    <p class="mb-2">पुस्तकों की संख्या (दर्जन में): [10, 8, 10]</p>
+                    <p class="mb-2">मूल्य आव्यूह: <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>80</td></tr><tr><td>60</td></tr><tr><td>40</td></tr></table><span class="bracket">]</span></div> (प्रति पुस्तक नहीं, प्रति दर्जन नहीं, बल्कि वास्तविक पुस्तकों का मूल्य निकालना है)</p>
+                    <p class="mb-2">कुल पुस्तकें = [120, 96, 120] (1 दर्जन = 12)</p>
+                    <p class="mb-2">कुल राशि = [120, 96, 120] <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>80</td></tr><tr><td>60</td></tr><tr><td>40</td></tr></table><span class="bracket">]</span></div> = 120(80) + 96(60) + 120(40) = 9600 + 5760 + 4800 = 20160</p>
+                    <p><strong>उत्तर:</strong> 20,160 रुपये</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 21 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 21: PY + WY के परिभाषित होने के लिए n, k तथा p पर क्या प्रतिबंध होगा?</h3>
+                <div class="step">
+                    <p class="mb-2">(A) k = 3, p = n</p>
+                    <p class="mb-2">(B) k स्वेच्छ है, p = 2</p>
+                    <p class="mb-2">(C) p स्वेच्छ है, k = 3</p>
+                    <p class="mb-2">(D) k = 2, p = 3</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 22 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 22: यदि n = p, तो आव्यूह 7X - 5Z की कोटि है।</h3>
+                <div class="step">
+                    <p class="mb-2">(A) p × 2</p>
+                    <p class="mb-2">(B) 2 × n</p>
+                    <p class="mb-2">(C) n × 3</p>
+                    <p class="mb-2">(D) p × n</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> विकल्प (D) सही है।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== प्रश्नावली 3.3 ==================== -->
+        <section id="exercise-3-3" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500">प्रश्नावली 3.3</h2>
+
+            <!-- प्रश्न 1 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 1: निम्नलिखित आव्यूहों में से प्रत्येक का परिवर्त ज्ञात कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>5</td></tr><tr><td><span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span></td></tr><tr><td>-1</td></tr></table><span class="bracket">]</span></div> का परिवर्त = [5 &nbsp; <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span> &nbsp; -1]</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>-1</td></tr><tr><td>2</td><td>3</td></tr></table><span class="bracket">]</span></div> का परिवर्त = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>2</td></tr><tr><td>-1</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>5</td><td>6</td></tr><tr><td>&radic;3</td><td>5</td><td>6</td></tr><tr><td>2</td><td>3</td><td>-1</td></tr></table><span class="bracket">]</span></div> का परिवर्त = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>&radic;3</td><td>2</td></tr><tr><td>5</td><td>5</td><td>3</td></tr><tr><td>6</td><td>6</td><td>-1</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 2 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 2: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>2</td><td>3</td></tr><tr><td>5</td><td>7</td><td>9</td></tr><tr><td>-2</td><td>1</td><td>1</td></tr></table><span class="bracket">]</span></div> तथा B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-4</td><td>1</td><td>-5</td></tr><tr><td>1</td><td>2</td><td>0</td></tr><tr><td>1</td><td>3</td><td>1</td></tr></table><span class="bracket">]</span></div> हैं तो सत्यापित कीजिए कि (i) (A+B)' = A' + B' (ii) (A-B)' = A' - B'</h3>
+                <div class="step">
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>5</td><td>-2</td></tr><tr><td>2</td><td>7</td><td>1</td></tr><tr><td>3</td><td>9</td><td>1</td></tr></table><span class="bracket">]</span></div>, B' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-4</td><td>1</td><td>1</td></tr><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>-5</td><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A+B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-5</td><td>3</td><td>-2</td></tr><tr><td>6</td><td>9</td><td>9</td></tr><tr><td>-1</td><td>4</td><td>2</td></tr></table><span class="bracket">]</span></div> &rArr; (A+B)' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-5</td><td>6</td><td>-1</td></tr><tr><td>3</td><td>9</td><td>4</td></tr><tr><td>-2</td><td>9</td><td>2</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A'+B' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-5</td><td>6</td><td>-1</td></tr><tr><td>3</td><td>9</td><td>4</td></tr><tr><td>-2</td><td>9</td><td>2</td></tr></table><span class="bracket">]</span></div>। अतः (A+B)' = A'+B'</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 3 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 3: यदि A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>4</td></tr><tr><td>-1</td><td>2</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> तथा B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>2</td><td>1</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table><span class="bracket">]</span></div> हैं तो सत्यापित कीजिए कि (i) (A+B)' = A' + B' (ii) (A-B)' = A' - B'</h3>
+                <div class="step">
+                    <p class="mb-2">A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-1</td><td>0</td></tr><tr><td>4</td><td>2</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A+B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>1</td><td>1</td></tr><tr><td>5</td><td>4</td><td>4</td></tr></table><span class="bracket">]</span></div> &rArr; (A+B)' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>5</td></tr><tr><td>1</td><td>4</td></tr><tr><td>1</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A'+B' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>4</td></tr><tr><td>-1</td><td>2</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> + <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>1</td><td>3</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>5</td></tr><tr><td>1</td><td>4</td></tr><tr><td>1</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 4 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 4: यदि A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-2</td><td>3</td></tr><tr><td>1</td><td>2</td></tr></table><span class="bracket">]</span></div> तथा B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>0</td></tr><tr><td>1</td><td>2</td></tr></table><span class="bracket">]</span></div> है तो (A+2B)' ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-2</td><td>1</td></tr><tr><td>3</td><td>2</td></tr></table><span class="bracket">]</span></div>, 2B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-2</td><td>0</td></tr><tr><td>2</td><td>4</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A+2B = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-4</td><td>1</td></tr><tr><td>5</td><td>6</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">(A+2B)' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-4</td><td>5</td></tr><tr><td>1</td><td>6</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 5 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 5: A तथा B आव्यूहों के लिए सत्यापित कीजिए कि (AB)' = B' A', जहाँ</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i) A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td></tr><tr><td>-4</td></tr><tr><td>3</td></tr></table><span class="bracket">]</span></div>, B = [-1 2 1]</strong></p>
+                    <p class="mb-2">AB = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>2</td><td>1</td></tr><tr><td>4</td><td>-8</td><td>-4</td></tr><tr><td>-3</td><td>6</td><td>3</td></tr></table><span class="bracket">]</span></div> &rArr; (AB)' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>4</td><td>-3</td></tr><tr><td>2</td><td>-8</td><td>6</td></tr><tr><td>1</td><td>-4</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">B'A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td></tr><tr><td>2</td></tr><tr><td>1</td></tr></table><span class="bracket">]</span></div> [1 -4 3] = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>4</td><td>-3</td></tr><tr><td>2</td><td>-8</td><td>6</td></tr><tr><td>1</td><td>-4</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td></tr><tr><td>1</td></tr><tr><td>2</td></tr></table><span class="bracket">]</span></div>, B = [1 5 7]</strong></p>
+                    <p class="mb-2">AB = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>1</td><td>5</td><td>7</td></tr><tr><td>2</td><td>10</td><td>14</td></tr></table><span class="bracket">]</span></div> &rArr; (AB)' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>0</td><td>5</td><td>10</td></tr><tr><td>0</td><td>7</td><td>14</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">B'A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td></tr><tr><td>5</td></tr><tr><td>7</td></tr></table><span class="bracket">]</span></div> [0 1 2] = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>0</td><td>5</td><td>10</td></tr><tr><td>0</td><td>7</td><td>14</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 6 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 6: (i) यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos α</td><td>sin α</td></tr><tr><td>-sin α</td><td>cos α</td></tr></table><span class="bracket">]</span></div> हो तो सत्यापित कीजिए कि A'A = I</h3>
+                <div class="step">
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos α</td><td>-sin α</td></tr><tr><td>sin α</td><td>cos α</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A'A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos<sup>2</sup>α+sin<sup>2</sup>α</td><td>-cos α sin α + sin α cos α</td></tr><tr><td>sin α cos α - cos α sin α</td><td>sin<sup>2</sup>α+cos<sup>2</sup>α</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> = I</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>sin α</td><td>cos α</td></tr><tr><td>-cos α</td><td>sin α</td></tr></table><span class="bracket">]</span></div> हो तो सत्यापित कीजिए कि A'A = I</strong></p>
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>sin α</td><td>-cos α</td></tr><tr><td>cos α</td><td>sin α</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A'A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>sin<sup>2</sup>α+cos<sup>2</sup>α</td><td>-sin α cos α + cos α sin α</td></tr><tr><td>cos α sin α - sin α cos α</td><td>cos<sup>2</sup>α+sin<sup>2</sup>α</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div> = I</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 7 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 7: (i) सिद्ध कीजिए कि आव्यूह A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>5</td></tr><tr><td>5</td><td><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></td></tr></table><span class="bracket">]</span></div> एक सममित आव्यूह है।</h3>
+                <div class="step">
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>-1</td><td>5</td></tr><tr><td>5</td><td><span class="fraction"><span class="numerator">1</span><span class="denominator">3</span></span></td></tr></table><span class="bracket">]</span></div> = A. अतः यह सममित आव्यूह है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii) सिद्ध कीजिए कि आव्यूह A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>1</td><td>-1</td></tr><tr><td>-1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>-1</td><td>0</td></tr></table><span class="bracket">]</span></div> एक विषम सममित आव्यूह है।</strong></p>
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>-1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>-1</td></tr><tr><td>-1</td><td>1</td><td>0</td></tr></table><span class="bracket">]</span></div> = -A. अतः यह विषम सममित आव्यूह है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 8 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 8: आव्यूह A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>5</td></tr><tr><td>6</td><td>7</td></tr></table><span class="bracket">]</span></div> के लिए सत्यापित कीजिए कि (i) (A+A') एक सममित आव्यूह है। (ii) (A-A') एक विषम सममित आव्यूह है।</h3>
+                <div class="step">
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>6</td></tr><tr><td>5</td><td>7</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2"><strong>(i)</strong> A+A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>11</td></tr><tr><td>11</td><td>14</td></tr></table><span class="bracket">]</span></div>. (A+A')' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2</td><td>11</td></tr><tr><td>11</td><td>14</td></tr></table><span class="bracket">]</span></div> = A+A'. अतः सममित है।</p>
+                    <p class="mb-2"><strong>(ii)</strong> A-A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>-1</td></tr><tr><td>1</td><td>0</td></tr></table><span class="bracket">]</span></div>. (A-A')' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>1</td></tr><tr><td>-1</td><td>0</td></tr></table><span class="bracket">]</span></div> = -(A-A'). अतः विषम सममित है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 9 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 9: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>a</td><td>b</td></tr><tr><td>-a</td><td>0</td><td>c</td></tr><tr><td>-b</td><td>-c</td><td>0</td></tr></table><span class="bracket">]</span></div> तो <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A+A') तथा <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A-A') ज्ञात कीजिए।</h3>
+                <div class="step">
+                    <p class="mb-2">A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>-a</td><td>-b</td></tr><tr><td>a</td><td>0</td><td>-c</td></tr><tr><td>b</td><td>c</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A+A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr></table><span class="bracket">]</span></div> &rArr; <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A+A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A-A' = 2A &rArr; <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A-A') = A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>a</td><td>b</td></tr><tr><td>-a</td><td>0</td><td>c</td></tr><tr><td>-b</td><td>-c</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 10 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 10: निम्नलिखित आव्यूहों को एक सममित आव्यूह तथा एक विषम सममित आव्यूह के योगफल के रूप में व्यक्त कीजिए:</h3>
+                <div class="step">
+                    <p class="mb-2"><strong>(i)</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>5</td></tr><tr><td>-2</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">सममित भाग = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A+A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>1.5</td></tr><tr><td>1.5</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">विषम सममित भाग = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A-A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>3.5</td></tr><tr><td>-3.5</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(ii)</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>6</td><td>-2</td><td>2</td></tr><tr><td>-2</td><td>3</td><td>-1</td></tr><tr><td>2</td><td>-1</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">A यहाँ स्वयं सममित है। अतः A = A + O, जहाँ O विषम सममित है।</p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iii)</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-1</td><td>-1</td></tr><tr><td>-2</td><td>-2</td><td>1</td></tr><tr><td>1</td><td>5</td><td>-1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">सममित = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A+A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>3</td><td>-1.5</td><td>0</td></tr><tr><td>-1.5</td><td>-2</td><td>3</td></tr><tr><td>0</td><td>3</td><td>-1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">विषम = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A-A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>0.5</td><td>-1</td></tr><tr><td>-0.5</td><td>0</td><td>-2</td></tr><tr><td>1</td><td>2</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+                <div class="step">
+                    <p class="mb-2"><strong>(iv)</strong> A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>5</td><td>-1</td></tr><tr><td>-1</td><td>2</td><td>1</td></tr><tr><td>2</td><td>1</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">सममित = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A+A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>2</td><td>0.5</td></tr><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>0.5</td><td>1</td><td>3</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">विषम = <span class="fraction"><span class="numerator">1</span><span class="denominator">2</span></span>(A-A') = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>0</td><td>3</td><td>-1.5</td></tr><tr><td>-3</td><td>0</td><td>0</td></tr><tr><td>1.5</td><td>0</td><td>0</td></tr></table><span class="bracket">]</span></div></p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 11 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 11: यदि A तथा B समान कोटि के सममित आव्यूह हैं तो AB - BA एक</h3>
+                <div class="step">
+                    <p class="mb-2">(A) विषम सममित आव्यूह है</p>
+                    <p class="mb-2">(B) सममित आव्यूह है</p>
+                    <p class="mb-2">(C) शून्य आव्यूह है</p>
+                    <p class="mb-2">(D) तत्समक आव्यूह है</p>
+                    <p class="mb-2"><strong>हल:</strong> (AB - BA)' = (AB)' - (BA)' = B'A' - A'B' = BA - AB = -(AB - BA)</p>
+                    <p class="mb-2"><strong>उत्तर:</strong> विकल्प (A) सही है।</p>
+                </div>
+            </div>
+
+            <!-- प्रश्न 12 -->
+            <div class="solution-card">
+                <h3 class="text-xl question-title">प्रश्न 12: यदि A = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>cos α</td><td>-sin α</td></tr><tr><td>sin α</td><td>cos α</td></tr></table><span class="bracket">]</span></div> तथा A + A' = I, तो α का मान है</h3>
+                <div class="step">
+                    <p class="mb-2">(A) π/6</p>
+                    <p class="mb-2">(B) π/3</p>
+                    <p class="mb-2">(C) π</p>
+                    <p class="mb-2">(D) 3π/2</p>
+                    <p class="mb-2"><strong>हल:</strong> A + A' = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>2cos α</td><td>0</td></tr><tr><td>0</td><td>2cos α</td></tr></table><span class="bracket">]</span></div> = <div class="matrix-container"><span class="bracket">[</span><table class="matrix-table"><tr><td>1</td><td>0</td></tr><tr><td>0</td><td>1</td></tr></table><span class="bracket">]</span></div></p>
+                    <p class="mb-2">2cos α = 1 &rArr; cos α = 1/2 &rArr; α = π/3</p>
+                    <p><strong>उत्तर:</strong> विकल्प (B) सही है।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // राइट-क्लिक और कॉपी-पेस्ट निष्क्रिय करें
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
